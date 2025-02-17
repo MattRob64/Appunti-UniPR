@@ -1,0 +1,523 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./images/} }
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=25mm,
+ top=20mm,
+ }
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{hyperref}
+
+
+\title{Formulario Metodi Probabilistici}
+\author{Mattia Robuschi Caprara}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section{Concetti Base}
+\subsection{Permutazioni}
+$P_n = n! $
+
+\subsection{Disposizioni}
+$D_{n,k} = \frac{n!}{(n-k)!}$
+
+\subsection{Disposizioni con ripetizione}
+$D_{n,k}^{(R)} = n^k$
+
+\subsection{Combinazioni}
+$C_{n,k} = \left( \begin{matrix} 
+n \\ 
+k 
+\end{matrix} \right) = \frac{n!}{k! \cdot (n-k)!}$
+
+\section{Funzioni Essenziali}
+
+\subsection{Funzione Gaussiana Standard}
+$\eta = 0, \sigma^2 = 1 \Rightarrow g(x) = \frac{1}{\sqrt{2 \pi }} \cdot e^{- \frac{t^2}{2}}$
+
+\paragraph{Valori noti:} ~\\
+$g(1) = g(-1) \simeq  \frac{1}{\sqrt{2 \pi }} \cdot 0,6 $ \\
+$g(2) = g(-2) = \simeq  \frac{1}{\sqrt{2 \pi }} \cdot 0,136$
+
+\paragraph{Area:} ~\\
+$\int_{-\infty}^{+\infty} g(t) \,dt = 1$
+
+\subsection{Funzione Gaussiana Generica}
+$f(x) = \frac{1}{\sqrt{2 \pi \sigma^2 }} \cdot e^{- \frac{(t - \eta)^2 }{2 \sigma^2}}$ dove $\eta \in \mathbb{R} $ e $\sigma^2 > 0$
+
+\paragraph{Area:} ~\\
+$\int_{-\infty}^{+\infty} f(t) \,dt = 1$
+
+\subsection{Funzione $Q$ (primitiva della gaussiana standard)}
+$Q(x) = \int_{-x}^{+\infty} g(t) \,dt = \frac{1}{2 \pi} \cdot \int_{-x}^{+\infty} e^{-\frac{-t^2}{2}}$
+
+\paragraph{Valori noti:} ~\\
+
+\begin{table} [h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+        $Q(-\infty) = 1$ & $Q(0) = 0.5 $ & $Q(+1) = 0.16$\\
+        \hline 
+        $Q(-2) = 0.98$ &  & $Q(+2) = 0.02$\\
+        \hline 
+        $Q(-1) = 0.84$&  & $Q(+\infty) = 0$\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Funzione $G$ (primitiva della gaussiana standard)}
+$G(x) = \int_{-\infty}^{+x} g(t) \,dt = \frac{1}{2 \pi} \cdot \int_{-\infty}^{+x} e^{-\frac{-t^2}{2}}$
+
+\subsection{Funzione Gradino Unitario}
+$u(t) = \begin{cases} 1 \text{ se } t \geq 0 \\ 0 \text{ se } t < 0\end{cases}$
+
+\subsection{Funzione Impulso Rettangolare}
+$\Pi(t) = \begin{cases} 1 \text{ se } |t| \leq 0 \\ 0 \text{ se } |t| > 0\end{cases}$
+
+\subsection{Funzione Impulsiva di Dirac} 
+$\delta(t)$
+
+\paragraph{Proprietà campionatrice della delta:} ~\\
+$\int_{- \infty}^{+ \infty} f(x) \cdot \delta(x - x_0) \,dx = \int_{- \infty}^{+ \infty} f(x) \cdot \delta(x_0 - x) \,dx = f(x_0)$  
+$\forall f(x) \text{ continua in } x_0$ 
+\subparagraph{Caso Specifico} ~\\
+$\int_{a}^{b} f(x) \cdot \delta(x - x_0) \,dx = \begin{cases}
+f(x_0) \text{ se } x_0 \in (a,b) \\
+0 \text{ se } x_0 \notin (a,b)
+\end{cases}$
+\subparagraph{Caso Particolare} ~\\
+Se $f(x) = 1$ abbiamo che: \\
+$\int_{a}^{b} 1 \cdot \delta(x - x_0) \,dx = \begin{cases}
+1 \text{ se } ab < 0 \\
+0 \text{ se } ab > 0
+\end{cases}$
+
+\section{Fondamenti di Insiemistica}
+
+\subsection{Leggi di DeMorgan}
+\begin{enumerate}
+    \item $\overline{A \cup B} = \overline{A} \cap \overline{B} \Leftrightarrow \overline{A + B} = \overline{A} \cdot \overline{B}$
+    \item $\overline{A \cap B} = \overline{A} \cup \overline{B} \Leftrightarrow \overline{A \cdot B} = \overline{A} + \overline{B}$
+\end{enumerate}
+
+\subsection{Proprietà Distributiva Dell’Intersezione Rispetto All’Unione}
+$\begin{matrix}
+A \cdot (B + C) = A \cdot B + A \cdot C \\
+\parallel \\
+A \cap (B \cup C) = A \cap B \cup A \cap C
+\end{matrix}$
+
+\subsection{Trasformare le Operazioni fra Insiemi}
+$\begin{matrix}
+1) & \cup \rightarrow \cap && 2) & \cup \rightarrow \cap \\
+& \cap \rightarrow \cup && & \cap \rightarrow \cup \\
+& A \rightarrow \overline{A} && & \phi \rightarrow \Omega \\
+&  && & \Omega \rightarrow \phi \\
+\end{matrix}$
+
+\section{Introduzione alla Probabilità}
+
+\subsection{3 Assiomi findamentali di Kolmogotov}
+
+\begin{enumerate}
+    \item $P\left(\Omega\right) = 1$
+    \item $P(A) \geq 0 \;\;\forall A$
+    \item $P(A_1 +A_2) = P(A_1) + P(A_2) \; \; se \;\; A_1 \cdot A_2 = \phi \left(\text{Sono disgiunti}\right)$
+\end{enumerate}
+
+\subsection{Frequenza di Presentazione}
+$f(A) = \frac{n_A}{n}$
+
+\subsection{Definizione di Probabilità}
+$P(A) = \lim_{n \to +\infty} f(A) = \lim_{n \to +\infty} \frac{n_A}{n}$
+
+\subsection{Definizione Classica di Probabilità}
+$P(A) = \frac{k_A}{k} = \frac{\text{Casi Favorevoli}}{\text{Casi Possibili}}$
+
+\subsection{Calcolare Probabilità su Spazio Campione Discreto}
+Nel caso generico, abbiamo $n$ oggetti divisi in $\begin{cases}
+n_1 \text{ di tipo } 1 \\
+n_1 \text{ di tipo } 2 \\
+\vdots \\
+n_r \text{ di tipo } r \\
+\end{cases}$ \\
+
+Decidiamo di estrarne $k$ e ad ogni estrazione abbiamo $\begin{cases}
+k \text{ oggetti estratti, }k_1 \text{ di tipo } 1 \\
+k \text{ oggetti estratti, }k_2 \text{ di tipo } 2 \\
+\vdots \\
+k \text{ oggetti estratti, }k_r \text{ di tipo } r \\
+\end{cases}$
+
+Quindi $P(A) = \frac{\left(\begin{matrix} n_1 \\ k_1\end{matrix}\right) \cdot \left(\begin{matrix} n_2 \\ k_2\end{matrix}\right) \cdot \dots \cdot \left(\begin{matrix} n_r \\ k_r\end{matrix}\right)} {\left(\begin{matrix} n \\ k\end{matrix}\right)}$
+
+\subsection{Calcolare Probabilità su Spazio Campione Continuo}
+Per calcolare la probabilità di un evento in uno spazio campione continuo utilizziamo gli integrali, ad esempio, se $A = \left\{ x \in \mathbb{R} | x_1 < x < x_2 \right\}$ possiamo calcolare $P(A) = \int_{x_1}^{x_2} f(x) \,dx $
+
+\subsection{Probabilità Condizionata}
+$P(A|B) = \frac{P(A \cdot B)}{P(B)}$
+
+\subsection{Eventi Indipendenti}
+Se $A$ e $B$ sono eventi indipendendi dove $P(A) \neq 0$ e $P(B) \neq 0$ allora \\
+$P(A \cdot B) = P(A) \cdot P(B)$
+
+\paragraph{Probabilità condizionata con eventi indipendenti} ~\\
+$P(A|B) = \frac{P(AB)}{P(B)} = \frac{P(A) \cdot \cancel{P(B)}}{\cancel{P(B)}} = P(A)$
+
+\subsection{Chain Rule}
+$P(A_1 \cdot A_2 \cdot \dots \cdot A_n) = P(A_1|A_2 \cdot A_3 \cdot \dots \cdot A_n) \cdot P(A_2|A_3 \cdot \dots \cdot A_n) \cdot \dots \cdot P(A_{n-1}| A_n) \cdot P(A_n)$ \\ \\
+Che può anche essere scritta come: \\ \\
+$P(A_1 \cdot A_2 \cdot \dots \cdot A_n) = P(A_n|A_1 \cdot A_2 \cdot \dots \cdot A_{n-1}) \cdot P(A_{n-1}|A_1 \cdot A_2 \cdot \dots \cdot A_n) \cdot \dots \cdot P(A_2| A_1) \cdot P(A_1)$
+
+\subsection{Teorema di Bayes}
+$P(A|B) = \frac{P(AB)}{P(B)} \Rightarrow P(AB) = P(A|B) \cdot P(B)$ \\
+$\Downarrow$ \\
+$P(B|A) = \frac{P(AB)}{P(A)} = \frac{P(A|B) \cdot P(B)}{P(A)}$
+
+\subsection{Teorema della Probabilità Totale}
+$P(C) = \sum_{i=1}^{n} P(C|A_i) \cdot P(A_i)$
+
+\subsection{Prove Ripetute(Formula di Bernoulli)}
+$n$ prove $k$ successi \\
+$P_n(k) = \left( \begin{matrix} n \\ k \end{matrix}\right) \cdot p^k\cdot (1-p)^{n-k} = \left( \begin{matrix} n \\ k \end{matrix}\right) \cdot p^k\cdot (q)^{n-k}$
+
+\section{Variabili Aleatorie}
+
+\subsection{CDF: Cumulative Distribution Function}
+$F_X(x) = \left\{ X \leq x\right\}$
+
+\subsection{PDF: Probability Density Function}
+$f_X(x) = \frac{dF_X(x)}{dx}$
+
+\subsection{Variabili Aleatorie Discrete}
+
+$P_i$ è la probabilità di un determinato evento
+\paragraph{CDF} ~\\
+$F_X(x) = \sum_{i} P_i \cdot u(x - x_i)$
+
+\paragraph{PDF} ~\\
+$f_X(x) = \sum_{i} P_i \cdot \delta(x - x_i)$
+
+\subsection{Variabili Aleatorie Continue}
+
+Caratterizzate da una CDF continua, ad esempio: $P \left\{ x_1 < X \leq x_2\right\} = F_X(x_2) - F_X(x_1)$
+
+\subsection{Funzione Indicatrice (Variabile Aleatoria di Bernoulli)}
+
+Una variabile aleatoria di Bernoulli si indica con $X \in \mathcal{B}er (P)$ \\
+$I = \begin{cases}
+0 \;\;\text{ se } a \in \overline A\\
+1 \;\;\text{ se } a \in A
+\end{cases}
+\;\;
+\bigg|
+\;\;
+\big[ P(A) = P\big]$ \\ \\
+Grazie alla V.A. di Bernoulli possiamo definire una CDF $\left[ F_I(i) \right]$ che ci fa capire se un evento si è verificato oppure no.
+
+\subsection{Proprietà Funzioni a 2 Variabili}
+Se $z(y) = \int_{\alpha(y)}^{\beta(y)} h(x,y) dx$ posso scrivere che: \\
+\\
+$\frac{dz(y)}{dy} = h \left( \beta(y), y\right) \cdot \frac{d\beta(y)}{dy} - h \left( \alpha(y), y\right) \cdot \frac{d\alpha(y)}{dy} + \int_{\alpha(y)}^{\beta(y)} \frac{dh(x,y)}{dy} dx$
+
+\subsection{Teorema Fondamentale}
+2 V.A $X$ e $Y$ con $Y=g(X)$ \\
+\\
+$f_Y(y) = \sum_{x_i} \frac{f_X(x_i)}{|g'(x_i)|} \Big|_{x_i = g^{-1}(y)}$\\
+\begin{enumerate}
+    \item Calcolare $g'(x)$
+    \item Calcolare $g^{-1}(y)$ ovvero la funzione infersa a $g(x)$ che si ottiene ricavando la $x$ in funzione di $y$
+\end{enumerate}
+
+\subsection{Problema Inverso alla Trasformazione di Variabili Aleatorie}
+Da una V.A $X$ vogliamo ottenere una V.A uniforme $U \in \mathcal{U}[0,1]$, quindi: 
+\begin{enumerate}
+    \item tramite operazioni matematiche ottengo $g(x)$ dalla $f_X(x)$ che generalmente viene data come uniforme
+    \item utilizzo il teo. fond. per ottenere $f_U(u) = \sum_{x_i} \frac{f_X(x_i)}{|g'(x_i)|} \Big|_{x_i = g^{-1}(u)}$
+\end{enumerate}
+Ora, vogliamo trovare un'altra $g(x)$ data $f_Y(y)$: \\
+sappiamo che in questo caso $g(x) = F_Y^{-1}(U)$ dove $U$ non è altro che la $g(x)$ ottenuta dalla V.A $X$ nel passaggio precedente.
+
+\subsection{Valor Medio}
+\paragraph{Caso V.A Discreta} ~\\
+$\eta_x = E(X) = \sum_{i=1}^{n}x_i \cdot f_X(x_i) $
+
+\paragraph{Caso V.A Continua} ~\\
+$\eta_x = E(X) = \int_{- \infty}^{+\infty}x \cdot f_X(x) \,dx $
+
+\subsection{Varianza}
+\paragraph{Caso V.A Discreta} ~\\
+$\sigma^2_x = E\big\{ (X-\eta_x)^2 \big\} = \sum_{i=1}^{n} p_i \cdot (x_i - \eta_x)^2$
+
+\paragraph{Caso V.A Continua} ~\\
+$\sigma^2_x = E\big\{ (X-\eta_x)^2 \big\} = \int_{- \infty}^{+\infty} (x-\eta_x)^2 \cdot f_X(x) \,dx $
+
+\subsection{Teorema Dell'Aspettazione}
+Serve per calcolare la varianza di una V.A $Y = g(X)$ data la V.A $X$: 
+
+\paragraph{Caso V.A Discreta} ~\\
+$\eta_y = \sum_{i = 1}^{n} g(x_i) \cdot P \big\{ X = x_i \big\} $
+
+\paragraph{Caso V.A Continua} ~\\
+$\eta_y = \int_{- \infty}^{+\infty} g(x) \cdot f_X(x) \,dx $
+
+\subsection{Scarto}
+$L_x = X - \eta_x $ \\
+$E \left\{ X - \eta_x \right\} = 0$
+
+\subsection{Momenti Ordinari}
+$m_X(k) = E \left\{ (X)^k \right\}$
+
+\paragraph{Momenti Ordinari Noti} ~\\
+$m_X(0) = 1 $ \\
+Valor Medio: $m_X(1) = \eta_x $ \\
+Valore Quadratico Medio: $m_X(2) = E \left\{ (X)^2 \right\} $
+
+\subsection{Momenti Centrali}
+$\mu_X(k) = E \left\{ (X - \eta_x )^k \right\}$
+
+\paragraph{Momenti Centrali Noti} ~\\
+$\mu_X(1) = E \left\{ (X - \eta_x )\right\} = 0 $ \\
+Varianza: $\mu_X(2) = \sigma_x^2$
+
+\subsection{Da Momenti Ordinari a Centrali}
+$\mu_X(k) = \sum_{i=0}^{k} \left( \begin{matrix} k \\ i\end{matrix} \right) \cdot m_X(i) \cdot \eta_x^{k-i}$
+
+\subsection{Da Momenti Centrali a Ordinari}
+$m_X(k) = \sum_{i=0}^{k} \left( \begin{matrix} k \\ i\end{matrix} \right) \cdot \mu_X(i) \cdot \eta_x^{k-i}$
+
+\subsection{Relazioni Importanti fra Momenti}
+\begin{itemize}
+    \item $\sigma_x^2 = E \left\{ (X)^2 \right\} - \eta_x^2 = E \left\{ (X)^2 \right\} - \left[ E \left\{ (X) \right\} \right]^2$
+    \item $E\Big\{ X^2 \Big\} = \sigma_x^2 + \eta_x^2$
+    \item $E\Big\{ X \cdot (X-1) \Big\} = \sigma_x^2 + \eta_x^2 - \eta_x$
+    \item $\sigma_x^2 = E\Big\{ X \cdot (X-1) \Big\} + \eta_x - \eta_x^2$
+\end{itemize}
+
+\subsection{Disuguaglianza di Chebychev}
+$P \big\{ |X - \eta_x| > \varepsilon \big\} \leq \frac{\sigma_x^2}{\varepsilon}$
+
+\subsection{Funzione Caratteristica}
+$\Psi(\nu) = E \big\{ e^{j \nu X} \big\} = \int_{-\infty}^{+\infty} e^{j\nu x} \cdot f_X(x) \,dx $\\
+Sarà più utile per i vettori aleatori
+
+\subsection{MGF: Funzione Generatrice di Momenti}
+$\Phi(s) = E \big\{ e^{sX} \big\} = \int_{-\infty}^{+\infty} e^{sx} \cdot f_X(x) \,dx$ \\
+$\Phi(s)\big|_{s = j \nu} = \Psi(\nu) \rightarrow m_X(k)$\\
+$\Downarrow$\\
+$m_X(k) = (-j)^k \cdot \frac{d^k\Psi(\nu)}{d\nu^k} \Big|_{\nu=0}$
+
+\subsection{Moda}
+\paragraph{Caso V.A Dsicrete} ~\\
+La moda non è nient'altro che il valore più probabile.
+
+\paragraph{Caso V.A Continue} ~\\
+La moda è il valore massimo della distribuzione, quindi basta solo \href{https://www.youmath.it/lezioni/analisi-matematica/derivate/401-massimi-e-minimi-di-una-funzione.html}{calcolare i massimi e i minimi della PDF}
+
+\subsection{Mediana}
+$\int_{-\infty}^{x_M} f_X(x) \,dx = \int_{x_M}^{+\infty} f_X(x) \,dx$ \\
+\\
+Dove $x_M = x_m $ indica la moda
+\paragraph{Caso V.A Discrete} ~\\
+Calcolare la mediana di una V.A. discreta può essere un pò più impegnativo, per farlo bisogna distinguere due casi ben precisi.\\
+\\
+Nel caso in cui l’ordinata di valore $0,5$ si trovi “nel mezzo”(“nel salto”) che avviene fra un valore e l’altro della CDF della V.A. discreta, allora basterà guardare l’ascissa corrispondente e quella sarà la nostra mediana \\
+\\
+Nel caso in cui, invece, l’ordinata di valore $0,5$ si trovi in una parte in cui il grafico è costante, la mediana non può essere assegnata ad un solo valore della V.A., quindi la si assegna alla media dei due valori, ad esempio: $\frac{x_1 + x_2}{2}$
+
+\paragraph{Caso V.A Continue} ~\\
+Per calcolare la mediana in una V.A. continua mi basta guardare l’ascissa($x$) corrispondente all’ordinata($y$) di valore $0,5$.
+
+\subsection{CDF Condizionata}
+$P\left( \big\{ X \leq x\big\}|C \right) = F_X(x|C) \cdot \frac{P\left( \big\{ X \leq x\big\} \cdot C \right)}{P(C)}$
+
+\paragraph{Proprietà:} ~\\
+\begin{itemize}
+    \item $P\left( \big\{x_1 < X \leq x_2\big\} \big| C \right) = F_X(x_2 | C) - F_X(x_1 | C)$
+    \item $F_X(x|C) = F_X(x^+ | C)$
+    \item $F_X(x^+ | C) - F_X(x^- | C) = P\left( \big\{X = x\big\} \big| C \right)$
+\end{itemize}
+
+\subsection{PDF Condizionata}
+$f_X(x|C) = \frac{dF_X(x|C)}{dx}$
+\paragraph{Proprietà:} ~\\
+\begin{itemize}
+    \item $\int_{-\infty}^{+\infty} f_X(x|C) \,dx = 1$
+    \item $\int_{x_1}^{x_2} f_X(x) \,dx = P\left( \big\{x_1 < X \leq x_2\big\} \big| C \right) = F_X(x_2 | C) - F_X(x_1 | C)$
+\end{itemize}
+
+\subsection{Doppio Condizionamento}
+\paragraph{Caso discreto} ~\\
+$P(M|N) = \sum_{i=1}^{+\infty} P(M|A_i \cdot N) \cdot P(A_i|N)$ con $A_i, i \geq 1$ partizione 
+\paragraph{Caso continuo} ~\\
+$P(M|N) = \int_{-\infty}^{+\infty} P(M|X = x , N) \cdot f_X(x|N) dx$
+
+\subsection{Teorema della Probabilità Totale Condizionata}
+
+\paragraph{CDF} ~\\
+$F_X(x) = F_X(x|C_1) \cdot P(C_1) + F_X(x|C_2) \cdot P(C_2) + \dots + F_X(x|C_n) \cdot P(C_n)$
+
+\paragraph{PDF} ~\\
+$f_X(x) = f_X(x|C_1) \cdot P(C_1) + f_X(x|C_2) \cdot P(C_2) + \dots + f_X(x|C_n) \cdot P(C_n)$
+
+\subsection{Valor Medio Condizionato}
+$E \big\{ X | C \big\} = \int_{-\infty}^{+\infty} x \cdot f_X(x|C) \,dx$
+
+\subsection{Variabili Aleatorie Uniformi}
+Una variabile aleatoria uniforme è definiata come: $X \in \mathcal{U}[a,b]$ 
+\paragraph{CDF} ~\\
+$F_X(x) = \begin{cases}
+0 \,\text{ se } x < a \\
+\frac{x-a}{b-a} \,\text{ se } a \leq x \leq b \\
+1 \,\text{ se } x>b
+\end{cases}$
+\paragraph{PDF} ~\\
+$f_X(x) = \begin{cases}
+\frac{1}{b-a} \,\text{ se } a \leq x \leq b \\
+0 \,\text{ altrove}
+\end{cases}$
+\paragraph{Valor Medio} ~\\
+$\eta_x = \frac{b+a}{2}$
+\paragraph{Valore Quadratico Medio} ~\\
+$E \left\{ X^2 \right\} \frac{a^2+b^2+ab}{3}$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = \frac{(a-b)^2}{12}$
+
+\subsection{Variabili Aleatorie Esponenziali}
+Una variabile aleatoria esponenziale è definiata come: $X \in \varepsilon \left( \eta \right)$ 
+\paragraph{CDF} ~\\
+$F_X(x) = \left( 1 - e^{- \frac x \eta } \right) \cdot u(x)
+$
+\paragraph{PDF} ~\\
+$f_X(x) = \frac 1 \eta \cdot e^{-\frac x \eta} \cdot u(x)
+$
+\paragraph{Valor Medio} ~\\
+$\eta_x = \eta$
+\paragraph{Valore Quadratico Medio} ~\\
+$E \left\{ X^2 \right\} = 2 \eta^2$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = \eta^2$
+\paragraph{Deviazione Standard} ~\\
+$\sigma_x = \eta_x = \eta $
+
+\subsection{Variabile Aleatoria Gaussiana Standrad}
+Una variabile aleatoria gaussiana standrad ha $\eta = 0 $ e $\sigma^2 = 1$, quindi viene indicata come: $X \in \mathcal{N}(0, 1)$
+\paragraph{CDF} ~\\
+$F_X(x) = G \left(x\right) = 1 - Q \left(x\right)$
+\paragraph{PDF} ~\\
+$f_X(x) = \frac{1}{\sqrt{2 \pi}} \cdot e^{-\frac{x^2}{2}} $
+\paragraph{Valor Medio} ~\\
+$\eta_x = 0 $
+\paragraph{Momenti Ordinari di Ordine Dispari} ~\\
+$m_X(k+1) = E \left\{ X^{k+1}\right\} = 0$
+\paragraph{Valore Quadratico Medio} ~\\
+$m_X(2) = 1$
+\paragraph{Momenti Ordinari di Ordine Pari} ~\\
+$m_X(4) = 3$ \\
+$\vdots$ \\
+$m_X(k) = E \left\{ X^k \right\} = 1 \cdot 3 \cdot 5 \cdot 7 \cdot (k-1)$
+
+\subsection{Variabili Aleatorie Gaussiane Generiche} 
+Una variabile aleatoria gaussiana generica è definita come: $X \in \mathcal{N}(\eta, \sigma^2)$
+\paragraph{CDF} ~\\
+$F_X(x) = G \left(\frac{x-\eta}{\sigma}\right) = 1 - Q \left(\frac{x-\eta}{\sigma}\right)$
+\paragraph{PDF} ~\\
+$f_X(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{\left( x - \eta \right)^2}{2\sigma^2}} $
+\paragraph{Valor Medio} ~\\
+$\eta_x = \eta$
+\paragraph{Valore Quadratico Medio} ~\\
+$m_X(2) = E \left\{ X^2 \right\} = \sigma^2 + \eta^2$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = \sigma^2$
+\paragraph{Moda} ~\\
+$x_m = \eta $
+
+\subsection{Variabili Aleatorie Binomiali}
+Una variabile aleatoria binomiale è definita come: $X \in \mathcal{B}(n,p)$
+\paragraph{PMF} ~\\
+$P_k = P_n(k)= P \left\{X = k \right\} = \begin{pmatrix} n \\ k \end{pmatrix} \cdot p^k \cdot (\underset{q}{\underbrace{1-p}})^{n-k}$
+\paragraph{CDF} ~\\
+\paragraph{PDF} ~\\
+$f_X(x) = \sum_{k=1}^{n} P_n(k) \cdot \delta(x-k)$
+\paragraph{Valor Medio} ~\\
+$\eta_x = n \cdot p $
+\paragraph{Valore Quadratico Medio} ~\\
+$m_X(2) = E \left\{ X_i^2 \right\} = n \cdot p$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = n \cdot p \cdot q$
+\paragraph{Moda} ~\\
+$x_m = \begin{cases}
+\left[(n+1) \cdot p\right] \;\;\;\;\text{ se } (n+1)\cdot p \text{ non è intero} \\
+(n+1) \cdot p \text{ e } (n+1)\cdot p -1 \;\;\;\;\text{ se } (n+1)\cdot p \text{ è intero}
+\end{cases}$
+
+\subsection{Distribuzione Geometrica}
+Una variabile aleatorie con distribuzione geometrica non è altro che un caso particolare delle v.a binomiali
+\paragraph{PMF} ~\\
+$P_k = P_n(k) = p \cdot (1-p)^{k-1} = p \cdot q^{k-1}$
+\paragraph{Valor Medio} ~\\
+$\eta_x = \frac{1}{p}$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = \frac{q}{p^2}$
+
+\subsection{Variabili Aleatorie di Poisson}
+Una variabile aleatoria di Poisson è definita come: $X \in \mathcal{P}(\Lambda)$
+\paragraph{PMF} ~\\
+$P_x(k) = P \left\{X = k\right\} = \frac{\Lambda^k}{k!} \cdot e^{-\Lambda}$
+\paragraph{Valor Medio} ~\\
+$\eta_x = \Lambda $
+\paragraph{Valore Quadratico Medio} ~\\
+$m_X(2) = E \left\{ X^2 \right\} = \Lambda^2 + \Lambda$
+\paragraph{Varianza} ~\\
+$\sigma_x^2 = \Lambda$
+\paragraph{Moda} ~\\
+\begin{itemize}
+    \item Se $\begin{matrix}
+            \Lambda > 1 \\
+            \Lambda \text{ non intero}
+            \end{matrix}
+            \Bigg\} \Rightarrow x_m = \Lambda$
+    \item Se $\begin{matrix}
+            \Lambda > 1 \\
+            \Lambda \text{ intero}
+            \end{matrix}
+            \Bigg\} \Rightarrow x_m = \Lambda$ e $x_m = \Lambda - 1$
+    \item Se $\Lambda < 1 \Rightarrow x_m = 0$ 
+\end{itemize}
+
+\section{Vettori Aleatori}
+
+\subsection{CDF congiunta}
+$F_{XY}(x,y) = P \left\{ X \leq x, Y \leq y \right\}$
+\paragraph{Proprietà}
+\begin{itemize}
+    \item $0 \leq F_{XY}(x,y) \leq 1$
+    \item $F_{XY}(x_2, y) = F_{XY}(x_1, y)$ con $x_2 \geq x_1$ \\
+    $F_{XY}(x, y_2) = F_{XY}(x, y_1)$ con $y_2 \geq y_1$
+    \item Marginali: \\
+    $F_{XY}(+\infty, y) = F_Y(y)$
+    $F_{XY}(x, +\infty) = F_X(x)$
+\end{itemize}
+
+\end{document}

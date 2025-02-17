@@ -1,0 +1,134 @@
+\contentsline {section}{\numberline {1}Concetti Base}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Permutazioni}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Disposizioni}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Disposizioni con ripetizione}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Combinazioni}{4}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Funzioni Essenziali}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Funzione Gaussiana Standard}{4}{subsection.2.1}%
+\contentsline {paragraph}{Valori noti:}{4}{paragraph*.1}%
+\contentsline {paragraph}{Area:}{4}{paragraph*.2}%
+\contentsline {subsection}{\numberline {2.2}Funzione Gaussiana Generica}{4}{subsection.2.2}%
+\contentsline {paragraph}{Area:}{4}{paragraph*.3}%
+\contentsline {subsection}{\numberline {2.3}Funzione $Q$ (primitiva della gaussiana standard)}{4}{subsection.2.3}%
+\contentsline {paragraph}{Valori noti:}{4}{paragraph*.4}%
+\contentsline {subsection}{\numberline {2.4}Funzione $G$ (primitiva della gaussiana standard)}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Funzione Gradino Unitario}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Funzione Impulso Rettangolare}{5}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Funzione Impulsiva di Dirac}{5}{subsection.2.7}%
+\contentsline {paragraph}{Proprietà campionatrice della delta:}{5}{paragraph*.5}%
+\contentsline {subparagraph}{Caso Specifico}{5}{subparagraph*.6}%
+\contentsline {subparagraph}{Caso Particolare}{5}{subparagraph*.7}%
+\contentsline {section}{\numberline {3}Fondamenti di Insiemistica}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Leggi di DeMorgan}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Proprietà Distributiva Dell’Intersezione Rispetto All’Unione}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Trasformare le Operazioni fra Insiemi}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Introduzione alla Probabilità}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}3 Assiomi findamentali di Kolmogotov}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Frequenza di Presentazione}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Definizione di Probabilità}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Definizione Classica di Probabilità}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Calcolare Probabilità su Spazio Campione Discreto}{6}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Calcolare Probabilità su Spazio Campione Continuo}{6}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Probabilità Condizionata}{6}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Eventi Indipendenti}{6}{subsection.4.8}%
+\contentsline {paragraph}{Probabilità condizionata con eventi indipendenti}{6}{paragraph*.8}%
+\contentsline {subsection}{\numberline {4.9}Chain Rule}{6}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Teorema di Bayes}{6}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Teorema della Probabilità Totale}{7}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}Prove Ripetute(Formula di Bernoulli)}{7}{subsection.4.12}%
+\contentsline {section}{\numberline {5}Variabili Aleatorie}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}CDF: Cumulative Distribution Function}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}PDF: Probability Density Function}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Variabili Aleatorie Discrete}{7}{subsection.5.3}%
+\contentsline {paragraph}{CDF}{7}{paragraph*.9}%
+\contentsline {paragraph}{PDF}{7}{paragraph*.10}%
+\contentsline {subsection}{\numberline {5.4}Variabili Aleatorie Continue}{7}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Funzione Indicatrice (Variabile Aleatoria di Bernoulli)}{7}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Proprietà Funzioni a 2 Variabili}{7}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Teorema Fondamentale}{7}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Problema Inverso alla Trasformazione di Variabili Aleatorie}{8}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Valor Medio}{8}{subsection.5.9}%
+\contentsline {paragraph}{Caso V.A Discreta}{8}{paragraph*.11}%
+\contentsline {paragraph}{Caso V.A Continua}{8}{paragraph*.12}%
+\contentsline {subsection}{\numberline {5.10}Varianza}{8}{subsection.5.10}%
+\contentsline {paragraph}{Caso V.A Discreta}{8}{paragraph*.13}%
+\contentsline {paragraph}{Caso V.A Continua}{8}{paragraph*.14}%
+\contentsline {subsection}{\numberline {5.11}Teorema Dell'Aspettazione}{8}{subsection.5.11}%
+\contentsline {paragraph}{Caso V.A Discreta}{8}{paragraph*.15}%
+\contentsline {paragraph}{Caso V.A Continua}{8}{paragraph*.16}%
+\contentsline {subsection}{\numberline {5.12}Scarto}{8}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Momenti Ordinari}{8}{subsection.5.13}%
+\contentsline {paragraph}{Momenti Ordinari Noti}{8}{paragraph*.17}%
+\contentsline {subsection}{\numberline {5.14}Momenti Centrali}{8}{subsection.5.14}%
+\contentsline {paragraph}{Momenti Centrali Noti}{8}{paragraph*.18}%
+\contentsline {subsection}{\numberline {5.15}Da Momenti Ordinari a Centrali}{9}{subsection.5.15}%
+\contentsline {subsection}{\numberline {5.16}Da Momenti Centrali a Ordinari}{9}{subsection.5.16}%
+\contentsline {subsection}{\numberline {5.17}Relazioni Importanti fra Momenti}{9}{subsection.5.17}%
+\contentsline {subsection}{\numberline {5.18}Disuguaglianza di Chebychev}{9}{subsection.5.18}%
+\contentsline {subsection}{\numberline {5.19}Funzione Caratteristica}{9}{subsection.5.19}%
+\contentsline {subsection}{\numberline {5.20}MGF: Funzione Generatrice di Momenti}{9}{subsection.5.20}%
+\contentsline {subsection}{\numberline {5.21}Moda}{9}{subsection.5.21}%
+\contentsline {paragraph}{Caso V.A Dsicrete}{9}{paragraph*.19}%
+\contentsline {paragraph}{Caso V.A Continue}{9}{paragraph*.20}%
+\contentsline {subsection}{\numberline {5.22}Mediana}{9}{subsection.5.22}%
+\contentsline {paragraph}{Caso V.A Discrete}{9}{paragraph*.21}%
+\contentsline {paragraph}{Caso V.A Continue}{10}{paragraph*.22}%
+\contentsline {subsection}{\numberline {5.23}CDF Condizionata}{10}{subsection.5.23}%
+\contentsline {paragraph}{Proprietà:}{10}{paragraph*.23}%
+\contentsline {subsection}{\numberline {5.24}PDF Condizionata}{10}{subsection.5.24}%
+\contentsline {paragraph}{Proprietà:}{10}{paragraph*.24}%
+\contentsline {subsection}{\numberline {5.25}Doppio Condizionamento}{10}{subsection.5.25}%
+\contentsline {paragraph}{Caso discreto}{10}{paragraph*.25}%
+\contentsline {paragraph}{Caso continuo}{10}{paragraph*.26}%
+\contentsline {subsection}{\numberline {5.26}Teorema della Probabilità Totale Condizionata}{10}{subsection.5.26}%
+\contentsline {paragraph}{CDF}{10}{paragraph*.27}%
+\contentsline {paragraph}{PDF}{10}{paragraph*.28}%
+\contentsline {subsection}{\numberline {5.27}Valor Medio Condizionato}{10}{subsection.5.27}%
+\contentsline {subsection}{\numberline {5.28}Variabili Aleatorie Uniformi}{10}{subsection.5.28}%
+\contentsline {paragraph}{CDF}{10}{paragraph*.29}%
+\contentsline {paragraph}{PDF}{10}{paragraph*.30}%
+\contentsline {paragraph}{Valor Medio}{11}{paragraph*.31}%
+\contentsline {paragraph}{Valore Quadratico Medio}{11}{paragraph*.32}%
+\contentsline {paragraph}{Varianza}{11}{paragraph*.33}%
+\contentsline {subsection}{\numberline {5.29}Variabili Aleatorie Esponenziali}{11}{subsection.5.29}%
+\contentsline {paragraph}{CDF}{11}{paragraph*.34}%
+\contentsline {paragraph}{PDF}{11}{paragraph*.35}%
+\contentsline {paragraph}{Valor Medio}{11}{paragraph*.36}%
+\contentsline {paragraph}{Valore Quadratico Medio}{11}{paragraph*.37}%
+\contentsline {paragraph}{Varianza}{11}{paragraph*.38}%
+\contentsline {paragraph}{Deviazione Standard}{11}{paragraph*.39}%
+\contentsline {subsection}{\numberline {5.30}Variabile Aleatoria Gaussiana Standrad}{11}{subsection.5.30}%
+\contentsline {paragraph}{CDF}{11}{paragraph*.40}%
+\contentsline {paragraph}{PDF}{11}{paragraph*.41}%
+\contentsline {paragraph}{Valor Medio}{11}{paragraph*.42}%
+\contentsline {paragraph}{Momenti Ordinari di Ordine Dispari}{11}{paragraph*.43}%
+\contentsline {paragraph}{Valore Quadratico Medio}{11}{paragraph*.44}%
+\contentsline {paragraph}{Momenti Ordinari di Ordine Pari}{11}{paragraph*.45}%
+\contentsline {subsection}{\numberline {5.31}Variabili Aleatorie Gaussiane Generiche}{11}{subsection.5.31}%
+\contentsline {paragraph}{CDF}{12}{paragraph*.46}%
+\contentsline {paragraph}{PDF}{12}{paragraph*.47}%
+\contentsline {paragraph}{Valor Medio}{12}{paragraph*.48}%
+\contentsline {paragraph}{Valore Quadratico Medio}{12}{paragraph*.49}%
+\contentsline {paragraph}{Varianza}{12}{paragraph*.50}%
+\contentsline {paragraph}{Moda}{12}{paragraph*.51}%
+\contentsline {subsection}{\numberline {5.32}Variabili Aleatorie Binomiali}{12}{subsection.5.32}%
+\contentsline {paragraph}{PMF}{12}{paragraph*.52}%
+\contentsline {paragraph}{CDF}{12}{paragraph*.53}%
+\contentsline {paragraph}{PDF}{12}{paragraph*.54}%
+\contentsline {paragraph}{Valor Medio}{12}{paragraph*.55}%
+\contentsline {paragraph}{Valore Quadratico Medio}{12}{paragraph*.56}%
+\contentsline {paragraph}{Varianza}{12}{paragraph*.57}%
+\contentsline {paragraph}{Moda}{12}{paragraph*.58}%
+\contentsline {subsection}{\numberline {5.33}Distribuzione Geometrica}{12}{subsection.5.33}%
+\contentsline {paragraph}{PMF}{12}{paragraph*.59}%
+\contentsline {paragraph}{Valor Medio}{12}{paragraph*.60}%
+\contentsline {paragraph}{Varianza}{12}{paragraph*.61}%
+\contentsline {subsection}{\numberline {5.34}Variabili Aleatorie di Poisson}{13}{subsection.5.34}%
+\contentsline {paragraph}{PMF}{13}{paragraph*.62}%
+\contentsline {paragraph}{Valor Medio}{13}{paragraph*.63}%
+\contentsline {paragraph}{Valore Quadratico Medio}{13}{paragraph*.64}%
+\contentsline {paragraph}{Varianza}{13}{paragraph*.65}%
+\contentsline {paragraph}{Moda}{13}{paragraph*.66}%
+\contentsline {section}{\numberline {6}Vettori Aleatori}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}CDF congiunta}{13}{subsection.6.1}%
+\contentsline {paragraph}{Proprietà}{13}{paragraph*.67}%
