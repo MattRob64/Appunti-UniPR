@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  17 FEB 2025 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  17 FEB 2025 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -556,7 +556,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 ...rline {Grafico}}{15}{subsubsection.3.11.1}
+l.58 ...rline {Grafico}}{20}{subsubsection.3.11.1}
                                                   % [1] [2] [3]
 Overfull \hbox (13.02635pt too wide) in paragraph at lines 224--224
  [][] [][]$[]$[] [][]  
@@ -576,11 +576,7 @@ Package pdftex.def Info: ./images/1.Q1.jpeg  used on input line 84.
 File: ./images/2.Q2.png Graphic file (type png)
 <use ./images/2.Q2.png>
 Package pdftex.def Info: ./images/2.Q2.png  used on input line 90.
-(pdftex.def)             Requested size: 507.49667pt x 661.6729pt.
-
-Overfull \hbox (23.79984pt too wide) in paragraph at lines 90--91
- [][] 
- []
+(pdftex.def)             Requested size: 253.7435pt x 330.83012pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -611,6 +607,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--122
 
  []
 
+[8 <./images/1.Q1.jpeg> <./images/2.Q2.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 122.
@@ -674,7 +671,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--153
 
  []
 
-[8 <./images/1.Q1.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 153.
@@ -699,14 +695,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 153.
 
-<./images/3.Dispo1.png, id=1966, 909.3975pt x 883.3pt>
+<./images/3.Dispo1.png, id=1965, 909.3975pt x 883.3pt>
 File: ./images/3.Dispo1.png Graphic file (type png)
 <use ./images/3.Dispo1.png>
 Package pdftex.def Info: ./images/3.Dispo1.png  used on input line 157.
-(pdftex.def)             Requested size: 409.2251pt x 397.48132pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 318.2939pt x 309.15964pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
@@ -736,14 +729,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 164.
 
-<./images/4.Dispo2.png, id=1967, 811.03pt x 425.59pt>
+<./images/4.Dispo2.png, id=1966, 811.03pt x 425.59pt>
 File: ./images/4.Dispo2.png Graphic file (type png)
 <use ./images/4.Dispo2.png>
 Package pdftex.def Info: ./images/4.Dispo2.png  used on input line 168.
-(pdftex.def)             Requested size: 405.514pt x 212.79446pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 324.40625pt x 170.23297pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 173.
@@ -773,6 +763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--186
 
  []
 
+[9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 195.
@@ -797,7 +788,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 195.
 
-[9]
+[10 <./images/3.Dispo1.png (PNG copy)> <./images/4.Dispo2.png (PNG copy)>]
+[11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 201.
@@ -822,14 +814,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 201.
 
-<./images/5.Comb.png, id=1978, 630.355pt x 690.58pt>
+<./images/5.Comb.png, id=1989, 630.355pt x 690.58pt>
 File: ./images/5.Comb.png Graphic file (type png)
 <use ./images/5.Comb.png>
 Package pdftex.def Info: ./images/5.Comb.png  used on input line 205.
-(pdftex.def)             Requested size: 315.17673pt x 345.28915pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 252.13753pt x 276.2271pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 219.
@@ -878,12 +867,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 224.
 
-<./images/6.Gauss.jpeg, id=1979, 2770.35pt x 1762.585pt>
+<./images/6.Gauss.jpeg, id=1990, 2770.35pt x 1762.585pt>
 File: ./images/6.Gauss.jpeg Graphic file (type jpg)
 <use ./images/6.Gauss.jpeg>
 Package pdftex.def Info: ./images/6.Gauss.jpeg  used on input line 227.
 (pdftex.def)             Requested size: 360.15814pt x 229.14409pt.
-[10]
+[12 <./images/5.Comb.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 232.
@@ -908,7 +897,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 232.
 
-<./images/7.Gauss2.jpeg, id=1987, 3158.80125pt x 1267.73625pt>
+<./images/7.Gauss2.jpeg, id=2001, 3158.80125pt x 1267.73625pt>
 File: ./images/7.Gauss2.jpeg Graphic file (type jpg)
 <use ./images/7.Gauss2.jpeg>
 Package pdftex.def Info: ./images/7.Gauss2.jpeg  used on input line 235.
@@ -937,11 +926,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 252.
 
-<images/8.Q_G.jpeg, id=1988, 2860.6875pt x 931.48pt>
+<images/8.Q_G.jpeg, id=2002, 2860.6875pt x 931.48pt>
 File: images/8.Q_G.jpeg Graphic file (type jpg)
 <use images/8.Q_G.jpeg>
 Package pdftex.def Info: images/8.Q_G.jpeg  used on input line 255.
 (pdftex.def)             Requested size: 429.08461pt x 139.71597pt.
+[13{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
+c} <./images/6.Gauss.jpeg> <./images/7.Gauss2.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 258.
@@ -990,13 +981,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 289.
 
-<images/9.GradUni.jpeg, id=1989, 2795.44376pt x 1398.22375pt>
+<images/9.GradUni.jpeg, id=2014, 2795.44376pt x 1398.22375pt>
 File: images/9.GradUni.jpeg Graphic file (type jpg)
 <use images/9.GradUni.jpeg>
 Package pdftex.def Info: images/9.GradUni.jpeg  used on input line 292.
 (pdftex.def)             Requested size: 363.42044pt x 181.77547pt.
-[11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
-c}]
+[14 <./images/8.Q_G.jpeg> <./images/9.GradUni.jpeg>] [15]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 301.
@@ -1021,12 +1011,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 301.
 
-<images/10.Rett1.jpeg, id=2001, 2089.8075pt x 1402.23875pt>
+<images/10.Rett1.jpeg, id=2026, 2089.8075pt x 1402.23875pt>
 File: images/10.Rett1.jpeg Graphic file (type jpg)
 <use images/10.Rett1.jpeg>
 Package pdftex.def Info: images/10.Rett1.jpeg  used on input line 305.
 (pdftex.def)             Requested size: 217.6621pt x 146.03052pt.
-<images/11.Rett2.jpeg, id=2002, 1894.07625pt x 1062.97125pt>
+<images/11.Rett2.jpeg, id=2027, 1894.07625pt x 1062.97125pt>
 File: images/11.Rett2.jpeg Graphic file (type jpg)
 <use images/11.Rett2.jpeg>
 Package pdftex.def Info: images/11.Rett2.jpeg  used on input line 310.
@@ -1060,7 +1050,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 318.
 
-<images/12.Dirac.jpeg, id=2003, 3253.15375pt x 1564.84625pt>
+<images/12.Dirac.jpeg, id=2028, 3253.15375pt x 1564.84625pt>
 File: images/12.Dirac.jpeg Graphic file (type jpg)
 <use images/12.Dirac.jpeg>
 Package pdftex.def Info: images/12.Dirac.jpeg  used on input line 321.
@@ -1113,7 +1103,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 325.
 
-[12]
+[16 <./images/10.Rett1.jpeg> <./images/11.Rett2.jpeg> <./images/12.Dirac.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 338.
@@ -1138,7 +1128,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 338.
 
-<images/13.Dirac2.jpeg, id=2013, 3621.53pt x 1370.11874pt>
+<images/13.Dirac2.jpeg, id=2039, 3621.53pt x 1370.11874pt>
 File: images/13.Dirac2.jpeg Graphic file (type jpg)
 <use images/13.Dirac2.jpeg>
 Package pdftex.def Info: images/13.Dirac2.jpeg  used on input line 341.
@@ -1220,12 +1210,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 362.
 
-<images/14.VennSotto.jpeg, id=2014, 1088.065pt x 1169.36874pt>
+<images/14.VennSotto.jpeg, id=2040, 1088.065pt x 1169.36874pt>
 File: images/14.VennSotto.jpeg Graphic file (type jpg)
 <use images/14.VennSotto.jpeg>
 Package pdftex.def Info: images/14.VennSotto.jpeg  used on input line 365.
 (pdftex.def)             Requested size: 108.81287pt x 116.94373pt.
-
+[17 <./images/13.Dirac2.jpeg> <./images/14.VennSotto.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 371--374
 
  []
@@ -1259,12 +1249,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 377.
 
-<images/15.Venn.png, id=2015, 499.8675pt x 493.845pt>
+<images/15.Venn.png, id=2047, 499.8675pt x 493.845pt>
 File: images/15.Venn.png Graphic file (type png)
 <use images/15.Venn.png>
 Package pdftex.def Info: images/15.Venn.png  used on input line 380.
 (pdftex.def)             Requested size: 199.94345pt x 197.53448pt.
-[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 387.
@@ -1289,7 +1278,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 387.
 
-<images/16.VennSomma.jpeg, id=2020, 1265.72874pt x 1170.3725pt>
+<images/16.VennSomma.jpeg, id=2048, 1265.72874pt x 1170.3725pt>
 File: images/16.VennSomma.jpeg Graphic file (type jpg)
 <use images/16.VennSomma.jpeg>
 Package pdftex.def Info: images/16.VennSomma.jpeg  used on input line 390.
@@ -1318,6 +1307,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 392.
 
+[18 <./images/15.Venn.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 405.
@@ -1342,7 +1332,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 405.
 
-<images/17.VennProdott.jpeg, id=2021, 913.4125pt x 952.55875pt>
+<images/17.VennProdott.jpeg, id=2055, 913.4125pt x 952.55875pt>
 File: images/17.VennProdott.jpeg Graphic file (type jpg)
 <use images/17.VennProdott.jpeg>
 Package pdftex.def Info: images/17.VennProdott.jpeg  used on input line 408.
@@ -1424,7 +1414,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 427.
 
-[14]
+[19 <./images/16.VennSomma.jpeg> <./images/17.VennProdott.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 436.
@@ -1449,7 +1439,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 436.
 
-<images/18.Partizione.jpeg, id=2026, 1538.74875pt x 1234.6125pt>
+<images/18.Partizione.jpeg, id=2062, 1538.74875pt x 1234.6125pt>
 File: images/18.Partizione.jpeg Graphic file (type jpg)
 <use images/18.Partizione.jpeg>
 Package pdftex.def Info: images/18.Partizione.jpeg  used on input line 439.
@@ -1478,7 +1468,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 444.
 
-<images/19.VennCompl.jpeg, id=2027, 1736.4875pt x 1798.72pt>
+<images/19.VennCompl.jpeg, id=2063, 1736.4875pt x 1798.72pt>
 File: images/19.VennCompl.jpeg Graphic file (type jpg)
 <use images/19.VennCompl.jpeg>
 Package pdftex.def Info: images/19.VennCompl.jpeg  used on input line 447.
@@ -1507,6 +1497,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 449.
 
+[20 <./images/18.Partizione.jpeg> <./images/19.VennCompl.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 463.
@@ -1531,7 +1522,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 463.
 
-<images/20.VennDiff.jpeg, id=2028, 1638.12pt x 1484.54625pt>
+<images/20.VennDiff.jpeg, id=2070, 1638.12pt x 1484.54625pt>
 File: images/20.VennDiff.jpeg Graphic file (type jpg)
 <use images/20.VennDiff.jpeg>
 Package pdftex.def Info: images/20.VennDiff.jpeg  used on input line 466.
@@ -1584,7 +1575,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 481.
 
-[15]
+[21 <./images/20.VennDiff.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 500--513
 
  []
@@ -1647,7 +1638,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
 
-[16]
+[22]
 Overfull \hbox (10.8565pt too wide) in paragraph at lines 569--570
 []$\OMS/cmsy/m/n/10 I []$ \OT1/cmr/m/n/10 in-dica una \OT1/cmr/bx/n/10 Classe/F
 amiglia degli Eventi\OT1/cmr/m/n/10 , ovvero definisce un \OT1/cmr/bx/n/10 Camp
@@ -1683,7 +1674,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 581--585
 
  []
 
-[17]
+[23]
 Overfull \hbox (7.6091pt too wide) in paragraph at lines 605--606
 []\OT1/cmr/m/n/10 Dal terzo as-sioma pos-si-amo de-durre che se $\OML/cmm/m/it/
 10 A[]; A[]; [] ; A[]$ \OT1/cmr/m/n/10 sono eventi dis-giunti ed in-com-pat-i-b
@@ -1748,7 +1739,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 620.
 
-[18]
+[24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 623.
@@ -1773,7 +1764,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 623.
 
-<images/21.Prop4_4.5.jpeg, id=2054, 1530.71875pt x 1298.8525pt>
+<images/21.Prop4_4.5.jpeg, id=2098, 1530.71875pt x 1298.8525pt>
 File: images/21.Prop4_4.5.jpeg Graphic file (type jpg)
 <use images/21.Prop4_4.5.jpeg>
 Package pdftex.def Info: images/21.Prop4_4.5.jpeg  used on input line 626.
@@ -1826,12 +1817,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 633.
 
-<images/22.Prop5_4.5.jpeg, id=2055, 1850.915pt x 1542.76375pt>
+<images/22.Prop5_4.5.jpeg, id=2099, 1850.915pt x 1542.76375pt>
 File: images/22.Prop5_4.5.jpeg Graphic file (type jpg)
 <use images/22.Prop5_4.5.jpeg>
 Package pdftex.def Info: images/22.Prop5_4.5.jpeg  used on input line 636.
 (pdftex.def)             Requested size: 240.6274pt x 200.56633pt.
-[19]
+[25 <./images/21.Prop4_4.5.jpeg> <./images/22.Prop5_4.5.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 647.
@@ -1856,12 +1847,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 647.
 
-<ese/1.jpeg, id=2061, 3607.4775pt x 1665.22125pt>
+<ese/1.jpeg, id=2106, 3607.4775pt x 1665.22125pt>
 File: ese/1.jpeg Graphic file (type jpg)
 <use ese/1.jpeg>
 Package pdftex.def Info: ese/1.jpeg  used on input line 650.
 (pdftex.def)             Requested size: 468.98854pt x 216.48636pt.
-<ese/1a.jpeg, id=2062, 3687.7775pt x 1653.17625pt>
+<ese/1a.jpeg, id=2107, 3687.7775pt x 1653.17625pt>
 File: ese/1a.jpeg Graphic file (type jpg)
 <use ese/1a.jpeg>
 Package pdftex.def Info: ese/1a.jpeg  used on input line 655.
@@ -1871,7 +1862,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 659--667
 
  []
 
-[20]
+[26 <./ese/1.jpeg> <./ese/1a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 668.
@@ -1896,7 +1887,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 668.
 
-<ese/2.jpeg, id=2067, 3057.4225pt x 1703.36375pt>
+<ese/2.jpeg, id=2114, 3057.4225pt x 1703.36375pt>
 File: ese/2.jpeg Graphic file (type jpg)
 <use ese/2.jpeg>
 Package pdftex.def Info: ese/2.jpeg  used on input line 671.
@@ -2007,6 +1998,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 703.
 
+[27 <./ese/2.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 705.
@@ -2031,7 +2023,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 705.
 
-[21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 716.
@@ -2085,7 +2076,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 737--750
 
  []
 
-
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 752--754
 
  []
@@ -2114,7 +2105,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 754.
 
-<images/23.Par4.9.jpeg, id=2072, 2047.65pt x 602.25pt>
+<images/23.Par4.9.jpeg, id=2125, 2047.65pt x 602.25pt>
 File: images/23.Par4.9.jpeg Graphic file (type jpg)
 <use images/23.Par4.9.jpeg>
 Package pdftex.def Info: images/23.Par4.9.jpeg  used on input line 757.
@@ -2129,7 +2120,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 754--779
 
  []
 
-[22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 779.
@@ -2154,12 +2144,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 779.
 
-<ese/3.jpeg, id=2078, 3687.7775pt x 1017.8025pt>
+<ese/3.jpeg, id=2126, 3687.7775pt x 1017.8025pt>
 File: ese/3.jpeg Graphic file (type jpg)
 <use ese/3.jpeg>
 Package pdftex.def Info: ese/3.jpeg  used on input line 782.
 (pdftex.def)             Requested size: 479.42792pt x 132.31897pt.
-[23]
+[29 <./images/23.Par4.9.jpeg> <./ese/3.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 785.
@@ -2184,7 +2174,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 785.
 
-<ese/4.jpeg, id=2085, 3531.1925pt x 2000.47375pt>
+<ese/4.jpeg, id=2135, 3531.1925pt x 2000.47375pt>
 File: ese/4.jpeg Graphic file (type jpg)
 <use ese/4.jpeg>
 Package pdftex.def Info: ese/4.jpeg  used on input line 788.
@@ -2261,7 +2251,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 817.
 
-
+[30 <./ese/4.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 821--822
 
  []
@@ -2338,7 +2328,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 844.
 
-[24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 849.
@@ -2411,6 +2400,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 872.
 
+[31]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 877.
@@ -2435,16 +2425,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 877.
 
-<ese/5.jpeg, id=2094, 2668.97125pt x 2972.10374pt>
+<ese/5.jpeg, id=2154, 2668.97125pt x 2972.10374pt>
 File: ese/5.jpeg Graphic file (type jpg)
 <use ese/5.jpeg>
 Package pdftex.def Info: ese/5.jpeg  used on input line 880.
 (pdftex.def)             Requested size: 346.97844pt x 386.38705pt.
-<ese/5a.jpeg, id=2095, 3053.4075pt x 1262.7175pt>
+<ese/5a.jpeg, id=2155, 3053.4075pt x 1262.7175pt>
 File: ese/5a.jpeg Graphic file (type jpg)
 <use ese/5a.jpeg>
 Package pdftex.def Info: ese/5a.jpeg  used on input line 884.
 (pdftex.def)             Requested size: 335.87587pt x 138.89935pt.
+[32 <./ese/5.jpeg> <./ese/5a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 895.
@@ -2503,13 +2494,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 902--905
 
  []
 
-[25]
-<images/24.ProbTot.jpeg, id=2104, 1396.21625pt x 1258.7025pt>
+<images/24.ProbTot.jpeg, id=2162, 1396.21625pt x 1258.7025pt>
 File: images/24.ProbTot.jpeg Graphic file (type jpg)
 <use images/24.ProbTot.jpeg>
 Package pdftex.def Info: images/24.ProbTot.jpeg  used on input line 919.
 (pdftex.def)             Requested size: 153.58426pt x 138.4577pt.
- [26]
+[33 <./images/24.ProbTot.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 946--954
 
  []
@@ -2538,18 +2528,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 954.
 
-<ese/6.jpeg, id=2109, 3674.72874pt x 1106.1325pt>
+<ese/6.jpeg, id=2168, 3674.72874pt x 1106.1325pt>
 File: ese/6.jpeg Graphic file (type jpg)
 <use ese/6.jpeg>
 Package pdftex.def Info: ese/6.jpeg  used on input line 957.
 (pdftex.def)             Requested size: 404.22142pt x 121.67494pt.
-<ese/6a.jpeg, id=2110, 2924.9275pt x 505.89pt>
+<ese/6a.jpeg, id=2169, 2924.9275pt x 505.89pt>
 File: ese/6a.jpeg Graphic file (type jpg)
 <use ese/6a.jpeg>
 Package pdftex.def Info: ese/6a.jpeg  used on input line 961.
 (pdftex.def)             Requested size: 350.97615pt x 60.70418pt.
-[27]
-<images/25.ProvRip.jpeg, id=2116, 2095.83pt x 3167.835pt>
+[34 <./ese/6.jpeg> <./ese/6a.jpeg>]
+<images/25.ProvRip.jpeg, id=2177, 2095.83pt x 3167.835pt>
 File: images/25.ProvRip.jpeg Graphic file (type jpg)
 <use images/25.ProvRip.jpeg>
 Package pdftex.def Info: images/25.ProvRip.jpeg  used on input line 977.
@@ -2584,7 +2574,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 981--997
 
  []
 
-[28]
+[35 <./images/25.ProvRip.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 998.
@@ -2609,7 +2599,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 998.
 
-<ese/7.jpeg, id=2121, 3539.2225pt x 1372.12625pt>
+<ese/7.jpeg, id=2183, 3539.2225pt x 1372.12625pt>
 File: ese/7.jpeg Graphic file (type jpg)
 <use ese/7.jpeg>
 Package pdftex.def Info: ese/7.jpeg  used on input line 1001.
@@ -2638,12 +2628,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1003.
 
-<ese/8.jpeg, id=2122, 3848.3775pt x 1962.33125pt>
+<ese/8.jpeg, id=2184, 3848.3775pt x 1962.33125pt>
 File: ese/8.jpeg Graphic file (type jpg)
 <use ese/8.jpeg>
 Package pdftex.def Info: ese/8.jpeg  used on input line 1006.
 (pdftex.def)             Requested size: 461.78539pt x 235.46959pt.
-[29]
+[36 <./ese/7.jpeg> <./ese/8.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1010.
@@ -2668,7 +2658,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1010.
 
-<ese/9.jpeg, id=2127, 2890.8pt x 1917.1625pt>
+<ese/9.jpeg, id=2192, 2890.8pt x 1917.1625pt>
 File: ese/9.jpeg Graphic file (type jpg)
 <use ese/9.jpeg>
 Package pdftex.def Info: ese/9.jpeg  used on input line 1013.
@@ -2697,17 +2687,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1015.
 
-<ese/10.jpeg, id=2128, 3768.0775pt x 1539.7525pt>
+<ese/10.jpeg, id=2193, 3768.0775pt x 1539.7525pt>
 File: ese/10.jpeg Graphic file (type jpg)
 <use ese/10.jpeg>
 Package pdftex.def Info: ese/10.jpeg  used on input line 1018.
 (pdftex.def)             Requested size: 452.1498pt x 184.76233pt.
-<ese/10a.jpeg, id=2129, 3053.4075pt x 2257.43375pt>
+<ese/10a.jpeg, id=2194, 3053.4075pt x 2257.43375pt>
 File: ese/10a.jpeg Graphic file (type jpg)
 <use ese/10a.jpeg>
 Package pdftex.def Info: ese/10a.jpeg  used on input line 1022.
 (pdftex.def)             Requested size: 366.3931pt x 270.88036pt.
-[30]
+[37 <./ese/9.jpeg> <./ese/10.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1025.
@@ -2732,17 +2722,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1025.
 
-<ese/11.jpeg, id=2135, 3640.60126pt x 2587.6675pt>
+<ese/11.jpeg, id=2201, 3640.60126pt x 2587.6675pt>
 File: ese/11.jpeg Graphic file (type jpg)
 <use ese/11.jpeg>
 Package pdftex.def Info: ese/11.jpeg  used on input line 1028.
 (pdftex.def)             Requested size: 364.08145pt x 258.7819pt.
-<ese/11a.jpeg, id=2136, 3337.46875pt x 797.98125pt>
+<ese/11a.jpeg, id=2202, 3337.46875pt x 797.98125pt>
 File: ese/11a.jpeg Graphic file (type jpg)
 <use ese/11a.jpeg>
 Package pdftex.def Info: ese/11a.jpeg  used on input line 1032.
 (pdftex.def)             Requested size: 333.76643pt x 79.8028pt.
-[31]
+[38 <./ese/10a.jpeg> <./ese/11.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1035.
@@ -2767,13 +2757,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1035.
 
-<ese/12.jpeg, id=2141, 2813.51125pt x 3431.82124pt>
+<ese/12.jpeg, id=2209, 2813.51125pt x 3431.82124pt>
 File: ese/12.jpeg Graphic file (type jpg)
 <use ese/12.jpeg>
 Package pdftex.def Info: ese/12.jpeg  used on input line 1038.
 (pdftex.def)             Requested size: 337.60678pt x 411.80078pt.
-[32]
-<images/26.V.A.png, id=2146, 3053.4075pt x 999.735pt>
+[39 <./ese/11a.jpeg> <./ese/12.jpeg>]
+<images/26.V.A.png, id=2216, 3053.4075pt x 999.735pt>
 File: images/26.V.A.png Graphic file (type png)
 <use images/26.V.A.png>
 Package pdftex.def Info: images/26.V.A.png  used on input line 1049.
@@ -2875,7 +2865,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1085.
 
-[33]
+[40 <./images/26.V.A.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1090.
@@ -2900,7 +2890,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1090.
 
-<images/27.prop2CDF.jpeg, id=2158, 3765.06625pt x 1302.8675pt>
+<images/27.prop2CDF.jpeg, id=2229, 3765.06625pt x 1302.8675pt>
 File: images/27.prop2CDF.jpeg Graphic file (type jpg)
 <use images/27.prop2CDF.jpeg>
 Package pdftex.def Info: images/27.prop2CDF.jpeg  used on input line 1094.
@@ -2929,16 +2919,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1102.
 
-<images/28.prop4CDF.jpeg, id=2159, 3161.8125pt x 779.91376pt>
+<images/28.prop4CDF.jpeg, id=2230, 3161.8125pt x 779.91376pt>
 File: images/28.prop4CDF.jpeg Graphic file (type jpg)
 <use images/28.prop4CDF.jpeg>
 Package pdftex.def Info: images/28.prop4CDF.jpeg  used on input line 1105.
 (pdftex.def)             Requested size: 379.40114pt x 93.5856pt.
-<images/29.prop5CDF.jpeg, id=2160, 3683.7625pt x 1369.115pt>
+<images/29.prop5CDF.jpeg, id=2231, 3683.7625pt x 1369.115pt>
 File: images/29.prop5CDF.jpeg Graphic file (type jpg)
 <use images/29.prop5CDF.jpeg>
 Package pdftex.def Info: images/29.prop5CDF.jpeg  used on input line 1113.
 (pdftex.def)             Requested size: 442.03244pt x 164.28671pt.
+[41 <./images/27.prop2CDF.jpeg> <./images/28.prop4CDF.jpeg> <./images/29.prop5C
+DF.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1121.
@@ -2963,7 +2955,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1121.
 
-<images/30.prop6CDF.jpeg, id=2161, 3133.7075pt x 1643.13875pt>
+<images/30.prop6CDF.jpeg, id=2242, 3133.7075pt x 1643.13875pt>
 File: images/30.prop6CDF.jpeg Graphic file (type jpg)
 <use images/30.prop6CDF.jpeg>
 Package pdftex.def Info: images/30.prop6CDF.jpeg  used on input line 1124.
@@ -2992,12 +2984,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1135.
 
-<images/31.VA_Discrete.jpeg, id=2162, 3324.42pt x 891.33pt>
+<images/31.VA_Discrete.jpeg, id=2243, 3324.42pt x 891.33pt>
 File: images/31.VA_Discrete.jpeg Graphic file (type jpg)
 <use images/31.VA_Discrete.jpeg>
 Package pdftex.def Info: images/31.VA_Discrete.jpeg  used on input line 1138.
 (pdftex.def)             Requested size: 398.9132pt x 106.95499pt.
-[34]
+[42 <./images/30.prop6CDF.jpeg> <./images/31.VA_Discrete.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1141.
@@ -3022,12 +3014,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1141.
 
-<images/32.VA_DiscEs.jpeg, id=2171, 3126.68124pt x 1252.68pt>
+<images/32.VA_DiscEs.jpeg, id=2252, 3126.68124pt x 1252.68pt>
 File: images/32.VA_DiscEs.jpeg Graphic file (type jpg)
 <use images/32.VA_DiscEs.jpeg>
 Package pdftex.def Info: images/32.VA_DiscEs.jpeg  used on input line 1144.
 (pdftex.def)             Requested size: 375.18556pt x 150.31511pt.
-<images/32b.VA_Bernoulli.jpeg, id=2172, 3155.79pt x 1672.2475pt>
+<images/32b.VA_Bernoulli.jpeg, id=2253, 3155.79pt x 1672.2475pt>
 File: images/32b.VA_Bernoulli.jpeg Graphic file (type jpg)
 <use images/32b.VA_Bernoulli.jpeg>
 Package pdftex.def Info: images/32b.VA_Bernoulli.jpeg  used on input line 1164.
@@ -3057,11 +3049,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1174.
 
-<ese/13.jpeg, id=2173, 3624.54124pt x 1190.4475pt>
+<ese/13.jpeg, id=2254, 3624.54124pt x 1190.4475pt>
 File: ese/13.jpeg Graphic file (type jpg)
 <use ese/13.jpeg>
 Package pdftex.def Info: ese/13.jpeg  used on input line 1178.
 (pdftex.def)             Requested size: 434.9262pt x 142.84753pt.
+[43 <./images/32.VA_DiscEs.jpeg> <./images/32b.VA_Bernoulli.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1186.
@@ -3115,8 +3108,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1205.
 
-[35]
-<images/33.V.A.Dirac.jpeg, id=2179, 2491.3075pt x 887.315pt>
+<images/33.V.A.Dirac.jpeg, id=2262, 2491.3075pt x 887.315pt>
 File: images/33.V.A.Dirac.jpeg Graphic file (type jpg)
 <use images/33.V.A.Dirac.jpeg>
 Package pdftex.def Info: images/33.V.A.Dirac.jpeg  used on input line 1221.
@@ -3126,6 +3118,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1217--1225
 
  []
 
+[44 <./ese/13.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1230.
@@ -3150,7 +3143,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1230.
 
-<images/34.VA_Miste.jpeg, id=2180, 2320.67pt x 975.645pt>
+<images/34.VA_Miste.jpeg, id=2273, 2320.67pt x 975.645pt>
 File: images/34.VA_Miste.jpeg Graphic file (type jpg)
 <use images/34.VA_Miste.jpeg>
 Package pdftex.def Info: images/34.VA_Miste.jpeg  used on input line 1233.
@@ -3179,45 +3172,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1235.
 
-<ese/14.jpeg, id=2181, 3129.6925pt x 1878.01625pt>
+<ese/14.jpeg, id=2274, 3129.6925pt x 1878.01625pt>
 File: ese/14.jpeg Graphic file (type jpg)
 <use ese/14.jpeg>
 Package pdftex.def Info: ese/14.jpeg  used on input line 1238.
 (pdftex.def)             Requested size: 375.5469pt x 225.35222pt.
-
+[45 <./images/33.V.A.Dirac.jpeg> <./images/34.VA_Miste.jpeg> <./ese/14.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 1247--1257
 
  []
 
-[36] [37 <./images/2.Q2.png (PNG copy)>] [38 <./images/3.Dispo1.png (PNG copy)>
- <./images/4.Dispo2.png (PNG copy)>] [39 <./images/5.Comb.png (PNG copy)> <./im
-ages/6.Gauss.jpeg>] [40 <./images/7.Gauss2.jpeg> <./images/8.Q_G.jpeg> <./image
-s/9.GradUni.jpeg> <./images/10.Rett1.jpeg> <./images/11.Rett2.jpeg>] [41 <./ima
-ges/12.Dirac.jpeg> <./images/13.Dirac2.jpeg> <./images/14.VennSotto.jpeg> <./im
-ages/15.Venn.png (PNG copy)>] [42 <./images/16.VennSomma.jpeg> <./images/17.Ven
-nProdott.jpeg> <./images/18.Partizione.jpeg> <./images/19.VennCompl.jpeg>]
-[43 <./images/20.VennDiff.jpeg> <./images/21.Prop4_4.5.jpeg> <./images/22.Prop5
-_4.5.jpeg>] [44 <./ese/1.jpeg> <./ese/1a.jpeg> <./ese/2.jpeg>] [45 <./images/23
-.Par4.9.jpeg> <./ese/3.jpeg> <./ese/4.jpeg>] [46 <./ese/5.jpeg> <./ese/5a.jpeg>
- <./images/24.ProbTot.jpeg>] [47 <./ese/6.jpeg> <./ese/6a.jpeg> <./images/25.Pr
-ovRip.jpeg>] [48 <./ese/7.jpeg> <./ese/8.jpeg> <./ese/9.jpeg>] [49 <./ese/10.jp
-eg> <./ese/10a.jpeg> <./ese/11.jpeg>] [50 <./ese/11a.jpeg> <./ese/12.jpeg> <./i
-mages/26.V.A.png>] [51 <./images/27.prop2CDF.jpeg> <./images/28.prop4CDF.jpeg> 
-<./images/29.prop5CDF.jpeg> <./images/30.prop6CDF.jpeg>] [52 <./images/31.VA_Di
-screte.jpeg> <./images/32.VA_DiscEs.jpeg> <./images/32b.VA_Bernoulli.jpeg> <./e
-se/13.jpeg>] [53 <./images/33.V.A.Dirac.jpeg> <./images/34.VA_Miste.jpeg> <./es
-e/14.jpeg>]
-<images/35.PDF_VA_exp.jpeg, id=2315, 2371.86125pt x 1186.4325pt>
+<images/35.PDF_VA_exp.jpeg, id=2282, 2371.86125pt x 1186.4325pt>
 File: images/35.PDF_VA_exp.jpeg Graphic file (type jpg)
 <use images/35.PDF_VA_exp.jpeg>
 Package pdftex.def Info: images/35.PDF_VA_exp.jpeg  used on input line 1260.
 (pdftex.def)             Requested size: 284.61107pt x 142.36575pt.
-<images/36.CDF_VA_exp.jpeg, id=2316, 2300.595pt x 1030.85126pt>
+<images/36.CDF_VA_exp.jpeg, id=2283, 2300.595pt x 1030.85126pt>
 File: images/36.CDF_VA_exp.jpeg Graphic file (type jpg)
 <use images/36.CDF_VA_exp.jpeg>
 Package pdftex.def Info: images/36.CDF_VA_exp.jpeg  used on input line 1284.
 (pdftex.def)             Requested size: 230.07298pt x 103.09116pt.
-<images/37.PDF_VA_gauss.jpeg, id=2317, 1991.44pt x 1138.2525pt>
+<images/37.PDF_VA_gauss.jpeg, id=2284, 1991.44pt x 1138.2525pt>
 File: images/37.PDF_VA_gauss.jpeg Graphic file (type jpg)
 <use images/37.PDF_VA_gauss.jpeg>
 Package pdftex.def Info: images/37.PDF_VA_gauss.jpeg  used on input line 1298.
@@ -3232,9 +3207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1288--1312
 
  []
 
-[54
-
- <./images/35.PDF_VA_exp.jpeg> <./images/36.CDF_VA_exp.jpeg>]
+[46 <./images/35.PDF_VA_exp.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1312.
@@ -3259,7 +3232,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1312.
 
-<ese/15.jpeg, id=2325, 3643.6125pt x 1264.725pt>
+<ese/15.jpeg, id=2290, 3643.6125pt x 1264.725pt>
 File: ese/15.jpeg Graphic file (type jpg)
 <use ese/15.jpeg>
 Package pdftex.def Info: ese/15.jpeg  used on input line 1315.
@@ -3288,12 +3261,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1317.
 
-<ese/16.jpeg, id=2326, 3679.7475pt x 2021.5525pt>
+<ese/16.jpeg, id=2291, 3679.7475pt x 2021.5525pt>
 File: ese/16.jpeg Graphic file (type jpg)
 <use ese/16.jpeg>
 Package pdftex.def Info: ese/16.jpeg  used on input line 1320.
 (pdftex.def)             Requested size: 441.55066pt x 242.57584pt.
-<images/38.Due_VA_un_Esper.jpeg, id=2327, 2923.92375pt x 1287.81125pt>
+<images/38.Due_VA_un_Esper.jpeg, id=2292, 2923.92375pt x 1287.81125pt>
 File: images/38.Due_VA_un_Esper.jpeg Graphic file (type jpg)
 <use images/38.Due_VA_un_Esper.jpeg>
 Package pdftex.def Info: images/38.Due_VA_un_Esper.jpeg  used on input line 132
@@ -3304,6 +3277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1324--1332
 
  []
 
+[47 <./images/36.CDF_VA_exp.jpeg> <./images/37.PDF_VA_gauss.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1332.
@@ -3328,14 +3302,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1332.
 
-[55 <./images/37.PDF_VA_gauss.jpeg> <./ese/15.jpeg>]
-<images/39.Esempio1Trasf1.jpeg, id=2334, 2290.5575pt x 1043.9pt>
+[48 <./ese/15.jpeg> <./ese/16.jpeg>]
+<images/39.Esempio1Trasf1.jpeg, id=2306, 2290.5575pt x 1043.9pt>
 File: images/39.Esempio1Trasf1.jpeg Graphic file (type jpg)
 <use images/39.Esempio1Trasf1.jpeg>
 Package pdftex.def Info: images/39.Esempio1Trasf1.jpeg  used on input line 1341
 .
 (pdftex.def)             Requested size: 217.6621pt x 99.18745pt.
-<images/40.Esempio1Trasf2.jpeg, id=2335, 1314.9125pt x 1124.2pt>
+<images/40.Esempio1Trasf2.jpeg, id=2307, 1314.9125pt x 1124.2pt>
 File: images/40.Esempio1Trasf2.jpeg Graphic file (type jpg)
 <use images/40.Esempio1Trasf2.jpeg>
 Package pdftex.def Info: images/40.Esempio1Trasf2.jpeg  used on input line 1345
@@ -3386,7 +3360,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1354.
 
-<images/41.EsTrasf1.jpeg, id=2336, 1593.955pt x 934.49126pt>
+<images/41.EsTrasf1.jpeg, id=2308, 1593.955pt x 934.49126pt>
 File: images/41.EsTrasf1.jpeg Graphic file (type jpg)
 <use images/41.EsTrasf1.jpeg>
 Package pdftex.def Info: images/41.EsTrasf1.jpeg  used on input line 1361.
@@ -3396,6 +3370,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1355--1369
 
  []
 
+[49 <./images/38.Due_VA_un_Esper.jpeg> <./images/39.Esempio1Trasf1.jpeg> <./ima
+ges/40.Esempio1Trasf2.jpeg> <./images/41.EsTrasf1.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1369.
@@ -3420,7 +3396,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1369.
 
-[56 <./ese/16.jpeg> <./images/38.Due_VA_un_Esper.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1379.
@@ -3453,8 +3428,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1388.
 
-[57 <./images/39.Esempio1Trasf1.jpeg> <./images/40.Esempio1Trasf2.jpeg> <./imag
-es/41.EsTrasf1.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1397.
@@ -3479,22 +3452,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1397.
 
-<ese/17.jpeg, id=2350, 2593.69pt x 2544.50626pt>
+<ese/17.jpeg, id=2317, 2593.69pt x 2544.50626pt>
 File: ese/17.jpeg Graphic file (type jpg)
 <use ese/17.jpeg>
 Package pdftex.def Info: ese/17.jpeg  used on input line 1400.
 (pdftex.def)             Requested size: 363.11412pt x 356.22845pt.
-<ese/17a.jpeg, id=2351, 3743.9875pt x 1707.37875pt>
+<ese/17a.jpeg, id=2318, 3743.9875pt x 1707.37875pt>
 File: ese/17a.jpeg Graphic file (type jpg)
 <use ese/17a.jpeg>
 Package pdftex.def Info: ese/17a.jpeg  used on input line 1404.
 (pdftex.def)             Requested size: 411.8399pt x 187.81224pt.
-<ese/17b.jpeg, id=2352, 2939.98375pt x 2133.9725pt>
+<ese/17b.jpeg, id=2319, 2939.98375pt x 2133.9725pt>
 File: ese/17b.jpeg Graphic file (type jpg)
 <use ese/17b.jpeg>
 Package pdftex.def Info: ese/17b.jpeg  used on input line 1408.
 (pdftex.def)             Requested size: 382.2113pt x 277.42616pt.
-[58 <./ese/17.jpeg> <./ese/17a.jpeg>] [59 <./ese/17b.jpeg>]
+[50] [51 <./ese/17.jpeg> <./ese/17a.jpeg>] [52 <./ese/17b.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1412.
@@ -3519,7 +3492,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1412.
 
-<images/42.TeoFondMonoCresc.jpeg, id=2364, 2369.85374pt x 1341.01pt>
+<images/42.TeoFondMonoCresc.jpeg, id=2335, 2369.85374pt x 1341.01pt>
 File: images/42.TeoFondMonoCresc.jpeg Graphic file (type jpg)
 <use images/42.TeoFondMonoCresc.jpeg>
 Package pdftex.def Info: images/42.TeoFondMonoCresc.jpeg  used on input line 14
@@ -3549,7 +3522,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1421.
 
-<images/43.TeoFondNonMonoCresc.jpeg, id=2365, 2223.30624pt x 1308.89pt>
+<images/43.TeoFondNonMonoCresc.jpeg, id=2336, 2223.30624pt x 1308.89pt>
 File: images/43.TeoFondNonMonoCresc.jpeg Graphic file (type jpg)
 <use images/43.TeoFondNonMonoCresc.jpeg>
 Package pdftex.def Info: images/43.TeoFondNonMonoCresc.jpeg  used on input line
@@ -3603,7 +3576,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1436.
 
-<ese/18.jpeg, id=2366, 3290.2925pt x 2221.29875pt>
+<ese/18.jpeg, id=2337, 3290.2925pt x 2221.29875pt>
 File: ese/18.jpeg Graphic file (type jpg)
 <use ese/18.jpeg>
 Package pdftex.def Info: ese/18.jpeg  used on input line 1439.
@@ -3613,10 +3586,10 @@ Overfull \hbox (9.82574pt too wide) in paragraph at lines 1439--1440
  [][] 
  []
 
-[60
+[53
 
- <./images/42.TeoFondMonoCresc.jpeg> <./images/43.TeoFondNonMonoCresc.jpeg>] [6
-1 <./ese/18.jpeg>]
+ <./images/42.TeoFondMonoCresc.jpeg> <./images/43.TeoFondNonMonoCresc.jpeg>] [5
+4 <./ese/18.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1442.
@@ -3641,12 +3614,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1442.
 
-<ese/19.jpeg, id=2380, 2491.3075pt x 3611.4925pt>
+<ese/19.jpeg, id=2350, 2491.3075pt x 3611.4925pt>
 File: ese/19.jpeg Graphic file (type jpg)
 <use ese/19.jpeg>
 Package pdftex.def Info: ese/19.jpeg  used on input line 1445.
 (pdftex.def)             Requested size: 373.68001pt x 541.70052pt.
-[62
+[55
 
  <./ese/19.jpeg>]
 
@@ -3673,17 +3646,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1448.
 
-<ese/20.jpeg, id=2386, 2487.2925pt x 3474.9825pt>
+<ese/20.jpeg, id=2356, 2487.2925pt x 3474.9825pt>
 File: ese/20.jpeg Graphic file (type jpg)
 <use ese/20.jpeg>
 Package pdftex.def Info: ese/20.jpeg  used on input line 1451.
 (pdftex.def)             Requested size: 298.46222pt x 416.97992pt.
-<ese/20a.jpeg, id=2387, 3395.68625pt x 1195.46625pt>
+<ese/20a.jpeg, id=2357, 3395.68625pt x 1195.46625pt>
 File: ese/20a.jpeg Graphic file (type jpg)
 <use ese/20a.jpeg>
 Package pdftex.def Info: ese/20a.jpeg  used on input line 1455.
 (pdftex.def)             Requested size: 373.52664pt x 131.5017pt.
-[63
+[56
 
  <./ese/20.jpeg> <./ese/20a.jpeg>]
 
@@ -3710,18 +3683,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1458.
 
-<ese/21.jpeg, id=2394, 3719.8975pt x 1799.72375pt>
+<ese/21.jpeg, id=2364, 3719.8975pt x 1799.72375pt>
 File: ese/21.jpeg Graphic file (type jpg)
 <use ese/21.jpeg>
 Package pdftex.def Info: ese/21.jpeg  used on input line 1461.
 (pdftex.def)             Requested size: 483.60365pt x 233.9723pt.
-<images/44.ProblemaInverso.jpeg, id=2395, 3437.84375pt x 700.6175pt>
+<images/44.ProblemaInverso.jpeg, id=2365, 3437.84375pt x 700.6175pt>
 File: images/44.ProblemaInverso.jpeg Graphic file (type jpg)
 <use images/44.ProblemaInverso.jpeg>
 Package pdftex.def Info: images/44.ProblemaInverso.jpeg  used on input line 147
 3.
 (pdftex.def)             Requested size: 446.93538pt x 91.08347pt.
-<images/45.VM_Baricentro.jpeg, id=2396, 2648.89626pt x 529.98pt>
+<images/45.VM_Baricentro.jpeg, id=2366, 2648.89626pt x 529.98pt>
 File: images/45.VM_Baricentro.jpeg Graphic file (type jpg)
 <use images/45.VM_Baricentro.jpeg>
 Package pdftex.def Info: images/45.VM_Baricentro.jpeg  used on input line 1491.
@@ -3732,7 +3705,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1486--1509
 
  []
 
-[64
+[57
 
  <./ese/21.jpeg> <./images/44.ProblemaInverso.jpeg>]
 
@@ -3759,7 +3732,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1509.
 
-<images/46.PDF_Discreta.jpeg, id=2405, 2605.735pt x 1389.19pt>
+<images/46.PDF_Discreta.jpeg, id=2376, 2605.735pt x 1389.19pt>
 File: images/46.PDF_Discreta.jpeg Graphic file (type jpg)
 <use images/46.PDF_Discreta.jpeg>
 Package pdftex.def Info: images/46.PDF_Discreta.jpeg  used on input line 1514.
@@ -3774,7 +3747,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1510--1523
 
  []
 
-<images/47.Varianza.jpeg, id=2406, 3724.91624pt x 860.21375pt>
+<images/47.Varianza.jpeg, id=2377, 3724.91624pt x 860.21375pt>
 File: images/47.Varianza.jpeg Graphic file (type jpg)
 <use images/47.Varianza.jpeg>
 Package pdftex.def Info: images/47.Varianza.jpeg  used on input line 1531.
@@ -3799,7 +3772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1525--1551
 
  []
 
-[65 <./images/45.VM_Baricentro.jpeg> <./images/46.PDF_Discreta.jpeg>]
+[58 <./images/45.VM_Baricentro.jpeg> <./images/46.PDF_Discreta.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1551.
@@ -3839,7 +3812,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1552--1575
 
  []
 
-[66 <./images/47.Varianza.jpeg>]
+[59 <./images/47.Varianza.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1598.
@@ -3864,7 +3837,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1598.
 
-<images/48.DimTeoAsp.jpeg, id=2421, 2257.43375pt x 1793.70125pt>
+<images/48.DimTeoAsp.jpeg, id=2391, 2257.43375pt x 1793.70125pt>
 File: images/48.DimTeoAsp.jpeg Graphic file (type jpg)
 <use images/48.DimTeoAsp.jpeg>
 Package pdftex.def Info: images/48.DimTeoAsp.jpeg  used on input line 1616.
@@ -3879,7 +3852,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1599--1627
 
  []
 
-[67 <./images/48.DimTeoAsp.jpeg>]
+[60 <./images/48.DimTeoAsp.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1636.
@@ -3904,7 +3877,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1636.
 
-[68]
+[61]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1650.
@@ -3929,17 +3902,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1650.
 
-<ese/22.jpeg, id=2436, 2277.50874pt x 3276.24pt>
+<ese/22.jpeg, id=2407, 2277.50874pt x 3276.24pt>
 File: ese/22.jpeg Graphic file (type jpg)
 <use ese/22.jpeg>
 Package pdftex.def Info: ese/22.jpeg  used on input line 1653.
 (pdftex.def)             Requested size: 387.17137pt x 556.95345pt.
-<ese/22a.jpeg, id=2437, 2413.015pt x 3585.395pt>
+<ese/22a.jpeg, id=2408, 2413.015pt x 3585.395pt>
 File: ese/22a.jpeg Graphic file (type jpg)
 <use ese/22a.jpeg>
 Package pdftex.def Info: ese/22a.jpeg  used on input line 1657.
 (pdftex.def)             Requested size: 482.59445pt x 717.06631pt.
-<ese/22b.jpeg, id=2438, 2428.07124pt x 2212.265pt>
+<ese/22b.jpeg, id=2409, 2428.07124pt x 2212.265pt>
 File: ese/22b.jpeg Graphic file (type jpg)
 <use ese/22b.jpeg>
 Package pdftex.def Info: ese/22b.jpeg  used on input line 1661.
@@ -3949,9 +3922,9 @@ Overfull \hbox (1.90881pt too wide) in paragraph at lines 1661--1662
  [][] 
  []
 
-[69
+[62
 
- <./ese/22.jpeg>] [70 <./ese/22a.jpeg>] [71 <./ese/22b.jpeg>]
+ <./ese/22.jpeg>] [63 <./ese/22a.jpeg>] [64 <./ese/22b.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1675.
@@ -4120,7 +4093,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1701.
 
-[72
+[65
 
 ]
 
@@ -4191,7 +4164,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1715--1719
 
  []
 
-<images/49.Chebychev.jpeg, id=2459, 3364.57pt x 1349.04pt>
+<images/49.Chebychev.jpeg, id=2429, 3364.57pt x 1349.04pt>
 File: images/49.Chebychev.jpeg Graphic file (type jpg)
 <use images/49.Chebychev.jpeg>
 Package pdftex.def Info: images/49.Chebychev.jpeg  used on input line 1729.
@@ -4201,7 +4174,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1721--1735
 
  []
 
-[73 <./images/49.Chebychev.jpeg>]
+[66 <./images/49.Chebychev.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1735.
@@ -4275,7 +4248,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1759--1772
 
  []
 
-[74]
+[67]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1777.
@@ -4300,7 +4273,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1777.
 
-<images/50.ModaDiscreta.jpeg, id=2469, 2856.6725pt x 1507.6325pt>
+<images/50.ModaDiscreta.jpeg, id=2440, 2856.6725pt x 1507.6325pt>
 File: images/50.ModaDiscreta.jpeg Graphic file (type jpg)
 <use images/50.ModaDiscreta.jpeg>
 Package pdftex.def Info: images/50.ModaDiscreta.jpeg  used on input line 1780.
@@ -4329,12 +4302,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1783.
 
-<images/51.ModaContinua.jpeg, id=2470, 2473.24pt x 1521.685pt>
+<images/51.ModaContinua.jpeg, id=2441, 2473.24pt x 1521.685pt>
 File: images/51.ModaContinua.jpeg Graphic file (type jpg)
 <use images/51.ModaContinua.jpeg>
 Package pdftex.def Info: images/51.ModaContinua.jpeg  used on input line 1786.
 (pdftex.def)             Requested size: 247.33849pt x 152.17741pt.
-<images/52. ModaContinuaMultimod.jpeg, id=2471, 2875.74374pt x 1428.33624pt>
+<images/52. ModaContinuaMultimod.jpeg, id=2442, 2875.74374pt x 1428.33624pt>
 File: images/52. ModaContinuaMultimod.jpeg Graphic file (type jpg)
 <use images/52. ModaContinuaMultimod.jpeg>
 Package pdftex.def Info: images/52. ModaContinuaMultimod.jpeg  used on input li
@@ -4350,12 +4323,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1787--1795
 
  []
 
-<images/53.Mediana.jpeg, id=2472, 2920.9125pt x 1784.6675pt>
+<images/53.Mediana.jpeg, id=2443, 2920.9125pt x 1784.6675pt>
 File: images/53.Mediana.jpeg Graphic file (type jpg)
 <use images/53.Mediana.jpeg>
 Package pdftex.def Info: images/53.Mediana.jpeg  used on input line 1803.
 (pdftex.def)             Requested size: 292.10837pt x 178.4772pt.
-[75 <./images/50.ModaDiscreta.jpeg> <./images/51.ModaContinua.jpeg>]
+[68 <./images/50.ModaDiscreta.jpeg> <./images/51.ModaContinua.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1805.
@@ -4380,7 +4353,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1805.
 
-<images/54.MedianaContinua.jpeg, id=2480, 3604.46625pt x 1790.69pt>
+<images/54.MedianaContinua.jpeg, id=2450, 3604.46625pt x 1790.69pt>
 File: images/54.MedianaContinua.jpeg Graphic file (type jpg)
 <use images/54.MedianaContinua.jpeg>
 Package pdftex.def Info: images/54.MedianaContinua.jpeg  used on input line 181
@@ -4410,17 +4383,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1812.
 
-<images/55.MedianaDisc1.jpeg, id=2481, 3672.72125pt x 2633.84pt>
+<images/55.MedianaDisc1.jpeg, id=2451, 3672.72125pt x 2633.84pt>
 File: images/55.MedianaDisc1.jpeg Graphic file (type jpg)
 <use images/55.MedianaDisc1.jpeg>
 Package pdftex.def Info: images/55.MedianaDisc1.jpeg  used on input line 1817.
 (pdftex.def)             Requested size: 367.29364pt x 263.39943pt.
-<images/56.MedianaDisc2.jpeg, id=2482, 2253.41875pt x 1961.3275pt>
+<images/56.MedianaDisc2.jpeg, id=2452, 2253.41875pt x 1961.3275pt>
 File: images/56.MedianaDisc2.jpeg Graphic file (type jpg)
 <use images/56.MedianaDisc2.jpeg>
 Package pdftex.def Info: images/56.MedianaDisc2.jpeg  used on input line 1822.
 (pdftex.def)             Requested size: 225.35507pt x 196.14424pt.
-[76 <./images/52. ModaContinuaMultimod.jpeg> <./images/53.Mediana.jpeg> <./imag
+[69 <./images/52. ModaContinuaMultimod.jpeg> <./images/53.Mediana.jpeg> <./imag
 es/54.MedianaContinua.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -4446,7 +4419,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1830.
 
-[77 <./images/55.MedianaDisc1.jpeg> <./images/56.MedianaDisc2.jpeg>]
+[70 <./images/55.MedianaDisc1.jpeg> <./images/56.MedianaDisc2.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1841.
@@ -4495,17 +4468,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1848.
 
-<ese/23.jpeg, id=2496, 3661.68pt x 1146.2825pt>
+<ese/23.jpeg, id=2466, 3661.68pt x 1146.2825pt>
 File: ese/23.jpeg Graphic file (type jpg)
 <use ese/23.jpeg>
 Package pdftex.def Info: ese/23.jpeg  used on input line 1851.
 (pdftex.def)             Requested size: 439.38264pt x 137.54796pt.
-<ese/23a.jpeg, id=2497, 2663.9525pt x 2841.61626pt>
+<ese/23a.jpeg, id=2467, 2663.9525pt x 2841.61626pt>
 File: ese/23a.jpeg Graphic file (type jpg)
 <use ese/23a.jpeg>
 Package pdftex.def Info: ese/23a.jpeg  used on input line 1855.
 (pdftex.def)             Requested size: 452.86594pt x 483.06837pt.
-[78 <./ese/23.jpeg>] [79 <./ese/23a.jpeg>]
+[71 <./ese/23.jpeg>] [72 <./ese/23a.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 1859--1865
 
  []
@@ -4515,7 +4488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1859--1865
 
  []
 
-<images/60.V.A.Unif.jpeg, id=2514, 3596.43625pt x 987.69pt>
+<images/60.V.A.Unif.jpeg, id=2485, 3596.43625pt x 987.69pt>
 File: images/60.V.A.Unif.jpeg Graphic file (type jpg)
 <use images/60.V.A.Unif.jpeg>
 Package pdftex.def Info: images/60.V.A.Unif.jpeg  used on input line 1875.
@@ -4592,12 +4565,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1896.
 
-<images/61.V.A.Exp.jpeg, id=2515, 3472.975pt x 1106.1325pt>
+<images/61.V.A.Exp.jpeg, id=2486, 3472.975pt x 1106.1325pt>
 File: images/61.V.A.Exp.jpeg Graphic file (type jpg)
 <use images/61.V.A.Exp.jpeg>
 Package pdftex.def Info: images/61.V.A.Exp.jpeg  used on input line 1905.
 (pdftex.def)             Requested size: 416.73903pt x 132.73016pt.
-[80
+[73
 
  <./images/60.V.A.Unif.jpeg>]
 
@@ -4711,8 +4684,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1935--1945
 
  []
 
-[81 <./images/61.V.A.Exp.jpeg>]
-<images/62.V.A.GaussGen.jpeg, id=2526, 1708.3825pt x 1460.45625pt>
+[74 <./images/61.V.A.Exp.jpeg>]
+<images/62.V.A.GaussGen.jpeg, id=2497, 1708.3825pt x 1460.45625pt>
 File: images/62.V.A.GaussGen.jpeg Graphic file (type jpg)
 <use images/62.V.A.GaussGen.jpeg>
 Package pdftex.def Info: images/62.V.A.GaussGen.jpeg  used on input line 1951.
@@ -4742,7 +4715,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1960.
 
-<images/63.V.A.GaussStand.jpeg, id=2527, 3180.88374pt x 1560.83125pt>
+<images/63.V.A.GaussStand.jpeg, id=2498, 3180.88374pt x 1560.83125pt>
 File: images/63.V.A.GaussStand.jpeg Graphic file (type jpg)
 <use images/63.V.A.GaussStand.jpeg>
 Package pdftex.def Info: images/63.V.A.GaussStand.jpeg  used on input line 1967
@@ -4772,7 +4745,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1969.
 
-[82 <./images/62.V.A.GaussGen.jpeg> <./images/63.V.A.GaussStand.jpeg>]
+
 Overfull \hbox (31.13081pt too wide) in paragraph at lines 1975--1975
 |[]$[]$| 
  []
@@ -4806,6 +4779,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1976--1993
 
  []
 
+[75 <./images/62.V.A.GaussGen.jpeg> <./images/63.V.A.GaussStand.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1993.
@@ -4960,7 +4934,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2017.
 
-[83]
+[76]
 Overfull \hbox (109.86874pt too wide) in paragraph at lines 2026--2044
 \OT1/cmr/m/n/10 Calcolo il de-ter-mi-nante: $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10
  J\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 r [][]\OT1/cmr/m/n/10 (
@@ -4998,20 +4972,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2051.
 
-<images/64.ModaBinDeltaNonInt.jpeg, id=2538, 2443.1275pt x 1829.83624pt>
+<images/64.ModaBinDeltaNonInt.jpeg, id=2509, 2443.1275pt x 1829.83624pt>
 File: images/64.ModaBinDeltaNonInt.jpeg Graphic file (type jpg)
 <use images/64.ModaBinDeltaNonInt.jpeg>
 Package pdftex.def Info: images/64.ModaBinDeltaNonInt.jpeg  used on input line 
 2060.
 (pdftex.def)             Requested size: 244.32706pt x 182.99434pt.
-[84]
-<images/65.ModaBinDeltaInt.jpeg, id=2544, 2591.6825pt x 1781.65625pt>
+<images/65.ModaBinDeltaInt.jpeg, id=2510, 2591.6825pt x 1781.65625pt>
 File: images/65.ModaBinDeltaInt.jpeg Graphic file (type jpg)
 <use images/65.ModaBinDeltaInt.jpeg>
 Package pdftex.def Info: images/65.ModaBinDeltaInt.jpeg  used on input line 206
 5.
 (pdftex.def)             Requested size: 259.18343pt x 178.17606pt.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2067.
@@ -5041,6 +5013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2068--2075
 
  []
 
+[77]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2075.
@@ -5137,7 +5110,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2081.
 
-[85 <./images/64.ModaBinDeltaNonInt.jpeg> <./images/65.ModaBinDeltaInt.jpeg>]
+[78 <./images/64.ModaBinDeltaNonInt.jpeg> <./images/65.ModaBinDeltaInt.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2084.
@@ -5215,7 +5188,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2110--2123
 
  []
 
-[86]
+[79]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2123.
@@ -5264,63 +5237,59 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2125.
 
-<images/66.PoissDeltMaggNonInt.jpeg, id=2555, 2451.1575pt x 1501.61pt>
+<images/66.PoissDeltMaggNonInt.jpeg, id=2526, 2451.1575pt x 1501.61pt>
 File: images/66.PoissDeltMaggNonInt.jpeg Graphic file (type jpg)
 <use images/66.PoissDeltMaggNonInt.jpeg>
 Package pdftex.def Info: images/66.PoissDeltMaggNonInt.jpeg  used on input line
  2135.
 (pdftex.def)             Requested size: 245.13011pt x 150.1698pt.
-<images/67.PoissDeltMaggInt.jpeg, id=2556, 2496.32625pt x 2029.5825pt>
+<images/67.PoissDeltMaggInt.jpeg, id=2527, 2496.32625pt x 2029.5825pt>
 File: images/67.PoissDeltMaggInt.jpeg Graphic file (type jpg)
 <use images/67.PoissDeltMaggInt.jpeg>
 Package pdftex.def Info: images/67.PoissDeltMaggInt.jpeg  used on input line 21
 44.
 (pdftex.def)             Requested size: 249.64725pt x 202.97014pt.
-<images/68.PoissDeltaMin.jpeg, id=2557, 1988.42876pt x 1393.205pt>
+<images/68.PoissDeltaMin.jpeg, id=2528, 1988.42876pt x 1393.205pt>
 File: images/68.PoissDeltaMin.jpeg Graphic file (type jpg)
 <use images/68.PoissDeltaMin.jpeg>
 Package pdftex.def Info: images/68.PoissDeltaMin.jpeg  used on input line 2149.
 
 (pdftex.def)             Requested size: 198.85452pt x 139.32866pt.
-[87 <./images/66.PoissDeltMaggNonInt.jpeg> <./images/67.PoissDeltMaggInt.jpeg>]
-<ese/24.jpeg, id=2568, 2487.2925pt x 3545.245pt>
+<ese/24.jpeg, id=2529, 2487.2925pt x 3545.245pt>
 File: ese/24.jpeg Graphic file (type jpg)
 <use ese/24.jpeg>
 Package pdftex.def Info: ese/24.jpeg  used on input line 2157.
 (pdftex.def)             Requested size: 323.35938pt x 460.89804pt.
-<ese/24a.jpeg, id=2569, 2563.5775pt x 3544.24126pt>
+<ese/24a.jpeg, id=2530, 2563.5775pt x 3544.24126pt>
 File: ese/24a.jpeg Graphic file (type jpg)
 <use ese/24a.jpeg>
 Package pdftex.def Info: ese/24a.jpeg  used on input line 2161.
 (pdftex.def)             Requested size: 256.37277pt x 354.44489pt.
-<ese/24b.jpeg, id=2570, 3552.27126pt x 1258.7025pt>
+<ese/24b.jpeg, id=2531, 3552.27126pt x 1258.7025pt>
 File: ese/24b.jpeg Graphic file (type jpg)
 <use ese/24b.jpeg>
 Package pdftex.def Info: ese/24b.jpeg  used on input line 2165.
 (pdftex.def)             Requested size: 355.24794pt x 125.87762pt.
-[88 <./images/68.PoissDeltaMin.jpeg> <./ese/24.jpeg>]
-<ese/24c.jpeg, id=2577, 3191.925pt x 2076.75874pt>
+<ese/24c.jpeg, id=2532, 3191.925pt x 2076.75874pt>
 File: ese/24c.jpeg Graphic file (type jpg)
 <use ese/24c.jpeg>
 Package pdftex.def Info: ese/24c.jpeg  used on input line 2169.
 (pdftex.def)             Requested size: 319.2112pt x 207.68803pt.
-<ese/24d.jpeg, id=2578, 2562.57375pt x 3541.23pt>
+<ese/24d.jpeg, id=2533, 2562.57375pt x 3541.23pt>
 File: ese/24d.jpeg Graphic file (type jpg)
 <use ese/24d.jpeg>
 Package pdftex.def Info: ese/24d.jpeg  used on input line 2173.
 (pdftex.def)             Requested size: 256.27238pt x 354.14375pt.
-<ese/24e.jpeg, id=2579, 2271.48625pt x 3262.1875pt>
+<ese/24e.jpeg, id=2534, 2271.48625pt x 3262.1875pt>
 File: ese/24e.jpeg Graphic file (type jpg)
 <use ese/24e.jpeg>
 Package pdftex.def Info: ese/24e.jpeg  used on input line 2177.
 (pdftex.def)             Requested size: 227.16193pt x 326.23787pt.
- [89 <./ese/24a.jpeg> <./ese/24b.jpeg> <./ese/24c.jpeg>]
-<ese/24f.jpeg, id=2587, 3276.24pt x 737.75626pt>
+<ese/24f.jpeg, id=2535, 3276.24pt x 737.75626pt>
 File: ese/24f.jpeg Graphic file (type jpg)
 <use ese/24f.jpeg>
 Package pdftex.def Info: ese/24f.jpeg  used on input line 2181.
 (pdftex.def)             Requested size: 327.64319pt x 73.77994pt.
- [90 <./ese/24d.jpeg> <./ese/24e.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2185.
@@ -5345,13 +5314,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2185.
 
-<images/57.PrimoEsCap5_1.jpeg, id=2595, 2577.63pt x 1437.37pt>
+<images/57.PrimoEsCap5_1.jpeg, id=2536, 2577.63pt x 1437.37pt>
 File: images/57.PrimoEsCap5_1.jpeg Graphic file (type jpg)
 <use images/57.PrimoEsCap5_1.jpeg>
 Package pdftex.def Info: images/57.PrimoEsCap5_1.jpeg  used on input line 2189.
 
 (pdftex.def)             Requested size: 257.7781pt x 143.74542pt.
-<images/58.PrimoEsCap5_2.jpeg, id=2596, 2880.7625pt x 2003.485pt>
+<images/58.PrimoEsCap5_2.jpeg, id=2537, 2880.7625pt x 2003.485pt>
 File: images/58.PrimoEsCap5_2.jpeg Graphic file (type jpg)
 <use images/58.PrimoEsCap5_2.jpeg>
 Package pdftex.def Info: images/58.PrimoEsCap5_2.jpeg  used on input line 2197.
@@ -5362,12 +5331,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2186--2201
 
  []
 
-[91 <./ese/24f.jpeg> <./images/57.PrimoEsCap5_1.jpeg> <./images/58.PrimoEsCap5_
-2.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 2211--2219
-
- []
-
+[80 <./images/66.PoissDeltMaggNonInt.jpeg> <./images/67.PoissDeltMaggInt.jpeg>]
 
 Underfull \hbox (badness 10000) in paragraph at lines 2211--2219
 
@@ -5378,7 +5342,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2211--2219
 
  []
 
-<images/59.PrimoEsCap5_3.jpeg, id=2604, 2550.52875pt x 1356.06625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2219
+
+ []
+
+<images/59.PrimoEsCap5_3.jpeg, id=2547, 2550.52875pt x 1356.06625pt>
 File: images/59.PrimoEsCap5_3.jpeg Graphic file (type jpg)
 <use images/59.PrimoEsCap5_3.jpeg>
 Package pdftex.def Info: images/59.PrimoEsCap5_3.jpeg  used on input line 2235.
@@ -5389,6 +5358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2232--2237
 
  []
 
+[81 <./images/68.PoissDeltaMin.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2244.
@@ -5413,17 +5383,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2244.
 
-<ese/25.jpeg, id=2605, 2749.27126pt x 2563.5775pt>
+<ese/25.jpeg, id=2555, 2749.27126pt x 2563.5775pt>
 File: ese/25.jpeg Graphic file (type jpg)
 <use ese/25.jpeg>
 Package pdftex.def Info: ese/25.jpeg  used on input line 2247.
 (pdftex.def)             Requested size: 274.94324pt x 256.37277pt.
-<ese/25a.jpeg, id=2606, 2995.19pt x 1003.75pt>
+<ese/25a.jpeg, id=2556, 2995.19pt x 1003.75pt>
 File: ese/25a.jpeg Graphic file (type jpg)
 <use ese/25a.jpeg>
 Package pdftex.def Info: ese/25a.jpeg  used on input line 2251.
 (pdftex.def)             Requested size: 299.53654pt x 100.38087pt.
-[92 <./images/59.PrimoEsCap5_3.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2253.
@@ -5448,12 +5417,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2253.
 
-<ese/26.jpeg, id=2614, 2627.8175pt x 3043.37pt>
+<ese/26.jpeg, id=2557, 2627.8175pt x 3043.37pt>
 File: ese/26.jpeg Graphic file (type jpg)
 <use ese/26.jpeg>
 Package pdftex.def Info: ese/26.jpeg  used on input line 2256.
 (pdftex.def)             Requested size: 420.4594pt x 486.94916pt.
-[93 <./ese/25.jpeg> <./ese/25a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2258.
@@ -5478,17 +5446,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2258.
 
-<ese/27.jpeg, id=2621, 2530.45375pt x 3518.14375pt>
+<ese/27.jpeg, id=2558, 2530.45375pt x 3518.14375pt>
 File: ese/27.jpeg Graphic file (type jpg)
 <use ese/27.jpeg>
 Package pdftex.def Info: ese/27.jpeg  used on input line 2261.
 (pdftex.def)             Requested size: 253.0602pt x 351.83499pt.
-<ese/27a.jpeg, id=2622, 3472.975pt x 974.64125pt>
+<ese/27a.jpeg, id=2559, 3472.975pt x 974.64125pt>
 File: ese/27a.jpeg Graphic file (type jpg)
 <use ese/27a.jpeg>
 Package pdftex.def Info: ese/27a.jpeg  used on input line 2265.
 (pdftex.def)             Requested size: 347.31784pt x 97.46983pt.
-[94 <./ese/26.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2267.
@@ -5513,17 +5480,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2267.
 
-<ese/28.jpeg, id=2628, 2697.07625pt x 3276.24pt>
+<ese/28.jpeg, id=2560, 2697.07625pt x 3276.24pt>
 File: ese/28.jpeg Graphic file (type jpg)
 <use ese/28.jpeg>
 Package pdftex.def Info: ese/28.jpeg  used on input line 2270.
 (pdftex.def)             Requested size: 269.72342pt x 327.64319pt.
-<ese/28a.jpeg, id=2629, 2808.4925pt x 2097.8375pt>
+[82 <./ese/24.jpeg>]
+<ese/28a.jpeg, id=2567, 2808.4925pt x 2097.8375pt>
 File: ese/28a.jpeg Graphic file (type jpg)
 <use ese/28a.jpeg>
 Package pdftex.def Info: ese/28a.jpeg  used on input line 2274.
 (pdftex.def)             Requested size: 280.8657pt x 209.79604pt.
-[95 <./ese/27.jpeg> <./ese/27a.jpeg>]
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2276.
@@ -5548,17 +5516,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2276.
 
-<ese/29.jpeg, id=2636, 2275.50125pt x 3566.32375pt>
+<ese/29.jpeg, id=2568, 2275.50125pt x 3566.32375pt>
 File: ese/29.jpeg Graphic file (type jpg)
 <use ese/29.jpeg>
 Package pdftex.def Info: ese/29.jpeg  used on input line 2279.
 (pdftex.def)             Requested size: 227.56345pt x 356.65327pt.
-<ese/29a.jpeg, id=2637, 2529.45pt x 2554.54375pt>
+<ese/29a.jpeg, id=2569, 2529.45pt x 2554.54375pt>
 File: ese/29a.jpeg Graphic file (type jpg)
 <use ese/29a.jpeg>
 Package pdftex.def Info: ese/29a.jpeg  used on input line 2283.
 (pdftex.def)             Requested size: 252.95981pt x 255.46935pt.
-[96 <./ese/28.jpeg> <./ese/28a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2285.
@@ -5583,17 +5550,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2285.
 
-<ese/30.jpeg, id=2645, 2485.285pt x 1298.8525pt>
+<ese/30.jpeg, id=2570, 2485.285pt x 1298.8525pt>
 File: ese/30.jpeg Graphic file (type jpg)
 <use ese/30.jpeg>
 Package pdftex.def Info: ese/30.jpeg  used on input line 2288.
 (pdftex.def)             Requested size: 248.54306pt x 129.89285pt.
-<ese/30a.jpeg, id=2646, 2177.13374pt x 2403.98125pt>
+<ese/30a.jpeg, id=2571, 2177.13374pt x 2403.98125pt>
 File: ese/30a.jpeg Graphic file (type jpg)
 <use ese/30a.jpeg>
 Package pdftex.def Info: ese/30a.jpeg  used on input line 2292.
 (pdftex.def)             Requested size: 217.72612pt x 240.4122pt.
-[97 <./ese/29.jpeg> <./ese/29a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2294.
@@ -5618,17 +5584,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2294.
 
-<ese/31.jpeg, id=2653, 1737.49126pt x 997.7275pt>
+<ese/31.jpeg, id=2572, 1737.49126pt x 997.7275pt>
 File: ese/31.jpeg Graphic file (type jpg)
 <use ese/31.jpeg>
 Package pdftex.def Info: ese/31.jpeg  used on input line 2297.
 (pdftex.def)             Requested size: 173.7593pt x 99.77858pt.
-<ese/31a.jpeg, id=2654, 2302.6025pt x 2496.32625pt>
+<ese/31a.jpeg, id=2573, 2302.6025pt x 2496.32625pt>
 File: ese/31a.jpeg Graphic file (type jpg)
 <use ese/31a.jpeg>
 Package pdftex.def Info: ese/31a.jpeg  used on input line 2301.
 (pdftex.def)             Requested size: 230.27374pt x 249.64725pt.
-[98 <./ese/30.jpeg> <./ese/30a.jpeg> <./ese/31.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2303.
@@ -5653,12 +5618,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2303.
 
-<ese/32.jpeg, id=2662, 2257.43375pt x 1108.14pt>
+<ese/32.jpeg, id=2574, 2257.43375pt x 1108.14pt>
 File: ese/32.jpeg Graphic file (type jpg)
 <use ese/32.jpeg>
 Package pdftex.def Info: ese/32.jpeg  used on input line 2306.
 (pdftex.def)             Requested size: 225.75659pt x 110.82048pt.
-<ese/32a.jpeg, id=2663, 3585.395pt x 1754.555pt>
+<ese/32a.jpeg, id=2575, 3585.395pt x 1754.555pt>
 File: ese/32a.jpeg Graphic file (type jpg)
 <use ese/32a.jpeg>
 Package pdftex.def Info: ese/32a.jpeg  used on input line 2310.
@@ -5687,17 +5652,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2312.
 
-<ese/33.jpeg, id=2664, 2657.93pt x 2526.43875pt>
+<ese/33.jpeg, id=2576, 2657.93pt x 2526.43875pt>
 File: ese/33.jpeg Graphic file (type jpg)
 <use ese/33.jpeg>
 Package pdftex.def Info: ese/33.jpeg  used on input line 2315.
 (pdftex.def)             Requested size: 265.80856pt x 252.65868pt.
-<ese/33a.jpeg, id=2665, 3793.17125pt x 1175.39125pt>
+<ese/33a.jpeg, id=2577, 3793.17125pt x 1175.39125pt>
 File: ese/33a.jpeg Graphic file (type jpg)
 <use ese/33a.jpeg>
 Package pdftex.def Info: ese/33a.jpeg  used on input line 2319.
 (pdftex.def)             Requested size: 379.33936pt x 117.546pt.
-[99 <./ese/31a.jpeg> <./ese/32.jpeg> <./ese/32a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2321.
@@ -5722,17 +5686,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2321.
 
-<ese/34.jpeg, id=2673, 2667.9675pt x 3100.58376pt>
+<ese/34.jpeg, id=2578, 2667.9675pt x 3100.58376pt>
 File: ese/34.jpeg Graphic file (type jpg)
 <use ese/34.jpeg>
 Package pdftex.def Info: ese/34.jpeg  used on input line 2324.
 (pdftex.def)             Requested size: 266.81238pt x 310.07654pt.
-<ese/34a.jpeg, id=2674, 2713.13625pt x 3661.68pt>
+<ese/34a.jpeg, id=2579, 2713.13625pt x 3661.68pt>
 File: ese/34a.jpeg Graphic file (type jpg)
 <use ese/34a.jpeg>
 Package pdftex.def Info: ese/34a.jpeg  used on input line 2328.
 (pdftex.def)             Requested size: 271.32951pt x 366.18945pt.
-[100 <./ese/33.jpeg> <./ese/33a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2330.
@@ -5757,12 +5720,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2330.
 
-<ese/35.jpeg, id=2681, 2808.4925pt x 3677.74pt>
+<ese/35.jpeg, id=2580, 2808.4925pt x 3677.74pt>
 File: ese/35.jpeg Graphic file (type jpg)
 <use ese/35.jpeg>
 Package pdftex.def Info: ese/35.jpeg  used on input line 2333.
 (pdftex.def)             Requested size: 280.8657pt x 367.79555pt.
-[101 <./ese/34.jpeg> <./ese/34a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2335.
@@ -5787,11 +5749,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2335.
 
-<ese/36.jpeg, id=2688, 2901.84125pt x 2229.32875pt>
+<ese/36.jpeg, id=2581, 2901.84125pt x 2229.32875pt>
 File: ese/36.jpeg Graphic file (type jpg)
 <use ese/36.jpeg>
 Package pdftex.def Info: ese/36.jpeg  used on input line 2338.
 (pdftex.def)             Requested size: 290.20113pt x 222.94594pt.
+[83 <./ese/24a.jpeg> <./ese/24b.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2340.
@@ -5816,17 +5779,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2340.
 
-<ese/37.jpeg, id=2689, 2909.87125pt x 1701.35625pt>
+<ese/37.jpeg, id=2588, 2909.87125pt x 1701.35625pt>
 File: ese/37.jpeg Graphic file (type jpg)
 <use ese/37.jpeg>
 Package pdftex.def Info: ese/37.jpeg  used on input line 2343.
 (pdftex.def)             Requested size: 291.00417pt x 170.14558pt.
-<ese/37a.jpeg, id=2690, 3505.095pt x 832.10875pt>
+<ese/37a.jpeg, id=2589, 3505.095pt x 832.10875pt>
 File: ese/37a.jpeg Graphic file (type jpg)
 <use ese/37a.jpeg>
 Package pdftex.def Info: ese/37a.jpeg  used on input line 2347.
 (pdftex.def)             Requested size: 350.53003pt x 83.21574pt.
-[102 <./ese/35.jpeg> <./ese/36.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2349.
@@ -5851,7 +5813,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2349.
 
-<ese/38.jpeg, id=2699, 2767.33875pt x 3674.72874pt>
+<ese/38.jpeg, id=2590, 2767.33875pt x 3674.72874pt>
 File: ese/38.jpeg Graphic file (type jpg)
 <use ese/38.jpeg>
 Package pdftex.def Info: ese/38.jpeg  used on input line 2352.
@@ -5880,23 +5842,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2354.
 
-<ese/39.jpeg, id=2700, 2699.08376pt x 3434.8325pt>
+<ese/39.jpeg, id=2591, 2699.08376pt x 3434.8325pt>
 File: ese/39.jpeg Graphic file (type jpg)
 <use ese/39.jpeg>
 Package pdftex.def Info: ese/39.jpeg  used on input line 2357.
 (pdftex.def)             Requested size: 269.9242pt x 343.50337pt.
-<ese/39a.jpeg, id=2701, 2644.88126pt x 3812.2425pt>
+<ese/39a.jpeg, id=2592, 2644.88126pt x 3812.2425pt>
 File: ese/39a.jpeg Graphic file (type jpg)
 <use ese/39a.jpeg>
 Package pdftex.def Info: ese/39a.jpeg  used on input line 2361.
 (pdftex.def)             Requested size: 264.50362pt x 381.24658pt.
-[103 <./ese/37.jpeg> <./ese/37a.jpeg> <./ese/38.jpeg>]
-<ese/39b.jpeg, id=2709, 3513.125pt x 1477.52pt>
+<ese/39b.jpeg, id=2593, 3513.125pt x 1477.52pt>
 File: ese/39b.jpeg Graphic file (type jpg)
 <use ese/39b.jpeg>
 Package pdftex.def Info: ese/39b.jpeg  used on input line 2365.
 (pdftex.def)             Requested size: 351.33308pt x 147.76065pt.
- [104 <./ese/39.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2367.
@@ -5921,12 +5881,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2367.
 
-<ese/40.jpeg, id=2715, 2932.9575pt x 3038.35126pt>
+<ese/40.jpeg, id=2594, 2932.9575pt x 3038.35126pt>
 File: ese/40.jpeg Graphic file (type jpg)
 <use ese/40.jpeg>
 Package pdftex.def Info: ese/40.jpeg  used on input line 2370.
 (pdftex.def)             Requested size: 293.31293pt x 303.85292pt.
-[105 <./ese/39a.jpeg> <./ese/39b.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2372.
@@ -5951,18 +5910,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2372.
 
-<ese/41.jpeg, id=2722, 2626.81375pt x 3669.71pt>
+<ese/41.jpeg, id=2595, 2626.81375pt x 3669.71pt>
 File: ese/41.jpeg Graphic file (type jpg)
 <use ese/41.jpeg>
 Package pdftex.def Info: ese/41.jpeg  used on input line 2375.
 (pdftex.def)             Requested size: 262.69676pt x 366.99251pt.
-<ese/41a.jpeg, id=2723, 2705.10625pt x 3585.395pt>
+<ese/41a.jpeg, id=2596, 2705.10625pt x 3585.395pt>
 File: ese/41a.jpeg Graphic file (type jpg)
 <use ese/41a.jpeg>
 Package pdftex.def Info: ese/41a.jpeg  used on input line 2379.
 (pdftex.def)             Requested size: 270.52647pt x 358.5605pt.
-[106 <./ese/40.jpeg>] [107 <./ese/41.jpeg>]
-<images/69.VettAlea.jpeg, id=2734, 2999.205pt x 1005.7575pt>
+<images/69.VettAlea.jpeg, id=2597, 2999.205pt x 1005.7575pt>
 File: images/69.VettAlea.jpeg Graphic file (type jpg)
 <use images/69.VettAlea.jpeg>
 Package pdftex.def Info: images/69.VettAlea.jpeg  used on input line 2389.
@@ -5998,7 +5956,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2384--2399
 
  []
 
-[108 <./ese/41a.jpeg> <./images/69.VettAlea.jpeg>]
+[84 <./ese/24c.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 2401--2405
 
  []
@@ -6013,7 +5971,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2407--2417
 
  []
 
-
+[85 <./ese/24d.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 2420--2425
 
  []
@@ -6042,13 +6000,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2425.
 
-<images/70.Prop1CDFVettA.jpeg, id=2742, 2678.005pt x 1983.41pt>
+<images/70.Prop1CDFVettA.jpeg, id=2609, 2678.005pt x 1983.41pt>
 File: images/70.Prop1CDFVettA.jpeg Graphic file (type jpg)
 <use images/70.Prop1CDFVettA.jpeg>
 Package pdftex.def Info: images/70.Prop1CDFVettA.jpeg  used on input line 2430.
 
 (pdftex.def)             Requested size: 428.48956pt x 317.35208pt.
-[109]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2437.
@@ -6073,52 +6030,51 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2437.
 
-<images/71.Prop2CDFVettA.jpeg, id=2748, 2882.77pt x 2480.26625pt>
+<images/71.Prop2CDFVettA.jpeg, id=2610, 2882.77pt x 2480.26625pt>
 File: images/71.Prop2CDFVettA.jpeg Graphic file (type jpg)
 <use images/71.Prop2CDFVettA.jpeg>
 Package pdftex.def Info: images/71.Prop2CDFVettA.jpeg  used on input line 2440.
 
 (pdftex.def)             Requested size: 461.25262pt x 396.85071pt.
-[110 <./images/70.Prop1CDFVettA.jpeg>]
-<images/72.Prop6CDFVettA.jpeg, id=2757, 2404.985pt x 1412.27625pt>
+[86 <./ese/24e.jpeg> <./ese/24f.jpeg>]
+<images/72.Prop6CDFVettA.jpeg, id=2621, 2404.985pt x 1412.27625pt>
 File: images/72.Prop6CDFVettA.jpeg Graphic file (type jpg)
 <use images/72.Prop6CDFVettA.jpeg>
 Package pdftex.def Info: images/72.Prop6CDFVettA.jpeg  used on input line 2470.
 
 (pdftex.def)             Requested size: 480.98848pt x 282.45024pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2459--2471
+Underfull \hbox (badness 10000) in paragraph at lines 2459--2472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2459--2471
+Underfull \hbox (badness 10000) in paragraph at lines 2459--2472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2459--2471
+Underfull \hbox (badness 10000) in paragraph at lines 2459--2472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2459--2471
+Underfull \hbox (badness 10000) in paragraph at lines 2459--2472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2459--2471
+Underfull \hbox (badness 10000) in paragraph at lines 2459--2472
 
  []
 
-[111 <./images/71.Prop2CDFVettA.jpeg>]
-<images/73.Prop7CDFVettA.jpeg, id=2767, 3815.25375pt x 2188.175pt>
+<images/73.Prop7CDFVettA.jpeg, id=2622, 3815.25375pt x 2188.175pt>
 File: images/73.Prop7CDFVettA.jpeg Graphic file (type jpg)
 <use images/73.Prop7CDFVettA.jpeg>
 Package pdftex.def Info: images/73.Prop7CDFVettA.jpeg  used on input line 2475.
 
 (pdftex.def)             Requested size: 457.8107pt x 262.56967pt.
- [112 <./images/72.Prop6CDFVettA.jpeg> <./images/73.Prop7CDFVettA.jpeg>]
+[87 <./images/57.PrimoEsCap5_1.jpeg> <./images/58.PrimoEsCap5_2.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2479.
@@ -6177,13 +6133,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2496.
 
-<images/74.VettAleaDisc1.jpeg, id=2775, 2637.855pt x 2103.86pt>
+<images/74.VettAleaDisc1.jpeg, id=2633, 2637.855pt x 2103.86pt>
 File: images/74.VettAleaDisc1.jpeg Graphic file (type jpg)
 <use images/74.VettAleaDisc1.jpeg>
 Package pdftex.def Info: images/74.VettAleaDisc1.jpeg  used on input line 2500.
 
 (pdftex.def)             Requested size: 422.06543pt x 336.62448pt.
-<images/75.VettAleaDisc2.jpeg, id=2776, 2393.94376pt x 2014.52625pt>
+[88 <./images/59.PrimoEsCap5_3.jpeg> <./ese/25.jpeg>]
+<images/75.VettAleaDisc2.jpeg, id=2641, 2393.94376pt x 2014.52625pt>
 File: images/75.VettAleaDisc2.jpeg Graphic file (type jpg)
 <use images/75.VettAleaDisc2.jpeg>
 Package pdftex.def Info: images/75.VettAleaDisc2.jpeg  used on input line 2518.
@@ -6209,7 +6166,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2504--2520
 
  []
 
-[113 <./images/74.VettAleaDisc1.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2520.
@@ -6234,12 +6190,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2520.
 
-<ese/42.jpeg, id=2782, 2547.5175pt x 2115.905pt>
+<ese/42.jpeg, id=2642, 2547.5175pt x 2115.905pt>
 File: ese/42.jpeg Graphic file (type jpg)
 <use ese/42.jpeg>
 Package pdftex.def Info: ese/42.jpeg  used on input line 2523.
 (pdftex.def)             Requested size: 356.65002pt x 296.22469pt.
-[114 <./images/75.VettAleaDisc2.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2525.
@@ -6264,29 +6219,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2525.
 
-<ese/43.jpeg, id=2789, 2454.16875pt x 1598.97375pt>
+<ese/43.jpeg, id=2643, 2454.16875pt x 1598.97375pt>
 File: ese/43.jpeg Graphic file (type jpg)
 <use ese/43.jpeg>
 Package pdftex.def Info: ese/43.jpeg  used on input line 2528.
 (pdftex.def)             Requested size: 343.58128pt x 223.8548pt.
-<images/76.CDF_Cong_Cont.jpeg, id=2790, 2001.4775pt x 2021.5525pt>
+<images/76.CDF_Cong_Cont.jpeg, id=2644, 2001.4775pt x 2021.5525pt>
 File: images/76.CDF_Cong_Cont.jpeg Graphic file (type jpg)
 <use images/76.CDF_Cong_Cont.jpeg>
 Package pdftex.def Info: images/76.CDF_Cong_Cont.jpeg  used on input line 2543.
 
 (pdftex.def)             Requested size: 200.15947pt x 202.16708pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2537--2544
-
- []
-
-[115 <./ese/42.jpeg> <./ese/43.jpeg>]
-<images/77.CDF_Marg_Cont.jpeg, id=2797, 2703.09875pt x 1933.2225pt>
+<images/77.CDF_Marg_Cont.jpeg, id=2645, 2703.09875pt x 1933.2225pt>
 File: images/77.CDF_Marg_Cont.jpeg Graphic file (type jpg)
 <use images/77.CDF_Marg_Cont.jpeg>
 Package pdftex.def Info: images/77.CDF_Marg_Cont.jpeg  used on input line 2548.
 
 (pdftex.def)             Requested size: 324.35786pt x 231.97668pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2537--2550
+
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -6339,7 +6292,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2551--2559
 
  []
 
-[116 <./images/76.CDF_Cong_Cont.jpeg> <./images/77.CDF_Marg_Cont.jpeg>]
+[89 <./ese/25a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2559.
@@ -6364,7 +6317,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2559.
 
-<images/78.CalcoloProbPDFCong.jpeg, id=2804, 3334.4575pt x 1426.32875pt>
+<images/78.CalcoloProbPDFCong.jpeg, id=2651, 3334.4575pt x 1426.32875pt>
 File: images/78.CalcoloProbPDFCong.jpeg Graphic file (type jpg)
 <use images/78.CalcoloProbPDFCong.jpeg>
 Package pdftex.def Info: images/78.CalcoloProbPDFCong.jpeg  used on input line 
@@ -6380,7 +6333,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2564--2570
 
  []
 
-
+[90 <./ese/26.jpeg>]
 Overfull \hbox (0.89766pt too wide) in paragraph at lines 2570--2570
 |[]$[]$| 
  []
@@ -6409,7 +6362,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2570.
 
-<images/79.Prob_VA_inDom.jpeg, id=2805, 2445.135pt x 1517.67pt>
+<images/79.Prob_VA_inDom.jpeg, id=2658, 2445.135pt x 1517.67pt>
 File: images/79.Prob_VA_inDom.jpeg Graphic file (type jpg)
 <use images/79.Prob_VA_inDom.jpeg>
 Package pdftex.def Info: images/79.Prob_VA_inDom.jpeg  used on input line 2573.
@@ -6439,7 +6392,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2577.
 
-[117 <./images/78.CalcoloProbPDFCong.jpeg> <./images/79.Prob_VA_inDom.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2579.
@@ -6496,6 +6448,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2581.
 
+[91 <./ese/27.jpeg> <./ese/27a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2583.
@@ -6636,6 +6589,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2598--2602
 
  []
 
+[92 <./ese/28.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2602.
@@ -6737,7 +6691,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2613.
 
-[118]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2615.
@@ -6796,6 +6749,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2620--2628
 
  []
 
+[93 <./ese/28a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2628.
@@ -6924,17 +6878,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2635.
 
-<ese/44.jpeg, id=2817, 2337.73375pt x 2973.1075pt>
+<ese/44.jpeg, id=2676, 2337.73375pt x 2973.1075pt>
 File: ese/44.jpeg Graphic file (type jpg)
 <use ese/44.jpeg>
 Package pdftex.def Info: ese/44.jpeg  used on input line 2638.
 (pdftex.def)             Requested size: 327.2805pt x 416.23222pt.
-<ese/44a.jpeg, id=2818, 2507.3675pt x 3703.8375pt>
+<ese/44a.jpeg, id=2677, 2507.3675pt x 3703.8375pt>
 File: ese/44a.jpeg Graphic file (type jpg)
 <use ese/44a.jpeg>
 Package pdftex.def Info: ese/44a.jpeg  used on input line 2642.
 (pdftex.def)             Requested size: 351.02905pt x 518.53372pt.
-[119] [120 <./ese/44.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2646.
@@ -6964,7 +6917,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2647--2650
 
  []
 
-
+[94 <./ese/29.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 2652--2657
 
  []
@@ -6993,7 +6946,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2657.
 
-[121 <./ese/44a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2663.
@@ -7042,6 +6994,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2669.
 
+[95 <./ese/29a.jpeg> <./ese/30.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2678.
@@ -7066,13 +7019,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2678.
 
-<images/80.jpeg, id=2835, 1690.315pt x 1594.95876pt>
+<images/80.jpeg, id=2691, 1690.315pt x 1594.95876pt>
 File: images/80.jpeg Graphic file (type jpg)
 <use images/80.jpeg>
 Package pdftex.def Info: images/80.jpeg  used on input line 2684.
 (pdftex.def)             Requested size: 236.64249pt x 223.29271pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2679--2685
+Underfull \hbox (badness 10000) in paragraph at lines 2679--2686
 
  []
 
@@ -7100,7 +7053,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2686.
 
-[122 <./images/80.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2697.
@@ -7125,11 +7077,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2697.
 
-<images/81.jpeg, id=2843, 2984.14874pt x 1834.855pt>
+[96 <./ese/30a.jpeg> <./ese/31.jpeg>]
+<images/81.jpeg, id=2702, 2984.14874pt x 1834.855pt>
 File: images/81.jpeg Graphic file (type jpg)
 <use images/81.jpeg>
 Package pdftex.def Info: images/81.jpeg  used on input line 2710.
 (pdftex.def)             Requested size: 417.77798pt x 256.87794pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2713.
@@ -7178,6 +7132,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2719.
 
+[97 <./ese/31a.jpeg> <./ese/32.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2728.
@@ -7202,7 +7157,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2728.
 
-[123 <./images/81.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2734.
@@ -7227,7 +7181,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2734.
 
-<ese/45.jpeg, id=2853, 3531.1925pt x 2337.73375pt>
+<ese/45.jpeg, id=2711, 3531.1925pt x 2337.73375pt>
 File: ese/45.jpeg Graphic file (type jpg)
 <use ese/45.jpeg>
 Package pdftex.def Info: ese/45.jpeg  used on input line 2737.
@@ -7309,12 +7263,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2744.
 
-<ese/46.jpeg, id=2854, 3046.38126pt x 2715.14375pt>
+<ese/46.jpeg, id=2712, 3046.38126pt x 2715.14375pt>
 File: ese/46.jpeg Graphic file (type jpg)
 <use ese/46.jpeg>
 Package pdftex.def Info: ese/46.jpeg  used on input line 2747.
 (pdftex.def)             Requested size: 426.49048pt x 380.11754pt.
-[124 <./ese/45.jpeg>]
+[98 <./ese/32a.jpeg> <./ese/33.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2749.
@@ -7392,12 +7346,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2758.
 
-<ese/47.jpeg, id=2860, 2461.195pt x 3442.8625pt>
+<ese/47.jpeg, id=2719, 2461.195pt x 3442.8625pt>
 File: ese/47.jpeg Graphic file (type jpg)
 <use ese/47.jpeg>
 Package pdftex.def Info: ese/47.jpeg  used on input line 2761.
 (pdftex.def)             Requested size: 393.79926pt x 550.86926pt.
-[125 <./ese/46.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2766.
@@ -7422,6 +7375,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2766.
 
+[99 <./ese/33a.jpeg> <./ese/34.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2770.
@@ -7451,7 +7405,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2771--2775
 
  []
 
-[126 <./ese/47.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2775.
@@ -7481,6 +7434,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2784--2785
 
  []
 
+[100 <./ese/34a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2791.
@@ -7555,6 +7509,7 @@ nel seguente modo: $\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1
 \OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dv$ 
  []
 
+[101 <./ese/35.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2822.
@@ -7579,12 +7534,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2822.
 
-<ese/48.jpeg, id=2872, 2348.775pt x 2586.66376pt>
+<ese/48.jpeg, id=2738, 2348.775pt x 2586.66376pt>
 File: ese/48.jpeg Graphic file (type jpg)
 <use ese/48.jpeg>
 Package pdftex.def Info: ese/48.jpeg  used on input line 2826.
 (pdftex.def)             Requested size: 375.81168pt x 413.87466pt.
-[127]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2828.
@@ -7609,12 +7563,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2828.
 
-<ese/49.jpeg, id=2879, 2781.39125pt x 2677.00125pt>
+<ese/49.jpeg, id=2739, 2781.39125pt x 2677.00125pt>
 File: ese/49.jpeg Graphic file (type jpg)
 <use ese/49.jpeg>
 Package pdftex.def Info: ese/49.jpeg  used on input line 2831.
 (pdftex.def)             Requested size: 445.0317pt x 428.32895pt.
-[128 <./ese/48.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2833.
@@ -7639,17 +7592,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2833.
 
-<ese/50.jpeg, id=2885, 2890.8pt x 2029.5825pt>
+<ese/50.jpeg, id=2740, 2890.8pt x 2029.5825pt>
 File: ese/50.jpeg Graphic file (type jpg)
 <use ese/50.jpeg>
 Package pdftex.def Info: ese/50.jpeg  used on input line 2836.
 (pdftex.def)             Requested size: 462.53746pt x 324.73984pt.
-<ese/50a.jpeg, id=2886, 2296.58pt x 789.95125pt>
+<ese/50a.jpeg, id=2741, 2296.58pt x 789.95125pt>
 File: ese/50a.jpeg Graphic file (type jpg)
 <use ese/50a.jpeg>
 Package pdftex.def Info: ese/50a.jpeg  used on input line 2840.
 (pdftex.def)             Requested size: 367.46031pt x 126.39478pt.
-[129 <./ese/49.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2842.
@@ -7674,23 +7626,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2842.
 
-<images/82.jpeg, id=2893, 2427.0675pt x 3080.50874pt>
+<images/82.jpeg, id=2742, 2427.0675pt x 3080.50874pt>
 File: images/82.jpeg Graphic file (type jpg)
 <use images/82.jpeg>
 Package pdftex.def Info: images/82.jpeg  used on input line 2845.
 (pdftex.def)             Requested size: 388.33875pt x 492.89148pt.
-<images/82a.jpeg, id=2894, 2501.345pt x 3584.39125pt>
+<images/82a.jpeg, id=2743, 2501.345pt x 3584.39125pt>
 File: images/82a.jpeg Graphic file (type jpg)
 <use images/82a.jpeg>
 Package pdftex.def Info: images/82a.jpeg  used on input line 2849.
 (pdftex.def)             Requested size: 400.22339pt x 573.51433pt.
-[130 <./ese/50.jpeg> <./ese/50a.jpeg>]
-<images/82b.jpeg, id=2901, 3180.88374pt x 808.01875pt>
+<images/82b.jpeg, id=2744, 3180.88374pt x 808.01875pt>
 File: images/82b.jpeg Graphic file (type jpg)
 <use images/82b.jpeg>
 Package pdftex.def Info: images/82b.jpeg  used on input line 2853.
 (pdftex.def)             Requested size: 445.3207pt x 113.12184pt.
- [131 <./images/82.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2857.
@@ -7715,7 +7665,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2857.
 
-[132 <./images/82a.jpeg> <./images/82b.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2861.
@@ -7748,6 +7697,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2861.
 
+[102 <./ese/36.jpeg> <./ese/37.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2865.
@@ -7820,6 +7770,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2873.
 
+[103 <./ese/37a.jpeg> <./ese/38.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2878.
@@ -7873,7 +7824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2895--2902
 
  []
 
-[133]
+[104 <./ese/39.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2902.
@@ -7975,6 +7926,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2913.
 
+[105 <./ese/39a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2916.
@@ -8028,6 +7980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2919--2931
 
  []
 
+[106 <./ese/39b.jpeg> <./ese/40.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2931.
@@ -8105,7 +8058,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2935--2937
 
  []
 
-[134]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2937.
@@ -8207,6 +8159,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2943.
 
+[107 <./ese/41.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2948.
@@ -8327,6 +8280,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2963.
 
+[108 <./ese/41a.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2968.
@@ -8361,7 +8315,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2969--2980
 
  []
 
-[135]
+[109 <./images/69.VettAlea.jpeg> <./images/70.Prop1CDFVettA.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2982.
@@ -8386,21 +8340,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2982.
 
-<images/83.jpeg, id=2927, 3221.03375pt x 830.10126pt>
+<images/83.jpeg, id=2793, 3221.03375pt x 830.10126pt>
 File: images/83.jpeg Graphic file (type jpg)
 <use images/83.jpeg>
 Package pdftex.def Info: images/83.jpeg  used on input line 2987.
 (pdftex.def)             Requested size: 418.74908pt x 107.91695pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2983--2988
+Underfull \hbox (badness 10000) in paragraph at lines 2983--2997
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2989--2997
+Underfull \hbox (badness 10000) in paragraph at lines 2983--2997
 
  []
 
+[110 <./images/71.Prop2CDFVettA.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3002.
@@ -8430,7 +8385,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3003--3017
 
  []
 
-[136 <./images/83.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3018.
@@ -8484,7 +8438,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3025.
 
-
+[111 <./images/72.Prop6CDFVettA.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 3028--3034
 
  []
@@ -8584,6 +8538,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3035--3058
 
  []
 
+[112 <./images/73.Prop7CDFVettA.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3058.
@@ -8608,12 +8563,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3058.
 
-<ese/51.jpeg, id=2936, 3417.76875pt x 1962.33125pt>
+<ese/51.jpeg, id=2812, 3417.76875pt x 1962.33125pt>
 File: ese/51.jpeg Graphic file (type jpg)
 <use ese/51.jpeg>
 Package pdftex.def Info: ese/51.jpeg  used on input line 3061.
 (pdftex.def)             Requested size: 444.32555pt x 255.11201pt.
-[137]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3063.
@@ -8638,17 +8592,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3063.
 
-<ese/52.jpeg, id=2941, 3209.9925pt x 1313.90875pt>
+<ese/52.jpeg, id=2813, 3209.9925pt x 1313.90875pt>
 File: ese/52.jpeg Graphic file (type jpg)
 <use ese/52.jpeg>
 Package pdftex.def Info: ese/52.jpeg  used on input line 3066.
 (pdftex.def)             Requested size: 417.31367pt x 170.81413pt.
-<ese/52a.jpeg, id=2942, 3169.8425pt x 2749.27126pt>
+<ese/52a.jpeg, id=2814, 3169.8425pt x 2749.27126pt>
 File: ese/52a.jpeg Graphic file (type jpg)
 <use ese/52a.jpeg>
 Package pdftex.def Info: ese/52a.jpeg  used on input line 3070.
 (pdftex.def)             Requested size: 412.094pt x 357.41782pt.
-[138 <./ese/51.jpeg> <./ese/52.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3073.
@@ -8662,6 +8615,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3086--3091
 
  []
 
+[113 <./images/74.VettAleaDisc1.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3093.
@@ -8686,18 +8640,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3093.
 
-[139 <./ese/52a.jpeg>]
-<images/84.jpeg, id=2955, 2009.5075pt x 1440.38126pt>
+<images/84.jpeg, id=2820, 2009.5075pt x 1440.38126pt>
 File: images/84.jpeg Graphic file (type jpg)
 <use images/84.jpeg>
 Package pdftex.def Info: images/84.jpeg  used on input line 3099.
 (pdftex.def)             Requested size: 261.24515pt x 187.25613pt.
-<images/85.jpeg, id=2956, 2099.845pt x 1348.03625pt>
+<images/85.jpeg, id=2821, 2099.845pt x 1348.03625pt>
 File: images/85.jpeg Graphic file (type jpg)
 <use images/85.jpeg>
 Package pdftex.def Info: images/85.jpeg  used on input line 3105.
 (pdftex.def)             Requested size: 217.6621pt x 139.72758pt.
-<images/86.jpeg, id=2957, 2020.54875pt x 1402.23875pt>
+<images/86.jpeg, id=2822, 2020.54875pt x 1402.23875pt>
 File: images/86.jpeg Graphic file (type jpg)
 <use images/86.jpeg>
 Package pdftex.def Info: images/86.jpeg  used on input line 3110.
@@ -8707,23 +8660,22 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 3103--3113
 [][] [] 
  []
 
-<images/87.jpeg, id=2958, 2816.5225pt x 1383.1675pt>
+<images/87.jpeg, id=2823, 2816.5225pt x 1383.1675pt>
 File: images/87.jpeg Graphic file (type jpg)
 <use images/87.jpeg>
 Package pdftex.def Info: images/87.jpeg  used on input line 3117.
 (pdftex.def)             Requested size: 366.16078pt x 179.81808pt.
-[140 <./images/84.jpeg> <./images/85.jpeg> <./images/86.jpeg> <./images/87.jpeg
->]
-Underfull \hbox (badness 10000) in paragraph at lines 3125--3137
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 3125--3137
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 3125--3137
+
+ []
+
+[114 <./images/75.VettAleaDisc2.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 3138--3143
 
  []
@@ -8777,25 +8729,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 3147--3157
 
  []
 
-[141]
-<ese/53.jpeg, id=2976, 2727.18875pt x 1838.87pt>
+[115 <./ese/42.jpeg>]
+<ese/53.jpeg, id=2838, 2727.18875pt x 1838.87pt>
 File: ese/53.jpeg Graphic file (type jpg)
 <use ese/53.jpeg>
 Package pdftex.def Info: ese/53.jpeg  used on input line 3167.
 (pdftex.def)             Requested size: 436.35912pt x 294.2252pt.
-<ese/53a.jpeg, id=2977, 2380.895pt x 3456.915pt>
+<ese/53a.jpeg, id=2839, 2380.895pt x 3456.915pt>
 File: ese/53a.jpeg Graphic file (type jpg)
 <use ese/53a.jpeg>
 Package pdftex.def Info: ese/53a.jpeg  used on input line 3171.
 (pdftex.def)             Requested size: 380.95099pt x 553.1177pt.
- [142 <./ese/53.jpeg>]
-<ese/54.jpeg, id=2983, 2603.7275pt x 3661.68pt>
+<ese/54.jpeg, id=2840, 2603.7275pt x 3661.68pt>
 File: ese/54.jpeg Graphic file (type jpg)
 <use ese/54.jpeg>
 Package pdftex.def Info: ese/54.jpeg  used on input line 3176.
 (pdftex.def)             Requested size: 416.60492pt x 585.88078pt.
- [143 <./ese/53a.jpeg>] [144 <./ese/54.jpeg>]
-(./main.aux)
+ [116 <./ese/43.jpeg> <./images/76.CDF_Cong_Cont.jpeg>]
+[117 <./images/77.CDF_Marg_Cont.jpeg> <./images/78.CalcoloProbPDFCong.jpeg> <./
+images/79.Prob_VA_inDom.jpeg>] [118 <./ese/44.jpeg>] [119 <./ese/44a.jpeg>]
+[120 <./images/80.jpeg> <./images/81.jpeg>] [121 <./ese/45.jpeg> <./ese/46.jpeg
+>] [122 <./ese/47.jpeg>] [123 <./ese/48.jpeg>] [124 <./ese/49.jpeg>] [125 <./es
+e/50.jpeg> <./ese/50a.jpeg>] [126 <./images/82.jpeg>] [127 <./images/82a.jpeg> 
+<./images/82b.jpeg>] [128 <./images/83.jpeg> <./ese/51.jpeg> <./ese/52.jpeg>]
+[129 <./ese/52a.jpeg> <./images/84.jpeg> <./images/85.jpeg> <./images/86.jpeg>]
+[130 <./images/87.jpeg> <./ese/53.jpeg>] [131 <./ese/53a.jpeg>] [132 <./ese/54.
+jpeg>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -8804,10 +8763,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1249CF13940911C81646E5988C743F64;77745.
  ) 
 Here is how much of TeX's memory you used:
- 16524 strings out of 474116
- 273402 string characters out of 5743683
- 1957187 words of memory out of 5000000
- 37896 multiletter control sequences out of 15000+600000
+ 16511 strings out of 474116
+ 273296 string characters out of 5743683
+ 1955187 words of memory out of 5000000
+ 37895 multiletter control sequences out of 15000+600000
  568712 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,22n,117p,615b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -8831,10 +8790,10 @@ ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
 xlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
 local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (145 pages, 263283875 bytes).
+Output written on main.pdf (133 pages, 263286258 bytes).
 PDF statistics:
- 3251 PDF objects out of 3580 (max. 8388607)
- 2855 compressed objects within 29 object streams
- 789 named destinations out of 1000 (max. 500000)
+ 3198 PDF objects out of 3580 (max. 8388607)
+ 2814 compressed objects within 29 object streams
+ 777 named destinations out of 1000 (max. 500000)
  3936 words of extra memory for PDF output out of 10000 (max. 10000000)
 

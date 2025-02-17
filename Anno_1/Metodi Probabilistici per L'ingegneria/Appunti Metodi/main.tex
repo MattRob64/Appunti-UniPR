@@ -59,7 +59,7 @@
 
 \vspace{25 mm}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.35]{0.Cover.png}}
     %\caption{Caption}
@@ -79,7 +79,7 @@
 
 In statistica, la funzione \(Q\), è la funzione di distribuzione della coda della funzione Gaussiana Standard.
 In altre parole, \(Q(x)\) è la probabilità che una variabile aleatoria normale (gaussiana) ottenga un valore maggiore di  \(x\) derivazioni standard.
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.1]{1.Q1.jpeg}
 \end{figure}
@@ -87,7 +87,7 @@ In altre parole, \(Q(x)\) è la probabilità che una variabile aleatoria normale
 Equivalentemente \(Q(x)\) è la probabilità che una V.A. gaussiana standard assuma un valore maggiore di \(x\).
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.8]{2.Q2.png}
+\includegraphics[scale=0.4]{2.Q2.png}
 \end{figure}
 
 La funzione \(Q\) è un concetto che verrà approfondito meglio più avanti negli appunti.
@@ -152,9 +152,9 @@ $D_{n,k} = \frac{n!}{(n-k)!}$
 \\
 \subsubsection{\underline{Dimostrazione}}
 Molto utile ai fini di questa dimostrazione il seguente grafico ad albero: 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\includegraphics[scale=0.45]{3.Dispo1.png}
+\includegraphics[scale=0.35]{3.Dispo1.png}
 \end{figure} \\
 Che possiamo "tradurre" come:
 \begin{center}
@@ -163,9 +163,9 @@ Che possiamo "tradurre" come:
 \hspace*{0pt}\hfill $\square$ \\
 \subsubsection{\underline{Esempio}}
 3 oggetti presi 2 alla volta:
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\includegraphics[scale=0.5]{4.Dispo2.png}
+\includegraphics[scale=0.4]{4.Dispo2.png}
 \end{figure} \\
 $D_{3,2} = \frac{3!}{(3-2)!} = \frac{6}{1} = 6$
 \subsection{Disposizioni con ripetizione}
@@ -200,9 +200,9 @@ $C_{n,k} = \left( \begin{matrix} n \\ k \end{matrix} \right) = \frac{n!}{k! \cdo
 \newpage
 \subsubsection{\underline{Esempio}}
 $n=3$ e $k=2$ \\
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\includegraphics[scale=0.5]{5.Comb.png}
+\includegraphics[scale=0.4]{5.Comb.png}
 \end{figure} \\
 Dall'immagine qua sopra possiamo capire che: $\begin{matrix}
 a_1 & a_2 = a_2 & a_1 \\
@@ -1254,6 +1254,7 @@ Le V.A. esponenziali sono caratterizzate da una PDF del seguente tipo:
 \end{tabular} \\
 Possiamo notare che una V.A. esponenziale è definita da un “parametro” che verrà introdotti meglio nel capitolo 5.20. \\ \\
 Di seguito il grafico della PDF:
+
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{images/35.PDF_VA_exp.jpeg}
@@ -1899,7 +1900,7 @@ $= \frac{a^2 + ab + b^2}{3} - \left( \frac{b+a}{2} \right)^2 = \frac{4a^2 + 4ab 
 \subsection{Studio Variabili Aleatorie Esponenziali}
 Definiamo una variabile aleatoria esponenziale (generica) nel seguente modo: $X \in \varepsilon \left( \eta \right)$ \\
 Una V.A esponenziale caratterizzata dai seguenti grafici di PDF e CDF: 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{images/61.V.A.Exp.jpeg}
 \end{figure}
@@ -2054,12 +2055,12 @@ x_m = \begin{cases}
 (n+1) \cdot p \text{ e } (n+1)\cdot p -1 \;\;\;\;\text{ se } (n+1)\cdot p \text{ è intero}
 \end{cases}\]
 Ad esempio, se prendiamo $n = 10$ e $p = \frac 12$ otteniamo che $(n+1)\cdot p$ non è intero e che quindi $x_m = 5$, come possiamo notare nel seguente grafico:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{images/64.ModaBinDeltaNonInt.jpeg}
 \end{figure} ~\\
 Se invece prendiamo $n = 11$ e $p = \frac 12$ otteniamo che $(n+1)\cdot p$ è intero e di conseguenza $x_m = 6 $ e $x_m = 5$, come possiamo notare nel seguente grafico:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{images/65.ModaBinDeltaInt.jpeg}
 \end{figure}
@@ -2143,7 +2144,7 @@ Il calcolo della moda di una V.A di Poisson si può suddividere in 3 casi ben di
     \includegraphics[scale=0.10]{images/67.PoissDeltMaggInt.jpeg}
     \end{figure} 
     \item Se $\Lambda < 1$ avremo una sola moda, ovvero $x_m = 0$ che possiamo rappresentare nel seguente grafico:
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.10]{images/68.PoissDeltaMin.jpeg}
     \end{figure} 
@@ -2151,31 +2152,31 @@ Il calcolo della moda di una V.A di Poisson si può suddividere in 3 casi ben di
 
 \subsection{ Regola di Decisione / Tecnica Radar / Rilevamento Errore}
 (Esempio 8.3 sul libro di testo Bononi-Ferrari da pagina 251 a pagina 257)
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{ese/24.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24a.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24b.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24c.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24d.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24e.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/24f.jpeg}
 \end{figure} 
@@ -2241,139 +2242,139 @@ $g(x)= ax+b$ \\
 Quindi, basta calcolare: $g'(x) = a$ e $g^{-1}(x) = \frac{y-b}{a}$ \\
 Quindi $f_Y(y) = \sum_i \frac{f_X(x_i)}{|g'(x_i)|} \Big|_{x_i = g^{-1}(y)} = \frac{f_X(x)}{|g'(x)|} \Big|_{x = g^{-1}(y)} = \frac{f_X(x)}{|a|}\Big|_{x=\frac{y-b}{a}} = \frac{1}{|a|} \cdot f_X \left( \frac{y-b}{a} \right)$
 \subsubsection{\underline{Esempio(Esercizio numero 6)}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/25.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/25a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/26.jpeg}
 \end{figure}
 \subsubsection{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/27.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/27a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esempio(Esercizio numero 11)}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/28.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/28a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 6.1 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/29.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/29a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 6.3 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/30.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/30a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 6.4 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/31.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/31a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 6.7 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/32.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/32a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 6.13 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/33.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/33a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 7.2 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/34.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/34a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 7.3 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/35.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 7.4 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/36.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 7.6 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/37.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/37a.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 7.8 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/38.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 8.7 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/39.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/39a.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/39b.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 8.1 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/40.jpeg}
 \end{figure}
 \subsubsection{\underline{Esercizio 8.3 Bononi Ferrari}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/41.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{ese/41a.jpeg}
 \end{figure}
@@ -2424,7 +2425,7 @@ $F_{XY}(x,y) = P\left\{X \leq x,Y \leq y\right\}$
 \subsubsection{\underline{Proprietà}}
 \begin{enumerate}
     \item La CDF congiunta può assumere solo valori fra 0 e 1: $0 \leq F_{XY}(x,y) \leq 1$
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.16]{images/70.Prop1CDFVettA.jpeg}
     \end{figure}
@@ -2434,7 +2435,7 @@ $F_{XY}(x,y) = P\left\{X \leq x,Y \leq y\right\}$
         \item $F_{XY}(x,y_2) = F_{XY}(x,y_1)$ con $y_2 \geq y_1$
     \end{enumerate}
     \paragraph{\underline{Dimostrazione}}
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.16]{images/71.Prop2CDFVettA.jpeg}
     \end{figure} 
@@ -2464,12 +2465,12 @@ $F_{XY}(x,y) = P\left\{X \leq x,Y \leq y\right\}$
     Che sempre grazie alla proprietà 2) possiamo riscrivere come: \\
     $F_{XY} (\overline x ^+, \overline y ) = F_{XY}(\overline x, \overline y) + 0$ \\ \\
     Che possiamo rappresentare come: 
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.20]{images/72.Prop6CDFVettA.jpeg}
     \end{figure} 
     \item Osservando il grafico sottostante:
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.12]{images/73.Prop7CDFVettA.jpeg}
     \end{figure} 
@@ -2494,7 +2495,7 @@ Possiamo definire una \textbf{massa di probabilità congiunta}:
 La massa di probabilità congiunta soddisfa la proprietà di normalizzazione: $\sum_{i} \sum_{k} P_{XY}(x_i,y_k) = 1$
 \subsubsection{\underline{Calcolare probabilità che due valori appartengano ad un dominio tramite PMF congiunta}}
 Possiamo utilizzare la massa di probabilità congiunta per capire con quanta probabilità la coppia $(x,y)$ appartiene ad un determinato dominio:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{images/74.VettAleaDisc1.jpeg}
 \end{figure} 
@@ -2517,12 +2518,12 @@ Possiamo quindi rappresentare graficamente il tutto come:
 \includegraphics[scale=0.16]{images/75.VettAleaDisc2.jpeg}
 \end{figure} 
 \subsubsection{\underline{Esempio 1}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/42.jpeg}
 \end{figure} 
 \subsubsection{\underline{Esempio 2}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/43.jpeg}
 \end{figure} 
@@ -2537,12 +2538,12 @@ Supponiamo di avere due variabili aleatorie continue $X$ e $Y$. \\
 Avremo di conseguenza che $F_{XY}(x,y)$ è continua. \\ \\
 Sappiamo che $\left\{ X = x \right\} \cap \left\{ Y = y\right\} = \left\{X = x , Y = y\right\}$ \\
 Possiamo capire dove è definita la CDF congiunta tramite il seguente grafico:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.10]{images/76.CDF_Cong_Cont.jpeg}
 \end{figure} 
 Possiamo capire dove sono definire le CDF marginali tramite i seguenti grafici:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{images/77.CDF_Marg_Cont.jpeg}
 \end{figure} 
@@ -2556,7 +2557,7 @@ $\frac{\partial^2 F_{XY}(x,y)}{\partial x \partial y} \Big|_{\begin{matrix} x = 
 Tramite questa definizione si può evincere che: $f_{XY}(x,y) = \frac{\partial^2 F_{XY}(x,y)}{\partial x \partial y} \geq 0$ \\
 \hspace*{0pt}\hfill $\square$ 
 \subsubsection{\underline{Calcolare probabilità tramite PDF congiunta}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{images/78.CalcoloProbPDFCong.jpeg}
 \end{figure} 
@@ -2567,7 +2568,7 @@ $f_{XY}(x,y)\,dx\,dy = P \left\{x < X \leq x + dx, y < Y \leq y +dy\right\}$ \\ 
 Per calcolare il rettangolo in rosso in figura utilizziamo: \\
 $f_{XY}(x,y)\,dy = \frac{\partial F_{XY}(x,y)}{\partial y} = P \left\{X \leq x ,y < Y \leq y + dy \right\}$
 \subsubsection{\underline{Calcolare probabilità che due valori appartengano ad un dominio tramite PDF congiunta}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{images/79.Prob_VA_inDom.jpeg}
 \end{figure} 
@@ -2632,11 +2633,11 @@ $\color{red} f_Y(y|x) = \frac{f_{XY}(x,y)}{f_X(x)} = \frac{f_X(x|y) \cdot f_Y(y)
 \paragraph{\underline{Teorema della probabilità totale}}
 $f_Y(y) = \int_{-\infty}^{+\infty} f_{XY}(x,y) \,dx = \int_{-\infty}^{+\infty} f_Y(y|x) \cdot f_X(x) \,dx$
 \subsubsection{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/44.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/44a.jpeg}
 \end{figure} 
@@ -2678,7 +2679,7 @@ $= P\left\{ X \leq x\right\} \cdot P\left\{ Y \leq y\right\} = F_X(x) \cdot F_Y(
 Proviamo ora a calcolare un probabilità congiunta generica ma con più di due valori: \\
 $P\left\{ x_1 \leq X \leq x_2, y_1 \leq Y \leq y_2 \right\} = \int_{x_1}^{x_2} \int_{y_1}^{y_2} F_{XY}(x,y) dx dy = \int_{x_1}^{x_2} f_X(x) dx \cdot \int_{y_1}^{y_2} F_Y(y) dy$ \\ \\
 Che possiamo rappresentare graficamente come:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{images/80.jpeg}
 \end{figure} 
@@ -2704,7 +2705,7 @@ Che possiamo rappresentare graficamente come:
     \item Se $X$ e $Y$ sono discrete ed indipendenti: \\
     $P_{XY}(x_i,y_k) = P\left\{ X = x_i, Y = y_k \right\} = P\left\{ X = x_i\right\} \cdot P\left\{ Y = y_k\right\}$   $\forall x_i,\forall y_k$ \\
     Se due punti su una diagonale hanno probabilità $\neq 0$, allora anche quelli sull'altra diagonale hanno probabilità $\neq 0$, come possiamo notare nel grafico qui di seguito:
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.14]{images/81.jpeg}
     \end{figure} 
@@ -2731,7 +2732,7 @@ $P_Z(z_l) = P\left\{ Z = z_l\right\} = P\left\{ \mathcal{G}(z_l)\right\}$ \\
 Sapendo che $\mathcal{G}(z_l) = \left\{ (x_i,y_k) | g(x_i,y_k) = z_l \right\}$ possiamo scrivere che: \\
 $= \sum_{(x_i,y_k) \in \mathcal{G}(z_l)} P_{XY}(x_i,y_k)$
 \paragraph{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/45.jpeg}
 \end{figure} 
@@ -2741,7 +2742,7 @@ $E\left\{ Z \right\} = \sum_{z_l} z_l \cdot P_Z(z_l) = \sum_{x_i}\sum_{y_k} g(x_
 $F_Z(z) = P\left\{ Z \leq z \right\} = \sum_{(x_i,y_k) \in \mathcal{I}(z_l)}$ \\
 Dove $\mathcal{I}(z_l) = \left\{ (x_i,y_k) | g(x_i,y_k) \leq z_l \right\} $
 \paragraph{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{ese/46.jpeg}
 \end{figure} 
@@ -2755,7 +2756,7 @@ Di conseguenza la sua PDF sarà: $f_Z(z) = \frac{dF_Z(z)}{dz}$
 \subsubsection{\underline{Teorema dell’aspettazione caso continuo}}
 $E\left\{ Z \right\} = \int{-\infty}^{+\infty} z \cdot f_Z(z) dz = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x,y) \cdot f_{XY}(x,y) dx dy$
 \paragraph{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/47.jpeg}
 \end{figure} 
@@ -2820,34 +2821,34 @@ Cosi facendo utilizzando il teorema fondamentale possiamo ottenere $f_{ZV}(z,v)$
 Infine una volta ottenuta $f_{ZV}(z,v)$ possiamo calcolarci la marginale nel seguente modo: $f_Z(z) = \int_{-\infty}^{+\infty} f_{ZV}(z,v) dv$
 \paragraph{\underline{Esempio}}
 Proviamo ora a risolvere l'esempio 6.10.5.1 utilizzando la tecnica appena vista.
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/48.jpeg}
 \end{figure} 
 \paragraph{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/49.jpeg}
 \end{figure} 
 \paragraph{\underline{Esempio}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/50.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/50a.jpeg}
 \end{figure} 
 \subsubsection{\underline{Utilizzo coordinate polari (esempio)}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{images/82.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{images/82a.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.14]{images/82b.jpeg}
 \end{figure} 
@@ -2981,7 +2982,7 @@ Supponiamo di avere due V.A $X$ e $Y$ indipendenti.
     \paragraph{\underline{Dimostrazione}}
     Per dimostrare questa proprietà basta trovare un esempio in cui $X$ e $Y$ sono incorrelate ma non sono indipendenti, come il seguente: \\ \\
     Prendiamo una qualsiasi V.A $X$ con media nulla: $\eta_x = 0$ e con una PDF $f_X(x)$ a simmetria pari, come le seguenti: 
-    \begin{figure}[H]
+    \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.13]{images/83.jpeg}
     \end{figure} 
@@ -3055,16 +3056,16 @@ $Y = aX + b \implies \rho_{XY} = \frac{c_{XY}}{\sigma_x \cdot \sigma_y} = \frac{
 \end{cases} \implies |\rho_{XY}| = |\pm 1| \implies |\rho_{XY}| = 1$  \\
 \hspace*{0pt}\hfill $\square$
 \subsubsection{\underline{Esempio 1}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{ese/51.jpeg}
 \end{figure} 
 \subsubsection{\underline{Esempio 2}}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{ese/52.jpeg}
 \end{figure} 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{ese/52a.jpeg}
 \end{figure}
@@ -3093,12 +3094,12 @@ Il teorema del limite centrale stabilisce che una somma di $n$ V.A indipendenti,
 Il teorema del limite centrale può anche essere visto come una proprietà dell'operazione di convoluzione:
 \[f_S(s) = f_{X_1}(s) * f_{X_2}(s) * _{\dots} * f_{X_n}(s)\]
 Per semplificare i calcoli, supponiamo che $X_1, X_2, \dots, X_n \in \mathcal{U}\left[ -1, 1 \right]$:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{images/84.jpeg}
 \end{figure} ~\\
 Calcoliamo $f_{X_1}(s)*f_{X_2}(s) = \int_{-\infty}^{+\infty} f_{X_1}(x) \cdot f_{X_2}(s-x) dx$
-\begin{figure}[H]
+\begin{figure}[ht]
   \begin{subfigure}{.5\textwidth}
   \centering
     \includegraphics[width=.9\linewidth]{images/85.jpeg}
@@ -3111,7 +3112,7 @@ Calcoliamo $f_{X_1}(s)*f_{X_2}(s) = \int_{-\infty}^{+\infty} f_{X_1}(x) \cdot f_
   \end{subfigure}
 \end{figure} ~\\
 Ora calcoliamo $f_{X_1}(s)*f_{X_2}(s)*f_{X_3}(s)* _{\dots}$, che rappresenteremo nel seguente grafico:
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.13]{images/87.jpeg}
 \end{figure} ~\\
@@ -3161,16 +3162,16 @@ Mentre possiamo dire che $a$ è una realizzazione di $A$.
     In altre parole, l'errore quadratico medio di uno stimatore non può essere minore del CRB.
 \end{enumerate}
 \subsection{Stimatore della media campione (esempio)}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/53.jpeg}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/53a.jpeg}
 \end{figure}
 \subsection{Stimatore della varianza campione (esempio)}
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \includegraphics[scale=0.16]{ese/54.jpeg}
 \end{figure}
