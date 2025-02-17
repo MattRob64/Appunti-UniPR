@@ -151,230 +151,230 @@
 \contentsline {subsubsection}{\numberline {5.9.2}\underline {Esempio}}{36}{subsubsection.5.9.2}%
 \contentsline {subsection}{\numberline {5.10}Variabili Aleatorie Uniformi}{36}{subsection.5.10}%
 \contentsline {subsection}{\numberline {5.11}Variabili Aleatorie Esponenziali (Negative)}{36}{subsection.5.11}%
-\contentsline {subsection}{\numberline {5.12}Variabili Aleatorie Normali o Gaussiane}{37}{subsection.5.12}%
-\contentsline {subsubsection}{\numberline {5.12.1}\underline {Esempio 1}}{37}{subsubsection.5.12.1}%
-\contentsline {subsubsection}{\numberline {5.12.2}\underline {Esempio 2}}{37}{subsubsection.5.12.2}%
-\contentsline {subsection}{\numberline {5.13}Trasformazioni di Variabili Aleatorie}{37}{subsection.5.13}%
-\contentsline {subsubsection}{\numberline {5.13.1}\underline {Esempio}}{37}{subsubsection.5.13.1}%
-\contentsline {subsection}{\numberline {5.14}Calcolare la V.A. $Y$ data la V.A. $X$}{38}{subsection.5.14}%
-\contentsline {subsubsection}{\numberline {5.14.1}\underline {Esempio(Y discreta e X continua)}}{38}{subsubsection.5.14.1}%
-\contentsline {subsubsection}{\numberline {5.14.2}\underline {Esempio(Y discreta e X discreta)}}{38}{subsubsection.5.14.2}%
-\contentsline {subsection}{\numberline {5.15}Calcolare la V.A. Discreta $Y$ data la V.A. $X$ Generica}{38}{subsection.5.15}%
-\contentsline {subsection}{\numberline {5.16}Calcolare la V.A. Continua $Y$ data la V.A. $X$ Generica}{38}{subsection.5.16}%
-\contentsline {subsection}{\numberline {5.17}Regola Importante per gli Esercizi (Funzioni a due Variabili)}{38}{subsection.5.17}%
-\contentsline {subsubsection}{\numberline {5.17.1}\underline {Esempio}}{38}{subsubsection.5.17.1}%
-\contentsline {subsection}{\numberline {5.18}Teorema Fondamentale}{56}{subsection.5.18}%
-\contentsline {subsubsection}{\numberline {5.18.1}\underline {Caso g(x) monotona crescente}}{56}{subsubsection.5.18.1}%
-\contentsline {subsubsection}{\numberline {5.18.2}\underline {Caso g(x) non monotona crescente}}{56}{subsubsection.5.18.2}%
-\contentsline {subsubsection}{\numberline {5.18.3}\underline {Caso Y discreta}}{56}{subsubsection.5.18.3}%
-\contentsline {subsubsection}{\numberline {5.18.4}\underline {Esempio 1}}{57}{subsubsection.5.18.4}%
-\contentsline {subsubsection}{\numberline {5.18.5}\underline {Esempio 2}}{58}{subsubsection.5.18.5}%
-\contentsline {subsubsection}{\numberline {5.18.6}\underline {Esempio 3}}{59}{subsubsection.5.18.6}%
-\contentsline {subsubsection}{\numberline {5.18.7}\underline {Esempio 4}}{60}{subsubsection.5.18.7}%
-\contentsline {subsection}{\numberline {5.19}Problema Inverso (Alle Trasformazioni di V.A.)}{60}{subsection.5.19}%
-\contentsline {subsection}{\numberline {5.20}Valor Medio}{60}{subsection.5.20}%
-\contentsline {subsubsection}{\numberline {5.20.1}\underline {Esempio (calcolare valor medio V.A. discreta)}}{61}{subsubsection.5.20.1}%
-\contentsline {subsection}{\numberline {5.21}Varianza}{61}{subsection.5.21}%
-\contentsline {subsubsection}{\numberline {5.21.1}\underline {Esempio}}{62}{subsubsection.5.21.1}%
-\contentsline {subsection}{\numberline {5.22}Teorema Dell’Aspettazione}{63}{subsection.5.22}%
-\contentsline {subsubsection}{\numberline {5.22.1}\underline {Dimostrazione calcolo valor medio(Caso X e Y discrete)}}{63}{subsubsection.5.22.1}%
-\contentsline {subsection}{\numberline {5.23}Proprietà dell'operatore E}{64}{subsection.5.23}%
-\contentsline {subsubsection}{\numberline {5.23.1}\underline {Dimostrazione del 4}}{64}{subsubsection.5.23.1}%
-\contentsline {subsubsection}{\numberline {5.23.2}\underline {Esempio}}{65}{subsubsection.5.23.2}%
-\contentsline {subsection}{\numberline {5.24}Scarto}{68}{subsection.5.24}%
-\contentsline {subsection}{\numberline {5.25}Momenti di ordine k di una V.A X rispetto alla costante c}{68}{subsection.5.25}%
-\contentsline {subsubsection}{\numberline {5.25.1}\underline {Caso $c = 0$}}{68}{subsubsection.5.25.1}%
-\contentsline {subsubsection}{\numberline {5.25.2}\underline {Caso $c = \eta _x$}}{68}{subsubsection.5.25.2}%
-\contentsline {subsubsection}{\numberline {5.25.3}\underline {Momenti ordinari noti}}{68}{subsubsection.5.25.3}%
-\contentsline {subsubsection}{\numberline {5.25.4}\underline {Momenti centarli noti}}{68}{subsubsection.5.25.4}%
-\contentsline {subsubsection}{\numberline {5.25.5}\underline {Da momenti centrali a momenti ordinari}}{68}{subsubsection.5.25.5}%
-\contentsline {subsubsection}{\numberline {5.25.6}\underline {Da momenti ordinari a momenti centrali}}{69}{subsubsection.5.25.6}%
-\contentsline {subsubsection}{\numberline {5.25.7}\underline {Legame tra valore quadratico medio e varianza:}}{69}{subsubsection.5.25.7}%
-\contentsline {subsubsection}{\numberline {5.25.8}\underline {Legame importante per il calcolo della varianza:}}{69}{subsubsection.5.25.8}%
-\contentsline {subsection}{\numberline {5.26}Disuguaglianza di Chebychev}{69}{subsection.5.26}%
-\contentsline {subsubsection}{\numberline {5.26.1}\underline {Dimostrazione}}{70}{subsubsection.5.26.1}%
-\contentsline {subsection}{\numberline {5.27}Funzione Caratteristica}{70}{subsection.5.27}%
-\contentsline {subsection}{\numberline {5.28}MGF: Funzione Generatrice di Momenti}{70}{subsection.5.28}%
-\contentsline {subsubsection}{\numberline {5.28.1}\underline {Dimostrazione}}{70}{subsubsection.5.28.1}%
-\contentsline {subsection}{\numberline {5.29}Moda}{71}{subsection.5.29}%
-\contentsline {subsubsection}{\numberline {5.29.1}\underline {Caso discreto}}{71}{subsubsection.5.29.1}%
-\contentsline {subsubsection}{\numberline {5.29.2}\underline {Caso continuo}}{71}{subsubsection.5.29.2}%
-\contentsline {subsection}{\numberline {5.30}Mediana}{72}{subsection.5.30}%
-\contentsline {subsubsection}{\numberline {5.30.1}\underline {Calcolare mediana caso continuo}}{72}{subsubsection.5.30.1}%
-\contentsline {subsubsection}{\numberline {5.30.2}\underline {Calcolare mediana caso discreto}}{73}{subsubsection.5.30.2}%
-\contentsline {subsection}{\numberline {5.31}CDF Condizionata}{73}{subsection.5.31}%
-\contentsline {subsubsection}{\numberline {5.31.1}\underline {Proprietà}}{74}{subsubsection.5.31.1}%
-\contentsline {subsection}{\numberline {5.32}PDF Condizionata}{74}{subsection.5.32}%
-\contentsline {subsubsection}{\numberline {5.32.1}\underline {Proprietà}}{74}{subsubsection.5.32.1}%
-\contentsline {subsubsection}{\numberline {5.32.2}\underline {Esempio}}{74}{subsubsection.5.32.2}%
-\contentsline {subsection}{\numberline {5.33}Teorema della Probabilità Totale Condizionata}{76}{subsection.5.33}%
-\contentsline {subsection}{\numberline {5.34}Valor Medio Condizionato}{76}{subsection.5.34}%
-\contentsline {subsection}{\numberline {5.35}Studio Variabili Aleatorie Uniformi}{76}{subsection.5.35}%
-\contentsline {subsubsection}{\numberline {5.35.1}\underline {Calcolare il valor medio di una V.A uniforme}}{76}{subsubsection.5.35.1}%
-\contentsline {subsubsection}{\numberline {5.35.2}\underline {Calcolare il valore quadratico medio di una V.A uniforme}}{76}{subsubsection.5.35.2}%
-\contentsline {subsubsection}{\numberline {5.35.3}\underline {Calcolare la varianza di una V.A uniforme}}{76}{subsubsection.5.35.3}%
-\contentsline {subsection}{\numberline {5.36}Studio Variabili Aleatorie Esponenziali}{77}{subsection.5.36}%
-\contentsline {subsubsection}{\numberline {5.36.1}\underline {Calcolare il valor medio di una V.A esponenziale}}{77}{subsubsection.5.36.1}%
-\contentsline {subsubsection}{\numberline {5.36.2}\underline {Calcolare il valore quadratico medio di una V.A esponenziale}}{77}{subsubsection.5.36.2}%
-\contentsline {subsubsection}{\numberline {5.36.3}\underline {Calcolare la varianza di una V.A esponenziale}}{77}{subsubsection.5.36.3}%
-\contentsline {subsubsection}{\numberline {5.36.4}\underline {Proprietà di assenza di memoria della distribuzione esponenziale}}{77}{subsubsection.5.36.4}%
-\contentsline {subsection}{\numberline {5.37}Studio Variabili Aleatorie Gaussiane}{78}{subsection.5.37}%
-\contentsline {subsubsection}{\numberline {5.37.1}\underline {Premessa}}{78}{subsubsection.5.37.1}%
-\contentsline {subsubsection}{\numberline {5.37.2}\underline {Calcolare valor medio(e momenti ordinari di ordine dispari) V.A gaussiana standard}}{78}{subsubsection.5.37.2}%
-\contentsline {subsubsection}{\numberline {5.37.3}\underline {Calcolare valore quadratico medio(e momenti ordinari di ordine pari) V.A gaussiana standard}}{79}{subsubsection.5.37.3}%
-\contentsline {subsubsection}{\numberline {5.37.4}\underline {Calcolare i Momenti della Gaussiana Generica tramite la Gaussiana Standard}}{79}{subsubsection.5.37.4}%
-\contentsline {subsubsection}{\numberline {5.37.5}\underline {Calcolare il valor medio di una V.A gaussiana generica}}{79}{subsubsection.5.37.5}%
-\contentsline {subsubsection}{\numberline {5.37.6}\underline {Calcolare il valore quadratico medio di una V.A gaussiana generica}}{79}{subsubsection.5.37.6}%
-\contentsline {subsubsection}{\numberline {5.37.7}\underline {Calcolare la varianza di una V.A gaussiana generica}}{79}{subsubsection.5.37.7}%
-\contentsline {subsubsection}{\numberline {5.37.8}\underline {Calcolare la moda di una V.A gaussiana generica}}{79}{subsubsection.5.37.8}%
-\contentsline {subsubsection}{\numberline {5.37.9}\underline {Calcolare la mediana di una V.A gaussiana generica}}{80}{subsubsection.5.37.9}%
-\contentsline {subsubsection}{\numberline {5.37.10}Dimostrazione proprietà normalizzazione V.A gaussiane}{80}{subsubsection.5.37.10}%
-\contentsline {subsection}{\numberline {5.38}Studio Variabili Aleatorie Binomiali}{80}{subsection.5.38}%
-\contentsline {subsubsection}{\numberline {5.38.1}\underline {Calcolare la moda di una V.A binomiale}}{80}{subsubsection.5.38.1}%
-\contentsline {subsubsection}{\numberline {5.38.2}\underline {Calcolare i momenti ordinari di una V.A di Bernoulli}}{81}{subsubsection.5.38.2}%
-\contentsline {subsubsection}{\numberline {5.38.3}\underline {Calcolare il valor medio di una V.A binomiale(n = 1)}}{81}{subsubsection.5.38.3}%
-\contentsline {subsubsection}{\numberline {5.38.4}\underline {Calcolare il valore quadratico medio di una V.A binomiale(n = 1)}}{81}{subsubsection.5.38.4}%
-\contentsline {subsubsection}{\numberline {5.38.5}\underline {Calcolare la varianza di una V.A binomiale(n = 1)}}{81}{subsubsection.5.38.5}%
-\contentsline {subsubsection}{\numberline {5.38.6}\underline {Calcolare il valor medio di una V.A binomiale(n = n)}}{82}{subsubsection.5.38.6}%
-\contentsline {subsubsection}{\numberline {5.38.7}\underline {Calcolare la varianza di una V.A binomiale(n = n)}}{82}{subsubsection.5.38.7}%
-\contentsline {subsection}{\numberline {5.39}Studio Variabili Aleatorie di Poisson}{82}{subsection.5.39}%
-\contentsline {subsubsection}{\numberline {5.39.1}Dimostrazione proprietà normalizzazione V.A di Poisson}{82}{subsubsection.5.39.1}%
-\contentsline {subsubsection}{\numberline {5.39.2}\underline {Calcolare il valor medio di una V.A di Poisson}}{82}{subsubsection.5.39.2}%
-\contentsline {subsubsection}{\numberline {5.39.3}\underline {Calcolare il valore quadratico medio di una V.A di Poisson}}{82}{subsubsection.5.39.3}%
-\contentsline {subsubsection}{\numberline {5.39.4}\underline {Calcolare la varianza di una V.A di Poisson}}{83}{subsubsection.5.39.4}%
-\contentsline {subsubsection}{\numberline {5.39.5}\underline {Calcolare la moda di una V.A di Poisson}}{83}{subsubsection.5.39.5}%
-\contentsline {subsection}{\numberline {5.40} Regola di Decisione / Tecnica Radar / Rilevamento Errore}{84}{subsection.5.40}%
-\contentsline {subsection}{\numberline {5.41}Esempi ed Esercizi sul Capitolo}{87}{subsection.5.41}%
-\contentsline {subsubsection}{\numberline {5.41.1}\underline {Esempio sul teorema fondamentale}}{87}{subsubsection.5.41.1}%
-\contentsline {paragraph}{\numberline {5.41.1.1}Ripasso Teorema Fondamentale}{87}{paragraph.5.41.1.1}%
-\contentsline {paragraph}{\numberline {5.41.1.2}Generalizzando}{88}{paragraph.5.41.1.2}%
-\contentsline {subsubsection}{\numberline {5.41.2}\underline {Esempio(Esercizio numero 6)}}{89}{subsubsection.5.41.2}%
-\contentsline {subsubsection}{\numberline {5.41.3}\underline {Esempio}}{90}{subsubsection.5.41.3}%
-\contentsline {subsubsection}{\numberline {5.41.4}\underline {Esempio}}{91}{subsubsection.5.41.4}%
-\contentsline {subsubsection}{\numberline {5.41.5}\underline {Esempio(Esercizio numero 11)}}{92}{subsubsection.5.41.5}%
-\contentsline {subsubsection}{\numberline {5.41.6}\underline {Esercizio 6.1 Bononi Ferrari}}{93}{subsubsection.5.41.6}%
-\contentsline {subsubsection}{\numberline {5.41.7}\underline {Esercizio 6.3 Bononi Ferrari}}{94}{subsubsection.5.41.7}%
-\contentsline {subsubsection}{\numberline {5.41.8}\underline {Esercizio 6.4 Bononi Ferrari}}{94}{subsubsection.5.41.8}%
-\contentsline {subsubsection}{\numberline {5.41.9}\underline {Esercizio 6.7 Bononi Ferrari}}{95}{subsubsection.5.41.9}%
-\contentsline {subsubsection}{\numberline {5.41.10}\underline {Esercizio 6.13 Bononi Ferrari}}{96}{subsubsection.5.41.10}%
-\contentsline {subsubsection}{\numberline {5.41.11}\underline {Esercizio 7.2 Bononi Ferrari}}{97}{subsubsection.5.41.11}%
-\contentsline {subsubsection}{\numberline {5.41.12}\underline {Esercizio 7.3 Bononi Ferrari}}{98}{subsubsection.5.41.12}%
-\contentsline {subsubsection}{\numberline {5.41.13}\underline {Esercizio 7.4 Bononi Ferrari}}{98}{subsubsection.5.41.13}%
-\contentsline {subsubsection}{\numberline {5.41.14}\underline {Esercizio 7.6 Bononi Ferrari}}{99}{subsubsection.5.41.14}%
-\contentsline {subsubsection}{\numberline {5.41.15}\underline {Esercizio 7.8 Bononi Ferrari}}{99}{subsubsection.5.41.15}%
-\contentsline {subsubsection}{\numberline {5.41.16}\underline {Esercizio 8.7 Bononi Ferrari}}{100}{subsubsection.5.41.16}%
-\contentsline {subsubsection}{\numberline {5.41.17}\underline {Esercizio 8.1 Bononi Ferrari}}{102}{subsubsection.5.41.17}%
-\contentsline {subsubsection}{\numberline {5.41.18}\underline {Esercizio 8.3 Bononi Ferrari}}{103}{subsubsection.5.41.18}%
-\contentsline {section}{\numberline {6}Vettori Aleatori (Sistemi di Variabili Aleatorie)}{104}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Definizione}{104}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Sistema di Probabilità per Vettori Aleatori (Da finire)}{105}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Distinzione fra Trasformazioni di V.A e Vettori Aleatori}{105}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}CDF congiunta (CDF per Vettori Aleatori)}{105}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}\underline {Proprietà}}{105}{subsubsection.6.4.1}%
-\contentsline {paragraph}{\numberline {6.4.1.1}\underline {Dimostrazione}}{107}{paragraph.6.4.1.1}%
-\contentsline {paragraph}{\numberline {6.4.1.2}\underline {Dimostrazione}}{109}{paragraph.6.4.1.2}%
-\contentsline {subsection}{\numberline {6.5}Vettori Aleatori Discreti (Sistemi di V.A Discrete)}{109}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}\underline {Calcolare probabilità che due valori appartengano ad un dominio tramite PMF congiunta}}{109}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}Calcolare le masse di probabilità marginali}{110}{subsubsection.6.5.2}%
-\contentsline {subsubsection}{\numberline {6.5.3}\underline {Esempio 1}}{111}{subsubsection.6.5.3}%
-\contentsline {subsubsection}{\numberline {6.5.4}\underline {Esempio 2}}{111}{subsubsection.6.5.4}%
-\contentsline {subsection}{\numberline {6.6}PDF Congiunta}{111}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Vettori Aleatori Continui (Sistemi di V.A Continue)}{112}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}\underline {Dimostrazione(PDF Congiunta $\geq 0$)}}{112}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}\underline {Calcolare probabilità tramite PDF congiunta}}{113}{subsubsection.6.7.2}%
-\contentsline {subsubsection}{\numberline {6.7.3}\underline {Calcolare probabilità che due valori appartengano ad un dominio tramite PDF congiunta}}{113}{subsubsection.6.7.3}%
-\contentsline {subsubsection}{\numberline {6.7.4}\underline {La PDF congiunta soddisfa la proprietà di normalizzazione}}{114}{subsubsection.6.7.4}%
-\contentsline {subsubsection}{\numberline {6.7.5}\underline {Calcolare CDF congiunta da PDF congiunta}}{114}{subsubsection.6.7.5}%
-\contentsline {subsubsection}{\numberline {6.7.6}\underline {Calcolare CDF marginale in $x$ da PDF congiunta}}{114}{subsubsection.6.7.6}%
-\contentsline {subsubsection}{\numberline {6.7.7}\underline {Calcolare CDF marginale in $y$ da PDF congiunta}}{114}{subsubsection.6.7.7}%
-\contentsline {subsubsection}{\numberline {6.7.8}\underline {Calcolare PDF marginale in $x$ da PDF congiunta}}{114}{subsubsection.6.7.8}%
-\contentsline {subsubsection}{\numberline {6.7.9}\underline {Calcolare PDF marginale in $y$ da PDF congiunta}}{114}{subsubsection.6.7.9}%
-\contentsline {subsection}{\numberline {6.8}PDF e CDF Condizionate con C definito in funzione di un’altra V.A}{114}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}\underline {Caso discreto}}{114}{subsubsection.6.8.1}%
-\contentsline {paragraph}{\numberline {6.8.1.1}\underline {Teorema di Bayes}}{114}{paragraph.6.8.1.1}%
-\contentsline {paragraph}{\numberline {6.8.1.2}\underline {Teorema della Probabilità Totale}}{114}{paragraph.6.8.1.2}%
-\contentsline {paragraph}{\numberline {6.8.1.3}\underline {CDF condizionata discreta}}{115}{paragraph.6.8.1.3}%
-\contentsline {paragraph}{\numberline {6.8.1.4}\underline {PDF condizionata discreta}}{115}{paragraph.6.8.1.4}%
-\contentsline {subsubsection}{\numberline {6.8.2}\underline {Caso continuo}}{115}{subsubsection.6.8.2}%
-\contentsline {paragraph}{\numberline {6.8.2.1}\underline {Dimostrazione teorema di Bayes CDF condizionata ad una V.A}}{115}{paragraph.6.8.2.1}%
-\contentsline {paragraph}{\numberline {6.8.2.2}\underline {PDF di $X$ condizionata ad $X$}}{115}{paragraph.6.8.2.2}%
-\contentsline {paragraph}{\numberline {6.8.2.3}\underline {PDF di $Y$ condizionata ad $X$}}{115}{paragraph.6.8.2.3}%
-\contentsline {paragraph}{\numberline {6.8.2.4}\underline {Teorema della probabilità totale}}{115}{paragraph.6.8.2.4}%
-\contentsline {subsubsection}{\numberline {6.8.3}\underline {Esempio}}{116}{subsubsection.6.8.3}%
-\contentsline {subsection}{\numberline {6.9}Vettori di Variabili Aleatorie Indipendenti}{117}{subsection.6.9}%
-\contentsline {subsubsection}{\numberline {6.9.1}\underline {CDF}}{117}{subsubsection.6.9.1}%
-\contentsline {paragraph}{\numberline {6.9.1.1}\underline {Calcolare le CDF marginali}}{118}{paragraph.6.9.1.1}%
-\contentsline {subsubsection}{\numberline {6.9.2}\underline {PDF}}{118}{subsubsection.6.9.2}%
-\contentsline {subsubsection}{\numberline {6.9.3}\underline {Calcolo probabilità con PDF}}{118}{subsubsection.6.9.3}%
-\contentsline {subsubsection}{\numberline {6.9.4}\underline {Calcolo probabilità con più valori}}{118}{subsubsection.6.9.4}%
-\contentsline {subsubsection}{\numberline {6.9.5}\underline {Trasformazioni di V.A indipendenti}}{118}{subsubsection.6.9.5}%
-\contentsline {paragraph}{\numberline {6.9.5.1}\underline {Dimostrazione caso discreto}}{119}{paragraph.6.9.5.1}%
-\contentsline {subsubsection}{\numberline {6.9.6}\underline {PDF condizionata}}{119}{subsubsection.6.9.6}%
-\contentsline {subsubsection}{\numberline {6.9.7}\underline {PMF condizionata}}{119}{subsubsection.6.9.7}%
-\contentsline {subsection}{\numberline {6.10}Trasformazione di 1 V.A Date 2 V.A}{119}{subsection.6.10}%
-\contentsline {subsubsection}{\numberline {6.10.1}\underline {Caso discreto}}{120}{subsubsection.6.10.1}%
-\contentsline {paragraph}{\numberline {6.10.1.1}\underline {Esempio}}{120}{paragraph.6.10.1.1}%
-\contentsline {subsubsection}{\numberline {6.10.2}\underline {Teorema dell’aspettazione caso discreto}}{120}{subsubsection.6.10.2}%
-\contentsline {subsubsection}{\numberline {6.10.3}\underline {CDF caso discreto}}{120}{subsubsection.6.10.3}%
-\contentsline {paragraph}{\numberline {6.10.3.1}\underline {Esempio}}{121}{paragraph.6.10.3.1}%
-\contentsline {subsubsection}{\numberline {6.10.4}\underline {Caso continuo}}{121}{subsubsection.6.10.4}%
-\contentsline {subsubsection}{\numberline {6.10.5}\underline {Teorema dell’aspettazione caso continuo}}{121}{subsubsection.6.10.5}%
-\contentsline {paragraph}{\numberline {6.10.5.1}\underline {Esempio}}{122}{paragraph.6.10.5.1}%
-\contentsline {subsection}{\numberline {6.11}Trasformazione di 2 V.A Date 2 V.A}{122}{subsection.6.11}%
-\contentsline {subsubsection}{\numberline {6.11.1}\underline {Caso discreto}}{122}{subsubsection.6.11.1}%
-\contentsline {subsubsection}{\numberline {6.11.2}\underline {Caso continuo (“Metodo Grafico”)}}{123}{subsubsection.6.11.2}%
-\contentsline {subsubsection}{\numberline {6.11.3}\underline {Teorema fondamentale (caso continuo)}}{123}{subsubsection.6.11.3}%
-\contentsline {paragraph}{\numberline {6.11.3.1}\underline {Metodo alternativo per il calcolo del determinante della matrice Jacobiana}}{123}{paragraph.6.11.3.1}%
-\contentsline {subsubsection}{\numberline {6.11.4}\underline {Teorema fondamentale caso 1 V.A da trasformare}}{123}{subsubsection.6.11.4}%
-\contentsline {paragraph}{\numberline {6.11.4.1}\underline {Esempio}}{124}{paragraph.6.11.4.1}%
-\contentsline {paragraph}{\numberline {6.11.4.2}\underline {Esempio}}{125}{paragraph.6.11.4.2}%
-\contentsline {paragraph}{\numberline {6.11.4.3}\underline {Esempio}}{126}{paragraph.6.11.4.3}%
-\contentsline {subsubsection}{\numberline {6.11.5}\underline {Utilizzo coordinate polari (esempio)}}{127}{subsubsection.6.11.5}%
-\contentsline {subsection}{\numberline {6.12}Proprietà Teorema Dell’Aspettazione per i Vettori Aleatori}{129}{subsection.6.12}%
-\contentsline {subsubsection}{\numberline {6.12.1}\underline {Definizione per trasformazione di una V.A}}{129}{subsubsection.6.12.1}%
-\contentsline {subsubsection}{\numberline {6.12.2}\underline {Definizione per trasformazione di $n$ V.A}}{129}{subsubsection.6.12.2}%
-\contentsline {subsubsection}{\numberline {6.12.3}\underline {Linearità}}{129}{subsubsection.6.12.3}%
-\contentsline {subsubsection}{\numberline {6.12.4}\underline {Caso 2 V.A indipendenti}}{129}{subsubsection.6.12.4}%
-\contentsline {paragraph}{\numberline {6.12.4.1}\underline {Dimostrazione}}{129}{paragraph.6.12.4.1}%
-\contentsline {subsubsection}{\numberline {6.12.5}\underline {Calcolo varianza con 2 V.A indipendenti}}{129}{subsubsection.6.12.5}%
-\contentsline {paragraph}{\numberline {6.12.5.1}\underline {Dimostrazione}}{129}{paragraph.6.12.5.1}%
-\contentsline {subsection}{\numberline {6.13}Teorema della Media Condizionata}{129}{subsection.6.13}%
-\contentsline {subsubsection}{\numberline {6.13.1}\underline {Enunciato}}{130}{subsubsection.6.13.1}%
-\contentsline {subsection}{\numberline {6.14}Momenti di Vettori Aleatori}{130}{subsection.6.14}%
-\contentsline {subsubsection}{\numberline {6.14.1}\underline {Momenti ordinari congiunti}}{130}{subsubsection.6.14.1}%
-\contentsline {paragraph}{\numberline {6.14.1.1}\underline {Caso discreto}}{130}{paragraph.6.14.1.1}%
-\contentsline {subsubsection}{\numberline {6.14.2}\underline {Momenti centrali congiunti}}{130}{subsubsection.6.14.2}%
-\contentsline {paragraph}{\numberline {6.14.2.1}\underline {Caso discreto}}{130}{paragraph.6.14.2.1}%
-\contentsline {subsubsection}{\numberline {6.14.3}\underline {Momenti ordinari congiunti di ordine 1}}{130}{subsubsection.6.14.3}%
-\contentsline {subsubsection}{\numberline {6.14.4}\underline {Momenti ordinari congiunti di ordine 2}}{130}{subsubsection.6.14.4}%
-\contentsline {paragraph}{\numberline {6.14.4.1}\underline {Correlazione}}{130}{paragraph.6.14.4.1}%
-\contentsline {paragraph}{\numberline {6.14.4.2}\underline {Altri momenti ordinari noti}}{131}{paragraph.6.14.4.2}%
-\contentsline {subsubsection}{\numberline {6.14.5}\underline {Momenti centrali congiunti di ordine 2}}{131}{subsubsection.6.14.5}%
-\contentsline {paragraph}{\numberline {6.14.5.1}\underline {Covarianza}}{131}{paragraph.6.14.5.1}%
-\contentsline {paragraph}{\numberline {6.14.5.2}\underline {Altri momenti centrali noti}}{131}{paragraph.6.14.5.2}%
-\contentsline {subsubsection}{\numberline {6.14.6}\underline {Incorrelazione e Ortogonalità}}{131}{subsubsection.6.14.6}%
-\contentsline {subsubsection}{\numberline {6.14.7}\underline {Definire covarianza tramite correlazione utilizzando lo scarto}}{131}{subsubsection.6.14.7}%
-\contentsline {paragraph}{\numberline {6.14.7.1}\underline {Dimostrazione}}{131}{paragraph.6.14.7.1}%
-\contentsline {subsubsection}{\numberline {6.14.8}\underline {Relazione fra correlazione e covarianza}}{131}{subsubsection.6.14.8}%
-\contentsline {paragraph}{\numberline {6.14.8.1}\underline {Dimostrazione}}{131}{paragraph.6.14.8.1}%
-\contentsline {subsubsection}{\numberline {6.14.9}\underline {Proprietà correlazione per V.A indipendenti}}{131}{subsubsection.6.14.9}%
-\contentsline {paragraph}{\numberline {6.14.9.1}\underline {Dimostrazione}}{131}{paragraph.6.14.9.1}%
-\contentsline {paragraph}{\numberline {6.14.9.2}\underline {Dimostrazione}}{132}{paragraph.6.14.9.2}%
-\contentsline {paragraph}{\numberline {6.14.9.3}\underline {Dimostrazione}}{132}{paragraph.6.14.9.3}%
-\contentsline {subsubsection}{\numberline {6.14.10}\underline {Disuguaglianza (4) applicata alla covarianza}}{133}{subsubsection.6.14.10}%
-\contentsline {subsubsection}{\numberline {6.14.11}\underline {Coefficiente di correlazione}}{133}{subsubsection.6.14.11}%
-\contentsline {paragraph}{\numberline {6.14.11.1}\underline {Dimostrazione($\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Leftarrow \joinrel \Relbar \tmspace +\thickmuskip {.2777em}$)}}{133}{paragraph.6.14.11.1}%
-\contentsline {subsubsection}{\numberline {6.14.12}\underline {Esempio 1}}{134}{subsubsection.6.14.12}%
-\contentsline {subsubsection}{\numberline {6.14.13}\underline {Esempio 2}}{134}{subsubsection.6.14.13}%
-\contentsline {subsection}{\numberline {6.15}Vettori Aleatori di $n$ V.A}{135}{subsection.6.15}%
-\contentsline {subsection}{\numberline {6.16}Regole di Eliminazione}{135}{subsection.6.16}%
-\contentsline {subsection}{\numberline {6.17}Proprietà dei Vettori Aleatori Gaussiani}{135}{subsection.6.17}%
-\contentsline {subsection}{\numberline {6.18}V.A Congiuntamente Gaussiane}{135}{subsection.6.18}%
-\contentsline {subsection}{\numberline {6.19}Teorema del Limite Centrale}{135}{subsection.6.19}%
-\contentsline {subsubsection}{\numberline {6.19.1}\underline {Limite centrale come convoluzione}}{136}{subsubsection.6.19.1}%
-\contentsline {section}{\numberline {7}Introduzione alla Statistica}{137}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Stima}{137}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Stimatore}{137}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}\underline {Proprietà}}{137}{subsubsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.3}Stimatore della media campione (esempio)}{138}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Stimatore della varianza campione (esempio)}{140}{subsection.7.4}%
+\contentsline {subsection}{\numberline {5.12}Variabili Aleatorie Normali o Gaussiane}{54}{subsection.5.12}%
+\contentsline {subsubsection}{\numberline {5.12.1}\underline {Esempio 1}}{55}{subsubsection.5.12.1}%
+\contentsline {subsubsection}{\numberline {5.12.2}\underline {Esempio 2}}{55}{subsubsection.5.12.2}%
+\contentsline {subsection}{\numberline {5.13}Trasformazioni di Variabili Aleatorie}{55}{subsection.5.13}%
+\contentsline {subsubsection}{\numberline {5.13.1}\underline {Esempio}}{55}{subsubsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.14}Calcolare la V.A. $Y$ data la V.A. $X$}{56}{subsection.5.14}%
+\contentsline {subsubsection}{\numberline {5.14.1}\underline {Esempio(Y discreta e X continua)}}{56}{subsubsection.5.14.1}%
+\contentsline {subsubsection}{\numberline {5.14.2}\underline {Esempio(Y discreta e X discreta)}}{57}{subsubsection.5.14.2}%
+\contentsline {subsection}{\numberline {5.15}Calcolare la V.A. Discreta $Y$ data la V.A. $X$ Generica}{57}{subsection.5.15}%
+\contentsline {subsection}{\numberline {5.16}Calcolare la V.A. Continua $Y$ data la V.A. $X$ Generica}{57}{subsection.5.16}%
+\contentsline {subsection}{\numberline {5.17}Regola Importante per gli Esercizi (Funzioni a due Variabili)}{57}{subsection.5.17}%
+\contentsline {subsubsection}{\numberline {5.17.1}\underline {Esempio}}{58}{subsubsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.18}Teorema Fondamentale}{60}{subsection.5.18}%
+\contentsline {subsubsection}{\numberline {5.18.1}\underline {Caso g(x) monotona crescente}}{60}{subsubsection.5.18.1}%
+\contentsline {subsubsection}{\numberline {5.18.2}\underline {Caso g(x) non monotona crescente}}{60}{subsubsection.5.18.2}%
+\contentsline {subsubsection}{\numberline {5.18.3}\underline {Caso Y discreta}}{60}{subsubsection.5.18.3}%
+\contentsline {subsubsection}{\numberline {5.18.4}\underline {Esempio 1}}{61}{subsubsection.5.18.4}%
+\contentsline {subsubsection}{\numberline {5.18.5}\underline {Esempio 2}}{62}{subsubsection.5.18.5}%
+\contentsline {subsubsection}{\numberline {5.18.6}\underline {Esempio 3}}{63}{subsubsection.5.18.6}%
+\contentsline {subsubsection}{\numberline {5.18.7}\underline {Esempio 4}}{64}{subsubsection.5.18.7}%
+\contentsline {subsection}{\numberline {5.19}Problema Inverso (Alle Trasformazioni di V.A.)}{64}{subsection.5.19}%
+\contentsline {subsection}{\numberline {5.20}Valor Medio}{64}{subsection.5.20}%
+\contentsline {subsubsection}{\numberline {5.20.1}\underline {Esempio (calcolare valor medio V.A. discreta)}}{65}{subsubsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.21}Varianza}{65}{subsection.5.21}%
+\contentsline {subsubsection}{\numberline {5.21.1}\underline {Esempio}}{66}{subsubsection.5.21.1}%
+\contentsline {subsection}{\numberline {5.22}Teorema Dell’Aspettazione}{67}{subsection.5.22}%
+\contentsline {subsubsection}{\numberline {5.22.1}\underline {Dimostrazione calcolo valor medio(Caso X e Y discrete)}}{67}{subsubsection.5.22.1}%
+\contentsline {subsection}{\numberline {5.23}Proprietà dell'operatore E}{68}{subsection.5.23}%
+\contentsline {subsubsection}{\numberline {5.23.1}\underline {Dimostrazione del 4}}{68}{subsubsection.5.23.1}%
+\contentsline {subsubsection}{\numberline {5.23.2}\underline {Esempio}}{69}{subsubsection.5.23.2}%
+\contentsline {subsection}{\numberline {5.24}Scarto}{72}{subsection.5.24}%
+\contentsline {subsection}{\numberline {5.25}Momenti di ordine k di una V.A X rispetto alla costante c}{72}{subsection.5.25}%
+\contentsline {subsubsection}{\numberline {5.25.1}\underline {Caso $c = 0$}}{72}{subsubsection.5.25.1}%
+\contentsline {subsubsection}{\numberline {5.25.2}\underline {Caso $c = \eta _x$}}{72}{subsubsection.5.25.2}%
+\contentsline {subsubsection}{\numberline {5.25.3}\underline {Momenti ordinari noti}}{72}{subsubsection.5.25.3}%
+\contentsline {subsubsection}{\numberline {5.25.4}\underline {Momenti centarli noti}}{72}{subsubsection.5.25.4}%
+\contentsline {subsubsection}{\numberline {5.25.5}\underline {Da momenti centrali a momenti ordinari}}{72}{subsubsection.5.25.5}%
+\contentsline {subsubsection}{\numberline {5.25.6}\underline {Da momenti ordinari a momenti centrali}}{73}{subsubsection.5.25.6}%
+\contentsline {subsubsection}{\numberline {5.25.7}\underline {Legame tra valore quadratico medio e varianza:}}{73}{subsubsection.5.25.7}%
+\contentsline {subsubsection}{\numberline {5.25.8}\underline {Legame importante per il calcolo della varianza:}}{73}{subsubsection.5.25.8}%
+\contentsline {subsection}{\numberline {5.26}Disuguaglianza di Chebychev}{73}{subsection.5.26}%
+\contentsline {subsubsection}{\numberline {5.26.1}\underline {Dimostrazione}}{74}{subsubsection.5.26.1}%
+\contentsline {subsection}{\numberline {5.27}Funzione Caratteristica}{74}{subsection.5.27}%
+\contentsline {subsection}{\numberline {5.28}MGF: Funzione Generatrice di Momenti}{74}{subsection.5.28}%
+\contentsline {subsubsection}{\numberline {5.28.1}\underline {Dimostrazione}}{74}{subsubsection.5.28.1}%
+\contentsline {subsection}{\numberline {5.29}Moda}{75}{subsection.5.29}%
+\contentsline {subsubsection}{\numberline {5.29.1}\underline {Caso discreto}}{75}{subsubsection.5.29.1}%
+\contentsline {subsubsection}{\numberline {5.29.2}\underline {Caso continuo}}{75}{subsubsection.5.29.2}%
+\contentsline {subsection}{\numberline {5.30}Mediana}{76}{subsection.5.30}%
+\contentsline {subsubsection}{\numberline {5.30.1}\underline {Calcolare mediana caso continuo}}{76}{subsubsection.5.30.1}%
+\contentsline {subsubsection}{\numberline {5.30.2}\underline {Calcolare mediana caso discreto}}{77}{subsubsection.5.30.2}%
+\contentsline {subsection}{\numberline {5.31}CDF Condizionata}{77}{subsection.5.31}%
+\contentsline {subsubsection}{\numberline {5.31.1}\underline {Proprietà}}{78}{subsubsection.5.31.1}%
+\contentsline {subsection}{\numberline {5.32}PDF Condizionata}{78}{subsection.5.32}%
+\contentsline {subsubsection}{\numberline {5.32.1}\underline {Proprietà}}{78}{subsubsection.5.32.1}%
+\contentsline {subsubsection}{\numberline {5.32.2}\underline {Esempio}}{78}{subsubsection.5.32.2}%
+\contentsline {subsection}{\numberline {5.33}Teorema della Probabilità Totale Condizionata}{80}{subsection.5.33}%
+\contentsline {subsection}{\numberline {5.34}Valor Medio Condizionato}{80}{subsection.5.34}%
+\contentsline {subsection}{\numberline {5.35}Studio Variabili Aleatorie Uniformi}{80}{subsection.5.35}%
+\contentsline {subsubsection}{\numberline {5.35.1}\underline {Calcolare il valor medio di una V.A uniforme}}{80}{subsubsection.5.35.1}%
+\contentsline {subsubsection}{\numberline {5.35.2}\underline {Calcolare il valore quadratico medio di una V.A uniforme}}{80}{subsubsection.5.35.2}%
+\contentsline {subsubsection}{\numberline {5.35.3}\underline {Calcolare la varianza di una V.A uniforme}}{80}{subsubsection.5.35.3}%
+\contentsline {subsection}{\numberline {5.36}Studio Variabili Aleatorie Esponenziali}{81}{subsection.5.36}%
+\contentsline {subsubsection}{\numberline {5.36.1}\underline {Calcolare il valor medio di una V.A esponenziale}}{81}{subsubsection.5.36.1}%
+\contentsline {subsubsection}{\numberline {5.36.2}\underline {Calcolare il valore quadratico medio di una V.A esponenziale}}{81}{subsubsection.5.36.2}%
+\contentsline {subsubsection}{\numberline {5.36.3}\underline {Calcolare la varianza di una V.A esponenziale}}{81}{subsubsection.5.36.3}%
+\contentsline {subsubsection}{\numberline {5.36.4}\underline {Proprietà di assenza di memoria della distribuzione esponenziale}}{81}{subsubsection.5.36.4}%
+\contentsline {subsection}{\numberline {5.37}Studio Variabili Aleatorie Gaussiane}{82}{subsection.5.37}%
+\contentsline {subsubsection}{\numberline {5.37.1}\underline {Premessa}}{82}{subsubsection.5.37.1}%
+\contentsline {subsubsection}{\numberline {5.37.2}\underline {Calcolare valor medio(e momenti ordinari di ordine dispari) V.A gaussiana standard}}{82}{subsubsection.5.37.2}%
+\contentsline {subsubsection}{\numberline {5.37.3}\underline {Calcolare valore quadratico medio(e momenti ordinari di ordine pari) V.A gaussiana standard}}{83}{subsubsection.5.37.3}%
+\contentsline {subsubsection}{\numberline {5.37.4}\underline {Calcolare i Momenti della Gaussiana Generica tramite la Gaussiana Standard}}{83}{subsubsection.5.37.4}%
+\contentsline {subsubsection}{\numberline {5.37.5}\underline {Calcolare il valor medio di una V.A gaussiana generica}}{83}{subsubsection.5.37.5}%
+\contentsline {subsubsection}{\numberline {5.37.6}\underline {Calcolare il valore quadratico medio di una V.A gaussiana generica}}{83}{subsubsection.5.37.6}%
+\contentsline {subsubsection}{\numberline {5.37.7}\underline {Calcolare la varianza di una V.A gaussiana generica}}{83}{subsubsection.5.37.7}%
+\contentsline {subsubsection}{\numberline {5.37.8}\underline {Calcolare la moda di una V.A gaussiana generica}}{83}{subsubsection.5.37.8}%
+\contentsline {subsubsection}{\numberline {5.37.9}\underline {Calcolare la mediana di una V.A gaussiana generica}}{84}{subsubsection.5.37.9}%
+\contentsline {subsubsection}{\numberline {5.37.10}Dimostrazione proprietà normalizzazione V.A gaussiane}{84}{subsubsection.5.37.10}%
+\contentsline {subsection}{\numberline {5.38}Studio Variabili Aleatorie Binomiali}{84}{subsection.5.38}%
+\contentsline {subsubsection}{\numberline {5.38.1}\underline {Calcolare la moda di una V.A binomiale}}{84}{subsubsection.5.38.1}%
+\contentsline {subsubsection}{\numberline {5.38.2}\underline {Calcolare i momenti ordinari di una V.A di Bernoulli}}{85}{subsubsection.5.38.2}%
+\contentsline {subsubsection}{\numberline {5.38.3}\underline {Calcolare il valor medio di una V.A binomiale(n = 1)}}{85}{subsubsection.5.38.3}%
+\contentsline {subsubsection}{\numberline {5.38.4}\underline {Calcolare il valore quadratico medio di una V.A binomiale(n = 1)}}{85}{subsubsection.5.38.4}%
+\contentsline {subsubsection}{\numberline {5.38.5}\underline {Calcolare la varianza di una V.A binomiale(n = 1)}}{85}{subsubsection.5.38.5}%
+\contentsline {subsubsection}{\numberline {5.38.6}\underline {Calcolare il valor medio di una V.A binomiale(n = n)}}{86}{subsubsection.5.38.6}%
+\contentsline {subsubsection}{\numberline {5.38.7}\underline {Calcolare la varianza di una V.A binomiale(n = n)}}{86}{subsubsection.5.38.7}%
+\contentsline {subsection}{\numberline {5.39}Studio Variabili Aleatorie di Poisson}{86}{subsection.5.39}%
+\contentsline {subsubsection}{\numberline {5.39.1}Dimostrazione proprietà normalizzazione V.A di Poisson}{86}{subsubsection.5.39.1}%
+\contentsline {subsubsection}{\numberline {5.39.2}\underline {Calcolare il valor medio di una V.A di Poisson}}{86}{subsubsection.5.39.2}%
+\contentsline {subsubsection}{\numberline {5.39.3}\underline {Calcolare il valore quadratico medio di una V.A di Poisson}}{86}{subsubsection.5.39.3}%
+\contentsline {subsubsection}{\numberline {5.39.4}\underline {Calcolare la varianza di una V.A di Poisson}}{87}{subsubsection.5.39.4}%
+\contentsline {subsubsection}{\numberline {5.39.5}\underline {Calcolare la moda di una V.A di Poisson}}{87}{subsubsection.5.39.5}%
+\contentsline {subsection}{\numberline {5.40} Regola di Decisione / Tecnica Radar / Rilevamento Errore}{88}{subsection.5.40}%
+\contentsline {subsection}{\numberline {5.41}Esempi ed Esercizi sul Capitolo}{91}{subsection.5.41}%
+\contentsline {subsubsection}{\numberline {5.41.1}\underline {Esempio sul teorema fondamentale}}{91}{subsubsection.5.41.1}%
+\contentsline {paragraph}{\numberline {5.41.1.1}Ripasso Teorema Fondamentale}{91}{paragraph.5.41.1.1}%
+\contentsline {paragraph}{\numberline {5.41.1.2}Generalizzando}{92}{paragraph.5.41.1.2}%
+\contentsline {subsubsection}{\numberline {5.41.2}\underline {Esempio(Esercizio numero 6)}}{93}{subsubsection.5.41.2}%
+\contentsline {subsubsection}{\numberline {5.41.3}\underline {Esempio}}{94}{subsubsection.5.41.3}%
+\contentsline {subsubsection}{\numberline {5.41.4}\underline {Esempio}}{95}{subsubsection.5.41.4}%
+\contentsline {subsubsection}{\numberline {5.41.5}\underline {Esempio(Esercizio numero 11)}}{96}{subsubsection.5.41.5}%
+\contentsline {subsubsection}{\numberline {5.41.6}\underline {Esercizio 6.1 Bononi Ferrari}}{97}{subsubsection.5.41.6}%
+\contentsline {subsubsection}{\numberline {5.41.7}\underline {Esercizio 6.3 Bononi Ferrari}}{98}{subsubsection.5.41.7}%
+\contentsline {subsubsection}{\numberline {5.41.8}\underline {Esercizio 6.4 Bononi Ferrari}}{98}{subsubsection.5.41.8}%
+\contentsline {subsubsection}{\numberline {5.41.9}\underline {Esercizio 6.7 Bononi Ferrari}}{99}{subsubsection.5.41.9}%
+\contentsline {subsubsection}{\numberline {5.41.10}\underline {Esercizio 6.13 Bononi Ferrari}}{100}{subsubsection.5.41.10}%
+\contentsline {subsubsection}{\numberline {5.41.11}\underline {Esercizio 7.2 Bononi Ferrari}}{101}{subsubsection.5.41.11}%
+\contentsline {subsubsection}{\numberline {5.41.12}\underline {Esercizio 7.3 Bononi Ferrari}}{102}{subsubsection.5.41.12}%
+\contentsline {subsubsection}{\numberline {5.41.13}\underline {Esercizio 7.4 Bononi Ferrari}}{102}{subsubsection.5.41.13}%
+\contentsline {subsubsection}{\numberline {5.41.14}\underline {Esercizio 7.6 Bononi Ferrari}}{103}{subsubsection.5.41.14}%
+\contentsline {subsubsection}{\numberline {5.41.15}\underline {Esercizio 7.8 Bononi Ferrari}}{103}{subsubsection.5.41.15}%
+\contentsline {subsubsection}{\numberline {5.41.16}\underline {Esercizio 8.7 Bononi Ferrari}}{104}{subsubsection.5.41.16}%
+\contentsline {subsubsection}{\numberline {5.41.17}\underline {Esercizio 8.1 Bononi Ferrari}}{106}{subsubsection.5.41.17}%
+\contentsline {subsubsection}{\numberline {5.41.18}\underline {Esercizio 8.3 Bononi Ferrari}}{107}{subsubsection.5.41.18}%
+\contentsline {section}{\numberline {6}Vettori Aleatori (Sistemi di Variabili Aleatorie)}{108}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Definizione}{108}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Sistema di Probabilità per Vettori Aleatori (Da finire)}{109}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Distinzione fra Trasformazioni di V.A e Vettori Aleatori}{109}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}CDF congiunta (CDF per Vettori Aleatori)}{109}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}\underline {Proprietà}}{109}{subsubsection.6.4.1}%
+\contentsline {paragraph}{\numberline {6.4.1.1}\underline {Dimostrazione}}{111}{paragraph.6.4.1.1}%
+\contentsline {paragraph}{\numberline {6.4.1.2}\underline {Dimostrazione}}{113}{paragraph.6.4.1.2}%
+\contentsline {subsection}{\numberline {6.5}Vettori Aleatori Discreti (Sistemi di V.A Discrete)}{113}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}\underline {Calcolare probabilità che due valori appartengano ad un dominio tramite PMF congiunta}}{113}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Calcolare le masse di probabilità marginali}{114}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}\underline {Esempio 1}}{115}{subsubsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.4}\underline {Esempio 2}}{115}{subsubsection.6.5.4}%
+\contentsline {subsection}{\numberline {6.6}PDF Congiunta}{115}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Vettori Aleatori Continui (Sistemi di V.A Continue)}{116}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}\underline {Dimostrazione(PDF Congiunta $\geq 0$)}}{116}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}\underline {Calcolare probabilità tramite PDF congiunta}}{117}{subsubsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.3}\underline {Calcolare probabilità che due valori appartengano ad un dominio tramite PDF congiunta}}{117}{subsubsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.4}\underline {La PDF congiunta soddisfa la proprietà di normalizzazione}}{118}{subsubsection.6.7.4}%
+\contentsline {subsubsection}{\numberline {6.7.5}\underline {Calcolare CDF congiunta da PDF congiunta}}{118}{subsubsection.6.7.5}%
+\contentsline {subsubsection}{\numberline {6.7.6}\underline {Calcolare CDF marginale in $x$ da PDF congiunta}}{118}{subsubsection.6.7.6}%
+\contentsline {subsubsection}{\numberline {6.7.7}\underline {Calcolare CDF marginale in $y$ da PDF congiunta}}{118}{subsubsection.6.7.7}%
+\contentsline {subsubsection}{\numberline {6.7.8}\underline {Calcolare PDF marginale in $x$ da PDF congiunta}}{118}{subsubsection.6.7.8}%
+\contentsline {subsubsection}{\numberline {6.7.9}\underline {Calcolare PDF marginale in $y$ da PDF congiunta}}{118}{subsubsection.6.7.9}%
+\contentsline {subsection}{\numberline {6.8}PDF e CDF Condizionate con C definito in funzione di un’altra V.A}{118}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1}\underline {Caso discreto}}{118}{subsubsection.6.8.1}%
+\contentsline {paragraph}{\numberline {6.8.1.1}\underline {Teorema di Bayes}}{118}{paragraph.6.8.1.1}%
+\contentsline {paragraph}{\numberline {6.8.1.2}\underline {Teorema della Probabilità Totale}}{118}{paragraph.6.8.1.2}%
+\contentsline {paragraph}{\numberline {6.8.1.3}\underline {CDF condizionata discreta}}{119}{paragraph.6.8.1.3}%
+\contentsline {paragraph}{\numberline {6.8.1.4}\underline {PDF condizionata discreta}}{119}{paragraph.6.8.1.4}%
+\contentsline {subsubsection}{\numberline {6.8.2}\underline {Caso continuo}}{119}{subsubsection.6.8.2}%
+\contentsline {paragraph}{\numberline {6.8.2.1}\underline {Dimostrazione teorema di Bayes CDF condizionata ad una V.A}}{119}{paragraph.6.8.2.1}%
+\contentsline {paragraph}{\numberline {6.8.2.2}\underline {PDF di $X$ condizionata ad $X$}}{119}{paragraph.6.8.2.2}%
+\contentsline {paragraph}{\numberline {6.8.2.3}\underline {PDF di $Y$ condizionata ad $X$}}{119}{paragraph.6.8.2.3}%
+\contentsline {paragraph}{\numberline {6.8.2.4}\underline {Teorema della probabilità totale}}{119}{paragraph.6.8.2.4}%
+\contentsline {subsubsection}{\numberline {6.8.3}\underline {Esempio}}{120}{subsubsection.6.8.3}%
+\contentsline {subsection}{\numberline {6.9}Vettori di Variabili Aleatorie Indipendenti}{121}{subsection.6.9}%
+\contentsline {subsubsection}{\numberline {6.9.1}\underline {CDF}}{121}{subsubsection.6.9.1}%
+\contentsline {paragraph}{\numberline {6.9.1.1}\underline {Calcolare le CDF marginali}}{122}{paragraph.6.9.1.1}%
+\contentsline {subsubsection}{\numberline {6.9.2}\underline {PDF}}{122}{subsubsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.3}\underline {Calcolo probabilità con PDF}}{122}{subsubsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.4}\underline {Calcolo probabilità con più valori}}{122}{subsubsection.6.9.4}%
+\contentsline {subsubsection}{\numberline {6.9.5}\underline {Trasformazioni di V.A indipendenti}}{122}{subsubsection.6.9.5}%
+\contentsline {paragraph}{\numberline {6.9.5.1}\underline {Dimostrazione caso discreto}}{123}{paragraph.6.9.5.1}%
+\contentsline {subsubsection}{\numberline {6.9.6}\underline {PDF condizionata}}{123}{subsubsection.6.9.6}%
+\contentsline {subsubsection}{\numberline {6.9.7}\underline {PMF condizionata}}{123}{subsubsection.6.9.7}%
+\contentsline {subsection}{\numberline {6.10}Trasformazione di 1 V.A Date 2 V.A}{123}{subsection.6.10}%
+\contentsline {subsubsection}{\numberline {6.10.1}\underline {Caso discreto}}{124}{subsubsection.6.10.1}%
+\contentsline {paragraph}{\numberline {6.10.1.1}\underline {Esempio}}{124}{paragraph.6.10.1.1}%
+\contentsline {subsubsection}{\numberline {6.10.2}\underline {Teorema dell’aspettazione caso discreto}}{124}{subsubsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.3}\underline {CDF caso discreto}}{124}{subsubsection.6.10.3}%
+\contentsline {paragraph}{\numberline {6.10.3.1}\underline {Esempio}}{125}{paragraph.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.4}\underline {Caso continuo}}{125}{subsubsection.6.10.4}%
+\contentsline {subsubsection}{\numberline {6.10.5}\underline {Teorema dell’aspettazione caso continuo}}{125}{subsubsection.6.10.5}%
+\contentsline {paragraph}{\numberline {6.10.5.1}\underline {Esempio}}{126}{paragraph.6.10.5.1}%
+\contentsline {subsection}{\numberline {6.11}Trasformazione di 2 V.A Date 2 V.A}{126}{subsection.6.11}%
+\contentsline {subsubsection}{\numberline {6.11.1}\underline {Caso discreto}}{126}{subsubsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.2}\underline {Caso continuo (“Metodo Grafico”)}}{127}{subsubsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.3}\underline {Teorema fondamentale (caso continuo)}}{127}{subsubsection.6.11.3}%
+\contentsline {paragraph}{\numberline {6.11.3.1}\underline {Metodo alternativo per il calcolo del determinante della matrice Jacobiana}}{127}{paragraph.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.4}\underline {Teorema fondamentale caso 1 V.A da trasformare}}{127}{subsubsection.6.11.4}%
+\contentsline {paragraph}{\numberline {6.11.4.1}\underline {Esempio}}{128}{paragraph.6.11.4.1}%
+\contentsline {paragraph}{\numberline {6.11.4.2}\underline {Esempio}}{129}{paragraph.6.11.4.2}%
+\contentsline {paragraph}{\numberline {6.11.4.3}\underline {Esempio}}{130}{paragraph.6.11.4.3}%
+\contentsline {subsubsection}{\numberline {6.11.5}\underline {Utilizzo coordinate polari (esempio)}}{131}{subsubsection.6.11.5}%
+\contentsline {subsection}{\numberline {6.12}Proprietà Teorema Dell’Aspettazione per i Vettori Aleatori}{133}{subsection.6.12}%
+\contentsline {subsubsection}{\numberline {6.12.1}\underline {Definizione per trasformazione di una V.A}}{133}{subsubsection.6.12.1}%
+\contentsline {subsubsection}{\numberline {6.12.2}\underline {Definizione per trasformazione di $n$ V.A}}{133}{subsubsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.3}\underline {Linearità}}{133}{subsubsection.6.12.3}%
+\contentsline {subsubsection}{\numberline {6.12.4}\underline {Caso 2 V.A indipendenti}}{133}{subsubsection.6.12.4}%
+\contentsline {paragraph}{\numberline {6.12.4.1}\underline {Dimostrazione}}{133}{paragraph.6.12.4.1}%
+\contentsline {subsubsection}{\numberline {6.12.5}\underline {Calcolo varianza con 2 V.A indipendenti}}{133}{subsubsection.6.12.5}%
+\contentsline {paragraph}{\numberline {6.12.5.1}\underline {Dimostrazione}}{133}{paragraph.6.12.5.1}%
+\contentsline {subsection}{\numberline {6.13}Teorema della Media Condizionata}{133}{subsection.6.13}%
+\contentsline {subsubsection}{\numberline {6.13.1}\underline {Enunciato}}{134}{subsubsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.14}Momenti di Vettori Aleatori}{134}{subsection.6.14}%
+\contentsline {subsubsection}{\numberline {6.14.1}\underline {Momenti ordinari congiunti}}{134}{subsubsection.6.14.1}%
+\contentsline {paragraph}{\numberline {6.14.1.1}\underline {Caso discreto}}{134}{paragraph.6.14.1.1}%
+\contentsline {subsubsection}{\numberline {6.14.2}\underline {Momenti centrali congiunti}}{134}{subsubsection.6.14.2}%
+\contentsline {paragraph}{\numberline {6.14.2.1}\underline {Caso discreto}}{134}{paragraph.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.3}\underline {Momenti ordinari congiunti di ordine 1}}{134}{subsubsection.6.14.3}%
+\contentsline {subsubsection}{\numberline {6.14.4}\underline {Momenti ordinari congiunti di ordine 2}}{134}{subsubsection.6.14.4}%
+\contentsline {paragraph}{\numberline {6.14.4.1}\underline {Correlazione}}{134}{paragraph.6.14.4.1}%
+\contentsline {paragraph}{\numberline {6.14.4.2}\underline {Altri momenti ordinari noti}}{135}{paragraph.6.14.4.2}%
+\contentsline {subsubsection}{\numberline {6.14.5}\underline {Momenti centrali congiunti di ordine 2}}{135}{subsubsection.6.14.5}%
+\contentsline {paragraph}{\numberline {6.14.5.1}\underline {Covarianza}}{135}{paragraph.6.14.5.1}%
+\contentsline {paragraph}{\numberline {6.14.5.2}\underline {Altri momenti centrali noti}}{135}{paragraph.6.14.5.2}%
+\contentsline {subsubsection}{\numberline {6.14.6}\underline {Incorrelazione e Ortogonalità}}{135}{subsubsection.6.14.6}%
+\contentsline {subsubsection}{\numberline {6.14.7}\underline {Definire covarianza tramite correlazione utilizzando lo scarto}}{135}{subsubsection.6.14.7}%
+\contentsline {paragraph}{\numberline {6.14.7.1}\underline {Dimostrazione}}{135}{paragraph.6.14.7.1}%
+\contentsline {subsubsection}{\numberline {6.14.8}\underline {Relazione fra correlazione e covarianza}}{135}{subsubsection.6.14.8}%
+\contentsline {paragraph}{\numberline {6.14.8.1}\underline {Dimostrazione}}{135}{paragraph.6.14.8.1}%
+\contentsline {subsubsection}{\numberline {6.14.9}\underline {Proprietà correlazione per V.A indipendenti}}{135}{subsubsection.6.14.9}%
+\contentsline {paragraph}{\numberline {6.14.9.1}\underline {Dimostrazione}}{135}{paragraph.6.14.9.1}%
+\contentsline {paragraph}{\numberline {6.14.9.2}\underline {Dimostrazione}}{136}{paragraph.6.14.9.2}%
+\contentsline {paragraph}{\numberline {6.14.9.3}\underline {Dimostrazione}}{136}{paragraph.6.14.9.3}%
+\contentsline {subsubsection}{\numberline {6.14.10}\underline {Disuguaglianza (4) applicata alla covarianza}}{137}{subsubsection.6.14.10}%
+\contentsline {subsubsection}{\numberline {6.14.11}\underline {Coefficiente di correlazione}}{137}{subsubsection.6.14.11}%
+\contentsline {paragraph}{\numberline {6.14.11.1}\underline {Dimostrazione($\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Leftarrow \joinrel \Relbar \tmspace +\thickmuskip {.2777em}$)}}{137}{paragraph.6.14.11.1}%
+\contentsline {subsubsection}{\numberline {6.14.12}\underline {Esempio 1}}{138}{subsubsection.6.14.12}%
+\contentsline {subsubsection}{\numberline {6.14.13}\underline {Esempio 2}}{138}{subsubsection.6.14.13}%
+\contentsline {subsection}{\numberline {6.15}Vettori Aleatori di $n$ V.A}{139}{subsection.6.15}%
+\contentsline {subsection}{\numberline {6.16}Regole di Eliminazione}{139}{subsection.6.16}%
+\contentsline {subsection}{\numberline {6.17}Proprietà dei Vettori Aleatori Gaussiani}{139}{subsection.6.17}%
+\contentsline {subsection}{\numberline {6.18}V.A Congiuntamente Gaussiane}{139}{subsection.6.18}%
+\contentsline {subsection}{\numberline {6.19}Teorema del Limite Centrale}{139}{subsection.6.19}%
+\contentsline {subsubsection}{\numberline {6.19.1}\underline {Limite centrale come convoluzione}}{140}{subsubsection.6.19.1}%
+\contentsline {section}{\numberline {7}Introduzione alla Statistica}{141}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Stima}{141}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Stimatore}{141}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}\underline {Proprietà}}{141}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Stimatore della media campione (esempio)}{142}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Stimatore della varianza campione (esempio)}{144}{subsection.7.4}%
