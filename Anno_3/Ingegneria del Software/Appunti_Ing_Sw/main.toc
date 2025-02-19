@@ -37,97 +37,106 @@
 \contentsline {subsection}{\numberline {3.1}Processi e modelli di processi software}{10}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Studio di fattibilità}{10}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Modello a cascata}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Modello Sviluppo Incrementale - Sviluppo Incrementale}{10}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Modello Integrazione e Configurazione}{10}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Distribuzione dei Costi di Sviluppo}{11}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Ingegneria dei requisiti}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Definizione di Ingegneria dei Requisiti}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Definizione e astrazione dei requisiti}{11}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Requisiti dell’Utente e del Sistema}{11}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Imprecisione dei Requisiti}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Consistenza e Complessità dei Requisiti}{11}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Tipi di Requisiti}{11}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Classificazione dei Requisiti non Funzionali}{11}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Processi dell’Ingegneria dei Requisiti}{11}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Raccolta dei Requisiti e relativi problemi}{12}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Specifica dei Requisiti}{12}{subsection.4.10}%
-\contentsline {subsection}{\numberline {4.11}Specifiche Basate sui Moduli}{13}{subsection.4.11}%
-\contentsline {subsection}{\numberline {4.12}Specifiche Tabulari}{13}{subsection.4.12}%
-\contentsline {subsection}{\numberline {4.13}Documento dei Requisiti del Software}{13}{subsection.4.13}%
-\contentsline {subsection}{\numberline {4.14}Gestione dei Requisiti}{13}{subsection.4.14}%
-\contentsline {subsection}{\numberline {4.15}Modifica dei Requisiti}{13}{subsection.4.15}%
-\contentsline {subsection}{\numberline {4.16}Tracciabilità}{13}{subsection.4.16}%
-\contentsline {section}{\numberline {5}Sviluppo di software agile}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Metodologia Agile}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Extreme programming (XP)}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Sviluppo guidato dai test}{14}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Programmazione a coppie}{14}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Metodi agili e manutenzione del software}{14}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Scelta tra metodi agili e guidati dai piani}{14}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Coinvolgimento del Cliente}{14}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Automazione dei Test}{14}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Refactoring}{14}{subsection.5.9}%
-\contentsline {subsection}{\numberline {5.10}Problemi pratici dei metodi agili}{14}{subsection.5.10}%
-\contentsline {subsection}{\numberline {5.11}Metodi agili e manutenzione del software}{14}{subsection.5.11}%
-\contentsline {subsection}{\numberline {5.12}Problemi contrattuali}{14}{subsection.5.12}%
-\contentsline {subsection}{\numberline {5.13}Problemi organizzativi}{14}{subsection.5.13}%
-\contentsline {subsection}{\numberline {5.14}Gestione agile dei progetti}{14}{subsection.5.14}%
-\contentsline {subsection}{\numberline {5.15}Scrum}{14}{subsection.5.15}%
-\contentsline {subsection}{\numberline {5.16}Scalabilità dei metodi agili}{15}{subsection.5.16}%
-\contentsline {section}{\numberline {6}Modelli dei sistemi e UML}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Modellazione del Sistema}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Tipi di Modelli}{15}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Prospettive dei Sistemi Software}{15}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Riuso e attività nell’ambito dei modelli}{15}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Attività nell’Ambito dei Modelli}{15}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}UML}{15}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Proprietà ed elementi dei diagrammi dei casi d’uso}{15}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Classi, interfacce e modificatori}{15}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Diagramma di Sequenza}{15}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Diagramma delle Attività}{16}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}Diagramma degli Stati}{16}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Diagramma degli Oggetti}{16}{subsection.6.12}%
-\contentsline {subsection}{\numberline {6.13}Diagramma dei Componenti}{16}{subsection.6.13}%
-\contentsline {subsection}{\numberline {6.14}Diagramma delle Strutture Composite}{16}{subsection.6.14}%
-\contentsline {subsection}{\numberline {6.15}Diagramma dei Package}{16}{subsection.6.15}%
-\contentsline {subsection}{\numberline {6.16}Diagramma di Comunicazione}{16}{subsection.6.16}%
-\contentsline {subsection}{\numberline {6.17}Diagramma di Temporizzazione}{16}{subsection.6.17}%
-\contentsline {subsection}{\numberline {6.18}Diagramma di Panoramica dell’Interazione}{16}{subsection.6.18}%
-\contentsline {subsection}{\numberline {6.19}Diagramma di Distribuzione}{16}{subsection.6.19}%
-\contentsline {subsection}{\numberline {6.20}Diagramma di Robustezza}{16}{subsection.6.20}%
-\contentsline {subsection}{\numberline {6.21}Tool per il disegno di diagrammi UML}{16}{subsection.6.21}%
-\contentsline {section}{\numberline {7}Modelli e Classi di Analisi}{16}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Modello di analisi dei requisiti}{16}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Modello di analisi orientati agli oggetti}{16}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Classi di analisi}{16}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Categorie delle classi di analisi}{16}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Tecniche di individuazione delle classi}{16}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Errori Comuni di Analisi}{17}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Diagramma delle Classi: Descrizione di un appartamento}{17}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Diagramma delle Classi: Prenotazioni Online}{17}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Diagramma delle Classi: Offerta formativa di una Università}{17}{subsection.7.9}%
-\contentsline {section}{\numberline {8}Scenari e casi d’uso}{17}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Storie e scenari}{17}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Casi di uso}{17}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Casi di Uso - Un Negozio di Vendita Online}{17}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Casi di uso - Un altro negozio di vendita online}{17}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Descrizione del Caso di Uso: Inserisci l’Ordine}{17}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Template per i casi di uso}{17}{subsection.8.6}%
-\contentsline {section}{\numberline {9}Elementi di progettazione}{17}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Processo di Progettazione}{17}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Concetti e Principi di Progettazione}{17}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Modularità}{17}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Coesione}{18}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Accoppiamento}{18}{subsection.9.5}%
-\contentsline {section}{\numberline {10}Progettazione architetturale}{18}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Scopo della Progettazione Architetturale}{18}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Requisiti e Progettazione}{18}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Diagrammi a Blocchi}{18}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Astrazione Architetturale}{18}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}Progettazione dell’Architettura e Riuso}{18}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Pattern Architetturali}{18}{subsection.10.6}%
-\contentsline {section}{\numberline {11}Principi di progettazione}{18}{section.11}%
-\contentsline {section}{\numberline {12}Testing}{18}{section.12}%
-\contentsline {section}{\numberline {13}Pattern Software}{18}{section.13}%
-\contentsline {section}{\numberline {14}Evoluzione del software}{18}{section.14}%
-\contentsline {section}{\numberline {15}Glossario}{18}{section.15}%
+\contentsline {subsubsection}{\numberline {3.3.1}Problemi del modello a cascata}{10}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Applicabilità del Modello a Cascata}{10}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Modello a Cascata – Pro e Contro}{10}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Modello a cascata con feedback}{10}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Waterfall V Model}{10}{subsubsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.4}Modello Sviluppo Incrementale - Sviluppo Incrementale}{11}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Sviluppo e consegna incrementale – Pro e Contro}{11}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Applicabilità dello sviluppo incrementale}{11}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Modello Integrazione e Configurazione}{11}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Integrazione e Configurazione – Pro e Contro}{12}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Distribuzione dei Costi di Sviluppo}{12}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Ingegneria dei requisiti}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definizione di Ingegneria dei Requisiti}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Definizione e astrazione dei requisiti}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Requisiti dell’Utente e del Sistema}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Imprecisione dei Requisiti}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Consistenza e Complessità dei Requisiti}{12}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Tipi di Requisiti}{12}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Classificazione dei Requisiti non Funzionali}{12}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Processi dell’Ingegneria dei Requisiti}{13}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Raccolta dei Requisiti e relativi problemi}{13}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Specifica dei Requisiti}{13}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Specifiche Basate sui Moduli}{14}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}Specifiche Tabulari}{14}{subsection.4.12}%
+\contentsline {subsection}{\numberline {4.13}Documento dei Requisiti del Software}{14}{subsection.4.13}%
+\contentsline {subsection}{\numberline {4.14}Gestione dei Requisiti}{14}{subsection.4.14}%
+\contentsline {subsection}{\numberline {4.15}Modifica dei Requisiti}{14}{subsection.4.15}%
+\contentsline {subsection}{\numberline {4.16}Tracciabilità}{14}{subsection.4.16}%
+\contentsline {section}{\numberline {5}Sviluppo di software agile}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Metodologia Agile}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Extreme programming (XP)}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Sviluppo guidato dai test}{15}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Programmazione a coppie}{15}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Metodi agili e manutenzione del software}{15}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Scelta tra metodi agili e guidati dai piani}{15}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Coinvolgimento del Cliente}{15}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Automazione dei Test}{15}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Refactoring}{15}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}Problemi pratici dei metodi agili}{16}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}Metodi agili e manutenzione del software}{16}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}Problemi contrattuali}{16}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Problemi organizzativi}{16}{subsection.5.13}%
+\contentsline {subsection}{\numberline {5.14}Gestione agile dei progetti}{16}{subsection.5.14}%
+\contentsline {subsection}{\numberline {5.15}Scrum}{16}{subsection.5.15}%
+\contentsline {subsection}{\numberline {5.16}Scalabilità dei metodi agili}{16}{subsection.5.16}%
+\contentsline {section}{\numberline {6}Modelli dei sistemi e UML}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Modellazione del Sistema}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Tipi di Modelli}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Prospettive dei Sistemi Software}{17}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Riuso e attività nell’ambito dei modelli}{17}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}UML}{17}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Motivi del Successo di UML}{17}{subsubsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.6}Proprietà ed elementi dei diagrammi dei casi d’uso}{18}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Elementi dei Casi di Uso}{18}{subsubsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.7}Classi, interfacce e modificatori}{18}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Diagramma di Sequenza}{18}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Diagramma delle Attività}{18}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Diagramma degli Stati}{18}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Diagramma degli Oggetti}{18}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Diagramma dei Componenti}{18}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13}Diagramma delle Strutture Composite}{19}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14}Diagramma dei Package}{19}{subsection.6.14}%
+\contentsline {subsection}{\numberline {6.15}Diagramma di Comunicazione}{19}{subsection.6.15}%
+\contentsline {subsection}{\numberline {6.16}Diagramma di Temporizzazione}{19}{subsection.6.16}%
+\contentsline {subsection}{\numberline {6.17}Diagramma di Panoramica dell’Interazione}{19}{subsection.6.17}%
+\contentsline {subsection}{\numberline {6.18}Diagramma di Distribuzione}{19}{subsection.6.18}%
+\contentsline {subsection}{\numberline {6.19}Diagramma di Robustezza}{20}{subsection.6.19}%
+\contentsline {subsection}{\numberline {6.20}Tool per il disegno di diagrammi UML}{20}{subsection.6.20}%
+\contentsline {section}{\numberline {7}Modelli e Classi di Analisi}{21}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Modello di analisi dei requisiti}{21}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Modello di analisi orientati agli oggetti}{21}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Classi di analisi}{21}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Categorie delle classi di analisi}{21}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Tecniche di individuazione delle classi}{21}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Errori Comuni di Analisi}{22}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Diagramma delle Classi: Descrizione di un appartamento}{22}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Diagramma delle Classi: Prenotazioni Online}{22}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Diagramma delle Classi: Offerta formativa di una Università}{22}{subsection.7.9}%
+\contentsline {section}{\numberline {8}Scenari e casi d’uso}{22}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Storie e scenari}{22}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Casi di uso}{22}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Casi di Uso - Un Negozio di Vendita Online}{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Casi di uso - Un altro negozio di vendita online}{23}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Descrizione del Caso di Uso: Inserisci l’Ordine}{23}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Template per i casi di uso}{23}{subsection.8.6}%
+\contentsline {section}{\numberline {9}Elementi di progettazione}{23}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Processo di Progettazione}{23}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Concetti e Principi di Progettazione}{23}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Modularità}{23}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Coesione}{23}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Accoppiamento}{23}{subsection.9.5}%
+\contentsline {section}{\numberline {10}Progettazione architetturale}{23}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Scopo della Progettazione Architetturale}{23}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Requisiti e Progettazione}{23}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Diagrammi a Blocchi}{23}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Astrazione Architetturale}{23}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Progettazione dell’Architettura e Riuso}{23}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Pattern Architetturali}{23}{subsection.10.6}%
+\contentsline {section}{\numberline {11}Principi di progettazione}{24}{section.11}%
+\contentsline {section}{\numberline {12}Testing}{24}{section.12}%
+\contentsline {section}{\numberline {13}Pattern Software}{24}{section.13}%
+\contentsline {section}{\numberline {14}Evoluzione del software}{24}{section.14}%
+\contentsline {section}{\numberline {15}Glossario}{24}{section.15}%

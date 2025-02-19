@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  19 FEB 2025 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  19 FEB 2025 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -549,7 +549,7 @@ Package hyperref Info: Link coloring OFF on input line 44.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-<./img/0.cover.jpg, id=538, 2007.5pt x 1204.5pt>
+<./img/0.cover.jpg, id=574, 2007.5pt x 1204.5pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 65.
@@ -572,96 +572,96 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 ...essità dei Requisiti}{11}{subsection.4.5}
+l.49 ...– Pro e Contro}{12}{subsubsection.3.5.1}
                                                   % [1] [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
  [3] [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts
 1.enc}] [5]
-<./img/1.dist_costi.png, id=705, 243.91125pt x 175.65625pt>
+<./img/1.dist_costi.png, id=750, 243.91125pt x 175.65625pt>
 File: ./img/1.dist_costi.png Graphic file (type png)
 <use ./img/1.dist_costi.png>
 Package pdftex.def Info: ./img/1.dist_costi.png  used on input line 194.
 (pdftex.def)             Requested size: 195.12926pt x 140.52518pt.
 
 [6 <./img/1.dist_costi.png>] [7]
-<./img/2.qual_stili.png, id=723, 752.8125pt x 612.2875pt>
+<./img/2.qual_stili.png, id=768, 752.8125pt x 612.2875pt>
 File: ./img/2.qual_stili.png Graphic file (type png)
 <use ./img/2.qual_stili.png>
-Package pdftex.def Info: ./img/2.qual_stili.png  used on input line 298.
+Package pdftex.def Info: ./img/2.qual_stili.png  used on input line 297.
 (pdftex.def)             Requested size: 225.84549pt x 183.68767pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/3.diff_stili.png, id=724, 999.735pt x 610.28pt>
+<./img/3.diff_stili.png, id=769, 999.735pt x 610.28pt>
 File: ./img/3.diff_stili.png Graphic file (type png)
 <use ./img/3.diff_stili.png>
-Package pdftex.def Info: ./img/3.diff_stili.png  used on input line 304.
+Package pdftex.def Info: ./img/3.diff_stili.png  used on input line 303.
 (pdftex.def)             Requested size: 299.9228pt x 183.0854pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./img/2.qual_stili.png (PNG copy)> <./img/3.diff_stili.png (PNG copy)>]
-<./img/4.mod_cascata.png, id=736, 784.9325pt x 421.575pt>
+<./img/4.mod_cascata.png, id=781, 784.9325pt x 421.575pt>
 File: ./img/4.mod_cascata.png Graphic file (type png)
 <use ./img/4.mod_cascata.png>
-Package pdftex.def Info: ./img/4.mod_cascata.png  used on input line 328.
+Package pdftex.def Info: ./img/4.mod_cascata.png  used on input line 326.
 (pdftex.def)             Requested size: 235.48155pt x 126.47346pt.
-<./img/5.mod_cascata_fb.png, id=737, 819.06pt x 437.635pt>
+<./img/5.mod_cascata_fb.png, id=782, 819.06pt x 437.635pt>
 File: ./img/5.mod_cascata_fb.png Graphic file (type png)
 <use ./img/5.mod_cascata_fb.png>
-Package pdftex.def Info: ./img/5.mod_cascata_fb.png  used on input line 337.
+Package pdftex.def Info: ./img/5.mod_cascata_fb.png  used on input line 336.
 (pdftex.def)             Requested size: 245.7199pt x 131.2915pt.
-<./img/6.mod_cascata_v.png, id=738, 1084.05pt x 618.31pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/6.mod_cascata_v.png, id=783, 1084.05pt x 618.31pt>
 File: ./img/6.mod_cascata_v.png Graphic file (type png)
 <use ./img/6.mod_cascata_v.png>
-Package pdftex.def Info: ./img/6.mod_cascata_v.png  used on input line 345.
+Package pdftex.def Info: ./img/6.mod_cascata_v.png  used on input line 344.
 (pdftex.def)             Requested size: 325.21751pt x 185.49443pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./img/7.svil_inc.png, id=739, 1072.005pt x 443.6575pt>
+<./img/7.svil_inc.png, id=784, 1072.005pt x 443.6575pt>
 File: ./img/7.svil_inc.png Graphic file (type png)
 <use ./img/7.svil_inc.png>
-Package pdftex.def Info: ./img/7.svil_inc.png  used on input line 353.
+Package pdftex.def Info: ./img/7.svil_inc.png  used on input line 352.
 (pdftex.def)             Requested size: 321.60399pt x 133.09827pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./img/8.diag_svil_inc.png, id=740, 1154.3125pt x 578.16pt>
+[10 <./img/4.mod_cascata.png (PNG copy)>]
+<./img/8.diag_svil_inc.png, id=791, 1154.3125pt x 578.16pt>
 File: ./img/8.diag_svil_inc.png Graphic file (type png)
 <use ./img/8.diag_svil_inc.png>
-Package pdftex.def Info: ./img/8.diag_svil_inc.png  used on input line 362.
+Package pdftex.def Info: ./img/8.diag_svil_inc.png  used on input line 361.
 (pdftex.def)             Requested size: 346.29642pt x 173.44933pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/9.diag_int_conf.png, id=741, 1122.1925pt x 710.655pt>
+<./img/9.diag_int_conf.png, id=792, 1122.1925pt x 710.655pt>
 File: ./img/9.diag_int_conf.png Graphic file (type png)
 <use ./img/9.diag_int_conf.png>
-Package pdftex.def Info: ./img/9.diag_int_conf.png  used on input line 370.
+Package pdftex.def Info: ./img/9.diag_int_conf.png  used on input line 369.
 (pdftex.def)             Requested size: 336.66035pt x 213.19814pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/10.dist_cost_svil.png, id=742, 1118.1775pt x 1003.75pt>
+<./img/10.dist_cost_svil.png, id=793, 1118.1775pt x 1003.75pt>
 File: ./img/10.dist_cost_svil.png Graphic file (type png)
 <use ./img/10.dist_cost_svil.png>
-Package pdftex.def Info: ./img/10.dist_cost_svil.png  used on input line 378.
+Package pdftex.def Info: ./img/10.dist_cost_svil.png  used on input line 377.
 (pdftex.def)             Requested size: 335.45584pt x 301.12732pt.
-[10 <./img/4.mod_cascata.png (PNG copy)>]
+[11 <./img/5.mod_cascata_fb.png (PNG copy)> <./img/6.mod_cascata_v.png (PNG cop
+y)> <./img/7.svil_inc.png (PNG copy)>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/11.tipi_ric_non_func.png, id=748, 1100.11pt x 614.295pt>
+<./img/11.tipi_ric_non_func.png, id=801, 1100.11pt x 614.295pt>
 File: ./img/11.tipi_ric_non_func.png Graphic file (type png)
 <use ./img/11.tipi_ric_non_func.png>
-Package pdftex.def Info: ./img/11.tipi_ric_non_func.png  used on input line 401
+Package pdftex.def Info: ./img/11.tipi_ric_non_func.png  used on input line 400
 .
 (pdftex.def)             Requested size: 330.03555pt x 184.28992pt.
 
@@ -670,43 +670,252 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<./img/12.proc_ing_req.png, id=802, 1074.0125pt x 700.6175pt>
+File: ./img/12.proc_ing_req.png Graphic file (type png)
+<use ./img/12.proc_ing_req.png>
+Package pdftex.def Info: ./img/12.proc_ing_req.png  used on input line 433.
+(pdftex.def)             Requested size: 322.20624pt x 210.18686pt.
+<./img/13.proc_ing_req_spir.png, id=803, 1076.02pt x 694.595pt>
+File: ./img/13.proc_ing_req_spir.png Graphic file (type png)
+<use ./img/13.proc_ing_req_spir.png>
+Package pdftex.def Info: ./img/13.proc_ing_req_spir.png  used on input line 439
+.
+(pdftex.def)             Requested size: 322.8085pt x 208.38011pt.
+[12 <./img/8.diag_svil_inc.png (PNG copy)> <./img/9.diag_int_conf.png (PNG copy
+)>]
 
-Overfull \hbox (23.59567pt too wide) in paragraph at lines 428--434
-\OT1/cmr/m/n/10 Raccolta (Elic-i-tazione) Anal-isi Con-va-l-ida Ges-tione Pro-c
-esso Base dell'Ingegneria dei Req-ui-siti Pro-cesso dell'Ingegneria
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./img/5.mod_cascata_fb.png (PNG copy)> <./img/6.mod_cascata_v.png (PNG cop
-y)>] [12 <./img/7.svil_inc.png (PNG copy)> <./img/8.diag_svil_inc.png (PNG copy
-)>] [13 <./img/9.diag_int_conf.png (PNG copy)>] [14 <./img/10.dist_cost_svil.pn
-g (PNG copy)>] [15 <./img/11.tipi_ric_non_func.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/14.diag_etnografia.png, id=811, 887.315pt x 262.9825pt>
+File: ./img/14.diag_etnografia.png Graphic file (type png)
+<use ./img/14.diag_etnografia.png>
+Package pdftex.def Info: ./img/14.diag_etnografia.png  used on input line 452.
+(pdftex.def)             Requested size: 266.19655pt x 78.89534pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/15.spec_mod_ins.png, id=812, 973.6375pt x 616.3025pt>
+File: ./img/15.spec_mod_ins.png Graphic file (type png)
+<use ./img/15.spec_mod_ins.png>
+Package pdftex.def Info: ./img/15.spec_mod_ins.png  used on input line 464.
+(pdftex.def)             Requested size: 292.0935pt x 184.89217pt.
+[13 <./img/10.dist_cost_svil.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/16.spec_tab_ins.png, id=819, 1015.795pt x 666.49pt>
+File: ./img/16.spec_tab_ins.png Graphic file (type png)
+<use ./img/16.spec_tab_ins.png>
+Package pdftex.def Info: ./img/16.spec_tab_ins.png  used on input line 471.
+(pdftex.def)             Requested size: 304.74084pt x 199.94853pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/17.proc_gest_camp_semp.png, id=820, 1031.855pt x 505.89pt>
+File: ./img/17.proc_gest_camp_semp.png Graphic file (type png)
+<use ./img/17.proc_gest_camp_semp.png>
+Package pdftex.def Info: ./img/17.proc_gest_camp_semp.png  used on input line 4
+87.
+(pdftex.def)             Requested size: 217.6621pt x 106.7109pt.
+<./img/18.proc_gest_camb_dett.png, id=821, 997.7275pt x 666.49pt>
+File: ./img/18.proc_gest_camb_dett.png Graphic file (type png)
+<use ./img/18.proc_gest_camb_dett.png>
+Package pdftex.def Info: ./img/18.proc_gest_camb_dett.png  used on input line 4
+94.
+(pdftex.def)             Requested size: 217.6621pt x 145.3977pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/19.ex_doc_tracc.png, id=822, 1122.1925pt x 682.55pt>
+File: ./img/19.ex_doc_tracc.png Graphic file (type png)
+<use ./img/19.ex_doc_tracc.png>
+Package pdftex.def Info: ./img/19.ex_doc_tracc.png  used on input line 504.
+(pdftex.def)             Requested size: 448.86905pt x 273.01517pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/20.diag_XP.png, id=823, 813.0375pt x 355.3275pt>
+File: ./img/20.diag_XP.png Graphic file (type png)
+<use ./img/20.diag_XP.png>
+Package pdftex.def Info: ./img/20.diag_XP.png  used on input line 519.
+(pdftex.def)             Requested size: 243.91313pt x 106.59906pt.
+[14 <./img/11.tipi_ric_non_func.png (PNG copy)> <./img/12.proc_ing_req.png (PNG
+ copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/21.diag_sprint.png, id=830, 909.3975pt x 403.5075pt>
+File: ./img/21.diag_sprint.png Graphic file (type png)
+<use ./img/21.diag_sprint.png>
+Package pdftex.def Info: ./img/21.diag_sprint.png  used on input line 544.
+(pdftex.def)             Requested size: 272.82135pt x 121.05318pt.
+[15 <./img/13.proc_ing_req_spir.png (PNG copy)> <./img/14.diag_etnografia.png (
+PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/22.mod_sis.png, id=837, 710.655pt x 403.5075pt>
+File: ./img/22.mod_sis.png Graphic file (type png)
+<use ./img/22.mod_sis.png>
+Package pdftex.def Info: ./img/22.mod_sis.png  used on input line 560.
+(pdftex.def)             Requested size: 284.25696pt x 161.40013pt.
+[16 <./img/15.spec_mod_ins.png (PNG copy)> <./img/16.spec_tab_ins.png (PNG copy
+)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/23.attiv_mod.png, id=844, 1055.945pt x 612.2875pt>
+File: ./img/23.attiv_mod.png Graphic file (type png)
+<use ./img/23.attiv_mod.png>
+Package pdftex.def Info: ./img/23.attiv_mod.png  used on input line 572.
+(pdftex.def)             Requested size: 316.78595pt x 183.68767pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/24.succ_uml.png, id=846, 1365.1pt x 859.21pt>
+File: ./img/24.succ_uml.png Graphic file (type png)
+<use ./img/24.succ_uml.png>
+Package pdftex.def Info: ./img/24.succ_uml.png  used on input line 582.
+(pdftex.def)             Requested size: 409.53316pt x 257.76498pt.
+<./img/25.tipi_uml.png, id=847, 999.735pt x 600.2425pt>
+File: ./img/25.tipi_uml.png Graphic file (type png)
+<use ./img/25.tipi_uml.png>
+Package pdftex.def Info: ./img/25.tipi_uml.png  used on input line 589.
+(pdftex.def)             Requested size: 299.9228pt x 180.07413pt.
+<./img/26.stat_uso_uml.png, id=848, 1248.665pt x 841.1425pt>
+File: ./img/26.stat_uso_uml.png Graphic file (type png)
+<use ./img/26.stat_uso_uml.png>
+Package pdftex.def Info: ./img/26.stat_uso_uml.png  used on input line 598.
+(pdftex.def)             Requested size: 217.6621pt x 146.62457pt.
+<./img/27.stat_uso_uml.png, id=849, 1288.815pt x 756.8275pt>
+File: ./img/27.stat_uso_uml.png Graphic file (type png)
+<use ./img/27.stat_uso_uml.png>
+Package pdftex.def Info: ./img/27.stat_uso_uml.png  used on input line 605.
+(pdftex.def)             Requested size: 241.84842pt x 142.02028pt.
+<./img/28.stat_uso_uml.png, id=850, 1332.98pt x 809.0225pt>
+File: ./img/28.stat_uso_uml.png Graphic file (type png)
+<use ./img/28.stat_uso_uml.png>
+Package pdftex.def Info: ./img/28.stat_uso_uml.png  used on input line 612.
+(pdftex.def)             Requested size: 290.22105pt x 176.1338pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/29.actor.png, id=851, 190.7125pt x 128.48pt>
+File: ./img/29.actor.png Graphic file (type png)
+<use ./img/29.actor.png>
+Package pdftex.def Info: ./img/29.actor.png  used on input line 622.
+(pdftex.def)             Requested size: 57.21419pt x 38.54428pt.
+[17 <./img/17.proc_gest_camp_semp.png (PNG copy)> <./img/18.proc_gest_camb_dett
+.png (PNG copy)> <./img/19.ex_doc_tracc.png (PNG copy)>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/30.gen_actor.png, id=861, 230.8625pt x 138.5175pt>
+File: ./img/30.gen_actor.png Graphic file (type png)
+<use ./img/30.gen_actor.png>
+Package pdftex.def Info: ./img/30.gen_actor.png  used on input line 630.
+(pdftex.def)             Requested size: 145.11052pt x 87.06567pt.
+<./img/31.gen_use_cases.png, id=862, 389.455pt x 166.6225pt>
+File: ./img/31.gen_use_cases.png Graphic file (type png)
+<use ./img/31.gen_use_cases.png>
+Package pdftex.def Info: ./img/31.gen_use_cases.png  used on input line 637.
+(pdftex.def)             Requested size: 145.11052pt x 62.08157pt.
+<./img/32.incl_use_cases.png, id=863, 487.8225pt x 152.57pt>
+File: ./img/32.incl_use_cases.png Graphic file (type png)
+<use ./img/32.incl_use_cases.png>
+Package pdftex.def Info: ./img/32.incl_use_cases.png  used on input line 644.
+(pdftex.def)             Requested size: 193.47577pt x 60.51009pt.
+<./img/33.est_use_cases.png, id=864, 495.8525pt x 96.36pt>
+File: ./img/33.est_use_cases.png Graphic file (type png)
+<use ./img/33.est_use_cases.png>
+Package pdftex.def Info: ./img/33.est_use_cases.png  used on input line 651.
+(pdftex.def)             Requested size: 193.47577pt x 37.59787pt.
+<./img/34.est_cond.png, id=865, 497.86pt x 192.72pt>
+File: ./img/34.est_cond.png Graphic file (type png)
+<use ./img/34.est_cond.png>
+Package pdftex.def Info: ./img/34.est_cond.png  used on input line 658.
+(pdftex.def)             Requested size: 193.47577pt x 74.89583pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/35.ex_use_cases.png, id=866, 1069.9975pt x 774.895pt>
+File: ./img/35.ex_use_cases.png Graphic file (type png)
+<use ./img/35.ex_use_cases.png>
+Package pdftex.def Info: ./img/35.ex_use_cases.png  used on input line 669.
+(pdftex.def)             Requested size: 321.00172pt x 232.47029pt.
+<./img/36.conn_val_molt.png, id=867, 1591.9475pt x 885.3075pt>
+File: ./img/36.conn_val_molt.png Graphic file (type png)
+<use ./img/36.conn_val_molt.png>
+Package pdftex.def Info: ./img/36.conn_val_molt.png  used on input line 675.
+(pdftex.def)             Requested size: 397.9859pt x 221.32632pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/37.mod_vis.png, id=868, 1519.6775pt x 331.2375pt>
+File: ./img/37.mod_vis.png Graphic file (type png)
+<use ./img/37.mod_vis.png>
+Package pdftex.def Info: ./img/37.mod_vis.png  used on input line 682.
+(pdftex.def)             Requested size: 379.91844pt x 82.80916pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/38.mod_class.png, id=869, 1166.3575pt x 309.155pt>
+File: ./img/38.mod_class.png Graphic file (type png)
+<use ./img/38.mod_class.png>
+Package pdftex.def Info: ./img/38.mod_class.png  used on input line 689.
+(pdftex.def)             Requested size: 291.58865pt x 77.28856pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./img/20.diag_XP.png (PNG copy)> <./img/21.diag_sprint.png (PNG copy)>]
+[19 <./img/22.mod_sis.png (PNG copy)> <./img/23.attiv_mod.png (PNG copy)>]
+[20 <./img/24.succ_uml.png (PNG copy)> <./img/25.tipi_uml.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17] [18] [19] (./main.aux)
+[21 <./img/26.stat_uso_uml.png (PNG copy)> <./img/27.stat_uso_uml.png (PNG copy
+)> <./img/28.stat_uso_uml.png (PNG copy)> <./img/29.actor.png (PNG copy)>]
+[22 <./img/30.gen_actor.png (PNG copy)> <./img/31.gen_use_cases.png (PNG copy)>
+ <./img/32.incl_use_cases.png (PNG copy)> <./img/33.est_use_cases.png (PNG copy
+)> <./img/34.est_cond.png>] [23 <./img/35.ex_use_cases.png (PNG copy)>]
+[24 <./img/36.conn_val_molt.png (PNG copy)> <./img/37.mod_vis.png (PNG copy)>]
+[25 <./img/38.mod_class.png (PNG copy)>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F4245446B51CBB7508A584219213BC62;27872.
+(rerunfilecheck)             Checksum: 3C143C59C86FBAE9F07894389D38A305;30104.
  ) 
 Here is how much of TeX's memory you used:
- 14660 strings out of 474116
- 232620 string characters out of 5743683
- 1949187 words of memory out of 5000000
- 36655 multiletter control sequences out of 15000+600000
- 562227 words of font info for 52 fonts, out of 8000000 for 9000
+ 15006 strings out of 474116
+ 241398 string characters out of 5743683
+ 1950187 words of memory out of 5000000
+ 36965 multiletter control sequences out of 15000+600000
+ 562526 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,117p,496b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,117p,496b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (20 pages, 1364330 bytes).
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (26 pages, 4580209 bytes).
 PDF statistics:
- 858 PDF objects out of 1000 (max. 8388607)
- 806 compressed objects within 9 object streams
- 175 named destinations out of 1000 (max. 500000)
- 1125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 988 PDF objects out of 1000 (max. 8388607)
+ 900 compressed objects within 9 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 1332 words of extra memory for PDF output out of 10000 (max. 10000000)
 
