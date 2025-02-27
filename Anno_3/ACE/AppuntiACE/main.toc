@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Cos'è un calcolatore elettronico}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Algoritmi}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Utilizzo dei calcolatori elettronici}{2}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Funzionamento di un calcolatore}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Storia dei calcolatori}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Generazioni dei calcolatori}{4}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Generazione 0 - Computer Meccanici}{5}{subsubsection.1.4.1}%
+\contentsline {paragraph}{\numberline {1.4.1.1}Analytical Engine}{5}{paragraph.1.4.1.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Generazione 1 - Valvole}{5}{subsubsection.1.4.2}%
+\contentsline {paragraph}{\numberline {1.4.2.1}ENIAC}{5}{paragraph.1.4.2.1}%
+\contentsline {paragraph}{\numberline {1.4.2.2}Architettura di Von Neumann}{5}{paragraph.1.4.2.2}%
+\contentsline {paragraph}{\numberline {1.4.2.3}Architettura di Harvard}{5}{paragraph.1.4.2.3}%
+\contentsline {paragraph}{\numberline {1.4.2.4}IAS Computer}{5}{paragraph.1.4.2.4}%
+\contentsline {subsubsection}{\numberline {1.4.3}Generazione 2 - Transistor}{5}{subsubsection.1.4.3}%
+\contentsline {paragraph}{\numberline {1.4.3.1}Transistor}{5}{paragraph.1.4.3.1}%
+\contentsline {paragraph}{\numberline {1.4.3.2}IBM 709x}{5}{paragraph.1.4.3.2}%
+\contentsline {subsubsection}{\numberline {1.4.4}Generazione 3 - Circuiti Integrati}{5}{subsubsection.1.4.4}%
+\contentsline {paragraph}{\numberline {1.4.4.1}Circuiti integrati (SSI, MSI, LSI)}{5}{paragraph.1.4.4.1}%
+\contentsline {paragraph}{\numberline {1.4.4.2}PDP-8}{5}{paragraph.1.4.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.5}Generazione 4 - Integrazione a grandissima scala}{5}{subsubsection.1.4.5}%
+\contentsline {paragraph}{\numberline {1.4.5.1}VLSI}{5}{paragraph.1.4.5.1}%
+\contentsline {subsubsection}{\numberline {1.4.6}Generazione 5 - Computer avanzati}{5}{subsubsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.5}Legge di Moore}{5}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Seconda Legge di Moore}{5}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Legge di Amdahl}{5}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Parallelismo}{5}{subsection.1.8}%
+\contentsline {subsubsection}{\numberline {1.8.1}Supercalcolatori CM2}{5}{subsubsection.1.8.1}%
+\contentsline {subsubsection}{\numberline {1.8.2}MMX poi SSE (SIMD)}{5}{subsubsection.1.8.2}%
+\contentsline {subsubsection}{\numberline {1.8.3}Cluster}{5}{subsubsection.1.8.3}%
+\contentsline {subsubsection}{\numberline {1.8.4}Multicore}{5}{subsubsection.1.8.4}%
