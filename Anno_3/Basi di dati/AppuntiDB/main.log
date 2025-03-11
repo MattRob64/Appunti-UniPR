@@ -873,21 +873,30 @@ Package hyperref Info: Link coloring OFF on input line 48.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<./img/0.cover.jpeg, id=139, 1284.8pt x 790.955pt>
-File: ./img/0.cover.jpeg Graphic file (type jpg)
-<use ./img/0.cover.jpeg>
-Package pdftex.def Info: ./img/0.cover.jpeg  used on input line 69.
-(pdftex.def)             Requested size: 385.44298pt x 237.28833pt.
+<./img/0.cover.png, id=63, 1807.75375pt x 1016.79875pt>
+File: ./img/0.cover.png Graphic file (type png)
+<use ./img/0.cover.png>
+Package pdftex.def Info: ./img/0.cover.png  used on input line 69.
+(pdftex.def)             Requested size: 325.38164pt x 183.01587pt.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/0
-.cover.jpeg>] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+.cover.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
+
+ []
+
+(./main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -900,197 +909,119 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.81 	\newpage
+l.93 	\newpage
                [1]
-<./img/1.png, id=186, 497.86pt x 259.97125pt>
-File: ./img/1.png Graphic file (type png)
-<use ./img/1.png>
-Package pdftex.def Info: ./img/1.png  used on input line 91.
-(pdftex.def)             Requested size: 217.6621pt x 113.65779pt.
-<./img/2.png, id=188, 444.66125pt x 153.57375pt>
-File: ./img/2.png Graphic file (type png)
-<use ./img/2.png>
-Package pdftex.def Info: ./img/2.png  used on input line 98.
-(pdftex.def)             Requested size: 217.6621pt x 75.17445pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--109
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--109
+<example-image-golden.pdf, id=96, 324.82053pt x 200.75pt>
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 102.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+ [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
+c} </usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image-golden.pdf>]
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 164.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 177--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--109
+Underfull \hbox (badness 10000) in paragraph at lines 177--189
 
  []
 
-[2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-} <./img/1.png> <./img/2.png>]
-<./img/3.png, id=198, 287.0725pt x 451.6875pt>
-File: ./img/3.png Graphic file (type png)
-<use ./img/3.png>
-Package pdftex.def Info: ./img/3.png  used on input line 130.
-(pdftex.def)             Requested size: 129.18143pt x 203.25749pt.
-<./img/4.png, id=199, 347.2975pt x 413.545pt>
-File: ./img/4.png Graphic file (type png)
-<use ./img/4.png>
-Package pdftex.def Info: ./img/4.png  used on input line 147.
-(pdftex.def)             Requested size: 121.55594pt x 144.7429pt.
- [3 <./img/3.png> <./img/4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 153--202
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--189
 
  []
 
-<./img/5.pascalina.png, id=213, 450.68375pt x 250.9375pt>
-File: ./img/5.pascalina.png Graphic file (type png)
-<use ./img/5.pascalina.png>
-Package pdftex.def Info: ./img/5.pascalina.png  used on input line 209.
-(pdftex.def)             Requested size: 225.34131pt x 125.46843pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 206--233
+[]$[]$  $[]$ 
+ []
+
+[4]
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 267.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--271
+
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/6.babbage.png, id=215, 282.05376pt x 509.905pt>
-File: ./img/6.babbage.png Graphic file (type png)
-<use ./img/6.babbage.png>
-Package pdftex.def Info: ./img/6.babbage.png  used on input line 223.
-(pdftex.def)             Requested size: 145.11052pt x 262.33557pt.
-<./img/8.scheda_perf.png, id=216, 302.12875pt x 470.75874pt>
-File: ./img/8.scheda_perf.png Graphic file (type png)
-<use ./img/8.scheda_perf.png>
-Package pdftex.def Info: ./img/8.scheda_perf.png  used on input line 230.
-(pdftex.def)             Requested size: 145.11052pt x 226.09811pt.
-<./img/9.babbage.png, id=217, 300.12125pt x 276.03125pt>
-File: ./img/9.babbage.png Graphic file (type png)
-<use ./img/9.babbage.png>
-Package pdftex.def Info: ./img/9.babbage.png  used on input line 237.
-(pdftex.def)             Requested size: 145.11052pt x 133.46643pt.
-[4]
-<./img/7.valvola.png, id=226, 361.35pt x 304.13625pt>
-File: ./img/7.valvola.png Graphic file (type png)
-<use ./img/7.valvola.png>
-Package pdftex.def Info: ./img/7.valvola.png  used on input line 251.
-(pdftex.def)             Requested size: 101.1773pt x 85.15756pt.
- [5 <./img/5.pascalina.png> <./img/6.babbage.png> <./img/8.scheda_perf.png> <./
-img/9.babbage.png> <./img/7.valvola.png>]
-<./img/10.neumann.png, id=238, 525.965pt x 314.17375pt>
-File: ./img/10.neumann.png Graphic file (type png)
-<use ./img/10.neumann.png>
-Package pdftex.def Info: ./img/10.neumann.png  used on input line 268.
-(pdftex.def)             Requested size: 157.79071pt x 94.25284pt.
-<./img/11.harvard.png, id=239, 773.89125pt x 417.56pt>
-File: ./img/11.harvard.png Graphic file (type png)
-<use ./img/11.harvard.png>
-Package pdftex.def Info: ./img/11.harvard.png  used on input line 277.
-(pdftex.def)             Requested size: 232.16916pt x 125.26895pt.
-<./img/12.ias_mem_form.png, id=241, 443.6575pt x 189.70876pt>
-File: ./img/12.ias_mem_form.png Graphic file (type png)
-<use ./img/12.ias_mem_form.png>
-Package pdftex.def Info: ./img/12.ias_mem_form.png  used on input line 288.
-(pdftex.def)             Requested size: 221.8282pt x 94.85414pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./img/10.neumann.png> <./img/11.harvard.png>]
-<./img/13.ias_struct.png, id=254, 409.53pt x 514.92375pt>
-File: ./img/13.ias_struct.png Graphic file (type png)
-<use ./img/13.ias_struct.png>
-Package pdftex.def Info: ./img/13.ias_struct.png  used on input line 305.
-(pdftex.def)             Requested size: 204.7645pt x 257.46124pt.
-<./img/14.ias_func.png, id=255, 552.0625pt x 538.01pt>
-File: ./img/14.ias_func.png Graphic file (type png)
-<use ./img/14.ias_func.png>
-Package pdftex.def Info: ./img/14.ias_func.png  used on input line 321.
-(pdftex.def)             Requested size: 276.03056pt x 269.00433pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./img/15.ias_ins_sect.png, id=256, 473.77pt x 549.05125pt>
-File: ./img/15.ias_ins_sect.png Graphic file (type png)
-<use ./img/15.ias_ins_sect.png>
-Package pdftex.def Info: ./img/15.ias_ins_sect.png  used on input line 327.
-(pdftex.def)             Requested size: 284.26419pt x 329.43329pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./img/12.ias_mem_form.png> <./img/13.ias_struct.png>] [8 <./img/14.ias_func
-.png> <./img/15.ias_ins_sect.png>]
-<./img/16.transistor.png, id=272, 312.16624pt x 241.90375pt>
-File: ./img/16.transistor.png Graphic file (type png)
-<use ./img/16.transistor.png>
-Package pdftex.def Info: ./img/16.transistor.png  used on input line 341.
-(pdftex.def)             Requested size: 187.3012pt x 145.14336pt.
-<./img/17.ibm709x.png, id=273, 483.8075pt x 500.87125pt>
-File: ./img/17.ibm709x.png Graphic file (type png)
-<use ./img/17.ibm709x.png>
-Package pdftex.def Info: ./img/17.ibm709x.png  used on input line 349.
-(pdftex.def)             Requested size: 241.90315pt x 250.435pt.
-<./img/18.int_circ.png, id=274, 835.12pt x 230.8625pt>
-File: ./img/18.int_circ.png Graphic file (type png)
-<use ./img/18.int_circ.png>
-Package pdftex.def Info: ./img/18.int_circ.png  used on input line 363.
-(pdftex.def)             Requested size: 334.04207pt x 92.34335pt.
- [9 <./img/16.transistor.png> <./img/17.ibm709x.png>]
-<./img/19.pdp.png, id=283, 851.18pt x 484.81125pt>
-File: ./img/19.pdp.png Graphic file (type png)
-<use ./img/19.pdp.png>
-Package pdftex.def Info: ./img/19.pdp.png  used on input line 371.
-(pdftex.def)             Requested size: 340.46596pt x 193.92105pt.
-<./img/20.vlsi.png, id=285, 867.24pt x 473.77pt>
-File: ./img/20.vlsi.png Graphic file (type png)
-<use ./img/20.vlsi.png>
-Package pdftex.def Info: ./img/20.vlsi.png  used on input line 384.
-(pdftex.def)             Requested size: 346.88986pt x 189.50464pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./img/21.moore.png, id=287, 830.10126pt x 524.96124pt>
-File: ./img/21.moore.png Graphic file (type png)
-<use ./img/21.moore.png>
-Package pdftex.def Info: ./img/21.moore.png  used on input line 395.
-(pdftex.def)             Requested size: 415.04962pt x 262.47998pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10 <./img/18.int_circ.png> <./img/19.pdp.png>]
-Overfull \hbox (4.38734pt too wide) in paragraph at lines 408--410
-\OT1/cmr/m/n/10 Fra i prob-lemi che "mi-nac-ciano" di pi^^Ru la legge di Moore 
-ci sono i prob-lemi eco-nomici, il lim-ite fisico dell'evoluzione
- []
-
-[11 <./img/20.vlsi.png> <./img/21.moore.png>] [12] (./main.aux)
+[5] [6] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B1C369B84451AA6EBE45BC37A4994F3C;5787.
+(rerunfilecheck)             Checksum: E81AD479AFE6DCB757AD55140ECCF1AC;1966.
  ) 
 Here is how much of TeX's memory you used:
- 26445 strings out of 474116
- 494156 string characters out of 5743683
- 1951187 words of memory out of 5000000
- 48325 multiletter control sequences out of 15000+600000
- 562526 words of font info for 53 fonts, out of 8000000 for 9000
+ 26149 strings out of 474116
+ 488031 string characters out of 5743683
+ 1941187 words of memory out of 5000000
+ 48069 multiletter control sequences out of 15000+600000
+ 562227 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,117p,431b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,117p,431b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (13 pages, 9486486 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (7 pages, 333362 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 387 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

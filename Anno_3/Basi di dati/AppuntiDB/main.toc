@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Basi di Dati}{2}{section.1}%
+\contentsline {section}{\numberline {2}Architettura Client-Server}{2}{section.2}%
+\contentsline {section}{\numberline {3}DBMS}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Affidabilità}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Privatezza dei dati}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Efficienza}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Efficacia}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Indipendenza dei dati}{3}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Modelli dei Dati}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Il problema fondamentale}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modelli logici dei dati}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modello relazionale}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Schema}{5}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Progettazione di una base di dati}{6}{section.5}%
