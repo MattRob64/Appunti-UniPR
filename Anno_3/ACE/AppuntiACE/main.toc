@@ -31,3 +31,4 @@
 \contentsline {subsubsection}{\numberline {1.8.2}MMX poi SSE (SIMD)}{12}{subsubsection.1.8.2}%
 \contentsline {subsubsection}{\numberline {1.8.3}Cluster}{12}{subsubsection.1.8.3}%
 \contentsline {subsubsection}{\numberline {1.8.4}Multicore}{12}{subsubsection.1.8.4}%
+\contentsline {section}{\numberline {2}Ultima lezione: slide 3 pagina }{12}{section.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  11 MAR 2025 10:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  13 MAR 2025 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,41 +786,69 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count349
+\lst@gtempboxa=\box74
+\lst@token=\toks44
+\lst@length=\count350
+\lst@currlwidth=\dimen303
+\lst@column=\count351
+\lst@pos=\count352
+\lst@lostspace=\dimen304
+\lst@width=\dimen305
+\lst@newlines=\count353
+\lst@lineno=\count354
+\lst@maxwidth=\dimen306
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+\c@lstnumber=\count355
+\lst@skipnumbers=\count356
+\lst@framebox=\box75
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/02/21 1.10 listings configuration
+))
+Package: listings 2024/02/21 1.10 (Carsten Heinz)
+
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
-\scratchdimen=\dimen303
-\scratchbox=\box74
-\nofMPsegments=\count350
-\nofMParguments=\count351
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count352
-\MPscratchDim=\dimen304
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count357
+\scratchdimen=\dimen307
+\scratchbox=\box76
+\nofMPsegments=\count358
+\nofMParguments=\count359
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count360
+\MPscratchDim=\dimen308
+\MPnumerator=\count361
+\makeMPintoPDFobject=\count362
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -867,27 +895,29 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 48.
+Package hyperref Info: Link coloring OFF on input line 76.
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<./img/0.cover.png, id=63, 1807.75375pt x 1016.79875pt>
+\c@lstlisting=\count363
+<./img/0.cover.png, id=167, 1807.75375pt x 1016.79875pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
-Package pdftex.def Info: ./img/0.cover.png  used on input line 69.
+Package pdftex.def Info: ./img/0.cover.png  used on input line 97.
 (pdftex.def)             Requested size: 325.38164pt x 183.01587pt.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/0
 .cover.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
 
  []
 
@@ -900,128 +930,211 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
-
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 	\newpage
-               [1]
-<example-image-golden.pdf, id=96, 324.82053pt x 200.75pt>
+l.36 ...e {7.6.1}Esempio}{11}{subsubsection.7.6.1}
+                                                  % [1])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [2]
+<example-image-golden.pdf, id=231, 324.82053pt x 200.75pt>
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 102.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 130.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
+ [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
 c} </usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image-golden.pdf>]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 164.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 192.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 177--189
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 205--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--189
+Underfull \hbox (badness 10000) in paragraph at lines 205--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--189
+Underfull \hbox (badness 10000) in paragraph at lines 205--217
 
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 206--233
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 234--261
 []$[]$  $[]$ 
  []
 
-[4]
+[5]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 267.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 295.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--299
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5] [6] (./main.aux)
+[6]
+Overfull \hbox (25.23688pt too wide) in paragraph at lines 360--368
+[][] 
+ []
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+) [7]
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2024/02/21 1.10 listings language file
+)
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+401.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 430.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+ [8]
+Overfull \hbox (6.14519pt too wide) in paragraph at lines 466--468
+\OT1/cmr/m/n/10 Il prodotto carte-siano tra $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/1
+0 e $\OML/cmm/m/it/10 B$ \OT1/cmr/m/n/10 ^^Re $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 cubo; rosso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 cono; rosso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 cubo; verde\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 cono; verde\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 cubo; blu\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 cono; blu\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 506--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--522
+
+ []
+
+[10]
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 563.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+ [11] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E81AD479AFE6DCB757AD55140ECCF1AC;1966.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4D10B531DD5A538EF3A4C5EB161742D9;6268
+(rerunfilecheck)             After:  4BB4EC8AFB7268BFA22EB891400EF5EB;6467.
  ) 
 Here is how much of TeX's memory you used:
- 26149 strings out of 474116
- 488031 string characters out of 5743683
- 1941187 words of memory out of 5000000
- 48069 multiletter control sequences out of 15000+600000
- 562227 words of font info for 52 fonts, out of 8000000 for 9000
+ 30085 strings out of 474116
+ 549062 string characters out of 5743683
+ 2171187 words of memory out of 5000000
+ 51886 multiletter control sequences out of 15000+600000
+ 563159 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,117p,431b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,117p,431b,3253s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/20
-24/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (7 pages, 333362 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dis
+t/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/cm-super/sftt0800.pfb>
+Output written on main.pdf (12 pages, 420850 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 391 compressed objects within 4 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 

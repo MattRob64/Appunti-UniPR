@@ -1,14 +1,41 @@
-\contentsline {section}{\numberline {1}Basi di Dati}{2}{section.1}%
-\contentsline {section}{\numberline {2}Architettura Client-Server}{2}{section.2}%
-\contentsline {section}{\numberline {3}DBMS}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Affidabilità}{2}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Privatezza dei dati}{3}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Efficienza}{3}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Efficacia}{3}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Indipendenza dei dati}{3}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Modelli dei Dati}{3}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Il problema fondamentale}{4}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Modelli logici dei dati}{4}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Modello relazionale}{5}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Schema}{5}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Progettazione di una base di dati}{6}{section.5}%
+\contentsline {section}{\numberline {1}Basi di Dati}{3}{section.1}%
+\contentsline {section}{\numberline {2}Architettura Client-Server}{3}{section.2}%
+\contentsline {section}{\numberline {3}DBMS}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Affidabilità}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Privatezza dei dati}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Efficienza}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Efficacia}{4}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Indipendenza dei dati}{4}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Modelli dei Dati}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Il problema fondamentale}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modelli logici dei dati}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Modello relazionale}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Schema}{6}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Progettazione di una base di dati}{7}{section.5}%
+\contentsline {section}{\numberline {6}Interfacciarsi con una base di dati}{7}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Linguaggi per basi di dati}{7}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}SQL: un linguaggio interattivo}{7}{subsubsection.6.1.1}%
+\contentsline {paragraph}{\numberline {6.1.1.1}SQL embedded in Pascal code}{8}{paragraph.6.1.1.1}%
+\contentsline {paragraph}{\numberline {6.1.1.2}SQP embedded in PHP code}{8}{paragraph.6.1.1.2}%
+\contentsline {subsection}{\numberline {6.2}Interazione non testuale}{8}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Vantaggi dei DBMS}{8}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Vantaggi dei DBMS}{9}{subsubsection.6.2.2}%
+\contentsline {section}{\numberline {7}Modello relazionale}{9}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Tre accezioni importanti}{9}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Relazione - Prodotto Cartesiano}{9}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Esempio}{9}{subsubsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.3}Relazioni}{9}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Esempio}{10}{subsubsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.4}Tupla}{10}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Perché una tupla si chiama così?}{10}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Esempio}{10}{subsubsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.5}Cosa significa relazione}{10}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Proprietà fondamentali}{10}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Conseguenze}{10}{subsubsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.6}Basi di Dati e Relazioni}{10}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}Esempio}{11}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}Definizione relazione}{11}{subsubsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.3}Esempio di relazione con attributi}{11}{subsubsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.4}Notazione}{11}{subsubsection.7.6.4}%
+\contentsline {subsubsection}{\numberline {7.6.5}Esempio}{11}{subsubsection.7.6.5}%
+\contentsline {section}{\numberline {8}Continua su pacco di slide 5}{11}{section.8}%

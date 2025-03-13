@@ -29,6 +29,34 @@
 \usepackage{makecell}
 \usepackage{chronology}
 \usepackage{cleveref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \setcounter{secnumdepth}{4}
 
@@ -205,7 +233,7 @@
 	\begin{table}[ht]
 		\begin{minipage}{.5\linewidth}
 			\centering
-			\begin{tabular}{ |c|c|  }
+			\begin{tabular}{ |c|c| }
 				\hline
 				\textbf{Corso} & \textbf{Titolare} \\
 				\hline
@@ -219,7 +247,7 @@
 		\hfill
 		\begin{minipage}{.5\linewidth}
 			\centering
-			\begin{tabular}{ |c|c|c|  }
+			\begin{tabular}{ |c|c|c| }
 				\hline
 				\textbf{CdL} & \textbf{Materia} & \textbf{Anno}\\
 				\hline
@@ -279,6 +307,262 @@
 		\item \textbf{Progettazione fisica} (dallo schema logico allo schema fisico) \\
 		Definisce come allocare e gestire fisicamente i dati all’interno del calcolatore.
 	\end{itemize}
-	
-
+	\section{Interfacciarsi con una base di dati}
+	Si può eseguire l'accesso ad una base di dati nei seguenti modi:
+	\begin{itemize}
+		\item Linguaggi testuali interattivi 
+		\item Comandi inclusi in estensioni di linguaggi tradizionali 
+		\item Comandi inclusi in linguaggi di sviluppo ad hoc 
+		\item Interfacce grafiche amichevoli
+	\end{itemize}
+	\subsection{Linguaggi per basi di dati}
+	\begin{itemize}
+		\item Linguaggi di definizione dei dati\\
+		Utilizzati per definire gli schemi e le autorizzazioni per l’accesso
+		\item Linguaggi di manipolazione dei dati\\
+		Utilizzati per l’interrogazione e l’aggiornamento dei contenuti della base di dati
+	\end{itemize}
+	Alcuni linguaggi specializzati, come ad esempio SQL, presentano le caratteristiche di entrambi i tipi di linguaggio.
+	\subsubsection{SQL: un linguaggio interattivo}
+	Come esempio immaginiamo di interfacciarci con la seguente base di dati:
+	\begin{table}[ht]
+		\begin{minipage}{.2\linewidth}
+			\centering
+			\begin{tabular}{ |c|c| }
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Corsi}} \\
+				\hline
+				\textbf{Corso} & \textbf{Aula} \\
+				\hline
+				Sistemi & N3 \\
+				Reti & N2\\
+				\hline
+			\end{tabular}
+			%\caption{Caption}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.2\linewidth}
+			\centering
+			\begin{tabular}{ |c|c| }
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Aule}} \\
+				\hline
+				\textbf{Nome} & \textbf{Piano} \\
+				\hline
+				N3 & Terra \\
+				N2 & Terra \\
+				\hline
+			\end{tabular}
+			%\caption{Caption}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.2\linewidth}
+			\begin{tabular}{ |c|c|c| }
+				\hline
+				\textbf{Corso} & \textbf{Aula} & \textbf{Piano}\\
+				\hline
+				Sistemi & N3 & Terra \\
+				Reti & N2 & Terra \\
+				\hline
+			\end{tabular}
+		\end{minipage}
+	\end{table}
+	\begin{lstlisting}[language=SQL]
+	SELECT Corso, Aula, Piano 
+	FROM Aule, Corsi 
+	WHERE Nome = Aula AND Piano = "Terra"
+	\end{lstlisting}
+	\paragraph{SQL embedded in Pascal code}
+	Di seguito un esempio di SQL integrato in un linguaggi di alto livello:
+	\begin{lstlisting}[language=Pascal]
+	write('nome della citta''?'); 
+	readln(citta); 
+	EXEC SQL DECLARE P CURSOR FOR 
+		SELECT NOME, REDDITO 
+		FROM PERSONE 
+		WHERE CITTA = :citta ;
+	EXEC SQL OPEN P ; 
+	EXEC SQL FETCH P INTO :nome, :reddito ; 
+	while SQLCODE = 0 do begin 
+		write('nome della persona:', nome, 'aumento?'); 
+		readln(aumento); 
+		EXEC SQL UPDATE PERSONE SET REDDITO = REDDITO + 
+		:aumento 
+			WHERE CURRENT OF P 
+		EXEC SQL FETCH P INTO :nome, :reddito 
+		end; 
+	EXEC SQL CLOSE CURSOR P
+	\end{lstlisting}
+	\paragraph{SQP embedded in PHP code}
+	Connessione a mySQL tramite API PHP:
+	\begin{lstlisting}[language=PHP]
+	<html> <body>
+	<?php
+		$user="root"; $password=""; $host="127.0.0.1"; $database="prova";
+		mysql_connect($host,$user,$password);
+		@mysql_select_db($database) or die("Unable to select database");
+		$query="SELECT * from utenti";
+		$res=mysql_query($query);
+		mysql_close();
+		
+		$row = mysql_fetch_assoc($res);
+		print '<table><tr>';
+		foreach($row as $name => $value) {
+			print "<th>$name</th>";
+		}
+		print '</tr>';
+		
+		while($row) {
+			print '<tr>';
+			foreach($row as $value) {
+				print "<td>$value</td>";
+			}
+			print '</tr>';
+			$row = mysql_fetch_assoc($res);
+		}
+		print '</table>';
+	?> </body> </html>
+	\end{lstlisting}
+	\subsection{Interazione non testuale}
+	Come interazioni non testuali si intendono generalmente i DBMS come ad esempio Microsoft Access:
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Realizza l’approccio detto “Query by Example”}
+		\label{fig:im-4}
+	\end{figure}
+	\subsubsection{Vantaggi dei DBMS}
+	\begin{itemize}
+		\item Disponibilità dei dati a tutta una comunità 
+		\item Modello unificato e preciso della realtà di interesse 
+		\item Controllo centralizzato dei dati 
+		\item Condivisione 
+		\item Indipendenza dei dati
+	\end{itemize}
+	\subsubsection{Vantaggi dei DBMS}
+	\begin{itemize}
+		\item Prodotti costosi, complessi, che richiedono investimenti in hardware, software, personale.
+		\item Forniscono un numero elevato di servizi, in modo integrato e difficilmente scorporabile se le esigenze dell’utente sono inferiori alle caratteristiche offerte.
+	\end{itemize}
+	\section{Modello relazionale}
+	\begin{itemize}
+		\item Proposto agli inizi degli anni ‘70 da Codd
+		\item Finalizzato alla realizzazione dell’indipendenza dei dati
+		\item Unisce concetti derivati dalla teoria degli insiemi (concetto di relazione) con una rappresentazione dei dati di tipo tabellare
+		\item Attualmente è largamente il modello più utilizzato
+		\item Teorizzato per separare il più possibile il livello logico dal livello fisico della descrizione dei dati: la base di dati non contiene alcun riferimento all’effettiva allocazione dei dati in memoria.
+		\item Basato su un rigoroso modello matematico, permette un elevato grado di astrazione.
+		\item Rappresentazione tabellare: semplice ed intuitiva.\\Le relazioni ed i risultati delle operazioni sulle tabelle sono facilmente rappresentabili ed interpretabili dagli utenti.
+	\end{itemize}
+	\subsection{Tre accezioni importanti}
+	\begin{enumerate}
+		\item Relazione matematica: come nella teoria degli insiemi
+		\item Relazione secondo il modello relazionale dei dati
+		\item Relazione (dall’inglese \textbf{relationship}) di tipo \textbf{logico} fra entità (concetti descrivibili in modo indipendente dagli altri) nel modello Entità-Relazione (entity-relationship); traducibile anche con \textbf{associazione} o \textbf{correlazione} (scelta preferibile per evitare ambiguità).
+	\end{enumerate}
+	\subsection{Relazione - Prodotto Cartesiano}
+	Dati due insiemi $D_1$ e $D_2$ si definisce \textbf{Prodotto Cartesiano} di $D_1$ e $D_2$ \ $(D_1 \times D_2)$ l’insieme di tutte le possibili coppie ordinate $(v_1, v_2)$ tali che $v_1$ sia un elemento di $D_1$ e $v_2$ sia un elemento di $D_2$.
+	\subsubsection{Esempio}
+	Dati gli insiemi: $A = \{cubo, cono\}$ e $B = \{rosso, verde, blu\}$\\
+	Il prodotto cartesiano tra $A$ e $B$ è $\{(cubo, rosso), (cono, rosso), (cubo, verde), (cono, verde), (cubo, blu), (cono, blu)\}$
+	\subsection{Relazioni}
+	Una relazione matematica su due insiemi $D_1$ e $D_2$ è un sottoinsieme del prodotto cartesiano $D_1 \times D_2$.\\ \\
+	NOTA: a livello formale gli insiemi possono essere infiniti, a livello pratico non possiamo però considerare relazioni infinite.
+	\subsubsection{Esempio}
+	Dati gli insiemi visti, una possibile relazione è $\{(\text{cubo}, \text{rosso}), (\text{cono}, \text{rosso}), (\text{cubo}, \text{blu})\}$\\
+	o, in forma tabellare:
+	\begin{tabular}{ |c|c| }
+		\hline
+		Cubo & Rosso\\
+		Cono & Rosso\\
+		Cubo & Blu\\
+		\hline
+	\end{tabular}
+	\subsection{Tupla}
+	Le definizioni viste per due insiemi possono essere generalizzate a n insiemi.\\
+	Ogni riga della tabella sarà allora una n-pla ordinata di elementi (detta tupla).\\ \\
+	n è detto \textbf{grado} del prodotto cartesiano e quindi della relazione.\\
+	Il numero di elementi (istanze) della relazione è detto \textbf{cardinalità} della relazione.\\ \\
+	Un insieme può apparire più volte in una relazione.
+	\subsubsection{Perché una tupla si chiama così?}
+	Perché è una n\_upla (ennupla) che viene rappresentata di solito con la lettera $t$ anziché con la lettera $n$ 
+	\subsubsection{Esempio}
+	La relazione $\text{Partite\_di\_Calcio} (Casa, Ospiti, RetiCasa, RetiOspiti)$ è un sottoinsieme del prodotto cartesiano \textbf{Stringa x Stringa x Intero x Intero}.
+	\subsection{Cosa significa relazione}
+	Una relazione è concetto mutuato dalla definizione di relazione matematica della teoria degli insiemi, definito come sottoinsieme del prodotto cartesiano fra $n$ insiemi.\\
+	Nel modello relazionale corrisponde ad una struttura dati tabellare.
+	\subsubsection{Proprietà fondamentali}
+	\begin{itemize}
+		\item Ogni tupla è internamente ordinata: l’i-esimo valore proviene dall’i-esimo dominio (struttura posizionale)
+		\item Non esiste ordinamento intrinseco fra le tuple, per la natura insiemistica della relazione
+		\item Non sono ammesse tuple uguali (ogni elemento di un insieme è unico)
+	\end{itemize}
+	\subsubsection{Conseguenze}
+	\begin{itemize}
+		\item Lo scambio fra righe di una tabella non modifica la relazione
+		\item Lo scambio fra colonne di una tabella può portare alla sua inconsistenza con lo schema
+	\end{itemize}
+	\subsection{Basi di Dati e Relazioni}
+	Uno \textbf{schema di relazione} $R(X)$ è costituito da un simbolo (nome della relazione) $R$ e da una serie di attributi $X = {A_1, A_2, \ldots, A_n}$\\ \\
+	Quindi una tupla $t$ è una istanza di una relazione $r$ (un elemento del corrispondente insieme) la cui struttura è definita dal corrispondente schema $R(X)$.\\
+	Se la relazione è rappresentata come tabella, una istanza della relazione è una riga della tabella:
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{01} & \textbf{Analisi} & \textbf{Rossi}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Uno \textbf{schema di base di dati} è un insieme di schemi di relazione con nomi diversi
+	\[ R = { R_1(X_1), R_2(X_2), \ldots, R_n(X_n) } \]
+	Una \textbf{base di dati} definita su uno schema
+	\[ R = { R_1(X_1), R_2(X_2), \ldots, R_n(X_n) } \]
+	è un insieme di relazioni $r = { r_1, r_2, \ldots, r_n }$ dove ogni $r_i$ è una relazione sullo schema $R_i(X_i)$.\\ \\
+	A livello di rappresentazione, una base di dati è un \textbf{insieme di tabelle}.
+	\subsubsection{Esempio}
+	$\text{Corsi}(Codice, Titolo, Docente)$\\
+	Una relazione su uno schema $R(X)$ è un insieme $r$ di tuple definite su $X$: è rappresentata come una tabella:
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Corsi}}\\
+			\hline
+			\textbf{Codice} & \textbf{Titolo} & \textbf{Utente}\\
+			\hline
+			01 & Analisi & Rossi\\
+			02 & Chimica & Bruni\\
+			04 & Chimica & Verdi\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Definizione relazione}
+	Una relazione è un \textbf{insieme di record omogenei}, cioè definiti sugli stessi campi.\\
+	Come ogni campo di un record è associato ad un \textbf{nome (etichetta)}, così si associa ad ogni colonna della relazione un \textbf{attributo}.
+	\subsubsection{Esempio di relazione con attributi}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{\textbf{Corsi}}\\
+			\hline
+			\textbf{Casa} & \textbf{Ospiti} & \textbf{RetiCasa} & \textbf{RetiOspiti}\\
+			\hline
+			Parma & Inter & 3 & 2 \\
+			Palermo &Lazio & 2 & 0\\
+			Milan & Juventus & 1 & 1\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Notazione}
+	Se $t$ è una tupla definita sullo schema $R(X)$ (insieme ordinato di domini) di una relazione e $A$ è uno dei domini di $R(X)$.\\
+	$t[A]$ (o $t.A$) è il valore di $t$ relativo al dominio $A$.
+	\subsubsection{Esempio}
+	$[ \text{relazione }Partite(Casa,Ospiti,RetiCasa,RetiOspiti) ]$\\
+	Se $t$ è la prima tupla della relazione (vedi pagine precedenti), allora $t.Casa = \text{Parma}$
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Livello descrittivo e Rappresentazione}
+		\label{fig:im-5}
+	\end{figure}
+	\section{Continua su pacco di slide 5}
 \end{document}
