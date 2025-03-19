@@ -38,4 +38,10 @@
 \contentsline {subsubsection}{\numberline {7.6.3}Esempio di relazione con attributi}{11}{subsubsection.7.6.3}%
 \contentsline {subsubsection}{\numberline {7.6.4}Notazione}{11}{subsubsection.7.6.4}%
 \contentsline {subsubsection}{\numberline {7.6.5}Esempio}{11}{subsubsection.7.6.5}%
-\contentsline {section}{\numberline {8}Continua su pacco di slide 5}{11}{section.8}%
+\contentsline {subsection}{\numberline {7.7}Dominio}{11}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Esempio}{12}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}Vantaggi dell’approccio basato su valori}{12}{subsubsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.8}Informazione Sbagliata}{13}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Vincoli di Integrità}{13}{subsection.7.9}%
+\contentsline {subsubsection}{\numberline {7.9.1}Vincoli di Tupla}{14}{subsubsection.7.9.1}%
+\contentsline {section}{\numberline {8}Continua su pacco di Slide 6}{14}{section.8}%

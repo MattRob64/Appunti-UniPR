@@ -564,5 +564,173 @@
 		\caption{Livello descrittivo e Rappresentazione}
 		\label{fig:im-5}
 	\end{figure}
-	\section{Continua su pacco di slide 5}
+	\subsection{Dominio}
+	Ogni attributo ha un suo \textbf{dominio} su cui è definito.\\
+	Quindi una tupla è un insieme di valori, uno per attributo, ordinati secondo lo schema della relazione e definiti ciascuno su un proprio dominio.\\
+	Una relazione è una serie di tuple definite sullo schema della relazione (insieme ordinato dei domini dei singoli attributi).\\
+	\begin{tabular}{ |l|c|}
+		\hline
+		Studenti($Matricola$, $Cognome$, $Nome$, $DataNascita$)\\
+		Corsi($Codice$, $Titolo$, $Docente$)\\
+		Esami($Studente$, $Voto$, $Corso$)\\
+		\hline
+	\end{tabular}
+	\begin{itemize}
+		\item \textbf{Studenti} contiene dati su un insieme di studenti.
+		\item \textbf{Corsi} contiene dati su un insieme di corsi.
+		\item \textbf{Esami} contiene dati su un insieme di esami e fa riferimento alle altre due attraverso i numeri di matricola e il codice del corso.
+	\end{itemize}
+	Quindi Matricola e Studente, come Corso e Codice, sono definiti sullo stesso dominio e possono (in questo caso devono, per generare il riferimento) assumere gli stessi valori.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Schema logico base di dati}
+		\label{fig:im-6}
+	\end{figure}
+	Lo schema logico della base di dati è la descrizione, a livello logico, di uno schema concettuale in cui, se si usa la rappresentazione col modello Entità/Relazione:
+	\begin{itemize}
+		\item Studenti e Corsi sono due entità, perché sono concetti che esistono indipendentemente dagli altri e possono essere rappresentati e descritti in modo autonomo.
+		\item Esami è una relazione, perché è un concetto che esiste solo come collegamento (correlazione, associazione) fra due concetti rappresentabili come entità.
+	\end{itemize}
+	Importante notare:
+	\begin{itemize}
+		\item A livello concettuale, l’unico attributo dell’entità Esami è Voto.\\
+		Gli attributi di Esami che servono come riferimenti, cioè Studente (verso la tabella Studenti) e Corso (verso la tabella Corsi), sono attributi di Esami nel modello logico solo per tradurre l’informazione che nel diagramma E/R è fornita dal legame grafico e specifica che Esami è un’associazione che collega le entità Corsi e Studenti.
+		\item Come attributi, Studente e Corso sono definiti su un dominio semplice (cioè ogni attributo ha un solo valore) e quindi fanno riferimento a una sola istanza di Studenti o Corsi.
+	\end{itemize}
+	\subsubsection{Esempio}
+	\begin{tabular}{ |c|c|c|c| }
+		\hline
+		\multicolumn{4}{|c|}{Studenti}\\
+		\hline
+		Matricola & Cognome & Nome & Data di nascita\\
+		\hline
+		6554 & Rossi & Mario & 05/12/1978\\
+		8765 & Neri & Paolo & 03/11/1976\\
+		9283 & Verdi & Luisa & 12/11/1979\\
+		3456 & Rossi & Maria & 01/02/1978\\
+		\hline
+	\end{tabular}
+	\begin{tabular}{ |c|c|c| }
+		\hline
+		\multicolumn{3}{|c|}{Esami}\\
+		\hline
+		Studente & Voto & Corso\\
+		\hline
+		3456 & 30 & 04\\
+		3456 & 24 & 01\\
+		9283 & 28 & 01\\
+		6554 & 26 & 02\\
+		\hline
+	\end{tabular}
+	\begin{tabular}{ |c|c|c| }
+		\hline
+		\multicolumn{3}{|c|}{Corsi}\\
+		\hline
+		Codice & Titolo & Docente\\
+		\hline
+		01 & Analisi & Mario\\
+		02 & Chimica & Bruni\\
+		04 & Chimica & Verdi\\
+		\hline
+	\end{tabular}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Esplicitazione relazioni fra le tabelle}
+		\label{fig:im-7}
+	\end{figure}
+	Dall’esempio abbiamo visto che:
+	\begin{itemize}
+		\item Il modello relazionale è basato su valori.
+		\item I riferimenti fra dati in relazioni diverse avvengono attraverso la corrispondenza dei valori con i quali (insiemi di) attributi corrispondenti vengono istanziati nelle tuple che sono logicamente correlate.
+	\end{itemize}
+	NB Attributi corrispondenti può implicare uguaglianza del nome oppure corrispondenza (logica) fra valori ammissibili, attraverso l’imposizione di vincoli. In genere i due (insiemi di) attributi ammettono gli stessi valori oppure, per uno dei due, sono ammissibili i valori di un sottoinsieme dei valori ammissibili per l’altro.\\
+	Gli altri modelli (gerarchico, reticolare) utilizzano puntatori per realizzare la corrispondenza.
+	\subsubsection{Vantaggi dell’approccio basato su valori}
+	\begin{itemize}
+		\item Si inseriscono nella base di dati solo valori significativi per l’applicazione (i puntatori sono dati aggiuntivi relativi alla sola implementazione fisica).
+		\item Il trasferimento dei dati da un ambiente ad un altro è più semplice (i puntatori hanno validità solo locale)
+		\item La rappresentazione logica dei dati non fa riferimento a quella fisica e quindi si ottiene l’indipendenza (fisica) dei dati
+	\end{itemize}
+	\subsection{Informazione Sbagliata}
+	Le tuple che compongono la base di dati devono essere omogenee.\\
+	Quindi, in ogni tupla, ad ogni attributo deve essere associato un valore.\\
+	Non sempre questo è possibile.\\ \\
+	Es. Persone($Cognome$, $Nom$e, $Indirizzo$, $Telefono$)\\ \\
+	Potrebbe esistere una persona che non possiede telefono, o di cui non conosciamo l’indirizzo.\\
+	\begin{tabular}{ |c|c|c|c| }
+		\hline
+		Cognome & Nome & Indirizzo & Telefono\\
+		\hline
+		Rossi & Francesco & v. Rossa 22 & 0521 335643\\
+		Verdi & Giuseppe & v. Verde 11 & \\
+		Bruni & Bruno & &336 7564213\\
+		\hline
+	\end{tabular}\\
+	Questa relazione non è ammissibile! In ogni tupla, ogni attributo deve essere istanziato.\\
+	Non conviene (anche se è un espediente di uso comune) usare valori del dominio normalmente non utilizzati (0, stringa nulla, “99”, ...), come spesso accade nella programmazione:
+	\begin{itemize}
+		\item Potrebbero non esistere valori non utilizzati
+		\item Valori non utilizzati potrebbero, a un certo punto, diventare significativi ed essere utilizzati
+		\item In fase di utilizzo (nei programmi) sarebbe necessario ogni volta tenere conto del “significato” (non standardizzato) di questi valori
+	\end{itemize}
+	Nel modello relazionale è definito un valore convenzionale, detto valore nullo, che indica la non disponibilità dell’informazione.\\
+	Il valore nullo può rappresentare correttamente tre situazioni logicamente diverse in cui l’informazione è:
+	\begin{itemize}
+		\item Sconosciuta (so che il valore esiste ma non lo conosco)
+		\item Inesistente (so che il valore non esiste)
+		\item Indeterminata (non so se il valore esiste e, in ogni caso, non lo conosco)
+	\end{itemize}
+	\subsection{Vincoli di Integrità}
+	Non tutte le combinazioni possibili di valori dei domini su cui è definita una relazione sono accettabili.
+	\begin{itemize}
+		\item Alcuni attributi possono assumere valori solo in un certo intervallo
+		\item Alcuni attributi devono essere diversi in ogni tupla della stessa relazione
+	\end{itemize}
+	Es. valori dell’attributo Matricola nella relazione\\
+	Studenti($Matricola$,$Cognome$,$Nome$,$DataNascita$)\\ \\
+	Alcuni valori possono essere incompatibili con altri all’interno della stessa relazione\\ \\
+	Es. data la relazione \\
+	Esami($Matricola$,$Voto$,$Lode$,$CodCorso$)
+	\begin{enumerate}
+		\item Una stessa coppia Matricola, Corso può apparire una sola volta
+		\item Il valore Vero per l’attributo Lode è corretto solo se Voto=30
+	\end{enumerate}
+	Alcuni valori possono essere incompatibili con i valori di un’altra relazione\\ \\
+	Es. date le relazioni:\\
+	Studenti ($Matricola$, $Cognome$, $Nome$, $DataNascita$)\\
+	Esami ($Studente$, $Voto$, $Lode$, $CodCorso$)\\
+	Corsi ($CodCorso$, $Titolo$, $Docente$) \\ \\
+	\begin{enumerate}
+		\item Ogni valore di CodCorso in Esami, in questo caso, DEVE essere un valore esistente di CodCorso nella relazione Corsi;
+		\item Analogamente, ogni valore dell’attributo Studente nella tabella Esami DEVE essere un valore esistente dell’attributo Matricola nella relazione Studenti.
+	\end{enumerate}
+	Sono condizioni, espresse come predicati logici, inserite nella base di dati per garantirne la consistenza.\\
+	Ogni istanza della base di dati deve soddisfare i vincoli di integrità, cioè il predicato corrispondente al vincolo deve assumere valore vero \textbf{in ogni istante}.\\
+	Una istanza che soddisfi tutti i vincoli è detta corretta (o lecita, o ammissibile)\\ \\
+	Un vincolo è detto:
+	\begin{itemize}
+		\item \textbf{Intra-relazionale} se coinvolge attributi della stessa relazione
+	\end{itemize}
+	Es.
+	\begin{itemize}
+		\item \textbf{Vincoli di tupla} possono essere valutati su ciascuna tupla indipendentemente dalle altre
+		\item \textbf{Vincoli di dominio} definiti su singoli valori
+		\item \textbf{Interrelazionale} se coinvolge più relazioni
+	\end{itemize}
+	\subsubsection{Vincoli di Tupla}
+	Possono essere definiti attraverso operatori booleani\\
+	Es. Data la relazione:\\
+	Esami($Matricola$,$Voto$,$Lode$,$CodCorso$)
+	\begin{lstlisting}[language=SQL]
+	(Voto >= 18)AND(Voto <= 30) 
+	(NOT (lode=Vero)) OR (Voto=30)
+	\end{lstlisting}
+	Oppure, data la relazione:\\
+	Pagamenti($Data$,$Importo$,$Ritenute$,$Netto$)
+	\begin{lstlisting}[language=SQL]
+	Netto = Importo - Ritenute
+	\end{lstlisting}
+	\section{Continua su pacco di Slide 6}
 \end{document}
