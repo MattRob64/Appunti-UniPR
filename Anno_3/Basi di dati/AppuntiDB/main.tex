@@ -658,16 +658,18 @@
 	Quindi, in ogni tupla, ad ogni attributo deve essere associato un valore.\\
 	Non sempre questo è possibile.\\ \\
 	Es. Persone($Cognome$, $Nom$e, $Indirizzo$, $Telefono$)\\ \\
-	Potrebbe esistere una persona che non possiede telefono, o di cui non conosciamo l’indirizzo.\\
-	\begin{tabular}{ |c|c|c|c| }
-		\hline
-		Cognome & Nome & Indirizzo & Telefono\\
-		\hline
-		Rossi & Francesco & v. Rossa 22 & 0521 335643\\
-		Verdi & Giuseppe & v. Verde 11 & \\
-		Bruni & Bruno & &336 7564213\\
-		\hline
-	\end{tabular}\\
+	Potrebbe esistere una persona che non possiede telefono, o di cui non conosciamo l’indirizzo.
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			Cognome & Nome & Indirizzo & Telefono\\
+			\hline
+			Rossi & Francesco & v. Rossa 22 & 0521 335643\\
+			Verdi & Giuseppe & v. Verde 11 & \\
+			Bruni & Bruno & &336 7564213\\
+			\hline
+		\end{tabular}
+	\end{center}
 	Questa relazione non è ammissibile! In ogni tupla, ogni attributo deve essere istanziato.\\
 	Non conviene (anche se è un espediente di uso comune) usare valori del dominio normalmente non utilizzati (0, stringa nulla, “99”, ...), come spesso accade nella programmazione:
 	\begin{itemize}
@@ -732,5 +734,272 @@
 	\begin{lstlisting}[language=SQL]
 	Netto = Importo - Ritenute
 	\end{lstlisting}
-	\section{Continua su pacco di Slide 6}
+	\subsubsection{Identificazione delle tuple}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c| }
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Nome} & \textbf{Corso} & \textbf{Nascita}\\
+			\hline
+			27655 & Rossi & Mario & Ing Inf & 5/12/78\\
+			78763 & Rossi & Mario & Ing Inf & 3/11/76\\
+			65432 & Neri & Piero & Ing Mecc & 10/7/79\\
+			87654 & Neri & Mario & Ing Inf & 3/11/76\\
+			67653 & Rossi & Piero & Ing Mecc & 5/12/78\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Osservazioni:
+	\begin{itemize}
+		\item Non ci sono due tuple con lo stesso valore sull’attributo Matricola
+		\item Non ci sono due tuple uguali su tutti e tre gli attributi Cognome, Nome e Nascita
+	\end{itemize}
+	\subsection{Chiavi}
+	Una chiave è un insieme minimale di attributi utilizzato per identificare univocamente le tuple di una relazione.\\
+	\textbf{Formalmente}: Un insieme di attributi $K$ è superchiave per una relazione $r$ se $r$ non contiene due tuple $t_1$ e $t_2$ tali che  $t_1[K] = t_2[K]$\\
+	Un insieme di attributi $K$ è chiave per $r$ se è superchiave minimale, cioè se non esiste un’altra superchiave $K'$ che sia sottoinsieme di $K$ o, comunque, di grado inferiore.\\ \\
+	Una chiave è tale se soddisfa la definizione per tutte le possibili tuple appartenenti alla relazione, e non solo per quelle che effettivamente appaiono come istanze della relazione stessa.\\
+	$\Rightarrow$La chiave è legata allo schema della relazione e non ai valori effettivamente assunti dalle istanze dello schema.\\
+	Ogni relazione, per definizione, possiede una chiave.\\
+	Infatti, poiché una relazione non ammette due tuple uguali, l’intero insieme di attributi $X$ su cui è definita è sicuramente superchiave per la relazione.\\ \\
+	Può possederne anche più di una.
+	\subsubsection{Esempio}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c| }
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Nome} & \textbf{Corso} & \textbf{Nascita}\\
+			\hline
+			27655 & Rossi & Mario & Ing Inf & 5/12/78\\
+			78763 & Rossi & Mario & Ing Inf & 3/11/76\\
+			65432 & Neri & Piero & Ing Mecc & 10/7/79\\
+			87654 & Neri & Mario & Ing Inf & 3/11/76\\
+			67653 & Rossi & Piero & Ing Mecc & 5/12/78\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Matricola è una chiave:
+	\begin{itemize}
+		\item è superchiave
+		\item contiene un solo attributo e quindi è minimale
+	\end{itemize}
+	\subsubsection{Chiave primaria}
+	La presenza di valori nulli in una chiave può vanificare la proprietà di unicità delle tuple che identifica.\\
+	Si impone quindi che almeno una chiave non contenga valori nulli.\\
+	Tale chiave è detta chiave primaria.\\
+	Di solito la chiave primaria compare sottolineata nello schema di una relazione.\\
+	Es.\\
+	Studenti($Matricola$, $Cognome$, $Nome$, $Nascita$, $Corso$)
+	\subsubsection{Vincoli si Integrità Referenziale}
+	In alcuni casi (corrispondenze fra relazioni) è necessario che i valori degli attributi di una relazione $R_1$ si trovino anche in attributi corrispondenti di un’altra relazione $R_2$.\\
+	Un \textbf{vincolo di integrità referenziale} (o \textbf{foreign key}, o \textbf{chiave esterna}) fra un insieme di attributi $X$ di $R_1$ e un’altra relazione $R_2$ è soddisfatto se i valori su $X$ di ciascuna tupla di $R_1$ compaiono come valori della chiave (primaria) di $R_2$.
+	\paragraph{Esempio}
+	Corsi ($Corso$, $Ncrediti$)\\
+	Manifesto ($CdL$, $Insegnamento$, $Anno$)\\
+	Esiste un vincolo di integrità referenziale fra Insegnamento, attributo di Manifesto, e Corso, chiave primaria di Corsi
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Corso} & \textbf{Ncrediti}\\
+			\hline
+			Basi di Dati e Web & 9\\
+			Sistemi Operativi & 6\\
+			Ingegneria Del Software & 9\\
+			\hline
+		\end{tabular}
+		\hfill
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{CdL} & \textbf{Insegnamento} & \textbf{Anno}\\
+			\hline
+			IET-I & Basi di Dati e Web & 3\\
+			IET & Sistemi Operativi & 2\\
+			IET-I & Ingegneria del Software & 3\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\section{Algebra Relazionale}
+	Linguaggio procedurale: le operazioni vengono descritte specificando la sequenza di azioni da compiere per ottenere la soluzione.\\
+	Operatori:
+	\begin{itemize}
+		\item \textbf{unione}, \textbf{intersezione}, \textbf{differenza} derivati dalla teoria degli insiemi
+		\item \textbf{ridenominazione}, \textbf{selezione}, \textbf{proiezione} specifici dell’algebra relazionale
+		\item \textbf{join} può assumere diverse forme (\textbf{naturale}, \textbf{theta-join}, \textbf{prodotto cartesiano})
+	\end{itemize}
+	\subsection{Operatori derivati dagli insiemi}
+	Usati anche nella teoria degli insiemi: unione, intersezione, differenza.\\
+	Le relazioni sono insiemi e quindi è naturale estendere ad esse tali operazioni.\\
+	NB. Il risultato di qualunque operazione fra relazioni deve essere ancora una relazione.\\
+	Le relazioni sono insiemi di tuple omogenee: un risultato che comprende tuple definite su schemi diversi non è una relazione.\\
+	Ha quindi senso definire ed applicare tali operatori solo a tuple definite sugli stessi attributi.\\
+	Es.\\
+	l’unione fra due relazioni su tuple non omogenee non è una relazione.\\
+	\begin{itemize}
+		\item \textbf{Unione}: \\
+		L’unione fra due relazioni $r_1$ e $r_2$ definite sullo stesso schema $X$ si indica con $r_1 \cup r_2$ ed è una relazione su $X$ contenente le tuple appartenenti a $r_1$, a $r_2$ o ad entrambe.
+		\item \textbf{Intersezione}:\\
+		L’intersezione fra due relazioni $r_1$ e $r_2$ definite sullo stesso schema $X$ si indica con $r_1 \cap r_2$
+		ed è una relazione su $X$ contenente le tuple appartenenti sia a $r _1$ che a $r_2$.
+		\item \textbf{Differenza}:\\
+		La differenza fra due relazioni $r_1$ e  $r _2$ definite sullo stesso schema $X$ si indica con $r_1 - r_2$ ed è una relazione su $X$ contenente le tuple appartenenti a $r_1$ ma non a $r_2$.
+	\end{itemize}
+	\subsubsection{Unione}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati $\cup$ Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			9297 & Neri & 33\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Intersezione}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline 
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati $\cap$ Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Differenza}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati - Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Ridenominazione}
+	In algebra relazionale si ha corrispondenza fra attributi mediante il nome.\\
+	La ridenominazione modifica il nome di un attributo (ad es., per associarlo ad un altro in un’operazione algebrica).\\
+	Può, ad es., rendere compatibili due attributi con nome diverso quando ha senso eseguire l’unione fra le relazioni cui appartengono.\\
+	Si indica con $\rho_{nuovonome \leftarrow vecchionome}$ (Relazione)\\ \\
+	Es.\\
+	Da Paternità($Padre$,$Figlio$) a Maternità($Madre$,$Figlio$) è possibile ottenere:\\
+	\[ \rho_{Genitore \leftarrow Padre}\text{ (Paternità) } \cup \rho_{genitore \leftarrow Madre}\text{ (Maternità)} \]
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Padre}$ (Paternità)}\\
+			\hline
+			\textbf{Genitore} & \textbf{Figlio}\\
+			\hline
+			Adamo & Abele\\
+			Adamo & Caino\\
+			Abramo & Isacco\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Madre}$ (Maternità)}\\
+			\hline
+			\textbf{Genitore} & \textbf{Figlio}\\
+			\hline
+			Eva & Abele\\
+			Eva & Set\\
+			Sara & Isacco\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Padre}$ (Paternità) $\cup$ REN$_{Genitore \leftarrow Madre}$ (Maternità}\\
+			\hline
+			\textbf{Genitore}& \textbf{Figlio}\\
+			\hline
+			Adamo & Abele\\
+			Adamo & Caino\\
+			Abramo & Isacco\\
+			Eva & Abele\\
+			Eva & Set\\
+			Sara & Isacco\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\section{Continua su slide 7}
 \end{document}

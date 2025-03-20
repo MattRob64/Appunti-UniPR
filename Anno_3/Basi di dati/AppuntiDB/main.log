@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  19 MAR 2025 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  20 MAR 2025 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,7 +903,7 @@ Package hyperref Info: Link coloring OFF on input line 76.
 \openout4 = `main.out'.
 
 \c@lstlisting=\count363
-<./img/0.cover.png, id=191, 1807.75375pt x 1016.79875pt>
+<./img/0.cover.png, id=240, 1807.75375pt x 1016.79875pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
 Package pdftex.def Info: ./img/0.cover.png  used on input line 97.
@@ -941,7 +941,7 @@ l.36 ...e {7.6.1}Esempio}{11}{subsubsection.7.6.1}
 \openout5 = `main.toc'.
 
  [2]
-<example-image-golden.pdf, id=261, 324.82053pt x 200.75pt>
+<example-image-golden.pdf, id=321, 324.82053pt x 200.75pt>
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 130.
@@ -1113,46 +1113,71 @@ Overfull \hbox (6.97618pt too wide) in paragraph at lines 602--645
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 657--674
+Underfull \hbox (badness 10000) in paragraph at lines 657--662
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--674
+Underfull \hbox (badness 10000) in paragraph at lines 657--662
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--697
+Underfull \hbox (badness 10000) in paragraph at lines 693--699
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--697
+Underfull \hbox (badness 10000) in paragraph at lines 693--699
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--706
+Underfull \hbox (badness 10000) in paragraph at lines 702--708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--706
+Underfull \hbox (badness 10000) in paragraph at lines 702--708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 700--706
+Underfull \hbox (badness 10000) in paragraph at lines 702--708
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 709--714
+Underfull \hbox (badness 10000) in paragraph at lines 711--716
 
  []
 
-[14] (./main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--765
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--765
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 828--836
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 957--963
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--963
+
+ []
+
+[16] [17] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1164,14 +1189,14 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 02EA2836767597133E3AB6D2A83A88B8;7239
-(rerunfilecheck)             After:  257C79AED40266954ED12F1BB82253B6;7438.
+(rerunfilecheck)             Before: 6A4E8018A97BDB6D6CAC0B4724899951;9001
+(rerunfilecheck)             After:  C6FDC7B8A19096C57D478665D68D61BC;9149.
  ) 
 Here is how much of TeX's memory you used:
- 30123 strings out of 474116
- 549560 string characters out of 5743683
+ 30150 strings out of 474116
+ 550027 string characters out of 5743683
  2171187 words of memory out of 5000000
- 51902 multiletter control sequences out of 15000+600000
+ 51914 multiletter control sequences out of 15000+600000
  563159 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,117p,431b,3253s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1183,16 +1208,17 @@ sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024
-/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dis
-t/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
-1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (15 pages, 434358 bytes).
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024/t
+exmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/cm-super/sftt0800.pfb>
+Output written on main.pdf (18 pages, 461143 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 142 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 580 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 487 words of extra memory for PDF output out of 10000 (max. 10000000)
 
