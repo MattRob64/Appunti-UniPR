@@ -1,0 +1,360 @@
+\documentclass{article}
+\setcounter{tocdepth}{4} %Required to insert paragraph in TOC
+\setcounter{secnumdepth}{4} %Required to insert paragraph in TOC
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./img/} }
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=20mm,
+}
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{chronology}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setcounter{secnumdepth}{4}
+
+\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\title{Appunti Basi di Dati}
+\author{Mattia Robuschi Caprara}
+\date{}
+
+\definecolor{CoverCyan}{RGB}{129,251,204}
+
+\begin{document}
+	
+	\begin{titlepage}
+		
+		\pagecolor{CoverCyan}
+		
+		\vspace{25 mm}
+		\begin{center}
+			\large
+			{\color{black}\textbf{Mattia Robuschi Caprara}} 
+		\end{center}
+		
+		\begin{center}
+			\huge
+			{\color{black}\textbf{Basi di Dati}}
+		\end{center}
+		
+		\vspace{45 mm}
+		
+		\begin{figure}[h]
+			\centering
+			\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.18]{0.cover.jpg}}
+			%\caption{Caption}
+			\label{fig:cover}
+		\end{figure}
+		
+		\thispagestyle{empty} 
+	\end{titlepage}
+	
+	\newpage
+	\pagecolor{white}
+	\section*{Prefazione}
+	Questi appunti sono una trascrizione in LaTEX di alcuni appunti gentilmente concessi da alcuni miei compagni di corso, quindi non ne prendo alcun merito.
+	\tableofcontents
+	\newpage
+	\section{Generalità}
+	\section{Agenti Intelligenti}
+	\section{Agenti Risolutori di Problemi}
+	\section{Agenti Risolutori di Problemi - Ottimizzazione}
+	\section{Agente Logico}
+	\section{Modelli Predittivi}
+	\section{Esami Passati}
+	Gli esami sono generalmente composti da domande a risposta multipla, che però chiedono di motivare la risposta, di seguito saranno elencate le domande, con le relative "crocette", la risposta corretta sarà quella in grassetto, verrà inoltre fornita un eventuale motivazione della risposta.
+	\subsection{Domanda 1}
+	Una possibile definizione Intelligenza Artificiale generale (Artificial General Intelligence) si colloca in:
+	\begin{enumerate}
+		\item Sistemi orientati agli obiettivi, progettati per eseguire compiti singoli con abilità che talvolta superano quelle umane. 
+		\item \textbf{Sistemi orientati allo sviluppo un modello di intelligenza artificiale, ispirata al funzionamento del cervello umano e pertanto in grado di trovare soluzioni in qualsiasi tipo di situazione, a prescindere dalla natura specifica del problema.}
+		\item Sistemi basati su modelli logici/matematici in grado di eseguire compiti il più velocemente possibile. 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	L'Intelligenza Artificiale Generale (AGI) è un tipo di intelligenza artificiale che ha come obiettivo quello di sviluppare un sistema in grado di risolvere una vasta gamma di compiti simili a quelli che un essere umano può affrontare, senza limitarsi a compiti specifici.\\
+	In altre parole, l'AGI dovrebbe essere generalista, capace di adattarsi a qualsiasi tipo di problema, come farebbe una persona, applicando un ragionamento flessibile e una comprensione contestuale che non dipendano dalla specificità di un compito.
+	\subsection{Domanda 2}
+	Un agente razionale:
+	\begin{enumerate}
+		\item \textbf{Prende le decisioni sulla base delle conoscenze e dei dati che ha a disposizione al fine di ottenere il miglior risultato atteso tra quelli possibili.}
+		\item Esegue sempre la prima azione possibile perché l’importante è essere veloci nell’agire 
+		\item Esegue l’azione più giusta secondo i principi della sua coscienza e sulla base dei dati a disposizione. 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	Un agente razionale è definito in intelligenza artificiale come un'entità che agisce in modo da massimizzare le sue aspettative di successo, cioè le probabilità di ottenere il miglior risultato possibile, dato lo stato attuale delle sue conoscenze e delle risorse disponibili.\\
+	L'idea è che l'agente prende decisioni in modo razionale, in funzione delle informazioni che ha, delle sue capacità e dell'ambiente in cui opera.\\
+	L'agente non deve necessariamente agire immediatamente, ma deve pianificare la sua azione in modo da ottimizzare il risultato atteso.
+	\subsection{Domanda 3}
+	Il test di Turing è usato sin dagli inizi dell’Intelligenza artificiale per:
+	\begin{enumerate}
+		\item \textbf{Valutare sistemi che operano come gli esseri umani}
+		\item Valutare sistemi che pensano come gli esseri umani 
+		\item Valutare sistemi che agiscono sempre in modo razionale 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	Il test di Turing è stato pensato per valutare se una macchina è in grado di imitare il comportamento umano in modo tale che un osservatore umano non sia in grado di distinguere se sta interagendo con una macchina o con un altro essere umano.\\
+	Il test non si concentra su come la macchina "pensa" o sulla sua coscienza; piuttosto, si concentra sul comportamento osservabile, cioè se la macchina opera in modo simile a un essere umano
+	\subsection{Domanda 4}
+	Che cosa studia l’explainable AI (XAI)?\\
+	\textbf{Risposta:}\\
+	Studia il motivo per cui è stata presa una decisione dall’AI in modo che i modelli di AI possano essere più interpretabili per gli utenti umani e consentire loro di capire perché il sistema è arrivato a una decisione specifica.
+	\subsection{Domanda 5}
+	Risoluzione di un problema tramite ricerca:
+	\begin{enumerate}
+		\item Spiegare come opera un algoritmo di ricerca di una soluzione in uno spazio degli stati, quale è il suo output 
+		\item Descrivere quindi i principali algoritmi che adottano strategie non informate. 
+	\end{enumerate}
+	Queste strategie riescono a trovare soluzioni ottime e complete?
+	\subsubsection{Risposta 1}
+	Lo spazio degli stati è l’insieme di tutti gli stati raggiungibili dallo stato iniziale con una qualunque sequenza di operatori.\\
+	E’ caratterizzato da:
+	\begin{itemize}
+		\item Uno stato iniziale in cui l’agente sa di trovarsi (non noto a priori); 
+		\item Un insieme di azioni possibili che sono disponibili da parte dell’agente (Operatori che trasformano uno stato in un altro);
+		\item Un cammino è una sequenza di azioni che conduce da uno stato a un altro.
+	\end{itemize}
+	Il processo di ricerca segue questi passi
+	\begin{enumerate}
+		\item \textbf{Definizione dello spazio degli stati}: Lo spazio degli stati è una rappresentazione formale di tutte le possibili configurazioni di un problema, a partire da uno stato iniziale e arrivando a uno stato obiettivo.
+		\item \textbf{Espansione dei nodi}: L'algoritmo inizia dal nodo iniziale (stato iniziale) e esplora i nodi vicini (stati successivi) mediante azioni che portano a nuovi stati.
+		\item \textbf{Strategia di esplorazione}: A seconda dell'algoritmo, la ricerca esplora i nodi in ordine specifico.
+		\item \textbf{Condizione di terminazione}: L'algoritmo termina quando raggiunge uno stato che soddisfa la condizione di obiettivo (soluzione) o quando esaurisce lo spazio di ricerca.
+		\item \textbf{Output dell'algoritmo}: L'output di un algoritmo di ricerca è solitamente un cammino che collega lo stato iniziale allo stato obiettivo. Se il problema è di tipo di ottimizzazione, l'output potrebbe anche essere la soluzione ottimale.
+	\end{enumerate}
+	\subsubsection{Risposta 2}
+	Non richiedono nessuna conoscenza specifica relativa al problema.
+	Non hanno informazioni aggiuntive oltre a quelle già fornite dalla definizione del problema.\\
+	Possono solo generare successori e distinguere uno stato obiettivo da uno stato non obiettivo.\\
+	Tra i principali algoritmi non informati ci sono:
+	\begin{enumerate}
+		\item \textbf{Ricerca in ampiezza (Breadth-First Search, BFS}):
+		\begin{itemize}
+			\item \textbf{Descrizione}: Esplora il grafo degli stati livello per livello, iniziando dal nodo iniziale e visitando tutti i nodi a una distanza di un passo prima di passare ai nodi a distanza maggiore.
+			\item \textbf{Proprietà}: È completo (trova una soluzione se esiste), ma non è sempre ottimale (se i costi per passaggio sono diversi, può non trovare la soluzione migliore).
+		\end{itemize}
+		\item \textbf{Ricerca in profondità (Depth-First Search, DFS)}:
+		\begin{itemize}
+			\item \textbf{Descrizione}: Esplora profondamente uno dei rami del grafo degli stati, prima di tornare indietro e esplorare gli altri rami.
+			\item \textbf{Proprietà}: È completo solo se lo spazio degli stati è finito. Non è garantito che trovi la soluzione ottimale, specialmente in spazi infiniti, e può entrare in loop infiniti se non è implementata correttamente.
+		\end{itemize}
+		\item \textbf{Ricerca in profondità limitata (Depth-Limited Search, DLS)}:
+		\begin{itemize}
+			\item \textbf{Descrizione}: È una variante della DFS con un limite di profondità per evitare la ricerca infinita.
+			\item \textbf{Proprietà}: È completo solo se esiste una soluzione entro il limite di profondità, ma può non essere ottimale.
+		\end{itemize}
+		\item \textbf{Ricerca con ritorno su stati precedenti (Iterative Deepening Search, IDS)}:
+		\begin{itemize}
+			\item \textbf{Descrizione}: Combina la profondità limitata e la ricerca in ampiezza, eseguendo iterazioni della DFS con limiti di profondità crescenti.
+			\item \textbf{Proprietà}: È completo e garantisce di trovare la soluzione ottimale (se tutte le azioni hanno lo stesso costo). Tuttavia, ha una complessità computazionale superiore rispetto alla ricerca in ampiezza, poiché riesegue le stesse operazioni più volte.
+		\end{itemize}
+		\item \textbf{Ricerca Best-First (Best-First Search)}:
+		\begin{itemize}
+			\item \textbf{Descrizione}: È un algoritmo di ricerca che sceglie quale nodo esplorare in base a un criterio di "priorità", senza sapere se il nodo porterà effettivamente alla soluzione ottimale.
+			\item \textbf{Proprietà}: Non è garantito che sia ottimale e potrebbe non essere completo, a meno che non si usino strategie specifiche di gestione dei nodi
+		\end{itemize}
+	\end{enumerate}
+	Le strategie non informate di ricerca sono complete in molti casi (come la BFS e la IDS), ma non sono necessariamente ottimali.\\
+	Alcuni di questi algoritmi potrebbero non garantire di trovare la soluzione migliore se non sono applicati in condizioni specifiche (ad esempio, con costi uniformi tra le azioni)
+	\subsection{Domanda 6}
+	Nella progettazione di un agente logico, con “grounding di un problema” indichiamo:
+	\begin{enumerate}
+		\item \textbf{La connessione tra i processi di ragionamento logico e l'ambiente reale in cui esiste l'agente}
+		\item Il processo di inferenza corretto 
+		\item La traduzione della conoscenza iniziale di un problema in un insieme di asserzioni e regole 
+		\item La procedura con cui una proposizione A può essere derivata dalla KB base di conoscenza 
+	\end{enumerate} 
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	Nel contesto della progettazione di un agente logico, il termine "grounding" si riferisce al processo di collegamento delle rappresentazioni simboliche (come proposizioni o concetti) di un agente logico con oggetti concreti o stati del mondo reale. In altre parole, il grounding riguarda la connessione tra il linguaggio formale (come la logica) usato dall'agente e la realtà fisica o l'ambiente in cui l'agente agisce.
+	\subsection{Domanda 7}
+	 Per la costruzione di un agente basato sulla conoscenza si utilizza: 
+	 \begin{enumerate}
+	 	\item Approccio procedurale 
+	 	\item \textbf{Approccio dichiarativo}
+	 \end{enumerate}
+	Motivare adeguatamente la risposta
+	\subsubsection{Motivazione risposta}
+	Un agente basato sulla conoscenza sfrutta l'approccio dichiarativo perché il suo scopo è rappresentare e manipolare la conoscenza in modo esplicito, piuttosto che fornire una sequenza di passi operativi specifici come nell'approccio procedurale.\\ L'approccio dichiarativo permette all'agente di usare la sua base di conoscenza per ragionare e prendere decisioni in modo più flessibile e adattabile.
+	\subsection{Domanda 8}
+	Tradurre le seguenti frasi inglesi in logica proposizionale: Cercare di conservare il più possibile la struttura della frase:
+	\begin{enumerate}
+		\item Se e solo se Paolo gioca, Luca va a correre 
+		\item La gara sarà finito quando sia Luca che Paolo avranno terminato 10Km di bici e 5 di corsa 
+		\item Solo se Luca mette gli occhiali riuscirà a leggere quel cartello 
+		\item Usciremo solo se non sarà buio
+	\end{enumerate}
+	\textbf{Risposta 1}\\
+	$P \leftrightarrow L$\\
+	\textbf{Risposta 2}\\
+	$(L_b \land L_c) \land (P_b \land P_c) \rightarrow G$\\
+	\textbf{Risposta 3}\\
+	$L_o \rightarrow L_c$\\
+	\textbf{Risposta 4}\\
+	 $U \rightarrow \neg B$
+	\subsection{Domanda 9}
+	Una possibile definizione si sistemi di Intelligenza Artificiale debole si colloca in:
+	\begin{enumerate}
+		\item \textbf{Sistemi orientati agli obiettivi, progettati per eseguire compiti singoli con abilità che talvolta superano quelle umane.}
+		\item Sistemi orientati allo sviluppo un modello di intelligenza artificiale, ispirata al funzionamento del cervello umano e pertanto in grado di trovare soluzioni in qualsiasi tipo di situazione, a prescindere dalla natura specifica del problema.
+		\item Sistemi basati su modelli logici/matematici in grado di eseguire compiti il più velocemente possibile. 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	L'Intelligenza Artificiale debole (o IA debole) si riferisce a sistemi di intelligenza artificiale progettati per svolgere compiti specifici e ben definiti, come riconoscere oggetti, tradurre lingue o giocare a giochi.\\
+	Questi sistemi non sono dotati di consapevolezza o comprensione, ma sono altamente specializzati nel risolvere compiti particolari, spesso con prestazioni che possono superare quelle umane in situazioni limitate e ben definite.
+	\subsection{Domanda 10}
+	Un agente risolutore di problemi ricerca la soluzione di un problema: 
+	\begin{enumerate}
+		\item Mentre attua una mossa possibile per le sue capacità dallo stato corrente 
+		\item Sulla base del solo stato obiettivo indipendentemente dalla conoscenza delle sue possibilità 
+		\item \textbf{Selezionando quella sequenza di azioni possibili per l’agente stesso che porta all’obiettivo dal suo stato corrente}
+	\end{enumerate}
+	Motivare adeguatamente la risposta
+	\subsubsection{Motivazione risposta}
+	Quando un agente affronta un problema, deve identificare una sequenza di azioni che lo porti dallo stato iniziale allo stato obiettivo.\\
+	Questo richiede che l'agente esplori lo spazio degli stati possibili, selezionando azioni appropriate ad ogni passo per progredire verso l'obiettivo. Il processo di ricerca di una soluzione implica la valutazione delle possibilità di azione in ogni stato e la determinazione di un percorso che colleghi lo stato iniziale a quello finale.
+	\subsection{Domanda 11}
+	Un chatbot di AI supera il test di Turing se
+	\begin{enumerate}
+		\item Risponde a domande su diversi argomenti anche difficili 
+		\item \textbf{Imitare le risposte umane in modo ingannevolmente e realistico}
+		\item Durante la valutazione adotta un comportamento freddo e calcolatore 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	La capacità di imitare le risposte umane in modo ingannevole e realistico è fondamentale per superare il test.\\
+	Secondo Turing, un chatbot che imita in modo convincente il comportamento umano, a tal punto che il giudice non riesce a distinguere tra una macchina e un umano, può essere considerato in grado di "pensare" o di "simulare" l'intelligenza umana.
+	\subsection{Domanda 12}
+	Che cosa si intende per “AI black boxes”? \\
+	\textbf{Risposta}\\
+	 I sistemi Machine Learning spesso funzionano come una scatola nera, che fa previsioni e decisioni come fanno gli umani, ma senza essere in grado di comunicare le ragioni per farlo.
+	 \subsection{Domanda 13}
+	 Risoluzione di un problema tramite ricerca:
+	 \begin{enumerate}
+	 	\item Illustrare cosa rappresenta uno spazio degli stati e che cosa la ricerca restituisce come soluzione. 
+	 	\item Spiegare come operano gli algoritmi con strategie informate descrivendo in modo particolare le caratteristiche di una funzione di valutazione
+	 \end{enumerate}
+	\subsubsection{Risposta 1}
+	Lo spazio degli stati è l’insieme di tutti gli stati raggiungibili dallo stato iniziale con una qualunque sequenza di operatori. \\
+	E’ caratterizzato da:
+	\begin{itemize}
+		\item Uno stato iniziale in cui l’agente sa di trovarsi (non noto a priori); 
+		\item Un insieme di azioni possibili che sono disponibili da parte dell’agente (Operatori che trasformano uno stato in un altro);
+		\item Un cammino è una sequenza di azioni che conduce da uno stato a un altro.
+	\end{itemize}
+	Il processo di ricerca segue questi passi:
+	\begin{enumerate}
+		\item \textbf{Definizione dello spazio degli stati}: Lo spazio degli stati è una rappresentazione formale di tutte le possibili configurazioni di un problema, a partire da uno stato iniziale e arrivando a uno stato obiettivo.
+		\item \textbf{Espansione dei nodi}: L'algoritmo inizia dal nodo iniziale (stato iniziale) e esplora i nodi vicini (stati successivi) mediante azioni che portano a nuovi stati.
+		\item \textbf{Strategia di esplorazione}: A seconda dell'algoritmo, la ricerca esplora i nodi in ordine specifico.
+		\item \textbf{Condizione di terminazione}: L'algoritmo termina quando raggiunge uno stato che soddisfa la condizione di obiettivo (soluzione) o quando esaurisce lo spazio di ricerca.
+		\item \textbf{Output dell'algoritmo}: L'output di un algoritmo di ricerca è solitamente un cammino che collega lo stato iniziale allo stato obiettivo. Se il problema è di tipo di ottimizzazione, l'output potrebbe anche essere la soluzione ottimale.
+	\end{enumerate}
+	\subsubsection{Risposta 2}
+	Gli algoritmi di ricerca con strategie informate (o euristiche) sono utilizzati per risolvere problemi in modo più efficiente rispetto agli algoritmi di ricerca senza informazione (come la ricerca esaustiva, ad esempio, la ricerca a forza bruta o la ricerca in ampiezza).\\
+	Questi algoritmi utilizzano informazioni aggiuntive, generalmente sotto forma di una funzione di valutazione, per guidare la ricerca verso soluzioni promettenti.
+	\begin{itemize}
+		\item \textbf{Euristica}: Fornisce una stima del costo o della distanza rimanente.
+		\item \textbf{Direzionalità}: Aiuta a indirizzare la ricerca verso l'obiettivo.
+		\item \textbf{Ammissibilità}: Se usata in un algoritmo come A*, deve essere ammissibile per garantire l'ottimalità.
+		\item \textbf{Efficienza}: Una buona funzione di valutazione deve essere veloce da calcolare e non comportare un onere computazionale significativo.
+	\end{itemize}
+	\subsection{Domanda 14}
+	Nella progettazione di un agente logico, con “formalizzazione di un problema” indichiamo:
+	\begin{enumerate}
+		\item 	La connessione tra i processi di ragionamento logico e l'ambiente reale in cui esiste l'agente 
+		\item Il processo di inferenza corretto 
+		\item \textbf{La traduzione della conoscenza iniziale di un problema in un insieme di asserzioni e regole}
+		\item La procedura con cui una proposizione A può essere derivata dalla KB base di conoscenza 
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	La formalizzazione di un problema implica la traduzione della conoscenza (spesso descritta in linguaggio naturale) in una rappresentazione logica formale, che può includere:
+	\begin{itemize}
+		\item \textbf{Asserzioni} (fatti o dichiarazioni che descrivono lo stato del mondo o le relazioni tra gli oggetti).
+		\item \textbf{Regole} (prescrizioni logiche su come la conoscenza può essere manipolata o come nuovi fatti possono essere derivati).
+	\end{itemize}
+	Questa formalizzazione è fondamentale affinché l'agente possa eseguire il ragionamento logico in modo sistematico e corretto, utilizzando la sua base di conoscenza per risolvere il problema.
+	\subsection{Domanda 15}
+	Per la costruzione di un agente logico si utilizza:
+	\begin{enumerate}
+		\item Approccio procedurale
+		\item \textbf{Approccio dichiarativo}
+	\end{enumerate}
+	Motivare adeguatamente la risposta.
+	\subsubsection{Motivazione risposta}
+	Questo approccio consente di rappresentare la conoscenza in modo formale, in termini di logica e regole, e di dedurre nuove informazioni tramite inferenza, senza la necessità di specificare dettagliatamente il controllo e le procedure.
+	\subsection{Domanda 16}
+	radurre le seguenti frasi inglesi in logica proposizionale: Cercare di conservare il più possibile la struttura della frase
+	\begin{enumerate}
+		\item Chiara riesce a lavorare se Marta studia, 
+		\item Qualora Chiara si sia in vacanza al mare e Paola sia in vacanza in montagna, la casa in città rimarrà vuota 
+		\item Chiara è amica di Marta e viceversa 
+		\item Sole se non pioverà, arriveremo in tempo.
+	\end{enumerate}
+	\textbf{Risposta 1}\\
+	$S \rightarrow L$ (Se Marta studia, allora Chiara riesce a lavorare)\\
+	\textbf{Risposta 2}\\
+	$(M \land P) \rightarrow V$ (Se Chiara è in vacanza al mare e Paola è in vacanza in montagna, allora la casa in città rimarrà vuota)\\
+	\textbf{Risposta 3}\\
+	$A \land B$ (Chiara è amica di Marta e Marta è amica di Chiara)\\
+	\textbf{Risposta 4}\\
+	$\neg R \rightarrow T$ (Se non piove, allora arriveremo in tempo)
+	\subsection{Continua a pagina 8 del documento Pages}
+\end{document}
