@@ -1,0 +1,266 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Algoritmi di ricerca locale e problemi di ottimizzazione}
+	\subsubsection{Algoritmi di miglioramento iterativo}
+	Per molti problemi il cammino verso l’obiettivo è irrilevante, ciò che conta è la configurazione finale e non l’ordine con cui è stata raggiunta. Si possono considerare allora algoritmi di ricerca locale che operano su un singolo stato corrente invece che su cammini multipli.\\\\
+	Più precisamente:
+	\begin{itemize}
+		\item Gli algoritmi visti fino ad ora generano una soluzione ex-novo aggiungendo ad una situazione di partenza delle componenti in un particolare ordine fino a “costruire” la soluzione completa.
+		\item Gli algoritmi di ricerca locale partono da una soluzione iniziale e iterativamente cercano di rimpiazzare la soluzione corrente con una “migliore” in un intorno della soluzione corrente. In questi casi non interessa la “strada” per raggiungere l’obiettivo.
+	\end{itemize}
+	Ci sono dei problemi (es. 8 regine) per cui la descrizione dello stato contiene tutte le informazioni necessarie per la soluzione indipendentemente dal percorso che ha condotto a quello stato.\\
+	In questi casi l’idea generale per la soluzione può essere quella di partire da uno stato iniziale “completo” (es. 8 regine già sulla scacchiera) e poi modificarlo per raggiungere una soluzione (o una soluzione migliore, se esiste). \\
+	Questi metodi fanno parte dei cosiddetti algoritmi di ottimizzazione il cui scopo è massimizzare (minimizzare) il valore di una funzione di valutazione che misura la bontà (costo) di una soluzione.\\\\
+	La ricerca locale, quindi, è basata sull’esplorazione iterativa di “soluzioni vicine”, che possono migliorare la soluzione corrente mediante modifiche locali (non è detto che sia ottima globalmente).
+	\paragraph{Struttura dei “vicini” }
+	Una struttura dei “vicini” è una funzione $F$ che assegna a ogni soluzione s dell’insieme di soluzioni $S$ un insieme di soluzioni $N(s)$ sottoinsieme di $S$. \\
+	La scelta della funzione F è fondamentale per l’efficienza del sistema e definisce l’insieme delle soluzioni che possono essere raggiunte da s in un singolo passo di ricerca dell’algoritmo.\\\\
+	Questi algoritmi partono con una soluzione di tentativo generata in modo casuale e cerca di migliorare la soluzione corrente muovendosi verso i vicini. \\
+	Se fra i vicini c’è una soluzione migliore, essa va a sostituire quella corrente, altrimenti termina in un massimo (minimo) locale di ricerca. \\
+	Questo metodo può essere rappresentato come il movimento su una superficie che rappresenta lo spazio degli stati alla ricerca della vetta più elevata o più bassa.
+	\begin{itemize}
+		\item Un algoritmo di ricerca locale completo trova sempre un minimo/massimo
+		\item Un algoritmo di ricerca locale ottimo trova sempre un minimo/massimo globale
+	\end{itemize}
+	\subsubsection{Ricerca in Salita (Hill Climbing)}L'algoritmo di ricerca in salita è un algoritmo ciclico che, ad ogni passo, raggiunge una posizione migliore all'interno di un'area di ricerca, se esiste, seguendo la direzione di massima pendenza.\\\\
+	Hill climbing viene talvolta chiamata ricerca locale golosa perché cattura uno stato buon vicino senza pensare in anticipo a dove andare dopo.\\
+	Questo algoritmo deve affrontare tre tipi di situazioni che lo possono “bloccare”.\\
+	Nella rappresentazione dello spazio di ricerca come una superficie, corrispondono al raggiungimento di:
+	\begin{itemize}
+		\item Massimi locali
+		\item Pianori
+		\item Crinali
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Un "paesaggio" dello spazio degli stati unidimensionale in cui l’elevazione corrisponde alla funzione obiettivo. L’obiettivo è trovare il massimo globale. La ricerca hill-climbing modifica lo stato attuale per cercare di migliorarlo, come mostrato dalla freccia. Le varie caratteristiche topografiche sono definite nel testo.}
+		\label{fig:im-21}
+	\end{figure}
+	Il metodo per superare questi problemi è fare ripartire la ricerca da un altro punto scelto a caso.\\
+	Questa variante ad ogni iterazione mantiene in memoria il risultato migliore e, periodicamente o al verificarsi di condizioni di “blocco”, riparte con una nuova iterazione da uno stato scelto in modo random.\\
+	Dopo un certo numero fisso di iterazioni o dopo che per un certo numero di iterazioni questo risultato non viene migliorato, l'algoritmo termina ritornando il risultato migliore.\\
+	Se il problema è NP-completo (generalmente un problema intrattabile), la soluzione non può che essere fornita in un tempo esponenziale poiché, per tale classe di problemi, lo spazio degli stati ha un numero esponenziale di massimi locali.
+	\subsubsection{Simulated Annealing}
+	L'algoritmo di simulated annealing ha un comportamento molto simile all'algoritmo di ricerca in salita.\\
+	La differenza consiste nell'eseguire, ad ogni passo, una mossa casuale.\\\\
+	Se la mossa migliora la situazione, allora viene sempre eseguita, altrimenti viene eseguita con probabilità $e^{\Delta E/T}$ dove:
+	\begin{itemize}
+		\item $\Delta E$ è il peggioramento $(<0)$ causato dall'esecuzione della mossa
+		\item $T$ è un valore che tende a zero con l’aumentare dei cicli e quindi rende sempre meno probabile l’esecuzione di mosse negative.
+	\end{itemize}
+	\paragraph{Esempio}
+	Se lasciamo rotolare la palla, si fermerà al minimo locale. \\
+	Se scuotiamo la superficie, possiamo far rimbalzare la palla fuori dal minimo locale. \\
+	Il trucco è scuotere abbastanza forte da far rimbalzare la palla fuori dai minimi locali ma non abbastanza da rimuoverla dal minimo globale. \\
+	L’algoritmo di simulated-annealing consiste nell’iniziare agitando forte (cioè ad alta temperatura) e quindi ridurre gradualmente l’intensità dell’agitazione (cioè abbassare la temperatura).\\\\
+	In pratica cerca di evitare il problema dei massimi locali, seguendo la strategia in salita, ma ogni tanto fa un passo che non porta a un incremento in salita.
+	\subsubsection{Meta-euristiche} 
+	Si definiscono meta-euristiche l’insieme di algoritmi, tecniche e studi relativi all'applicazione di criteri euristici per risolvere problemi di ottimizzazione (quindi migliorando la ricerca locale con criteri abbastanza generali).
+	\paragraph{Meta-conoscenza}
+	Meta-conoscenza = Conoscenza sulla conoscenza.\\
+	Può risolvere i problemi precedentemente citati (vasta applicazione non solo per il controllo).\\\\
+	VANTAGGI:
+	\begin{itemize}
+		\item Il sistema è maggiormente flessibile e modificabile; un cambiamento nella strategia di controllo implica semplicemente il cambiamento di alcune meta-regole
+		\item La strategia di controllo è semplice da capire e descrivere
+		\item Potenti meccanismi di spiegazione del proprio comportamento
+	\end{itemize}
+	Altri esempi di Meta-Euristiche:
+	\begin{itemize}
+		\item \textbf{ANT colony optimization:}
+		\begin{itemize}
+			\item Ispirata al comportamento di colonie di insetti. Tali insetti mostrano capacità globali nel trovare, ad esempio, il cammino migliore per arrivare al cibo dal forniceo (algoritmi di ricerca cooperativi)
+		\end{itemize}
+		\item \textbf{Tabu search:}
+		\begin{itemize}
+			\item La sua caratteristica principale è l’utilizzo di una memoria per guidare il processo di ricerca in modo da evitare la ripetizione di stati già esplorati
+		\end{itemize}
+		\item \textbf{Algoritmi genetici:}
+		\begin{itemize}
+			\item Algoritmi evolutivi ispirati ai modelli dell’evoluzione delle specie in natura. Utilizzano il principio della selezione naturale che favorisce gli individui di una popolazione che sono più adatti ad uno specifico ambiente per sopravvivere e riprodursi
+			\item Ogni individuo rappresenta una soluzione con il corrispondente valore della funzione di valutazione (fitness). I tre principali operatori sono: selezione, mutazione e ricombinazione.
+		\end{itemize}
+	\end{itemize}
+	\paragraph{Meta-euristiche e scelta degli operatori}
+	Le meta-euristiche sono strategie generali usate per guidare la ricerca di soluzioni ottimali o quasi ottimali nei problemi complessi. \\
+	Il testo nell’immagine parla di come le regole e i task possano essere inseriti in un’agenda e selezionati in base a determinati criteri.\\\\
+	Due modi di influenza nella scelta delle regole:
+	\begin{enumerate}
+		\item \textbf{Influenza implicita}
+		\begin{itemize}
+			\item Insita nel controllo del sistema
+			\item L’utente non interviene direttamente ma il sistema prende decisioni basate su criteri predefiniti
+		\end{itemize}
+		\item \textbf{Influenza esplicita}
+		\begin{itemize}
+			\item L’utente assegna priorità numeriche alle regole
+			\item Il sistema sceglie sempre la regola con la priorità più alta
+		\end{itemize}
+	\end{enumerate}
+	\textbf{Fattori che influenzano la selezione delle regole:}
+	\begin{itemize}
+		\item Lo stato della memoria di lavoro (il contesto attuale del problema)
+		\item La presenza di particolari regole applicabili (dipende dalla situazione corrente)
+		\item L’esecuzione precedente di regole correlate (l’algoritmo può apprendere o adattarsi)
+		\item L’andamento dell’esecuzione in base a scelte precedenti (strategie basate sull'esperienza)
+	\end{itemize}
+	Questa logica è tipica dei sistemi basati sulla conoscenza e dell’intelligenza artificiale simbolica, dove si usano regole per prendere decisioni. \\
+	È anche una tecnica usata negli algoritmi di pianificazione e nei motori inferenziali.
+	\subsection{Problemi con vincoli}
+	Problemi con vincoli (CSP-Constraint Satisfaction Problems) cercano di trovare soluzioni efficienti andando a incrementare la definizione di un singolo stato.\\\\
+	Usiamo una rappresentazione fattorizzata per ogni stato: un insieme di variabili, ognuna delle quali ha un valore.\\
+	Un problema è risolto quando ogni variabile ha un valore che soddisfa tutti i vincoli sulla variabile.\\
+	Qui l’idea è quella di eliminare in una volta grandi porzioni dello spazio di ricerca identificando le combinazioni di variabile/valore che violano i vincoli.
+	\subsubsection{Formulazione dei problemi CSP}
+	Problema: descritto da tre componenti:
+	\begin{enumerate}
+		\item $X={X1,X2,…,Xn}$ insieme di variabili
+		\item $D={D1,D2,…,Dn}$ insieme di domini dove: $Di={v1,…,vk}$ è l’insieme dei valori possibili per $X_i$
+		\item $C={C1,C2,…,Cm}$ insieme di vincoli (relazioni tra le variabili)
+	\end{enumerate}
+	\underline{Stato}: un assegnamento [parziale/completo] di valori a variabili $\{Xi=vi,Xj=vj…\}$\\
+	\underline{Stato iniziale} = $\{\}$\\
+	\underline{Azioni}: assegnamento di un valore a una variabile.\\
+	\underline{Soluzione (goal test)}: un assegnamento completo (le variabili hanno tutte un valore) e consistente (i vincoli sono tutti soddisfatti).\\\\
+	\textbf{Come esprimere i vincoli}
+	\begin{itemize}
+		\item Forma generale: $<ambito,relazione>$
+		\begin{itemize}
+			\item Ambito: tupla di variabili che partecipano nel vincolo
+			\item Relazione: un insieme di tuple di valori
+		\end{itemize}
+	\end{itemize}
+	Se si dispone già di un algoritmo efficiente di risoluzione per un generico problema CSP, è più facile risolvere un problema utilizzando questo che progettare una soluzione personalizzata utilizzando un’altra tecnica di ricerca.\\
+	Inoltre, i risolutori CSP possono essere più veloci di una ricerca nello spazio degli stati perché il risolutore CSP può eliminare rapidamente grandi campioni dello spazio di ricerca.
+	\subsubsection{Tipi di vincoli}
+	I vincoli possono essere:
+	\begin{itemize}
+		\item Unari (es. “$x$ pari”);
+		\item Binari (es. “$x > y$”);
+		\item Di grado superiore (es. $x+y = z$) comunque riconducibili a vincoli binari, introducendo più variabili.
+	\end{itemize}
+	Vincoli globali:
+	\begin{itemize}
+		\item Es. Tutti Valori Diversi, come nelle righe e colonne del Sudoku;
+		\item Es. Ogni lettera una cifra distinta nella cripto-aritmetica.
+	\end{itemize}
+	Finora potevamo solo ricercare la soluzione nel grafo degli stati.\\
+	Adesso possiamo fare anche un minimo di ragionamento che ci porta a restringere i domini e quindi al limitare la ricerca: \textbf{Propagazione di vincoli}.
+	\subsubsection{Ricerca in problemi CSP}
+	Ad ogni passo si assegna una variabile, la massima profondità della ricerca è fissata dal numero di variabili $n$.
+	L’ampiezza dello spazio di ricerca è $|D1| \times |D2| \times \dots \times |Dn|$ è la cardinalità del dominio di $Xi$.\\ \\
+	Il fattore di diramazione:
+	\begin{itemize}
+		\item Teoricamente pari a nd al primo passo; $(n-1) d$ al secondo … le foglie sarebbero $n! \times d^n$;
+		\item Riduzione drastica dello spazio di ricerca dovuta al fatto che il goal-test è commutativo (l’ordine non è importante).
+	\end{itemize}
+	\subsubsection{Strategie di ricerca}
+	\begin{itemize}
+		\item Generate and Test: Si genera in profondità una soluzione e si controlla: poco efficiente
+		\item Ricerca con backtracking (BT): Ad ogni passo si assegna una variabile e si controllano i vincoli, si torna indietro in caso di fallimento
+	\end{itemize}
+	Nel backtracking si ha il controllo anticipato della violazione dei vincoli, in quanto è inutile andare avanti fino alla fine e poi controllare.
+	\paragraph{Problemi nell’uso del backtracking}
+	\begin{itemize}
+		\item Trashing: Continua a ripetere le stesse assegnazioni di variabili fallite
+		\item Inefficienza: Può esplorare aree dello spazio di ricerca che probabilmente non avranno successo
+	\end{itemize}
+	\subsubsection{Scelta delle variabili}
+	\begin{itemize}
+		\item \textbf{MRV (Minimum Remaining Values)}: Scegliere la variabile che ha meno valori legali [residui], la variabile più vincolata. Si scoprono prima i fallimenti (fail first);
+		\item \textbf{Euristica del grado}: Scegliere la variabile coinvolta in più vincoli con le altre variabili (la variabile più vincolante o di grado maggiore). Da usare a parità di MRV.
+	\end{itemize}
+	\subsubsection{Scelta dei valori}
+	Una volta scelta la variabile come scegliere il valore da assegnare?
+	\begin{enumerate}
+		\item Valore meno vincolante: quello che esclude meno valori per le altre variabili direttamente collegate con la variabile scelta
+		\begin{itemize}
+			\item Meglio valutare prima un assegnamento che ha più probabilità di successo
+			\item Se volessimo tutte le soluzioni l’ordine non sarebbe importante
+		\end{itemize}
+	\end{enumerate}
+	\subsubsection{Propagazione di vincoli}
+	\begin{itemize}
+		\item Verifica in avanti (Forward Checking o FC):
+		\begin{itemize}
+			\item Assegnato un valore ad una variabile si possono eliminare i valori incompatibili per le altre variabili direttamente collegate da vincoli (non si itera)
+		\end{itemize}
+		\item Consistenza di nodo e d’arco:
+		\begin{itemize}
+			\item Si restringono i valori dei domini delle variabili tenendo conto dei vincoli unari e binari su tutto il grafo (si itera finché tutti i nodi ed archi sono consistenti).
+		\end{itemize}
+	\end{itemize}
+	\paragraph{Forward checking}
+	\begin{itemize}
+		\item Tieni traccia dei valori legali rimanenti per le variabili non assegnate
+		\item Termina la ricerca quando una variabile non ha valori legali
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Forward checking}
+		\label{fig:im-22}
+	\end{figure}
+	Forward checking propaga le informazioni da variabili assegnate a variabili non assegnate, ma non fornisce il rilevamento anticipato per tutti gli errori. \\
+	NT e SA non possono essere blu!
+	\paragraph{Consistenza di nodo}
+	\begin{itemize}
+		\item Un nodo è consistente se tutti i valori nel suo dominio soddisfano i vincoli unari
+		\item Una rete di vincoli è nodo-consistente se tutti i suoi nodi sono consistenti
+		\item I vincoli unari quindi possono essere risolti restringendo opportunamente i domini delle variabili
+	\end{itemize}
+	\paragraph{Consistenza d’arco} 
+	Nel grafo di vincoli, un arco tra $X$ e $Y$, $(X, Y)$, è consistente rispetto a $X$, se per ogni valore $x$ di X$ $ c’è almeno un valore $y$ di $Y$ consistente con $x$. \\
+	Si dice anche: $X$ è arco-consistente rispetto a $Y$. \\
+	Se un arco $(X, Y)$ non è consistente rispetto a $X$ (o $Y$) si cerca di renderlo tale, rimuovendo valori dal dominio di $X$ (o di $Y$). \\
+	Se il dominio di una variabile viene modificato vanno ricontrollati tutti gli archi con i vicini. \\
+	Si itera fino a che tutte le variabili sono arco-consistenti.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Consistenza d'arco}
+		\label{fig:im-23}
+	\end{figure}
+	\\La forma più semplice di propagazione che rende ogni arco coerente.\\
+	$X \rightarrow Y$ è consistente se e solo s per ogni valore di $x$ di $X$. \\
+	C’è un valore consentito $y$ in $Y$.\\\\
+	Se $X$ perde un valore, i vicini di X$ $ devono essere ricontrollati\\\\
+	La coerenza dell'arco rileva gli errori prima del semplice forward checking. \\
+	WA=red and Q=green viene subito riconosciuto come un vicolo cieco, cioè un'istanza parziale impossibile.\\\\
+	L'algoritmo di consistenza d’arco può essere eseguito sia prima che dopo ogni assegnazione.
+	\subsubsection{Complessità di AC-3}
+	Devono essere controllati tutti gli archi (sia c il \# archi). \\
+	Se durante il controllo di un arco $(X, Y)$ il dominio di $X$ si restringe vanno ricontrollati tutti gli archi adiacenti $(Z, X)$ con $Z \neq Y$. \\
+	Il controllo di consistenza di un arco ha complessità $d^2$, se $d$ è la dimensione massima dei domini. \\
+	Un arco deve essere controllato al massimo d volte. \\
+	Complessità: $O(c \; d3)$ ... polinomiale.
+	\subsubsection{La risoluzione di un CSP richiede ancora la ricerca}
+	\begin{itemize}
+		\item Ricerca:
+		\begin{itemize}
+			\item Può trovare buone soluzioni, ma deve esaminare le non-soluzioni lungo il cammino
+		\end{itemize}
+		\item Constraint Propagation:
+		\begin{itemize}
+			\item Può escludere non-soluzioni, ma questo non è lo stesso che trovare soluzioni
+		\end{itemize}
+		\item Si possono usare entrambi -- constraint propagation \& search:
+		\begin{itemize}
+			\item Eseguendo la propagazione del vincolo in ogni fase della ricerca
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Backtracking “cronologico”}
+	Supponiamo di avere {Q=red, NSW=green, V=blue, T=red}, si cerca di assegnare SA. \\
+	Il fallimento genera un backtracking “cronologico” e provando con tutti i valori alternativi si continua a fallire.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Backtracking cronologico}
+		\label{fig:im-24}
+	\end{figure}
+	\subsubsection{Backtracking “intelligente”}
+	Si considerano alternative solo per le variabili che hanno causato il fallimento (Q, NSW, V), l’insieme dei conflitti. \\
+	Backtracking guidato dalle dipendenze.
+\end{document}

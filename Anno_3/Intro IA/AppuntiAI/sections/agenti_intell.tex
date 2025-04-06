@@ -1,0 +1,248 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Introduzione}
+	L'agire razionale rispetto alla scopo è un agire orientato sulla base della valutazione dei mezzi più adeguati per raggiungere un certo scopo. \\
+	Agente razionale usa l'intelligenza come capacità di interagire con un ambiente.\\ \\
+	Caratteristiche degli agenti:
+	\begin{itemize}
+		\item Sono situati (contextualizzati):
+		\begin{itemize}
+			\item Ricevono percezioni da un ambiente
+			\item Agiscono sull'ambiente mediante azioni (attuatori)
+		\end{itemize}
+		\item Hanno abilità sociale:
+		\begin{itemize}
+			\item Capaci di comunicare
+		\end{itemize}
+		\item Hanno credenze, obiettivi, intenzioni
+		\item Sono embodied:
+		\begin{itemize}
+			\item Sono limitati da un corpo e potrebbero essere soggetti ad emozioni
+		\end{itemize}
+	\end{itemize}
+	Un agente percepisce il proprio ambiente attraverso sensori ed agisce attraverso attuatori.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Schema astratto funzionamento agente}
+		\label{fig:im-6}
+	\end{figure}\\ \\
+	Terminologia agenti:
+	\begin{itemize}
+		\item \textbf{Percezione}: input da sensori.
+		\item \textbf{Sequenza percettiva}: Storia completa delle percezioni.
+		\item \textbf{Funzione agente}:
+		\begin{itemize}
+			\item Definisce l'azione da compiere per ogni sequenza percettiva (descrive completamente l'agente);
+			\item Implementa da un programma agente.
+		\end{itemize}
+		\item \textbf{Compito (IA)}: progettare il programma agente.
+	\end{itemize}
+	Serve un criterio di valutazione oggettivo dell’effetto delle azioni dell’agente (della sequenza di stati dell’ambiente).\\ \\
+	Misura di prestazione:
+	\begin{itemize}
+		\item Esterna (come vogliamo che il mondo evolva?);
+		\item Scelta dal progettista a seconda del problema considerando l’effetto desiderato sull'ambiente;
+		\item (Possibile) Valutazione su ambienti diversi.
+	\end{itemize}
+	\subsubsection{Esempio}
+	Fissata la misura delle performance possiamo valutare come opera nel tempo sull’ambiente.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Schema esempio}
+		\label{fig:im-7}
+	\end{figure}
+	Così possiamo dire che la razionalità è relativa a:
+	\begin{itemize}
+		\item La misura di prestazioni;
+		\item Le conoscenze pregresse dell’ambiente;
+		\item Le percezioni presenti e passate (seq. percettiva);
+		\item Le capacità dell’agente (azioni possibili).
+	\end{itemize}
+	\subsection{Agenti Intelligenti/razionale}
+	\textbf{Agente razionale}: Per ogni sequenza di percezioni compie l’azione che massimizza il valore atteso della misura delle prestazioni, considerando le sue percezioni passate e la sua conoscenza pregressa.\\ \\
+	Razionalità non onniscienza:
+	\begin{itemize}
+		\item Non si pretendono perfezione e conoscenza del “futuro”, ma massimizzare il risultato atteso
+		\item Potrebbero essere necessarie azioni di acquisizione di informazioni o esplorative
+	\end{itemize}
+	Razionalità non onnipotenza:
+	\begin{itemize}
+		\item Le capacità dell’agente sono limitate
+	\end{itemize}
+	Razionalità e apprendimento:
+	\begin{itemize}
+		\item Raramente tutta la conoscenza sull’ambiente può essere fornita “a priori” (dal programmatore)
+		\item L’agente razionale deve essere in grado di modificare il proprio comportamento con l’esperienza (le percezioni passate)
+		\item Può migliorare esplorando, apprendendo, aumentando autonomia per operare in ambienti differenti o mutevoli
+	\end{itemize}
+	\subsection{Agenti e ambiente}
+	\textbf{Ambiente}: Dove l’agente opera, tutto ciò serve a definire un problema per un agente (Agente razionale = soluzione).\\ \\
+	\textbf{PEAS}:
+	\begin{itemize}
+		\item P: Performance/prestazione;
+		\item E: Enviroment/ambiente;
+		\item A: Actuators/attuatori;
+		\item S: Sensors/sensori.
+	\end{itemize}
+	\subsubsection{Esempi}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Schema esempio}
+		\label{fig:im-8}
+	\end{figure}
+	\subsection{Proprietà dell’ambiente-problema}
+	\begin{itemize}
+		\item Completamente/parzialmente osservabile
+		\item Agente singolo/multi-agente
+		\item Deterministico/stocastico/non deterministico
+		\item Episodico/sequenziale
+		\item Statico/dinamico
+		\item Discreto/continuo
+	\end{itemize}
+	\textbf{Ambiente completamente osservabile}:
+	\begin{itemize}
+		\item L’apparato percettivo è in grado di dare una conoscenza completa dell’ambiente o almeno tutto quello che serve a decidere l’azione;
+		\item Non c’è bisogno di mantenere uno stato del mondo (esterno).
+	\end{itemize}
+	\textbf{Ambiente parzialmente osservabile}:
+	\begin{itemize}
+		\item Sono presenti limiti o inaccuratezze dell’apparato sensoriale.
+	\end{itemize}
+	\textbf{Ambiente singolo/multiagente}:
+	\begin{itemize}
+		\item \textbf{Distinzione agente/non agente}: Il mondo può anche cambiare per eventi, non necessariamente per azioni di agenti.
+		\item \textbf{Ambiente multi-agente competitivo (schacchi)}: Comportamento randomizzato (è razionale);
+		\item \textbf{Ambiente multi-agente cooperativo (o benigno)}: Stesso obiettivo Comunicazione.
+	\end{itemize}
+	\textbf{Predicibilità dell’ambiente:}
+	\begin{itemize}
+		\item \textbf{Deterministico}: Se lo stato successivo è completamente determinato dallo stato corrente e dall’azione. Esempio: scacchi;
+		\item \textbf{Stocastico}: Esistono elementi di incertezza con associata probabilità. Esempi: guida, tiro in porta;
+		\item \textbf{Non deterministico}: Si tiene traccia di più stati possibili risultato dell’azione (ma non in base ad una probabilità).
+	\end{itemize}
+	\textbf{Ambiente statico/dinamico:}
+	\begin{itemize}
+		\item \textbf{Statico}: Il mondo non cambia mentre l’agente decide l’azione
+		\item \textbf{Dinamico}: Cambia nel tempo, va osservata la contingenza. Tardare equivale a non agire
+		\item \textbf{Semi-dinamico}: L’ambiente non cambia ma la valutazione dell’agente si. Esempio: Scacchi con timer
+	\end{itemize}
+	\textbf{Discreto/continuo}\\
+	Possono assumere valori discreti o continui:
+	\begin{itemize}
+		\item Lo stato: solo un numero finito di stati
+		\item Il tempo
+		\item Le percezioni
+		\item Le azioni
+	\end{itemize}
+	\textbf{Noto/ignoto:}
+	\begin{itemize}
+		\item Distinzione riferita allo stato di conoscenza dell’agente
+		\item L’agente conosce l’ambiente oppure deve compiere azioni esplorative?
+		\item Noto diverso da osservabile (e.g. carte coperte, regole note)
+	\end{itemize}
+	\textbf{Ambienti reali}: Parzialmente osservabili, stocastici, sequenziali, dinamici, continui, multi-agente, ignoti.
+	\subsection{Struttura}
+	Quattro tipi fondamentali in ordine di generalità crescente:
+	\begin{itemize}
+		\item Semplici agenti riflessi
+		\item Agenti riflessi con stato
+		\item Agenti basati su obiettivi
+		\item Agenti basati sull'utilità
+	\end{itemize}
+	Tutti questi possono essere trasformati in agenti con apprendimento (learning agents).\\
+	Agente = Architettura + Programma
+	\[Ag: \; \underset{percezioni}{P} \rightarrow \underset{azioni}{Az}\]
+	\begin{center}
+		Il programma dell'agente implementa la funzione $Ag$\\
+		$\downarrow$\\
+		\textbf{function} Skeleton-Agent (\textit{percept}) \textbf{returns} action\\
+		\textbf{static}: memory, the agent’s memory of the world
+		\begin{align*}
+			\textit{memory} &\leftarrow \textit{UpdateMemory}(\textit{memory}, \textit{percept}) \\
+			\textit{action} &\leftarrow \textit{Choose-Best-Action}(\textit{memory}) \\
+			\textit{memory} &\leftarrow \textit{UpdateMemory}(\textit{memory}, \textit{action})\\
+			\textbf{return} & \textit{ action}
+		\end{align*}
+	\end{center}
+	\textbf{Agente basato su tabella}: La scelta dell’azione è un accesso a una tabella che associa un’azione ad ogni possibile sequenza di percezioni.\\
+	Ha diversi problemi come: la dimensione, era difficile da costruire, no autonomia, difficile aggiornamento.\\ \\
+	\textbf{Agenti reattivi semplici:}
+	\begin{itemize}
+		\item Questi agenti selezionano le azioni sulla base della percezione corrente, ignorando il resto della cronologia della percezione;
+		\item Gli agenti reattivi hanno la proprietà di essere semplici, ma sono anche di intelligenza limitata;
+		\item L’agente funzionerà solo se la decisione corretta può essere presa solo sulla base della percezione corrente, cioè solo se l’ambiente è completamente osservabile. Anche un minimo di inosservabilità può causare seri problemi.
+	\end{itemize}
+	\textbf{Agenti con stato interno (modello)}: Indipendentemente dal tipo di rappresentazione utilizzata, è raramente possibile che l’agente determini esattamente lo stato attuale di un ambiente parzialmente osservabile.\\
+	La casella etichettata "com’è il mondo adesso" rappresenta la "migliore ipotesi" dell'agente (o talvolta la migliore ipotesi).\\
+	\textbf{Agenti con obiettivo:}
+	\begin{itemize}
+		\item Ove bisogna pianificare una sequenza di azioni per raggiungere l'obiettivo (goal)
+		\item A volte la selezione dell'azione basata sull'obiettivo è semplice, es. quando si raggiunge l'obiettivo con una singola azione
+		\item Altre volte sarà più complicato, ad esempio, quando l'agente deve considerare lunghe sequenze di azioni per trovare un modo per raggiungere l'obiettivo
+		\item Un processo decisionale di questo tipo è fondamentalmente diverso dalle regole condizione-azione, in quanto implica le considerazioni del futuro {\color{red} (Da approfondire!! [secondo pacco di slide da pagina 47])}
+		\item Sono guidati da un obiettivo nella scelta dell’azione
+		\item Devono pianificare una sequenza di azioni per raggiungere l’obiettivo
+		\item Meno efficienti ma più flessibili di un agente reattivo
+	\end{itemize}
+	\textbf{Agenti con funzione di utilità:}
+	\begin{itemize}
+		\item La funzione di utilità è essenzialmente un'interiorizzazione della misura della performance
+		\item Se la funzione di utilità interna e la misura della prestazione esterna sono in accordo, allora un agente che sceglie le azioni per massimizzare la propria utilità sarà razionale in base alla misura della prestazione esterna
+		\item Un agente basato sull'utilità deve modellare e tenere traccia del suo ambiente, compiti che hanno comportato una grande quantità di ricerca sulla percezione, rappresentazione, ragionamento e apprendimento.
+	\end{itemize}
+	\textbf{Agenti che apprendono (learning agent):}
+	\begin{enumerate}
+		\item Componente di apprendimento:
+		\begin{enumerate}
+			\item Produce cambiamenti al programma agente; 
+			\item Migliora prestazioni, adattando i suoi componenti, aprendo dall'ambiente;
+		\end{enumerate}
+		\item Elemento esecutivo (performance element):
+		\begin{enumerate}
+			\item Il programma agente;
+			\item Responsabile del selezionare le azioni;
+		\end{enumerate}
+		\item Elemento critico: Osserva e dà feedback sul comportamento;
+		\item Generatore di problemi: Suggerisce nuove situazioni da esplorare.
+	\end{enumerate}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Schema Learning Agent}
+		\label{fig:im-9}
+	\end{figure}
+	La progettazione dell'elemento di apprendimento dipende molto dalla progettazione dell'elemento di prestazione.
+	\subsubsection{Esempio: taxi}
+	\begin{itemize}
+		\item L'elemento di prestazione consiste in una qualunque raccolta di conoscenze e procedure di cui dispone il taxi per selezionare le sue azioni di guida
+		\item Il taxi esce sulla strada e guida, sfruttando questo elemento di performance
+		\item Il modulo critico osserva il mondo e trasmette le informazioni all'elemento di apprendimento
+		\item Da questa esperienza, l'elemento di apprendimento è in grado di formulare una regola dicendo che questa è stata una cattiva azione e l'elemento di prestazione viene modificato dall'installazione della nuova regola
+		\item Il generatore di problemi potrebbe identificare alcune aree di comportamento che necessitano di miglioramenti e suggerire esperimenti, come provare i freni su superfici stradali diverse in condizioni diverse
+	\end{itemize}
+	\subsection{Tipi di rappresentazione dello stato agente}
+	\begin{itemize}
+		\item Atomica
+		\item Fattorizzata (più variabili e attributi)
+		\item Strutturata (aggiunge relazioni)
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Tipi di rappresentazione dello stato agente}
+		\label{fig:im-10}
+	\end{figure}
+	Nella rappresentazione \textbf{atomica} ogni stato del mondo è indivisibile, non ha una struttura interna. Un singolo atomo di conoscenza è una “scatola nera” la cui unica proprietà riconoscibile è quella di essere identica o diversa da un'altra scatola nera.\\ \\
+	Nella rappresentazione \textbf{fattorizzata} si suddivide ogni stato in un insieme fisso di variabili o attributi, ognuno dei quali può avere una valore. Due diversi stati fattorizzati possono condividere alcuni attributi (pos. GPS) e non altri (avere molto o non avere gas). \\
+	Si passa meglio da uno stato all’altro, si può rappresentare l’incertezza.\\ \\
+	Nella rappresentazione \textbf{strutturata} oggetti diversi come mucche e camion e le loro variabili descrittive e le loro relazioni possano essere descritti in modo esplicito.\\
+	Quasi tutto ciò che gli esseri umani esprimono nel linguaggio naturale riguarda gli oggetti e le loro relazioni.
+	\subsection{Espressività}
+	Una rappresentazione più espressiva può catturare, almeno in modo altrettanto conciso, tutto ciò che può catturare una rappresentazione meno espressiva.\\
+	Il linguaggio più espressivo è molto più conciso.\\
+	D'altra parte, il ragionamento e l'apprendimento diventano più complessi man mano che aumenta la potenza espressiva della rappresentazione.
+\end{document}

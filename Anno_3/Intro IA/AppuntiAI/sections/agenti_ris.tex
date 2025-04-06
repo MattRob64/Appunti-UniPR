@@ -1,0 +1,605 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Introduzione}
+	Gli agenti reattivi sono i più semplici e basano le loro azioni su mappatura diretta dagli stati delle azioni.\\
+	Gli agenti basati sugli obiettivi considerano le loro azioni future e l'opportunità dei loro risultati.\\ \\
+	L'agente risolutore di problemi è un tipo particolare di agente basato su obiettivi. Decide cosa fare ricercando sequenze di azioni che conducono a stati desiderabili:
+	\begin{itemize}
+		\item 	Gli obiettivi aiutano a selezionare le sequenze.
+	\end{itemize} 
+	Quindi cerca di massimizzare la misura delle prestazioni.\\ \\
+	Adottano il paradigma della risoluzione di problemi come ricerca in uno spazio di stati (problem solving):
+	\begin{itemize}
+		\item 	Sono agenti con modello che adottano una rappresentazione atomica dello stato;
+		\item Sono particolari agenti con obiettivo, che pianificano l’intera sequenza di mosse prima di agire.
+	\end{itemize}
+	\subsection{Risoluzione di problemi tramite ricerca}
+	I problemi si possono modellare come Problemi di Ricerca in uno spazio degli stati (Strategie di Ricerca).\\
+	Un problema viene risolto ricercandone la soluzione in un ampio spazio di possibili soluzioni.\\
+	La ricerca di una soluzione è la traduzione della conoscenza in una rappresentazione opportuna del mondo composta da stati (situazioni del mondo) e un insieme di operatori per passare da uno stato ad un altro.\\ \\
+	\textbf{Agire per risolvere problemi:}
+	\begin{itemize}
+		\item Formulazione dell’obiettivo:
+		\begin{itemize}
+			\item Organizza il comportamento, limitando il numero di scopi da raggiungere;
+			\item Si basa sulla situazione corrente e sulle capacità del soggetto.
+		\end{itemize}
+		\item Formulazione del problema:
+		\begin{itemize}
+			\item Processo che porta a decidere quali azioni da compiere dato un obiettivo;
+			\item La selezione della sequenza di azioni che porta all'obiettivo è detta ricerca.
+		\end{itemize}
+	\end{itemize}
+	Se ci sono più alternative e l’agente non conosce lo stato risultante dopo aver compiuto ciascuna azione, potrà solo scegliere a caso.\\
+	Se possiede informazioni sugli stati, le userà per scegliere la sequenza di azioni da intraprendere.\\
+	Questa conoscenza extra si chiama \textbf{conoscenza euristica}.\\
+	Il processo di ricerca si può pensare come la costruzione ad albero in cui i nodi sono gli stati e i rami gli operatori.\\ \\
+	\textbf{Spazio degli stati}\\
+	Lo spazio degli stati è l’insieme di tutti gli stati raggiungibili dallo stato iniziale con una qualunque sequenza di operatori.\\
+	È caratterizzato da:
+	\begin{itemize}
+		\item Uno stato iniziale in cui l’agente sa di trovarsi (non noto a priori)
+		\item Un insieme di azioni possibili che sono disponibili da parte dell’agente (Operatori che trasformano uno stato in un altro)
+		\item Un cammino è una sequenza di azioni che conduce da uno stato a un altro
+	\end{itemize}
+	Un problema può essere definito formalmente da cinque componenti:
+	\begin{enumerate}
+		\item Lo stato iniziale in cui inizia l’agente
+		\item Una descrizione delle possibili azioni disponibili per l’agente.Dato un particolare stato s, è possibile restituisce l’insieme di azioni eseguibili in s
+		\item Una descrizione di ciò che fa ogni azione (si dice funzione transizione o successore)
+		\item Un percorso nello spazio degli stati è una sequenza di stati collegati da una sequenza di azioni
+		\item Test obiettivo, che determina se un determinato stato è uno stato obiettivo
+	\end{enumerate}
+	\subsubsection{Esempio}
+	Si è a Oradea e si vuole arrivare a Bucarest per prendere un aero si ha a disposizione una automobile
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Descrizione visiva esempio}
+		\label{fig:im-11}
+	\end{figure}
+	\\Un algoritmo di ricerca prende un problema come input e restituisce una soluzione sotto forma di una sequenza di azioni\\
+	Un agente razionale semplice opera quindi in tre fasi:
+	\begin{itemize}
+		\item Formulazione del problema
+		\item Ricerca della soluzione
+		\item Esecuzione della sequenza di azioni
+	\end{itemize}
+	\subsection{Problemi ben definiti e soluzioni}
+	Un problema è definito da un goal e dall'insieme di strumenti a disposizione per raggiungerlo.\\
+	La prima fase della risoluzione di un problema è la formulazione del problema. In questa fase bisogna decidere quali sono le azioni, quale è lo spazio degli stati (insieme degli stati raggiungibili) e quale è lo stato da cui si parte (stato iniziale).
+	\subsection{Risoluzione di problemi}
+	A partire dallo stato iniziale bisogna trovare una sequenza di azioni, soluzione, che soddisfi l'obiettivo.\\
+	Una buona astrazione (scelta di azioni e stati che permettono di formulare soluzioni) comporta l'eliminazione di più dettagli possibili mantenendo la validità ed assicurando che le azioni astratte siano facili da realizzare.
+	\subsection{Formulazione del problema}
+	Nella formulazione del problema il processo di astrazione esegue il passaggio dal problema concreto al modello del problema con la rimozione dei dettagli "inutili" per la ricerca di una soluzione.\\
+	Trovare il giusto livello di astrazione è una procedura a volte complessa che richiede, in questo tipo di agenti, una attività umana.\\ \\
+	L’esecuzione di ogni azione ha un costo, che può variare da azione ad azione. Quindi, ad ogni sequenza di azioni è possibile assegnare un costo complessivo, per valutare quale sia la soluzione migliore.\\ \\
+	La scelta della sequenza corrisponde alla seconda fase della risoluzione di un problema e viene individuata con il nome di ricerca. Infine, trovata la soluzione, nella terza fase, detta di esecuzione, le azioni sono eseguite per raggiungere il goal.\\
+	Costo totale della soluzione = costo di cammino + costo di ricerca.
+	\subsection{Costo della ricerca}
+	L’agente deve decidere quali risorse dedicare alla ricerca e quali all’esecuzione.\\
+	Per spazi degli stati piccoli, si considera il costo di cammino più basso. Per problemi complessi trovare il punto di equilibrio
+	\subsubsection{Esempio}
+	Vacanza in Romania. \\
+	Attualmente in Arad. \\
+	L’aereo parte domani da Bucarest.\\ \\
+	Formulare un goal:
+	\begin{itemize}
+		\item Essere in Bucarest
+	\end{itemize}
+	Formulare un problema:
+	\begin{itemize}
+		\item Stati: varie
+		\item Città operatori: guidare da una città all'altra
+	\end{itemize}
+	Trovare una soluzione:
+	\begin{itemize}
+		\item Sequenza di città, es: Arad, Sibiu, Faragas, Bucarest
+	\end{itemize}
+	\subsection{Esempi di problemi - Problemi giocattolo}
+	\subsubsection{Il problema dell’8 puzzle}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Esempio 8 puzzle}
+		\label{fig:im-12}
+	\end{figure}
+	\begin{itemize}
+		\item Stati: Uno stato specifica la posizione di ciascuna delle 8 tessere.
+		\item Operatori: Lo spazio vuoto si muove a destra, a sinistra, sopra, sotto.
+		\item Test obiettivo: Lo stato rispecchia la configurazione obiettivo (Goal).
+		\item Costo del cammino: Ciascun passo costa 1. Il costo del cammino coincide con la sua lunghezza.
+	\end{itemize}
+	\subsubsection{Il problema delle 8 regine} 
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Esempio 8 regine}
+		\label{fig:im-13}
+	\end{figure}
+	Ci sono due principali tipi di formulazione:
+	\begin{enumerate}
+		\item Una formulazione incrementale coinvolge operatori che aumentano la descrizione dello stato, che inizia con uno stato vuoto e che per il problema delle 8 regine, questo significa che ogni azione aggiunge una regina allo stato
+		\item Una formulazione a stato completo che inizia con tutte e 8 le regine sul tabellone e le sposta attorno
+	\end{enumerate}
+	In entrambi i casi, il costo del percorso non interessa perché conta solo lo stato finale.\\ \\
+	Nella formulazione incrementale:
+	\begin{itemize}
+		\item Stati: Qualsiasi configurazione da 0 a 8 regine sulla scacchiera
+		\item Operatori: Aggiungi una regina in qualsiasi quadrato
+		\item Test obiettivo: 8 regine sulla scacchiera, nessuna minacciata
+		\item Costo cammino: 0 (perché conta solo lo stato finale)
+	\end{itemize}
+	\subsubsection{Il problema dei missionari e dei cannibali} 
+	3 missionari e 3 cannibali devono attraversare un fiume. \\
+	C’è una sola barca che può contenere al massimo due persone. \\
+	Per evitare di essere mangiati i missionari non devono mai essere meno dei cannibali sulla stessa sponda (stati di fallimento).
+	\begin{itemize}
+		\item Stato: Sequenza ordinata di tre numeri che rappresentano il numero di missionari, cannibali e barche sulla sponda del fiume da cui sono partiti
+		\item Stato iniziale: (3,3,1) (importanza dell’astrazione)
+		\item Operatori: Gli operatori devono portare in barca 1 missionario, 1 cannibale, 2 missionari, 2 cannibali, 1 missionario e 1 cannibale. Al più 5 operatori (grazie all’astrazione sullo stato scelta)
+		\item Test Obiettivo: (0,0,0)
+		\item Costo di cammino: numero di traversate
+	\end{itemize}
+	\subsection{Classi di problemi} 
+	L’agente risolutore di problemi riesce a risolvere problemi in modo osservabile, statico e deterministico. \\
+	I problemi possono essere divisi in quattro classi in dipendenza della conoscenza che l’agente ha sullo stato del mondo e sulle azioni che si possono eseguire su di esso.
+	\begin{enumerate}
+		\item Problemi a stato singolo (mondo accessibile);
+		\item Problemi a stati multipli (mondo non accessibile - no sensori);
+		\item Problemi di contingenza (ignoranza dell’agente sulla sequenza di azioni);
+		\item Problemi di esplorazione (nessuna contingenza sugli effetti delle proprie azioni).
+	\end{enumerate}
+	\subsubsection{A stato singolo (Search)}
+	Si ha conoscenza:
+	\begin{itemize}
+		\item Dello stato del mondo (tramite i sensori l’agente riceve informazioni sufficienti sullo stato in cui si trova)
+		\item Degli effetti delle proprie azioni problema deterministico e osservabile: l’agente può calcolare esattamente in quale stato sarà dopo qualsiasi sequenza di azioni
+	\end{itemize}
+	Formulazione di un problema:
+	\begin{enumerate}
+		\item Stato iniziale $x$;
+		\item Operatore/funzione successore $S(x)$;
+		\item Test obiettivo;
+		\item Funzione costo cammino.
+	\end{enumerate}
+	Una soluzione è una sequenza di operatori che conducono dallo stato iniziale ad uno stato obiettivo.
+	\subsubsection{Problemi a stato multiplo (Search)}
+	Si ha conoscenza completa degli effetti delle azioni come nel problema a stato singolo, ma non si ha conoscenza sufficiente sullo stato del mondo (problema non osservabile, p.e. agente senza sensori).\\
+	A partire dallo stato iniziale l’agente deve ragionare su insiemi di stati in cui potrebbe giungere invece che su stati singoli.\\ \\
+	L’agente deve parlare di insiemi di stati raggiungibili e non di singoli stati. Ogni insieme viene chiamato stato-credenza (belief state).\\
+	Formulazione di un problema:
+	\begin{enumerate}
+		\item Insieme di stati iniziali
+		\item Insieme di operatori / funzione successore S(x) (per ciascuna azione viene specificato l’insieme di stati raggiunti da qualsiasi stato considerato. Un cammino collega insiemi di stati)
+		\item Test obiettivo
+		\item Funzione costo cammino
+	\end{enumerate}
+	Una soluzione è un cammino che conduce ad un insieme di stati (sottoinsieme dello spazio degli stati) che sono tutti stati obiettivo.
+	\subsubsection{Problemi con imprevisti (Planning)} 
+	In questi casi l’agente deve:
+	\begin{itemize}
+		\item Calcolare un intero albero di azioni piuttosto che una singola sequenza di azioni
+		\begin{itemize}
+			\item Un ramo dell’albero tratta una situazione contingente possibile che si potrebbe verificare
+		\end{itemize}
+	\end{itemize}
+	Spesso per la soluzione è necessario agire (e verificare l’effetto della propria azione) prima di avere trovato una soluzione:
+	\begin{itemize}
+		\item L’agente incomincia ad eseguire un piano possibile
+		\item Sulla base di quali soluzioni contingenti si verificano ricalcola ed attua un nuovo piano
+	\end{itemize}
+	Si sfruttano le informazioni supplementari trovate runtime per continuare a risolvere il problema.\\ \\
+	Ogni possibile azione definisce una contingenza che deve essere pianificata. \\
+	L’agente necessita quindi di piani di contingenza per gestire le circostanze sconosciute che si potranno verificare. \\
+	Un problema è detto con avversari se l’incertezza è causata da un altro agente.
+	\subsubsection{Problemi di esplorazione (Learning)} 
+	Non si ha conoscenza né sullo stato del mondo né sugli effetti delle proprie azioni. \\
+	Lo spazio degli stati è sconosciuto. Quando gli stati e le azioni dell’ambiente sono sconosciuti, l’agente deve fare in modo di scoprirle.\\
+	I problemi di esplorazione possono essere considerati casi estremi di problemi di contingenza.\\ \\
+	E’ necessario apprendere i possibili stati del mondo e gli effetti delle proprie azioni attraverso l’esperienza.\\
+	La ricerca si svolge nel mondo reale e non in un modello: agire può comportare danni significativi per un agente privo di conoscenza. \\
+	Se sopravvive, acquisisce conoscenza che può riusare per problemi successivi.
+	\subsubsection{Problemi stati singoli vs stati multipli}
+	\textbf{Problema a stati singoli:}
+	\begin{itemize}
+		\item Stato sempre accessibile
+		\item L’agente conosce esattamente che cosa produce ciascuna delle sue azioni e può calcolare esattamente in quale stato sarà dopo qualunque sequenza di azioni
+	\end{itemize}
+	{\color{red} Esempio a slide 54 terzo pacco di slide}\\
+	\textbf{Problema a stati multipli:}
+	\begin{itemize}
+	 	\item Stato non completamente accessibile, l’agente deve ragionare su possibili stati che potrebbe raggiungere e non sui singoli
+	 	\item L’effetto delle azioni potrebbe essere sconosciuto o imprevisto
+	\end{itemize}
+	\textbf{Problemi di contingenza}: Conoscenza incompleta degli effetti delle azioni, la soluzione è usare gli alberi di stati.\\
+	\textbf{Problemi di esplorazione}: Nessuna informazione degli effetti delle azioni e dello stato del mondo, l’agente deve compiere azioni esplorative (provare ad agire).
+	\paragraph{Esempio}
+	Mondo dell’aspirapolvere con legge di Murphy.\\ \\
+	“Aspirare” talvolta deposita sporco, ma solo se in quel punto non c’è già sporcizia (legge di Murphy).\\
+	Se l’aspirapolvere si trova in 4 aspirare potrebbe rimanere nello stato 4 oppure andare a finire nello stato 2. \\
+	Se ho capacità di rilevamento durante la fase di esecuzione ecco che posso scegliere l’azione di aspirare solo nel caso ci sia sporcizia.
+	\begin{figure}[h]
+	 	\centering
+	 	\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+	 	\caption{Esempio aspirapolvere}
+	 	\label{fig:im-14}
+	\end{figure}
+	\subsection{Ricercare le soluzioni}
+	\subsubsection{Cercare soluzioni}
+	\textbf{Soluzione}: Sequenza di azioni, quindi gli algoritmi di ricerca funzionano considerando varie possibili sequenze di azioni.\\
+	Passi da seguire:
+	\begin{enumerate}
+	 	\item Determinazione obiettivo
+	 	\item Formulazione del problema
+	 	\item Determinazione della soluzione mediante ricerca
+	 	\item Esecuzione del piano
+	\end{enumerate}
+	\textbf{Generare sequenze di azioni}:
+	\begin{itemize}
+		\item \textbf{Espansione}: Si parte da uno stato e applicando gli operatori (o la funzione successore) si generano nuovi stati;
+		\item \textbf{Strategia di ricerca}: Ad ogni passo scegliere quale stato espandere;
+		\item \textbf{Albero di ricerca}: Rappresenta l’espansione degli stati a partire dallo stato iniziale. Le foglie dell’albero rappresentano gli stati da esplodere.
+	\end{itemize}
+	\textbf{Strutture dati per l’albero di ricerca (struttura di un nodo)}
+	\begin{itemize}
+		\item Lo stato nello spazio degli stati a cui il nodo corrisponde
+		\item Il nodo genitore
+		\item L’operatore che è stato applicato per ottenere il nodo
+		\item La profondità del nodo
+		\item Il costo del cammino dallo stato iniziale al nodo
+	\end{itemize}
+	\subsubsection{Algoritmo generale di ricerca}
+	Cerchiamo di definire un algoritmo generale di ricerca per il caso di problemi a stato singolo.
+	\begin{itemize}
+		\item Occorre definire il tipo di dato \textbf{Problem}:
+		\begin{itemize}
+			\item Datatype Problem
+			\item Components: Initial-State, Operators, Goal-Test, Path-CostFunction
+		\end{itemize}
+		 \item Occorre una funzione per ricavare lo stato iniziale dalla descrizione del problema:
+		\begin{itemize}
+			\item Init-State(Problem)
+		\end{itemize}
+		\item Occorre una funzione per trasformare una descrizione di stato nel nodo di un albero:
+		\begin{itemize}
+			\item  Make-Node(State)
+		\end{itemize}
+		\item  Occorre definire il tipo di dato \textbf{Node}:
+		\begin{itemize}
+			\item Datatype Node
+			\item  Components: State, Parent-Node, Operator, Depth, Path-Cost
+		\end{itemize}
+		\item Occorre una funzione per espandere un nodo:
+		\begin{itemize}
+			\item Expand(Node, Problem, [Depth ]), genera i successori del nodo se non è stata raggiunta la profondità Depth
+		\end{itemize}
+		\item Servono 4 funzioni per gestire delle code di nodi:
+		\begin{itemize}
+			\item Make-Queue(Elements), genera una coda contenente Elements
+			\item Empty(QUEUE), controlla se la coda è vuota
+			\item Remove-Front(QUEUE), estrae il primo elemento
+			\item Queueing-Fn(QUEUE, Elements), inserisce Elements nella coda
+		\end{itemize}
+		\item Infine serve una funzione per controllare se il nodo coincide con un goal del problema:
+		\begin{itemize}
+			\item Goal(Node, Problem)
+		\end{itemize}
+	\end{itemize}
+	Le code sono caratterizzate dall’ordine in cui memorizzano i nodi inseriti.\\
+	Tre varianti comuni sono: 
+	\begin{itemize}
+		\item First-in, first-out \textbf{FIFO} che prende l’elemento più vecchio
+		\item Last-in, first-out o \textbf{LIFO} (stack), che prende l’elemento più nuovo
+		\item \textbf{Priority queue}, che prende l’elemento della coda con priorità maggiore secondo una certa funzione o criterio
+	\end{itemize}
+	\subsection{Valutazione delle strategie di ricerca} 
+	\begin{itemize}
+		\item Completezza
+		\item Complessità temporale
+		\item Complessità spaziale
+		\item Ottimalità.
+	\end{itemize}
+	La complessità temporale e spaziale è misurata in termini di:
+	\begin{itemize}
+		\item b - massimo fattore di diramazione dell’albero di ricerca
+		\item d - profondità della soluzione a costo minimo
+		\item m - massima profondità dello spazio degli stati (può essere infinita).
+	\end{itemize}
+	\textbf{Strategia}: La scelta di quale stato espandere nell’albero di ricerca.
+	\subsection{Strategie non informate}
+	Non richiedono nessuna conoscenza specifica relativa al problema. \\
+	Non hanno informazioni aggiuntive oltre a quelle già fornite dalla definizione del problema. \\
+	Possono solo generare successori e distinguere uno stato obiettivo da uno stato non obiettivo. \\
+	Vantaggio: \textbf{Generalità}.
+	\begin{itemize}
+		\item breadth-first
+		\item depth-first
+		\item depth-first a profondità limitata
+		\item ad approfondimento iterativo
+	\end{itemize}
+	\subsubsection{Ricerca in ampiezza (breadth-first search)}
+	Garantisce che ogni nodo di profondità d sia espanso prima di qualsiasi altro nodo di profondità maggiore.\\
+	La ricerca in ampiezza è un'istanza dell'algoritmo generale di ricerca su grafo in cui viene scelto per l'espansione il nodo non espanso più vicino alla radice. \\
+	Pertanto, i nuovi nodi (che sono sempre più profondi dei loro genitori) vanno infondo alla coda e i vecchi nodi, che sono meno profondi dei nuovi nodi, vengono espansi per primi.
+	\begin{itemize}
+		\item Ottimalità: è ottimo quando: 
+		\begin{itemize}
+			\item Il costo è una funzione non decrescente della profondità del nodo
+	 		\item Il costo è lo stesso per ciascun operatore
+		\end{itemize}
+		\item Completezza: è completo visto che utilizza una strategia sistematica che considera prima le soluzioni di lunghezza $1$, poi quelle di lunghezza $2$ e così via
+		\item Complessità: Se $b$ è il fattore di ramificazione e $d$ la profondità della soluzione, allora il numero massimo di nodi espansi è: $1+b+b^2+b^3+…+b^d$
+		\item Complessità temporale: $O(b^d)$
+		\item Complessità spaziale: $O(b^d)$
+	\end{itemize}
+	In generale i problemi di ricerca di complessità esponenziale non possono essere risolti con metodi non informati tranne che nelle istanze più piccole.
+	\subsubsection{Ricerca a Costo Uniforme (Uniform Cost Search)} 
+	L'algoritmo di ricerca a costo uniforme permette di trovare la soluzione a minor costo espandendo tra i nodi della frontiera il nodo caratterizzato dal minor costo (già valutato). \\
+	Se il costo è uguale alla profondità del nodo il funzionamento di questo algoritmo è uguale all'algoritmo di ricerca in ampiezza. \\ \\
+	Questo algoritmo è \textbf{ottimo} quando il costo è una funzione non decrescente della profondità del nodo. \\
+	È \textbf{completo} poiché utilizza una strategia sistematica simile all'algoritmo di ricerca in ampiezza. \\
+	Ha la \textbf{stessa complessità} temporale e spaziale dell'algoritmo di ricerca in ampiezza.\\ \\
+	Questo algoritmo è in grado di trovare la soluzione più economica, purché sia verificato il requisito: il costo del cammino non deve mai decrescere quando percorriamo il cammino stesso.\\
+	Tale restrizione ha senso se il costo di cammino di un nodo viene considerato come somma dei costi degli operatori che determinano il cammino.
+	\subsubsection{Ricerca in Profondità (Depth-First Search)}
+	Ad ogni livello di profondità, espande il primo nodo fino a raggiungere un goal o un punto in cui il nodo non può essere più espanso. \\
+	La scelta del nodo da cui partire è arbitraria. Mentre la ricerca in ampiezza utilizza una coda FIFO, la ricerca in profondità utilizza una coda LIFO. \\
+	Una coda LIFO significa che il nodo generato più di recente viene scelto per l'espansione. \\
+	Questo deve essere il nodo non espanso più profondo perché è uno più profondo del suo genitore, che, a sua volta, era il nodo non espanso più profondo quando è stato selezionato.
+	\begin{itemize}
+		\item Ottimalità: Non è ottimo perché non usa nessun criterio per favorire le soluzioni a costo minore e quindi la prima soluzione trovata può non essere la soluzione ottima
+		\item Completezza: Non è completo perché può imbattersi in un percorso di profondità infinita
+		\item Se $b$ è il fattore di ramificazione e $m$ è la massima profondità dell'albero, allora il numero massimo di nodi espansi è: $1+b+b^2+b^3+…+b^m$
+		\item Complessità temporale: $b^m$ (paragonabile alla ricerca in ampiezza)
+		\item Complessità spaziale: $bm$ (molto modesta: i.e. riduzione a 109 rispetto a ricerca in ampiezza nel caso visto per $d=12)$.
+	\end{itemize}
+	\textbf{Backtracking}: Variante della ricerca di profondità, dove viene generato un solo successore alla volta e ogni nodo parzialmente espanso ricorda quale successore generare successivamente (sarà necessaria solo $O(m)$ memoria anziché $O(bm)$).\\
+	Un’altra ricerca all’indietro facilita ancora un altro trucco per risparmiare sui costi e sui tempi: l’idea di generare un successore modificando direttamente la descrizione anziché copiarla prima.\\
+	Affinché funzioni, dobbiamo essere in grado di annullare ogni modifica quando torniamo a generare il successivo successore.
+	\subsubsection{Ricerca Limitata in Profondità (Depth-Limited Search)}
+	Per superare il problema dell’algoritmo di ricerca in profondità nell’esplorare alberi con rami con un numero infinito di nodi si può imporre un limite alla profondità dei nodi da espandere.\\
+	La scelta del limite dovrebbe essere condizionata dalla previsione sulla profondità a cui si trova la soluzione.
+	\begin{itemize}
+		\item Ottimalità: non è ottimo per gli stessi motivi della ricerca in profondità
+		\item Completezza: è completo nel caso in cui il limite sia superiore alla profondità della soluzione
+		\item Se $b$ è il fattore di ramificazione e se fissiamo il limite di profondità dell’albero a $L$, allora il numero massimo di nodi espansi è: $1+b+b^2+b^3+…+b^L$
+		\item Complessità temporale: $b^L$
+		\item Complessità spaziale: $bL$
+	\end{itemize}
+	\subsubsection{Ricerca Iterativa in Profondità (Iterative Deepening Search)}
+	Il problema principale dell’algoritmo di ricerca limitato in profondità è la scelta del limite a cui fermare la ricerca. \\
+	Il modo per evitare del tutto questo problema è quello di applicare iterativamente l’algoritmo di ricerca limitato in profondità con limiti crescenti.\\
+	In questo caso l’ordine di espansione dei nodi è simile a quello della ricerca in ampiezza con la differenza che alcuni nodi sono espansi più volte.
+	\begin{itemize}
+		\item Questo algoritmo è completo ed è ottimo quando l’algoritmo di ricerca in ampiezza è ottimo;
+		\item Se $b$ è il fattore di ramificazione e se la profondità della soluzione è $d$, allora il numero massimo di nodi espansi dall'algoritmo di ricerca iterativa in profondità è: $(d+1)1+(d)b+(d-1)b^2+(d-2)b^3+...+1b^d$
+		\item Complessità temporale: $b^d$
+		\item Per $b = 10$ e $d = 5$ rendendo iterativo l’algoritmo passiamo da 111111 a 123456 nodi espansi
+		\item Complessità spaziale: $bd$
+	\end{itemize}
+	Metodo preferibile quando lo spazio di ricerca è grande e la profondità della soluzione non è conosciuta.
+	\subsubsection{Ricerca Bidirezionale (Bidirectional Search)}
+	L’idea è quella di cercare contemporaneamente in avanti dallo stato iniziale e indietro dal goal.\\
+	Se b è il fattore di ramificazione e d è la profondità della soluzione, allora la complessità temporale dell'algoritmo di ricerca bidirezionale è: $2b^{(d/2)}$ che può essere approssimato con: $b^{(d/2)}$.
+	Per utilizzarlo bisogna superare alcuni problemi:
+	\begin{itemize}
+		\item La ricerca all'indietro richiede di generare i predecessori di un nodo. Per fare ciò, gli operatori devono essere reversibili.
+		\item Come si tratta il caso in cui ci sono diversi goal possibili?
+		\item Bisogna controllare in modo efficiente se un nodo è già stato trovato dall'altro metodo di ricerca.
+		\item Che tipo di ricerca è preferibile utilizzare nei due sensi?
+	\end{itemize}
+	\subsection{Eliminazione della ripetizione di percorsi}
+	Se non evitiamo di ripetere la ricerca sugli stessi nodi lo spazio di ricerca può essere infinito. \\
+	Esistono alcuni controlli per aggirare il problema:
+	\begin{itemize}
+		\item Viene proibito di ritornare nel nodo che ha generato il nodo corrente
+		\item Viene proibito di ritornare in un nodo antenato del nodo corrente
+		\item Viene proibita la generazione di un nodo già esistente
+	\end{itemize}
+	\subsection{Evitare ripetizioni di stati}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Albero}
+		\label{fig:im-15}
+	\end{figure}
+	Uno spazio degli stati che genera un albero di ricerca esponenziale. \\
+	Il lato sinistro mostra lo spazio degli stati, nel quale ci sono due azioni possibili che conducono da $A$ a $B$, due da $B$ a $C$ e così via. \\
+	Il lato destro mostra l'albero di ricerca corrispondente.
+	\subsection{Ricercare le soluzioni: Strategie informate}
+	\subsubsection{Metodi di ricerca informati ed esplorazione}
+	I metodi precedenti sono molto inefficienti, visto che non hanno nessun modo per valutare quante possibili soluzioni parziali siano vicine ad un goal del problema. \\
+	I metodi di ricerca informati o euristica usano una conoscenza specifica relativa al problema.
+	\subsubsection{Strategie informate}
+	Invece di espandere i nodi in modo qualunque utilizziamo conoscenza euristica sul dominio (funzioni di valutazione) per decidere quale nodo espandere per primo. \\
+	Le funzioni di valutazione danno una stima computazionale dello sforzo per raggiungere lo stato finale.
+	\subsubsection{Ricerca lungo il Cammino Migliore (Best-First Search)}
+	E’ un’istanza dell’algoritmo generale ricerca su un albero o un grafo in cui il nodo da espandere viene scelto sulla base di una funzione di valutazione. \\
+	Il nome “best-search” è impreciso, perché non ci dovrebbe essere la ricerca ma solo una marcia diretta verso il goal. \\
+	Tutto quello che si può fare è espandere il nodo che sembra più promettente.\\ \\
+	Il tempo speso per valutare mediante una funzione euristica il nodo da espandere deve corrispondere a una riduzione nella dimensione dello spazio esplorato. \\
+	Trade-off fra tempo necessario nel risolvere il problema (livello base) e tempo speso nel decidere come risolvere il problema (meta-livello). \\
+	Le ricerche non informate non hanno queste attività di meta-livello.
+	\subsection{Ricerca lungo il cammino migliore}
+	Questo metodo consiste nell’uso di una funzione di valutazione che calcola un numero che rappresenta la desiderabilità relativa all'espansione di nodo.\\
+	$h(n)$ = costo stimato del cammino più conveniente dal nodo $n$ a un nodo obiettivo\\
+	Le pratiche più diffuse in questo metodo di ricerca sono:
+	\begin{itemize}
+		\item Best-first: Ovvero scegliere come nodo da controllare quello che sembra più desiderabile;
+		\item Queuing Fn: Ordinamento dei nodi in ordine decrescente di desiderabilità.
+	\end{itemize}
+	\subsubsection{Greedy search (o ricerca golosa)}
+	Il Greedy search è un metodo che cerca di minimizzare il costo per raggiungere l’obiettivo della ricerca, espandendo ogni volta il nodo più desiderabile. \\
+	La desiderabilità di ogni nodo viene assegnata da una funzione, chiamata funzione Euristica ed indicata dalla lettera $h$ che, però, spesso può solo fare una stima del costo del suddetto nodo e non un calcolo deterministico.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Stadi di una ricerca golosa}
+		\label{fig:im-16}
+	\end{figure}
+	Ha molte caratteristiche che lo rendono simile alla ricerca in profondità, quindi non è né ottimo né completo, infatti se consideriamo $b$ è il fattore di ramificazione e $m$ la massima profondità dello spazio di ricerca, nel peggior caso questo algoritmo ha una complessità spaziale e temporale di $b^m$.\\ \\
+	A differenza dell'algoritmo di ricerca in profondità, la complessità temporale e spaziale sono uguali perché tutti i nodi vengono mantenuti in memoria, infine l'efficienza della ricerca dipende dalla bontà dell'euristica.\\ \\
+	Questo tipo di ricerca non è detto che trovi la soluzione migliore, ovvero il cammino migliore per arrivare al goal, perché considera solo la distanza dal goal, e non anche il "costo" nel raggiungere il nodo $N$ dalla radice.
+	\subsubsection{Algoritmo A* (ricerca a stella)}
+	\begin{itemize}
+		\item Si propone di minimizzare il costo totale stimato della soluzione
+		\item E' la forma di ricerca a costo uniforme e best-first più diffusa
+		\item Combina i metodi di ricerca a costo uniforme e quello lungo il cammino più vicino al goal (Greedy search)
+		\item Si ottiene un algoritmo, detto A*, che offre i vantaggi di entrambi
+	\end{itemize}
+	Questo algoritmo unisce i 2 vantaggi principali del Greedy Search, ovvero la minimizzazione del costo in termini di distanza dall'obiettivo, e dell'algoritmo di ricerca a costo uniforme, ovvero la minimizzazione del costo del percorso per raggiungere un determinato nodo, e per fare ciò l'algoritmo A* somma le due funzioni di valutazione, la sua formula euristica sarà quindi $f(n) = g(n) + h(n)$, dove:
+	\begin{itemize}
+		\item $g(n)$ = costo effettivo dalla radice al nodo $n$;
+		\item $h(n)$ = costo stimato dal nodo $n$ al nodo obiettivo (goal);
+		\item $f(n)$ = costo totale stimato di un cammino che arriva al goal passando per $n$.
+	\end{itemize}
+	La ricerca A* usa una euristica ammissibile cioè: $h(n) <= h^*(n)$ dove $h^*(n)$ è il vero costo da $n$ al goal.\\
+	Definizione dell'algoritmo A*:
+	\begin{enumerate}
+		\item Sia L una lista dei nodi iniziali del problema
+		\item Sia n il nodo di L per cui $g(n)+h(n)$ è minima. Se $L$ è vuota fallisci
+		\item Se $n$ è il goal fermati e ritorna esso più la strada percorsa per raggiungerlo
+		\item Altrimenti rimuovi $n$ da $L$ e aggiungi a $L$ tutti i nodi figli di $n$ con label la strada percorsa partendo dal nodo iniziale e torna al punto 2
+	\end{enumerate}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Stadi si una ricerca a*}
+		\label{fig:im-17}
+	\end{figure}
+	L'algoritmo A* è ottimamente efficiente (optimally efficient) per ogni funzione euristica, cioè non esiste alcun altro algoritmo ottimo che espande un numero di nodi minore dell'algoritmo A* a parità di funzione euristica, ma, questo algoritmo non garantisce la soluzione ottima generale perché dipende dalla funzione euristica.\\ \\
+	Si può provare che l'algoritmo A* è ottimo e completo se $h$ è una euristica ammissibile, cioè se non sovrastima mai il costo per raggiungere il goal. \\ \\
+	L'algoritmo A* è ottimo se $h(n)$ è ammissibile, ad esempio supponiamo di incontrare un nodo obiettivo subottimo $G2$ e sia $C^*$ il costo della soluzione ottima: $h(G2)=0$ (nodo obiettivo) ed $f(G2)= g(G2)+h(G2)= g(G2)> C*$.\\
+	Consideriamo ora di incontrare $n$ che si trova sul cammino della soluzione ottima: $f(n)= g(n)+h(n) \leq C*$ quindi da ciò possiamo ricavare che: $f(n) \leq C*< f(G2)$ in modo che $G2$ non sarà espanso e l'algoritmo dovrà restituire come risultato la soluzione ottima.\\
+	Consideriamo ora di usare un grafo invece che un albero come spazio di ricerca, ci serviranno quindi 2 liste:
+	\begin{itemize}
+		\item Nodi espansi e rimossi dalla lista per evitare di esaminarli nuovamente (nodi chiusi)
+		\item Nodi ancora da esaminare (nodi aperti)
+	\end{itemize}
+	\subsubsection{Algoritmo A* per grafi}
+	\begin{enumerate}
+		\item Sia La una lista aperta dei nodi iniziali del problema;
+		\item Sia $n$ il nodo di $La$ per cui $g(n) + h'(n)$ è minima. Se $La$ è vuota fallisci
+		\item Se n è il goal fermati e ritorna esso più la strada percorsa per raggiungerlo
+		\item Altrimenti rimuovi $n$ da $La$, inseriscilo nella lista dei nodi chiusi $Lc$ e aggiungi a $La$ tutti i nodi figli di $n$ con label la strada percorsa partendo dal nodo iniziale e ritorna al punto 2 (se un nodo figlio è già in $La$, aggiornalo con la strada migliore che lo connette al nodo iniziale, se invece è già in $Lc$, non aggiungerlo a $La$, ma, se il suo costo è migliore, aggiorna il suo costo e i costi dei nodi già espansi che da lui dipendono)
+	\end{enumerate}
+	Si può dimostrare che se invece di un albero ricerchiamo in un grafo l'algoritmo A* potrebbe restituire delle soluzioni subottime, questo, perché l'algoritmo scarta un cammino appena scoperto se esso porta ad un nodo già espanso, e può succedere, che venga scartato un cammino migliore di quello trovato in precedenza, e quindi che si perda una soluzione ottima, per evitare questo dobbiamo imporre un requisito supplementare su $h(n)$: il \textbf{requisito di consistenza o monotocità}.\\ \\
+	Un euristica è \textbf{consistente} se, per ogni nodo $n$ e ogni successore $n'$ di $n$ generato da un'azione $a$, il costo stimato per raggiungere l'obiettivo partendo da $n$ non è superiore al costo per arrivare a $n'$ sommato al costo stimato per andare da lì all'obiettivo, ovvero: $h(n)<= c(n,a,n’)+h(n’)$ \\ \\
+	L'algoritmo A* è completo, perché, espande i nodi nell'ordine dato dai rispettivi valori di $f$, quindi, se un goal ha valore $f^*$, l'algoritmo A* è completo se non ci sono infiniti nodi con$ f < f^*$.\\ \\
+	Anche se l'algoritmo A* è l'algoritmo di ricerca ottimo che espande il minor numero di nodi, in molti casi la complessità è esponenziale in funzione della lunghezza della soluzione, questo perché il numero di nodi espansi cresce esponenzialmente a meno che l'errore della stima $h$ del vero costo $h*$ non cresca più lentamente del logaritmo del costo reale del percorso: $|h(n) - h^*(n)| <= O(log \cdot h^*(n))$
+	\subsubsection{A* Iterativo in Profondità (Iterative Deepening A* - IDA*)}
+	L'algoritmo A* nei casi peggiori richiede molta memoria, per ovviare a questo problema si può usare la tecnica della ricerca iterativa in profondità. \\
+	In questo caso il limite non è la profondità del nodo, ma il costo $f$: ad ogni ciclo vengono espansi solo i nodi con costo minore del limite, che, viene aggiornato per il prossimo ciclo al minimo valore $f$ dei nuovi nodi generati. \\
+	Anche IDA*, come A*, è completo ed ottimo, inoltre, dato che si basa su una ricerca in profondità, ha una complessità spaziale di $bd$ (fattore di ramificazione $\cdot$ profondità della soluzione).\\ \\
+	La complessità temporale invece dipende dal numero di valori che la funzione euristica può assumere, dato che questo numero determina il numero di iterazioni. \\
+	Un modo per superare questo limite è incrementare il limite di costo di $\varepsilon$ rendendo il numero di cicli proporzionale a $1/\varepsilon$, questo algoritmo è detto $\varepsilon$-ammissibile; non è ottimo perché può ritornare una soluzione che può essere peggio di quella ottima, ma può avere un costo massimo di $\varepsilon$.
+	\subsubsection{SMA* (Simplified Memory-Bounded A*)}
+	SMA* espande sempre la foglia migliore finché la memoria è piena, a questo punto deve cancellare un nodo in memoria, ed elimina il peggiore (quello col valore $f$ più elevato), però, memorizza nel nodo padre il valore del nodo rimosso in modo da poter rigenerare il sotto-albero dimenticato quando tutti gli altri cammini sono falliti.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{SMA*}
+		\label{fig:im-18}
+	\end{figure}
+	\paragraph{Esempio di ricerca con SMA*}
+	(riferito all'albero di esempio precedente)
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Esempio SMA*}
+		\label{fig:im-19}
+	\end{figure}
+	\begin{enumerate}
+		\item Aggiungo $B$ e $G$ ad $A$, quello col costo minimo è $G$, allora scarto $B$, mantenendo in memoria $A$, e proseguo espandendo $G$
+		\item Espando $H$ ma non posso proseguire
+		\item Espando $I$
+		\item $I$ è l’obiettivo ma non è detto che sia il migliore
+		\item Rigenero a partire da $A$ il nodo $B$ per verificare che ci siano dei percorsi migliori (ad esempio in questo caso l’obiettivo $D$ ha costo più basso di $I$)
+	\end{enumerate}
+	I nodi rimossi sono rigenerati solo nel caso in cui tutti i percorsi attivi assumano un valore peggiore del valore di un percorso stimato rimosso (ad esempio in questo caso il nodo $B$ viene rigenerato perché ha costo 15, mentre il percorso che porta all'obiettivo I che abbiamo trovato ha un costo di 24).
+	\paragraph{Proprietà algoritmo SMA*}
+	\begin{itemize}
+		\item Utilizza la memoria a disposizione
+		\item Evita di rigenerare nodi in base a quanta memoria ha a disposizione
+		\item È completo se la memoria è sufficiente a contenere il percorso che comprende la soluzione
+		\item È ottimo se la memoria è sufficiente a contenere il percorso della soluzione, altrimenti ritorna la migliore soluzione che può raggiungere con la memoria a disposizione
+		\item È ottimamente efficiente se può memorizzare tutto l’albero di ricerca
+	\end{itemize}
+	Quindi se la memoria è sufficiente SMA* risolve dei problemi più difficili rispetto ad A*, ma, con problemi troppo difficili, e che sarebbero risolvibili se si avesse a disposizione memoria illimitata, la necessità di ripetere più volte la generazione di nodi rende il problema intrattabile dal punto di vista temporale.\\ \\
+	Nonostante non ci sia una teoria che formalizzi il problema del compromesso tra tempo e memoria, non sembra esistere una soluzione efficace ad esso se non quella di rinunciare al requisito dell’ottimalità ed insegnare alla macchina ad imparare meglio aggiungendo uno spazio di metalivello al dominio del problema.\\ \\
+	Questo perché per problemi più difficili, ci saranno molti passi falsi e un algoritmo di apprendimento ad un metalivello può imparare da queste esperienze per evitare di esplorare assemblaggi di sottoalberi poco promettenti, queste tecniche sono fondamentali per il successo e cercano di minimizzare il costo totale della soluzione del problema, sia dal punto di vista del costo del cammino, che, anche, da quello del costo computazionale che serve per ottenerlo.
+	\subsection{Scelta euristica}
+	Consideriamo un problema molto semplice come 8-puzzle:\\
+	E’ possibile definire differenti funzioni euristiche.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Esempio 8-puzzle}
+		\label{fig:im-20}
+	\end{figure}
+	\\Una soluzione media richiede circa 20 mosse, considerando che da ogni stato del puzzle si possono generare in media 3 nuovi stati (fattore di ramificazione), una ricerca in profondità esaustiva esplorerebbe un numero enorme di possibili configurazioni (circa 3.5 miliardi).\\ \\
+	Possiamo ridurre il numero di nodi da esplorare, ad esempio evitando di visitare più volte lo stesso stato, tuttavia, anche eliminando i duplicati, il numero di stati possibili rimane molto elevato $(9! = 362.880)$, quindi, per risolvere efficacemente l'8-puzzle, è necessario adottare delle buone euristiche, che ci permettano di guidare la ricerca verso soluzioni più promettenti e rendano il problema risolvibile in tempi accettabili.\\ \\
+	Un esempio di possibili euristiche sono: $h_1$ numero di tessere che sono fuori posto $(h_1=7)$\\
+	$h_2$ = la somma delle distanze orizzontali e verticali (distanza di Manhattan) dalle posizioni che le tessere devono assumere nella configurazione obiettivo $(h_2=2+3+3+2+4+2+0+2=18)$\\ \\
+	Confronto dei costi di IDS (iterative-deepening search) e A* con $h_1$ e $h_2$ (numero medio di nodi espansi in 100 esperimenti):
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c|c|c| }
+			\hline
+			\multicolumn{1}{|c|}{ } & \multicolumn{3}{|c|}{Search Cost (Node Generated)} & \multicolumn{3}{|c|}{Effective Branching Factor} \\
+			\hline
+			$d$ & IDS & $A'(h_1)$ & $A'(h_2)$ & IDS & $A'(h_1)$ & $A'(h_2)$\\
+			\hline
+			2 & 10 & 6 & 6 & 2.45 & 1.79 & 1.79\\
+			\hline
+			4 & 112 & 13 & 12 & 2.87 & 1.48 & 1.45\\
+			\hline
+			6 & 680 & 20 & 18 & 2.73 & 1.34 & 1.30\\
+			\hline
+			8 & 6084 & 39 & 25 & 2.80 & 1.33 & 1.24\\
+			\hline
+			10 & 47127 & 93 & 39 & 2.79 & 1.38 & 1.22\\
+			\hline
+			12 & 3644035 & 227 & 73 & 2.78 & 1.42 & 1.24\\
+			\hline
+			14 & - & 539 & 113 & - & 1.44 & 1.23\\
+			\hline
+			16 & - & 1301 & 211 & -& 1.45 & 1.25\\
+			\hline
+			18 & - & 3056 & 363 & - & 1.46 & 1.26\\
+			\hline
+			20 & - & 7276 & 676 & - & 1.47 & 1.27\\
+			\hline
+			22 & - & 18094 & 1219 & - & 1.48 & 1.28\\
+			\hline
+			24 & - & 39135 & 1641 & - & 1.48 & 1.26\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Dai risultati sperimentali si ricava che $h_2$ è una stima migliore del costo per raggiungere il goal e domina sull'altra.\\
+	La dominanza di una funzione euristica $h_2$ rispetto a $h_1$ si traduce in una maggiore efficienza nella ricerca A*, poiché A* con $h_2$ non espanderà mai più nodi rispetto ad A* con $h_1$ (eccetto per alcuni nodi con $f(n)=C^*$.\\
+	Questo accade perché:
+	\begin{itemize}
+		\item Ogni nodo con $f(n)=C^*$ sarà sicuramente espanso, il che equivale a dire che ogni nodo con $h(n) <C^*-g(n)$ sarà espanso
+		\item Poiché $h_2$ è almeno pari a $h_1$ per ogni nodo, ogni nodo espanso da A* con $h_2$ sarà anche espanso con $h_1$, mentre $h_1$ potrebbe espandere ulteriori nodi.
+	\end{itemize}
+	Di conseguenza, è generalmente vantaggioso usare un'euristica con valori più alti (dominante), purché sia coerente e il suo calcolo non sia troppo oneroso in termini di tempo.\\
+	Le due euristiche esaminate per l'8-puzzle sono le funzioni di valutazione esatte della distanza dal goal per due versioni semplificate del problema, quindi si può dire che le soluzioni di un problema $P_r$, ottenuto rilassando (togliendo restrizioni alle) le regole di un problema $P$, sono delle buone euristiche per $P$.
+	\subsubsection{Generazione automatica di euristiche ammissibili attraverso il rilassamento dei problemi}
+	Se la definizione del problema è espressa in un linguaggio formale, è possibile generare varianti semplificate (rilassamenti) eliminando alcune restrizioni.\\ \\
+	Questi rilassamenti permettono di ottenere euristiche ammissibili, poiché il costo di una soluzione ottima per un problema rilassato è sempre minore o uguale al costo di una soluzione ottima per il problema originale.\\ \\
+	Ad esempio, nel problema dell'8-puzzle, un tassello può muoversi da una posizione $A$ a $B$ solo se $A$ e $B$ sono adiacenti e $B$ è vuota. rimuovendo una o entrambe le condizioni, si ottengono diversi problemi rilassati:
+	\begin{enumerate}
+		\item Un tassello può muoversi se $A$ e $B$ sono adiacenti (da cui deriva la distanza di Manhattan)
+		\item Un tassello può muoversi da $A$ a $B$ se $B$ è vuota
+		\item Un tassello può muoversi da $A$ a $B$ senza restrizioni
+	\end{enumerate}
+	È molto importante che i problemi rilassati, generati da questa tecnica, possano essere risolti essenzialmente senza ricerca, perché le regole rilassate consentono di scomporre il problema in sotto-problemi indipendenti e se il problema rilassato è difficile da risolvere, allora sarà costoso ottenere i valori dell'euristica corrispondente.\\ \\
+	Un problema con la generazione di nuove funzioni euristiche è che spesso non si riesce a ottenere una singola euristica “chiaramente migliore”.\\ \\
+	Quando si dispone di un insieme di euristiche ammissibili per un problema $(h1,h2, \dots, hm)$ senza una dominante, è possibile definire un’euristica composita che prenda il massimo tra queste: $h(n) = max\{h1(n), ..., hm(n)\}$, questa euristica composita è ammissibile e consistente, in genere domina le singole euristiche.\\ \\
+	Se un problema è formalmente definito, una macchina può generare euristiche basandosi su tale definizione. \\
+	Ad esempio, il programma ABSOLVER (1993) ha sviluppato la prima euristica utile per il cubo di Rubik. \\
+	Altri metodi per ottenere euristiche includono l'uso di informazioni statistiche e l'apprendimento dall'esperienza tramite reti neurali o alberi decisionali eccetera…
+\end{document}

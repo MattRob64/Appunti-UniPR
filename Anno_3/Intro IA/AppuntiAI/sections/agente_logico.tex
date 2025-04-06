@@ -1,0 +1,602 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Introduzione al ragionamento automatico logico con la logica proposizionale}
+	Si progettano agenti che possono costruire rappresentazioni del mondo, applicare processi di inferenza per derivare nuove rappresentazioni e usarle per dedurre cosa fare, nel paper “Programs with Common Sense” (1968), John McCarthy esprime l’idea di agenti che usano il ragionamento logico per mediare tra percetti e azioni e l’indipendenza fra il ragionamento logico e l’algoritmo che lo implementa.\\\\
+	Sembra che gli uomini conoscano le cose a priori e ciò che sanno li aiuta ad agire.\\
+	Infatti, l'intelligenza degli esseri umani non passa attraverso meccanismi puramente reattivi, ma tramite processi di ragionamento, che operano su rappresentazioni interne della conoscenza.\\\\
+	Nell'IA, questo approccio all'intelligenza è incarnato in agenti basati sulla conoscenza, ed è alla base dei nostri sistemi intelligenti. \\
+	Gli agenti “problem-solving” sanno le cose, ma solo in un senso molto limitato e non flessibile, ad esempio, nel modello di transizione per l'8-puzzle, la conoscenza di ciò che fa una azione è nascosta all'interno del codice specifico del dominio della funzione RISULTATO, che può quindi essere utilizzato per prevedere l'esito delle azioni ma non per dedurre che due tessere non possono occupare lo stesso spazio.\\\\
+	Anche le rappresentazioni usate dagli agenti di risoluzione dei problemi sono molto limitanti, infatti, in un ambiente parzialmente osservabile, l'unica scelta di un agente per rappresentare ciò che sa sullo stato attuale è elencare tutti i possibili stati concreti: una prospettiva senza speranza in ambienti vasti.\\\\
+	CSP ha introdotto l'idea di rappresentare gli stati come assegnazioni di valori a variabili; consentendo, quindi, ad alcune parti dell'agente di lavorare in modo indipendente dal dominio ed algoritmi più efficienti.\\\\
+	La logica, invece, è una classe generale di rappresentazioni per supportare agenti basati sulla conoscenza, quindi, gli agenti logici, hanno una rappresentazione esplicita della conoscenza con cui è possibile ragionare (ovvero una rappresentazione interna strutturata del modello del dominio) e sono in grado di manipolare questa conoscenza per dedurre cose nuove a "livello di conoscenza".\\\\
+	\textbf{Gli agenti basati su conoscenza possono:}
+	\begin{itemize}
+		\item Accettare nuovi compiti sotto forma di obiettivi descritti in modo esplicito
+		\item Acquisire rapidamente le competenze ricevendo informazioni o imparando nuove conoscenze sull'ambiente
+		\item Adattarsi ai cambiamenti dell'ambiente aggiornando le relative conoscenze
+	\end{itemize}
+	La conoscenza e il ragionamento hanno un ruolo cruciale nella gestione degli ambienti parzialmente osservabili; attraverso il ragionamento sulla conoscenza generale e lo stato corrente si possono dedurre aspetti nascosti dello stato del mondo, diventare più flessibili ed essere inseriti in un mondo che evolve.
+	\subsubsection{Studio degli stati nascosti}
+	Ad esempio, prima di agire con una cura, il medico deve diagnosticare la malattia, ovvero dedurre dai sintomi, qualcosa che è nascosto e non direttamente osservabile; in questo caso una parte della conoscenza del medico ha la forma di regole apprese dai libri, ma, un'altra parte è composta da schemi di associazione che lui stesso potrebbe trovare difficile descrivere in modo esplicito.\\\\
+	Anche l’utilizzo del linguaggio naturale richiede la deduzione di stati nascosti, ad esempio, con la frase “John vide il diamante attraverso il vetro e lo desiderò” noi ragioniamo, forse inconsciamente, in base alla nostra conoscenza del valore relativo dei materiali e deduciamo che “lo” si riferisce al diamante e non al vetro.\\\\
+	Inoltre il linguaggio naturale richiede anche la capacità di astrazione della descrizione simbolica, infatti, molti fenomeni linguistici sono sistemici (ovvero pertinenti solo ad uno specifico sistema) e la loro complessità trascende la possibilità di un semplice pattern-matching.
+	\subsubsection{Sistematica}
+	La Sistemica fa riferimento ad un'estensione concettuale, metodologica e culturale, della Teoria Generale dei Sistemi, in ambito scientifico è un settore di studi, a cavallo tra matematica e scienze naturali, che si occupa dell'analisi delle proprietà e della costituzione di un sistema in quanto tale; in poche parole, si riferisce ai principi e alle applicazioni dei metodi basati sul concetto di sistema, sull'interazione delle varie parti e sull'auto-organizzazione delle stesse.\\\\
+	La teoria si compone essenzialmente della teoria dei sistemi dinamici (semplici e complessi) e della teoria del controllo ed è alla base di diverse discipline come l'automatica, la robotica eccetera eccetera...\\\\
+	Il ragionamento ci permette di trattare un numero virtualmente infinito di frasi, utilizzando un deposito finito di conoscenze comuni, gli agenti risolutori di problemi, però, trovano difficile gestire questo tipo di ambiguità, perché la loro rappresentazione delle contingenze è intrinsecamente esponenziale, quindi è necessario studiare agenti basati su una conoscenza più simile a quella umana.\\\\
+	Possiamo individuare tre modi di ragionare tipicamente umani:
+	\begin{itemize}
+		\item Il pensiero logico: deduttivo (dall'idea generale ai casi particolari) o induttivo (dai casi particolari all'idea generale), è molto utile per sistemare, organizzare e definire
+		\item Il pensiero analogico: mette in relazione una cosa con l'altra, cercando analogie o diversità, è utile per aprire nuove vie con l'uso di metafore, visualizzazioni e similitudini
+		\item Il pensiero sistemico: realizza visioni sintetiche di situazioni molto complesse, ricche di dati ed interdipendenti l'una dall'altra (Presuppone che si costruisca all'interno della mente uno scenario globale, che rappresenti il sistema di riferimento su cui poi si va a lavorare localmente)
+	\end{itemize}
+	\subsubsection{Basi di Conoscenza (knowledge Bases)}
+	Le basi di conoscenza sono un insieme di dichiarazioni (sentences) scritte in un linguaggio formale, e permettono di usare un approccio dichiarativo per la costruzione di un agente, ovvero (contrariamente all'approccio procedurale in cui la conoscenza del progettista viene codificata direttamente nel programma sotto forma, appunto, di codice) si può dire all'agente ciò che deve sapere (conoscenza iniziale) per poi interrogarlo per sapere cosa fare, con le risposte, dell'agente, che discendono dalla base di conoscenza che noi gli abbiamo fornito.\\\\
+	La base di conoscenza deve prevedere meccanismi per aggiungere nuove formule e per le dichiarazioni, e sia la fase in cui si forniscono all'agente le conoscenze (fase TELL) che quella di interrogazione (fase ASK) possono comportare un processo di inferenza, ovvero la derivazione di nuove formule a partire da quelle conosciute.\\\\
+	Gli agenti possono essere visualizzati:
+	\begin{itemize}
+		\item A livello della loro conoscenza (Knowledge level), ovvero ciò che sanno, indipendentemente da come lo si è implementato
+		\item A livello di codifica di procedure (implementation level), cioè, strutture dei dati in KB (Knowledge Bases) e algoritmi che le manipolano
+	\end{itemize}
+	\subsubsection{Agente logico basato su una KB}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Basi di conoscenza}
+		\label{fig:im-25}
+	\end{figure}
+	Algoritmo specializzato = ragionamento di uso generale + conoscenza specializzata\\
+	In questo modo è possibile:
+	\begin{itemize}
+		\item Date alcune condizioni dedurre il goal
+		\item Dato il goal dedurre le possibili cause
+	\end{itemize}
+	In ogni caso è però impossibile riconoscere il falso.\\\\
+	Un agente di questo tipo deve essere in grado di:
+	\begin{itemize}
+		\item Rappresentare stati, azioni, etc…
+		\item Incorporare nuove percezioni
+		\item Aggiornare la rappresentazione interna del mondo
+		\item Dedurre proprietà nascoste del mondo
+		\item Dedurre azioni appropriate
+	\end{itemize}
+	L’agente è indipendente dal livello dell’implementazione e ci interessa sapere cosa fa a livello di conoscenza non i dettagli di come la ottiene, infine, un agente di successo, deve combinare sia elementi \textbf{dichiarativi} che \textbf{procedurali} e non può basarsi su solo uno dei 2 approcci.\\
+	Per risolvere qualsiasi tipo di problema di IA ci serve definire 2 cose:
+	\begin{itemize}
+		\item la conoscenza riguardante il problema
+		\item dei metodi per manipolarla
+	\end{itemize}
+	Per la definizione della conoscenza necessitiamo di definire 2 livelli:
+	\begin{itemize}
+		\item \textbf{livello della conoscenza}: definizione dei fatti che vogliamo rappresentare
+		\item \textbf{livello simbolico}: rappresentazione di questi fatti attraverso i cosiddetti metodi per la rappresentazione della conoscenza
+	\end{itemize}
+	Uno di questi linguaggi per la rappresentazione della conoscenza è la \textbf{logica}, che, non è utilizzata solo in intelligenza artificiale ma anche:
+	\begin{itemize}
+		\item Per la progettazione di reti logiche
+		\item Nei DB relazionali, come linguaggio per l'interrogazione intelligente
+		\item Come linguaggio di specifica di programmi per eseguire prove formali di correttezza
+		\item Come un vero e proprio linguaggio di programmazione (programmazione logica e PROLOG)
+	\end{itemize}
+	\subsubsection{Logica moderna o logica matematica}
+	La logica così come la intendiamo è una disciplina relativamente recente, le cui origini si possono far risalire ai lavori di George Boole (1854, logica di Boole) e di Gottlob Frege (1879), nella storia del pensiero occidentale, tuttavia, la tradizione della logica si può far risalire alla Grecia classica, dove, l'obiettivo di questa disciplina, per i filosofi greci, era stabilire sotto quali condizioni si possa dire che un'argomentazione è valida.\\\\
+	Ciò che caratterizza la logica moderna è l’utilizzo di \textbf{metodi formali} (proprio per questo è anche detta \textbf{logica formale} o \textbf{logica simbolica}), inoltre è anche detta \textbf{logica matematica} per due motivi:
+	\begin{itemize}
+		\item Utilizza un approccio di tipo matematico
+		\item Uno dei suoi obiettivi è chiarire alcuni problemi concernenti i fondamenti della matematica
+	\end{itemize}
+	La logica e i metodi formali sono necessari sia per realizzare sistemi informatici ‘intelligenti’ (che hanno capacità di ragionamento), sia per analizzare e progettare sistemi che siano dimostrabilmente corretti e sicuri, quindi, la logica, è la scienza che fornisce all'uomo gli strumenti indispensabili per verificare con sicurezza la correttezza dei ragionamenti.\\\\
+	La logica fornisce strumenti formali per:
+	\begin{itemize}
+		\item \textbf{Esprimere} le deduzioni in termini di operazioni su espressioni simboliche
+		\item \textbf{Dedurre} conseguenze da certe premesse
+		\item \textbf{Studiare} la verità o falsità di certe proposizioni data la verità o falsità di altre proposizioni
+		\item \textbf{Stabilire} la consistenza e la validità di una data teoria
+	\end{itemize}
+	Il modo per inferire nuova conoscenza in logica è basato sul \textbf{ragionamento deduttivo}, ovvero, un ragionamento che, condotto correttamente, mantiene la \textbf{veridicità delle premesse}, e, se queste conoscenze da cui partiamo (le premesse appunto), allora anche le nuove conoscenze che otteniamo in base a queste (le \textbf{conclusioni}) sono vere.\\\\
+	Un esempio tipico di ragionamento deduttivo è il Sillogismo (o ragionamento concatenato): Gli uomini sono mortali, Socrate è un uomo, allora Socrate è mortale\\\\
+	Il sillogismo fu introdotto da Aristotele che osservò che la veridicità delle premesse determina quella della conclusione.\\\\
+	Ogni sillogismo si compone di tre parti:
+	\begin{enumerate}
+		\item \textbf{Premessa maggiore}: contiene il termine "maggiori" (predicato della conclusione).
+		\begin{itemize}
+			\item Es.: Ogni animale è mortale.
+		\end{itemize}
+		\item \textbf{Premessa minore}: contiene il termine "minore" (soggetto della conclusione).
+		\begin{itemize}
+			\item Es.: Ogni uomo è animale.
+		\end{itemize}
+		\item \textbf{Conclusione}: collega i termini maggiore e minore.
+		\begin{itemize}
+			\item Es.: Ogni uomo è mortale.
+		\end{itemize}
+	\end{enumerate}
+	Aristotele classificò i termini in base al rapporto tra contenente e contenuto, dimostrando che una corretta struttura garantisce la validità della conclusione.
+	\subsection{Logica}
+	\textbf{Sillogismo}: Tipico esempio di ragionamento deduttivo.\\\\
+	\textbf{Logica matematica}: Un ragionamento è corretto/valido se e solo se non esiste il caso dove le proposizioni sono vere e la conclusione falsa. \\
+	La conclusione è la conseguenza logica delle premesse.\\\\
+	\textbf{Logica moderna}: Pone il compito di rappresentare in modo formale la corrispondenza tra espressioni linguistiche e significato inteso.\\\\
+	Nel processo di traduzione (formalizzazione) dal linguaggio naturale alla rappresentazione proporzionale, le relazioni studiate riguardano la struttura dei ragionamenti e non il "senso" comune delle formule nell’ambito discorsivo di riferimento.\\\\
+	In logica si studia la relazione tra le formule di un sistema logico-simbolico in cui:
+	\begin{itemize}
+		\item Il linguaggio delle formule è definito con precisione
+		\item Il significato delle formule è stabilito in modo non ambiguo
+	\end{itemize}
+	\textbf{Assiomi}: Conoscenza iniziale nella logica.\\\\
+	\textbf{Teoremi}: Nuove conoscenze dedotte dagli assiomi.\\\\
+	Per dedurre nuovi teoremi si usano le regole di inferenza. Ogni regola di inferenza è composta da due parti:
+	\begin{itemize}
+		\item Un insieme di premesse separate da virgole
+		\item Le conclusioni
+	\end{itemize}
+	\subsubsection{Logica: Linguaggio}
+	La logica è un linguaggio formale per rappresentare delle informazioni e per trarre delle conclusioni.\\\\
+	\textbf{Sintassi}: Definisce le proposizioni ammissibili del linguaggio.\\
+	\textbf{Semantica}: Definisce il “significato” delle proposizioni cioè la verità di una proposizione in un mondo.
+	\subsubsection{Ragionamento logico: Implicazione}
+	\textbf{Implicazione}: Da una cosa ne segue logicamente un'altra.
+	\[KB \vDash \alpha\]
+	La base di conoscenza $KB$ implica $\alpha$ se e solo se $\alpha$ è vero in tutti i mondi dove KB è vero.\\
+	Se $KB$ è vera nel mondo reale, allora anche $\alpha$ derivata da $KB$ tramite un processo di inferenza corretto è vera nel mondo reale.\\\\
+	Le formule sono configurazioni fisiche dell'agente, il ragionamento è il processo di costruzioni di nuove configurazioni a partire dalle vecchie.\\\\
+	Il ragionamento logico dovrebbe assicurare che le nuove configurazioni rappresentino aspetti del mondo reale che sono effettive conseguenze degli aspetti del mondo rappresentati dalle vecchie configurazioni.
+	\subsubsection{Models}
+	\begin{itemize}
+		\item Si dice che m è un modello di una proposizione $\alpha$ se $\alpha$ è vera in $m$
+		\item $M(\alpha)$ è l'insieme di tutti i modelli di $\alpha$
+		\item Quindi $KB\vDash \alpha \; iff \; M(KB) \subseteq M(\alpha)$
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Basi di conoscenza}
+		\label{fig:im-26}
+	\end{figure}
+	{\color{red} Approfondimento su slide "Intro\_IA-21-AgenteLogico-1" Whumpus Possible Models}
+	\subsubsection{Inferenza nel modello Wumpus}
+	L'esempio mostra come la definizione di implicazione può essere applicata per trarre conclusioni, cioè per eseguire l'inferenza logica.\\
+	Questo tipo di algoritmo di inferenza è detto \textbf{model checking}, perché enumera tutti i modelli possibili per verificare che $\alpha$ sia vero in tutti i modelli in cui $KB$ è vero, cioè che $M(KB) \subseteq M(\alpha)$
+	\paragraph{Model Checking}
+	Per capire i suoi limiti si può pensare all'insieme di tutte le conseguenze di $KB$ come un pagliaio e $\alpha$ come un ago.\\
+	L'implicazione è come l'ago nel pagliaio e l'inferenza è come un metodo per trovarlo.\\
+	Formalmente uso un algoritmo di inferenza i per poter derivare $\alpha$ da $KB$.
+	\subsubsection{Inferenza}
+	$KB \vdash \alpha$ = la frase $\alpha$ può essere derivata da $KB$ mediante procedura di inferenza $i$.\\\\
+	Validità (soundness, truth-preserving): $i$ è valida sound se ogni volta $KB \vdash \alpha$, è anche vero che $KB \vDash \alpha$, la validità è una proprietà altamente desiderabile.\\\\
+	Completezza: $i$ è completo se ogni volta $KB \vDash \alpha$, è anche vero che $KB \vdash \alpha$.\\\\
+	Un algoritmo di inferenza che deriva solo frasi logicamente implicate è chiamato truth-preserving algorithm.\\
+	Una procedura di inferenza scorretta essenzialmente inventa le cose mentre procede.\\
+	È facile vedere che il model checking è una procedura valida perché enumera tutte le possibilità, ma è inefficiente.
+	\subsubsection{Problema del “grounding”}
+	Grounding: La connessione tra i processi di ragionamento logico e l'ambiente reale in cui esiste l'agente.\\\\
+	Le regole generali sono prodotte da un processo di costruzione della frase chiamato apprendimento (learning):
+	\begin{itemize}
+		\item Dall'agente
+		\item Dall'esperienza umana
+	\end{itemize}
+	L'apprendimento può fallire.\\\\
+	Potrebbe essere il caso che i wumpus causino odori tranne il 29 febbraio negli anni bisestili, che è quando fanno il bagno.\\
+	Pertanto, $KB$ potrebbe non essere vero nel mondo reale, ma con buone procedure di apprendimento, c'è motivo di crederlo.
+	\subsubsection{Logica classica}
+	Si suddivide in due classi principali:
+	\begin{itemize}
+		\item Logica proposizionale
+		\item Logica dei predicati (o del primo ordine)
+	\end{itemize}
+	Permettono di esprimere proposizioni (cioè frasi) e relazioni tra proposizioni.\\
+	La principale differenza tra le due classi è in termini di espressività, nella logica dei predicati è possibile esprimere variabili e quantificazioni, mentre questo non è possibile nella logica proposizionale.
+	\paragraph{Limiti} 
+	In questa logica una proposizione può essere vera o falsa.\\\\
+	Il vantaggio è che le cose si semplificano enormemente, ma la semplificazione è ottenuta appiattendo l'analisi logica dell'affermazione su due soli connettivi: la negazione e la congiunzione. \\
+	Il che non significa che non ci siano altri tipi di inferenza con cui l'uomo produce nuova conoscenza, solo che la logica classica non è in grado di descriverli.
+	\subsection{Logica proposizionale}
+	E' la logica più semplice ma non molto espressiva, in quanto non possiamo esprimere delle variabili ma solo enumerare tutti gli elementi.\\\\
+	Diede importanza a quei connettivi che rendono enunciati semplici complessi, cioè quelli che possono essere sia veri che falsi.\\\\
+	Regole di inferenza:
+	\begin{itemize}
+		\item Modus ponens
+		\item Modus tollens
+		\item Sillogismo ipotetico
+		\item Sillogismo disgiuntivo
+	\end{itemize}
+	Basate sull'uso di diversi connettivi logici quali "e", "poiché", "se...allora", "oppure", attribuendovi i corrispondenti valori di verità attraverso apposite tavole.\\
+	Le argomentazioni possibili sono ridotte in quattro schemi di validità, detti anapodittivi (indimostrati/indimostrabili).\\\\
+	La logica proposizionale è limitata nel suo carattere espressivo.\\ \textbf{Problema di base}: non si possono collegare “parti” delle varie proposizioni, tuttavia è molto utilizzata ancora oggi, per esempio nella realizzazione di circuiti elettronici.
+	\subsubsection{Sintassi}
+	\begin{itemize}
+		\item I simboli $P_1$ e $P_2$ e le costanti $true$ e $false$ sono proposizioni.
+		\item Se $S$ è una proposizione anche $\neg S$ è una proposizione (not).
+		\item Se $S_1$e $S_2$ sono proposizioni, allora anche $S_1 \wedge S_2$ è una proposizione (and).
+		\item Se $S_1$ e $S_2$ sono proposizioni, allora anche $S_1 \vee S_2$ è una proposizione (or).
+		\item Se $S_1$ e $S_2$ sono proposizioni, allora anche $S_1 \Rightarrow S_2$ è una proposizione.
+		\item Se $S_1$ e $S_2$ sono proposizioni, allora anche $S_1 \Leftrightarrow S_2$ è una proposizione.
+		\item $S_1 \Rightarrow S_2$ Implicazione o condizionale
+		\item $S_1 \Leftrightarrow S_2$ Equivalenza o bicondizionale
+	\end{itemize}
+	\subsubsection{Semantica}
+	Il concetto semantico fondamentale per il linguaggio della logica proposizionale è quello di valutazione.\\
+	Tavole di verità:
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c|c|c| }
+			\hline
+			$P$ & $0$ & $\neg P$ & $P \wedge 0$ & $P \vee 0$ & $P \Rightarrow 0$ & $P \Leftrightarrow 0$\\
+			\hline
+			False & False & True & False & False & True & True\\
+			\hline
+			False & True & True & False & True & True & False\\
+			\hline
+			True & False & False & False & True & False & False\\
+			\hline
+			True & True & False & True & True & True & True \\
+			\hline
+		\end{tabular}
+	\end{center}
+	La semantica del calcolo proposizionale deve specificare come si fa, dato un modello, a calcolare il valore di verità di qualsiasi formula. \\
+	Questo viene fatto ricorsivamente fino ad arrivare alle formule atomiche dei cinque connettivi.
+	\subsection{Inference by Theorem Proving}
+	L’implicazione può essere ottenuta dimostrando (provando) teoremi, applicando regole di inferenza direttamente alle frasi presenti nella nostra base di conoscenza per costruire una prova della validità della frase desiderata senza consultare tutti modelli.\\\\
+	Se il numero di modelli è grande ma la lunghezza della dimostrazione è breve, la dimostrazione di teoremi può essere più efficiente del model checking.\\\\
+	\textbf{Equivalenza logica (primo concetto)}: Due proposizioni sono logicamente equivalenti iff (se e solo se) sono vere negli stessi: $\alpha \equiv \beta $ iff $\alpha \vDash \beta$ and $\beta \vDash \alpha$\\
+	\textbf{Validità and soddisfacibilità (secondo concetto)}:
+	\begin{itemize}
+		\item Una proposizione è valida se è vera in tutti modelli
+		\item La validità è collegata all'inferenza tramite il Teorema di deduzione:
+		\begin{itemize}
+			\item $KB \vDash \alpha$ if and only if $(KB \; \alpha)$ è valido
+		\end{itemize}
+		\item Una proposizione è soddisfacibile se è vera in qualche modello
+		\item Una proposizione è non-soddisfacibile se è vera in nessun modello;
+		\item La soddisfacibilità è collegata all'inferenza tramite quanto segue:
+		\begin{itemize}
+			\item $KB \vDash \alpha$ if and only if $(KB \; \alpha)$ è non-soddisfacibile
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Inferenza e prova di teoremi}
+	\begin{itemize}
+		\item I metodi di prova di teoremi si possono dividere in:
+		\begin{itemize}
+			\item Applicazione della regola di inferenza:
+			\item Si producono nuove sentenze valide a partire dalle prime
+			\item Prova = una sequenza di applicazione della regola di inferenza
+			\item Può utilizzare le regole di inferenza come operatori in un algoritmo di ricerca standard
+			\item In genere richiedono la trasformazione delle frasi in una forma normale
+		\end{itemize}
+		Model checking:
+		\begin{itemize}
+			\item Enumerazione delle tabelle di verità (sempre esponenziale in $n$)
+			\item Tramite backtracking o tecniche euristiche (valida ma non completa)
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Proof methods}
+	\textbf{Regola del Modus Ponens (un modo per affermare)}: Ogni volta che sono date le formule $\alpha \Rightarrow \beta$, $\alpha$ allora si può inferire $\beta$.
+	\[\frac{\alpha \Rightarrow \beta , \alpha}{\beta}\]
+	\textbf{Regola del And-Elimination (eliminazione degli and)}:
+	\[\frac{\alpha \wedge \beta}{\alpha}\]
+	Tramite le tabelle di verità si verifica che Modus Ponens e And-Elimination sono validi sempre.\\
+	Quindi danno inferenze corrette indipendentemente dal contesto senza la necessità di enumerare i modelli.\\\\
+	Tutte le equivalenze logiche possono essere utilizzate come regole di inferenza.\\\\
+	La ricerca di dimostrazioni è un'alternativa all'enumerazione dei modelli. In molti casi pratici trovare una dimostrazione può essere più efficiente perché la dimostrazione può ignorare proposizioni irrilevanti, non importa quante ce ne siano.
+	\subsubsection{Monoliticità della logica}
+	L'insieme di frasi implicite può solo aumentare man mano che le informazioni vengono aggiunte alla base di conoscenza.\\\\
+	\textbf{Monotonicità} significa che le regole di inferenza possono essere applicate ogni volta che si trovano premesse adeguate nella base di conoscenza.\\\\
+	\textbf{Logiche non monotone}: Violano questa norma e catturano una proprietà tipica degli uomini: cambiare idea.
+	\subsubsection{Proof by resolution}
+	Gli algoritmi di ricerca come la ricerca di approfondimento iterativo sono completi nel senso che troveranno qualsiasi obiettivo raggiungibile, ma se le regole di inferenza disponibili sono inadeguate, l'obiettivo non è raggiungibile.\\\\
+	La regola di risoluzione è una singola regola di inferenza che produce un algoritmo di inferenza completo quando accoppiato con qualsiasi algoritmo di ricerca completo.
+	\subsubsection{Logica proposizionale - Regole di inferenza}
+	La regola di risoluzione unitaria prende una clausola, cioè una disgiunzione dei letterali, e un letterale e produce una nuova clausola.
+	\begin{itemize}
+		\item Rivoluzione unitaria: $\frac{\alpha \vee \beta , \neg \beta}{\alpha}$
+		\item Risoluzione: $\frac{\alpha \vee \beta , \neg \beta \vee \gamma}{\alpha \vee \gamma}$
+		\item oppure: $\frac{\neg \alpha \Rightarrow \beta , \beta \Rightarrow \gamma}{\neg \alpha \Rightarrow \gamma}$
+	\end{itemize}
+	Un singolo letterale può essere visto come una disgiunzione di un letterale, noto anche come clausola unitaria.
+	\subsubsection{Conjunctive normal form (CNF): forma normale della KB}
+	La regola di risoluzione si applica solo alle clausole (cioè disgiunzioni di letterali), quindi sembrerebbe pertinente solo alle basi di conoscenza e alle query costituite da clausole.\\\\
+	Ogni frase della logica proposizionale è logicamente equivalente a una congiunzione di clausole.\\\\
+	Una frase \textbf{congiuntiva} espressa come congiunzione di clausole si dice in forma congiuntiva normale o forma normale o CNF.\\\\
+	Conversion to CNF:
+	\begin{enumerate}
+		\item Eliminare $\Leftrightarrow$, sostituire $\alpha \Leftrightarrow \beta$ con $(\alpha \Rightarrow \beta) \wedge (\beta \Rightarrow \alpha)$
+		\item Eliminare $\Rightarrow$, sostituire $\alpha \Rightarrow \beta$ con $\neg \alpha \vee \beta$
+		\item Muovere "$\neg$ inwards" usando le regole di de Morgan e la doppia negazione
+		\item Applicare la legge distributiva ($\wedge$ over $\vee$):
+		\begin{enumerate}
+			\item $(\neg B_{1,1} \vee P_{1,2} \vee P_{2,1}) \wedge (\neg P_{1,2} \vee B_{1,1}) \wedge (\neg P_{2,1} \vee B_{1,1})$
+		\end{enumerate}
+	\end{enumerate}
+	\subsubsection{Horn clauses and definite clauses}
+	Alcune basi di conoscenza del mondo reale soddisfano determinate restrizioni sulla forma delle frasi che contengono, il che consente loro di utilizzare un algoritmo di inferenza più ristretto ed efficiente.\\\\
+	\textbf{Proposizione definita}: Una disgiunzione di letterali di cui esattamente uno è positivo.\\
+	\textbf{Clausola di Horn}: Una disgiunzione di letterali di cui al massimo uno è positivo.\\\\
+	Le basi di conoscenza contenenti solo clausole definite sono interessanti per tre ragioni:
+	\begin{enumerate}
+		\item Ogni proposizione definita può essere scritta come un'implicazione la cui premessa è una congiunzione di letterali positivi e la cui conclusione è un singolo letterale positivo
+		\item Inferenza con le clausole di Horn può essere fatta attraverso algoritmi di forward-chaining and backward-chaining che sono facilmente comprensibili dall'uomo
+		\item La decisione sulla implicazione con le clausole di Horn può essere fatta in un tempo che è lineare nella dimensione della base di conoscenza
+	\end{enumerate}
+	\subsubsection{Forward and backward chaining}
+	L'algoritmo di forward-chaining determina se un singolo simbolo di proposizione $q$, la query, è implicato da una base di conoscenza di clausole definite.\\
+	Inizia da fatti noti (letterali positivi) nella base di conoscenza.\\
+	Se tutte le premesse di un'implicazione sono note, la sua conclusione viene aggiunta all'insieme dei fatti noti.\\
+	Il forward-chaining (concatenamento in avanti) è un esempio del concetto generale di ragionamento basato sui dati (data driven), ovvero ragionamento in cui il focus dell'attenzione inizia con i dati noti. \\
+	Può essere utilizzato all'interno di un agente per trarre conclusioni dalle percezioni in entrata, spesso senza una specifica domanda in mente.\\\\
+	L'algoritmo di backward-chaining funziona a ritroso dalla query.\\ Se la query $q$ è nota per essere vera, non è necessario alcun lavoro. In caso contrario, l'algoritmo trova quelle implicazioni nella base di conoscenza la cui conclusione è $q$. \\
+	Se tutte le premesse di una di queste implicazioni possono essere dimostrate vere (concatenando all'indietro), allora $q$ è vero.
+	\subsection{La logica dei predicati}
+	\subsubsection{Limiti della logica proposizionale}
+	La logica proposizionale ha molte interessanti proprietà:
+	\begin{itemize}
+		\item È completa, tutte le conseguenze logiche sono derivabili per via sintattica e viceversa
+		\item È decidibile in modo automatico, al massimo verifica di tutte le combinazioni
+	\end{itemize}
+	Il difetto principale è la semplicità del linguaggio:
+	\begin{itemize}
+		\item Non è possibile rappresentare la struttura interna delle affermazioni (solo V o F) e quindi mettere in evidenza legami logici più sottili
+	\end{itemize}
+	La conseguente semplicità delle strutture semantiche:
+	\begin{itemize}
+		\item Solo un insieme $\{0, 1\}$
+		\item Nessuna possibilità di caratterizzare strutture più complesse
+	\end{itemize}
+	Dal punto di vista della rappresentazione il mondo che osserviamo è fatto di oggetti e relazioni tra oggetti.
+	\subsubsection{Logica del primo ordine (1)}
+	Mentre la logica proposizionale presuppone che il mondo contenga fatti, la logica del primo ordine (come il linguaggio naturale) presuppone che il mondo contenga oggetti e relazioni.\\\\
+	La logica dei predicati permette di rappresentare:
+	\begin{itemize}
+		\item Oggetti: persone, cose, numeri etc.
+		\item Relazioni: fratello, maggiore, parte di etc.
+		\item Proprietà: rosso, primo, grande etc.
+		\item Funzioni: successore, somma, padre di etc.
+	\end{itemize}
+	Il linguaggio della logica del primo ordine è costruito attorno a oggetti e relazioni e può esprimere fatti su alcuni o tutti gli oggetti universali.
+	\paragraph{Logica del primo ordine vs logica proposizionale vs altre logiche}
+	\textbf{Impegno ontologico (ontological commitment)} assunto da ogni linguaggio: questo è ciò che assume sulla natura della realtà.\\\\
+	\textbf{Impegno epistemologico (epistemological commitment)} assunto da ogni linguaggio: stati di conoscenza che il linguaggio consente rispetto a ciascun fatto.
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Formal languages and their ontological and epistemological commitments.}
+		\label{fig:im-27}
+	\end{figure}
+	\paragraph{Logica del primo ordine (2)}
+	Come ogni logica, la logica predicativa del primo ordine o elementare (FOL) è costituita da tre componenti:
+	\begin{itemize}
+		\item Un linguaggio formale, che modella un frammento del linguaggio naturale
+		\item Una semantica del linguaggio formale, che definisce le condizioni sotto cui un’espressione del linguaggio è vera oppure è falsa
+		\item Un calcolo, ovvero un algoritmo per stabilire la validità di frasi e argomentazioni in modo puramente meccanico (regola di inferenza)
+	\end{itemize}
+	La logica del primo ordine assume che tutte le rappresentazioni riguardino un insieme non vuoto (e per il resto arbitrario) di individui, detto dominio.\\\\
+	\textbf{Fatto}: il sussistere di una proprietà di un determinato individuo (“Barbara è bionda”) oppure una relazione tra individui (“Alberto è più alto di Barbara”).\\\\
+	I modelli di un linguaggio logico sono le strutture formali che costituiscono i mondi possibili in esame.\\
+	Ogni modello collega il vocabolario delle frasi logiche agli elementi del mondo possibile, in modo che la verità di ogni frase possa essere determinata.
+	\paragraph{Esempio}
+	La figura mostra un modello con cinque oggetti:
+	\begin{itemize}
+		\item Riccardo Cuor di Leone, re d’Inghilterra dal 1189 al 1199
+		\item Suo fratello minore, il malvagio re Giovanni, che regnò dal 1199 al 1215
+		\item Le gambe sinistre di Richard e John
+		\item Una corona
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{A model containing five objects, two binary relations, three unary relations (indicated by labels on the objects), and one unary function, left-leg.}
+		\label{fig:im-28}
+	\end{figure}
+	\paragraph{Logica del primo ordine: Sintassi}
+	\textbf{Espressione o formula}: Sequenza di simboli appartenenti all'alfabeto.\\\\
+	\textbf{Formule ben formate}: Frasi sintatticamente corrette del linguaggio. \\
+	Si ottengono attraverso combinazione di formule atomiche, utilizzando i connettivi e i quantificatori\\\\
+	\textbf{Simboli} \\
+	Insieme di:
+	\begin{itemize}
+		\item Simboli di costante C: A,B,C,Giovanni
+		\item Simboli di predicato (o relazione) F: Tondo, Fratello
+		\item Simboli di funzione F: Padre\_di, Quadrato
+		\item Simboli di variabile V X, Y (entità non note del dominio)
+	\end{itemize}
+	\textbf{Termini} \\
+	I simboli di costante sono termini, \\
+	es. Giovanni. \\
+	Applicando una funzione n-adica a una n-pla di termini si ottiene un termine, \\
+	es. Padre\_di(Giovanni).\\\\
+	\textbf{Formule atomiche} \\
+	Formata da un simbolo di predicato seguito da una lista di termini.\\
+	Es: Fratello(Riccardo,Giovanni) Sposati(Madre\_di(Riccardo),Padre\_di(Riccardo)).
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Riassunto sintassi}
+		\label{fig:im-29}
+	\end{figure}
+	\\\\Le formule atomiche possono essere combinate per formare delle altre formule complesse:
+	\begin{itemize}
+		\item Congiunzione: $A \& B$
+		\item Disgiunzione: $A \vee B$
+		\item Implicazione: $A \rightarrow B$
+		\item Negazione: $\neg A$
+	\end{itemize}
+	Le formule con variabili possono essere interpretate tramite i quantificatori:
+	\begin{itemize}
+		\item Universali: $\forall X p(X)$
+		\item Esistenziali: $\exists X p(X)$.
+	\end{itemize}
+	\paragraph{Logica del primo ordine: Semantica}
+	Per dare un significato a una formula bisogna interpretarla come un’affermazione sul dominio del discorso.
+	\begin{itemize}
+		\item Occorre associare un significato ai simboli.
+		\item Ogni sistema formale è la modellizzazione di una certa realtà (ad esempio la realtà matematica).
+		\item Un’interpretazione è la costruzione di un rapporto fra i simboli del sistema formale e tale realtà (chiamata anche dominio del discorso).
+		\item Ogni formula atomica o composta della logica dei predicati del primo ordine può assumere il valore vero o falso in base alla frase che rappresenta nel dominio del discorso.
+	\end{itemize}
+	Un dominio $D$ è un insieme non vuoto (anche infinito).\\\\
+	Una interpretazione si ottiene associando:
+	\begin{itemize}
+		\item Ad ogni simbolo costante un elemento di D;
+		\item Ad ogni simbolo di funzione una funzione su D;
+		\item Ad ogni predicato n-ario una relazione n-aria su D.
+	\end{itemize}
+	Ad ogni formula atomica si assegna un valore vero o falso. \\
+	Ad ogni formula complessa si assegna un valore vero o falso utilizzando le tavole di verità.
+	\subsubsection{I quantificatori}
+	Una volta che abbiamo una logica che consente di rappresentare gli oggetti, è naturale voler esprimere le proprietà di intere raccolte di oggetti, invece di enumerare gli oggetti per nome. \\
+	I quantificatori ci permettono di farlo. La logica del primo ordine contiene due quantificatori standard, chiamati quantificatore universale ed esistenziale
+	\paragraph{Qualificatore universale $\forall$}
+	Risolve il problema di come esprimere regole generali.\\\\
+	$\forall x \; King(x) \Rightarrow Person(x)$
+	\begin{itemize}
+		\item La frase dice: "Per ogni $x$, se $x$ è un re, allora $x$ è una persona"
+		\item Il simbolo $x$ è chiamato variabile
+		\item Una variabile è un termine a sé stante e, come tale, può anche fungere da argomento di una funzione, ad esempio $LeftLeg(x)$
+		\item Un termine senza variabili è chiamato termine di base (\textbf{ground term})
+	\end{itemize}
+	Intuitivamente, la frase $\forall x \; P$, dove $P$ è una qualsiasi espressione logica, dice che $P$ è vero per ogni oggetto $x$.\\
+	Più precisamente, $\forall x \; P$ è vero in un dato modello se $P$ è vero in tutte le possibili \textbf{interpretazioni estese} costruite dall'interpretazione data nel modello, dove ogni interpretazione estesa specifica un elemento di dominio a cui $x$ si riferisce.\\
+	Sbagliato è l’utilizzo della congiunzione invece dell’implicazione.
+	\paragraph{Qualificatore esistenziale $\exists$}
+	Si riesce a dare una proposizione su qualche oggetto nell'universo senza nominarlo, ma usando un quantificatore esistenziale.
+	\[\exists x \; Crown(x) \wedge OnHead(x,John)\]
+	La frase $\exists xP$ dice che $P$ è vera per almeno un oggetto $x$.\\
+	Più precisamente, $\exists x$ per cui $P$ è vero in un dato modello se $P$ è vero in almeno un'interpretazione estesa che assegna $x$ a un elemento del dominio.\\\\
+	Proprio come $\Rightarrow$ sembra essere il connettivo naturale da usare con $\forall$, $\wedge$ è il connettivo naturale da usare con $\exists$.
+	\subsubsection{Quantificatori annidati}
+	I quantificatori consecutivi dello stesso tipo possono essere scritti come un unico quantificatore con più variabili:
+	\[\forall x,y \; Siblings(x.y) \Rightarrow Siblings(y,x)\]
+	In altri casi l’ordine è importante.
+	\[\forall x \; (Crown(x) \vee (\exists x \; Brother(Richard,x)))\]
+	Qui la $x$ in Fratello (Riccardo, $x$) è quantificata dal quantificatore esistenziale.\\
+	La regola è che la variabile appartiene al quantificatore più interno che la menziona; quindi non sarà soggetta a nessun'altra quantificazione.
+	\subsubsection{Quantificatori annidati: connessioni tra $\forall$ e $\exists$}
+	Affermare che a tutti non piacciono i broccoli equivale ad affermare che non esiste qualcuno a cui piacciono, e viceversa.\\
+	"Il gelato piace a tutti" significa che non c'è nessuno a cui non piaccia il gelato.
+	\subsubsection{Logica del primo ordine: uguaglianza}
+	Il simbolo di uguaglianza indica che due termini si riferiscono allo stesso oggetto.\\
+	$Father (John)=Henry$\\\\
+	Per dire che Riccardo ha almeno due fratelli, scriveremmo:
+	\[\exists x,y \; Fratello(x,Riccardo) \wedge Fratello(y,Riccardo) \wedge \neg (x=y)\]
+	La frase $\exists x,y \; Fratello(x,Riccardo) \wedge Fratello(y,Riccardo)$ non ha il significato voluto.\\
+	{\color{red} Esempi in slide "Intro\_IA-22-AgenteLogico-2" pagine 48-49}
+	\subsubsection{Logica del primo ordine: Il mondo dei wumpus}
+	Si può osservare che gli assiomi del primo ordine sono molto più concisi, in quanto catturano in modo naturale esattamente ciò che si deve dire. \\
+	Le azioni nel mondo del wumpus possono essere rappresentate da termini logici: Turn(Right), Turn(Left), Forward, Shoot, Grab.\\
+	Per determinare quale sia il migliore, il programma agente esegue la query: ASKVARS($\exists$ a BestAction(a, 5)). \\
+	{\color{red} Esempi in slide "Intro\_IA-22-AgenteLogico-2" pagine 54-58}
+	\subsubsection{Logica del primo ordine e regole di inferenza e forma a clausole}
+	Una clausola è una formula priva di quantificatori ed è formata da una disgiunzione di termini.\\\\
+	\textbf{Regola di risoluzione}: Regola di inferenza, da $A \vee B$, $¬B \vee C$ deduci $A\vee C$.\\\\
+	Il metodo di risoluzione permette di dimostrare un teorema mediante il metodo della \textbf{refutazione}, cioè si dimostra che la negazione del teorema è falsa.
+	\subsection{Modus Ponens Generalizzato}
+	Per trasformare la base di conoscenza in una formula clausole devo utilizzare il modus ponens generalizzato in grado di eliminare i quantificatori universali.\\\\
+	\textbf{Modus Ponens}: Dall'implicazione e dalla premessa dell'implicazione si può inferire la conclusione ($a \rightarrow B$, $A \Rightarrow B$). \\
+	{\color{red} Esempio in slide "Intro\_IA-22-AgenteLogico-2" pagina 62}
+	\subsubsection{Forma a Clausole e Modus Ponens Generalizzato}
+	Con il Modus Ponens generalizzato posso eliminare i quantificatori in un qualche ordine. \\
+	Per le formule a clausole (adatte per ragionare con un’unica regola di risoluzione), vanno eliminati i quantificatori e gli AND, per cui: $\exists$ x Possiede(Jenny,x) $\wedge$ Barbie(x) diventa due clausole:
+	\begin{itemize}
+		\item Possiede(Jenny,x)
+		\item Barbie(x)
+	\end{itemize}
+	\subsubsection{Modus Ponens Generalizzato e inferenza}
+	Con il Modus Ponens generalizzato possiamo:
+	\begin{itemize}
+		\item Partire dalle formule nella $KB$ e generare nuove conclusioni che portino a nuove inferenze (\textbf{concatenazione in avanti})
+		\item Partire da qualcosa da dimostrare, trovare implicazioni che ci permettono di concludere e stabilire le premesse necessarie (\textbf{concatenazione all'indietro})
+	\end{itemize}
+	\subsubsection{Inferenza nella logica del primo ordine}
+	\textbf{Concatenazione in avanti} \\
+	Quando un nuovo fatto $p$ è aggiunto alla $KB$
+	\begin{itemize}
+		\item Si fanno scattare tutte le regole le cui premesse sono soddisfatte da p o sono già note
+		\item Quindi si aggiunge la conclusione alla KB
+		\item Si continua nella catena finché si trova una risposta (supponendo che ne basti una) o non è più possibile aggiungere nuovi fatti. La concatenazione in avanti è guidata dai dati
+	\end{itemize}
+	\textbf{Concatenazione all'indietro} \\
+	Quando si formula una domanda
+	\begin{itemize}
+		\item Se si conosce un fatto p che soddisfa la query ritorna il puntatore al fatto
+		\item Per ogni regola le cui conseguenze soddisfano la domanda si cerca di provare se ogni premessa della regola soddisfa la query in un meccanismo di concatenazione all'indietro
+	\end{itemize}
+	La concatenazione all’indietro è la base per la programmazione logica.\\
+	{\color{red} Esempi in slide "Intro\_IA-22-AgenteLogico-2" pagine 69-70}
+	\subsubsection{Vantaggi della logica}
+	I vantaggi principali della logica sono:
+	\begin{itemize}
+		\item \textbf{Precisione}, la logica ha una semantica chiara e definita per la quale esistono metodi standardizzati per determinare il significato di una espressione;
+		\item \textbf{Flessibilità}, la logica rappresenta la conoscenza in modo dichiarativo, quindi in modo indipendente dal suo uso;
+		\item \textbf{Modularità}, le asserzioni della logica possono entrare in una base di conoscenza in modo indipendente le une dalle altre.
+	\end{itemize}
+	\subsubsection{Limiti della logica}
+	I limiti principali della logica sono:
+	\begin{itemize}
+		\item \textbf{Inadeguatezza espressiva}, non può rappresentare mondi dinamici, non può rappresentare conoscenze probabilistiche;
+		\item \textbf{Monotonicità}, l’aggiunta di un teorema non provoca la cancellazione di nessun teorema precedente;
+		\item \textbf{Inefficienza}, la dimostrazione automatica basata esclusivamente sulla logica si fonda su processi di ricerca, la ricerca è inerentemente esponenziale ed eventuali euristiche non ne cambiano la natura combinatoria.
+	\end{itemize}
+	\subsubsection{Ingegneria della conoscenza nella logica del primo ordine}
+	Sviluppare una base di conoscenza in logica del primo ordine richiede:
+	\begin{itemize}
+		\item Un attento processo di analisi del dominio;
+		\item Scelta di un vocabolario;
+		\item Codifica degli assiomi necessari a supportare le inferenze richieste.
+	\end{itemize}
+	\textbf{Knowledge engineer} è una persona che studia un particolare dominio, impara quali concetti sono importanti in quel dominio e crea una rappresentazione formale degli oggetti e delle relazioni nel dominio.
+	\subsubsection{The knowledge-engineering process}
+	\begin{enumerate}
+		\item Identificare il compito della base di conoscenza (task): 
+		\begin{enumerate}
+			\item Si deve delineare la gamma di domande che la base di conoscenza dovrà supportare e i tipi di fatti che saranno disponibili per ogni specifica istanza di problema
+			\item Il compito determinerà quale conoscenza deve essere rappresentata per collegare le istanze del problema alle risposte
+			\item Questa fase è analoga al processo PEAS per la progettazione di agenti
+		\end{enumerate}
+		\item Raccogliere la conoscenza rilevante (knowledge acquisition): 
+		\begin{enumerate}
+			\item L'ingegnere della conoscenza potrebbe essere già un esperto del dominio, o potrebbe aver bisogno di lavorare con esperti reali per estrarre ciò che sanno
+			\item In questa fase, la conoscenza non è rappresentata formalmente
+			\item L'idea è quella di comprendere l'ambito della base di conoscenza, come determinato dal compito, e di capire come funziona effettivamente il dominio
+		\end{enumerate}
+		\item Definire un vocabolario di predicati, funzioni e costanti (ontologia di dominio): 
+		\begin{enumerate}
+			\item Ovvero, tradurre i concetti importanti a livello di dominio in nomi a livello logico
+			\item E' un processo creativo che dipende dallo stile dell'ingegnere della conoscenza
+			\item L'ontologia determina quali tipi di cose esistono, ma non determina le loro proprietà specifiche e le loro interrelazioni
+		\end{enumerate}
+		\item Codificare la conoscenza generale riguardante il dominio: 
+		\begin{enumerate}
+			\item Scrivere gli assiomi per tutti gli elementi
+			\item In questo modo si fissa (per quanto possibile) il significato dei termini, consentendo all'esperto di verificare il contenuto
+			\item Spesso questa fase rivela concetti errati o lacune nel vocabolario che devono essere risolte tornando alla fase 3 e iterando il processo
+		\end{enumerate}
+		\item Codificare una descrizione della specifica istanza del problema: 
+		\begin{enumerate}
+			\item Se l'ontologia è ben pensata, questo passo sarà facile 
+			\item Si tratta di scrivere semplici frasi atomiche su istanze di concetti che fanno già parte dell'ontologia
+		\end{enumerate}
+		\item Interrogare la procedura di inferenza e ottenere da essa risposte: 
+		\begin{enumerate}
+			\item È qui che si trova la ricompensa
+			\item Possiamo lasciare che la procedura di inferenza operi sugli assiomi e sui fatti specifici del problema per ricavare i fatti che ci interessa conoscere.\\ 
+			In questo modo, evitiamo di dover scrivere un algoritmo di soluzione specifico per l’applicazione.
+		\end{enumerate}
+		\item Fare il debugging della base di conoscenza: 
+		\begin{enumerate}
+			\item Le risposte del passo precedente saranno corrette per la base di conoscenza così come è stata scritta, assumendo che la procedura di inferenza sia corretta, ma potrebbero non essere quelle che l'utente si aspetta
+			\item Ad esempio, se manca un assioma, alcune interrogazioni non potranno essere soddisfatte dalla base di conoscenza
+		\end{enumerate}
+	\end{enumerate}
+	\subsubsection{Prolog}
+	Un programma PROLOG ha le seguenti caratteristiche:
+	\begin{itemize}
+		\item Un programma è una sequenza di formule
+		\item Sono ammesse solo clausole di Horn
+		\item I termini possono essere simboli di costanti, variabili, termini funzionali
+		\item Le interrogazioni includono congiunzioni, disgiunzioni, variabili e termini funzionali
+		\item Non ci sono antecedenti negati, ma un goal not $P$ si considera dimostrato se il sistema fallisce nel dimostrare $P$.
+	\end{itemize}
+	Per provare: \href{http://www.swi-prolog.org/}{http://www.swi-prolog.org/}
+	\subsection{Cenni di Pianificazione}
+	(Argomento facoltativo)\\
+	Slide "Intro\_IA-23-AgenteLogico-Pianificazione"
+\end{document}

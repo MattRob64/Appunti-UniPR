@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+		Un Database Management System (DBMS) è un sistema software che si interpone fra le applicazioni e la memoria di massa in cui si trovano collezioni di dati.\\
+	La finalità di un DBMS è l’estensione delle funzionalità del file system, in modo da offrire:
+	\begin{itemize}
+		\item Nuove modalità di accesso ai dati
+		\item Condivisione dei dati
+		\item Gestione più sofisticata dei file
+	\end{itemize}
+	Le basi di dati gestite dai DBMS sono collezioni di dati:
+	\begin{itemize}
+		\item \textbf{Grandi} possono avere notevoli dimensioni (fino a centinaia di Terabyte) e devono quindi necessariamente risiedere nella memoria secondaria
+		\item \textbf{Condivise} applicazioni ed utenti diversi devono potere accedere ai dati
+		\item \textbf{Persistenti} Il tempo di vita dei dati va oltre la durata dell’esecuzione delle singole applicazioni
+	\end{itemize}
+	Un DBMS deve garantire:
+	\begin{itemize}
+		\item Affidabilità 
+		\item Privatezza dei dati 
+		\item Efficienza 
+		\item Efficacia
+	\end{itemize}
+	\subsection{Affidabilità}
+	Un DBMS deve garantire di poter mantenere intatto il suo contenuto, anche in caso di malfunzionamento.\\
+	L’integrità dei dati è affidata a procedure di backup (salvataggio) e recovery (recupero) dei dati, o alla loro duplicazione nei casi più critici.
+	\subsection{Privatezza dei dati}
+	Ogni utente, abilitato a utilizzare la base di dati attraverso una procedura di riconoscimento, può accedere ad insiemi limitati di dati e compiere solo certe operazioni su di essi.
+	\subsection{Efficienza}
+	Un DBMS deve operare e fornire risposte agli utenti in tempi accettabili, utilizzando una quantità il più possibile limitata di risorse.\\
+	L’efficienza dipende essenzialmente dalle tecniche utilizzate per l’implementazione del DBMS e dalla buona progettazione della base di dati.\\
+	Si misura (come in tutti i sistemi informatici) in termini di tempo di esecuzione (tempo di risposta) e spazio di memoria (principale e secondaria) occupato.
+	\subsection{Efficacia}
+	Capacità di un DBMS di rendere produttive le attività degli utenti, cioè di consentire la realizzazione di basi di dati che risolvano in modo efficace i problemi degli utenti.\\
+	Concetto generico, qualitativo e non legato a specifiche funzionalità del DBMS.\\
+	Non esistono criteri oggettivi per valutarla.
+	\subsection{Indipendenza dei dati}
+	Il nuovo strato che il DBMS viene a creare fra memoria di massa e applicazioni consente di conservare e gestire i dati in modo indipendente dalle applicazioni stesse.\\
+	Normalmente le applicazioni accedono a dati locali gestendoli attraverso file che appartengono alle applicazioni stesse.\\
+	In presenza di un DBMS, i dati non appartengono ad una specifica applicazione, ma le diverse applicazioni vi accedono attraverso di esso.
+\end{document}

@@ -16,6 +16,8 @@
 	top=20mm,
 }
 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 \usepackage{adjustbox}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -31,6 +33,7 @@
 \usepackage{cleveref}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{MnSymbol}
 \usepackage{subfiles} % Best loaded last in the preamble
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -72,7 +75,7 @@
 \author{Mattia Robuschi Caprara}
 \date{}
 
-\definecolor{CoverCyan}{RGB}{129,251,204}
+\definecolor{CoverCyan}{RGB}{0,139,139}
 
 \begin{document}
 	
@@ -106,16 +109,22 @@
 	\newpage
 	\pagecolor{white}
 	\section*{Prefazione}
-	Questi appunti sono una trascrizione in LaTEX di alcuni appunti gentilmente concessi da alcuni miei compagni di corso(Luigi Quitadamo e ...), quindi non ne prendo alcun merito.
+	Questi appunti sono una trascrizione in LaTEX di alcuni appunti gentilmente concessi da alcuni miei compagni di corso(Alessia Colla e Luigi Quitadamo), quindi non mi prendo alcun merito.
 	\tableofcontents
 	\newpage
 	\section{Generalità}
 	\subfile{sections/generalita}
 	\section{Agenti Intelligenti}
+	\subfile{sections/agenti_intell}
 	\section{Agenti Risolutori di Problemi}
+	\subfile{sections/agenti_ris}
 	\section{Agenti Risolutori di Problemi - Ottimizzazione}
+	\subfile{sections/agenti_ris_ott}
 	\section{Agente Logico}
+	\subfile{sections/agente_logico}
 	\section{Modelli Predittivi}
+	\subfile{sections/mod_pred}
+	%\hypertarget{90}{test}
 	\section{Esami Passati}
 	\subfile{sections/esami_passati}
 \end{document}

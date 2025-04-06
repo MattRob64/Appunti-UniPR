@@ -1,51 +1,270 @@
-\contentsline {section}{\numberline {1}Generalità}{3}{section.1}%
-\contentsline {section}{\numberline {2}Agenti Intelligenti}{3}{section.2}%
-\contentsline {section}{\numberline {3}Agenti Risolutori di Problemi}{3}{section.3}%
-\contentsline {section}{\numberline {4}Agenti Risolutori di Problemi - Ottimizzazione}{3}{section.4}%
-\contentsline {section}{\numberline {5}Agente Logico}{3}{section.5}%
-\contentsline {section}{\numberline {6}Modelli Predittivi}{3}{section.6}%
-\contentsline {section}{\numberline {7}Esami Passati}{3}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Domanda 1}{3}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Domanda 2}{3}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Domanda 3}{4}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Domanda 4}{4}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Domanda 5}{4}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Domanda 6}{5}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Domanda 7}{6}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Domanda 8}{6}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Domanda 9}{6}{subsection.7.9}%
-\contentsline {subsection}{\numberline {7.10}Domanda 10}{6}{subsection.7.10}%
-\contentsline {subsection}{\numberline {7.11}Domanda 11}{7}{subsection.7.11}%
-\contentsline {subsection}{\numberline {7.12}Domanda 12}{7}{subsection.7.12}%
-\contentsline {subsection}{\numberline {7.13}Domanda 13}{7}{subsection.7.13}%
-\contentsline {subsection}{\numberline {7.14}Domanda 14}{8}{subsection.7.14}%
-\contentsline {subsection}{\numberline {7.15}Domanda 15}{8}{subsection.7.15}%
-\contentsline {subsection}{\numberline {7.16}Domanda 16}{8}{subsection.7.16}%
-\contentsline {subsection}{\numberline {7.17}Domanda 17}{9}{subsection.7.17}%
-\contentsline {subsection}{\numberline {7.18}Domanda 18}{9}{subsection.7.18}%
-\contentsline {subsection}{\numberline {7.19}Domanda 19}{9}{subsection.7.19}%
-\contentsline {subsection}{\numberline {7.20}Domanda 20}{10}{subsection.7.20}%
-\contentsline {subsection}{\numberline {7.21}Domanda 21}{10}{subsection.7.21}%
-\contentsline {subsection}{\numberline {7.22}Domanda 22}{10}{subsection.7.22}%
-\contentsline {subsection}{\numberline {7.23}Domanda 23}{11}{subsection.7.23}%
-\contentsline {subsection}{\numberline {7.24}Domanda 24}{11}{subsection.7.24}%
-\contentsline {subsection}{\numberline {7.25}Domanda 25}{11}{subsection.7.25}%
-\contentsline {subsection}{\numberline {7.26}Domanda 26}{12}{subsection.7.26}%
-\contentsline {subsection}{\numberline {7.27}Domanda 27}{12}{subsection.7.27}%
-\contentsline {subsection}{\numberline {7.28}Domanda 28}{12}{subsection.7.28}%
-\contentsline {subsection}{\numberline {7.29}Domanda 29}{12}{subsection.7.29}%
-\contentsline {subsection}{\numberline {7.30}Domanda 30}{12}{subsection.7.30}%
-\contentsline {subsection}{\numberline {7.31}Domanda 31}{13}{subsection.7.31}%
-\contentsline {subsection}{\numberline {7.32}Domanda 32}{13}{subsection.7.32}%
-\contentsline {subsection}{\numberline {7.33}Domadna 33}{13}{subsection.7.33}%
-\contentsline {subsection}{\numberline {7.34}Domanda 34}{13}{subsection.7.34}%
-\contentsline {subsection}{\numberline {7.35}Domanda 35}{14}{subsection.7.35}%
-\contentsline {subsection}{\numberline {7.36}Domanda 36}{14}{subsection.7.36}%
-\contentsline {subsection}{\numberline {7.37}Domanda 37}{14}{subsection.7.37}%
-\contentsline {subsection}{\numberline {7.38}Domanda 38}{14}{subsection.7.38}%
-\contentsline {subsection}{\numberline {7.39}Domanda 39}{15}{subsection.7.39}%
-\contentsline {subsection}{\numberline {7.40}Domanda 40}{15}{subsection.7.40}%
-\contentsline {subsection}{\numberline {7.41}Domanda 41}{15}{subsection.7.41}%
-\contentsline {subsection}{\numberline {7.42}Domanda 42}{15}{subsection.7.42}%
-\contentsline {subsection}{\numberline {7.43}Domanda 43}{15}{subsection.7.43}%
-\contentsline {subsection}{\numberline {7.44}Domanda 44}{16}{subsection.7.44}%
+\contentsline {section}{\numberline {1}Generalità}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Test di Turing}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}La stanza cinese}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Al forte vs Al debole (o narrow vs general)}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Oridine del termine}{6}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Gli inizi (1952-1959)}{6}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}1968}{7}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}1969 - 1979}{7}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4}1995 - 2000: Nascita del Web e delle ontologie}{7}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.5}2011 - present}{7}{subsubsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.5}Il gioco In IA}{7}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Ragionamento Deduttivo vs Ragionamento Induttivo}{8}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Conoscenza e comportamento razionale}{8}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Approccio simbolico vs approccio subsimbolico}{8}{subsection.1.8}%
+\contentsline {subsubsection}{\numberline {1.8.1}Approccio simbolico}{9}{subsubsection.1.8.1}%
+\contentsline {paragraph}{\numberline {1.8.1.1}Logica}{9}{paragraph.1.8.1.1}%
+\contentsline {subsubsection}{\numberline {1.8.2}Approccio sub-simbolico}{9}{subsubsection.1.8.2}%
+\contentsline {paragraph}{\numberline {1.8.2.1}Ragionamento e apprendimento}{9}{paragraph.1.8.2.1}%
+\contentsline {subsection}{\numberline {1.9}Cos'è la teoria del learning}{10}{subsection.1.9}%
+\contentsline {subsubsection}{\numberline {1.9.1}Inferenze}{10}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.2}Deep Learning e Reti Neurali Artificiali (ANN)}{11}{subsubsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.10}Black Box AI \& Explainable AI}{11}{subsection.1.10}%
+\contentsline {subsubsection}{\numberline {1.10.1}Indagare un sistema di AI}{11}{subsubsection.1.10.1}%
+\contentsline {paragraph}{\numberline {1.10.1.1}Esempio: Un oggetto cade a terra e si rompe.}{12}{paragraph.1.10.1.1}%
+\contentsline {section}{\numberline {2}Agenti Intelligenti}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introduzione}{12}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Esempio}{13}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Agenti Intelligenti/razionale}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Agenti e ambiente}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Esempi}{14}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Proprietà dell’ambiente-problema}{14}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Struttura}{15}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Esempio: taxi}{16}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Tipi di rappresentazione dello stato agente}{17}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Espressività}{17}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Agenti Risolutori di Problemi}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduzione}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Risoluzione di problemi tramite ricerca}{18}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Esempio}{18}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Problemi ben definiti e soluzioni}{19}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Risoluzione di problemi}{19}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Formulazione del problema}{19}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Costo della ricerca}{19}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Esempio}{19}{subsubsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.7}Esempi di problemi - Problemi giocattolo}{20}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Il problema dell’8 puzzle}{20}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Il problema delle 8 regine}{20}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Il problema dei missionari e dei cannibali}{20}{subsubsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.8}Classi di problemi}{21}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}A stato singolo (Search)}{21}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Problemi a stato multiplo (Search)}{21}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Problemi con imprevisti (Planning)}{21}{subsubsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}Problemi di esplorazione (Learning)}{22}{subsubsection.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Problemi stati singoli vs stati multipli}{22}{subsubsection.3.8.5}%
+\contentsline {paragraph}{\numberline {3.8.5.1}Esempio}{22}{paragraph.3.8.5.1}%
+\contentsline {subsection}{\numberline {3.9}Ricercare le soluzioni}{23}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Cercare soluzioni}{23}{subsubsection.3.9.1}%
+\contentsline {subsubsection}{\numberline {3.9.2}Algoritmo generale di ricerca}{23}{subsubsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.10}Valutazione delle strategie di ricerca}{24}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Strategie non informate}{24}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Ricerca in ampiezza (breadth-first search)}{24}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {3.11.2}Ricerca a Costo Uniforme (Uniform Cost Search)}{25}{subsubsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.3}Ricerca in Profondità (Depth-First Search)}{25}{subsubsection.3.11.3}%
+\contentsline {subsubsection}{\numberline {3.11.4}Ricerca Limitata in Profondità (Depth-Limited Search)}{25}{subsubsection.3.11.4}%
+\contentsline {subsubsection}{\numberline {3.11.5}Ricerca Iterativa in Profondità (Iterative Deepening Search)}{26}{subsubsection.3.11.5}%
+\contentsline {subsubsection}{\numberline {3.11.6}Ricerca Bidirezionale (Bidirectional Search)}{26}{subsubsection.3.11.6}%
+\contentsline {subsection}{\numberline {3.12}Eliminazione della ripetizione di percorsi}{26}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Evitare ripetizioni di stati}{26}{subsection.3.13}%
+\contentsline {subsection}{\numberline {3.14}Ricercare le soluzioni: Strategie informate}{27}{subsection.3.14}%
+\contentsline {subsubsection}{\numberline {3.14.1}Metodi di ricerca informati ed esplorazione}{27}{subsubsection.3.14.1}%
+\contentsline {subsubsection}{\numberline {3.14.2}Strategie informate}{27}{subsubsection.3.14.2}%
+\contentsline {subsubsection}{\numberline {3.14.3}Ricerca lungo il Cammino Migliore (Best-First Search)}{27}{subsubsection.3.14.3}%
+\contentsline {subsection}{\numberline {3.15}Ricerca lungo il cammino migliore}{27}{subsection.3.15}%
+\contentsline {subsubsection}{\numberline {3.15.1}Greedy search (o ricerca golosa)}{27}{subsubsection.3.15.1}%
+\contentsline {subsubsection}{\numberline {3.15.2}Algoritmo A* (ricerca a stella)}{28}{subsubsection.3.15.2}%
+\contentsline {subsubsection}{\numberline {3.15.3}Algoritmo A* per grafi}{29}{subsubsection.3.15.3}%
+\contentsline {subsubsection}{\numberline {3.15.4}A* Iterativo in Profondità (Iterative Deepening A* - IDA*)}{29}{subsubsection.3.15.4}%
+\contentsline {subsubsection}{\numberline {3.15.5}SMA* (Simplified Memory-Bounded A*)}{29}{subsubsection.3.15.5}%
+\contentsline {paragraph}{\numberline {3.15.5.1}Esempio di ricerca con SMA*}{30}{paragraph.3.15.5.1}%
+\contentsline {paragraph}{\numberline {3.15.5.2}Proprietà algoritmo SMA*}{30}{paragraph.3.15.5.2}%
+\contentsline {subsection}{\numberline {3.16}Scelta euristica}{30}{subsection.3.16}%
+\contentsline {subsubsection}{\numberline {3.16.1}Generazione automatica di euristiche ammissibili attraverso il rilassamento dei problemi}{31}{subsubsection.3.16.1}%
+\contentsline {section}{\numberline {4}Agenti Risolutori di Problemi - Ottimizzazione}{32}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Algoritmi di ricerca locale e problemi di ottimizzazione}{32}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Algoritmi di miglioramento iterativo}{32}{subsubsection.4.1.1}%
+\contentsline {paragraph}{\numberline {4.1.1.1}Struttura dei “vicini” }{32}{paragraph.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Ricerca in Salita (Hill Climbing)}{33}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Simulated Annealing}{33}{subsubsection.4.1.3}%
+\contentsline {paragraph}{\numberline {4.1.3.1}Esempio}{33}{paragraph.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.4}Meta-euristiche}{34}{subsubsection.4.1.4}%
+\contentsline {paragraph}{\numberline {4.1.4.1}Meta-conoscenza}{34}{paragraph.4.1.4.1}%
+\contentsline {paragraph}{\numberline {4.1.4.2}Meta-euristiche e scelta degli operatori}{34}{paragraph.4.1.4.2}%
+\contentsline {subsection}{\numberline {4.2}Problemi con vincoli}{35}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Formulazione dei problemi CSP}{35}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Tipi di vincoli}{35}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Ricerca in problemi CSP}{35}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Strategie di ricerca}{36}{subsubsection.4.2.4}%
+\contentsline {paragraph}{\numberline {4.2.4.1}Problemi nell’uso del backtracking}{36}{paragraph.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.5}Scelta delle variabili}{36}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Scelta dei valori}{36}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Propagazione di vincoli}{36}{subsubsection.4.2.7}%
+\contentsline {paragraph}{\numberline {4.2.7.1}Forward checking}{36}{paragraph.4.2.7.1}%
+\contentsline {paragraph}{\numberline {4.2.7.2}Consistenza di nodo}{37}{paragraph.4.2.7.2}%
+\contentsline {paragraph}{\numberline {4.2.7.3}Consistenza d’arco}{37}{paragraph.4.2.7.3}%
+\contentsline {subsubsection}{\numberline {4.2.8}Complessità di AC-3}{37}{subsubsection.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.9}La risoluzione di un CSP richiede ancora la ricerca}{37}{subsubsection.4.2.9}%
+\contentsline {subsubsection}{\numberline {4.2.10}Backtracking “cronologico”}{37}{subsubsection.4.2.10}%
+\contentsline {subsubsection}{\numberline {4.2.11}Backtracking “intelligente”}{38}{subsubsection.4.2.11}%
+\contentsline {section}{\numberline {5}Agente Logico}{38}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduzione al ragionamento automatico logico con la logica proposizionale}{38}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Studio degli stati nascosti}{38}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Sistematica}{39}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Basi di Conoscenza (knowledge Bases)}{39}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Agente logico basato su una KB}{39}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Logica moderna o logica matematica}{40}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Logica}{41}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Logica: Linguaggio}{42}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Ragionamento logico: Implicazione}{42}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Models}{42}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Inferenza nel modello Wumpus}{42}{subsubsection.5.2.4}%
+\contentsline {paragraph}{\numberline {5.2.4.1}Model Checking}{42}{paragraph.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.5}Inferenza}{43}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Problema del “grounding”}{43}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.7}Logica classica}{43}{subsubsection.5.2.7}%
+\contentsline {paragraph}{\numberline {5.2.7.1}Limiti}{43}{paragraph.5.2.7.1}%
+\contentsline {subsection}{\numberline {5.3}Logica proposizionale}{43}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Sintassi}{44}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Semantica}{44}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Inference by Theorem Proving}{44}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Inferenza e prova di teoremi}{45}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Proof methods}{45}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Monoliticità della logica}{45}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Proof by resolution}{45}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Logica proposizionale - Regole di inferenza}{45}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}Conjunctive normal form (CNF): forma normale della KB}{46}{subsubsection.5.4.6}%
+\contentsline {subsubsection}{\numberline {5.4.7}Horn clauses and definite clauses}{46}{subsubsection.5.4.7}%
+\contentsline {subsubsection}{\numberline {5.4.8}Forward and backward chaining}{46}{subsubsection.5.4.8}%
+\contentsline {subsection}{\numberline {5.5}La logica dei predicati}{47}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Limiti della logica proposizionale}{47}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Logica del primo ordine (1)}{47}{subsubsection.5.5.2}%
+\contentsline {paragraph}{\numberline {5.5.2.1}Logica del primo ordine vs logica proposizionale vs altre logiche}{47}{paragraph.5.5.2.1}%
+\contentsline {paragraph}{\numberline {5.5.2.2}Logica del primo ordine (2)}{47}{paragraph.5.5.2.2}%
+\contentsline {paragraph}{\numberline {5.5.2.3}Esempio}{48}{paragraph.5.5.2.3}%
+\contentsline {paragraph}{\numberline {5.5.2.4}Logica del primo ordine: Sintassi}{48}{paragraph.5.5.2.4}%
+\contentsline {paragraph}{\numberline {5.5.2.5}Logica del primo ordine: Semantica}{49}{paragraph.5.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.5.3}I quantificatori}{49}{subsubsection.5.5.3}%
+\contentsline {paragraph}{\numberline {5.5.3.1}Qualificatore universale $\forall $}{49}{paragraph.5.5.3.1}%
+\contentsline {paragraph}{\numberline {5.5.3.2}Qualificatore esistenziale $\exists $}{50}{paragraph.5.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.5.4}Quantificatori annidati}{50}{subsubsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.5}Quantificatori annidati: connessioni tra $\forall $ e $\exists $}{50}{subsubsection.5.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.6}Logica del primo ordine: uguaglianza}{50}{subsubsection.5.5.6}%
+\contentsline {subsubsection}{\numberline {5.5.7}Logica del primo ordine: Il mondo dei wumpus}{50}{subsubsection.5.5.7}%
+\contentsline {subsubsection}{\numberline {5.5.8}Logica del primo ordine e regole di inferenza e forma a clausole}{51}{subsubsection.5.5.8}%
+\contentsline {subsection}{\numberline {5.6}Modus Ponens Generalizzato}{51}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Forma a Clausole e Modus Ponens Generalizzato}{51}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Modus Ponens Generalizzato e inferenza}{51}{subsubsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.3}Inferenza nella logica del primo ordine}{51}{subsubsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.4}Vantaggi della logica}{52}{subsubsection.5.6.4}%
+\contentsline {subsubsection}{\numberline {5.6.5}Limiti della logica}{52}{subsubsection.5.6.5}%
+\contentsline {subsubsection}{\numberline {5.6.6}Ingegneria della conoscenza nella logica del primo ordine}{52}{subsubsection.5.6.6}%
+\contentsline {subsubsection}{\numberline {5.6.7}The knowledge-engineering process}{52}{subsubsection.5.6.7}%
+\contentsline {subsubsection}{\numberline {5.6.8}Prolog}{53}{subsubsection.5.6.8}%
+\contentsline {subsection}{\numberline {5.7}Cenni di Pianificazione}{53}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Modelli Predittivi}{53}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Machine Learning and Data}{53}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Possibili applicazioni del ML}{54}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}ML come un processo di analisi dati}{55}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Dove troviamo questa metodologia: Data science}{55}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}L’approccio data-driven, l’analisi dei dati e dei modelli predittivi}{56}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Perché abbiamo bisogno di una metodologia scientifica per l’analisi dei dati}{56}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Data Science e una metodologia per l’analisi dei dati}{56}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Data Science}{56}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}I cinque passi della Data Science}{56}{subsubsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.4}Data Science - Modelli predittivi}{57}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Trovarle correlazioni fra i dati}{57}{subsubsection.6.4.1}%
+\contentsline {paragraph}{\numberline {6.4.1.1}Esempio}{57}{paragraph.6.4.1.1}%
+\contentsline {subsection}{\numberline {6.5}Machine learning}{58}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Che cosa si intende con machine learning?}{58}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}ML (algoritmi predittivi) vs algoritmi classici}{58}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}Il machine learning non è perfetto}{58}{subsubsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.6}Algoritmi predittivi}{58}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}Tipi di ML (algoritmi predittivi)}{58}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}Classificazione degli algoritmi per scopo}{59}{subsubsection.6.6.2}%
+\contentsline {paragraph}{\numberline {6.6.2.1}Classificazione}{59}{paragraph.6.6.2.1}%
+\contentsline {paragraph}{\numberline {6.6.2.2}Regressione}{59}{paragraph.6.6.2.2}%
+\contentsline {paragraph}{\numberline {6.6.2.3}Clustering}{59}{paragraph.6.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.6.3}Classificazione per modalità di apprendimento}{60}{subsubsection.6.6.3}%
+\contentsline {paragraph}{\numberline {6.6.3.1}Supervisionato}{60}{paragraph.6.6.3.1}%
+\contentsline {paragraph}{\numberline {6.6.3.2}Non supervisionato}{60}{paragraph.6.6.3.2}%
+\contentsline {paragraph}{\numberline {6.6.3.3}Semi-supervisionato}{60}{paragraph.6.6.3.3}%
+\contentsline {subsection}{\numberline {6.7}Costruire un modello di ML}{60}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Programmazione classica e ML}{60}{subsubsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.2}Gli algoritmi di ML}{61}{subsubsection.6.7.2}%
+\contentsline {paragraph}{\numberline {6.7.2.1}Implementazione del modello di machine learning}{61}{paragraph.6.7.2.1}%
+\contentsline {subsection}{\numberline {6.8}Problematiche comuni agli algoritmi di ML}{61}{subsection.6.8}%
+\contentsline {subsubsection}{\numberline {6.8.1}Hyperparameter tuning}{61}{subsubsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.2}Grid Search (o parameter sweep)}{61}{subsubsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.3}Random Search}{61}{subsubsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.4}Overfitting}{61}{subsubsection.6.8.4}%
+\contentsline {subsubsection}{\numberline {6.8.5}Utilizzo di un approccio addestramento/test}{62}{subsubsection.6.8.5}%
+\contentsline {paragraph}{\numberline {6.8.5.1}Capacità di generalizzazione}{62}{paragraph.6.8.5.1}%
+\contentsline {subsection}{\numberline {6.9}Basic algorithms in machine learning}{62}{subsection.6.9}%
+\contentsline {subsubsection}{\numberline {6.9.1}Algoritmi di classificazione}{62}{subsubsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.2}Classificazione}{62}{subsubsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.3}Classificatore Naive (ingenuo) Bayes}{62}{subsubsection.6.9.3}%
+\contentsline {paragraph}{\numberline {6.9.3.1}Esempio}{62}{paragraph.6.9.3.1}%
+\contentsline {subsubsection}{\numberline {6.9.4}La probabilità condizionata e il teorema di Bayes}{63}{subsubsection.6.9.4}%
+\contentsline {subsubsection}{\numberline {6.9.5}Classificatore di bayes vantaggi e svantaggi}{63}{subsubsection.6.9.5}%
+\contentsline {subsubsection}{\numberline {6.9.6}Alberi decisionali (Decision Trees)}{63}{subsubsection.6.9.6}%
+\contentsline {subsubsection}{\numberline {6.9.7}Support Vector Machines}{64}{subsubsection.6.9.7}%
+\contentsline {subsubsection}{\numberline {6.9.8}Fuzzy rules based systems}{64}{subsubsection.6.9.8}%
+\contentsline {subsubsection}{\numberline {6.9.9}Algoritmi di regressione}{64}{subsubsection.6.9.9}%
+\contentsline {paragraph}{\numberline {6.9.9.1}Regressione lineare}{64}{paragraph.6.9.9.1}%
+\contentsline {paragraph}{\numberline {6.9.9.2}Regressione logistica}{65}{paragraph.6.9.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.10}Algoritmi semi-supervisionati}{65}{subsubsection.6.9.10}%
+\contentsline {subsubsection}{\numberline {6.9.11}Algoritmi di clustering}{65}{subsubsection.6.9.11}%
+\contentsline {subsubsection}{\numberline {6.9.12}Model ensembles}{65}{subsubsection.6.9.12}%
+\contentsline {subsubsection}{\numberline {6.9.13}Reti Neurali}{66}{subsubsection.6.9.13}%
+\contentsline {subsection}{\numberline {6.10}Il test e la valutazione dei modelli predittivi}{66}{subsection.6.10}%
+\contentsline {subsubsection}{\numberline {6.10.1}Hold-out e cross validation}{66}{subsubsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.2}Cross validation e matrice di confusione}{66}{subsubsection.6.10.2}%
+\contentsline {paragraph}{\numberline {6.10.2.1}Matrice di confusione}{66}{paragraph.6.10.2.1}%
+\contentsline {paragraph}{\numberline {6.10.2.2}Matrice di confusione e metriche di valutazione del modello}{67}{paragraph.6.10.2.2}%
+\contentsline {paragraph}{\numberline {6.10.2.3}Matrice di confusione e F-measure}{67}{paragraph.6.10.2.3}%
+\contentsline {subsubsection}{\numberline {6.10.3}Valutazione dei modelli di clustering}{67}{subsubsection.6.10.3}%
+\contentsline {section}{\numberline {7}Esami Passati}{67}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Domanda 1}{68}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Domanda 2}{68}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Domanda 3}{68}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Domanda 4}{68}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Domanda 5}{69}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Domanda 6}{70}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Domanda 7}{70}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Domanda 8}{70}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Domanda 9}{71}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.10}Domanda 10}{71}{subsection.7.10}%
+\contentsline {subsection}{\numberline {7.11}Domanda 11}{71}{subsection.7.11}%
+\contentsline {subsection}{\numberline {7.12}Domanda 12}{72}{subsection.7.12}%
+\contentsline {subsection}{\numberline {7.13}Domanda 13}{72}{subsection.7.13}%
+\contentsline {subsection}{\numberline {7.14}Domanda 14}{73}{subsection.7.14}%
+\contentsline {subsection}{\numberline {7.15}Domanda 15}{73}{subsection.7.15}%
+\contentsline {subsection}{\numberline {7.16}Domanda 16}{73}{subsection.7.16}%
+\contentsline {subsection}{\numberline {7.17}Domanda 17}{74}{subsection.7.17}%
+\contentsline {subsection}{\numberline {7.18}Domanda 18}{74}{subsection.7.18}%
+\contentsline {subsection}{\numberline {7.19}Domanda 19}{74}{subsection.7.19}%
+\contentsline {subsection}{\numberline {7.20}Domanda 20}{75}{subsection.7.20}%
+\contentsline {subsection}{\numberline {7.21}Domanda 21}{75}{subsection.7.21}%
+\contentsline {subsection}{\numberline {7.22}Domanda 22}{75}{subsection.7.22}%
+\contentsline {subsection}{\numberline {7.23}Domanda 23}{75}{subsection.7.23}%
+\contentsline {subsection}{\numberline {7.24}Domanda 24}{76}{subsection.7.24}%
+\contentsline {subsection}{\numberline {7.25}Domanda 25}{76}{subsection.7.25}%
+\contentsline {subsection}{\numberline {7.26}Domanda 26}{76}{subsection.7.26}%
+\contentsline {subsection}{\numberline {7.27}Domanda 27}{76}{subsection.7.27}%
+\contentsline {subsection}{\numberline {7.28}Domanda 28}{77}{subsection.7.28}%
+\contentsline {subsection}{\numberline {7.29}Domanda 29}{77}{subsection.7.29}%
+\contentsline {subsection}{\numberline {7.30}Domanda 30}{77}{subsection.7.30}%
+\contentsline {subsection}{\numberline {7.31}Domanda 31}{77}{subsection.7.31}%
+\contentsline {subsection}{\numberline {7.32}Domanda 32}{78}{subsection.7.32}%
+\contentsline {subsection}{\numberline {7.33}Domadna 33}{78}{subsection.7.33}%
+\contentsline {subsection}{\numberline {7.34}Domanda 34}{78}{subsection.7.34}%
+\contentsline {subsection}{\numberline {7.35}Domanda 35}{78}{subsection.7.35}%
+\contentsline {subsection}{\numberline {7.36}Domanda 36}{78}{subsection.7.36}%
+\contentsline {subsection}{\numberline {7.37}Domanda 37}{79}{subsection.7.37}%
+\contentsline {subsection}{\numberline {7.38}Domanda 38}{79}{subsection.7.38}%
+\contentsline {subsection}{\numberline {7.39}Domanda 39}{79}{subsection.7.39}%
+\contentsline {subsection}{\numberline {7.40}Domanda 40}{79}{subsection.7.40}%
+\contentsline {subsection}{\numberline {7.41}Domanda 41}{79}{subsection.7.41}%
+\contentsline {subsection}{\numberline {7.42}Domanda 42}{80}{subsection.7.42}%
+\contentsline {subsection}{\numberline {7.43}Domanda 43}{80}{subsection.7.43}%
+\contentsline {subsection}{\numberline {7.44}Domanda 44}{80}{subsection.7.44}%
