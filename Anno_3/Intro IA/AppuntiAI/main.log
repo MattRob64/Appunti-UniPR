@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  6 APR 2025 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  8 APR 2025 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1032,7 +1032,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 ...visti (Planning)}{21}{subsubsection.3.8.3}
+l.52 ...visti (Planning)}{23}{subsubsection.3.8.3}
                                                   % [1] [2] [3{/usr/local/texli
 ve/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}] [4])
 \tf@toc=\write5
@@ -1059,11 +1059,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-<example-image-golden.pdf, id=1395, 324.82053pt x 200.75pt>
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 43.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/1.jpeg, id=1395, 899.36pt x 385.44pt>
+File: ./img/1.jpeg Graphic file (type jpg)
+<use ./img/1.jpeg>
+Package pdftex.def Info: ./img/1.jpeg  used on input line 43.
+(pdftex.def)             Requested size: 269.81007pt x 115.63289pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1078,11 +1078,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 85.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[7 </usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image-golden.pdf>]
+[7 <./img/1.jpeg>]
+<./img/2.jpeg, id=1408, 1308.89pt x 525.965pt>
+File: ./img/2.jpeg Graphic file (type jpg)
+<use ./img/2.jpeg>
+Package pdftex.def Info: ./img/2.jpeg  used on input line 85.
+(pdftex.def)             Requested size: 392.67003pt x 157.79071pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 90--94
 
@@ -1118,7 +1119,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--110
 
  []
 
-[8]
+[8 <./img/2.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
  []
@@ -1134,25 +1135,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--143
  []
 
 [9]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 159.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/3.jpeg, id=1418, 1170.3725pt x 383.4325pt>
+File: ./img/3.jpeg Graphic file (type jpg)
+<use ./img/3.jpeg>
+Package pdftex.def Info: ./img/3.jpeg  used on input line 159.
+(pdftex.def)             Requested size: 351.11446pt x 115.03062pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--163
 
  []
 
-
+[10 <./img/3.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
-[10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 210.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/4.jpeg, id=1425, 614.295pt x 556.0775pt>
+File: ./img/4.jpeg Graphic file (type jpg)
+<use ./img/4.jpeg>
+Package pdftex.def Info: ./img/4.jpeg  used on input line 210.
+(pdftex.def)             Requested size: 184.28992pt x 166.82454pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 215--222
 
@@ -1173,34 +1175,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
-
+[11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} 
+<./img/4.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 231--235
 
  []
 
-[11]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 250.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-) (./sections/agenti_intell.tex
+<./img/5.jpeg, id=1432, 803.0pt x 586.19pt>
+File: ./img/5.jpeg Graphic file (type jpg)
+<use ./img/5.jpeg>
+Package pdftex.def Info: ./img/5.jpeg  used on input line 250.
+(pdftex.def)             Requested size: 240.90186pt x 175.85835pt.
+[12 <./img/5.jpeg>]) (./sections/agenti_intell.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 27.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/6.jpeg, id=1439, 678.535pt x 459.7175pt>
+File: ./img/6.jpeg Graphic file (type jpg)
+<use ./img/6.jpeg>
+Package pdftex.def Info: ./img/6.jpeg  used on input line 27.
+(pdftex.def)             Requested size: 203.56207pt x 137.9163pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--33
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
 Overfull \hbox (3.72069pt too wide) in paragraph at lines 42--45
 \OT1/cmr/m/n/10 Serve un cri-te-rio di va-l-u-tazione ogget-tivo dell'effetto d
 elle azioni dell'agente (della se-quenza di stati dell'ambiente). 
@@ -1211,53 +1212,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 53.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+[13 <./img/6.jpeg>]
+<./img/7.jpeg, id=1445, 839.135pt x 933.4875pt>
+File: ./img/7.jpeg Graphic file (type jpg)
+<use ./img/7.jpeg>
+Package pdftex.def Info: ./img/7.jpeg  used on input line 53.
+(pdftex.def)             Requested size: 251.74243pt x 280.04842pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
-[13]
+[14 <./img/7.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--85
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 93.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 171--175
+
+Overfull \hbox (19.72081pt too wide) in paragraph at lines 91--104
+[] 
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
-[15{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 214.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+[16{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}]
+<./img/8.jpeg, id=1463, 829.0975pt x 632.3625pt>
+File: ./img/8.jpeg Graphic file (type jpg)
+<use ./img/8.jpeg>
+Package pdftex.def Info: ./img/8.jpeg  used on input line 221.
+(pdftex.def)             Requested size: 248.73117pt x 189.7102pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[16]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 235.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+[17]
+<./img/9.jpeg, id=1476, 809.0225pt x 347.2975pt>
+File: ./img/9.jpeg Graphic file (type jpg)
+<use ./img/9.jpeg>
+Package pdftex.def Info: ./img/9.jpeg  used on input line 242.
+(pdftex.def)             Requested size: 242.70862pt x 104.19005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--244
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--251
 
  []
 
-) (./sections/agenti_ris.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--251
+
+ []
+
+[18 <./img/8.jpeg> <./img/9.jpeg>]) (./sections/agenti_ris.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
@@ -1267,7 +1273,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
@@ -1277,43 +1283,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--42
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 58.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 76--81
-
- []
-
+[19]
+<./img/10.jpeg, id=1488, 736.7525pt x 499.8675pt>
+File: ./img/10.jpeg Graphic file (type jpg)
+<use ./img/10.jpeg>
+Package pdftex.def Info: ./img/10.jpeg  used on input line 58.
+(pdftex.def)             Requested size: 221.02745pt x 149.9614pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 76--81
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
+
+ []
+
+[20 <./img/10.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 85--90
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 105.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 118.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-
+<./img/11.jpeg, id=1499, 750.805pt x 437.635pt>
+File: ./img/11.jpeg Graphic file (type jpg)
+<use ./img/11.jpeg>
+Package pdftex.def Info: ./img/11.jpeg  used on input line 105.
+(pdftex.def)             Requested size: 225.24323pt x 131.2915pt.
+<./img/12.jpeg, id=1500, 419.5675pt x 427.5975pt>
+File: ./img/12.jpeg Graphic file (type jpg)
+<use ./img/12.jpeg>
+Package pdftex.def Info: ./img/12.jpeg  used on input line 118.
+(pdftex.def)             Requested size: 125.87122pt x 128.28023pt.
+[21 <./img/11.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
-[20]
+[22 <./img/12.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 170--175
 
  []
@@ -1323,25 +1329,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--198
 
  []
 
-[21]
+
 Underfull \hbox (badness 10000) in paragraph at lines 199--205
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 226.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+[23]
+<./img/13.jpeg, id=1529, 690.58pt x 533.995pt>
+File: ./img/13.jpeg Graphic file (type jpg)
+<use ./img/13.jpeg>
+Package pdftex.def Info: ./img/13.jpeg  used on input line 226.
+(pdftex.def)             Requested size: 207.1756pt x 160.19974pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 220--230
 
  []
 
-[22] [23]
+[24 <./img/13.jpeg>] [25]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 334.
 
-[24]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 340--347
 
  []
@@ -1357,20 +1365,25 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 355.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 368.
 
-[25{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 405.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[26]
+[27{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}]
+<./img/14.jpeg, id=1555, 790.955pt x 353.32pt>
+File: ./img/14.jpeg Graphic file (type jpg)
+<use ./img/14.jpeg>
+Package pdftex.def Info: ./img/14.jpeg  used on input line 405.
+(pdftex.def)             Requested size: 237.28833pt x 105.99681pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 420--426
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 439.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/15.jpeg, id=1561, 1072.005pt x 407.5225pt>
+File: ./img/15.jpeg Graphic file (type jpg)
+<use ./img/15.jpeg>
+Package pdftex.def Info: ./img/15.jpeg  used on input line 439.
+(pdftex.def)             Requested size: 321.60399pt x 122.25769pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 435--446
 
@@ -1381,11 +1394,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--446
 
  []
 
-[27]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 469.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29 <./img/14.jpeg>]
+<./img/16.jpeg, id=1567, 1389.19pt x 614.295pt>
+File: ./img/16.jpeg Graphic file (type jpg)
+<use ./img/16.jpeg>
+Package pdftex.def Info: ./img/16.jpeg  used on input line 469.
+(pdftex.def)             Requested size: 416.76022pt x 184.28992pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 473--479
 
@@ -1396,7 +1413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--479
 
  []
 
-[28]
+[30 <./img/15.jpeg> <./img/16.jpeg>]
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 490.
 
@@ -1423,15 +1440,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 494--499
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 503.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 511.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[29]
+<./img/17.jpeg, id=1579, 584.1825pt x 491.8375pt>
+File: ./img/17.jpeg Graphic file (type jpg)
+<use ./img/17.jpeg>
+Package pdftex.def Info: ./img/17.jpeg  used on input line 503.
+(pdftex.def)             Requested size: 175.25609pt x 147.55238pt.
+[31]
+<./img/18.jpeg, id=1588, 724.7075pt x 501.875pt>
+File: ./img/18.jpeg Graphic file (type jpg)
+<use ./img/18.jpeg>
+Package pdftex.def Info: ./img/18.jpeg  used on input line 511.
+(pdftex.def)             Requested size: 217.41393pt x 150.56366pt.
+ [32 <./img/17.jpeg> <./img/18.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
@@ -1441,10 +1461,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 539.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/19.jpeg, id=1600, 1065.9825pt x 289.08pt>
+File: ./img/19.jpeg Graphic file (type jpg)
+<use ./img/19.jpeg>
+Package pdftex.def Info: ./img/19.jpeg  used on input line 539.
+(pdftex.def)             Requested size: 319.79721pt x 86.72466pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 535--548
 
@@ -1460,10 +1481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 535--548
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30]
+[33 <./img/19.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 591--595
 
  []
@@ -1473,7 +1491,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 591--595
 
  []
 
-[31])
+)
 Underfull \hbox (badness 10000) in paragraph at lines 599--121
 
  []
@@ -1493,7 +1511,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
-
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
@@ -1503,16 +1521,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--23
 
  []
 
-[32]
+
 Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 37.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/20.jpeg, id=1613, 1084.05pt x 622.325pt>
+File: ./img/20.jpeg Graphic file (type jpg)
+<use ./img/20.jpeg>
+Package pdftex.def Info: ./img/20.jpeg  used on input line 37.
+(pdftex.def)             Requested size: 325.21751pt x 186.69893pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
@@ -1522,12 +1544,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 
  []
 
-[33]
+
 Underfull \hbox (badness 10000) in paragraph at lines 62--66
 
  []
 
-
+[36 <./img/20.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
@@ -1537,7 +1559,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--116
 
  []
 
-[34]
+[37]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 119.
 
@@ -1563,116 +1585,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--156
 
  []
 
-[35]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 202.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [36]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 222.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--233
-
- []
-
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 259.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [37] (./sections/agente_logico.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
-
- []
-
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+<./img/21.jpeg, id=1637, 1624.0675pt x 951.555pt>
+File: ./img/21.jpeg Graphic file (type jpg)
+<use ./img/21.jpeg>
+Package pdftex.def Info: ./img/21.jpeg  used on input line 202.
+(pdftex.def)             Requested size: 487.22401pt x 285.4687pt.
 
+Overfull \hbox (13.52718pt too wide) in paragraph at lines 202--203
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--39
-
- []
-
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 45.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/22.jpeg, id=1638, 861.2175pt x 1029.8475pt>
+File: ./img/22.jpeg Graphic file (type jpg)
+<use ./img/22.jpeg>
+Package pdftex.def Info: ./img/22.jpeg  used on input line 222.
+(pdftex.def)             Requested size: 258.36723pt x 308.95663pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--233
+
+ []
 
 [39]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[40 <./img/21.jpeg>]
+<./img/23.jpeg, id=1650, 509.905pt x 425.59pt>
+File: ./img/23.jpeg Graphic file (type jpg)
+<use ./img/23.jpeg>
+Package pdftex.def Info: ./img/23.jpeg  used on input line 259.
+(pdftex.def)             Requested size: 152.97267pt x 127.67798pt.
+) (./sections/agente_logico.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--15
+
+ []
+
+[41 <./img/22.jpeg> <./img/23.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+
+ []
+
+<./img/24.jpeg, id=1662, 879.285pt x 244.915pt>
+File: ./img/24.jpeg Graphic file (type jpg)
+<use ./img/24.jpeg>
+Package pdftex.def Info: ./img/24.jpeg  used on input line 45.
+(pdftex.def)             Requested size: 263.78754pt x 73.47505pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 55--58
 
  []
 
-
+[43 <./img/24.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 83--86
 
  []
@@ -1682,11 +1714,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 97--102
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--102
 
@@ -1698,6 +1725,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--102
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
+
+ []
+
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 117--124
 
  []
@@ -1727,12 +1759,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--131
 
  []
 
-[41]
+
 Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
-
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 140--145
 
  []
@@ -1742,10 +1774,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--145
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 153.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/25.jpeg, id=1679, 441.65pt x 407.5225pt>
+File: ./img/25.jpeg Graphic file (type jpg)
+<use ./img/25.jpeg>
+Package pdftex.def Info: ./img/25.jpeg  used on input line 153.
+(pdftex.def)             Requested size: 132.49602pt x 122.25769pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 166--172
 
@@ -1761,7 +1794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--172
 
  []
 
-[42]
+[46 <./img/25.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 173--176
 
  []
@@ -1791,7 +1824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--207
 
  []
 
-[43]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 239--244
 
  []
@@ -1801,7 +1834,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--244
 
  []
 
-[44]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 276--281
 
  []
@@ -1826,7 +1859,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
-[45]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 297--302
 
  []
@@ -1856,21 +1889,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--328
 
  []
 
-[46]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 360.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/26.jpeg, id=1711, 1065.9825pt x 349.305pt>
+File: ./img/26.jpeg Graphic file (type jpg)
+<use ./img/26.jpeg>
+Package pdftex.def Info: ./img/26.jpeg  used on input line 360.
+(pdftex.def)             Requested size: 319.79721pt x 104.7923pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 356--364
 
  []
 
-
+[51 <./img/26.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 371--375
 
  []
@@ -1880,11 +1914,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--375
 
  []
 
-[47]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 385.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/27.jpeg, id=1717, 809.0225pt x 538.01pt>
+File: ./img/27.jpeg Graphic file (type jpg)
+<use ./img/27.jpeg>
+Package pdftex.def Info: ./img/27.jpeg  used on input line 385.
+(pdftex.def)             Requested size: 242.70862pt x 161.40424pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 390--396
 
@@ -1895,10 +1929,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 390--396
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 411.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+[52 <./img/27.jpeg>]
+<./img/28.jpeg, id=1724, 768.8725pt x 702.625pt>
+File: ./img/28.jpeg Graphic file (type jpg)
+<use ./img/28.jpeg>
+Package pdftex.def Info: ./img/28.jpeg  used on input line 411.
+(pdftex.def)             Requested size: 230.66353pt x 210.78912pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 401--417
 
@@ -1910,13 +1946,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--417
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48]
 Underfull \hbox (badness 10000) in paragraph at lines 435--438
 
  []
 
+[53 <./img/28.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 447.
@@ -1934,7 +1968,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 448--451
 
  []
 
-[49]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 459.
@@ -1976,7 +2009,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 472.
 
-
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 476--479
 
  []
@@ -1998,7 +2031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 488--491
 
  []
 
-[50]
+
 Underfull \hbox (badness 10000) in paragraph at lines 492--495
 
  []
@@ -2010,7 +2043,7 @@ Overfull \hbox (2.15399pt too wide) in paragraph at lines 505--506
 bx/n/10 concatenazione
  []
 
-[51] [52]) (./sections/mod_pred.tex
+[55] [56]) [57] (./sections/mod_pred.tex
 Overfull \hbox (0.96223pt too wide) in paragraph at lines 11--11
 []|\OT1/cmr/bx/n/10 Intelligenza
  []
@@ -2055,24 +2088,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--41
 
  []
 
-[53] [54]
+[58]
 Overfull \hbox (38.26772pt too wide) in paragraph at lines 103--104
  [] 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 107.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 115.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 121.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-[55]
+<./img/29.jpeg, id=1777, 1184.425pt x 604.2575pt>
+File: ./img/29.jpeg Graphic file (type jpg)
+<use ./img/29.jpeg>
+Package pdftex.def Info: ./img/29.jpeg  used on input line 107.
+(pdftex.def)             Requested size: 355.33025pt x 181.27864pt.
+<./img/30.jpeg, id=1778, 684.5575pt x 445.665pt>
+File: ./img/30.jpeg Graphic file (type jpg)
+<use ./img/30.jpeg>
+Package pdftex.def Info: ./img/30.jpeg  used on input line 115.
+(pdftex.def)             Requested size: 205.36882pt x 133.70053pt.
+<./img/31.jpeg, id=1779, 1451.4225pt x 560.0925pt>
+File: ./img/31.jpeg Graphic file (type jpg)
+<use ./img/31.jpeg>
+Package pdftex.def Info: ./img/31.jpeg  used on input line 121.
+(pdftex.def)             Requested size: 435.43011pt x 168.02904pt.
+[59 <./img/29.jpeg>] [60 <./img/30.jpeg> <./img/31.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 175--180
 
  []
@@ -2082,12 +2118,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--180
 
  []
 
-[56]
+
 Underfull \hbox (badness 10000) in paragraph at lines 184--188
 
  []
 
-
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 191--199
 
  []
@@ -2102,35 +2138,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--199
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 204.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/32.jpeg, id=1803, 1017.8025pt x 495.8525pt>
+File: ./img/32.jpeg Graphic file (type jpg)
+<use ./img/32.jpeg>
+Package pdftex.def Info: ./img/32.jpeg  used on input line 204.
+(pdftex.def)             Requested size: 305.34311pt x 148.7569pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
-[57]
+[62 <./img/32.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
-[58]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 280.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 290.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [59]
+<./img/33.jpeg, id=1810, 656.4525pt x 415.5525pt>
+File: ./img/33.jpeg Graphic file (type jpg)
+<use ./img/33.jpeg>
+Package pdftex.def Info: ./img/33.jpeg  used on input line 280.
+(pdftex.def)             Requested size: 196.93727pt x 124.6667pt.
+[63]
+<./img/34.jpeg, id=1815, 616.3025pt x 439.6425pt>
+File: ./img/34.jpeg Graphic file (type jpg)
+<use ./img/34.jpeg>
+Package pdftex.def Info: ./img/34.jpeg  used on input line 290.
+(pdftex.def)             Requested size: 184.89217pt x 131.89375pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 306--311
 
  []
 
-
+[64 <./img/33.jpeg> <./img/34.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 324--330
 
  []
@@ -2140,11 +2179,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--342
 
  []
 
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 351--360
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 351--360
 
@@ -2166,6 +2200,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 351--360
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 351--360
+
+ []
+
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 369--374
 
  []
@@ -2175,7 +2214,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 369--374
 
  []
 
-[61]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 395--401
 
  []
@@ -2190,15 +2229,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--418
 
  []
 
-[62]
+[67]
 Underfull \hbox (badness 10000) in paragraph at lines 433--437
 
  []
 
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 444.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+<./img/35.jpeg, id=1839, 821.0675pt x 451.6875pt>
+File: ./img/35.jpeg Graphic file (type jpg)
+<use ./img/35.jpeg>
+Package pdftex.def Info: ./img/35.jpeg  used on input line 444.
+(pdftex.def)             Requested size: 246.32214pt x 135.5073pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 456--465
 
@@ -2220,30 +2260,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--465
 
  []
 
-[63]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 488.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [64]
+[68 <./img/35.jpeg>]
+<./img/36.jpeg, id=1849, 519.9425pt x 511.9125pt>
+File: ./img/36.jpeg Graphic file (type jpg)
+<use ./img/36.jpeg>
+Package pdftex.def Info: ./img/36.jpeg  used on input line 488.
+(pdftex.def)             Requested size: 155.98395pt x 153.57494pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 505--511
 
  []
 
-[65]
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 553.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 559.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
-File: example-image-golden.pdf Graphic file (type pdf)
-<use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 568.
-(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [66]
+[69] [70 <./img/36.jpeg>]
+<./img/37.jpeg, id=1865, 973.6375pt x 572.1375pt>
+File: ./img/37.jpeg Graphic file (type jpg)
+<use ./img/37.jpeg>
+Package pdftex.def Info: ./img/37.jpeg  used on input line 553.
+(pdftex.def)             Requested size: 292.0935pt x 171.64256pt.
+<./img/38.jpeg, id=1866, 883.3pt x 614.295pt>
+File: ./img/38.jpeg Graphic file (type jpg)
+<use ./img/38.jpeg>
+Package pdftex.def Info: ./img/38.jpeg  used on input line 559.
+(pdftex.def)             Requested size: 264.99205pt x 184.28992pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/39.jpeg, id=1867, 630.355pt x 461.725pt>
+File: ./img/39.jpeg Graphic file (type jpg)
+<use ./img/39.jpeg>
+Package pdftex.def Info: ./img/39.jpeg  used on input line 568.
+(pdftex.def)             Requested size: 189.10796pt x 138.51857pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[71 <./img/37.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 586--589
 
  []
@@ -2253,18 +2308,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 595--597
 
  []
 
-) (./sections/esami_passati.tex [67{/usr/local/texlive/2024/texmf-dist/fonts/en
-c/dvips/mnsymbol/MnSymbolF.enc}] [68] [69] [70] [71] [72] [73] [74]
+[72 <./img/38.jpeg> <./img/39.jpeg>]) (./sections/esami_passati.tex [73{/usr/lo
+cal/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}] [74]
+[75] [76] [77] [78] [79]
 Underfull \hbox (badness 10000) in paragraph at lines 311--315
 
  []
 
-[75] [76]
+[80] [81] [82]
 Underfull \hbox (badness 10000) in paragraph at lines 404--406
 
  []
 
-[77] [78] [79]) [80] (./main.aux)
+[83] [84] [85]) [86] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2273,13 +2329,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 79A819C980BA45E0AA2EBA779169E3BE;54067.
  ) 
 Here is how much of TeX's memory you used:
- 31861 strings out of 474116
- 579828 string characters out of 5743683
+ 32243 strings out of 474116
+ 585859 string characters out of 5743683
  1952187 words of memory out of 5000000
- 53125 multiletter control sequences out of 15000+600000
+ 53462 multiletter control sequences out of 15000+600000
  569602 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,117p,622b,1127s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,117p,622b,1161s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -2292,14 +2348,11 @@ cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (81 pages, 934131 bytes).
+ve/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (87 pages, 2639953 bytes).
 PDF statistics:
- 2197 PDF objects out of 2487 (max. 8388607)
- 2055 compressed objects within 21 object streams
- 592 named destinations out of 1000 (max. 500000)
- 2183 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2241 PDF objects out of 2487 (max. 8388607)
+ 2058 compressed objects within 21 object streams
+ 597 named destinations out of 1000 (max. 500000)
+ 2373 words of extra memory for PDF output out of 10000 (max. 10000000)
 
