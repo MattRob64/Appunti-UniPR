@@ -235,7 +235,7 @@
 	\end{center}
 	La semantica del calcolo proposizionale deve specificare come si fa, dato un modello, a calcolare il valore di verità di qualsiasi formula. \\
 	Questo viene fatto ricorsivamente fino ad arrivare alle formule atomiche dei cinque connettivi.
-	\subsection{Inference by Theorem Proving}
+	\subsubsection{Inference by Theorem Proving}
 	L’implicazione può essere ottenuta dimostrando (provando) teoremi, applicando regole di inferenza direttamente alle frasi presenti nella nostra base di conoscenza per costruire una prova della validità della frase desiderata senza consultare tutti modelli.\\\\
 	Se il numero di modelli è grande ma la lunghezza della dimostrazione è breve, la dimostrazione di teoremi può essere più efficiente del model checking.\\\\
 	\textbf{Equivalenza logica (primo concetto)}: Due proposizioni sono logicamente equivalenti iff (se e solo se) sono vere negli stessi: $\alpha \equiv \beta $ iff $\alpha \vDash \beta$ and $\beta \vDash \alpha$\\
@@ -253,7 +253,7 @@
 			\item $KB \vDash \alpha$ if and only if $(KB \; \alpha)$ è non-soddisfacibile
 		\end{itemize}
 	\end{itemize}
-	\subsubsection{Inferenza e prova di teoremi}
+	\paragraph{Inferenza e prova di teoremi}
 	\begin{itemize}
 		\item I metodi di prova di teoremi si possono dividere in:
 		\begin{itemize}
@@ -269,7 +269,7 @@
 			\item Tramite backtracking o tecniche euristiche (valida ma non completa)
 		\end{itemize}
 	\end{itemize}
-	\subsubsection{Proof methods}
+	\paragraph{Proof methods}
 	\textbf{Regola del Modus Ponens (un modo per affermare)}: Ogni volta che sono date le formule $\alpha \Rightarrow \beta$, $\alpha$ allora si può inferire $\beta$.
 	\[\frac{\alpha \Rightarrow \beta , \alpha}{\beta}\]
 	\textbf{Regola del And-Elimination (eliminazione degli and)}:
@@ -414,7 +414,7 @@
 	\end{figure}
 	\\\\Le formule atomiche possono essere combinate per formare delle altre formule complesse:
 	\begin{itemize}
-		\item Congiunzione: $A \& B$
+		\item Congiunzione: $A \wedge B$
 		\item Disgiunzione: $A \vee B$
 		\item Implicazione: $A \rightarrow B$
 		\item Negazione: $\neg A$

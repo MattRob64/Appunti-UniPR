@@ -17,13 +17,13 @@
 \contentsline {subsubsection}{\numberline {1.8.2}Approccio sub-simbolico}{9}{subsubsection.1.8.2}%
 \contentsline {paragraph}{\numberline {1.8.2.1}Ragionamento e apprendimento}{10}{paragraph.1.8.2.1}%
 \contentsline {subsection}{\numberline {1.9}Cos'è la teoria del learning}{10}{subsection.1.9}%
-\contentsline {subsubsection}{\numberline {1.9.1}Inferenze}{10}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.1}Inferenze}{11}{subsubsection.1.9.1}%
 \contentsline {subsubsection}{\numberline {1.9.2}Deep Learning e Reti Neurali Artificiali (ANN)}{11}{subsubsection.1.9.2}%
 \contentsline {subsection}{\numberline {1.10}Black Box AI \& Explainable AI}{12}{subsection.1.10}%
 \contentsline {subsubsection}{\numberline {1.10.1}Indagare un sistema di AI}{12}{subsubsection.1.10.1}%
-\contentsline {paragraph}{\numberline {1.10.1.1}Esempio: Un oggetto cade a terra e si rompe.}{13}{paragraph.1.10.1.1}%
-\contentsline {section}{\numberline {2}Agenti Intelligenti}{13}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Introduzione}{13}{subsection.2.1}%
+\contentsline {paragraph}{\numberline {1.10.1.1}Esempio: Un oggetto cade a terra e si rompe.}{12}{paragraph.1.10.1.1}%
+\contentsline {section}{\numberline {2}Agenti Intelligenti}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introduzione}{12}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Esempio}{14}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.2}Agenti Intelligenti/razionale}{14}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Agenti e ambiente}{15}{subsection.2.3}%
@@ -126,41 +126,41 @@
 \contentsline {subsection}{\numberline {5.3}Logica proposizionale}{47}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Sintassi}{48}{subsubsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.2}Semantica}{48}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4}Inference by Theorem Proving}{48}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Inferenza e prova di teoremi}{49}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Proof methods}{49}{subsubsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.3}Monoliticità della logica}{49}{subsubsection.5.4.3}%
-\contentsline {subsubsection}{\numberline {5.4.4}Proof by resolution}{49}{subsubsection.5.4.4}%
-\contentsline {subsubsection}{\numberline {5.4.5}Logica proposizionale - Regole di inferenza}{49}{subsubsection.5.4.5}%
-\contentsline {subsubsection}{\numberline {5.4.6}Conjunctive normal form (CNF): forma normale della KB}{50}{subsubsection.5.4.6}%
-\contentsline {subsubsection}{\numberline {5.4.7}Horn clauses and definite clauses}{50}{subsubsection.5.4.7}%
-\contentsline {subsubsection}{\numberline {5.4.8}Forward and backward chaining}{50}{subsubsection.5.4.8}%
-\contentsline {subsection}{\numberline {5.5}La logica dei predicati}{51}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Limiti della logica proposizionale}{51}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Logica del primo ordine (1)}{51}{subsubsection.5.5.2}%
-\contentsline {paragraph}{\numberline {5.5.2.1}Logica del primo ordine vs logica proposizionale vs altre logiche}{51}{paragraph.5.5.2.1}%
-\contentsline {paragraph}{\numberline {5.5.2.2}Logica del primo ordine (2)}{52}{paragraph.5.5.2.2}%
-\contentsline {paragraph}{\numberline {5.5.2.3}Esempio}{52}{paragraph.5.5.2.3}%
-\contentsline {paragraph}{\numberline {5.5.2.4}Logica del primo ordine: Sintassi}{52}{paragraph.5.5.2.4}%
-\contentsline {paragraph}{\numberline {5.5.2.5}Logica del primo ordine: Semantica}{53}{paragraph.5.5.2.5}%
-\contentsline {subsubsection}{\numberline {5.5.3}I quantificatori}{54}{subsubsection.5.5.3}%
-\contentsline {paragraph}{\numberline {5.5.3.1}Qualificatore universale $\forall $}{54}{paragraph.5.5.3.1}%
-\contentsline {paragraph}{\numberline {5.5.3.2}Qualificatore esistenziale $\exists $}{54}{paragraph.5.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.5.4}Quantificatori annidati}{54}{subsubsection.5.5.4}%
-\contentsline {subsubsection}{\numberline {5.5.5}Quantificatori annidati: connessioni tra $\forall $ e $\exists $}{55}{subsubsection.5.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.6}Logica del primo ordine: uguaglianza}{55}{subsubsection.5.5.6}%
-\contentsline {subsubsection}{\numberline {5.5.7}Logica del primo ordine: Il mondo dei wumpus}{55}{subsubsection.5.5.7}%
-\contentsline {subsubsection}{\numberline {5.5.8}Logica del primo ordine e regole di inferenza e forma a clausole}{55}{subsubsection.5.5.8}%
-\contentsline {subsection}{\numberline {5.6}Modus Ponens Generalizzato}{55}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Forma a Clausole e Modus Ponens Generalizzato}{55}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}Modus Ponens Generalizzato e inferenza}{55}{subsubsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.3}Inferenza nella logica del primo ordine}{56}{subsubsection.5.6.3}%
-\contentsline {subsubsection}{\numberline {5.6.4}Vantaggi della logica}{56}{subsubsection.5.6.4}%
-\contentsline {subsubsection}{\numberline {5.6.5}Limiti della logica}{56}{subsubsection.5.6.5}%
-\contentsline {subsubsection}{\numberline {5.6.6}Ingegneria della conoscenza nella logica del primo ordine}{56}{subsubsection.5.6.6}%
-\contentsline {subsubsection}{\numberline {5.6.7}The knowledge-engineering process}{57}{subsubsection.5.6.7}%
-\contentsline {subsubsection}{\numberline {5.6.8}Prolog}{57}{subsubsection.5.6.8}%
-\contentsline {subsection}{\numberline {5.7}Cenni di Pianificazione}{58}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.3.3}Inference by Theorem Proving}{48}{subsubsection.5.3.3}%
+\contentsline {paragraph}{\numberline {5.3.3.1}Inferenza e prova di teoremi}{49}{paragraph.5.3.3.1}%
+\contentsline {paragraph}{\numberline {5.3.3.2}Proof methods}{49}{paragraph.5.3.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.4}Monoliticità della logica}{49}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Proof by resolution}{49}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Logica proposizionale - Regole di inferenza}{49}{subsubsection.5.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.7}Conjunctive normal form (CNF): forma normale della KB}{50}{subsubsection.5.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.8}Horn clauses and definite clauses}{50}{subsubsection.5.3.8}%
+\contentsline {subsubsection}{\numberline {5.3.9}Forward and backward chaining}{50}{subsubsection.5.3.9}%
+\contentsline {subsection}{\numberline {5.4}La logica dei predicati}{51}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Limiti della logica proposizionale}{51}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Logica del primo ordine (1)}{51}{subsubsection.5.4.2}%
+\contentsline {paragraph}{\numberline {5.4.2.1}Logica del primo ordine vs logica proposizionale vs altre logiche}{51}{paragraph.5.4.2.1}%
+\contentsline {paragraph}{\numberline {5.4.2.2}Logica del primo ordine (2)}{52}{paragraph.5.4.2.2}%
+\contentsline {paragraph}{\numberline {5.4.2.3}Esempio}{52}{paragraph.5.4.2.3}%
+\contentsline {paragraph}{\numberline {5.4.2.4}Logica del primo ordine: Sintassi}{52}{paragraph.5.4.2.4}%
+\contentsline {paragraph}{\numberline {5.4.2.5}Logica del primo ordine: Semantica}{53}{paragraph.5.4.2.5}%
+\contentsline {subsubsection}{\numberline {5.4.3}I quantificatori}{54}{subsubsection.5.4.3}%
+\contentsline {paragraph}{\numberline {5.4.3.1}Qualificatore universale $\forall $}{54}{paragraph.5.4.3.1}%
+\contentsline {paragraph}{\numberline {5.4.3.2}Qualificatore esistenziale $\exists $}{54}{paragraph.5.4.3.2}%
+\contentsline {subsubsection}{\numberline {5.4.4}Quantificatori annidati}{54}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Quantificatori annidati: connessioni tra $\forall $ e $\exists $}{55}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}Logica del primo ordine: uguaglianza}{55}{subsubsection.5.4.6}%
+\contentsline {subsubsection}{\numberline {5.4.7}Logica del primo ordine: Il mondo dei wumpus}{55}{subsubsection.5.4.7}%
+\contentsline {subsubsection}{\numberline {5.4.8}Logica del primo ordine e regole di inferenza e forma a clausole}{55}{subsubsection.5.4.8}%
+\contentsline {subsection}{\numberline {5.5}Modus Ponens Generalizzato}{55}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Forma a Clausole e Modus Ponens Generalizzato}{55}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Modus Ponens Generalizzato e inferenza}{55}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Inferenza nella logica del primo ordine}{56}{subsubsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.4}Vantaggi della logica}{56}{subsubsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.5}Limiti della logica}{56}{subsubsection.5.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.6}Ingegneria della conoscenza nella logica del primo ordine}{56}{subsubsection.5.5.6}%
+\contentsline {subsubsection}{\numberline {5.5.7}The knowledge-engineering process}{57}{subsubsection.5.5.7}%
+\contentsline {subsubsection}{\numberline {5.5.8}Prolog}{57}{subsubsection.5.5.8}%
+\contentsline {subsection}{\numberline {5.6}Cenni di Pianificazione}{58}{subsection.5.6}%
 \contentsline {section}{\numberline {6}Modelli Predittivi}{58}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Machine Learning and Data}{58}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Possibili applicazioni del ML}{59}{subsubsection.6.1.1}%

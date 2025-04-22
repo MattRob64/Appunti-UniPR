@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  8 APR 2025 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  13 APR 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,12 +1069,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
  []
 
@@ -1082,50 +1082,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
 <./img/2.jpeg, id=1408, 1308.89pt x 525.965pt>
 File: ./img/2.jpeg Graphic file (type jpg)
 <use ./img/2.jpeg>
-Package pdftex.def Info: ./img/2.jpeg  used on input line 85.
+Package pdftex.def Info: ./img/2.jpeg  used on input line 86.
 (pdftex.def)             Requested size: 392.67003pt x 157.79071pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--110
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
 
  []
 
 [8 <./img/2.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 122--127
+Underfull \hbox (badness 10000) in paragraph at lines 111--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--136
+Underfull \hbox (badness 10000) in paragraph at lines 111--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
@@ -1134,63 +1134,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--143
 
  []
 
-[9]
-<./img/3.jpeg, id=1418, 1170.3725pt x 383.4325pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
+
+ []
+
+[9{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}]
+<./img/3.jpeg, id=1419, 1170.3725pt x 383.4325pt>
 File: ./img/3.jpeg Graphic file (type jpg)
 <use ./img/3.jpeg>
-Package pdftex.def Info: ./img/3.jpeg  used on input line 159.
+Package pdftex.def Info: ./img/3.jpeg  used on input line 166.
 (pdftex.def)             Requested size: 351.11446pt x 115.03062pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--163
+Underfull \hbox (badness 10000) in paragraph at lines 162--170
 
  []
 
 [10 <./img/3.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
+Underfull \hbox (badness 10000) in paragraph at lines 206--210
 
  []
 
 <./img/4.jpeg, id=1425, 614.295pt x 556.0775pt>
 File: ./img/4.jpeg Graphic file (type jpg)
 <use ./img/4.jpeg>
-Package pdftex.def Info: ./img/4.jpeg  used on input line 210.
+Package pdftex.def Info: ./img/4.jpeg  used on input line 217.
 (pdftex.def)             Requested size: 184.28992pt x 166.82454pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--222
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--222
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 222--229
 
  []
 
 [11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc} 
 <./img/4.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 231--235
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
-<./img/5.jpeg, id=1432, 803.0pt x 586.19pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
+
+ []
+
+<./img/5.jpeg, id=1433, 803.0pt x 586.19pt>
 File: ./img/5.jpeg Graphic file (type jpg)
 <use ./img/5.jpeg>
-Package pdftex.def Info: ./img/5.jpeg  used on input line 250.
+Package pdftex.def Info: ./img/5.jpeg  used on input line 257.
 (pdftex.def)             Requested size: 240.90186pt x 175.85835pt.
-[12 <./img/5.jpeg>]) (./sections/agenti_intell.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/agenti_intell.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
 
+[12]
 <./img/6.jpeg, id=1439, 678.535pt x 459.7175pt>
 File: ./img/6.jpeg Graphic file (type jpg)
 <use ./img/6.jpeg>
@@ -1212,8 +1221,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
-[13 <./img/6.jpeg>]
-<./img/7.jpeg, id=1445, 839.135pt x 933.4875pt>
+[13 <./img/5.jpeg> <./img/6.jpeg>]
+<./img/7.jpeg, id=1446, 839.135pt x 933.4875pt>
 File: ./img/7.jpeg Graphic file (type jpg)
 <use ./img/7.jpeg>
 Package pdftex.def Info: ./img/7.jpeg  used on input line 53.
@@ -1239,7 +1248,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--182
  []
 
 [16{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}]
-<./img/8.jpeg, id=1463, 829.0975pt x 632.3625pt>
+<./img/8.jpeg, id=1464, 829.0975pt x 632.3625pt>
 File: ./img/8.jpeg Graphic file (type jpg)
 <use ./img/8.jpeg>
 Package pdftex.def Info: ./img/8.jpeg  used on input line 221.
@@ -1248,7 +1257,7 @@ Package pdftex.def Info: ./img/8.jpeg  used on input line 221.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<./img/9.jpeg, id=1476, 809.0225pt x 347.2975pt>
+<./img/9.jpeg, id=1477, 809.0225pt x 347.2975pt>
 File: ./img/9.jpeg Graphic file (type jpg)
 <use ./img/9.jpeg>
 Package pdftex.def Info: ./img/9.jpeg  used on input line 242.
@@ -1284,7 +1293,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--42
  []
 
 [19]
-<./img/10.jpeg, id=1488, 736.7525pt x 499.8675pt>
+<./img/10.jpeg, id=1489, 736.7525pt x 499.8675pt>
 File: ./img/10.jpeg Graphic file (type jpg)
 <use ./img/10.jpeg>
 Package pdftex.def Info: ./img/10.jpeg  used on input line 58.
@@ -1304,12 +1313,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--90
 
  []
 
-<./img/11.jpeg, id=1499, 750.805pt x 437.635pt>
+<./img/11.jpeg, id=1500, 750.805pt x 437.635pt>
 File: ./img/11.jpeg Graphic file (type jpg)
 <use ./img/11.jpeg>
 Package pdftex.def Info: ./img/11.jpeg  used on input line 105.
 (pdftex.def)             Requested size: 225.24323pt x 131.2915pt.
-<./img/12.jpeg, id=1500, 419.5675pt x 427.5975pt>
+<./img/12.jpeg, id=1501, 419.5675pt x 427.5975pt>
 File: ./img/12.jpeg Graphic file (type jpg)
 <use ./img/12.jpeg>
 Package pdftex.def Info: ./img/12.jpeg  used on input line 118.
@@ -1335,7 +1344,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--205
  []
 
 [23]
-<./img/13.jpeg, id=1529, 690.58pt x 533.995pt>
+<./img/13.jpeg, id=1530, 690.58pt x 533.995pt>
 File: ./img/13.jpeg Graphic file (type jpg)
 <use ./img/13.jpeg>
 Package pdftex.def Info: ./img/13.jpeg  used on input line 226.
@@ -1365,12 +1374,13 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 355.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 368.
 
-[27{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}]
+[27]
 <./img/14.jpeg, id=1555, 790.955pt x 353.32pt>
 File: ./img/14.jpeg Graphic file (type jpg)
 <use ./img/14.jpeg>
 Package pdftex.def Info: ./img/14.jpeg  used on input line 405.
 (pdftex.def)             Requested size: 237.28833pt x 105.99681pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2326,11 +2336,11 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 79A819C980BA45E0AA2EBA779169E3BE;54067.
+(rerunfilecheck)             Checksum: DB516EDF64203763A0FB73CE9AEE6A39;54083.
  ) 
 Here is how much of TeX's memory you used:
  32243 strings out of 474116
- 585859 string characters out of 5743683
+ 585861 string characters out of 5743683
  1952187 words of memory out of 5000000
  53462 multiletter control sequences out of 15000+600000
  569602 words of font info for 75 fonts, out of 8000000 for 9000
@@ -2349,7 +2359,7 @@ l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (87 pages, 2639988 bytes).
+Output written on main.pdf (87 pages, 2639781 bytes).
 PDF statistics:
  2241 PDF objects out of 2487 (max. 8388607)
  2058 compressed objects within 21 object streams
