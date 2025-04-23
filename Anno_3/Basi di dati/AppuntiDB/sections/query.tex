@@ -1,0 +1,268 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+	Un’interrogazione è una funzione $E(r)$ che applicata ad istanze $r$ di una base di dati produce una relazione su un dato insieme di attributi $X$.\\\\
+	Le interrogazioni su uno schema di base di dati $R$ in algebra relazionale sono espressioni i cui atomi (le variabili) sono relazioni in $R$.
+	\subsection{Esempio}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età} & \textbf{Stipendio}\\
+			\hline
+			7309 & Rossi & 34 & 45\\
+			5998 & Bianchi & 37 & 38\\
+			9553 & Neri & 42 & 35\\
+			5698 & Bruni & 43 & 42\\
+			4076 & Mori & 45 & 50\\
+			8123 & Lupi & 46 & 60\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Supervisione}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Capo} \\
+			\hline
+			7309 & 5698\\
+			5998 & 5698\\
+			9553 & 4076\\
+			5698 & 4076\\
+			4076 & 8123\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Trovare matricola, nome, età e stipendio degli impiegati che guadagnano più di 40:
+	\[SEL_{Stipendio > 40} (Impiegati)\]
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età} & \textbf{Stipendio}\\
+			\hline
+			7309 & Rossi & 34 & 45\\
+			5698 & Bruni & 43 & 42\\
+			4076 & Mori & 45 & 50\\
+			8123 & Lupi & 46 & 60\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Trovare matricola, nome ed età degli impiegati che guadagnano più di 40
+	\[PROJ_{Matricola, Nome, \textit{Età}} (SEL_{Stipendio > 40} (Impiegati))\]
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7309 & Rossi & 34\\
+			5698 & Bruni & 43\\
+			4076 & Mori & 45\\
+			8123 & Lupi & 46\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsection{Procedimento Logico}
+	Trovare le matricole dei capi degli impiegati che guadagnano più di 40:
+	\[PROJ_{Capo} ( SEL_{Stipendio>40} ( \text{Supervisione } JOIN_{Impiegato = Matricola} \text{ Impiegati} ) )\]
+	Operando secondo lo schema che abbiamo visto:
+	\begin{enumerate}
+		\item Creo una singola tabella in cui ogni tupla contiene (fra gli altri) gli attributi Capo, Impiegato e Stipendio con un join fra Supervisione e Impiegati
+		\item Seleziono le tuple con stipendio $>$ 40
+		\item Proietto il risultato sull'attributo Capo
+	\end{enumerate}
+	\subsection{Algebra con valori nulli}
+	Gli operatori logici vengono estesi con una logica a 3 valori: VERO (V), FALSO (F), SCONOSCIUTO (U)\\\\
+	Tabelle di verità operatori logici:
+	\begin{center}
+		\begin{tabular}{ c|c }
+			\textbf{NOT} & \\
+			\hline
+			\textbf{F} & V\\
+			\textbf{U} & U\\
+			\textbf{V} & F
+		\end{tabular}
+		\hfill
+		\begin{tabular}{ c|c c c }
+			\textbf{AND} & \textbf{V} & \textbf{U} & \textbf{F}\\
+			\hline
+			\textbf{V} & V & U & F \\
+			\textbf{U} & U & U & F\\
+			\textbf{F} & F & F & F
+		\end{tabular}
+		\hfill
+		\begin{tabular}{ c|c c c }
+			\textbf{OR} & \textbf{V} & \textbf{U} & \textbf{F}\\
+			\hline
+			\textbf{V} & V & V & V \\
+			\textbf{U} & V & U & U\\
+			\textbf{F} & V & U & F
+		\end{tabular}
+	\end{center}
+	\subsection{Equivalenze di espressioni}
+	Due espressioni sono equivalenti se:
+	\begin{itemize}
+		\item $E_1 \equiv_R E_2$ se $E_1(r)=E_2(r)$ per ogni istanza $r$ di $R$\\
+		\textbf{Equivalenza dipendente dallo schema}
+		\item $E_1\equiv E_2$ se $E_1 \equiv_R E_2$ per ogni schema $R$\\
+		\textbf{Equivalenza assoluta}
+	\end{itemize}
+	L’equivalenza è importante in quanto consente di scegliere, a parità di risultato, l’operazione meno costosa.
+	\begin{itemize}
+		\item Atomizzazione delle selezioni\\
+		$\sigma_{F_1 \wedge F_2} (E) \equiv \sigma_{F_1} (\sigma_{F_2} (E) )$
+		\item Idempotenza delle proiezioni\\
+		$\Pi_{X} (E) \equiv \Pi_{X} (\Pi_{XY} (E))$ qualunque sia $Y$
+		\item Anticipazione della selezione rispetto al join\\
+		$\sigma_F (E_1 \Diamond E_2) \equiv E_1 \Diamond (\sigma_F (E_2))$
+		\item Anticipazione della proiezione rispetto al join:\\
+		$\Pi_{X_1,Y_2} (E_1 \Diamond E_2) \equiv E_1 \Diamond \Pi_{Y_2} (E_2)$   {\color{red} NB: $Y_1 \subseteq X_1, Y_2 \subseteq X_2$ }\\
+		($E_1$ definita su $X_1$, $E_2$ definita su $X_2$)\\
+		(Vale solo se $Y_2$ contiene gli attributi coinvolti nella condizione di join)\\\\
+		Allora (combinando con idempotenza delle proiezioni):\\
+		$\Pi_Y (E_1 \Diamond_F E_2) \equiv \Pi_Y (\Pi_{Y_1} (E_1) \Diamond_F \Pi_{Y_2} (E_2))$\\
+		Dove $Y_1$ e $Y_2$ contengono, rispettivamente, gli attributi di $X_1$ e $X_2$ compresi in $Y$ o coinvolti nella condizione $F$.\\\\
+		In pratica è possibile ignorare, in ciascuna relazione, gli attributi non compresi in Y e non coinvolti nel join.
+		\item Inglobamento di una selezione in un prodotto cartesiano a formare un join (theta-join):\\
+		$\sigma_F (E_1 \Diamond E_2 ) \equiv E_1 \Diamond_F E_2$
+		\item Tutti gli operatori binari eccetto la differenza godono delle proprietà associativa e commutativa.
+		\item Distributività della selezione rispetto all'unione:\\
+		$\sigma_F (E_1 \cup E_2) \equiv \sigma_F (E_1) \cup \sigma_F (E_2)$
+		\item Distributività della selezione rispetto alla differenza:\\
+		$\sigma_F (E_1 - E_2) \equiv \sigma_F (E_1) - \sigma_F (E_2)$
+		\item Distributività della proiezione rispetto all'unione:\\
+		$\Pi_{X} (E_1 \cup E_2) \equiv \Pi_{X} (E_1) \cup \Pi_{X} (E_2)$\\
+		{ \color{red} NB La proiezione NON è distributiva rispetto alla differenza}
+		\item Corrispondenze fra operatori insiemistici e selezioni complesse:\\
+		$\sigma_{F_1 \vee F_2} (R) \equiv \sigma_{F_1} (R) \cup \sigma_{F_2} (R)$\\
+		$\sigma_{F_1 \wedge F_2} (R) \equiv \sigma_{F_1} (R) \cap \sigma_{F_2} (R) \equiv \sigma_{F_1} (R) \Rightarrow \sigma_{F_2} (R)$\\
+		$\sigma_{F_1 \wedge \neg F_2} (R) \equiv \sigma_{F_1} (R) - \sigma_{F_2} (R)$
+		\item Proprietà distributiva del join rispetto all'unione:\\
+		$E \Rightarrow (E_1 \cup E_2) \equiv (E \Rightarrow E_1) \cup (E \Rightarrow E_2)$
+	\end{itemize}
+	\subsection{Viste (Relazioni Derivate)}
+	\begin{itemize}
+		\item Rappresentazioni diverse per gli stessi dati (schema esterno):
+		\begin{itemize}
+			\item \textbf{Relazioni di base}: contenuto autonomo; fisicamente e originariamente contenute nella base di dati
+			\item \textbf{Relazioni derivate}: relazioni il cui contenuto è funzione del contenuto di altre relazioni (definito per mezzo di interrogazioni)
+			\item \textbf{Relazioni Virtuali (Viste)}: Relazioni definite mediante funzioni o espressioni del linguaggio di interrogazione, non realmente presenti nella base di dati ma utilizzabili come se lo fossero. \\
+			Devono essere ricalcolate tutte le volte.
+			\item \textbf{Viste materializzate}: Relazioni virtuali effettivamente inserite nella base di dati.\\
+			Immediatamente disponibili ma critiche per il mantenimento dell’allineamento con le relazioni da cui derivano.\\
+			Non sono supportate dai DBMS.
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Vantaggi}
+	\begin{itemize}
+		\item Permettono di mostrare a un utente le sole componenti della base di dati che interessano
+		\item Espressioni molto complesse possono essere definite come viste e rese molto più leggibili
+		\item Sicurezza: è possibile definire diritti di accesso anche per una sola vista (quindi per una particolare porzione della base di dati)
+		\item In caso di ristrutturazione della base di dati, le “vecchie” relazioni possono essere di nuovo ricavate mediante viste, consentendo l’uso di applicazioni che fanno riferimento al vecchio schema
+	\end{itemize}
+	\subsubsection{Esempio}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Afferenza}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} \\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Direzione}\\
+			\hline
+			\textbf{Reparto} & \textbf{Capo} \\
+			\hline
+			A & Mori\\
+			B & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Una possibile vista:
+	\[Supervisione(Impiegato, Capo) = PROJ_{Impiegato,Capo} (Afferenza \; JOIN \; Direzione)\]
+	\subsubsection{Interrogazioni sulle viste}
+	Sono eseguite sostituendo alla vista la sua definizione:
+	\[SEL_{Capo = 'Leoni'} (Supervisione)\]
+	viene eseguita come
+	\[SEL_{Capo = 'Leoni'} (PROJ_{Impiegato, Capo} (Afferenza \; JOIN \; Direzione))\]
+	\subsubsection{Selezione con condizione valutata su tuple diverse della stessa relazione}
+	Trovare gli impiegati con lo stesso nome.\\\\
+	Data la relazione:
+	\[Impiegato (Nome, Cognome, MatricolaImpiegato)\]
+	Definisco una vista:
+	\[Impiegato1 (Nome1, Cognome1, MatricolaImpiegato1)\] 
+	\[=\] 
+	\[REN_{Nome1, Cognome1, MatricolaImpiegato1 \leftarrow Nome, Cognome, MatricolaImpiegato} (Impiegato)\]
+	Interrogazione che ottiene il risultato voluto:
+	\[PROJ_{Nome, Cognome} (SEL_{Nome = Nome1} (Impiegato \; JOIN \; Impiegato1))\]
+	\begin{center}
+		\textbf{Prodotto Cartesiano}
+	\end{center}
+	\subsubsection{Viste come strumenti di programmazione}
+	Trovare gli impiegati che hanno lo stesso capo di Rossi
+	\begin{itemize}
+		\item Senza vista: (I "..." significano che va a capo)\\
+		$PROJ_{Impiegato} ((Afferenza \; JOIN \; Direzione) \; JOIN \; REN_{ImpR, RepR \leftarrow Impiegato, Reparto} ...\\... (SEL_{Impiegato = 'Rossi'} (Afferenza \; JOIN \; Direzione)))$
+		\item Con Vista:\\
+		$PROJ_{Impiegato} ((Supervisione) \; JOIN \; REN_{ImpR, RepR \leftarrow Impiegato, Reparto} (SEL_{Impiegato = 'Rossi'} (Supervisione)))$
+	\end{itemize}
+	\textbf{NB} In questo esempio, rispetto al precedente:
+	\[Supervisione(Impiegato,Reparto,Capo)= Afferenza \; JOIN \;  Direzione\]
+	È senza proiezione, quindi contiene anche l’attributo Reparto!
+	\subsubsection{Viste ed Aggiornamenti}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Afferenza}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} \\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Verdi & A\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Direzione}\\
+			\hline
+			\textbf{Reparto} & \textbf{Capo} \\
+			\hline
+			A & Mori\\
+			B & Bruni\\
+			C & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Supervisione}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Capo} \\
+			\hline
+			Rossi & Mori\\
+			Neri & Bruni\\
+			Verdi & Mori\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Vogliamo inserire, nella vista, il fatto che Lupi ha come capo Bruni; oppure che Belli ha come capo Falchi; come facciamo?
+	\begin{itemize}
+		\item "Aggiornare una vista": modificare le relazioni di base in modo che la vista, "ricalcolata", rispecchi l'aggiornamento
+		\item L'aggiornamento sulle relazioni di base corrispondente a quello sulla vista deve essere univoco
+		\item In generale però non è univoco!
+		\item Sulle viste sono ammissibili pochissimi aggiornamenti
+	\end{itemize}
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  27 MAR 2025 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  24 APR 2025 01:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,7 +908,7 @@ Package hyperref Info: Link coloring OFF on input line 77.
 \openout4 = `main.out'.
 
 \c@lstlisting=\count363
-<./img/0.cover.png, id=244, 1807.75375pt x 1016.79875pt>
+<./img/0.cover.png, id=421, 1807.75375pt x 1016.79875pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
 Package pdftex.def Info: ./img/0.cover.png  used on input line 98.
@@ -940,26 +940,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 ...e {7.6.1}Esempio}{11}{subsubsection.7.6.1}
-                                                  % [1])
+l.36 ...e {7.6.1}Esempio}{12}{subsubsection.7.6.1}
+                                                  % [1] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2]
-<example-image-golden.pdf, id=326, 324.82053pt x 200.75pt>
+ [3]
+<example-image-golden.pdf, id=552, 324.82053pt x 200.75pt>
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 131.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 
-(./sections/dbms.tex [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-s
+(./sections/dbms.tex [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-s
 uper/cm-super-ts1.enc} </usr/local/texlive/2024/texmf-dist/tex/latex/mwe/exampl
 e-image-golden.pdf>]) (./sections/mod_dati.tex
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 20.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [4]
+ [5]
 Underfull \hbox (badness 10000) in paragraph at lines 33--45
 
  []
@@ -979,7 +979,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 62--89
 []$[]$  $[]$ 
  []
 
-[5]
+[6]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
 Package pdftex.def Info: example-image-golden.pdf  used on input line 123.
@@ -1032,8 +1032,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--127
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6])
-Overfull \hbox (25.23688pt too wide) in paragraph at lines 192--200
+[7]) (./sections/interf.tex
+Overfull \hbox (25.23688pt too wide) in paragraph at lines 53--61
 [][] 
  []
 
@@ -1042,7 +1042,7 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
-) [7]
+) [8]
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
@@ -1050,17 +1050,18 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 File: lstlang2.sty 2024/02/21 1.10 listings language file
 )
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-233.
+94.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 262.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 123.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
- [8]
-Overfull \hbox (6.14519pt too wide) in paragraph at lines 298--300
+ [9])
+(./sections/mod_rel.tex
+Overfull \hbox (6.14519pt too wide) in paragraph at lines 22--24
 \OT1/cmr/m/n/10 Il prodotto carte-siano tra $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/1
 0 e $\OML/cmm/m/it/10 B$ \OT1/cmr/m/n/10 ^^Re $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 cubo; rosso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n
@@ -1072,134 +1073,286 @@ mr/m/n/10 (\OML/cmm/m/it/10 cono; blu\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--319
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--319
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 338--341
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--354
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+[11]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 395.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 119.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 418.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 142.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11]
+[12]
 File: example-image-golden.pdf Graphic file (type pdf)
 <use example-image-golden.pdf>
-Package pdftex.def Info: example-image-golden.pdf  used on input line 471.
+Package pdftex.def Info: example-image-golden.pdf  used on input line 195.
 (pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
 
-Overfull \hbox (6.97618pt too wide) in paragraph at lines 434--477
+Overfull \hbox (6.97618pt too wide) in paragraph at lines 158--201
 [] [] []
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 489--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 525--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 525--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--540
-
- []
-
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 543--548
+Underfull \hbox (badness 10000) in paragraph at lines 213--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--597
+Underfull \hbox (badness 10000) in paragraph at lines 213--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 589--597
+Underfull \hbox (badness 10000) in paragraph at lines 249--255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--264
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 660--668
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 789--795
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--795
+Underfull \hbox (badness 10000) in paragraph at lines 313--321
 
  []
 
-[16] [17] (./main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--321
+
+ []
+
+[15]) (./sections/alg_rel.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--20
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
+
+ []
+
+[17]
+File: example-image-golden.pdf Graphic file (type pdf)
+<use example-image-golden.pdf>
+Package pdftex.def Info: example-image-golden.pdf  used on input line 195.
+(pdftex.def)             Requested size: 97.4469pt x 60.22545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 267--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--380
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 481--487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--487
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--567
+
+ []
+
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 780--786
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--786
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
+
+ []
+
+) (./sections/query.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 123--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--131
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
+
+ []
+
+[28]
+Overfull \hbox (28.0866pt too wide) in paragraph at lines 217--219
+\OML/cmm/m/it/10 PROJ[]\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 Supervisione\OT1/cmr/
+m/n/10 ) \OML/cmm/m/it/10 JOIN REN[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 SEL[]\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 Supervisione\OT1/cmr/m/n/10 )))$ 
+ []
+
+) [29] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C6FDC7B8A19096C57D478665D68D61BC;9149.
+(rerunfilecheck)             Checksum: 28DEEB3E2948E4C8C4A89469A86C54D4;16030.
  ) 
 Here is how much of TeX's memory you used:
- 30264 strings out of 474116
- 552504 string characters out of 5743683
- 2171187 words of memory out of 5000000
- 52010 multiletter control sequences out of 15000+600000
- 563159 words of font info for 56 fonts, out of 8000000 for 9000
+ 30415 strings out of 474116
+ 555109 string characters out of 5743683
+ 2175187 words of memory out of 5000000
+ 52082 multiletter control sequences out of 15000+600000
+ 564822 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,117p,431b,3253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,117p,510b,3394s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1208,17 +1361,20 @@ sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024/t
-exmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dist/
-fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2024/texmf
+-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2024/texmf-dist/font
+s/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
 1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
 public/cm-super/sftt0800.pfb>
-Output written on main.pdf (18 pages, 461315 bytes).
+Output written on main.pdf (30 pages, 541565 bytes).
 PDF statistics:
- 584 PDF objects out of 1000 (max. 8388607)
- 528 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 500000)
- 495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 892 PDF objects out of 1000 (max. 8388607)
+ 815 compressed objects within 9 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 847 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,791 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+	Linguaggio procedurale: le operazioni vengono descritte specificando la sequenza di azioni da compiere per ottenere la soluzione.\\
+	Operatori:
+	\begin{itemize}
+		\item \textbf{unione}, \textbf{intersezione}, \textbf{differenza} derivati dalla teoria degli insiemi
+		\item \textbf{ridenominazione}, \textbf{selezione}, \textbf{proiezione} specifici dell’algebra relazionale
+		\item \textbf{join} può assumere diverse forme (\textbf{naturale}, \textbf{theta-join}, \textbf{prodotto cartesiano})
+	\end{itemize}
+	\subsection{Operatori derivati dagli insiemi}
+	Usati anche nella teoria degli insiemi: unione, intersezione, differenza.\\
+	Le relazioni sono insiemi e quindi è naturale estendere ad esse tali operazioni.\\
+	NB. Il risultato di qualunque operazione fra relazioni deve essere ancora una relazione.\\
+	Le relazioni sono insiemi di tuple omogenee: un risultato che comprende tuple definite su schemi diversi non è una relazione.\\
+	Ha quindi senso definire ed applicare tali operatori solo a tuple definite sugli stessi attributi.\\
+	Es.\\
+	l’unione fra due relazioni su tuple non omogenee non è una relazione.\\
+	\begin{itemize}
+		\item \textbf{Unione}: \\
+		L’unione fra due relazioni $r_1$ e $r_2$ definite sullo stesso schema $X$ si indica con $r_1 \cup r_2$ ed è una relazione su $X$ contenente le tuple appartenenti a $r_1$, a $r_2$ o ad entrambe.
+		\item \textbf{Intersezione}:\\
+		L’intersezione fra due relazioni $r_1$ e $r_2$ definite sullo stesso schema $X$ si indica con $r_1 \cap r_2$
+		ed è una relazione su $X$ contenente le tuple appartenenti sia a $r _1$ che a $r_2$.
+		\item \textbf{Differenza}:\\
+		La differenza fra due relazioni $r_1$ e  $r _2$ definite sullo stesso schema $X$ si indica con $r_1 - r_2$ ed è una relazione su $X$ contenente le tuple appartenenti a $r_1$ ma non a $r_2$.
+	\end{itemize}
+	\subsubsection{Unione}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati $\cup$ Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			9297 & Neri & 33\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Intersezione}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline 
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati $\cap$ Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Differenza}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			9297 & Neri & 33\\
+			7432 & Neri & 54\\
+			9824 & Verdi & 45\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Laureati - Quadri}}\\
+			\hline
+			\textbf{Matricola} & \textbf{Nome} & \textbf{Età}\\
+			\hline
+			7274 & Rossi & 42\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Ridenominazione}
+	In algebra relazionale si ha corrispondenza fra attributi mediante il nome.\\
+	La ridenominazione modifica il nome di un attributo (ad es., per associarlo ad un altro in un’operazione algebrica).\\
+	Può, ad es., rendere compatibili due attributi con nome diverso quando ha senso eseguire l’unione fra le relazioni cui appartengono.\\
+	Si indica con $\rho_{nuovonome \leftarrow vecchionome}$ (Relazione)\\ \\
+	Es.\\
+	Da Paternità($Padre$,$Figlio$) a Maternità($Madre$,$Figlio$) è possibile ottenere:\\
+	\[ \rho_{Genitore \leftarrow Padre}\text{ (Paternità) } \cup \rho_{genitore \leftarrow Madre}\text{ (Maternità)} \]
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Padre}$ (Paternità)}\\
+			\hline
+			\textbf{Genitore} & \textbf{Figlio}\\
+			\hline
+			Adamo & Abele\\
+			Adamo & Caino\\
+			Abramo & Isacco\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Madre}$ (Maternità)}\\
+			\hline
+			\textbf{Genitore} & \textbf{Figlio}\\
+			\hline
+			Eva & Abele\\
+			Eva & Set\\
+			Sara & Isacco\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{REN$_{Genitore \leftarrow Padre}$ (Paternità) $\cup$ REN$_{Genitore \leftarrow Madre}$ (Maternità}\\
+			\hline
+			\textbf{Genitore}& \textbf{Figlio}\\
+			\hline
+			Adamo & Abele\\
+			Adamo & Caino\\
+			Abramo & Isacco\\
+			Eva & Abele\\
+			Eva & Set\\
+			Sara & Isacco\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsection{Selezione e Proiezione}
+	Le operazioni di \textbf{selezione} e di \textbf{proiezione} si applicano ad una relazione e ne restituiscono una porzione.\\
+	Possono essere considerate \textbf{ortogonali} o \textbf{complementari}, in quanto una opera sulle righe e l’altra sulle colonne.\\\\
+	La selezione produce un insieme di tuple, definite su tutti gli attributi della relazione.\\\\
+	La proiezione produce un risultato definito su un insieme limitato di attributi, cui contribuiscono tutte le tuple
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Selezione \& Proiezione}
+		\label{fig:im-8}
+	\end{figure}
+	\subsubsection{Selezione}
+	La selezione produce una nuova relazione definita sugli stessi attributi della relazione cui è applicata, contenente solamente le tuple di quest'ultima che soddisfano una specifica condizione di selezione.\\\\
+	Si indica con $\sigma_F(r)$ 0 $SEL_F(r)$ dove:
+	\begin{itemize}
+		\item $F$ è una condizione da verificare
+		\item $r$ è la relazione a cui la selezione è applicata
+	\end{itemize}
+	Quindi $\sigma_F(r)$ produce una relazione, sullo stesso schema di $r$, contenente tutte le tuple per le quali $F$ è vera.\\\\
+	La condizione di selezione $F$ è una formula proposizionale su $X$, cioè una formula ottenuta combinando con i simboli $\wedge$ (and) $\vee$ (or) $\neg$ (not) espressioni del tipo $A \theta B$ o $A \theta c$.
+	\begin{itemize}
+		\item $\theta$ è un operatore di confronto ($\leq$, $<$, $=$, $>$, $\geq$)
+		\item $A$ e $B$ sono attributi di $X$ su cui il confronto abbia senso
+		\item $c$ è una costante tale che il confronto con $A$ sia definito
+	\end{itemize}
+	È definito un valore di verità di $F$ su una tupla $t$:
+	\begin{itemize}
+		\item $A \theta B$ è vera se e solo se $t[A] \theta t[B]$ è vero
+		\item $A \theta c$ è vera se e solo se $t[A] \theta c$ è vera
+		\item $F_1 \wedge F_2$, $F_1 \vee F_2$, $\neg F$ hanno l'usuale significato
+	\end{itemize}
+	\paragraph{Sintassi}
+	\[SEL_{Condizione}(Opernando)\]
+	Condizione: espressione booleana (come quelle dei vincoli di tupla)
+	\paragraph{Semantica}
+	Il risultato contiene le tuple dell'operando che soddisfano la condizione
+	\paragraph{Esempio}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Filiale} & \textbf{Stipendio}\\
+			\hline
+			7309 & Rossi & Roma & 55\\
+			5998 & Neri & Milano & 64\\
+			9553 & Rossi & Milano & 44\\
+			5698 & Neri & Napoli & 64\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\[SEL_{Stipendio>50}(Impiegati)\]
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati che guadagnano più di 50}\\
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Filiale} & \textbf{Stipendio}\\
+			\hline
+			7309 & Rossi & Roma & 55\\
+			5998 & Neri & Milano & 64\\
+			5698 & Neri & Napoli & 64\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Selezione con valori nulli}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Filiale} & \textbf{Età}\\
+			\hline
+			7309 & Rossi & Roma & 32\\
+			5998 & Neri & Milano & 45\\
+			9553 & Bruni & Milano & NULL\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\[SEL_{\text{Età} >30}(Impiegati) \cup SEL_{\text{Età} \leq30}(Impiegati) \neq Impiegati\]
+	(non comprende le tuple con Età=NULL)\\\\
+	Ma anche:
+	\[SEL_{\text{Età}>30 \vee \text{Età}\leq30}(Impiegati) \neq Impiegati\]
+	(come sopra)\\\\
+	Per riferirsi ai valori nulli esistono specifiche condizioni logiche:
+	\begin{itemize}
+		\item $x$ IS NULL (vera se, per una tupla $t$, $t[x]=$ NULL)
+		\item $x$ IS NOT NULL (vera se, per una tupla $t$, $t[x] \neq$ NULL)
+	\end{itemize}
+	\[SEL_{\text{Età} > 30} (Impiegati) \cup SEL_{\text{Età} \leq 30} (Impiegati) \cup SEL_{\text{Età IS NULL}} (Impiegati)\]
+	\[=\]
+	\[SEL_{\text{Età} > 30 \vee \text{Età} \leq 30 \vee \text{Età IS NULL}} (Impiegati)\]
+	\[=\]
+	\[Impiegati\]
+	\subsubsection{Proiezione}
+	Dati una relazione $r(X)$ e un sottoinsieme $Y$ di $X$, la proiezione di $r$ su $Y$ si indica con:
+	\[\Pi_Y (r) \text{ oppure } PROJ_Y (r)\]
+	ed è l’insieme di tuple su $Y$ ottenute dalle tuple di $r$ considerando solo i valori su $Y$:
+	\[\Pi_Y (r) = \{ t[Y] \; \vert \; t \in r\}\]
+	Una proiezione ha un numero di tuple minore o uguale rispetto alla relazione $r$ cui è applicata: limitare il numero di attributi può portare a creare duplicati. \\
+	Quindi il numero di tuple è uguale se e solo se $Y$ è superchiave per $r$.
+	\paragraph{Operatore Monadico}
+	Produce un risultato che 
+	\begin{itemize}
+		\item Possiede parte degli attributi dell'operando
+		\item Contiene tuple cui contribuiscono tutte le tuple dell'operando
+	\end{itemize}
+	\paragraph{Sintassi}
+	\[PROJ_{ListaAttributi}(Operando)\]
+	\paragraph{Semantica}
+	Il risultato contiene le tuple che si ottengono restringendo tutte le tuple dell'operando agli attributi nella lista (ed eliminando gli eventuali duplicati)
+	\paragraph{Esempio}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} & \textbf{Filiale} & \textbf{Stipendio}\\
+			\hline
+			7309 & Neri & Napoli & 55\\
+			5998 & Neri & Milano & 64\\
+			9553 & Rossi & Roma & 44\\
+			5698 & Rossi & Roma & 64\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Visualizzare matricola e cognome di tutti gli impiegati:
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Matricola} & \textbf{Cognome} \\
+			\hline
+			7309 & Neri \\
+			5998 & Neri \\
+			9553 & Rossi \\
+			5698 & Rossi \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\[PROJ_{Matricola,Cognome}(Impiegati)\]
+	Visualizzare cognome e filiale di tutti gli impiegati:
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Cognome} & \textbf{Filiale} \\
+			\hline
+			Neri & Napoli \\
+			Neri & Milano \\
+			Rossi & Roma \\
+			Rossi & Roma \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\[PROJ_{Cognome,Filiale} (Impiegati)\]
+	\subsubsection{Osservazione Importante}
+	Combinando selezione e proiezione, si può estrarre qualunque gruppo di elementi (anche uno solo, ad es. lo stipendio dell’impiegato con matricola 7309) da una singola relazione (nell’esempio, la tabella Impiegati)\\\\
+	Non si possono però correlare informazioni presenti in relazioni diverse\\\\
+	Questa considerazione suggerisce che un modo per estrarre qualsiasi informazione da una base di dati costituita da più relazioni sia:
+	\begin{enumerate}
+		\item Definire un operatore che consenta di trasformare in un’unica relazione più relazioni contenenti informazioni correlate
+		\item Usare selezione e proiezione per estrarre i dati dalla relazione risultante
+	\end{enumerate}
+	\subsection{Join (naturale)}
+	È l’operatore più caratteristico dell’algebra relazionale, che evidenzia la proprietà del modello relazionale di essere basato su valori.\\
+	Non ha un corrispettivo nella teoria degli insiemi.\\\\
+	L’operatore di join (naturale) correla dati contenuti in relazioni diverse.\\\\
+	Nella situazione più comune, produce una relazione definita sull'unione degli schemi degli operandi, le cui tuple sono ottenute combinando le tuple degli operandi che hanno valori uguali su attributi comuni (cioè che hanno lo stesso nome nei due schemi).\\\\
+	Il join naturale $r_1 \Diamond r_2$ di $r_1 (X_1)$ e $r_2 (X_2)$ è una relazione definita si $X_1 \cup X_2$ (Che si può scrivere come $X_1 X_2$)
+	\[r_1 \Diamond r_2 = \{ t \textbf{ su } X_1 X_2 \; \vert \; t[X_1] \in r_1 \textbf{ e } t[X_2] \in r_2\}\]
+	Il grado di tale relazione (numero attributi) è minore o uguale alla somma dei gradi delle due relazioni poiché gli attributi omonimi compaiono una sola volta.\\\\
+	Per questo motivo la definizione implica, normalmente, che una tupla del risultato sia ottenuta concatenando ogni tupla della prima relazione con ogni tupla della seconda in cui gli attributi comuni hanno lo stesso valore.\\\\
+	Due casi limite:
+	\begin{itemize}
+		\item Join vuoto: le due tabelle hanno alcuni attributi in comune ma nessuna tupla di un operando è combinabile con nessuna tupla dell’altro.
+		\item Prodotto cartesiano degli operandi: ciascuna delle tuple di un operando è combinabile con tutte le tuple dell’altro. \\
+		Può verificarsi se le due relazioni non hanno attributi in comune.
+	\end{itemize}
+	Se ciascuna tupla di ciascun operando contribuisce ad almeno una tupla del risultato il join si dice \textbf{completo}.\\\\
+	Se per alcune tuple non è verificata la corrispondenza e quindi non contribuiscono al risultato, le tuple si dicono \textbf{dangling}.
+	\subsubsection{Teorema 1}
+	Se $X_1 \cap X_2$ è vuoto il join naturale equivale al prodotto cartesiano fra le relazioni.
+	\paragraph{Dimostrazione}
+	Le due relazioni non hanno attributi comuni $=>$ ogni tupla della prima relazione può "concatenarsi" con ogni tupla della seconda, soddisfacendo la definizione di join.
+	\subsubsection{Teorema 2}
+	Se le due relazioni hanno lo stesso schema ($X_1 = X_2$) il join naturale equivale all'intersezione fra le relazioni.
+	\paragraph{Dimostrazione}
+	Ogni tupla può "concatenarsi" solo con una tupla uguale $=>$ è presente nel risultato finale se e solo se è presente in entrambe le relazioni.\\\\
+	NB La concatenazione genera la tupla stessa.
+	\subsubsection{Esempio join completo}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			A & Mori \\
+			B & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Rossi & A & Mori\\
+			Neri & B & Bruni\\
+			Bianchi & B & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Ogni tupla contribuisce al risultato: il join è \textbf{completo}
+	\subsubsection{Esempio join non completo}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Mori\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Esempio join vuoto}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			D & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Proprietà}
+	\begin{itemize}
+		\item $r_1 \Diamond r_2$ contiene un numero di tuple compreso fra zero (risultato = insieme vuoto) e il prodotto di $|r_1|$ e $|r_2|$ (risultato = prodotto cartesiano)
+		\item Se $r_1 \Diamond r_2$ è completo allora contiene un numero di tuple pari almeno al massimo fra $|r_1|$ e $|r_2|$ (nessuna tupla resta esclusa, quindi tutte le tuple della relazione di cardinalità maggiore partecipano sicuramente al join)
+		\item Se $X_1 \cap X_2$ contiene una chiave per $r_2$, allora $r_1(X_1) \Diamond r_2(X_2)$ contiene al più $|r_1|$ tuple (ogni tupla di $r_1$ si associa al più a una tupla di $r_2$)
+		\item Se il join coinvolge una chiave di $r_2$ e un vincolo di integrità referenziale da $r_1$ a $r_2$, allora il numero di tuple è pari a $|r_1|$ (ogni tupla di $r_1$ si associa ad una e una sola tupla di $r_2$)
+		\item Il join è commutativo: $r_1 \Diamond r_2 = r_2 \Diamond r_1$
+		\item Il join è associativo: $(r_1 \Diamond r_2) \Diamond r_3 = r_1 \Diamond (r_2 \Diamond r_3)$\\
+		Quindi sequenze di join possono essere scritte senza parentesi
+	\end{itemize}
+	\paragraph{Theta-join e Equi-join}
+	Per correlare attributi con nome diverso (se cioè $X_1 \cap X_2$ è vuoto) è possibile fare il \textbf{theta-join}, definito come un prodotto cartesiano seguito da una selezione:
+	\[r_1 \Diamond_F \; r_2 = \sigma_F (r_1 \Diamond r_2)\]
+	dove $F$ è la condizione di selezione.\\\\
+	Se $F$ è una condizione di uguaglianza fra un attributo della prima relazione e uno della seconda, allora siamo in presenza di un \textbf{equi-join}.\\
+	È il tipo di join più comune.\\\\
+	Sono importanti formalmente: 
+	\begin{itemize}
+		\item Il join naturale è basato sui \textbf{nomi} degli attributi
+		\item Equi-join e theta-join sono basati sui \textbf{valori}
+	\end{itemize}
+	\paragraph{Theta-join}
+	Il theta-join, espresso come prodotto cartesiano seguito da una selezione, è il tipo di join operativamente più generale.\\
+	Infatti:
+	\begin{itemize}
+		\item Consente di associare (concatenare) tuple attraverso la corrispondenza fra attributi arbitrari e non necessariamente omonimi
+		\item Consente di basare l’associazione su una arbitraria condizione e non solo su una condizione di uguaglianza
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Reparti}\\
+			\hline
+			\textbf{Codice} & \textbf{Capo}\\
+			\hline
+			A & Mori \\
+			B & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Impiegati $JOIN_{Reparto=Codice}$ Reparti}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Codice} & \textbf{Capo}\\
+			\hline
+			Rossi & A & A & Mori\\
+			Neri & B & B & Bruni\\
+			Bianchi & B & B & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Equi-join}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Reparti}\\
+			\hline
+			\textbf{Codice} & \textbf{Capo}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Se uso ridenominazione + join naturale:
+	\[Impiegati \; JOIN (REN_{Reparto \leftarrow Codice} (Reparti))\]
+	Il risultato è definito sullo schema:
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Gli attributi resi omonimi dalla ridenominazione compaiono una sola volta.\\\\
+	Con un equi-join lo schema comprende i 4 attributi: quindi devo eseguire anche una proiezione per eliminare uno degli attributi "comuni" se voglio ottenere lo stesso risultato:
+	\[PROJ_{Impiegato, Reparto, Capo} (SEL_{Repato = Codice} (Impiegati \; JOIN \; Reparti))\]
+	\subsubsection{Join Esterni}
+	Il join naturale e il theta-join non includono nel risultato le tuple in cui non c’è corrispondenza fra gli attributi legati dal join (\textbf{tuple dangling}). \\
+	Questo fa sì che il risultato non contenga tutta l’informazione contenuta nelle relazioni di partenza.\\\\
+	Si definiscono altri tipi di join, detti \textbf{join esterni}, in cui vengono considerate anche le tuple dangling, utilizzando valori nulli dove non vi sia corrispondenza.
+	\paragraph{Join Sinistro}
+	\[r_1 \; JOIN_{LEFT} \; r_2\]
+	Contribuiscono tutte le tuple di $r_1$, eventualmente estese con valori nulli relativamente agli attributi di $r_2$ se non c’è corrispondenza con tuple di $r_2$.
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Reparti}\\
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Impiegati $JOIN_{LEFT}$ Reparti}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Mori\\
+			Rossi & A & NULL\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Join Destro}
+	\[r_1 \; JOIN_{RIGHT} \; r_2\]
+	Contribuiscono tutte le tuple di $r_2$, eventualmente estese con valori nulli relativamente agli attributi di $r_1$ se non c’è corrispondenza con tuple di $r_1$.
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Reparti}\\
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Impiegati $JOIN_{RIGHT}$ Reparti}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Mori\\
+			NULL & C & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Join Completo o Full-Join}
+	\[r_1 \; JOIN_{FULL} \; r_2\]
+	Contribuiscono tutte le tuple di $r_1$ e $r_2$, eventualmente estese con valori nulli relativamente agli attributi dell’altra relazione se non c’è corrispondenza con tuple dell’altra relazione.
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Impiegati}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Reparti}\\
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Impiegati $JOIN_{FULL}$ Reparti}\\
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Mori\\
+			Rossi & A & NULL\\
+			NULL & C & Bruni\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Join e Proiezioni}
+	\paragraph{Problema: Perdite}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Rossi & A\\
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			C & Bruni \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Mori\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Neri & B\\
+			Bianchi & B\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Problema: Non Reversibilità}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Bruni\\
+			Verdi & A & Bini\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto}\\
+			\hline
+			Neri & B\\
+			Bianchi & B\\
+			Verdi & A\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			B & Mori \\
+			B & Bruni\\
+			A & Bini\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\textbf{Impiegato} & \textbf{Reparto} & \textbf{Capo}\\
+			\hline
+			Neri & B & Mori\\
+			Bianchi & B & Bruni\\
+			Neri & B & Bruni\\
+			Bianchi & B & Mori\\
+			Verdi & A & Bini\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\paragraph{Proprietà}
+	\begin{itemize}
+		\item Date due relazioni $R_1(X_1)$ e $R_2(X_2)$\\
+		$\Pi_{X_1} (R_1 \Diamond R_2) \subseteq R_1$\\
+		$\Pi_{X_2} (R_1 \Diamond R_2) \subseteq R_2$\\\\
+		Se proietto il risultato del join sullo schema di una delle due relazioni ottengo un sottoinsieme della relazione di partenza.\\\\
+		Infatti, se non c’è corrispondenza fra alcune tuple di $R_1$ e di $R_2$, tali tuple sono dangling e vengono escluse dal join.\\
+		Se si tenta quindi di ricostruire le due relazioni originali si ha perdita di informazione.
+		\item $R(X)$, $X = X_1 \cup X_2$\\
+		$(\Pi_{X_1} (R) ) \Diamond (\Pi_{X_2} (R) ) \supseteq R$\\\\
+		Se scompongo lo schema di una relazione $R$ in due sottoschemi $X_1$ e $X_2$, $R$ è contenuta nella relazione che si ottiene effettuando il join fra le proiezioni di $R$ su di essi.\\\\
+		Quindi, se cerco di ricostruire le relazioni di partenza riproiettando il risultato del join sugli schemi di tali relazioni, ottengo due relazioni che comprendono le tuple delle relazioni di partenza più altre tuple "spurie".
+	\end{itemize}
+\end{document}

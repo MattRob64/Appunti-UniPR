@@ -1,0 +1,140 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+	Si può eseguire l'accesso ad una base di dati nei seguenti modi:
+	\begin{itemize}
+		\item Linguaggi testuali interattivi 
+		\item Comandi inclusi in estensioni di linguaggi tradizionali 
+		\item Comandi inclusi in linguaggi di sviluppo ad hoc 
+		\item Interfacce grafiche amichevoli
+	\end{itemize}
+	\subsection{Linguaggi per basi di dati}
+	\begin{itemize}
+		\item Linguaggi di definizione dei dati\\
+		Utilizzati per definire gli schemi e le autorizzazioni per l’accesso
+		\item Linguaggi di manipolazione dei dati\\
+		Utilizzati per l’interrogazione e l’aggiornamento dei contenuti della base di dati
+	\end{itemize}
+	Alcuni linguaggi specializzati, come ad esempio SQL, presentano le caratteristiche di entrambi i tipi di linguaggio.
+	\subsubsection{SQL: un linguaggio interattivo}
+	Come esempio immaginiamo di interfacciarci con la seguente base di dati:
+	\begin{table}[ht]
+		\begin{minipage}{.2\linewidth}
+			\centering
+			\begin{tabular}{ |c|c| }
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Corsi}} \\
+				\hline
+				\textbf{Corso} & \textbf{Aula} \\
+				\hline
+				Sistemi & N3 \\
+				Reti & N2\\
+				\hline
+			\end{tabular}
+			%\caption{Caption}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.2\linewidth}
+			\centering
+			\begin{tabular}{ |c|c| }
+				\hline
+				\multicolumn{2}{|c|}{\textbf{Aule}} \\
+				\hline
+				\textbf{Nome} & \textbf{Piano} \\
+				\hline
+				N3 & Terra \\
+				N2 & Terra \\
+				\hline
+			\end{tabular}
+			%\caption{Caption}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.2\linewidth}
+			\begin{tabular}{ |c|c|c| }
+				\hline
+				\textbf{Corso} & \textbf{Aula} & \textbf{Piano}\\
+				\hline
+				Sistemi & N3 & Terra \\
+				Reti & N2 & Terra \\
+				\hline
+			\end{tabular}
+		\end{minipage}
+	\end{table}
+	\begin{lstlisting}[language=SQL]
+		SELECT Corso, Aula, Piano 
+		FROM Aule, Corsi 
+		WHERE Nome = Aula AND Piano = "Terra"
+	\end{lstlisting}
+	\paragraph{SQL embedded in Pascal code}
+	Di seguito un esempio di SQL integrato in un linguaggi di alto livello:
+	\begin{lstlisting}[language=Pascal]
+		write('nome della citta''?'); 
+		readln(citta); 
+		EXEC SQL DECLARE P CURSOR FOR 
+		SELECT NOME, REDDITO 
+		FROM PERSONE 
+		WHERE CITTA = :citta ;
+		EXEC SQL OPEN P ; 
+		EXEC SQL FETCH P INTO :nome, :reddito ; 
+		while SQLCODE = 0 do begin 
+		write('nome della persona:', nome, 'aumento?'); 
+		readln(aumento); 
+		EXEC SQL UPDATE PERSONE SET REDDITO = REDDITO + 
+		:aumento 
+		WHERE CURRENT OF P 
+		EXEC SQL FETCH P INTO :nome, :reddito 
+		end; 
+		EXEC SQL CLOSE CURSOR P
+	\end{lstlisting}
+	\paragraph{SQP embedded in PHP code}
+	Connessione a mySQL tramite API PHP:
+	\begin{lstlisting}[language=PHP]
+		<html> <body>
+		<?php
+		$user="root"; $password=""; $host="127.0.0.1"; $database="prova";
+		mysql_connect($host,$user,$password);
+		@mysql_select_db($database) or die("Unable to select database");
+		$query="SELECT * from utenti";
+		$res=mysql_query($query);
+		mysql_close();
+		
+		$row = mysql_fetch_assoc($res);
+		print '<table><tr>';
+		foreach($row as $name => $value) {
+			print "<th>$name</th>";
+		}
+		print '</tr>';
+		
+		while($row) {
+			print '<tr>';
+			foreach($row as $value) {
+				print "<td>$value</td>";
+			}
+			print '</tr>';
+			$row = mysql_fetch_assoc($res);
+		}
+		print '</table>';
+		?> </body> </html>
+	\end{lstlisting}
+	\subsection{Interazione non testuale}
+	Come interazioni non testuali si intendono generalmente i DBMS come ad esempio Microsoft Access:
+	\begin{figure}[h]
+		\centering
+		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
+		\caption{Realizza l’approccio detto “Query by Example”}
+		\label{fig:im-4}
+	\end{figure}
+	\subsubsection{Vantaggi dei DBMS}
+	\begin{itemize}
+		\item Disponibilità dei dati a tutta una comunità 
+		\item Modello unificato e preciso della realtà di interesse 
+		\item Controllo centralizzato dei dati 
+		\item Condivisione 
+		\item Indipendenza dei dati
+	\end{itemize}
+	\subsubsection{Vantaggi dei DBMS}
+	\begin{itemize}
+		\item Prodotti costosi, complessi, che richiedono investimenti in hardware, software, personale.
+		\item Forniscono un numero elevato di servizi, in modo integrato e difficilmente scorporabile se le esigenze dell’utente sono inferiori alle caratteristiche offerte.
+	\end{itemize}
+\end{document}
