@@ -1,0 +1,891 @@
+\documentclass{article}
+\setcounter{tocdepth}{4} %Required to insert paragraph in TOC
+\setcounter{secnumdepth}{4} %Required to insert paragraph in TOC
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./img/} }
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=20mm,
+}
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{chronology}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setcounter{secnumdepth}{4}
+
+\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\title{Appunti SQL}
+\author{Mattia Robuschi Caprara}
+\date{}
+
+\definecolor{CoverGreen}{RGB}{229,190,001}
+
+\begin{document}
+	
+	\begin{titlepage}
+		
+		\pagecolor{CoverGreen}
+		
+		\vspace{25 mm}
+		\begin{center}
+			\large
+			{\color{black}\textbf{Mattia Robuschi Caprara}} 
+		\end{center}
+		
+		\begin{center}
+			\huge
+			{\color{black}\textbf{Structured Query Language}}
+		\end{center}
+		
+		\vspace{45 mm}
+		
+		\begin{figure}[h]
+			\centering
+			\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{0.cover.png}}
+			%\caption{Caption}
+			\label{fig:cover}
+		\end{figure}
+		
+		\thispagestyle{empty} 
+	\end{titlepage}
+	
+	\newpage
+	\pagecolor{white}
+	\section*{Prefazione}
+	\textbf{!!ATTENZIONE!!}\\
+	Questo documento è un semplice OCR delle slide del prof.
+	\tableofcontents
+	\newpage
+	\section{Introduzione}
+	SQL (pronunciato anche come l’inglese sequel): acronimo di Structured Query Language (linguaggio di interrogazione strutturato)\\
+	Linguaggio completo che presenta anche proprietà di:
+	\begin{itemize}
+		\item DDL (Data Definition Language)
+		\item DML (Data Manipulation Language)
+	\end{itemize}
+	Con SQL è quindi possibile:
+	\begin{itemize}
+		\item Definire schemi di basi di dati
+		\item Eseguire query
+		\item Modificare il contenuto della base di dati
+	\end{itemize}
+	\section{Definizione dei dati}
+	Esistono 6 domini elementari:
+	\begin{itemize}
+		\item Character
+		\item Bit
+		\item Tipi numerici esatti
+		\item Tipi numerici approssimati
+		\item Data e ora
+		\item Intervalli temporali
+	\end{itemize}
+	\section{Domini}
+	\subsection{Character}
+	Rappresenta singoli caratteri o stringhe
+	\begin{lstlisting}[language=SQL]
+		character [varying] -- [(Lunghezza)]
+		character set NomeFamigliaCaratteri
+		
+		character(20) -- stringa di lunghezza 20
+		character varying(100) -- stringa di lunghezza max. 100
+		character(20) character set Greek -- stringa di lunghezza 20 in caratteri greci
+	\end{lstlisting}
+	\subsection{Bit}
+	rappresenta attributi o vettori di attributi che possono assumere solo valori 0 o 1. \\
+	Utilizzato per implementare flag.
+	\begin{lstlisting}[language=SQL]
+		bit [varying] [(Lunghezza)]
+	\end{lstlisting}
+	\subsubsection{Intervalli temporali}
+	\begin{lstlisting}[language=SQL]
+		interval UnitaDiTempo1[(Precisione)] [to UnitaDiTempo2[(Precisione)]]
+	\end{lstlisting}
+	$UnitaDiTempo1$ e $UnitaDiTempo2$ specificano le unità di misura da usare dalla più lunga alla meno lunga\\
+	\textbf{NB} Definizione valida nei 2 sotto-intervalli $[year,month]$ e $[day,second]$.
+	\begin{lstlisting}[language=SQL]
+		interval day(4) to second(6) -- rappresenta l'intervallo [0,10000) giorni e secondi con precisione al milionesimo di s.
+	\end{lstlisting}
+	\subsection{Tipi numerici esatti}
+	Valori interi o con parte decimale di lunghezza prefissata
+	\begin{lstlisting}[language=SQL]
+		numeric [(Precisione [,Scala])]
+		decimal [(Precisione [,Scala])]
+		integer
+		smallint
+	\end{lstlisting}
+	Precisione specifica il numero di cifre significative\\
+	Scala quante cifre si rappresentano dopo la virgola
+	\begin{lstlisting}[language=SQL]
+		decimal(4) -- numeri da -9999 a 9999
+		numeric(6,3) -- numeri da -999.999 a 999.999
+	\end{lstlisting}
+	La precisione degli interi dipende dall'implementazione
+	\subsection{Tipi numerici approssimati}
+	rappresentano valori reali approssimati
+	\begin{lstlisting}[language=SQL]
+		float [(Precisione)]
+		double precision
+		real
+	\end{lstlisting}
+	Precisione specifica il numero di cifre dedicato alla mantissa (la precisione dell’esponente dipende dall’implementazione)\\\\
+	$real$ e $double \; precision$ hanno precisione prestabilita, una doppia rispetto all'altra.
+	\subsection{Data e Ora}
+	Tipi utilizzati per rappresentare istanti di tempo 
+	\begin{lstlisting}[language=SQL]
+		date
+		time [(Precisione)][with time zone]
+		timestamp [(Precisione)][with time zone]
+	\end{lstlisting}
+	Ciascun tipo è divisibile in campi:\\
+	\begin{itemize}
+		\item $date$ ammette come campi $year$, $month$ e $day$\\
+		\item $time$ i campi $hour$, $minute$, $second$
+		\item $timestamp$ tutti i campi da $year$ a $second$
+	\end{itemize}
+	I campi sono divisi da “:”.\\
+	Ad esempio: 20:03:04+1:00
+	\section{Definizione di Domini}
+	Come nei linguaggi ad alto livello (es. C) è possibile definire nuovi domini (tipi di dati) a partire da quelli predefiniti, anche se il costruttore è più limitato.
+	\begin{lstlisting}[language=SQL]
+		create domain NomeDominio as TipodiDato [ValDefault] [Vincolo]
+	\end{lstlisting}
+	Non si possono creare array o strutture poiché il modello relazionale impone che gli attributi siano definiti su un dominio elementare.\\
+	È però possibile associare dei vincoli ad un dominio definito dall'utente. \\
+	Se si modifica la definizione di un dominio, la modifica si propaga a tutte le tabelle.
+	\subsection{Esempio:}
+	\begin{lstlisting}[language=SQL]
+		create domain Voto as smallint
+		default null
+		check ( value >=18 and value <= 30 )
+	\end{lstlisting}
+	\section{Definizione di Schemi}
+	È possibile definire uno schema di base di dati come collezione di oggetti.
+	\begin{lstlisting}[language=SQL]
+		create [database | schema] [IF NOT EXISTS] db_name [create_option]
+	\end{lstlisting}
+	\begin{lstlisting}[language=SQL]
+		create_option: [DEFAULT] {CHARACTER SET [=]charset_name | COLLATE [=] collation_name | ENCRYPTION [=] {'Y' | 'N'} }
+	\end{lstlisting}
+	\section{Definizione di Tabelle}
+	Una tabella SQL è costituita da una collezione ordinata di attributi e da un insieme di vincoli
+	\begin{lstlisting}[language=SQL]
+		create table NomeTabella
+		( 
+			NomeAttributo Dominio [default ValDefault] [Vincoli]
+			{,NomeAttributo Dominio [default ValDefault] [Vincoli]}
+			[AltriVincoli] 
+		)
+	\end{lstlisting}
+	Una tabella è inizialmente vuota e chi la crea possiede tutti
+	i diritti su di essa.
+	\subsection{Esempio}
+	\begin{lstlisting}[language=SQL]
+		create table Dipartimento
+		(
+			Nome char(20) primary key,
+			Indirizzo char(50),
+			Citta char(20)
+		)
+	\end{lstlisting}
+	\section{Valori di default}
+	Si possono specificare valori di default per un attributo quando, al momento della creazione di una nuova tupla, in un campo non viene inserito alcun valore.
+	\begin{lstlisting}[language=SQL]
+		default < GenericoValore | user | null >
+	\end{lstlisting}
+	$GenericoValore$ è un valore compatibile col dominio.\\
+	$user \; null$ è il nome dell’utente che aggiorna la tabella corrisponde al valore di default di base.\\\\
+	Un nuovo default (es. nella definizione di un tipo a partire da un altro) sostituisce il precedente.\\\\
+	Nota: è per questo che, anche se, in mancanza di una istruzione di $set \; default$, a qualsiasi attributo non istanziato viene assegnato come default il valore $null$, è ugualmente previsto il comando $set \; default \; null$ (di fatto, quindi, per resettare a $null$ un precedente diverso default).
+	Es. 
+	\begin{lstlisting}[language=SQL]
+		NumeroFigli smallint default 0
+	\end{lstlisting}
+	Impone il valore 0 quando non viene specificato il valore dell’attributo.
+	\section{Vincoli intrarelazionali}
+	I più semplici vincoli intrarelazionali predefiniti sono:
+	\begin{itemize}
+		\item $not \; null$: indica che il valore nullo non è ammesso su uno specifico attributo.\\\\
+		Si impone che sia inserito in ogni caso un valore, salvo che non sia già definito un valore di default.\\\\
+		SQL non distingue i diversi tipi di valore nullo. \\
+		Se è necessario, bisogna definire opportuni domini.
+		\item $unique(Attributo \{, Attributo\})$ indica che l’insieme di attributi deve essere una superchiave per la tabella.
+		\item $primary key(Attributo \{, Attributo\})$ definisce la chiave primaria. \\
+		Può (e deve) essere definita una sola chiave primaria per ogni tabella.\\
+		Tutti gli attributi della chiave primaria sono automaticamente $not \; null$.
+	\end{itemize}
+	\subsection{Esempio}
+	\begin{lstlisting}[language=SQL]
+		Nome character(20) not null,
+		Cognome character(20) not null,
+		unique (Nome, Cognome)
+	\end{lstlisting}
+	Impone che non esistano due tuple in cui sia i valori di $Nome$ che di $Cognome$ siano uguali
+	\begin{lstlisting}[language=SQL]
+		Nome character(20) not null unique,
+		Cognome character(20) not null unique
+	\end{lstlisting}
+	Impone che non esistano due tuple che abbiano
+	uguali valori di $Nome$ o di $Cognome$.
+	\subsection{Vincoli di Integrità Referenziale}
+	Il vincolo di \textbf{foreign key (chiave esterna)} collega i valori di un insieme di attributi della tabella corrente (tabella interna) a un insieme di attributi di un’altra tabella (tabella esterna). \\
+	Per ogni tupla della tabella interna i valori della chiave esterna devono essere presenti nei corrispondenti attributi della tabella esterna.\\\\
+	L’insieme di attributi "esterni" deve essere $unique$.\\\\
+	Se la chiave esterna consiste in un unico attributo si usa la clausola $references(AttribTabExt)$ nella riga in cui è definito (Mysql); altrimenti $foreign \; key(ListaAttributi) \;  references(ListaAttributiTabExt)$ (sempre applicabile).
+	\subsection{Esempio MySQL}
+	\begin{lstlisting}[language=SQL]
+		create table Impiegato
+		(
+			Matricola character(6) primary key,
+			Nome character(20) not null,
+			Cognome character(20) not null,
+			Dipart character(15) references Dipartimento(NomeDip),
+			Stipendio numeric(9) default 0,
+			
+			unique (Cognome, Nome),
+			foreign key(Nome, Cognome) references Anagrafica(Nome,Cognome)
+		)
+	\end{lstlisting}
+	\subsection{Esempio MariaDB}
+	\begin{lstlisting}[language=SQL]
+		create table Impiegato
+		( 
+			Matricola character(6),
+			Nome character(20) not null,
+			Cognome character(20) not null,
+			Dipart character(15),
+			Stipendio numeric(9) default 0,
+			
+			primary key (Matricola),
+			unique (Cognome, Nome),
+			foreign key(Dipart) references Dipartimento(NomeDip),
+			foreign key(Nome, Cognome) references Anagrafica(Nome,Cognome) 
+		)
+	\end{lstlisting}
+	\section{Modifica degli schemi}
+	E’ possibile modificare gli schemi con i comandi $alter$ e $drop$.
+	\subsection{Comando alter}
+	$alter$ consente di modificare domini e schemi di tabelle.
+	\begin{lstlisting}[language=SQL]
+		alter domain NomeDominio
+		< 
+			set default ValDefault |
+			drop default |
+			add constraint DefVincolo |
+			drop constraint NomeVincolo 
+		>
+	\end{lstlisting}
+	\begin{lstlisting}[language=SQL]
+		alter table NomeTabella 
+		<
+			alter column NomeAttributo <set default NuovoDefault | drop default> |
+			add constraint DefVincolo |
+			drop constraint NomeVincolo |
+			add column NomeAttributo |
+			drop column NomeAttributo 
+		>
+	\end{lstlisting}
+	NB Quando si inserisce un nuovo vincolo, questo deve essere soddisfatto dai dati già presenti
+	\subsection{Comando drop}
+	Il comando $drop$ permette di rimuovere dei componenti
+	\begin{lstlisting}[language=SQL]
+		drop < schema | domain | table | view | assertion > NomeElemento [ restrict | cascade ]
+	\end{lstlisting}
+	$restrict$ specifica di non eseguire il comando in presenza di oggetti non vuoti.\\\\
+	$cascade$ implica che gli oggetti specificati siano rimossi insieme a tutti gli oggetti da essi dipendenti.\\
+	Quindi, ATTENZIONE!!!!
+	\section{Inserimento}
+	\begin{lstlisting}[language=SQL]
+		insert into Dipartimento(NomeDip, Citta) values('Produzione','Torino')
+	\end{lstlisting}
+	Si utilizza in genere mediante una form per consentire agli utenti di inserire dati. \\
+	L'ordinamento degli attributi (se presente) e dei valori è significativo e le due liste devono avere lo stesso numero di elementi.
+	\begin{lstlisting}[language=SQL]
+		insert into ProdottiMilanesi
+		( 
+			select codice, descrizione from Prodotto where LuogoProd = 'Milano'
+		)
+	\end{lstlisting}
+	Se in un inserimento non vengono inseriti tutti i dati di una riga si usa o il default (se esiste) o il valore nullo. \\
+	La corrispondenza fra valori inseriti e attributi è per posizione.
+	\subsection{Esempio}
+	\begin{lstlisting}[language=SQL]
+		INSERT INTO Persone VALUES ('Mario',25,52)
+		
+		INSERT INTO Persone(Nome, Eta, Reddito) VALUES('Pino',25,52)
+		
+		INSERT INTO Persone(Nome, Reddito) VALUES('Lino',55),('Gino',43)
+		
+		INSERT INTO Persone ( Nome ) 
+			SELECT Padre FROM Paternita WHERE Padre NOT IN (SELECT Nome FROM Persone)
+	\end{lstlisting}
+	\section{Cancellazione}
+	\begin{lstlisting}[language=SQL]
+		delete from NomeTabella [ where Condizione ]
+	\end{lstlisting}
+	Se $where$ non è specificato tutte le righe della tabella vengono eliminate.\\
+	Se esiste un vincolo di integrità referenziale con politica di $cascade$… ATTENZIONE!!!!\\
+	Siccome $delete$ ha la stessa sintassi di $select$, è possibile utilizzare interrogazioni nidificate al suo interno.
+	\begin{lstlisting}[language=SQL]
+		delete from Dipartimento where Nome not in (select Dipart from Impiegato)
+		
+		-- NB:
+		delete from Dipartimento -- elimina il contenuto della tabella
+		drop table Dipartimento cascade -- altera lo schema
+	\end{lstlisting}
+	\section{Modifica}
+	\begin{lstlisting}[language=SQL]
+		update NomeTabella
+		set Attributo = <Espressione|SelectSQL|null|default> {, Attributo = <Espressione|SelectSQL|null|default>} [ where Condizione ]
+	\end{lstlisting}
+	Aggiorna uno o più attributi delle righe di $NomeTabella$ che soddisfano l'eventuale $Condizione$. \\
+	Se non c'è condizione la modifica avviene per tutte le righe.\\
+	Il nuovo valore può essere:
+	\begin{itemize}
+		\item Il risultato di un'espressione valutata sugli attributi della tabella
+		\item Il risultato di una generica interrogazione SQL
+		\item Il valore nullo
+		\item Il valore di default
+	\end{itemize}
+	\begin{lstlisting}[language=SQL]
+		update Dipendente
+		set Stipendio = StipendioBase + 5 where Matricola = 'XYZ' -- aggiorna una sola riga (Matricola e' chiave)
+		
+		update Dipendente
+		set Stipendio = Stipendio * 1.1 where Dipart = 'Amministrazione' -- aggiorna un insieme di righe
+	\end{lstlisting}
+	Nella valutazione delle espressioni bisogna ricordarsi che SQL ha una natura orientata agli insiemi e non alle tuple. \\
+	Quindi non è possibile pensare all'esecuzione di un comando come esecuzione riga per riga, ma come un'operazione effettuata contemporaneamente su tutto un insieme.
+	\subsection{Esempio}
+	Vogliamo aumentare del 10\% gli stipendi degli impiegati con stipendio inferiore ai 30 e del 15\% quello degli impiegati con stipendio superiore ai 30.\\
+	Attenzione! Se scriviamo
+	\begin{lstlisting}[language=SQL]
+		update Impiegato set Stipendio = Stipendio*1.1 where Stipendio <= 30
+	
+		update Impiegato set Stipendio = Stipendio*1.15 where Stipendio > 30
+	\end{lstlisting}
+	Ad alcuni impiegati lo stipendio viene aumentato 2 volte!!!\\
+	Se invertiamo l'ordine la procedura risulta corretta. \\
+	Ma non sempre è così facile.
+	\section{Interrogazioni}
+	L’istruzione base per le interrogazioni è $select$.
+	\begin{lstlisting}[language=SQL]
+		select ListaAttributi (target list) from ListaTabelle (clausola from) [ where Condizione ] (clausola where)
+	\end{lstlisting}
+	Più in dettaglio:
+	\begin{lstlisting}[language=SQL]
+		select AttrEspr [[as]Alias]{,AttrEspr [[as]Alias]} from Tabella [[as]Alias]{,Tabella [[as]Alias]} [ where Condizione ]
+	\end{lstlisting}
+	\begin{itemize}
+		\item Fa il prodotto cartesiano fra le tabelle in $ListaTabelle$
+		\item Seleziona le righe che soddisfano Condizione
+		\item Proietta il risultato sugli attributi specificati da $ListaAttributi$
+	\end{itemize}
+	Ogni colonna (tabella) può essere ridenominata con un alias.
+	\subsection{Esempio}
+	Data una base di dati che contiene le tabelle:\\
+	IMPIEGATO (Nome, Cognome, Dipart, Ufficio, Stipendio, Città)\\
+	DIPARTIMENTO (Nome, Indirizzo,Città)
+	\begin{lstlisting}[language=SQL]
+		select Stipendio/12 as SalarioMensile from Impiegato where Cognome = 'Rossi'
+	\end{lstlisting}
+	Genera una tabella con una colonna ridenominata $SalarioMensile$ e tante righe quanti sono gli impiegati che si chiamano Rossi.\\\\
+	Se si indica $select *$ si selezionano tutti gli attributi.
+	\subsection{Interpretazione algebrica delle interrogazioni}
+	\begin{lstlisting}[language=SQL]
+		select T_1.Attributo_11, ... T_h.Attributo_hm from Tabella_1 as T_1, ... Tabella_h as T_h where Condizione
+	\end{lstlisting}
+	equivale a
+	\[\Pi_{T_1.Attributo_{11} \dots T_h.Attributo_{hm}} (\sigma_{Condizione} (Tabella_1 \times Tabella_2 \times \dots \times Tabella_h) )\]
+	\[\times = \text{prodotto cartesiano}\]
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Persone}\\
+			\hline
+			\textbf{Nome} & \textbf{Età} & \textbf{Reddito}\\
+			\hline
+			Andrea & 27 & 21\\
+			Aldo & 25 & 15\\
+			Maria & 55 & 42\\
+			Anna & 50 & 35\\
+			Filippo & 26 & 30\\
+			Luigi & 50 & 40\\
+			Franco & 60 & 20\\
+			Olga & 30 & 41\\
+			Sergio & 85 & 35\\
+			Luisa & 75 & 87\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Vogliamo il Nome e il Reddito delle persone che hanno meno di 30 anni:
+	\[PROJ_{Nome,Reddito} (SEL_{Eta < 30} (Persone))\]
+	Che in SQL è:
+	\begin{lstlisting}[language=SQL]
+		select nome, reddito from persone where eta < 30
+		
+		select p.nome as nome, p.reddito as reddito from persone as p where p.eta < 30
+	\end{lstlisting}
+	\subsection{Interrogazioni su più tabelle}
+	Se si vogliono estrarre informazioni da più tabelle, queste devono apparire come argomento della clausola $from$ o in forma di lista o esplicitamente come (theta-)join fra le tabelle stesse.\\\\
+	Infatti, la clausola $from$ denota la singola tabella a cui applicare le operazioni di proiezione (specificate dalla clausola $select$) e selezione (specificate dalla clausola $where$) per ottenere il risultato voluto.\\\\
+	Se $from$ viene applicata a una lista di tabelle, denota il prodotto cartesiano fra tali tabelle.\\\\
+	In pratica tale situazione indica che si possono combinare tuple provenienti da qualsiasi tabella, senza che debbano soddisfare alcun vincolo interrelazionale.\\\\
+	Se si deve formulare un theta-join fra le tabelle, si può fare in modo esplicito: $from$ reggerà allora un $join$ fra le tabelle ($join$ \textbf{esplicito}: A $join$ B $on$ Condizione).
+	\begin{lstlisting}[language=SQL]
+		select Studenti.Nome,Studenti.Cognome,Esami.voto from Studenti join Esami on Esami.studente=Studenti.matricola
+	\end{lstlisting}
+	Un theta-join equivale a un prodotto cartesiano seguito da una selezione (sulla condizione di $join$): su questa base un $join$ \textbf{implicito} specifica solo la lista delle tabelle nella clausola $from$ (prodotto cartesiano) e inserisce la Condizione di $join$ nella clausola $where$ (selezione).
+	\begin{lstlisting}[language=SQL]
+		select Studenti.Nome, Studenti.Cognome, Esami.voto from Studenti, Esami where Esami.studente=Studenti.matricola
+	\end{lstlisting}
+	Estrarre i nomi degli impiegati e le città dove lavorano:
+	\begin{lstlisting}[language=SQL]
+		select Impiegato.Nome,Impiegato.Cognome, Dipartimento.Citta from Impiegato, Dipartimento where Impiegato.Dipart=Dipartimento.Nome
+	\end{lstlisting}
+	oppure (con join esplicito):
+	\begin{lstlisting}[language=SQL]
+		select Impiegato.Nome,Impiegato.Cognome, Dipartimento.Citta from Impiegato join Dipartimento on Impiegato.Dipart=Dipartimento.Nome
+	\end{lstlisting}
+	È possibile omettere il nome della tabella per quegli attributi che non presentano ambiguità.
+	\begin{lstlisting}[language=SQL]
+		select Impiegato.Nome, Cognome, Dipartimento.Citta from Impiegato, Dipartimento where Dipart = Dipartimento.Nome
+	\end{lstlisting}
+	e abbreviare ulteriormente il codice utilizzando gli alias:
+	\begin{lstlisting}[language=SQL]
+		select I.Nome, Cognome, D.Citta from Impiegato as I, Dipartimento as D where Dipart = D.Nome
+	\end{lstlisting}
+	\section{Clausola where}
+	Ha come argomento una condizione logica, che ammette come operatori i predicati semplici (confronto attributo-costante o attributo-espressione): $=, <>, <, >, <=, >=$\\
+	I predicati semplici possono essere modificati tramite gli
+	operatori logici $and$, $or$, $not$.\\
+	$not$ ha precedenza su $and$ e $or$.\\
+	La precedenza fra $and$ e $or$ non è definita: quando si coordinano più predicati con $and$ e $or$ è bene esplicitare sempre le precedenze con le parentesi.
+	\begin{lstlisting}[language=SQL]
+		select Nome from Impiegato where Cognome = 'Rossi' and (Dipart='Amministraz' or Dipart='Produz')
+	\end{lstlisting}
+	\section{Operatore like}
+	Per i confronti fra stringhe è definito anche l’operatore $like$.\\
+	Il confronto è effettuato con una stringa che può contenere i caratteri speciali $\%$ e $\_$.\\\\
+	$\_$ rappresenta un carattere arbitrario.\\
+	$\%$ rappresenta in numero arbitrario di caratteri (anche zero).
+	\begin{lstlisting}[language=SQL]
+		select * from Impiegato where Cognome like '_o%i' -- La condizione e' soddisfatta da Rossi Borroni Poli Pollastri ecc.
+	\end{lstlisting}
+	\section{Gestione dei valori nulli}
+	La gestione dei valori nulli, a seconda dell’implementazione, avviene attraverso una logica a due valori come in SQL-89, o a tre valori (vero, falso, unknown) come in SQL-2.\\\\
+	In MySQL logica a due valori con gestione del valore nullo.\\\\
+	Le condizioni sui valori nulli possono essere definite attraverso i predicati $is \; null$ e $is \; not \; null$.
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Paternità}\\
+			\hline
+			\textbf{Padre} & \textbf{Figlio}\\
+			\hline
+			Sergio & Franco\\
+			Luigi & Olga\\
+			Luigi & Filippo\\
+			Franco & Andrea\\
+			Franco & Aldo\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Maternità}\\
+			\hline
+			\textbf{Madre} & \textbf{Figlio}\\
+			\hline
+			Luisa & Maria\\
+			Luisa & Luigi\\
+			Anna & Olga\\
+			Anna & Filippo\\
+			Maria & Andrea\\
+			Maria & Aldo\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\textbf{NB} Si suppone che su Figlio sia applicato il vincolo $unique$
+	\section{Join Implicito ed Esplicito}
+	Basandoci sulle tabelle Paternità e Maternità prendiamo Padre e Madre di ogni persona.\\\\
+	Con Join Implicito (Prodotto Cartesiano + selezione):
+	\begin{lstlisting}[language=SQL]
+		select paternita.figlio, padre, madre 
+		from maternita, paternita 
+		where paternita.figlio = maternita.figlio
+	\end{lstlisting}
+	Con Join Esplicito (Theta-Join):
+	\begin{lstlisting}[language=SQL]
+		select paternita.figlio, padre, madre 
+		from maternita join paternita on paternita.figlio = maternita.figlio
+	\end{lstlisting}
+	\section{Duplicati}
+	Al contrario di quanto avviene per l’algebra relazionale SQL ammette duplicati.\\\\
+	Quindi nella lista di città generata da
+	\begin{lstlisting}[language=SQL]
+		select Citta
+		from Persona
+		where Cognome = 'Rossi'
+	\end{lstlisting}
+	Il nome di una città può comparire più volte.\\\\
+	Per evitare i duplicati SQL prevede la clausola $distinct$ da inserire prima dell’attributo che non si vuole duplicare
+	\begin{lstlisting}[language=SQL]
+		select distinct Citta
+		from Persona
+		where Cognome = 'Rossi'
+	\end{lstlisting}
+	\section{Join: sintassi}
+	In SQL-2 è stata introdotta la seguente sintassi per esprimere il join ed estenderlo ai join esterni:
+	\begin{lstlisting}[language=SQL]
+		select AttrEspr [[as]Alias]{,AttrEspr [[as]Alias]}
+		from Tabella [[as]Alias] {[TipoJoin]joinTabella [[as]Alias] on CondizioneJoin}
+		[ where AltraCondizione ]
+	\end{lstlisting}
+	$TipoJoin$ può assumere i valori:
+	\begin{itemize}
+		\item inner
+		\item right[outer]
+		\item left[outer]
+		\item full[outer]
+	\end{itemize}
+	$inner$ è il \textbf{default} e corrisponde a un theta-join.\\
+	Il tipo natural (join naturale) implica la condizione di uguaglianza degli attributi con lo stesso nome.
+	\section{Alias e Variabili}
+	L’uso degli alias consente di:
+	\begin{itemize}
+		\item Compattare il codice
+		\item Fare riferimento a più esemplari della stessa tabella
+		\item Creare interrogazioni nidificate con riferimenti fra la query esterna e quella interna
+	\end{itemize}
+	Se l’interrogazione coinvolge una singola istanza di una tabella non c’è differenza fra variabile ed alias.\\
+	Se utilizza più istanze si parla più propriamente di variabile.
+	\subsection{Esempio di alias usato come variabile}
+	Impiegati il cui nome è anche il cognome di un altro impiegato del dipartimento Produzione.
+	\begin{lstlisting}[language=SQL]
+		select I1.Cognome, I1.Nome
+		from Impiegato I1, Impiegato I2
+		where I1.Nome = I2.Cognome
+		and I1.Nome <> I2.Nome
+		and I2.Dipart = 'Produzione'
+	\end{lstlisting}
+	\section{Ordinamento}
+	È possibile ordinare le righe del risultato di una interrogazione attraverso la clausola $order \; by$, a chiusura dell’interrogazione.
+	\begin{lstlisting}[language=SQL]
+		order by AttrdiOrdinamento [asc| desc] {, AttrdiOrdinamento [asc | desc]}
+		
+		asc -- (default) indica ordinamento ascendente,
+		desc -- discendente.
+	\end{lstlisting}
+	\textbf{NB} l’ordinamento alfabetico è ascendente (a$<$b$<$c$<$ ... $<$y$<$z)\\
+	Il primo attributo ha priorità, a parità si ordina sulla base del secondo, ecc.
+	\begin{lstlisting}[language=SQL]
+		select *
+		from Persona
+		order by Cognome, Nome
+	\end{lstlisting}
+	\section{Operatori Aggregati}
+	In algebra relazionale le espressioni vengono valutate sulle singole tuple in successione. \\
+	Talvolta però possono essere necessarie informazioni derivabili dall'esame di tutte le tuple o di sottoinsiemi di tuple.\\
+	SQL prevede una serie di operatori aggregati:
+	\begin{itemize}
+		\item count
+		\item sum
+		\item max
+		\item min
+		\item avg
+	\end{itemize}
+	Sintassi:
+	\begin{lstlisting}[language=SQL]
+		count (< * | [distinct|all] ListaAttributi >) <sum|max|min|avg>([distinct|all] AttrEspr)
+	\end{lstlisting}
+	Determinare il numero degli impiegati che si chiamano Rossi
+	\begin{lstlisting}[language=SQL]
+		select count(*)
+		from Impiegato
+		where nome= 'Rossi'
+	\end{lstlisting}
+	\begin{lstlisting}[language=SQL]
+		select count(arg) from ... -- esegue l'interrogazione come se fosse select arg from ... e restituisce il numero di tuple di cui e' composto il risultato
+		
+		select sum(arg), max(arg), min(arg), avg(arg) -- restituiscono la somma, il massimo, il minimo, la media del risultato di select arg from ...
+	\end{lstlisting}
+	\section{Interrogazioni con raggruppamento}
+	Gli operatori aggregati vengono calcolati sulla base di \textbf{tutte} le righe che vengono prodotte come risultato dell’interrogazione.\\\\
+	SQL non ammette che nella stessa $target \; list$ compaiano funzioni aggregate ed espressioni a livello di riga, come il nome di un attributo. \\
+	Non è infatti possibile associare un singolo risultato, calcolato su tutte le righe, a un attributo che, se ad es. è chiave, può anche assumere valori tutti diversi in ogni riga\\\\
+	SQL non ammette che nella stessa $target \; list$ compaiano funzioni aggregate e nomi di attributi, poiché l’operatore di aggregazione agisce su tutte le righe della tabella, mentre un attributo è valutato singolarmente per ogni tupla.
+	\begin{lstlisting}[language=SQL]
+		select nome, max(reddito)
+		from persone
+	\end{lstlisting}
+	Di chi è il nome? $select \; nome$ dovrebbe restituire tutti i nomi, $max()$ un singolo valore.\\\\
+	La target list deve essere \textbf{omogenea}.\\\\
+	L’interrogazione è corretta solo se la $target \; list$ contiene solo operatori di aggregazione, anche più di uno:\\
+	Es.
+	\begin{lstlisting}[language=SQL]
+		select min(eta), avg(reddito)
+		from persone
+		where reddito > 100
+	\end{lstlisting}
+	Restituisce due valori singoli, entrambi calcolati su tutte le tuple della tabella persone: l’età minima e il reddito medio di tutte le persone con reddito $>$ 100.
+	\subsection{group by}
+	In alcuni casi è utile/necessario applicare l’operatore separatamente ad uno o più sottoinsiemi delle righe.\\
+	L’operatore $group \; by \; Attr {, Attr}$ specifica come suddividere le tabelle in sottoinsiemi omogenei per valore, su cui valutare separatamente l’operatore aggregato.
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio)
+		from Impiegato
+		group by Dipart
+	\end{lstlisting}
+	(per ogni valore x assunto da $Dipart$ calcola la somma dei valori di $Stipendio$ di tutte le tuple con $Dipart=x$)\\\\
+	Se è presente un raggruppamento, nella target list possono comparire anche attributi, ma devono costituire un sottoinsieme di quelli usati nella clausola $group \; by$\\
+	Es. (scorretto) 
+	\begin{lstlisting}[language=SQL]
+		select Ufficio
+		from Impiegato
+		group by Dipart
+	\end{lstlisting}
+	Poiché deve venire prodotta una sola riga per ogni valore di $Dipart$, e, a parità di tale valore, possono aversi diversi valori di $Ufficio$, il risultato dell’interrogazione è indeterminato.\\
+	Se per l’attributo che è nella target list senza comparire nella clausola $group by$ esiste una dipendenza funzionale dagli attributi su cui si raggruppa (cioè se a ciascun valore di questi ultimi corrisponde un solo valore per tale attributo) la query potrebbe fornire un risultato corretto, ma per semplicità SQL (n.b. ma non MySQL) lo vieta comunque.
+	\section{Operatori aggregati e Raggruppamenti}
+	Il numero di figli di ciascun padre:
+	\begin{lstlisting}[language=SQL]
+		select Padre, count(*) as NumFigli
+		from paternita
+		group by Padre
+	\end{lstlisting}
+	\begin{center}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\multicolumn{2}{|c|}{Paternità}\\
+			\hline
+			\textbf{Padre} & \textbf{Figlio}\\
+			\hline
+			Sergio & Franco\\
+			\hline
+			Luigi & Olga\\
+			Luigi & Filippo\\
+			\hline
+			Franco & Andrea\\
+			Franco & Aldo\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c| }
+			\hline
+			\textbf{Padre} & \textbf{NumFigli}\\
+			\hline
+			Sergio & 1\\
+			Luigi & 2\\
+			Franco & 2\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\section{Raggruppamenti e Target List}
+	Interrogazione \textbf{scorretta}:
+	\begin{lstlisting}[language=SQL]
+		select padre, avg(f.reddito), p.reddito
+		from persone f join paternita on figlio = f.nome join persone p on padre = p.nome
+		group by padre
+	\end{lstlisting}
+	In effetti, un vincolo di integrità referenziale fra $padre$ e $persone.nome$ può fare sì che il valore di $persone.reddito$ da mostrare si riferisca davvero alla corretta istanza di $padre$, attributo su cui si raggruppa. \\
+	Però viene comunque considerato errore.\\\\
+	Interrogazione \textbf{corretta}
+	\begin{lstlisting}[language=SQL]
+		select padre, avg(f.reddito), p.reddito
+		from persone f join paternita on figlio = nome join persone p on padre = p.nome
+		group by padre, p.reddito
+	\end{lstlisting}
+	\section{Condizioni sui gruppi}
+	Può essere anche necessario effettuare una selezione sui risultati di una query con raggruppamento.\\
+	Se le condizioni sono verificabili a livello di singole righe e non coinvolgono i risultati del raggruppamento basta utilizzare la clausola $where$, altrimenti si estende la clausola $group \; by$ con l’estensione $having$, che applica la condizione di selezione al risultato di ogni gruppo.
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio)as SommaStipendi
+		from Impiegati
+		group by Dipart
+		having SommaStipendi > 100
+	\end{lstlisting}
+	Se non si specifica $group \; by$ e si usa $having$ da solo la condizione è applicata all'insieme di tutte le righe. \\
+	Se la
+	condizione non è verificata, il risultato è vuoto.
+	\subsection{Esempio}
+	I padri i cui figli hanno un reddito medio maggiore di 25
+	\begin{lstlisting}[language=SQL]
+		select padre, avg(f.reddito)
+		from persone f join paternita on figlio=nome
+		group by padre having avg(f.reddito) > 25
+	\end{lstlisting}
+	\subsection{Where o Having?}
+	I padri i cui figli sotto i 30 anni hanno un reddito medio maggiore di 25
+	\begin{lstlisting}[language=SQL]
+		select padre, avg(f.reddito)
+		from persone f join paternita on figlio = nome where eta < 30
+		group by padre having avg(f.reddito) > 25
+	\end{lstlisting}
+	\section{Select}
+	La sintassi di $select$ a cui siamo arrivati dopo le estensioni viste è quindi:
+	\begin{lstlisting}[language=SQL]
+		SelectSQL ::= 
+		select ListaAttributiOEspressioni
+		from ListaTabelle
+		[ where CondizioniSemplici ]
+		[ group by ListaAttributiDiRaggruppamento]
+		[ having CondizioniAggregate]
+		[ order by ListaAttributiDiOrdinamento]
+	\end{lstlisting}
+	\section{Interrogazioni di tipo insiemistico}
+	SQL fornisce anche gli operatori di tipo insiemistico
+	\begin{itemize}
+		\item union
+		\item intersect
+		\item except
+		\item minus (ma non in MySQL)
+	\end{itemize}
+	con la seguente sintassi:
+	\begin{lstlisting}[language=SQL]
+		SelectSQL
+		{< union|intersect|except >[all] SelectSQL}
+	\end{lstlisting}
+	\begin{itemize}
+		\item $intersect$ e $except$ potrebbero anche essere derivati attraverso opportune query
+		\item Gli operatori insiemistici eseguono per default una eliminazione dei duplicati; $all$ specifica di non farla
+		\item Gli schemi su cui si opera non devono essere identici come nell’algebra relazionale ma avere uguale numero di attributi e domini compatibili. \\
+		La corrispondenza è per posizione.
+	\end{itemize}
+	\subsection{Esempi}
+	Estrarre nomi e cognomi degli impiegati
+	\begin{lstlisting}[language=SQL]
+		select Nome
+		from Impiegato
+		union
+		select Cognome
+		from Impiegato
+	\end{lstlisting}
+	Estrarre i cognomi degli impiegati che sono anche nomi
+	\begin{lstlisting}[language=SQL]
+		select Nome
+		from Impiegato
+		intersect
+		select Cognome
+		from Impiegato
+	\end{lstlisting}
+	\section{Interrogazioni nidificate}
+	È possibile anche realizzare clausole $where$ in cui il confronto non avviene fra predicati semplici o fra valori, ma fra valori e insiemi di valori, appartenenti allo stesso dominio, che sono risultato di un’altra interrogazione che viene annidata all'interno di quella "principale". \\
+	Di qui deriva il termine query nidificate.\\\\
+	SQL offre 2 possibilità di estendere gli operatori di confronto al caso del confronto valore/insieme (risultato query):
+	\begin{itemize}
+		\item $all$ specifica che il risultato del confronto è vero se è vero per tutte le righe del risultato dell’interrogazione nidificata.
+		\item $any$ (default) specifica che il risultato del confronto è vero se è vero per una qualunque riga del risultato dell’interrogazione.
+	\end{itemize}
+	\begin{lstlisting}[language=SQL]
+		select I.Nome, Cognome
+		from Impiegato I
+		where Dipart = any (select D.Nome
+		from Dipartimento D
+		where Citta='Firenze')
+	\end{lstlisting}
+	Il risultato comprende tutte le righe di $Impiegato$ per cui il valore di $Dipart$ è uguale ad almeno uno dei valori di $Nome$ in $Dipartimento$, limitatamente alle tuple di $Dipartimento$ per cui $Citta='Firenze'$, cioè l’elenco degli impiegati che lavorano in dipartimenti con sede a Firenze.\\\\
+	Lo stesso risultato si poteva ottenere con un $join$, ma così, specialmente per interrogazioni complesse, è più leggibile.
+	\begin{lstlisting}[language=SQL]
+		select I.Nome, Cognome
+		from Impiegato I
+		where Dipart = any (select D.Nome
+		from Dipartimento D
+		where Citta = 'Firenze')
+		select I.Nome, Cognome
+		from Impiegato I, Dipartimento D
+		where Dipart = D.Nome and Citta = 'Firenze'
+	\end{lstlisting}
+	Nome e reddito del padre di Franco
+	\begin{lstlisting}[language=SQL]
+		select Nome, Reddito
+		from Persone, Paternita
+		where Nome = Padre and Figlio = 'Franco'
+		select Nome, Reddito
+		from Persone
+		where Nome =(select Padre
+		from Paternita
+		where Figlio = 'Franco')
+	\end{lstlisting}
+	\subsection{Interrogazioni nidificate per gli alias}
+	L’uso delle interrogazioni nidificate può anche eliminare la necessità degli alias.\\
+	Es. 
+	\begin{lstlisting}[language=SQL]
+		select I1.Nome
+		from Impiegato I1, Impiegato I2
+		where I1.Nome = I2.Nome	and I1.Dipart = 'Produz' and I2.Dipart <> 'Produz'
+	\end{lstlisting}
+	equivale a
+	\begin{lstlisting}[language=SQL]
+		select Nome
+		from Impiegato I1
+		where Dipart = 'Produz' and Nome = any (select I2.Nome
+		from Impiegato I2
+		where I2.Dipart<>'Produz')
+	\end{lstlisting}
+	\subsection{Interrogazioni nidificate e join}
+	Non tutte le interrogazioni nidificate corrispondono ad un join
+	\begin{lstlisting}[language=SQL]
+		select Nome
+		from Dipartimento
+		where Nome <> all (select Dipart
+		from Impiegato
+		where Cognome='Rossi')
+	\end{lstlisting}
+	La condizione è verificata per le righe che NON contengono un certo valore, quindi non è esprimibile mediante un join, che richiede una corrispondenza fra valori. \\
+	Però è equivalente a :
+	\[\Pi_{Nome} (DIPARTIMENTO) - \Pi_{Dipart} (\sigma_{Cognome='Rossi'} (IMPIEGATO)))\]
+	e quindi le due query potevano essere unite da $except$\\\\
+	\textbf{NB} Le condizioni "$=any$" e "$<>all$" si possono anche indicare come "$in$" e "$not \; in$".
+\end{document}

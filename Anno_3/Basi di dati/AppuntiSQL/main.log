@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  25 APR 2025 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  27 APR 2025 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,27 +908,18 @@ Package hyperref Info: Link coloring OFF on input line 77.
 \openout4 = `main.out'.
 
 \c@lstlisting=\count363
-<./img/0.cover.png, id=421, 1807.75375pt x 1016.79875pt>
+<./img/0.cover.png, id=228, 1284.8pt x 857.2025pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
 Package pdftex.def Info: ./img/0.cover.png  used on input line 98.
-(pdftex.def)             Requested size: 451.93733pt x 254.19907pt.
+(pdftex.def)             Requested size: 385.44298pt x 257.16273pt.
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/0
-.cover.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
-
- []
-
-(./main.toc
+.cover.png (PNG copy)>] (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
@@ -940,450 +931,210 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 ...e {7.6.1}Esempio}{12}{subsubsection.7.6.1}
-                                                  % [1] [2])
+l.39 ...ine {20}Alias e Variabili}{12}{section.20}
+                                                  % [1])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3]
-<./img/1.png, id=552, 996.72375pt x 497.86pt>
-File: ./img/1.png Graphic file (type png)
-<use ./img/1.png>
-Package pdftex.def Info: ./img/1.png  used on input line 131.
-(pdftex.def)             Requested size: 299.01944pt x 149.35915pt.
-
-(./sections/dbms.tex [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-s
-uper/cm-super-ts1.enc} <./img/1.png>]) (./sections/mod_dati.tex
-<./img/2.png, id=561, 984.17688pt x 226.34563pt>
-File: ./img/2.png Graphic file (type png)
-<use ./img/2.png>
-Package pdftex.def Info: ./img/2.png  used on input line 20.
-(pdftex.def)             Requested size: 295.25534pt x 67.9042pt.
+ [2]
+(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/02/21 1.10 listings language file
+) [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.e
+nc}]
+Overfull \hbox (26.88737pt too wide) in paragraph at lines 184--186
+\OT1/cmr/m/n/10 Precisione speci-fica il nu-mero di cifre ded-i-cato alla man-t
+issa (la pre-ci-sione dell'esponente dipende dall'implementazione) 
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--265
+
+ []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 33--45
+Underfull \hbox (badness 10000) in paragraph at lines 284--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--45
+Underfull \hbox (badness 10000) in paragraph at lines 284--288
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 347--350
+
+ []
+
+[7]
+Overfull \hbox (3.05399pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/n/10 Quindi non ^^Re pos-si-bile pen-sare all'esecuzione di un co-ma
+ndo come es-e-cuzione riga per riga, ma come un'operazione
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 445--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--45
+Underfull \hbox (badness 10000) in paragraph at lines 483--488
 
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 62--89
-[]$[]$  $[]$ 
- []
-
-[6 <./img/2.png>]
-<./img/3.png, id=573, 1003.75pt x 553.06625pt>
-File: ./img/3.png Graphic file (type png)
-<use ./img/3.png>
-Package pdftex.def Info: ./img/3.png  used on input line 123.
-(pdftex.def)             Requested size: 301.12732pt x 165.92114pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 483--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 483--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 483--488
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 521--525
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 563--565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 576--578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 583--585
+
+ []
+
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 666--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 666--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--142
+Underfull \hbox (badness 10000) in paragraph at lines 674--678
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 674--678
 
-[7] (./sections/interf.tex
-Overfull \hbox (25.23688pt too wide) in paragraph at lines 53--61
-[][] 
  []
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/02/21 1.10 listings language file
-) [8 <./img/3.png>] (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstl
-ang1.sty
-File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2024/02/21 1.10 listings language file
-)
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-94.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-<./img/4.png, id=586, 777.90625pt x 517.935pt>
-File: ./img/4.png Graphic file (type png)
-<use ./img/4.png>
-Package pdftex.def Info: ./img/4.png  used on input line 123.
-(pdftex.def)             Requested size: 311.15698pt x 207.17032pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9]) (./sections/mod_rel.tex
-Overfull \hbox (6.14519pt too wide) in paragraph at lines 22--24
-\OT1/cmr/m/n/10 Il prodotto carte-siano tra $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/1
-0 e $\OML/cmm/m/it/10 B$ \OT1/cmr/m/n/10 ^^Re $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 cubo; rosso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n
-/10 (\OML/cmm/m/it/10 cono; rosso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
-/n/10 (\OML/cmm/m/it/10 cubo; verde\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr
-/m/n/10 (\OML/cmm/m/it/10 cono; verde\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 cubo; blu\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 cono; blu\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$ 
- []
-
-[10 <./img/4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--43
+Underfull \hbox (badness 10000) in paragraph at lines 742--745
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 824--828
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--43
+Underfull \hbox (badness 10000) in paragraph at lines 838--840
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 888--891
 
  []
 
-<./img/5.png, id=663, 988.69376pt x 527.9725pt>
-File: ./img/5.png Graphic file (type png)
-<use ./img/5.png>
-Package pdftex.def Info: ./img/5.png  used on input line 119.
-(pdftex.def)             Requested size: 395.4705pt x 211.18526pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
-<./img/6.png, id=670, 973.6375pt x 191.71625pt>
-File: ./img/6.png Graphic file (type png)
-<use ./img/6.png>
-Package pdftex.def Info: ./img/6.png  used on input line 142.
-(pdftex.def)             Requested size: 292.0935pt x 57.5153pt.
- [13 <./img/5.png> <./img/6.png>]
-<./img/7.png, id=679, 978.65625pt x 669.50125pt>
-File: ./img/7.png Graphic file (type png)
-<use ./img/7.png>
-Package pdftex.def Info: ./img/7.png  used on input line 195.
-(pdftex.def)             Requested size: 293.59914pt x 200.85191pt.
-
-Overfull \hbox (6.97618pt too wide) in paragraph at lines 158--201
-[] [] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--218
-
- []
-
-[14 <./img/7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 249--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--272
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 313--321
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 313--321
-
- []
-
-[16]) (./sections/alg_rel.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--20
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 141--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--147
-
- []
-
-[18]
-<./img/8.png, id=716, 919.435pt x 631.35875pt>
-File: ./img/8.png Graphic file (type png)
-<use ./img/8.png>
-Package pdftex.def Info: ./img/8.png  used on input line 195.
-(pdftex.def)             Requested size: 275.83263pt x 189.40909pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
-
- []
-
-[19 <./img/8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--274
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 347--351
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--351
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 355--360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--380
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 481--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 481--487
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 560--562
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 564--567
-
- []
-
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 780--786
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--786
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--790
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--790
-
- []
-
-) (./sections/query.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--6
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
-
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 123--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--131
-
- []
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
-
- []
-
-[29]
-Overfull \hbox (28.0866pt too wide) in paragraph at lines 217--219
-\OML/cmm/m/it/10 PROJ[]\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 Supervisione\OT1/cmr/
-m/n/10 ) \OML/cmm/m/it/10 JOIN REN[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 SEL[]\OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 Supervisione\OT1/cmr/m/n/10 )))$ 
- []
-
-) [30] (./main.aux)
+[17] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 28DEEB3E2948E4C8C4A89469A86C54D4;16030.
+(rerunfilecheck)             Checksum: E13F311F2A9979E06796824069902C35;7957.
  ) 
 Here is how much of TeX's memory you used:
- 30485 strings out of 474116
- 555908 string characters out of 5743683
- 2196187 words of memory out of 5000000
- 52142 multiletter control sequences out of 15000+600000
- 564822 words of font info for 61 fonts, out of 8000000 for 9000
+ 28681 strings out of 474116
+ 522743 string characters out of 5743683
+ 2110187 words of memory out of 5000000
+ 50135 multiletter control sequences out of 15000+600000
+ 562862 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,117p,510b,3395s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,7n,117p,431b,1453s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texliv
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (31 pages, 1296507 bytes).
+2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (18 pages, 1472138 bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 803 compressed objects within 9 object streams
- 220 named destinations out of 1000 (max. 500000)
- 882 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 874 compressed objects within 9 object streams
+ 470 named destinations out of 1000 (max. 500000)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 

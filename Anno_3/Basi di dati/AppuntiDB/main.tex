@@ -95,7 +95,7 @@
 		
 		\begin{figure}[h]
 			\centering
-			\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.18]{0.cover.png}}
+			\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.25]{0.cover.png}}
 			%\caption{Caption}
 			\label{fig:cover}
 		\end{figure}
@@ -128,8 +128,8 @@
 	\section{Architettura Client-Server}
 	\begin{figure}[h]
 		\centering
-		\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{example-image-golden}}
-		\caption{Caption}
+		\includegraphics[scale=0.3]{1.png}
+		\caption{Modello Client-Server}
 		\label{fig:im-1}
 	\end{figure}
 	Architettura client-server (applicazione lato server)\\
@@ -139,6 +139,17 @@
 	\subfile{sections/dbms}
 	\section{Modelli dei Dati}
 	\subfile{sections/mod_dati}
+	\newpage
+	\section{Progettazione di una base di dati}
+	I diversi tipi di schema riflettono le diverse fasi della progettazione: date le specifiche del problema da risolvere
+	\begin{itemize}
+		\item \textbf{Progettazione concettuale} (dalle specifiche allo schema concettuale) \\
+		Definisce quali concetti rappresentare, per quanto riguarda sia la loro descrizione che le relazioni logiche che esistono fra di essi.
+		\item \textbf{Progettazione logica} (dallo schema concettuale allo schema logico) \\
+		Definisce come rappresentare i concetti introdotti a livello concettuale in forma di strutture dati.
+		\item \textbf{Progettazione fisica} (dallo schema logico allo schema fisico) \\
+		Definisce come allocare e gestire fisicamente i dati all’interno del calcolatore.
+	\end{itemize}
 	\section{Interfacciarsi con una base di dati}
 	\subfile{sections/interf}
 	\section{Modello relazionale}
