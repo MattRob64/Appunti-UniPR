@@ -888,4 +888,180 @@
 	\[\Pi_{Nome} (DIPARTIMENTO) - \Pi_{Dipart} (\sigma_{Cognome='Rossi'} (IMPIEGATO)))\]
 	e quindi le due query potevano essere unite da $except$\\\\
 	\textbf{NB} Le condizioni "$=any$" e "$<>all$" si possono anche indicare come "$in$" e "$not \; in$".
+	\subsection{Operatori Aggregati e Nidificazione}
+	La persona (o le persone) con il reddito massimo
+	\begin{lstlisting}[language=SQL]
+		select *
+		from persone
+		where reddito = ( select max(reddito)
+		from persone )
+	\end{lstlisting}
+	\textbf{IMPORTANTE!!!} $max$ non è una funzione ma un operatore SQL di aggregazione, quindi scrivere $where reddito = max(reddito)$ sarebbe un errore perché gli operatori di aggregazione lavorano su insiemi di tuple.\\
+	Una funzione è invece valutata a livello di tupla.\\
+	$where \; reddito <= 10000*sin(n \_ civico)$ è accettabile perché confronta i valori di $n \_ civico$ e l’espressione basata su $reddito$ per ogni singola tupla di $persone$.
+	\begin{lstlisting}[language=SQL]
+		select *
+		from persone
+		where reddito < ( select reddito
+		from persone )
+	\end{lstlisting}
+	Confronta il valore di reddito di ogni tupla della tabella persona con TUTTI i valori di reddito presenti nella tabella persone.\\ Siccome $any$ è il default, estrae tutti i valori di reddito ad esclusione del massimo.
+	\begin{lstlisting}[language=SQL]
+		select *
+		from persone
+		where reddito < reddito
+	\end{lstlisting}
+	Restituisce un insieme vuoto perché il valore di un attributo non può essere minore di se stesso (si valuta una tupla alla volta).
+	\begin{lstlisting}[language=SQL]
+		select Dipart, Stipendio
+		from Impiegato
+		where Stipendio = ( select max(Stipendio)
+		from Impiegato )
+	\end{lstlisting}
+	equivale a
+	\begin{lstlisting}[language=SQL]
+		select Dipart, Stipendio
+		from Impiegato
+		where Stipendio >= all ( select Stipendio
+		from Impiegato )
+	\end{lstlisting}
+	(N.B. il massimo di un insieme è il valore, appartenente a quell'insieme, che è maggiore o uguale a tutti gli altri)\\\\
+	La somma degli stipendi degli impiegati di ciascun Dipartimento
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio)
+		from Impiegato
+		group by Dipart
+	\end{lstlisting}
+	Il Dipartimento per cui la somma degli stipendi è più alta
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio) as Costodip
+		from Impiegato
+		group by Dipart
+		??? CostoDip >= all (select ???)
+	\end{lstlisting}
+	La somma degli stipendi degli impiegati di ciascun Dipartimento
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio)
+		from Impiegato
+		group by Dipart
+	\end{lstlisting}
+	Il Dipartimento per cui la somma degli stipendi è più alta
+	\begin{lstlisting}[language=SQL]
+		select Dipart, sum(Stipendio)as Costodip
+		from Impiegato
+		group by Dipart
+		having CostoDip >= all (select sum(Stipendio)
+		from Impiegato
+		group by Dipart)
+	\end{lstlisting}
+	\subsection{Interpretazione delle query nidificate}
+	Per analizzare il risultato di una interrogazione con nidificazione si può supporre di valutare prima il risultato dell’interrogazione nidificata (query interna), "sostituendo" poi tale valore nella query esterna per ottenere il risultato finale.\\
+	Questo procedimento è anche efficiente, in quanto l’interrogazione nidificata viene eseguita una sola volta.\\\\
+	Tuttavia, è possibile farlo solo se le due query sono indipendenti fra loro, cioè se la query interna non varia al variare della specifica tupla della query esterna che si deve confrontare col risultato della query interna.\\\\
+	Quando esiste questa dipendenza, espressa tramite l’uso di un alias comune alle due query, si parla di \textbf{passaggio di binding} fra le due interrogazioni.\\\\
+	Se esiste un riferimento (passaggio di binding) fra le due query, bisogna usare l’interpretazione "procedurale" di query, che calcola il prodotto cartesiano fra le tabelle indicate nella clausola $from$ e poi verifica la condizione specificata nella clausola $where$ separatamente per ogni riga.\\
+	Quindi per ogni riga della query esterna (da cui dipende anche la query interna) si valuta prima il risultato della corrispondente query interna, per poi calcolare il predicato logico sulla query esterna.\\\\
+	Il passaggio di binding avviene mediante le variabili SQL, cioè alias condivisi fra più interrogazioni. \\
+	Un alias è utilizzabile nella query in cui è definito o nell’ambito di una query nidificata al suo interno.\\
+	Quindi la query interna può ereditare (condividere) gli alias di quella esterna.\\
+	Due query allo stesso livello non possono condividere variabili.\\\\
+	Di fatto, si realizzano n theta-join separati fra ciascuna delle $n$ righe risultanti dalla query esterna e la tabella risultante dall'esecuzione della query interna, istanziando gli alias all'interno di quest'ultima coi valori corrispondenti della query esterna.\\\\
+	Es. \\
+	L’insegnamento cui si riferisce il primo esame sostenuto da ogni studente
+	\begin{lstlisting}[language=SQL]
+		select S.cognome, S.nome, E.insegnamento
+		from Studenti S, Esami E
+		where S.Matricola = E.Studente
+		and E.Data = ( select min(E1.data)
+		from Esami E1
+		where E1.Studente = S.Matricola )
+	\end{lstlisting}
+	\section{exists}
+	$exists$ è un operatore logico applicabile a query nidificate.\\
+	Restituisce vero se la query che regge dà un risultato non nullo, falso se è nullo.\\\\
+	È utilizzabile in modo significativo solo se esiste un passaggio di binding fra interrogazione esterna e interrogazione nidificata.\\\\
+	Es.\\
+	Le persone che hanno almeno un figlio
+	\begin{lstlisting}[language=SQL]
+		select *
+		from Persone P
+		where exists ( select *
+		from Paternita
+		where Padre = P.Nome)
+		or exists ( select *
+		from Maternita
+		where Madre = P.Nome)
+	\end{lstlisting}
+	\begin{lstlisting}[language=SQL]
+		select *
+		from Persona P
+		where exists ( select *
+		from Persona P1
+		where P1.Nome = P.Nome
+		and P1.Cognome = P.Cognome
+		and P1.CFiscale <> P.CFiscale)
+	\end{lstlisting}
+	In questi casi non è possibile eseguire prima la query interna, in quanto è indeterminata se non si risolve il riferimento (passaggio di binding). \\
+	Quindi per ogni riga dell’interrogazione esterna dovrà essere valutata una diversa interrogazione nidificata.
+	\section{Costruttore di tuple}
+	Quando si deve valutare una condizione che coinvolge un insieme di attributi, la lista degli attributi coinvolti viene inserita all'interno di una parentesi tonda.\\\\
+	Es.
+	\begin{lstlisting}[language=SQL]
+		select *
+		from Persona P
+		where (Nome, Cognome) in
+		(select Nome, Cognome
+		from Persona P1
+		where P.CFiscale <> P1.CFiscale)
+	\end{lstlisting}
+	\section{Vincoli di integrità generici}
+	Con i costrutti visti sinora, non è sempre possibile definire tutti i possibili vincoli di integrità.\\\\
+	Per questo esiste l'istruzione
+	\[check(Condizione)\]
+	La condizione specificata deve essere verificata da tutte le tuple in ogni momento.\\\\
+	È possibile con check definire tutti i vincoli predefiniti.\\
+	Però è meno leggibile e non si possono applicare le politiche di reazione alle violazioni. \\
+	Tuttavia è molto potente.
+	\subsection{Esempio check}
+	\begin{lstlisting}[language=SQL]
+		create table Impiegato
+		(
+			Matricola character(6),
+			Cognome character(20),
+			Nome character(20),
+			Sesso character not null
+			check (Sesso in ('M','F'))
+			Stipendio integer,
+			Superiore character(6),
+			check( Stipendio <=(select Stipendio
+			from Impiegato J
+			where Superiore=J.Matricola) )
+		)
+	\end{lstlisting}
+	NB MySQL non ammette query dentro una check
+	\section{Asserzioni}
+	Le asserzioni sono vincoli che fanno parte dello schema; non sono associati ad alcun attributo o tabella.\\
+	Permettono di definire tutti i vincoli utilizzabili nella definizione di una tabella, ma anche vincoli su più tabelle o vincoli che richiedono che una tabella abbia certe caratteristiche (es. una certa cardinalità).
+	\begin{lstlisting}[language=SQL]
+		create assertionNomeAsserzione check(Condizione)
+	\end{lstlisting}
+	Es.
+	\begin{lstlisting}[language=SQL]
+		create assertion AlmenoUnImpiegato
+		check (1 <= (select count(*)
+		from Impiegato))
+	\end{lstlisting}
+	NB MySQL ammette solo: $constraint \; Nome \; check(Cond)$ in una istruzione $create \; table$.\\\\
+	Ogni vincolo di integrità è associato ad una politica di controllo che specifica se è immediato o differito.\\
+	Se è \textbf{immediato} è verificato immediatamente dopo una modifica.\\
+	Se è \textbf{differito}, si verifica solo al termine dell'esecuzione di una serie di operazioni che si considerano parte di un'unica azione atomica (transazione).\\\\
+	Se un vincolo immediato viene violato, l'operazione di modifica può essere annullata immediatamente (\textbf{rollback parziale}). \\\\
+	Tutti i vincoli predefiniti sono immediati.\\\\
+	Se invece è differito, al momento in cui si verifica la violazione non è più possibile identificare l'operazione che l'ha causata e quindi va annullata tutta la transazione (\textbf{rollback totale}).\\
+	Questo garantisce la consistenza della base di dati.\\\\
+	Per cambiare il tipo di controllo:
+	\begin{lstlisting}[language=SQL]
+		set constraint [NomeVincolo] immediate
+		set constraint [NomeVincolo] defered -- (deferred)
+	\end{lstlisting}
 \end{document}

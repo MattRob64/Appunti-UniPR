@@ -53,3 +53,10 @@
 \contentsline {section}{\numberline {29}Interrogazioni nidificate}{16}{section.29}%
 \contentsline {subsection}{\numberline {29.1}Interrogazioni nidificate per gli alias}{17}{subsection.29.1}%
 \contentsline {subsection}{\numberline {29.2}Interrogazioni nidificate e join}{17}{subsection.29.2}%
+\contentsline {subsection}{\numberline {29.3}Operatori Aggregati e Nidificazione}{17}{subsection.29.3}%
+\contentsline {subsection}{\numberline {29.4}Interpretazione delle query nidificate}{18}{subsection.29.4}%
+\contentsline {section}{\numberline {30}exists}{19}{section.30}%
+\contentsline {section}{\numberline {31}Costruttore di tuple}{19}{section.31}%
+\contentsline {section}{\numberline {32}Vincoli di integrità generici}{20}{section.32}%
+\contentsline {subsection}{\numberline {32.1}Esempio check}{20}{subsection.32.1}%
+\contentsline {section}{\numberline {33}Asserzioni}{20}{section.33}%
