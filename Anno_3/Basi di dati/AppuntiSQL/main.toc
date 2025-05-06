@@ -60,3 +60,5 @@
 \contentsline {section}{\numberline {32}Vincoli di integrità generici}{20}{section.32}%
 \contentsline {subsection}{\numberline {32.1}Esempio check}{20}{subsection.32.1}%
 \contentsline {section}{\numberline {33}Asserzioni}{20}{section.33}%
+\contentsline {section}{\numberline {34}Viste}{21}{section.34}%
+\contentsline {section}{\numberline {35}Controllo degli accessi}{22}{section.35}%

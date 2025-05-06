@@ -1064,4 +1064,89 @@
 		set constraint [NomeVincolo] immediate
 		set constraint [NomeVincolo] defered -- (deferred)
 	\end{lstlisting}
+	\section{Viste}
+	Le viste sono tabelle virtuali ricavate da informazioni contenute in altre tabelle.\\
+	Nella definizione possono essere contenute anche altre viste purché non vi siano dipendenze ricorsive o immediate (una vista non può dipendere da se stessa), né transitive.
+	\begin{lstlisting}[language=SQL]
+		create view NomeVista[(ListaAttributi)] as
+		SelectSQL
+		[ with [ local | cascaded ] check option ]
+	\end{lstlisting}
+	\begin{itemize}
+		\item La query SQL deve restituire un numero di attributi pari a quelli contenuti nello schema
+		\item L'ordine degli attributi nella target list deve rispettare quello dello schema
+	\end{itemize}
+	\begin{lstlisting}[language=SQL]
+		create view
+		ImpiegatiAmmin(Matricola,Nome,Cognome,Stipendio)
+		as
+			select Matricola, Nome, Cognome, Stipendio
+			from Impiegato
+			where Dipart = 'Amministrazione'
+			and Stipendio > 10
+	\end{lstlisting}
+	Su certe viste è possibile fare modifiche che alterano le tabelle che le compongono. \\
+	Ci sono problemi se la vista è definita tramite un join.\\
+	SQL permette la modifica di una vista solo se una sola riga di ciascuna tabella di base corrisponde a una riga della vista. \\
+	Di solito si richiede che sia definita su una sola tabella e/o che contenga almeno una chiave primaria.\\\\
+	$check \; option$ consente di fare modifiche sulle righe della vista solo se le righe continuano ad appartenere alla vista dopo le modifiche.\\
+	Se una vista è definita in termini di altre viste l'opzione \textbf{local} o \textbf{cascaded} specifica se il controllo debba coinvolgere solo la vista più esterna o se deve essere propagato a tutti i livelli.\\
+	Il default è $cascaded$.\\\\
+	Quindi, se è specificata la $check \; option$, ogni comando di aggiornamento per essere propagato non deve eliminare righe dalla vista.\\\\
+	Le viste consentono anche di sostituire interrogazioni nidificate o di creare interrogazioni altrimenti impossibili da definire.\\\\
+	Es.
+	\begin{lstlisting}[language=SQL]
+		create view BudgetStipendi(Dip,TotStipendi) 
+		as
+			select Dipart, sum(Stipendio)
+			from Impiegato
+			group by Dipart
+	\end{lstlisting}
+	Trovare il dipartimento che spende di più in stipendi 
+	\begin{lstlisting}[language=SQL]
+		select Dip
+		from BudgetStipendi
+		where TotStipendi=(select max(TotStipendi)
+		from BudgetStipendi)
+	\end{lstlisting}
+	\section{Controllo degli accessi}
+	SQL prevede la definizione di utenti, a ciascuno dei quali sono assegnati privilegi diversi.\\
+	Gli utenti possono essere gli stessi del sistema su cui è attivo il server SQL, oppure indipendenti dal sistema.\\\\
+	Ogni componente del sistema è proteggibile, di solito si proteggono le tabelle.\\\\
+	Il controllo degli accessi è basato sul concetto di privilegio, caratterizzato da:
+	\begin{itemize}
+		\item risorsa cui si riferisce
+		\item utente che concede il privilegio
+		\item utente che lo riceve
+		\item azione che viene permessa
+		\item possibilità di trasmettere o meno il privilegio ad altri utenti
+	\end{itemize}
+	Il creatore di una risorsa ha tutti i privilegi, al momento della sua creazione. \\
+	Esiste anche un \textbf{utente “speciale”} $\_ system$ ($root$ in MySQL), che ha tutti i privilegi su tutte le risorse in qualsiasi momento.\\\\
+	I principali privilegi sono:
+	\begin{itemize}
+		\item $insert$ (applicabile a tabelle o viste) inserisce un nuovo oggetto nella risorsa
+		\item $update$ (tabelle viste attributi) aggiorna il valore di un oggetto
+		\item $delete$ (tabelle e viste) rimuove un oggetto
+		\item $select$ (tabelle viste attributi) permette di leggere la risorsa
+		\item $references$ (tabelle ed attributi) permette che venga fatto riferimento ad una risorsa nell'ambito della definizione dello schema di una tabella
+		\item $usage$ (domini) permette che venga usata la risorsa
+	\end{itemize}
+	$drop$ e $alter$ sono \textbf{riservati al creatore} degli oggetti cui si applicano.\\\\
+	I comandi per concedere o revocare \textbf{privilegi} sono $grant$ e $revoke$.
+	\begin{lstlisting}[language=SQL]
+		grant Privilegi on Risorsa to Utenti [with grant option]
+	\end{lstlisting}
+	Questo codice concede i Privilegi sulla Risorsa agli Utenti.
+	\begin{lstlisting}[language=SQL]
+		grant select on Dipartimento to Stefano
+	\end{lstlisting}
+	Questo codice concede all'utente Stefano il privilegio di select sulla tabella Dipartimento.\\\\
+	Se si specifica anche $with \; grant \; option$ l'utente può propagare i diritti anche ad altri.\\
+	La parola chiave $all \; privileges$ specifica tutti i possibili privilegi.
+	\begin{lstlisting}[language=SQL]
+		revoke Privilegi on Risorsa from Utenti [restrict|cascade]
+	\end{lstlisting}
+	Questo codice fa l'operazione inversa. \\
+	Con $restrict$ si impedisce che la revoca provochi altre revoche, con $cascade$ si concede.
 \end{document}
