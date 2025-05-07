@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  25 APR 2025 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  7 MAY 2025 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,11 +921,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--114
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--114
-
- []
-
 (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -940,7 +935,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.36 ...e {7.6.1}Esempio}{12}{subsubsection.7.6.1}
+l.37 ...izione relazione}{12}{subsubsection.7.6.2}
                                                   % [1] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1380,7 +1375,7 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
 2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
 e/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (31 pages, 1296507 bytes).
+Output written on main.pdf (31 pages, 1296509 bytes).
 PDF statistics:
  893 PDF objects out of 1000 (max. 8388607)
  803 compressed objects within 9 object streams
