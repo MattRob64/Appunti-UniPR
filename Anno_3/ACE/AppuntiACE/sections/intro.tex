@@ -1,0 +1,336 @@
+\documentclass{article}
+\begin{document}
+	\subsection{Cos'è un calcolatore elettronico}
+	L’elaboratore o calcolatore elettronico svolge in automatico l’operazione
+	di elaborare i dati a seconda delle istruzioni ricevute
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{1.png}
+			\caption{Schema 1}
+			\label{fig:im-1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{2.png}
+			\caption{Schema 2}
+			\label{fig:im-2}
+		\end{subfigure}
+		\caption{Schemi funzionamento calcolatore elettronico}
+	\end{figure}
+	\subsubsection{Algoritmi}
+	Un algoritmo è un insieme di azioni (o istruzioni) che, eseguite secondo un ordine prestabilito, permettono di trovare il risultato cercato sulla base dei dati in ingresso.\\ \\
+	Il calcolatore elettronico per risolvere un problema utilizza un algoritmo.\\ \\
+	Il concetto di algoritmo è uno dei concetti di base dell'intera matematica: i più semplici ed antichi algoritmi sono le regole per eseguire le operazioni dell'aritmetica elementare, formulate dal matematico arabo medioevale Al-Khuwarizmi, da cui deriva appunto il nome di algoritmo.\\ \\
+	Un computer non è altro che un rapidissimo esecutore di sequenze di istruzioni ovvero gli algoritmi.
+	\subsubsection{Utilizzo dei calcolatori elettronici}
+	Alcuni esempi di utilizzo di un calcolatore elettronico possono essere:
+	\begin{itemize}
+		\item Uno strumento di word processing
+		\item Uno strumento di data analysis
+		\item Un componente essenziale di robot, veicoli, strumenti di comunicazione, ecc...
+		\item Uno strumento di controllo di sistemi complessi
+		\item Uno strumento di progettazione CAD-CAM
+		\item Uno strumento di gestione delle informazioni (Server)
+	\end{itemize}
+	\newpage
+	\subsection{Funzionamento di un calcolatore}
+	Un calcolatore elettronico deve svolgere 4 compiti principali:
+	\begin{enumerate}
+		\item Elaborazione (Calcolo)
+		\item Memorizzazione
+		\item Trasmissione
+		\item Controllo
+	\end{enumerate}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.45]{3.png}
+		\caption{Schema funzionamento calcolatore}
+		\label{fig:im-3}
+	\end{figure}
+	Le 4 funzioni possono essere collegate approssimativamente a 4 componenti principali:
+	\begin{itemize}
+		\item CPU (Central Processing Unit), che a sua volta puù essere suddiviso in:
+		\subitem Unità di controllo
+		\subitem ALU (Unità Aritmetico-Logica)
+		\subitem Registri (Generali o Dedicati)
+		\subitem Interconnessioni
+		\item Memoria
+		\item Sistema di Memoria
+		\item I vari BUS
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.35]{4.png}
+		\caption{Schema componenti calcolatore}
+		\label{fig:im-4}
+	\end{figure}
+	\newpage
+	\subsection{Storia dei calcolatori}
+	I calcolatori hanno subito svariate evoluzioni durante il corso della storia:\\ \\
+	\scalebox{1}{
+		\begin{tabular}{r |@{\foo} l}
+			$\rightarrow$ 1834 & \textbf{Analytical Engine (Babbage)} – primo “computer” digitale\\
+			1946 & \textbf{ENIAC} (Electronic Numerical Integrator And Calculator)\\
+			1951 & \textbf{UNIVAC-I} – primo calcolatore comm. – 250,000 \$ - 48 esemplari\\
+			1952 & \textbf{IBM 701} (prima solo macchine da ufficio)\\
+			1952 & \textbf{Macchina IAS di Princeton} (macchina di \textbf{Von Neumann})\\
+			1962 & \textbf{IBM 709x} (primo calcolatore scientifico di discreta potenza)\\
+			$\rightarrow$ 1964 & \textbf{IBM S/360} – primo tentativo di def. di architettura (Uno dei primi Mainframe)\\
+			1964 & \textbf{CDC 6600} – primo supercalcolatore (poi Cray) (Uno dei primi Mainframe)\\
+			1965 & \textbf{DEC PDP 8} – primo minicalcolatore (< \$20.000) – accum. a 8 bit\\
+			1970 & \textbf{DEC PDP 11} – calcolatore a 16 bit, unico bus\\
+			$\rightarrow$ 1971 & \textbf{CPU 4004} microprocessore (Intel) (sistema MCS-4) – a 4 bit\\
+			1972 & \textbf{Intel 8008} – prima CPU a 8 bit (30 micros./istr.)\\
+			$\rightarrow$ 1974 & \textbf{National PAC} – prima CPU single chip a 16 bit\\
+			1974 & \textbf{Intel 8080} – seguito da Motorola MC6800 e Zilog Z80\\
+			1974 & \textbf{Cray-1} – primo supercomputer vettoriale\\
+			$\rightarrow$ 1978 & \textbf{Intel 8086} – primo processore di seconda generazione in grado di indirizzare oltre a 64kB \\ & – seguito da MC68000 e Z8000\\
+			1978 & \textbf{DEC VAX} – riferimento per i mainframe futuri\\
+			$\rightarrow$ 1979 & \textbf{Intel 8088} – processore a 8 bit con architettura interna a 16 bit (m = 16)\\
+			1979 & \textbf{IBM 801} – primo processore RISC (32 bit)\\
+			$\rightarrow$ Fine 70' & \textbf{IBM S/370} – compatibile con S/360\\
+			$\rightarrow$ 1982 & \textbf{RISC I} – University of Berkley (In contrasto con CISC)\\
+			$\rightarrow$ 1984 & \textbf{MC68020} – prima CPU a 32 con cache istruzioni integrata + MMU (m = 32)\\
+			1985 & \textbf{MIPS} – University of Standford\\
+			1985 & \textbf{Intel 80386} – CPU a 32 bit con MMU (Memory Management Unit) integrata\\
+			1987 & \textbf{MC68030} – prima CPU con cache separate e MMU (32 bit)\\
+			1989 & \textbf{MC68040} – prima CPU con anche FPU\\
+			$\rightarrow$ 1989 & \textbf{Intel 80486} – cache integrata\\
+			$\rightarrow$ Inizi 90' & \textbf{PowerPC} – architettura RISC, da unione IBM, Apple e Motorola\\
+			$\rightarrow$ 1993 & \textbf{Pentium} – nuova architettura superscalare con \textbf{parallelismo esplicito}\\
+			1995 & \textbf{Pentium Pro} – esecuzione speculativa, predizione salti, … \\
+			1997 & \textbf{Pentium II} – tecnologia MMX (modifica ISA)\\
+			1999 & \textbf{Pentium III} – istruzioni per la gestione della grafica 3D\\
+			2000 & \textbf{Pentium 4} – istruzioni multimediali\\
+			6/2001 & \textbf{Itanium Merced} – IA-64 congiunta Intel-HP – esperimento\\
+			6/2002 & \textbf{Itanium 2 McKinley} – commerciale\\
+			$\rightarrow$ 5/2005 & \textbf{Intel Pentium D (EE 840), AMD Athlon 64 X2} – architettura dual-core\\
+			7/2006 & \textbf{Intel Core 2 Duo (Core microarch.)} – fine Pentium\\
+			2008 & \textbf{Intel Core 2 Quad} – fino al Q9300 (2.4 GhZ, L2 6MB)\\
+			2014 & \textbf{Intel Core i7 Extreme} – fino a i7-5960X (8 core,3.5 Ghz,L2 20MB)\\
+		\end{tabular}
+	}
+	%\begin{chronology}[8]{1834}{1972}{100ex}[\textwidth]
+	%\event{1834}{one}
+	%\event{1946}{two}
+	%\event{1953}{three}
+	%\end{chronology}
+	\subsection{Generazioni dei calcolatori}
+	Un altro modo per visualizzare l'evoluzione dei calcolatori elettronici è tramite la suddivisione in generazioni, anche se queste potrebbero non essere del tutto precise.
+	\subsubsection{Generazione 0 - Computer Meccanici}
+	Questa generazione comprende i calcolatori creati nel periodo fra il 1642 e il 1945, alcuni di questi calcolatori sono:\\
+	“Pascalina” (1642) – solo somme e sottrazioni  [ \cref{fig:im-5} ]\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{5.pascalina.png}
+		\caption{Pascalina}
+		\label{fig:im-5}
+	\end{figure}
+	Macchina di Von Leibnitz (1672) – anche moltiplicazioni e divisioni
+	\paragraph{Analytical Engine}
+	Analytical Engine (Babbage – 1834) – programmi su schede perforate [ \cref{fig:f-5} ]\\
+	È una macchina completamente meccanica e i suoi programmi sono allocati su schede perforate.\\
+	Lo sviluppo di questa macchina non è mai stato terminato.\\
+	Una grandissima figura di questa generazione è Ada Lovelace Byron considerata la prima programmatrice.
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[b]{0.30\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{6.babbage.png}
+			\caption{Analytical engine - Babbage}
+			\label{fig:im-6}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.30\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{8.scheda_perf.png}
+			\caption{Scheda perforata}
+			\label{fig:im-8}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.30\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{9.babbage.png}
+			\caption{Charles Babbage}
+			\label{fig:im-9}
+		\end{subfigure}
+		\caption{Babbage e scheda perforata}
+		\label{fig:f-5}
+	\end{figure}
+	\subsubsection{Generazione 1 - Valvole}
+	Questa generazione comprende i calcolatori creati nel periodo fra il 1945 e il 1955.\\
+	La maggior parte dei calcolatori di questa generazione sono nati per necessità belliche, che hanno caratterizzato questo periodo.
+	L'utilizzo delle valvole termoioniche ha caratterizzato l'intera generazione. [ \cref{fig:im-7} ]\\
+	Una caratteristica di questa generazione è la loro grande dimensione e il loro grande consumo energetico, alcuni di questi calcolatori sono: ENIAC, EDVAC, UNIVAC e IAS
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.28]{7.valvola.png}
+		\caption{Valvola termoionica}
+		\label{fig:im-7}
+	\end{figure}
+	\paragraph{ENIAC}
+	L'ENIAC pesava 30 tonnellate, occupava 450 $m^2$, era composta da 18000 valvole termoioniche, 15000 relè e 20 accumulatori di 10 cifre decimali.\\
+	È considerato \href{https://en.wikipedia.org/wiki/Turing_completeness}{Turing complete}.
+	\paragraph{Architettura di Von Neumann}
+	L'architettura di Von Neumann è la prima architettura che mantiene i programmi in memoria, detta anche \textbf{Stored Program Computer}.\\
+	I suoi componenti principali sono:
+	\begin{itemize}
+		\item Memoria per dati ed istruzioni
+		\item Meccanismi di Input/Output per interfacciarsi al mondo esterno
+		\item CPU: unità di controllo + unità aritmetico-logica
+	\end{itemize}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.3]{10.neumann.png}
+		\caption{Schema architettura di Von Neumann}
+		\label{fig:im-10}
+	\end{figure}
+	Quando si eseguono operazioni su un programma, questo viene spostato dalla memoria secondaria alla centrale.
+	\paragraph{Architettura di Harvard}
+	Al contrario dell'architettura di Von Neumann, la memoria per i dati e la memoria per le istruzioni sono due memorie separate.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.3]{11.harvard.png}
+		\caption{Schema architettura di Harvard}
+		\label{fig:im-11}
+	\end{figure}
+	\paragraph{IAS Computer}
+	L'IAS machine fu il primo computer digitale costruito dall'Institute of Advanced Studies di Princeton (USA).\\
+	Si basa sull'architettura di Von Neumann.\\
+	La memoria di sistema era di 1024 parole, in numerazione binaria, ciascuna da 40 bit.\\
+	Gli interi erano rappresentati con una parola da 40 bit mentre le istruzioni, da 20 bit, erano rappresentate a coppie in una singola parola di 40 bit. [ \cref{fig:im-12} ]
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{12.ias_mem_form.png}
+		\caption{Formato di memoria di IAS}
+		\label{fig:im-12}
+	\end{figure}
+	Gli unici punti di accesso alla memoria sono MBR (Memory Buffer Registry) e MAR (Memory Address Register).\\
+	I componenti principali della struttura dello IAS sono:
+	\begin{itemize}
+		\item MBR (Memory Buffer Registry) che contiene una parola che deve essere immagazzinata in memoria o spedita all'unità I/O
+		\item MAR (Memory Address Register) specifica l'indirizzo di memoria della parola che deve essere scritta o letta dall'MBR
+		\item AC: Accumulator Register
+		\item MQ: Multiplier-Quotient (Moltiplicazioni e divisioni)
+		\item IBR: Instruction Buffer Register
+		\item PC: Program Counter (Contiene l’indirizzo di memoria della prossima istruzione)
+		\item IR: Instruction Register (Dove si trova il valore della prossima istruzione)
+	\end{itemize}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{13.ias_struct.png}
+		\caption{Struttura IAS}
+		\label{fig:im-13}
+	\end{figure}
+	I registri dello IAS sono:
+	\begin{itemize}
+		\item Memory Buffer Register (40 bit)
+		\item Memory Address Register
+		\item Instruction Register (8 bit)
+		\item Instruction Buffer Register (40 bit)
+		\item Program Counter
+		\item Accumulator
+		\item Multiplier/Quotient
+	\end{itemize}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{14.ias_func.png}
+		\caption{Schema funzionamento IAS}
+		\label{fig:im-14}
+	\end{figure}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.6]{15.ias_ins_sect.png}
+		\caption{IAS Instruction Set}
+		\label{fig:im-15}
+	\end{figure}
+	\subsubsection{Generazione 2 - Transistor}
+	Questa generazione comprende i calcolatori creati nel periodo fra il 1955 e il 1965.\\
+	La grande caratteristica di questa generazione è l'invenzione dei transistor che hanno permesso la realizzazione di calcolatori sempre più piccoli ed efficienti.\\
+	Fra le scoperte ed invenzioni di questa generazione ci sono i BUS e i linguaggi di programmazione ad alto livello.\\
+	Fra i calcolatori di questa generazione troviamo: PDP, Cray, IBM, ecc…
+	\paragraph{Transistor}
+	I primi transistor risalgono agli anni 50'.\\
+	I transistor sono componenti a stato solido, sono di piccole dimensioni inoltre hanno un minore consumo energetico e un minore surriscaldamento  rispetto alle valvole.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.6]{16.transistor.png}
+		\caption{Transistor}
+		\label{fig:im-16}
+	\end{figure}
+	\paragraph{IBM 709x}
+	IBM 709x può gestire variabili fixed point, floating point e double precision.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{17.ibm709x.png}
+		\caption{Struttura IBM 709x}
+		\label{fig:im-17}
+	\end{figure}
+	\subsubsection{Generazione 3 - Circuiti Integrati}
+	Questa generazione comprende i calcolatori creati nel periodo fra il 1965 e il 1980.\\
+	Questa generazione nasce dalla necessità di avere delle capacità computazionali sempre maggiori.\\
+	Grazie a IBM s/360 nasce il concetto di architettura.\\
+	In questa generazione nasce anche il concetto di multiprogrammazione.\\
+	Lo spazio degli indirizzi aumenta a 24 bit.
+	\paragraph{Circuiti integrati (SSI, MSI, LSI)}
+	I circuiti integrati sono caratterizzati da un omnibus che collega tutti i bus.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.4]{18.int_circ.png}
+		\caption{Schema funzionamento omnibus}
+		\label{fig:im-18}
+	\end{figure}
+	\paragraph{PDP-8}
+	Uno dei primi minicomputer, nato negli anni 60'.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.4]{19.pdp.png}
+		\caption{Minicomputer}
+		\label{fig:im-19}
+	\end{figure}
+	\subsubsection{Generazione 4 - Integrazione a grandissima scala}
+	Questa generazione comprende i calcolatori creati nel periodo che va dal 1980 a oggi.\\
+	Durante questa generazione di è vista un'espansione esponenziale di tutti i componenti.\\
+	Nascono i microprocessori.\\
+	Si iniziano ad adottare sempre di più le GUI al posto delle CLI.
+	\paragraph{VLSI}
+	Realizzazione di una singola CPU con sola piastrina di silicio, questo porta alla nascita dei primi personal computer. [ \cref{fig:im-20} ]
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.4]{20.vlsi.png}
+		\caption{Minicomputer}
+		\label{fig:im-20}
+	\end{figure}
+	\subsubsection{Generazione 5 - Computer avanzati}
+	Questa generazione è ancora in sviluppo, quindi ancora non sappiamo precisamente quando entreranno in commercio.\\
+	In questo momento sono sotto sperimentazione e alcuni di questi calcolatori sono o computer quantistici, gli MPP (Massively Parallel Processing), i computer biologici, ecc...
+	\subsection{Legge di Moore}
+	La legge di Moore è stata formulata da Gordon Moore (co-fondatore di Intel) nel 1965, essa dice che: le prestazioni dei processori e il numero di transistor ad esso relativo raddoppiano ogni 18 mesi. [ \cref{fig:im-21} ]
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.5]{21.moore.png}
+		\caption{La legge di Moore è ancora valida}
+		\label{fig:im-21}
+	\end{figure}
+	\subsubsection{Conseguenze della legge di Moore}
+	\begin{itemize}
+		\item Il costo della logica computazionale e della memoria dei circuiti si è abbassato ad un tasso drammatico
+		\item La lunghezza del percorso elettrico si accorcia, aumentando la velocità operativa
+		\item I computer diventano più piccoli e più versatili
+		\item Riduzione del consumo di potenza e richiesta di raffreddamento
+		\item Meno connessioni inter-chip
+	\end{itemize}
+	\subsubsection{Limiti legge di Moore}
+	Fra i problemi che "minacciano" di più la legge di Moore ci sono i problemi economici, il limite fisico dell'evoluzione dei calcolatori e gli effetti parassiti.\\
+	Alcune possibili soluzioni sono la riduzione della frequenza e il parallelismo.
+	\subsection{Seconda Legge di Moore}
+	\subsection{Legge di Amdahl}
+	\subsection{Parallelismo}
+	\subsubsection{Supercalcolatori CM2}
+	\subsubsection{MMX poi SSE (SIMD)}
+	\subsubsection{Cluster}
+	\subsubsection{Multicore}
+\end{document}

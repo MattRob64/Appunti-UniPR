@@ -100,4 +100,23 @@
 \contentsline {subsubsection}{\numberline {9.5.4}Selezione con condizione valutata su tuple diverse della stessa relazione}{29}{subsubsection.9.5.4}%
 \contentsline {subsubsection}{\numberline {9.5.5}Viste come strumenti di programmazione}{30}{subsubsection.9.5.5}%
 \contentsline {subsubsection}{\numberline {9.5.6}Viste ed Aggiornamenti}{30}{subsubsection.9.5.6}%
-\contentsline {section}{\numberline {10}Esercizi}{30}{section.10}%
+\contentsline {section}{\numberline {10}Progettazione}{30}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Ciclo di vita di un sistema informativo}{30}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Meotodologia di progettazione}{31}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Fasi di progettazione}{31}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Raccolta e definizione delle specifiche}{31}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Progettazione concettuale}{31}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}Progettazione logica}{31}{subsubsection.10.3.3}%
+\contentsline {subsubsection}{\numberline {10.3.4}Progettazione fisica}{31}{subsubsection.10.3.4}%
+\contentsline {subsection}{\numberline {10.4}Modello dei dati}{31}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Due tipi principali di modelli}{32}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}Modelli concettuali}{32}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}Modello Entità-Relazione (E-R)}{32}{subsubsection.10.5.2}%
+\contentsline {paragraph}{\numberline {10.5.2.1}Entità}{32}{paragraph.10.5.2.1}%
+\contentsline {paragraph}{\numberline {10.5.2.2}Relazioni (Associazioni)}{33}{paragraph.10.5.2.2}%
+\contentsline {paragraph}{\numberline {10.5.2.3}Attributi}{33}{paragraph.10.5.2.3}%
+\contentsline {paragraph}{\numberline {10.5.2.4}Cardinalità delle relazioni}{33}{paragraph.10.5.2.4}%
+\contentsline {paragraph}{\numberline {10.5.2.5}Relazioni Molti-a-Molti}{34}{paragraph.10.5.2.5}%
+\contentsline {paragraph}{\numberline {10.5.2.6}Relazioni Uno-a-Molti}{35}{paragraph.10.5.2.6}%
+\contentsline {paragraph}{\numberline {10.5.2.7}Relazioni Uno-a-Uno}{35}{paragraph.10.5.2.7}%
+\contentsline {section}{\numberline {11}Esercizi}{35}{section.11}%

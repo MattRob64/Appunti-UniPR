@@ -1,0 +1,281 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+	\subsection{Ciclo di vita di un sistema informativo}
+	\begin{itemize}
+		\item \textbf{Studio di fattibilità}: Definisce le varie alternative possibili, i relativi costi e le priorità di realizzazione
+		\item \textbf{Raccolta e analisi dei requisiti}: Individua proprietà e funzionalità del sistema tramite l’interazione con gli utenti e la definizione informale dei dati e delle operazioni
+		\item \textbf{Progettazione}: Divisa in progettazione dei dati e progettazione delle applicazioni \\
+		Individua la struttura e organizzazione dei dati e le caratteristiche degli applicativi che vi dovranno accedere
+		\item \textbf{Implementazione}: Realizza la base di dati e il codice dei programmi conformemente alle specifiche
+		\item \textbf{Validazione e collaudo}: Verifica il corretto funzionamento del sistema informativo
+		\item \textbf{Funzionamento}: Il sistema informativo diviene operativo
+	\end{itemize}
+	\subsection{Meotodologia di progettazione}
+	Una metodologia di progettazione di una base di dati consiste in:
+	\begin{itemize}
+		\item \textbf{Decomposizione} del progetto in più passi
+		\item \textbf{Strategie} realizzative e \textbf{criteri di scelta} di alternative
+		\item \textbf{Modelli di riferimento} per descrivere dati di ingresso e uscita delle varie fasi
+	\end{itemize}
+	Una metodologia di progettazione può essere valutata in base alle proprietà:
+	\begin{itemize}
+		\item \textbf{Generalità}: deve garantire la possibilità di utilizzare la metodologia indipendentemente dal problema affrontato
+		\item \textbf{Qualità del prodotto} (correttezza, completezza, efficienza)
+		\item \textbf{Facilità d’uso} di strategie e modelli di riferimento
+	\end{itemize}
+	\subsection{Fasi di progettazione}
+	\subsubsection{Raccolta e definizione delle specifiche}
+	Raccoglie informazioni, secondo procedure diverse, informali e dipendenti dal contesto che si vuole rappresentare, utili a rispondere alle domande:
+	\begin{itemize}
+		\item Quali concetti o quali dati, da riunire poi nella descrizione dei diversi concetti, si devono rappresentare?
+		\item Quali relazioni logiche li collegano?
+		\item In quali situazioni e quanto spesso si usano?
+	\end{itemize}
+	\subsubsection{Progettazione concettuale}
+	Rappresenta le specifiche informali in modo formale e completo, ma è indipendente dalla rappresentazione usata nei DBMS.\\
+	Produce lo schema concettuale e fa riferimento ad un modello concettuale dei dati. \\
+	Rappresenta il contenuto informativo e non la codifica dell’informazione
+	\subsubsection{Progettazione logica}
+	Traduce lo schema concettuale nello schema logico, basato su un modello logico (es. modello relazionale) indipendente dalla realizzazione fisica della base di dati
+	\subsubsection{Progettazione fisica}
+	Completa lo schema logico con la specifica dei parametri fisici di memorizzazione dei dati. \\
+	Produce uno schema fisico e fa riferimento ad un modello fisico dei dati dipendente dal DBMS.
+	\subsection{Modello dei dati}
+	\begin{itemize}
+		\item Insieme di costrutti utilizzati per organizzare i dati di interesse e descriverne la dinamica
+		\item Componente fondamentale: meccanismi di strutturazione (o costruttori di tipo)
+		\item Come nei linguaggi di programmazione esistono meccanismi che permettono di definire tipi di dati, così ogni modello dei dati prevede alcuni costruttori
+		\item Il modello relazionale prevede il costruttore relazione, che permette di definire insiemi di record omogenei
+	\end{itemize}
+	\subsection{Due tipi principali di modelli}
+	\begin{itemize}
+		\item \textbf{Modelli concettuali}: permettono di rappresentare i dati in modo indipendente da ogni sistema e dal modello logico su cui è basato
+		\begin{itemize}
+			\item Cercano di descrivere i concetti del mondo reale
+			\item Sono utilizzati nelle fasi preliminari di progettazione
+		\end{itemize}
+		Il più noto è il modello \textbf{Entità-Relazione}
+		\item \textbf{Modelli logici}: utilizzati nei DBMS esistenti per l’organizzazione dei dati
+		\begin{itemize}
+			\item Utilizzati dai programmi
+			\item Indipendenti dalle strutture fisiche
+		\end{itemize}
+		Esempi: relazionale, reticolare, gerarchico, a oggetti
+	\end{itemize}
+	\subsubsection{Modelli concettuali}
+	\begin{itemize}
+		\item Servono per ragionare sulla realtà di interesse, indipendentemente dagli aspetti realizzativi
+		\item Permettono di rappresentare le classi di dati di interesse e le loro correlazioni
+		\item Prevedono efficaci rappresentazioni grafiche (utili anche per documentazione e comunicazione)
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{9.png}
+		\caption{Progettazione concettuale, logica e fisica}
+		\label{fig:im-9}
+	\end{figure}
+	\subsubsection{Modello Entità-Relazione (E-R)}
+	Modello concettuale di dati. \\
+	Fornisce una serie di strutture (costrutti) per descrivere un problema in modo chiaro e semplice. \\
+	I costrutti vengono utilizzati per definire schemi che descrivono struttura (come sono organizzati) e occorrenze (quanto frequentemente vengono utilizzati) dei dati.
+	\paragraph{Entità}
+	Rappresentano classi di oggetti (cose, fatti ecc.) con proprietà comuni ed esistenza propria, indipendente dall’applicazione.\\\\
+	Es. Città, Dipartimento, Impiegato\\\\
+	Una occorrenza di una entità è un oggetto della classe corrispondente.\\\\
+	NB Un’occorrenza di una entità è l’oggetto in sé, non un insieme di valori che lo rappresentano. \\
+	È un concetto. \\
+	Quindi nel modello E-R un’entità può esistere indipendentemente dalle sue proprietà, al contrario di quanto accade nel modello relazionale. \\
+	Il modello opera a livello di concetti, non di valori.\\\\
+	Ogni entità ha un nome che la identifica univocamente nello schema:
+	\begin{itemize}
+		\item I nomi devono essere per quanto possibile espressivi
+		\item Convenzioni
+		\begin{itemize}
+			\item Si usa il singolare
+		\end{itemize}
+	\end{itemize}
+	Si rappresenta di solito con un \textbf{rettangolo}:
+	\begin{center}
+		\framebox[3cm]{\raisebox{0pt}[0.5cm][0.3cm]{Studente}}
+	\end{center}
+	\paragraph{Relazioni (Associazioni)}
+	Rappresentano relazioni logiche tra due o più entità.\\\\
+	Residenza è una relazione fra Impiegato e Città Marini-Firenze è un’occorrenza della relazione.\\
+	Fornitura è una relazione fra Prodotto, Fornitore e Dipartimento\\\\
+	L’insieme delle occorrenze di una relazione è una relazione matematica e non ammette duplicati.\\\\
+	Esistono anche relazioni \textbf{ricorsive}.\\\\
+	Collega mette in relazione due occorrenze della stessa entità Impiegato\\\\
+	Ogni relazione ha un nome che la identifica univocamente nello schema:
+	\begin{itemize}
+		\item I nomi devono essere per quanto possibile espressivi
+		\item Convenzioni
+		\begin{itemize}
+			\item Si usa il singolare
+			\item Si usano sostantivi anziché verbi (se possibile)
+		\end{itemize}
+	\end{itemize}
+	Le relazioni si rappresentano di solito con un rombo:
+	\begin{center}
+		\begin{tikzpicture}[
+			entity/.style={rectangle, draw, minimum width=2.2cm, minimum height=1.1cm, align=center, font=\bfseries\large},
+			relationship/.style={diamond, draw, minimum width=1.8cm, minimum height=1.1cm, align=center, font=\bfseries\large, aspect=2}
+			]
+			% Nodes
+			\node[entity] (studente) {Studente};
+			\node[relationship, right=1.5cm of studente] (esame) {Esame};
+			\node[entity, right=1.5cm of esame] (insegnamento) {Insegnamento};
+			% Connectors
+			\draw (studente) -- (esame);
+			\draw (esame) -- (insegnamento);
+		\end{tikzpicture}
+	\end{center}
+	\paragraph{Attributi}
+	Descrivono le proprietà elementari di entità o relazioni.\\
+	Associano un valore (appartenente ad uno specifico dominio) ad ogni elemento di un’occorrenza di entità o relazione.\\
+	A volte non si riportano nello schema grafico, ma solo nella documentazione.\\\\
+	Se più attributi sono logicamente correlati fra loro possono essere riuniti in un \textbf{attributo composto}.\\\\
+	Es. Indirizzo può essere composto da Via, N.Civico e CAP.
+	\paragraph{Cardinalità delle relazioni}
+	Viene associata ad ogni entità coinvolta in una relazione.\\
+	Indica il numero minimo e massimo di occorrenze di tale entità nella relazione, cioè quante volte una istanza di un’entità può essere coinvolta nella relazione.\\\\
+	Es. Il proprietario di un’auto può essere coinvolto più volte nella relazione Intestazione definita fra Proprietario e Auto se possiede più auto, quindi viene associato ad ogni auto posseduta ma un’auto può comparire una sola volta in quanto è associabile a un solo proprietario.\\\\
+	In genere si usano solo i simboli 0,1,N per quantificare le occorrenze. \\
+	N indica genericamente ‘più di una occorrenza’\\\\
+	Se la cardinalità minima è 0, la partecipazione dell’entità alla relazione è detta opzionale; se è 1 è detta \textbf{obbligatoria}.\\\\
+	La \textbf{cardinalità massima} può essere 1 o N (molti).\\\\
+	La cardinalità massima delle entità coinvolte in una relazione è utilizzata per classificarle:
+	\begin{itemize}
+		\item Se la cardinalità max è 1 per entrambe le entità coinvolte la relazione è detta di tipo \textbf{uno a uno}
+		\item Se la cardinalità max è 1 per un’entità ed N per l’altra le relazioni è detta di tipo \textbf{uno a molti}
+		\item Se è N per entrambe è detta di tipo \textbf{molti a molti}
+	\end{itemize}
+	Descrive il numero minimo e massimo di valori dell’attributo associati ad ogni occorrenza di entità o relazione. \\
+	Di solito la cardinalità è (1,1) e viene omessa.\\\\
+	A volte il valore può essere nullo o più valori possono essere associati ad una stessa occorrenza di una entità.\\
+	Come per le entità coinvolte in una associazione, si usano i termini \textbf{opzionale} o \textbf{obbligatorio} per indicare quegli attributi che hanno cardinalità minima, rispettivamente, pari a 0 o 1.\\\\
+	Un attributo con cardinalità $max = N$ si dice \textbf{multivalore}.\\\\
+	Es. una persona può avere più n. di telefono. \\
+	Gli attributi multivalore possono essere sostituiti con relazioni.
+	\paragraph{Relazioni Molti-a-Molti}
+	\begin{center}
+		\begin{tikzpicture}[
+			entity/.style={
+				rectangle, draw, fill=gray!20, minimum width=2.6cm, minimum height=1.1cm,
+				font=\bfseries, align=center
+			},
+			relationship/.style={
+				diamond, draw, fill=gray!20, aspect=2, minimum width=2.2cm, minimum height=1.1cm,
+				font=\bfseries, align=center
+			},
+			cardinality/.style={font=\bfseries, fill=white, inner sep=1pt}
+			]
+			
+			% First row
+			\node[entity] (studente) {Studente};
+			\node[relationship, right=2.2cm of studente] (esame) {Esame};
+			\node[entity, right=2.2cm of esame] (corso) {Corso};
+			
+			% Second row
+			\node[entity, below=1.6cm of studente] (montagna) {Montagna};
+			\node[relationship, right=2.2cm of montagna] (scalata) {Scalata};
+			\node[entity, right=2.2cm of scalata] (alpinista) {Alpinista};
+			
+			% Third row
+			\node[entity, below=1.6cm of montagna] (macchinista) {Macchinista};
+			\node[relationship, right=2.2cm of macchinista] (abilitazione) {Abilitazione};
+			\node[entity, right=2.2cm of abilitazione] (locomotore) {Locomotore};
+			
+			% Edges with cardinality labels
+			\draw (studente) -- node[cardinality, above] {(0,N)} (esame);
+			\draw (esame) -- node[cardinality, above] {(0,N)} (corso);
+			
+			\draw (montagna) -- node[cardinality, above] {(0,N)} (scalata);
+			\draw (scalata) -- node[cardinality, above] {(1,N)} (alpinista);
+			
+			\draw (macchinista) -- node[cardinality, above] {(1,N)} (abilitazione);
+			\draw (abilitazione) -- node[cardinality, above] {(1,N)} (locomotore);
+			
+		\end{tikzpicture}
+	\end{center}
+	\paragraph{Relazioni Uno-a-Molti}
+	\begin{center}
+		\begin{tikzpicture}[
+			entity/.style={
+				rectangle, draw, fill=gray!20, minimum width=3.3cm, minimum height=1.2cm,
+				font=\bfseries, align=center
+			},
+			relationship/.style={
+				diamond, draw, fill=gray!20, aspect=2, minimum width=2.7cm, minimum height=1.2cm,
+				font=\bfseries, align=center
+			},
+			cardinality/.style={font=\bfseries, inner sep=1pt, fill=white, text=black}
+			]
+			
+			% First row
+			\node[entity] (persona) {Persona};
+			\node[relationship, right=2.6cm of persona] (impiego) {Impiego};
+			\node[entity, right=2.6cm of impiego] (azienda) {Azienda};
+			
+			\draw (persona) -- node[cardinality, above=2pt] {(0,1)} (impiego);
+			\draw (impiego) -- node[cardinality, above=2pt] {(0,N)} (azienda);
+			
+			% Second row
+			\node[entity, below=1.7cm of persona] (cinema) {Cinema};
+			\node[relationship, right=2.6cm of cinema] (ubicazione1) {Ubicazione};
+			\node[entity, right=2.6cm of ubicazione1] (localita) {Località};
+			
+			\draw (cinema) -- node[cardinality, above=2pt] {(1,1)} (ubicazione1);
+			\draw (ubicazione1) -- node[cardinality, above=2pt] {(0,N)} (localita);
+			
+			% Third row
+			\node[entity, below=1.7cm of cinema] (comune) {Comune};
+			\node[relationship, right=2.6cm of comune] (ubicazione2) {Ubicazione};
+			\node[entity, right=2.6cm of ubicazione2] (provincia) {Provincia};
+			
+			\draw (comune) -- node[cardinality, above=2pt] {(1,1)} (ubicazione2);
+			\draw (ubicazione2) -- node[cardinality, above=2pt] {(1,N)} (provincia);
+			
+		\end{tikzpicture}
+	\end{center}
+	\paragraph{Relazioni Uno-a-Uno}
+	\begin{center}
+		\begin{tikzpicture}[
+			entity/.style={
+				rectangle, draw, fill=gray!20, minimum width=3.6cm, minimum height=1.3cm,
+				font=\bfseries\large, align=center
+			},
+			relationship/.style={
+				diamond, draw, fill=gray!20, aspect=2, minimum width=2.6cm, minimum height=1.3cm,
+				font=\bfseries\large, align=center
+			},
+			cardinality/.style={font=\bfseries\large, inner sep=1pt, fill=white, text=black}
+			]
+			
+			% First row
+			\node[entity] (prof1) {Professore};
+			\node[relationship, right=2.5cm of prof1] (tit1) {Titolarità};
+			\node[entity, right=2.5cm of tit1] (catt1) {Cattedra};
+			
+			\draw (prof1) -- node[cardinality, above=2pt] {(0,1)} (tit1);
+			\draw (tit1) -- node[cardinality, above=2pt] {(0,1)} (catt1);
+			
+			% Second row
+			\node[entity, below=1.7cm of prof1] (prof2) {Professore\\di ruolo};
+			\node[relationship, right=2.5cm of prof2] (tit2) {Titolarità};
+			\node[entity, right=2.5cm of tit2] (catt2) {Cattedra};
+			
+			\draw (prof2) -- node[cardinality, above=2pt] {(1,1)} (tit2);
+			\draw (tit2) -- node[cardinality, above=2pt] {(0,1)} (catt2);
+			
+			% Third row
+			\node[entity, below=1.7cm of prof2] (prof3) {Professore\\di ruolo};
+			\node[relationship, right=2.5cm of prof3] (tit3) {Titolarità};
+			\node[entity, right=2.5cm of tit3] (catt3) {Cattedra\\coperta};
+			
+			\draw (prof3) -- node[cardinality, above=2pt] {(1,1)} (tit3);
+			\draw (tit3) -- node[cardinality, above=2pt] {(1,1)} (catt3);
+			
+		\end{tikzpicture}
+	\end{center}
+\end{document}
