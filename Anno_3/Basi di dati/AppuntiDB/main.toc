@@ -119,4 +119,11 @@
 \contentsline {paragraph}{\numberline {10.5.2.5}Relazioni Molti-a-Molti}{34}{paragraph.10.5.2.5}%
 \contentsline {paragraph}{\numberline {10.5.2.6}Relazioni Uno-a-Molti}{35}{paragraph.10.5.2.6}%
 \contentsline {paragraph}{\numberline {10.5.2.7}Relazioni Uno-a-Uno}{35}{paragraph.10.5.2.7}%
-\contentsline {section}{\numberline {11}Esercizi}{35}{section.11}%
+\contentsline {subsection}{\numberline {10.6}Identificatori delle entità}{35}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Generalizzazioni}{37}{subsection.10.7}%
+\contentsline {subsubsection}{\numberline {10.7.1}Proprietà (v. anche programmazione a oggetti…)}{37}{subsubsection.10.7.1}%
+\contentsline {subsubsection}{\numberline {10.7.2}Rappresentazione grafica}{37}{subsubsection.10.7.2}%
+\contentsline {subsubsection}{\numberline {10.7.3}Esempio}{38}{subsubsection.10.7.3}%
+\contentsline {subsection}{\numberline {10.8}Modello E-R: applicazioni diverse}{38}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}Documentazione di schemi E-R}{38}{subsection.10.9}%
+\contentsline {section}{\numberline {11}Esercizi}{39}{section.11}%

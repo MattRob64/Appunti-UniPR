@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  15 MAY 2025 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  20 MAY 2025 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -826,6 +826,18 @@ File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen307
+\pgfarrowlength=\dimen308
+\pgfarrowwidth=\dimen309
+\pgfarrowlinewidth=\dimen310
+)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 
@@ -856,13 +868,13 @@ LaTeX Font Info:    ... okay on input line 79.
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count357
-\scratchdimen=\dimen307
+\scratchdimen=\dimen311
 \scratchbox=\box76
 \nofMPsegments=\count358
 \nofMParguments=\count359
 \everyMPshowfont=\toks45
 \MPscratchCnt=\count360
-\MPscratchDim=\dimen308
+\MPscratchDim=\dimen312
 \MPnumerator=\count361
 \makeMPintoPDFobject=\count362
 \everyMPtoPDFconversion=\toks46
@@ -920,7 +932,7 @@ Package hyperref Info: Link coloring OFF on input line 79.
 \openout4 = `main.out'.
 
 \c@lstlisting=\count363
-<./img/0.cover.png, id=497, 1807.75375pt x 1016.79875pt>
+<./img/0.cover.png, id=517, 1807.75375pt x 1016.79875pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
 Package pdftex.def Info: ./img/0.cover.png  used on input line 100.
@@ -953,7 +965,7 @@ l.37 ...izione relazione}{12}{subsubsection.7.6.2}
 \openout5 = `main.toc'.
 
  [3]
-<./img/1.png, id=647, 996.72375pt x 497.86pt>
+<./img/1.png, id=672, 996.72375pt x 497.86pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 133.
@@ -961,7 +973,7 @@ Package pdftex.def Info: ./img/1.png  used on input line 133.
 
 (./sections/dbms.tex [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-s
 uper/cm-super-ts1.enc} <./img/1.png>]) (./sections/mod_dati.tex
-<./img/2.png, id=656, 984.17688pt x 226.34563pt>
+<./img/2.png, id=682, 984.17688pt x 226.34563pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 20.
@@ -991,7 +1003,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 62--89
  []
 
 [6 <./img/2.png>]
-<./img/3.png, id=669, 1003.75pt x 553.06625pt>
+<./img/3.png, id=694, 1003.75pt x 553.06625pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 123.
@@ -1067,7 +1079,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<./img/4.png, id=682, 777.90625pt x 517.935pt>
+<./img/4.png, id=707, 777.90625pt x 517.935pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 123.
@@ -1113,7 +1125,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--78
 
  []
 
-<./img/5.png, id=759, 988.69376pt x 527.9725pt>
+<./img/5.png, id=784, 988.69376pt x 527.9725pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 119.
@@ -1122,13 +1134,13 @@ Package pdftex.def Info: ./img/5.png  used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12]
-<./img/6.png, id=766, 973.6375pt x 191.71625pt>
+<./img/6.png, id=791, 973.6375pt x 191.71625pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 142.
 (pdftex.def)             Requested size: 292.0935pt x 57.5153pt.
  [13 <./img/5.png> <./img/6.png>]
-<./img/7.png, id=775, 978.65625pt x 669.50125pt>
+<./img/7.png, id=800, 978.65625pt x 669.50125pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
 Package pdftex.def Info: ./img/7.png  used on input line 195.
@@ -1204,7 +1216,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--147
  []
 
 [18]
-<./img/8.png, id=811, 919.435pt x 631.35875pt>
+<./img/8.png, id=836, 919.435pt x 631.35875pt>
 File: ./img/8.png Graphic file (type png)
 <use ./img/8.png>
 Package pdftex.def Info: ./img/8.png  used on input line 195.
@@ -1357,7 +1369,7 @@ m/n/10 ) \OML/cmm/m/it/10 JOIN REN[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 SEL[]\OT1
  []
 
 ) (./sections/prog.tex [30] [31]
-<./img/9.png, id=877, 669.50125pt x 435.6275pt>
+<./img/9.png, id=902, 669.50125pt x 435.6275pt>
 File: ./img/9.png Graphic file (type png)
 <use ./img/9.png>
 Package pdftex.def Info: ./img/9.png  used on input line 74.
@@ -1457,19 +1469,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--160
 
  []
 
-[34]) [35] (./main.aux)
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
+
+ []
+
+
+Overfull \hbox (17.75003pt too wide) in paragraph at lines 320--321
+ [] 
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Overfull \hbox (10.30057pt too wide) in paragraph at lines 385--386
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 407--410
+
+ []
+
+<./img/10.png, id=928, 655.44875pt x 295.1025pt>
+File: ./img/10.png Graphic file (type png)
+<use ./img/10.png>
+Package pdftex.def Info: ./img/10.png  used on input line 413.
+(pdftex.def)             Requested size: 262.17485pt x 118.0389pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--430
+
+ []
+
+[37 <./img/10.png>]
+<./img/11.png, id=936, 657.45625pt x 423.5825pt>
+File: ./img/11.png Graphic file (type png)
+<use ./img/11.png>
+Package pdftex.def Info: ./img/11.png  used on input line 442.
+(pdftex.def)             Requested size: 262.97784pt x 169.43pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--461
+
+ []
+
+) [38 <./img/11.png>] [39] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AB18DD3AC53F7A903DB377DE51C38101;19592.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 315B16B3A7F9E68761F6EE1824AB4EF7;20566
+(rerunfilecheck)             After:  D2F253CEFB8C3BB63A5DC722B903F26D;21011.
  ) 
 Here is how much of TeX's memory you used:
- 31363 strings out of 474116
- 575986 string characters out of 5743683
+ 31932 strings out of 474116
+ 589369 string characters out of 5743683
  2196187 words of memory out of 5000000
- 52981 multiletter control sequences out of 15000+600000
+ 53528 multiletter control sequences out of 15000+600000
  564822 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,117p,510b,3395s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1478,20 +1593,22 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
 sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (36 pages, 1413533 bytes).
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on main.pdf (40 pages, 1506903 bytes).
 PDF statistics:
- 1016 PDF objects out of 1200 (max. 8388607)
- 918 compressed objects within 10 object streams
- 245 named destinations out of 1000 (max. 500000)
- 1039 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1081 PDF objects out of 1200 (max. 8388607)
+ 971 compressed objects within 10 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 1089 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -278,4 +278,188 @@
 			
 		\end{tikzpicture}
 	\end{center}
+	\subsection{Identificatori delle entità}
+	Si specificano per descrivere i concetti che permettono di identificare univocamente un’entità.\\\\
+	Se un certo numero di attributi propri dell’entità sono sufficienti ad identificarla univocamente si parla di \textbf{identificatore interno} o \textbf{chiave}.\\\\
+	Se sono richiesti attributi di altre entità per identificare univocamente un’entità si parla di \textbf{identificatore esterno}.\\\\
+	Es. Studente non è identificato univocamente da Matricola se nella base di dati si considerano più Università. \\
+	In quel caso il nome dell’Università è un identificatore esterno per Studente.
+	\begin{center}
+		\begin{tikzpicture}[node distance=3cm, every edge/.style={draw,thick}]
+			
+			% Entities
+			\node[draw, rectangle, minimum width=3cm, minimum height=2cm] (studenti) {%
+				\begin{tabular}{c}
+					\textbf{Studenti} \\
+					\\
+					\textbf{Matricola} \quad Cognome \quad Nome \\
+					Data di Nascita
+				\end{tabular}
+			};
+			\node[draw, rectangle, minimum width=3cm, minimum height=2cm, right=7cm of studenti] (corsi) {%
+				\begin{tabular}{c}
+					\textbf{Corsi} \\
+					\\
+					\textbf{Codice} \quad Titolo \quad Docente
+				\end{tabular}
+			};
+			
+			% Relationship (placed halfway between studenti and corsi, and slightly above)
+			\node[draw, diamond, aspect=2, minimum width=2.5cm, minimum height=1.2cm, inner sep=1pt] (esami) at ($(studenti)!0.5!(corsi)+(0,2.2)$) {\textbf{Esami}};
+			
+			% Voto attribute
+			\node[below=1.2cm of esami] (voto) {Voto};
+			
+			% Connect entities to relationship
+			\draw (studenti) -- node[above left=0.3cm and -0.7cm] {\scriptsize (0,N)} (esami);
+			\draw (corsi) -- node[above right=0.3cm and -0.7cm] {\scriptsize (0,N)} (esami);
+			
+			% Connect attribute to relationship
+			\draw (esami) -- (voto);
+			
+		\end{tikzpicture}
+	\end{center}
+	Lo schema rappresenta una sola università.\\\\
+	Pertanto i singoli attributi Codice e Matricola sono sufficienti ad identificare univocamente ogni istanza, rispettivamente, di Corsi e di Studenti.
+	\begin{center}
+		\begin{tikzpicture}[
+			entity/.style={draw, rectangle, minimum width=3.5cm, minimum height=1.5cm, thick, font=\bfseries\large, align=center},
+			rel/.style={draw, diamond, aspect=2, minimum width=2.6cm, minimum height=1.2cm, thick, font=\bfseries\large, inner sep=1pt, align=center},
+			attr/.style={font=\normalsize, anchor=north},
+			key/.style={font=\bfseries\underline},
+			card/.style={font=\large},
+			every node/.style={font=\sffamily}
+			]
+			
+			% Entities
+			\node[entity] (studenti) {Studenti};
+			\node[entity, right=8.2cm of studenti] (corsi) {Corsi};
+			\node[entity, below=5.2cm of $(studenti)!0.5!(corsi)$] (uni) {Università};
+			
+			% Relationships
+			\node[rel] (esami) at ($(studenti)!0.5!(corsi)+(0,2.2)$) {Esami};
+			\node[rel] (iscr) at ($(studenti)!0.5!(uni)+(-2.5,0)$) {Iscrizione};
+			\node[rel] (offerta) at ($(corsi)!0.5!(uni)+(2.5,0)$) {Offerta};
+			
+			% Attributes for Studenti
+			\node[attr, above=1.1cm of studenti.north] (datanasc) {Data di Nascita};
+			\node[attr, below left=0.8cm and 1.1cm of studenti.south] (matricola) {\textbf{\underline{Matricola}}};
+			\node[attr, below=0.8cm of studenti.south] (cognome) {Cognome};
+			\node[attr, below right=0.8cm and 1.1cm of studenti.south] (nome) {Nome};
+			
+			% Attributes for Corsi
+			\node[attr, below left=0.8cm and 1.1cm of corsi.south] (codice) {\textbf{\underline{Codice}}};
+			\node[attr, below=0.8cm of corsi.south] (titolo) {Titolo};
+			\node[attr, below right=0.8cm and 1.1cm of corsi.south] (docente) {Docente};
+			
+			% Attribute for Università
+			\node[attr, below=0.8cm of uni.south] (nomeuni) {\textbf{\underline{Nome}}};
+			
+			% Attribute for Esami
+			\node[attr, below=0.8cm of esami.south] (voto) {Voto};
+			
+			% Connections: attributes
+			\draw (studenti.north) -- (datanasc.south);
+			\draw (studenti.south) -- (matricola.north);
+			\draw (studenti.south) -- (cognome.north);
+			\draw (studenti.south) -- (nome.north);
+			
+			\draw (corsi.south) -- (codice.north);
+			\draw (corsi.south) -- (titolo.north);
+			\draw (corsi.south) -- (docente.north);
+			
+			\draw (uni.south) -- (nomeuni.north);
+			
+			\draw (esami.south) -- (voto.north);
+			
+			% Connections: relationships
+			\draw (studenti.east) -- node[card, above left=0.1cm and -0.7cm] {(0,N)} (esami.west);
+			\draw (corsi.west) -- node[card, above right=0.1cm and -0.7cm] {(0,N)} (esami.east);
+			
+			\draw (studenti.south west) to[out=250,in=110] node[card, left=0.2cm] {(1,1)} (iscr.north);
+			\draw (iscr.south) to[out=-70,in=210] node[card, below left=0.1cm and -0.7cm] {(0,N)} (uni.west);
+			
+			\draw (corsi.south east) to[out=-70,in=70] node[card, right=0.2cm] {(1,1)} (offerta.north);
+			\draw (offerta.south) to[out=-110,in=-30] node[card, below right=0.1cm and -0.7cm] {(0,N)} (uni.east);
+			
+		\end{tikzpicture}
+	\end{center}
+	Questo schema descrive gli studenti iscritti a più università\\\\
+	Considerazioni generali:
+	\begin{itemize}
+		\item Un identificatore può essere composto da uno o più attributi e deve avere cardinalità (1,1). \\
+		Come per la chiave primaria nel modello relazionale, \textbf{un identificatore è unico} e \textbf{deve essere specificato}.
+		\item Se si coinvolgono altre entità in un identificatore ognuna deve essere membro di una relazione cui l’entità da identificare partecipa con cardinalità (1,1), cioè ad ogni istanza dell’entità da identificare deve corrispondere una ed una sola istanza dell’entità esterna.
+		\item Un identificatore esterno può coinvolgere entità che a loro volta sono identificate esternamente, purché non si creino cicli.
+		\item Ogni entità deve avere un identificatore, ma può averne anche più di uno. \\
+		Se ci sono più identificatori gli attributi e le entità coinvolti possono essere anche opzionali (tranne almeno un caso, come nel caso della chiave primaria nel modello relazionale).
+	\end{itemize}
+	\textbf{IMPORTANTE}: Le associazioni \textbf{non} hanno identificatori propri ma sono identificate esternamente dalle entità che legano!
+	\subsection{Generalizzazioni}
+	Rappresentano legami logici fra una entità $E$ (entità padre) e una o più entità $E_1, E:2, \dots, E_n$ (entità figlie) che sono comprese in $E$ come caso particolare.\\\\
+	$E$ è una generalizzazione per $E_1, E_2, \dots , E_n$.\\
+	$E_1, E_2, \dots , E_n$ sono specializzazioni di $E$.
+	\subsubsection{Proprietà (v. anche programmazione a oggetti…)}
+	\begin{itemize}
+		\item Ogni occorrenza di un’entità figlia è anche un’occorrenza dell’entità padre.
+		\item Ogni proprietà dell’entità padre è anche una proprietà dell’entità figlia (ereditarietà).
+	\end{itemize}
+	Una generalizzazione è detta \textbf{totale} se ogni occorrenza dell’entità padre è anche un’occorrenza di almeno una delle figlie, altrimenti è detta \textbf{parziale}.\\
+	Una generalizzazione totale si rappresenta mediante una freccia piena; una generalizzazione parziale con una freccia vuota.\\\\
+	Una generalizzazione è detta \textbf{esclusiva} se ogni occorrenza dell’entità padre è una occorrenza al più di una delle figlie, altrimenti è detta \textbf{sovrapposta}.
+	\subsubsection{Rappresentazione grafica}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{10.png}
+		\caption{Rappresentazione grafica generalizzazione}
+		\label{fig:im-10}
+	\end{figure}
+	Questa generalizzazione è \textit{totale} (non esistono altri tipi di dipendente) ed esclusiva (un impiegato non può essere anche un dirigente, ecc.)\\\\
+	Una generalizzazione può sempre essere resa \textbf{esclusiva} attraverso una opportuna definizione di una entità che rappresenti la ‘intersezione’ fra le entità sovrapposte.\\\\
+	Ad esempio:
+	\begin{itemize}
+		\item Persona $\leftarrow$ Studente, Lavoratore è una relazione parziale (ci sono persone che non lavorano e non studiano) e sovrapposta (esistono anche studenti lavoratori)
+		\item Persona $\leftarrow$ Studente, Lavoratore, Studente lavoratore è esclusiva.
+	\end{itemize}
+	Ci possono essere più livelli di generalizzazioni (\textbf{gerarchie}).\\\\
+	Es.\\
+	Persona $\leftarrow$ Lavoratore, Studente $\leftarrow$ Universitario, Liceale\\\\
+	Se una entità padre ha solo una entità figlia si parla di \textbf{sottoinsieme}.\\\\
+	Es.\\
+	Progettista $\leftarrow$ Responsabile di progetto
+	\subsubsection{Esempio}
+	\begin{itemize}
+		\item Le persone (entità padre) sono descritti da CF,
+		cognome ed età;
+		\begin{itemize}
+			\item Gli impiegati hanno lo stipendio e possono essere segretari, direttori o progettisti (un progettista può essere anche responsabile di progetto);
+			\item Gli studenti (che non possono essere impiegati) hanno un numero di matricola;
+			\item Esistono persone che non sono né impiegati né studenti (ma i dettagli non ci interessano)
+		\end{itemize}
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{11.png}
+		\caption{Esempio generalizzazione}
+		\label{fig:im-11}
+	\end{figure}
+	\textbf{NB} L’identificatore di una generalizzazione si trova sempre e solo nell’entità padre.\\
+	Infatti, gli attributi dell’entità padre sono poi ereditati dalle figlie.
+	\subsection{Modello E-R: applicazioni diverse}
+	\begin{itemize}
+		\item Gli schemi E-R possono essere utilizzati a scopo di documentazione per la loro interpretazione intuitiva.
+		\item Possono essere usati per descrivere sistemi informativi preesistenti nel caso in cui si debba procedere ad una loro integrazione.
+		\item Possono essere usati per comprendere su quali parti di un sistema intervenire e quali modifiche apportare in caso di variazione dei requisiti di una applicazione.
+	\end{itemize}
+	\subsection{Documentazione di schemi E-R}
+	Il modello E-R è utile per descrivere dati ma è meno espressivo se si devono esprimere vincoli fra dati o descrizioni qualitative più precise del solo nome. \\
+	Può anche essere di difficile lettura nel caso di schemi molto complessi.\\\\
+	Si utilizzano quindi strumenti non formali atti ad integrare l’informazione fornita dal modello E-R con le informazioni necessarie a descrivere completamente un problema.\\\\
+	Una delle tecniche utilizzate allo scopo è quella delle cosiddette \textbf{regole aziendali} o \textbf{business rules}.\\\\
+	Le regole aziendali esprimono regole che riguardano il dominio di interesse come, ad esempio:
+	\begin{itemize}
+		\item Una descrizione dettagliata di un concetto rilevante per l’applicazione: di solito si usa linguaggio naturale.
+		\item Un vincolo di integrità sui dati dell’applicazione, sia che sia compreso fra quelli esprimibili attraverso i costrutti del modello E-R o che non lo sia: si usano espressioni formali ma non esistono standard a riguardo.
+		\item Una derivazione, cioè una qualche informazione che può essere derivata da altri concetti dello schema, ad esempio attraverso un’espressione matematica
+	\end{itemize}
 \end{document}
