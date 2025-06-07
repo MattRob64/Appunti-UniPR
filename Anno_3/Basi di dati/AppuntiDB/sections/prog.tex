@@ -462,4 +462,574 @@
 		\item Un vincolo di integrità sui dati dell’applicazione, sia che sia compreso fra quelli esprimibili attraverso i costrutti del modello E-R o che non lo sia: si usano espressioni formali ma non esistono standard a riguardo.
 		\item Una derivazione, cioè una qualche informazione che può essere derivata da altri concetti dello schema, ad esempio attraverso un’espressione matematica
 	\end{itemize}
+	\subsection{Raccolta e Analisi dei Requisiti}
+	Realizzazione di una descrizione del problema in linguaggio naturale che rispetti criteri di completezza e non ambiguità:
+	\begin{itemize}
+		\item Determinazione del corretto livello di astrazione
+		\item Uso di specifiche semplici ed esplicite (no frasi contorte)
+		\item Uso consistente degli stessi termini per riferirsi a specifici concetti o relazioni fra concetti
+		\begin{itemize}
+			\item uso di frasi standardizzate
+			\item eliminazione di sinonimi o omonimi
+	\end{itemize}
+		\item Esplicitazione dei riferimenti fra termini
+	\end{itemize}
+	Gli ultimi due punti vengono di solito risolti definendo un
+	glossario dei termini.\\\\
+	I requisiti devono anche comprendere informazioni a
+	cui si possano applicare criteri di efficienza e di buon
+	uso delle risorse:
+	\begin{itemize}
+		\item Per i dati occorre specificare il \textbf{numero delle occorrenze} previste.
+		\item Per le operazioni il numero di volte che si prevede che debbano essere eseguite in un certo arco di tempo.
+		\item Il reperimento dei requisiti è un'attività difficile e non standardizzabile
+		\item L'attività di analisi inizia con i primi requisiti raccolti e spesso indirizza verso altre acquisizioni
+	\end{itemize}
+	\subsubsection{Acquisizione per interviste}
+	\begin{itemize}
+		\item Utenti diversi possono fornire informazioni diverse
+		\item Utenti a livello più alto hanno spesso una visione più ampia ma meno dettagliata
+		\item Le interviste portano spesso ad una acquisizione dei requisiti "per raffinamenti successivi"
+	\end{itemize}
+	Al termine dell’acquisizione è importante procedere ad un raggruppamento delle diverse informazioni rispetto alle entità principali cui si riferiscono.
+	\subsubsection{Interazione con gli utenti}
+	\begin{itemize}
+		\item Effettuare spesso verifiche di comprensione e coerenza
+		\item Verificare anche per mezzo di esempi (generali e relativi a casi limite)
+		\item Richiedere definizioni e classificazioni
+		\item Far evidenziare gli aspetti essenziali rispetto a quelli marginali
+	\end{itemize}
+	\subsubsection{Esempio 1}
+	Titolo: Base di dati bibliografica:\\
+	Si vogliono organizzare i dati di interesse per automatizzare la gestione dei riferimenti bibliografici.\\\\
+	Si vogliono organizzare i dati di interesse per automatizzare la gestione dei riferimenti bibliografici, con tutte le informazioni da riportarsi in una bibliografia. \\
+	Per ogni pubblicazione deve esistere un codice identificativo costituito da sette caratteri, indicanti le iniziali degli autori, l'anno di pubblicazione e un carattere aggiuntivo per la discriminazione delle collisioni.\\\\
+	Si vogliono organizzare i dati di interesse per automatizzare la gestione dei riferimenti bibliografici, con tutte le informazioni da riportarsi in una bibliografia. \\
+	Le pubblicazioni sono di due tipi, monografie (per le quali interessano editore, data e luogo di pubblicazione) e articoli su rivista (con nome della rivista, volume, numero, pagine e anno di pubblicazione); per entrambi i tipi si debbono ovviamente riportare i nomi degli autori. \\
+	Per ogni pubblicazione deve esistere un codice identificativo \dots
+	\subsubsection{Esempio 2}
+	Titolo Società di formazione:\\
+	Si vuole realizzare una base di dati per una società che eroga corsi, di cui vogliamo rappresentare i dati dei partecipanti ai corsi e dei docenti. \\
+	Per gli studenti (circa 5000), identificati da un codice, si vuole memorizzare il codice fiscale, il cognome, l'età, il sesso, il luogo di nascita, il nome dei loro attuali datori di lavoro, i posti dove hanno lavorato in precedenza insieme al periodo, l'indirizzo e il numero di telefono, i corsi che hanno frequentato (i corsi sono in tutto circa 200) e il giudizio finale.\\\\
+	Rappresentiamo anche i seminari che stanno attualmente frequentando e, per ogni giorno, i luoghi e le ore dove sono tenute le lezioni. \\
+	I corsi hanno un codice, un titolo e possono avere varie edizioni con date di inizio e fine e numero di partecipanti. \\
+	Se gli studenti sono liberi professionisti, vogliamo conoscere l'area di interesse e, se lo possiedono, il titolo. \\
+	Per quelli che lavorano alle dipendenze di altri, vogliamo conoscere invece il loro livello e la posizione ricoperta.\\\\
+	Per gli insegnanti (circa 300), rappresentiamo il cognome, l'età, il posto dove sono nati, il nome del corso che insegnano, quelli che hanno insegnato nel passato e quelli che possono insegnare. \\
+	Rappresentiamo anche tutti i loro recapiti telefonici. I docenti possono essere dipendenti interni della società o collaboratori esterni.
+	\subsubsection{Glossario dei termini}
+	\begin{center}
+		\begin{tabular}{|l|p{5cm}|l|l|}
+			\hline
+			\textbf{Termine} & \textbf{Descrizione} & \textbf{Sinonimi} & \textbf{Collegamenti} \\
+			\hline
+			Partecipante & Persona che partecipa ai corsi & Studente & Corso, Società \\
+			\hline
+			Docente & Docente dei corsi. Può essere esterno & Insegnante & Corso \\
+			\hline
+			Corso & Corso organizzato dalla società. Può avere più edizioni. & Seminario & Docente, Partecipante \\
+			\hline
+			Società & Ente presso cui i partecipanti lavorano o hanno lavorato & Posto & Partecipante \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Strutturazione dei requisiti in gruppi di frasi omogenee}
+	\paragraph{Frasi di carattere generale}
+	Si vuole realizzare una base di dati per una società che eroga corsi, di cui vogliamo rappresentare i dati dei partecipanti ai corsi e dei docenti.
+	\paragraph{Frasi relative ai partecipanti}
+	Per i partecipanti (circa 5000), identificati da un codice, rappresentiamo il codice fiscale, il cognome, l'età, il sesso, la città di nascita, i nomi dei loro attuali datori di lavoro e di quelli precedenti (insieme alle date di inizio e fine rapporto), le edizioni dei corsi che stanno attualmente frequentando e quelli che hanno frequentato nel passato, con la relativa votazione finale in decimi.
+	\paragraph{Frasi relative a tipi specifici di partecipanti}
+	Per i partecipanti che sono liberi professionisti, rappresentiamo l'area di interesse e, se lo possiedono, il titolo professionale.\\
+	Per i partecipanti che sono dipendenti, rappresentiamo invece il loro livello e la posizione ricoperta.
+	\paragraph{Frasi relative ai datori di lavoro}
+	Relativamente ai datori di lavoro presenti e passati dei partecipanti, rappresentiamo il nome, l'indirizzo e il numero di telefono.
+	\paragraph{Frasi relative ai corsi}
+	Per i corsi (circa 200), rappresentiamo il titolo e il codice, le varie edizioni con date di inizio e fine e, per ogni edizione, rappresentiamo il numero di partecipanti e il giorno della settimana, le aule e le ore dove sono tenute le lezioni.
+	\paragraph{Frasi relative ai docenti}
+	Per i docenti (circa 300), rappresentiamo il cognome, l'età, la città di nascita, tutti i numeri di telefono, il titolo del corso che insegnano, di quelli che hanno insegnato nel passato e di quelli che possono insegnare. \\
+	I docenti possono essere dipendenti interni della società di formazione o collaboratori esterni.
+	\subsection{Progettazione Concettuale}
+	\subsubsection{Strategie top-down}
+	A partire da uno schema che descrive le specifiche mediante pochi concetti molto astratti, si produce uno schema concettuale mediante raffinamenti successivi che aggiungono via via più dettagli.\\\\
+	I raffinamenti successivi, come accade anche per altre strategie, vengono realizzati mediante trasformazioni elementari, denominate \textbf{primitive di trasformazione top-down}, che trasformano un concetto di uno schema in una struttura più complessa che descrive la realtà in maggiore dettaglio.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{12.png}
+		\caption{Schema strategia top-down}
+		\label{fig:im-12}
+	\end{figure}
+	\paragraph{Primitive di trasformazione top-down}
+	\begin{itemize}
+		\item T1, da entità a relazione fra due entità: si applica quando una entità descrive due concetti diversi legati logicamente fra loro
+		\item T2, da entità a generalizzazione: si applica quando una entità è composta da sotto-entità distinte o, in generale, quando un solo concetto può comprendere più concetti.
+		\item T3, da relazione a insieme di relazioni: si applica quando una relazione descrive due o più relazioni fra le medesime entità; tipicamente le due relazioni sono due specializzazioni di una relazione più generale.
+		\item T4, da relazione ad entità con relazioni: si applica quando una relazione descrive un concetto con esistenza autonoma ai fini dell’applicazione o concetti di cui si possono avere più occorrenze.
+		\item T5, introduzione di attributi in una entità: si applica per introdurre nuovi attributi in una entità, che aiutino a descriverla in modo più completo.
+		\item T6, introduzione di attributi su relazioni: si applica per aggiungere proprietà a relazioni.
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.1]{13.png}
+		\caption{Schema primitive di trasformazione top-down}
+		\label{fig:im-13}
+	\end{figure}
+	\subsubsection{Strategie bottom-up}
+	Nella strategia bottom-up le specifiche iniziali sono suddivise in componenti via via sempre più piccole, fino a descrivere frammenti elementari della realtà.\\\\
+	Da questa situazione iniziale ‘frammentaria’ le componenti vengono poi fuse con trasformazioni successive (primitive di trasformazione bottom-up) per giungere allo schema concettuale finale.\\\\
+	Ogni trasformazione introduce nuovi concetti non presenti al livello precedente.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{14.png}
+		\caption{Schema strategia bottom-up}
+		\label{fig:im-14}
+	\end{figure}
+	\paragraph{Primitive di trasformazione bottom-up}
+	\begin{itemize}
+		\item T1, generazione di entità: si applica quando si individua nelle specifiche una classe di oggetti caratterizzata da proprietà comuni.
+		\item T2, generazione di relazione: si applica quando nelle specifiche si individua un legame logico fra entità.
+		\item T3, generazione di generalizzazione: si applica quando si individua un legame fra diverse entità riconducibile ad una generalizzazione, quando cioè le diverse entità possono essere istanze di una stessa classe.
+		\item T4, aggregazione di attributi su entità: si applica quando si individua una entità che può essere rappresentata come aggregazione di attributi presenti nelle specifiche.
+		\item T5, aggregazione di attributi su relazione: analoga a T4, ma relativa ad una relazione.
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{15.png}
+		\caption{Schema primitive di trasformazione bottom-up}
+		\label{fig:im-15}
+	\end{figure}
+	\subsubsection{Strategie inside-out}
+	Può essere vista come un caso particolare della strategia bottom-up: individua solo alcuni concetti importanti, per poi procedere a macchia d’olio.\\\\
+	Si rappresentano prima i concetti più vicini a quelli di partenza per poi sviluppare quelli più lontani attraverso una navigazione nelle specifiche.\\\\
+	\textbf{Vantaggi}: non richiede passi di integrazione.\\\\
+	\textbf{Svantaggi}: è necessario di volta in volta esaminare tutte le specifiche e descrivere i nuovi concetti nel dettaglio. \\
+	La rappresentazione deve avvenire già al giusto livello di astrazione: non è possibile procedere per livelli di astrazione.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{16.png}
+		\caption{Schema strategia inside-out 1}
+		\label{fig:im-16}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{17.png}
+		\caption{Schema strategia inside-out 2}
+		\label{fig:im-17}
+	\end{figure}
+	\subsubsection{Strategie miste}
+	Cerca di unire i vantaggi delle strategie top-down e bottom-up.\\\\
+	Da un lato si individuano componenti elementari, dall’altro si crea uno schema scheletro contenente concetti di base da espandere, con raffinamenti successivi, in modo top-down.\\
+	Contemporaneamente, dalle specifiche, si creano in modo bottom-up i concetti non presenti nello schema scheletro.\\\\
+	Si adatta ad esigenze opposte di suddivisione di un problema complesso in sottoproblemi, e di procedura per raffinamenti successivi.\\\\
+	Ingloba in pratica anche la strategia inside-out.\\
+	Spesso è l’unica strategia utilizzabile.\\\\
+	Come si procede di solito con una strategia ibrida (mista):
+	\begin{itemize}
+		\item Si individuano i concetti principali e si realizza uno schema scheletro
+		\item In base agli elementi individuati si possono suddividere i requisiti
+		\item Poi si raffina, si espande, si integra
+	\end{itemize}
+	Definizione dello schema scheletro:
+	\begin{itemize}
+		\item • Si individuano i concetti più importanti, ad esempio perché più citati o perché indicati esplicitamente come cruciali e li si organizza in un semplice schema concettuale
+	\end{itemize}
+	\subsubsection{Qualità di uno schema concettuale}
+	Nel definire uno schema concettuale ci sono alcune proprietà che bisogna cercare di garantire:
+	\begin{itemize}
+		\item \textbf{Correttezza}: lo schema deve utilizzare propriamente i costrutti del modello di riferimento.
+		\item \textbf{Completezza}: tutti i dati di interesse devono essere rappresentati e tutte le operazioni essere eseguibili a partire dai concetti descritti nello schema.
+		\item \textbf{Leggibilità}: i requisiti devono essere rappresentati in modo naturale e comprensibile. \\
+		Estetica dello schema.
+		\item \textbf{Minimalità}: le specifiche devono essere rappresentate una sola volta. \\
+		Non sempre, tuttavia, eventuali ridondanze sono indesiderate.
+	\end{itemize}
+	\subsubsection{Una metodologia per schematizzare concettualmente}
+	\begin{itemize}
+		\item Analisi dei requisiti
+		\begin{itemize}
+			\item Analizzare i requisiti ed eliminare le ambiguità
+			\item Costruire un glossario dei termini
+			\item Raggruppare i requisiti in insiemi omogenei
+		\end{itemize}
+		\item Passo base
+		\begin{itemize}
+			\item Definire uno schema scheletro con i concetti più rilevanti
+		\end{itemize}
+		\item Passo iterativo (da ripetere finché non si è soddisfatti)
+		\begin{itemize}
+			\item Raffinare i concetti presenti sulla base delle loro specifiche
+			\item Aggiungere concetti per descrivere specifiche non rappresentate
+		\end{itemize}
+		\item Analisi di qualità
+		\begin{itemize}
+			\item Verificare le qualità dello schema e modificarlo
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Una metodologia con integrazione}
+	\begin{itemize}
+		\item Analisi dei requisiti
+		\item Passo base
+		\begin{itemize}
+			\item Decomposizione: decomporre i requisiti con riferimento ai concetti nello schema scheletro
+		\end{itemize}
+		\item Passo iterativo, per ogni sottoschema
+		\begin{itemize}
+			\item Integrazione: integrare i vari sottoschemi in uno schema complessivo, facendo riferimento allo schema scheletro
+		\end{itemize}
+		\item Analisi di qualità
+	\end{itemize}
+	\subsection{Progettazione logica}
+	Il prodotto della progettazione logica è uno schema logico che rappresenta le informazioni contenute nello schema E-R in modo corretto ed efficiente.\\\\
+	Richiede non solo una traduzione da uno schema all’altro ma anche una ristrutturazione dello schema concettuale.\\\\
+	Ad esempio le generalizzazioni non hanno una traduzione diretta fra modello E-R e modello relazionale.\\\\
+	Bisogna anche tenere conto delle prestazioni e quindi la riorganizzazione deve avere come obiettivo l’efficienza.\\\\
+	Come passo preliminare bisognerà eseguire un’analisi delle prestazioni attese dal sistema, per ottimizzarne la realizzazione.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{18.png}
+		\caption{Schema progettazione logica}
+		\label{fig:im-18}
+	\end{figure}
+	\subsection{Analisi delle prestazioni su schemi E-R}
+	In tutti i sistemi software i due principali indici di prestazione che si considerano sono:
+	\begin{itemize}
+		\item Costo delle operazioni
+		\item Occupazione di memoria
+	\end{itemize}
+	Nel caso di una base di dati, il costo di un’operazione è misurato in funzione del numero di occorrenze delle entità e delle associazioni fra entità coinvolte.\\\\
+	Per fare questa analisi è necessario conoscere:
+	\begin{itemize}
+		\item Volume dei dati (occorrenze, dimensioni degli attributi)
+		\item Caratteristiche delle operazioni (tipo, frequenza, dati coinvolti)
+	\end{itemize}
+	In genere basta limitarsi ad analizzare il costo delle operazioni più frequenti (regola dell’80/20: “l’80\% del tempo è occupato dal 20\% delle operazioni”).\\\\
+	Per descrivere volume dei dati e caratteristiche delle operazioni si possono costruire la \textbf{tavola dei volumi}, in cui vengono riportati tutti i concetti dello schema con i volumi previsti a regime, e la \textbf{tavola delle operazioni}, in cui si riportano il tipo e la frequenza delle operazioni.\\\\
+	Per descrivere le operazioni si può usare il frammento dello schema E-R che comprende i concetti coinvolti nell’operazione, sul quale vengono riportati i cammini logici attraverso i quali si accede ai dati.\\\\
+	Nella tavola degli accessi si riportano i concetti coinvolti, il numero medio degli accessi e il tipo (lettura, scrittura).
+	\subsubsection{Esempio}
+	Operazione 1: assegna un impiegato a un progetto.\\
+	Operazione 2: trova i dati di un impiegato, del dipartimento nel quale lavora e dei progetti ai quali partecipa.\\
+	Operazione 3: trova i dati di tutti gli impiegati di un certo dipartimento.
+	Operazione 4: per ogni sede, trova i suoi dipartimenti con il cognome del direttore e l'elenco degli impiegati del dipartimento.
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Tavola dei volumi}}\\
+			\hline
+			\textbf{Concetto} & \textbf{Tipo} & \textbf{Volume} \\
+			\hline
+			Sede & E & 10\\
+			\hline
+			Dipartimento & E & 80\\
+			\hline
+			Impiegato & E & 200\\
+			\hline
+			Progetto & E & 500\\
+			\hline
+			Composizione & R & 80\\
+			\hline
+			Afferenza & R & 190\\
+			\hline
+			Direzione & R & 80\\
+			\hline
+			Partecipazione & R & 6000\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Tavola delle operazioni}}\\
+			\hline
+			\textbf{Operazione} & \textbf{Tipo} & \textbf{Frequenza} \\
+			\hline
+			Op. 1 & I & 50 al giorno \\
+			\hline
+			Op. 2 & I & 100 al giorno \\
+			\hline
+			Op. 3 & I & 10 al giorno \\
+			\hline
+			Op. 4 & B & 2 a settimana \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\subsubsection{Ristrutturazione di shcemi E-R}
+	Può essere divisa in più passi successivi:
+	\begin{itemize}
+		\item \textbf{Analisi delle ridondanze}: si decide se mantenere o eliminare le eventuali ridondanze
+		\item \textbf{Eliminazione delle generalizzazioni}: si sostituiscono le generalizzazioni con costrutti del modello logico utilizzato
+		\item \textbf{Partizionamento/accorpamento di entità e associazioni}: si decide se raggruppare più concetti o partizionare in più concetti i concetti dello schema E-R
+		\item \textbf{Scelta degli identificatori primari}: si selezionano gli identificatori per le entità che ne hanno più di uno
+	\end{itemize}
+	\paragraph{Ridondanze}
+	\begin{itemize}
+		\item Vantaggi
+		\begin{itemize}
+			\item Semplificazione delle interrogazioni: se lo stesso dato compare in più tabelle, è minore la probabilità di dovere fare un join per recuperarlo.
+		\end{itemize}
+		\item Svantaggi
+		\begin{itemize}
+			\item Appesantimento degli aggiornamenti: se modifico un’occorrenza del dato devo modificare anche tutte le 'copie'
+			\item Maggiore occupazione di memoria
+		\end{itemize}
+	\end{itemize}
+	\paragraph{Analisi delle ridondanze}
+	Le ridondanze di uno schema E-R nascono quando
+	un concetto può essere derivato da altri.
+	\begin{itemize}
+		\item Un attributo può essere derivato da attributi della stessa entità o relazione
+		\item Un attributo può essere derivato da attributi di altre entità e relazioni
+		\item Un attributo può essere derivato mediante conteggio di occorrenze
+		\item Associazioni possono essere derivate da altre associazioni in presenza di cicli
+	\end{itemize}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{19.png}
+		\caption{Schema analisi delle ridondanze}
+		\label{fig:im-19}
+	\end{figure}
+	\paragraph{Analisi di una ridondanza}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{20.png}
+		\caption{Analisi di una ridondanza}
+		\label{fig:im-20}
+	\end{figure}
+	$Numero \; abitanti$ è pari al numero di istanze della relazione $Residenza$
+	\begin{center}
+		\begin{tabular}{ |c|c|c| }
+			\hline
+			\multicolumn{3}{|c|}{Tavola dei volumi}\\
+			\hline
+			\textbf{Concetto} & \textbf{Tipo} & \textbf{Volume}\\
+			\hline
+			Città & E & 200\\
+			\hline
+			Persona & E & 1000000\\
+			\hline
+			Residenza & R & 1000000\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{itemize}
+		\item Operazione 1: memorizza una nuova persona con la relativa città di residenza (500 volte al giorno)
+		\item Operazione 2: stampa tutti i dati di una città (incluso il numero di abitanti) (2 volte al giorno)
+	\end{itemize}
+	Presenza di ridondanza:
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Operazione 1}\\
+			\hline
+			\textbf{Concetto} & \textbf{Costrutto} & \textbf{Accessi} & \textbf{Tipo}\\
+			\hline
+			Persona & Entità & 1 & S\\
+			Residenza & Relazione & 1 & S\\
+			Città & Entità & 1 & L\\
+			Città & Entità & 1 & S\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Operazione 2}\\
+			\hline
+			\textbf{Concetto} & \textbf{Costrutto} & \textbf{Accessi} & \textbf{Tipo}\\
+			\hline
+			Città & Entità & 1 & L\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{itemize}
+		\item Costi:
+		\begin{itemize}
+			\item Operazione 1: 1500 accessi in scrittura e 500 accessi in lettura al giorno
+			\item Operazione 2: trascurabile.
+		\end{itemize}
+		\item Contiamo doppi gli accessi in scrittura
+		\begin{itemize}
+			\item Totale di 3500 accessi al giorno
+		\end{itemize}
+	\end{itemize}
+	Assenza di ridondanza:
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Operazione 1}\\
+			\hline
+			\textbf{Concetto} & \textbf{Costrutto} & \textbf{Accessi} & \textbf{Tipo}\\
+			\hline
+			Persona & Entità & 1 & S\\
+			Residenza & Relazione & 1 & S\\
+			\hline
+		\end{tabular}
+		\begin{tabular}{ |c|c|c|c| }
+			\hline
+			\multicolumn{4}{|c|}{Operazione 2}\\
+			\hline
+			\textbf{Concetto} & \textbf{Costrutto} & \textbf{Accessi} & \textbf{Tipo}\\
+			\hline
+			Città & Entità & 1 & L\\
+			Residenza & Relazione & 5000 & L\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\begin{itemize}
+		\item Costi:
+		\begin{itemize}
+			\item Operazione 1: 1000 accessi in scrittura
+			\item Operazione 2: 10000 accessi in lettura al giorno
+		\end{itemize}
+		\item Contiamo doppi gli accessi in scrittura
+		\begin{itemize}
+			\item Totale di 12000 accessi al giorno
+		\end{itemize}
+	\end{itemize}
+	\subsubsection{Scelta degli identificatori principali}
+	È molto importante per l’importanza rivestita dalle chiavi nel modello relazionale.\\\\
+	Bisogna scegliere una chiave principale secondo i seguenti criteri:
+	\begin{itemize}
+		\item Escludere gli attributi con valori nulli
+		\item Preferire identificatori con pochi attributi
+		\item Preferire identificatori interni rispetto ad identificatori esterni
+		\item Utilizzare identificatori che vengono utilizzati da molte operazioni per accedere alle occorrenze di una entità.
+	\end{itemize}
+	Se nessun identificatore soddisfa i criteri, è consigliabile crearne uno (codice identificativo)
+	\subsection{Eliminazione delle generalizzazioni}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{21.png}
+		\caption{Esempio schema con generalizzazioni}
+		\label{fig:im-21}
+	\end{figure}
+	Per eliminare le generalizzazioni (che non esistono nel modello relazionale) si possono seguire 3 strategie alternative:
+	\subsubsection{Accorpamento delle figlie nel padre}
+	Si usa una sola entità avente anche tutti gli attributi delle figlie più un attributo che indica il "tipo".\\\\
+	Richiede più memoria perché saranno presenti valori nulli in corrispondenza degli attributi specifici per una delle figlie. \\
+	Però richiede meno accessi perché per ogni accesso accedo sempre e solo alla entità padre.
+	\subsubsection{Accorpamento del padre nelle figlie}
+	Si elimina il padre ed i suoi attributi vengono inseriti in ciascuna delle figlie. \\
+	(E’ possibile solo se la generalizzazione è totale. Richiede meno memoria rispetto al caso 1, meno accessi rispetto al 3).
+	\subsubsection{Sostituzione della generalizzazione con associazioni}
+	La generalizzazione si traduce con una serie di associazioni. \\
+	Se la generalizzazione è totale, ogni occorrenza della entità padre deve partecipare ad almeno una di tali associazioni (meno memoria rispetto a 1, più accessi a causa del vincolo aggiuntivo).
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{22.png}
+		\caption{Possibili ristrutturazioni dello schema con generalizzazioni}
+		\label{fig:im-22}
+	\end{figure}
+	\subsection{Partizionamento/Accorpamento di concetti}
+	Gli accessi possono essere ridotti separando gli attributi di uno stesso concetto cui fanno accesso operazioni diverse e raggruppando attributi di concetti diversi cui fanno accesso le stesse operazioni.
+	\subsubsection{Partizionamenti di entità}
+	Si possono fare in verticale, decomponendo l’entità in più entità sulla base degli attributi, o in modo orizzontale, decomponendo l’entità sulla base delle sue occorrenze. \\
+	Una decomposizione orizzontale corrisponde ad una generalizzazione. \\
+	Costringe a duplicare tutte le associazioni cui l’entità originaria partecipa.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{23.png}
+		\caption{Esempio di partizionamento di entità}
+		\label{fig:im-23}
+	\end{figure}
+	\subsubsection{Eliminazione di attributi multivalore}
+	Il modello relazionale non prevede questo tipo di attributo e richiede che venga sostituito da una relazione o nella decomposizione diretta dell’attributo multivalore in più attributi.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{24.png}
+		\caption{Esempio di eliminazione di attributo multivalore}
+		\label{fig:im-24}
+	\end{figure}
+	\subsubsection{Accorpamento di entità}
+	Spesso conviene accorpare in una sola entità due entità coinvolte spesso nella stessa operazione. \\
+	Questo può causare la presenza di valori nulli. \\
+	Si accorpano di solito entità legate da relazioni di tipo uno a uno, per evitare la creazione di ridondanze.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{25.png}
+		\caption{Esempio di accorpamento di entità}
+		\label{fig:im-25}
+	\end{figure}
+	È possibile anche accorpare/partizionare associazioni.
+	\subsection{Traduzione verso il modello relazionale}
+	Una volta riorganizzato lo schema si può passare alla traduzione dal modello E-R a quello relazionale.
+	\subsubsection{Traduzione di associazioni molti a molti}
+	Tipicamente, passando dal modello E-R a quello relazionale, si procede nel modo seguente:
+	\begin{itemize}
+		\item Ogni entità diventa una relazione sugli attributi dell’entità
+		\item Ogni associazione diventa una relazione definita sugli attributi dell’associazione più gli identificatori delle entità coinvolte, che costituiranno la chiave della relazione.
+	\end{itemize}
+	Si instaura un vincolo di integrità referenziale fra gli identificatori delle entità coinvolte e i corrispondenti attributi dell’associazione.\\
+	In alcuni casi (es. associazioni ricorsive) è necessario ridenominare gli attributi.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{26.png}
+		\caption{Schema E-R con associazione molti a molti}
+		\label{fig:im-26}
+	\end{figure}
+	\\Lo schema relazionale che si ottiene dalla figura 26 è:\\
+	Impiegato(\underline{Matricola}, Cognome, Stipendio)\\
+	Progetto(\underline{Codice}, Nome, Budget)\\
+	Partecipazione(\underline{Matricola}, \underline{Codice}, DataInizio)\\\\
+	Con vincoli di integrità referenziale fra \textbf{Matricola} in Partecipazione e la chiave di Impiegato e \textbf{Codice} in Partecipazione e la chiave di Progetto
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{27.png}
+		\caption{Schema E-R con associazione ricorsiva}
+		\label{fig:im-27}
+	\end{figure}
+	\\Lo schema relazionale che si ottiene dalla figura 27 è:\\
+	Prodotto(\underline{Codice}, Nome, Costo)\\
+	Composizione(\underline{Composto}, \underline{Componente}, Quantità)
+	\paragraph{Associazioni n-arie}
+	Le associazioni con più di due entità partecipanti si traducono in maniera analoga a quanto detto per le associazioni binarie.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{28.png}
+		\caption{Schema E-R con associazione ternaria (n-arie)}
+		\label{fig:im-28}
+	\end{figure}
+	\\Lo schema relazionale che si ottiene dalla figura 28 è:\\
+	Fornitore(\underline{PartitaIVA}, Nome)\\
+	Prodotto(\underline{Codice}, Genere)\\
+	Dipartimento(\underline{Nome}, Telefono)\\
+	Fornitura(\underline{Fornitore}, \underline{Prodotto}, \underline{Dipartimento}, Quantità)
+	\subsubsection{Traduzione di associazioni uno a molti}
+	In questo caso si possono tradurre sia l’associazione che l’entità per la quale l’associazione può applicarsi una sola volta in un’unica relazione (tabella). \\
+	La chiave sarà l’identificatore dell’entità.\\\\
+	Es. giocatore, squadra e contratto: ogni giocatore può avere un solo contratto, quindi il concetto di contratto viene associato (inglobato) in quello di giocatore.\\\\
+	Si instaura un vincolo di integrità referenziale verso la chiave della relazione (es. squadra) che può avere occorrenza $N$ nell’associazione, dal corrispondente attributo della relazione (es. giocatore) che traduce sia l’altra entità che l’associazione.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{29.png}
+		\caption{Schema E-R con associazione uno a molti}
+		\label{fig:im-29}
+	\end{figure}
+	\\Secondo la regola vista per le associazioni molti a molti, la traduzione di questo schema dovrebbe essere la seguente:\\
+	Giocatore(\underline{Cognome}, \underline{DataNascita}, Ruolo)\\
+	Squadra(\underline{Nome}, Città, ColoriSociali)
+	Contratto(\underline{Giocatore}, \underline{DataNascitaGiocatore}, NomeSquadra, Ingaggio)\\\\
+	Meglio più compatto:\\
+	Giocatore (\underline{Cognome}, \underline{DataNasc}, Ruolo, Squadra, Ingaggio)\\
+	Squadra (\underline{Nome}, Città, ColoriSociali)\\\\
+	Con vincolo di integrità referenziale fra Squadra in Giocatore e la chiave di Squadra.\\\\
+	Se la cardinalità minima di Giocatore nella relazione fosse 0, allora Squadra in Giocatore dovrebbe ammettere valore nullo
+	\subsubsection{Traduzione di entità con identificatore esterno}
+	Poiché un’entità identificata esternamente tramite un’associazione partecipa all’associazione con cardinalità minima e massima pari ad uno, si ricade nel caso precedente della relazione uno a molti.\\
+	L’associazione e l’entità che la utilizza per avere un identificatore esterno vengono tradotti con la stessa relazione.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.4]{30.png}
+		\caption{Schema E-R con identificatore esterno}
+		\label{fig:im-30}
+	\end{figure}
+	\\Lo schema relazionale che si ottiene dalla figura 30 è:\\
+	Studente(\underline{Matricola}, \underline{NomeUniversità}, Cognome, Annolscrizione)
+	Università(\underline{Nome}, Città, indirizzo)
+	\subsubsection{Traduzione di associazioni uno a uno}
+	Se la partecipazione è obbligatoria per entrambe le entità, si può operare come nella traduzione delle associazioni uno a molti, però possiamo scegliere quale entità tradurre in una stessa relazione insieme all’associazione.\\\\
+	Se è opzionale per una sola entità, è preferibile scegliere di effettuare la fusione in modo da non avere valori nulli, inglobando quindi l’associazione nell’entità con partecipazione obbligatoria.\\\\
+	Se è opzionale per entrambe, con una traduzione mediante 3 relazioni separate (come per le relazioni molti a molti) si può evitare la presenza di valori nulli.
+	\subsubsection{Metodo globale per la traduzione}
+	In termini di procedura globale, se si devono tradurre schemi complessi, si può procedere per gradi:
+	\begin{itemize}
+		\item Traduzione delle entità
+		\item Traduzione delle entità con identificazioni esterne
+		\item Traduzione delle associazioni rimaste (alcune sono già state tradotte al punto precedente), a partire dalle relazioni molti a molti (che comunque devono essere tradotte in una tabella).
+	\end{itemize}
 \end{document}
