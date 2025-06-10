@@ -1024,7 +1024,9 @@
 	\subsubsection{Traduzione di associazioni uno a uno}
 	Se la partecipazione è obbligatoria per entrambe le entità, si può operare come nella traduzione delle associazioni uno a molti, però possiamo scegliere quale entità tradurre in una stessa relazione insieme all’associazione.\\\\
 	Se è opzionale per una sola entità, è preferibile scegliere di effettuare la fusione in modo da non avere valori nulli, inglobando quindi l’associazione nell’entità con partecipazione obbligatoria.\\\\
-	Se è opzionale per entrambe, con una traduzione mediante 3 relazioni separate (come per le relazioni molti a molti) si può evitare la presenza di valori nulli.
+	Se è opzionale per entrambe, con una traduzione mediante 3 relazioni separate (come per le relazioni molti a molti) si può evitare la presenza di valori nulli.\\\\
+	In ogni caso, se un campo prevede dei valori nulli si mette un asterisco di fianco al nome del campo, ad esempio:\\
+	Partecipa(\underline{Cognome},\underline{DataNasc},Progetto,OreSett,Iva*)
 	\subsubsection{Metodo globale per la traduzione}
 	In termini di procedura globale, se si devono tradurre schemi complessi, si può procedere per gradi:
 	\begin{itemize}
