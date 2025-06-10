@@ -138,7 +138,7 @@
 	Es. Indirizzo può essere composto da Via, N.Civico e CAP.
 	\paragraph{Cardinalità delle relazioni}
 	Viene associata ad ogni entità coinvolta in una relazione.\\
-	Indica il numero minimo e massimo di occorrenze di tale entità nella relazione, cioè quante volte una istanza di un’entità può essere coinvolta nella relazione.\\\\
+	Indica il numero minimo e massimo di \textbf{occorrenze} di tale entità nella relazione, cioè quante volte una istanza di un’entità può essere coinvolta nella relazione.\\\\
 	Es. Il proprietario di un’auto può essere coinvolto più volte nella relazione Intestazione definita fra Proprietario e Auto se possiede più auto, quindi viene associato ad ogni auto posseduta ma un’auto può comparire una sola volta in quanto è associabile a un solo proprietario.\\\\
 	In genere si usano solo i simboli 0,1,N per quantificare le occorrenze. \\
 	N indica genericamente ‘più di una occorrenza’\\\\
@@ -702,13 +702,13 @@
 		\item Caratteristiche delle operazioni (tipo, frequenza, dati coinvolti)
 	\end{itemize}
 	In genere basta limitarsi ad analizzare il costo delle operazioni più frequenti (regola dell’80/20: “l’80\% del tempo è occupato dal 20\% delle operazioni”).\\\\
-	Per descrivere volume dei dati e caratteristiche delle operazioni si possono costruire la \textbf{tavola dei volumi}, in cui vengono riportati tutti i concetti dello schema con i volumi previsti a regime, e la \textbf{tavola delle operazioni}, in cui si riportano il tipo e la frequenza delle operazioni.\\\\
+	Per descrivere volume dei dati e caratteristiche delle operazioni si possono costruire la \textbf{tavola dei volumi}, in cui vengono riportati tutti i concetti dello schema con i volumi previsti a regime, e la \textbf{tavola delle operazioni}, in cui si riportano il tipo (I: Interattiva; B: Batch) e la frequenza delle operazioni.\\\\
 	Per descrivere le operazioni si può usare il frammento dello schema E-R che comprende i concetti coinvolti nell’operazione, sul quale vengono riportati i cammini logici attraverso i quali si accede ai dati.\\\\
 	Nella tavola degli accessi si riportano i concetti coinvolti, il numero medio degli accessi e il tipo (lettura, scrittura).
 	\subsubsection{Esempio}
 	Operazione 1: assegna un impiegato a un progetto.\\
 	Operazione 2: trova i dati di un impiegato, del dipartimento nel quale lavora e dei progetti ai quali partecipa.\\
-	Operazione 3: trova i dati di tutti gli impiegati di un certo dipartimento.
+	Operazione 3: trova i dati di tutti gli impiegati di un certo dipartimento.\\
 	Operazione 4: per ogni sede, trova i suoi dipartimenti con il cognome del direttore e l'elenco degli impiegati del dipartimento.
 	\begin{center}
 		\begin{tabular}{|c|c|c|}
@@ -812,7 +812,7 @@
 		\item Operazione 1: memorizza una nuova persona con la relativa città di residenza (500 volte al giorno)
 		\item Operazione 2: stampa tutti i dati di una città (incluso il numero di abitanti) (2 volte al giorno)
 	\end{itemize}
-	Presenza di ridondanza:
+	Presenza di ridondanza (Tabelle degli accessi delle operazioni [L: Lettura; S: Scrittura] ):
 	\begin{center}
 		\begin{tabular}{ |c|c|c|c| }
 			\hline
@@ -1002,7 +1002,7 @@
 	\end{figure}
 	\\Secondo la regola vista per le associazioni molti a molti, la traduzione di questo schema dovrebbe essere la seguente:\\
 	Giocatore(\underline{Cognome}, \underline{DataNascita}, Ruolo)\\
-	Squadra(\underline{Nome}, Città, ColoriSociali)
+	Squadra(\underline{Nome}, Città, ColoriSociali)\\
 	Contratto(\underline{Giocatore}, \underline{DataNascitaGiocatore}, NomeSquadra, Ingaggio)\\\\
 	Meglio più compatto:\\
 	Giocatore (\underline{Cognome}, \underline{DataNasc}, Ruolo, Squadra, Ingaggio)\\
@@ -1019,7 +1019,7 @@
 		\label{fig:im-30}
 	\end{figure}
 	\\Lo schema relazionale che si ottiene dalla figura 30 è:\\
-	Studente(\underline{Matricola}, \underline{NomeUniversità}, Cognome, Annolscrizione)
+	Studente(\underline{Matricola}, \underline{NomeUniversità}, Cognome, Annolscrizione)\\
 	Università(\underline{Nome}, Città, indirizzo)
 	\subsubsection{Traduzione di associazioni uno a uno}
 	Se la partecipazione è obbligatoria per entrambe le entità, si può operare come nella traduzione delle associazioni uno a molti, però possiamo scegliere quale entità tradurre in una stessa relazione insieme all’associazione.\\\\

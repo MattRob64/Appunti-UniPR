@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  7 JUN 2025 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  10 JUN 2025 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -992,7 +992,7 @@ Package hyperref Info: Link coloring OFF on input line 79.
 \openout4 = `main.out'.
 
 \c@lstlisting=\count363
-<./img/0.cover.png, id=706, 1807.75375pt x 1016.79875pt>
+<./img/0.cover.png, id=710, 1807.75375pt x 1016.79875pt>
 File: ./img/0.cover.png Graphic file (type png)
 <use ./img/0.cover.png>
 Package pdftex.def Info: ./img/0.cover.png  used on input line 100.
@@ -1025,7 +1025,7 @@ l.37 ...izione relazione}{13}{subsubsection.7.6.2}
 \openout5 = `main.toc'.
 
  [4]
-<./img/1.png, id=913, 996.72375pt x 497.86pt>
+<./img/1.png, id=918, 996.72375pt x 497.86pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 133.
@@ -1033,7 +1033,7 @@ Package pdftex.def Info: ./img/1.png  used on input line 133.
 
 (./sections/dbms.tex [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-s
 uper/cm-super-ts1.enc} <./img/1.png>]) (./sections/mod_dati.tex
-<./img/2.png, id=922, 984.17688pt x 226.34563pt>
+<./img/2.png, id=927, 984.17688pt x 226.34563pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 20.
@@ -1063,7 +1063,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 62--89
  []
 
 [7 <./img/2.png>]
-<./img/3.png, id=934, 1003.75pt x 553.06625pt>
+<./img/3.png, id=939, 1003.75pt x 553.06625pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 123.
@@ -1139,7 +1139,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<./img/4.png, id=947, 777.90625pt x 517.935pt>
+<./img/4.png, id=952, 777.90625pt x 517.935pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 123.
@@ -1185,7 +1185,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--78
 
  []
 
-<./img/5.png, id=1025, 988.69376pt x 527.9725pt>
+<./img/5.png, id=1030, 988.69376pt x 527.9725pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 119.
@@ -1194,13 +1194,13 @@ Package pdftex.def Info: ./img/5.png  used on input line 119.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13]
-<./img/6.png, id=1031, 973.6375pt x 191.71625pt>
+<./img/6.png, id=1036, 973.6375pt x 191.71625pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 142.
 (pdftex.def)             Requested size: 292.0935pt x 57.5153pt.
  [14 <./img/5.png> <./img/6.png>]
-<./img/7.png, id=1040, 978.65625pt x 669.50125pt>
+<./img/7.png, id=1045, 978.65625pt x 669.50125pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
 Package pdftex.def Info: ./img/7.png  used on input line 195.
@@ -1276,7 +1276,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--147
  []
 
 [19]
-<./img/8.png, id=1077, 919.435pt x 631.35875pt>
+<./img/8.png, id=1082, 919.435pt x 631.35875pt>
 File: ./img/8.png Graphic file (type png)
 <use ./img/8.png>
 Package pdftex.def Info: ./img/8.png  used on input line 195.
@@ -1429,7 +1429,7 @@ m/n/10 ) \OML/cmm/m/it/10 JOIN REN[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 SEL[]\OT1
  []
 
 ) (./sections/prog.tex [31] [32]
-<./img/9.png, id=1143, 669.50125pt x 435.6275pt>
+<./img/9.png, id=1148, 669.50125pt x 435.6275pt>
 File: ./img/9.png Graphic file (type png)
 <use ./img/9.png>
 Package pdftex.def Info: ./img/9.png  used on input line 74.
@@ -1574,7 +1574,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--410
 
  []
 
-<./img/10.png, id=1168, 655.44875pt x 295.1025pt>
+<./img/10.png, id=1173, 655.44875pt x 295.1025pt>
 File: ./img/10.png Graphic file (type png)
 <use ./img/10.png>
 Package pdftex.def Info: ./img/10.png  used on input line 413.
@@ -1605,7 +1605,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 424--430
  []
 
 [38 <./img/10.png>]
-<./img/11.png, id=1176, 657.45625pt x 423.5825pt>
+<./img/11.png, id=1181, 657.45625pt x 423.5825pt>
 File: ./img/11.png Graphic file (type png)
 <use ./img/11.png>
 Package pdftex.def Info: ./img/11.png  used on input line 442.
@@ -1651,7 +1651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--520
  []
 
 [40] [41]
-<./img/12.png, id=1191, 462.72874pt x 439.6425pt>
+<./img/12.png, id=1196, 462.72874pt x 439.6425pt>
 File: ./img/12.png Graphic file (type png)
 <use ./img/12.png>
 Package pdftex.def Info: ./img/12.png  used on input line 557.
@@ -1661,7 +1661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 553--561
 
  []
 
-<./img/13.png, id=1192, 3517.14pt x 3846.37pt>
+<./img/13.png, id=1197, 3517.14pt x 3846.37pt>
 File: ./img/13.png Graphic file (type png)
 <use ./img/13.png>
 Package pdftex.def Info: ./img/13.png  used on input line 572.
@@ -1669,7 +1669,7 @@ Package pdftex.def Info: ./img/13.png  used on input line 572.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/14.png, id=1193, 479.7925pt x 474.77374pt>
+<./img/14.png, id=1198, 479.7925pt x 474.77374pt>
 File: ./img/14.png Graphic file (type png)
 <use ./img/14.png>
 Package pdftex.def Info: ./img/14.png  used on input line 582.
@@ -1688,7 +1688,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 577--586
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/15.png, id=1201, 449.68pt x 485.815pt>
+<./img/15.png, id=1206, 449.68pt x 485.815pt>
 File: ./img/15.png Graphic file (type png)
 <use ./img/15.png>
 Package pdftex.def Info: ./img/15.png  used on input line 596.
@@ -1696,12 +1696,12 @@ Package pdftex.def Info: ./img/15.png  used on input line 596.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/16.png, id=1202, 657.45625pt x 386.44376pt>
+<./img/16.png, id=1207, 657.45625pt x 386.44376pt>
 File: ./img/16.png Graphic file (type png)
 <use ./img/16.png>
 Package pdftex.def Info: ./img/16.png  used on input line 608.
 (pdftex.def)             Requested size: 394.47679pt x 231.86804pt.
-<./img/17.png, id=1203, 553.06625pt x 410.53375pt>
+<./img/17.png, id=1208, 553.06625pt x 410.53375pt>
 File: ./img/17.png Graphic file (type png)
 <use ./img/17.png>
 Package pdftex.def Info: ./img/17.png  used on input line 614.
@@ -1749,7 +1749,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 619--627
  []
 
 [44 <./img/14.png>] [45 <./img/15.png>]
-<./img/18.png, id=1222, 523.45563pt x 459.7175pt>
+<./img/18.png, id=1227, 523.45563pt x 459.7175pt>
 File: ./img/18.png Graphic file (type png)
 <use ./img/18.png>
 Package pdftex.def Info: ./img/18.png  used on input line 688.
@@ -1798,12 +1798,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 704--708
  []
 
 [47 <./img/17.png>] [48 <./img/18.png>]
-<./img/19.png, id=1242, 662.475pt x 450.68375pt>
+<./img/19.png, id=1247, 662.475pt x 450.68375pt>
 File: ./img/19.png Graphic file (type png)
 <use ./img/19.png>
 Package pdftex.def Info: ./img/19.png  used on input line 784.
 (pdftex.def)             Requested size: 397.48807pt x 270.41232pt.
-<./img/20.png, id=1243, 661.47125pt x 253.94875pt>
+<./img/20.png, id=1248, 661.47125pt x 253.94875pt>
 File: ./img/20.png Graphic file (type png)
 <use ./img/20.png>
 Package pdftex.def Info: ./img/20.png  used on input line 791.
@@ -1813,7 +1813,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 885--888
 
  []
 
-<./img/21.png, id=1252, 328.22626pt x 117.43875pt>
+<./img/21.png, id=1257, 328.22626pt x 117.43875pt>
 File: ./img/21.png Graphic file (type png)
 <use ./img/21.png>
 Package pdftex.def Info: ./img/21.png  used on input line 897.
@@ -1824,17 +1824,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 903--906
  []
 
 [50 <./img/21.png>]
-<./img/22.png, id=1259, 348.30125pt x 396.48125pt>
+<./img/22.png, id=1264, 348.30125pt x 396.48125pt>
 File: ./img/22.png Graphic file (type png)
 <use ./img/22.png>
 Package pdftex.def Info: ./img/22.png  used on input line 914.
 (pdftex.def)             Requested size: 139.31802pt x 158.58968pt.
-<./img/23.png, id=1260, 406.51875pt x 177.66376pt>
+<./img/23.png, id=1265, 406.51875pt x 177.66376pt>
 File: ./img/23.png Graphic file (type png)
 <use ./img/23.png>
 Package pdftex.def Info: ./img/23.png  used on input line 926.
 (pdftex.def)             Requested size: 162.60461pt x 71.06424pt.
-<./img/24.png, id=1261, 381.425pt x 176.66pt>
+<./img/24.png, id=1266, 381.425pt x 176.66pt>
 File: ./img/24.png Graphic file (type png)
 <use ./img/24.png>
 Package pdftex.def Info: ./img/24.png  used on input line 934.
@@ -1843,18 +1843,18 @@ Package pdftex.def Info: ./img/24.png  used on input line 934.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/25.png, id=1262, 406.51875pt x 181.67876pt>
+<./img/25.png, id=1267, 406.51875pt x 181.67876pt>
 File: ./img/25.png Graphic file (type png)
 <use ./img/25.png>
 Package pdftex.def Info: ./img/25.png  used on input line 944.
 (pdftex.def)             Requested size: 162.60461pt x 72.6702pt.
 [51 <./img/22.png> <./img/23.png>]
-<./img/26.png, id=1271, 371.3875pt x 73.27374pt>
+<./img/26.png, id=1276, 371.3875pt x 73.27374pt>
 File: ./img/26.png Graphic file (type png)
 <use ./img/26.png>
 Package pdftex.def Info: ./img/26.png  used on input line 961.
 (pdftex.def)             Requested size: 148.55235pt x 29.30896pt.
-<./img/27.png, id=1272, 215.80624pt x 128.48pt>
+<./img/27.png, id=1277, 215.80624pt x 128.48pt>
 File: ./img/27.png Graphic file (type png)
 <use ./img/27.png>
 Package pdftex.def Info: ./img/27.png  used on input line 972.
@@ -1867,7 +1867,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 957--979
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/28.png, id=1273, 351.3125pt x 141.52875pt>
+<./img/28.png, id=1278, 351.3125pt x 141.52875pt>
 File: ./img/28.png Graphic file (type png)
 <use ./img/28.png>
 Package pdftex.def Info: ./img/28.png  used on input line 983.
@@ -1876,7 +1876,7 @@ Package pdftex.def Info: ./img/28.png  used on input line 983.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [52 <./img/24.png> <./img/25.png> <./img/26.png>]
-<./img/29.png, id=1284, 407.5225pt x 74.2775pt>
+<./img/29.png, id=1289, 407.5225pt x 74.2775pt>
 File: ./img/29.png Graphic file (type png)
 <use ./img/29.png>
 Package pdftex.def Info: ./img/29.png  used on input line 999.
@@ -1906,7 +1906,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 993--1012
 
  []
 
-<./img/30.png, id=1285, 374.39874pt x 78.2925pt>
+<./img/30.png, id=1290, 374.39874pt x 78.2925pt>
 File: ./img/30.png Graphic file (type png)
 <use ./img/30.png>
 Package pdftex.def Info: ./img/30.png  used on input line 1017.
@@ -1914,7 +1914,7 @@ Package pdftex.def Info: ./img/30.png  used on input line 1017.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
+[53 <./img/27.png> <./img/28.png> <./img/29.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1025--1028
 
  []
@@ -1924,27 +1924,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1025--1028
 
  []
 
-[53 <./img/27.png> <./img/28.png> <./img/29.png>]) [54 <./img/30.png>]
-(./main.aux)
+) [54 <./img/30.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 45F1930B9A7B9EC31D99C860BAC19A86;31372
-(rerunfilecheck)             After:  E778CF34DAA3B1E85A16180075B35A6D;31617.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E778CF34DAA3B1E85A16180075B35A6D;31617.
  ) 
 Here is how much of TeX's memory you used:
- 33813 strings out of 474116
- 642719 string characters out of 5743683
+ 33814 strings out of 474116
+ 642742 string characters out of 5743683
  2196187 words of memory out of 5000000
- 55276 multiletter control sequences out of 15000+600000
+ 55277 multiletter control sequences out of 15000+600000
  564822 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,117p,510b,3395s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1965,10 +1957,10 @@ e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 4/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (55 pages, 3944599 bytes).
+Output written on main.pdf (55 pages, 3944903 bytes).
 PDF statistics:
- 1453 PDF objects out of 1728 (max. 8388607)
- 1288 compressed objects within 13 object streams
+ 1457 PDF objects out of 1728 (max. 8388607)
+ 1292 compressed objects within 13 object streams
  338 named destinations out of 1000 (max. 500000)
- 1560 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1568 words of extra memory for PDF output out of 10000 (max. 10000000)
 
