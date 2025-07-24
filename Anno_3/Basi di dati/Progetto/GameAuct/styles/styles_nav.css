@@ -1,0 +1,158 @@
+.topnav {
+    position: fixed; 
+    top: 20px;
+    left: 5%;
+    width: 100%;
+    z-index: 9999; /* Ensures it stays above other content */
+
+    display: table;
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    background: rgba(22, 25, 37, 0.3); /*Background color in navbar*/
+
+    width: 90%;
+    border-radius: 10px 25px 10px 25px;
+    overflow: visible;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.topnav-list {
+    position: relative;
+    float: left;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.topnav-list li {
+    display: inline-block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #013833; /*Links color in navbar*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #013833;
+    border-radius: 25px;
+    color: #e6f1e1;
+}
+
+.topnav .logo svg path {
+    fill: #013833
+}
+
+.topnav .logo:hover svg path{
+    fill: #e6f1e1;
+}
+
+/* Add a color to the active/current link 
+.topnav a.active {
+    background-color: #04aa6d;
+    color: white;
+}
+*/
+
+/*Non mostro la checkbox che uso per fare il menù a tendina in versione ridotta*/
+.hamburg, .nav_input {
+    display: none;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.mobile-logo a:hover svg path{
+    fill: #e6f1e1;
+}
+
+/*MediaQuery Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .topnav a {
+        padding: 14px 8px;
+    }
+}
+
+/*MediaQuery Smartphone*/
+
+@media screen and (max-width: 767px) {
+
+    .logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: inline-block;
+        margin-left: 30%;
+    }
+
+    .hamburg {
+        display: block;
+        float: right;
+        color: #013833;
+        padding-right: 30px;
+        padding-top: 35px;
+        padding-bottom: 5px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .topnav-list {
+        background: rgba(22, 25, 37, 0.3);
+        backdrop-filter: blur(18px) saturate(180%);
+        -webkit-backdrop-filter: blur(18px) saturate(180%);
+        flex-direction: column;
+        display: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        position: fixed;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        animation: fadeIn 0.5s ;
+        animation-fill-mode: both;
+        z-index: 100;
+    }
+
+    .topnav-list li {
+        display: block;
+        width: 100%;
+        margin: 10px;
+        position: relative;
+    }
+
+    .topnav-list li a {
+        position: relative;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            right: -30px;
+        }
+        100% {
+            opacity: 1;
+            right: 0px;
+        }
+    }
+
+    [id^="buttonNav"]:checked + ul {
+        display: block;
+    }
+
+    .topnav .mobile-logo svg path {
+        fill: #e6f1e1;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lan="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diego Costa Psicologo</title>
+        <link rel="icon" type="image/x-icon" href="./img/Favicon.ico"> 
+        <link rel="stylesheet" href="./styles/style_nav.css">
+        <link rel="stylesheet" href="./styles/style_footer.css">
+        <link rel="stylesheet" href="./styles/style_home.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/3f1192a822.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body style="width: 100%; height: 100%;">
+        <!--NavBar-->
+        <nav class="navbar">
+            <div>
+                <a href="./index.php"> 
+                    <img class="logo" src="./img/Logo.png" alt="image/png">
+                </a>
+            </div>
+
+            <label for="buttonNav" class="hamburg">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </label>
+            <input type="checkbox" id="buttonNav">
+    
+            <ul>
+                <li> <a href="./chi_sono.php"><i class = "fa-solid fa-user-doctor"></i>Chi Sono</a> </li>
+    
+                <li> 
+                    <label for="buttonNav-1" class="show"><i class="fa-solid fa-stethoscope"></i>Aree di Intervento<i class = "fa-solid fa-chevron-down"></i> </label>
+                    <input type="checkbox" id="buttonNav-1">
+                    <ul>
+                        <li> <a href="./clinic.php"><i class="fa-solid fa-notes-medical"></i>Area Clinica</a> </li>
+                        <li> <a href="./neuro.php"><i class="fa-solid fa-brain"></i>Area Neuropsicologica</a> </li>
+                    </ul>
+                </li>
+    
+                <li> <a href="./contatti.php"> <i class="fa-solid fa-address-book"></i> Contatti</a> </li>
+    
+                <li> <a href="./collab.php"> <i class="fa-solid fa-users-rectangle"></i> Collaborazioni</a> </li>
+            </ul>
+        </nav>
+
+        <!--Semplice spazio per distanziare NavBar da HomePage-->
+        <div style="padding-top: 15px"></div>

@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+
+/*++++++++++++++++++ Stile NavBar ++++++++++++++++++*/
+
+/*L'asterisco cambia lo stile di tutti gli elementi del file html */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito';
+}
+
+body {
+	background-color: #EBDFDF;
+}
+
+.logo {
+	/*float: left; mantiene il logo sulla sinistra dello schermo*/
+	float: left;
+	padding-left: 40px;
+	padding-top: 10px;
+	width: 140px;
+}
+
+nav:after {
+	/*con l'attributo after posso modificare una parte specifica del tag utilizzando content*/
+	content: '';
+	clear: both;
+	display: table;
+}
+
+/*Stile di tutta la NavBar*/
+nav ul {
+	float: left;
+	list-style: none;
+	margin-left: 13%;
+	/*margin-right: 5%;*/
+	margin-top: 50px;
+	position: relative;
+}
+
+/*Stile degli elementi della tabella di link della NavBar*/
+nav ul li {
+	float: left;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+/*Stile dei link della tabella di link della NavBar*/
+nav ul li a {
+	color: #1E1E1E;
+	text-decoration: none;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 10px;
+	/*Pading bottom per poter cliccare i sottolink, altrimenti spariscono*/
+	padding-bottom: 18px;
+}
+
+.show {
+	cursor: pointer;
+	color: #1E1E1E;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 10px;
+	/*Pading bottom per poter cliccare i sottolink, altrimenti spariscono*/
+	padding-bottom: 18px;
+}
+
+/* Link hover effect
+nav ul li a:hover {
+	color: cyan;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #33ffff,
+				0 0 5px #66ffff;
+}*/
+
+/*Modifica lo stile della tabella dei "sottolink" della NavBar*/
+nav ul ul {
+	position: absolute;
+	/*top: 2px;
+	opacity: 0;
+	visibility: hidden;*/
+	display: none;
+	background-color: #EBDFDF;
+	border-radius: 8px;
+	animation: fadeIn 0.3s;
+	animation-fill-mode: both;
+}
+
+/*Modifico lo stile di ul quando faccio hover si nav ul li
+nav ul li:hover > ul{
+	float: left;
+	margin-left: 0px;
+
+	top: 1px;
+	opacity: 1;
+	visibility: visible;
+}*/
+
+/*Stile degli elementi della tabella di "sottolink" della NavBar*/
+nav ul ul li {
+	position: relative;
+	margin: 10px;
+	width: 250px;
+	float: none;
+	display: list-item;
+}
+
+/*Stile dei link della tabella di "sottolink" della NavBar*/
+nav ul ul li a {
+	line-height: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+/*Se clicco sopra "Aree di intervento" appare il menu a finestra*/
+input[id^=buttonNav-1]:checked + ul {
+	float: left;
+	margin-left: 0px;
+	display: block;
+	/*top: 1px;
+	opacity: 1;
+	visibility: visible;*/
+}
+
+/*Non mostro la checkbox che uso per fare il menù a tendina in versione ridotta*/
+.hamburg, input {
+	display: none;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		top: -30px;
+	}
+	100% {
+		opacity: 1;
+		top: -10px;
+	}
+}
+
+/*MediaQuery Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	
+	/*Stile di tutta la NavBar*/
+	nav ul {
+		float: left;
+		list-style: none;
+		margin-left: 5%;
+		/*margin-right: 5%;*/
+		margin-top: 50px;
+		position: relative;
+	}
+
+	/*Stile degli elementi della tabella di link della NavBar*/
+	nav ul li {
+		float: left;
+		display: inline-block;
+	}
+
+	/*Stile dei link della tabella di link della NavBar*/
+	nav ul li a {
+		color: #1E1E1E;
+		text-decoration: none;
+		line-height: 40px;
+		font-size: 18px;
+		padding: 4px;
+		padding-bottom: 18px;
+	}
+}
+
+/*MediaQuery Smartphone*/
+
+@media screen and (max-width: 767px) {
+
+	/*Stile di tutta la NavBar*/
+	nav ul {
+		margin-right: 0px;
+		/*Posizione link della NavBar*/
+		margin-left: 10px;
+		float: left;
+		animation: fadeInMob 0.5s;
+		animation-fill-mode: both;
+	}
+
+	.logo {
+		margin-left: 20px;
+		width: 140px;
+	}
+
+	/*Stile degli elementi della tabella di link e della tabella di "sottolink" della NavBar*/
+	nav ul li, nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	/*Modifica lo stile della tabella dei "sottolink" della NavBar*/
+	nav ul ul {
+		top: 40px;
+		/*Posizione link a tendina*/
+		margin-top: 0px;
+		/**/
+		position: static;
+		border-top: none;
+		float: none;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	nav ul ul a {
+		padding-left: 10px;
+	}
+
+	.show {
+		display: block;
+		color: #1E1E1E;
+		font-size: 18px;
+		padding: 10px;
+		/*Posizione link "Aree di Intervento" verticale*/
+		line-height: 25px;
+		cursor: pointer;
+	}
+
+	.hamburg {
+		display: block;
+		color: #1E1E1E;
+		position: absolute;
+		right: 40px;
+		line-height: 70px;
+		top: 30px;
+		font-size: 35px;
+		cursor: pointer;
+	}
+
+    @keyframes fadeInMob {
+        0% {
+            opacity: 0;
+            left: -30px;
+        }
+        100% {
+            opacity: 1;
+            left: 0px;
+        }
+    }
+
+	/*nav ul li a:hover {
+		box-shadow: none;
+	}*/
+
+	/*Nascondo le voci della navbar*/
+	.show + a, ul {
+		display: none;
+	} 
+
+	[id^=buttonNav]:checked + ul {
+		display: block;
+	}
+}
