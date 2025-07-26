@@ -43,11 +43,9 @@ Puntata(IdPuntata, IdAnnuncio, IdUtente, SommaPuntata, DataPuntata, OraPuntata)\
 Tag(IDTag, NomeTag)\
 Prodotto(IDProdotto, Nome, Categoria, Condizione)\
 Utente(IDUtente, NomeUtente, Email, Password, Biografia, Avatar)\
-Asta(IDAnnuncio, IDProdotto, IDUtentePubblicatore, Titolo, Descrizione, DataInizio, DataFine, BasePrezzo, IDVincitore, PrezzoFinale)\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 Puntata(IDPuntata, IDAnnuncio, IDUtenteOfferente, SommaPuntata, DataPuntata, OraPuntata)\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 Relazioni:\
+Asta(IDAsta, IDProdotto, IDUtentePubblicatore, Titolo, Descrizione, DataInizio, DataFine, BasePrezzo, IDVincitore, PrezzoFinale)\
+Puntata(IDPuntata, IDAnnuncio, IDUtenteOfferente, SommaPuntata, DataPuntata, OraPuntata)\
+Relazioni:\
 Tag_Prodotto(IDTag, IDProdotto)                       -- \'c8 taggato con
 \fs48 \
 \

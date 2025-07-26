@@ -1,15 +1,30 @@
-<?php include 'base.html'?>
-        <!--HomePage-->
+<?php include 'header.php'?>
 
-        <div class="home-page-container">
-            <ul>
-                <li>
-                    <h1 class="home-page1">Dottor Diego Costa</h1>
-                </li>
-                <li>
-                    <h1 class="home-page2">Psicologo</h1>
-                </li>
-            </ul>
-        </div>
+    <!--HomePage-->
+
+    <h1 class="titleBig">Ultimi Arrivi</h1>
+    <!-- <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Mail</th>
+            <th>Bio</th>
+            <th>Avatar</th>
+        </tr>
+
+        <?php
+        /*while($row = pg_fetch_assoc($result)) {
+            echo "
+            <tr>
+                <td>$row[idutente]</td>
+                <td>$row[nomeutente]</td>
+                <td>$row[email]</td>
+                <td>$row[biografia]</td>
+                <td>$row[avatar]</td>
+            </tr>
+            ";
+        }*/
+        ?>
+    </table> -->
 
 <?php include 'footer.html'?>

@@ -14,7 +14,7 @@ body {
     height: var(--container-height);
 }
 
-.top {
+/*.top {
     --distance-to-scroll: 50px;
 
     margin-top: calc( var(--container-height) + var(--distance-to-scroll) );
@@ -23,18 +23,14 @@ body {
     left: 85%;
 
     /* visual styling */
-    text-decoration: none;
+    /*text-decoration: none;
     padding: 10px;
     color: #013833;
     background: rgb(22, 25, 37);
     border-radius: 100px;
     white-space: nowrap;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-
-h1{
-    color: rgb(22, 25, 37); /*Text color in body*/
-}
+}*/
 
 /*MediaQuery Smartphone*/
 
