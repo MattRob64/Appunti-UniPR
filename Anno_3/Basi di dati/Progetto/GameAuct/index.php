@@ -1,8 +1,9 @@
 <?php include 'header.php'?>
 
     <!--HomePage-->
-
-    <h1 class="titleBig">Ultimi Arrivi</h1>
+    <?php 
+    $gallery_status = 'newest';
+    include 'gallery.php';?>
     <!-- <table>
         <tr>
             <th>ID</th>

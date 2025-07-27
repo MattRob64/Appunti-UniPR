@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/styles_home.css">
     <link rel="stylesheet" href="./styles/styles_login.css">
     <link rel="stylesheet" href="./styles/styles_register.css">
+    <link rel="stylesheet" href="./styles/styles_user.css">
+    <link rel="stylesheet" href="./styles/styles_gallery.css">
     <script src="https://kit.fontawesome.com/3f1192a822.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -18,12 +20,16 @@
     <?php
       //Inizializza la sessione e prende tutti i dati di sessione precedentemente creati
       session_start();
+      $gallery_status = '';
       //Controlla se l'utente è già loggato
       $is_logged_in = isset($_SESSION['user_id']);
       include 'connection.php';
 
       $pdo = get_db_connection();
       include 'user_handling.php';
+
+      date_default_timezone_set(date_default_timezone_get());
+      $oggi = date('Y-m-d', time());
 
       // Fetch general data (replace with your actual query)
       /*$stmt = $pdo->query("
@@ -64,11 +70,11 @@
             </svg>
           </a>
         </li>
-        <li> <a class="delayed1" href="index.php">Videogiochi</a> </li>
-        <li> <a class="delayed2" href="index.php">Console</a> </li>
+        <li> <a class="delayed1" href="grids.php?gallery_status=gioco">Videogiochi</a> </li>
+        <li> <a class="delayed2" href="grids.php?gallery_status=console">Console</a> </li>
         <!-- <li> <a class="delayed3" href="index.php">Ultimi Annunci</a> </li> --> 
         <?php if ($is_logged_in): ?>
-          <li> <a class="delayed5" href="#">Le tue aste</a> </li>
+          <li> <a class="delayed5" href="grids.php?gallery_status=user_aste">Le tue aste</a> </li>
         <?php endif; ?>
         <li>
         <?php if ($is_logged_in): ?>
