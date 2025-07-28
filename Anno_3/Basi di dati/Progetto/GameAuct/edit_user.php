@@ -2,6 +2,10 @@
 <?php
     // Handle form submissions
     $edit = $_GET['edit'];
+    $minasta = (float)$_GET['minasta'];
+    $minpuntata = (float)$_GET['minpuntata'];
+    $idasta = (int)$_GET['idasta'];
+    //echo $ora;
     $stmt = $pdo->prepare("SELECT biografia FROM utente WHERE idutente = ?");
     $stmt->execute([$_SESSION['user_id']]);
     $bio = $stmt->fetch();
@@ -66,19 +70,47 @@
                 }
                 break;
             case 4:
+                $stmt = $pdo->prepare("SELECT pass FROM utente WHERE idutente = ?");
+                $stmt->execute([$_SESSION['user_id']]);
+                $oldPass = $stmt->fetch(); //Utilizzare fetchColumn()
+                if (!password_verify($_POST['passOld'], $oldPass['pass'])) {
+                    $_SESSION['error'] = "La password vecchia inserita non corrisponde alla tua password";
+                    header("Location: edit_user.php?edit=4");
+                    exit;
+                } else {
+                    if (empty(trim($_POST['passNew']))) {
+                        $_SESSION['error'] = "La nuova password inserita non è valida";
+                        header("Location: edit_user.php?edit=4");
+                        exit;
+                    }
+                    try {
+                        $stmt = $pdo->prepare("UPDATE utente SET pass = ? WHERE idutente = ?");
+                        $stmt->execute([password_hash($_POST['passNew'], PASSWORD_DEFAULT), $_SESSION['user_id']]);
+                        $_SESSION['successNewAsta'] = "Password modificata con successo";
+                        $edit = 0;
+                        header("Location: user.php");
+                        exit;
+                    } catch (PDOException $e) {
+                        $_SESSION['error'] = "Qualcosa è andato storto: " . $e->getMessage();
+                        header("Location: edit_user.php?edit=4");
+                        exit;
+                    }
+                }
                 break;
-        }
-        try {
-            $stmt = $pdo->prepare("INSERT INTO prodotto (nome, categoria) VALUES (?, ?)");
-            $stmt->execute([$nome, $categoria]);
-
-            $_SESSION['successNewAsta'] = "Hai inserito una nuova asta con successo";
-            header("Location: user.php");
-            exit;
-        } catch (PDOException $e) {
-            $_SESSION['error'] = "Qualcosa è andato storto: " . $e->getMessage();
-            header("Location: new_asta.php");
-            exit;
+            case 5:
+                try {
+                    $stmt = $pdo->prepare("INSERT INTO puntata (idasta, idutenteofferente, sommapuntata, datapuntata, orapuntata) VALUES (?, ?, ?, ?, ?)");
+                    $stmt->execute([$idasta, $_SESSION['user_id'], $_POST['puntata'], $oggi, $ora]);
+                    $_SESSION['successNewAsta'] = "Puntata effettuata con successo";
+                    $edit = 0;
+                    header("Location: user.php");
+                    exit;
+                } catch (PDOException $e) {
+                    $_SESSION['error'] = "Qualcosa è andato storto: " . $e->getMessage();
+                    header("Location: edit_user.php?edit=5");
+                    exit;
+                }
+                break;
         }
     }
 ?>
@@ -93,7 +125,7 @@
                     case 1:?>
                         <p>
                             <label>Inserisci la tua nuova email</label><br>
-                            <input type="text" name="mail" >
+                            <input type="text" name="mail" required>
                         </p>
                 <?php break; ?>
                 <?php case 2: ?>
@@ -105,15 +137,25 @@
                 <?php case 3: ?>
                     <p>
                             <label>Inserisci il tuo nuovo username</label><br>
-                            <input type="text" name="user" >
+                            <input type="text" name="user" required>
                     </p>
                 <?php break; ?>
                 <?php case 4: ?>
                     <p>
                             <label>Inserisci la vecchia password</label><br>
-                            <input type="text" name="passOld" >
+                            <input type="text" name="passOld" required><br>
                             <label>Inserisci la nuova password</label><br>
-                            <input type="text" name="passNew" >
+                            <input type="text" name="passNew" required>
+                    </p>
+                <?php break; ?>
+                <?php case 5: ?>
+                    <p>
+                            <label>Inserisci una somma da puntare per l'asta</label><br>
+                            <?php if (!empty($minpuntata)): ?>
+                                <input type="number" name="puntata" min="<?php echo $minpuntata; ?>"required><br>
+                            <?php else: ?>
+                                <input type="number" name="puntata" min="<?php echo $minasta;?>"required><br>
+                            <?php endif; ?>
                     </p>
                 <?php break; ?>
                 <?php endswitch; ?>

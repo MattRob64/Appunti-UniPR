@@ -2,7 +2,7 @@
     position: fixed; 
     top: 20px;
     left: 5%;
-    width: 100%;
+
     z-index: 9999; /* Ensures it stays above other content */
 
     display: table;
@@ -37,6 +37,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    text-shadow: 1px 1px 2px #e6f1e1, 0 0 1em #e6f1e1, 0 0 0.2em #e6f1e1;
 }
 
 /* Change the color of links on hover */
@@ -44,6 +45,7 @@
     background-color: #013833;
     border-radius: 25px;
     color: #e6f1e1;
+    text-shadow: none;
 }
 
 .topnav .logo svg path {

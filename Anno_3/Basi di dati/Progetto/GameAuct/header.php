@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/styles_register.css">
     <link rel="stylesheet" href="./styles/styles_user.css">
     <link rel="stylesheet" href="./styles/styles_gallery.css">
+    <link rel="stylesheet" href="./styles/styles_asta_page.css">
     <script src="https://kit.fontawesome.com/3f1192a822.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -30,6 +31,7 @@
 
       date_default_timezone_set(date_default_timezone_get());
       $oggi = date('Y-m-d', time());
+      $ora = date('H:i:s', time());
 
       // Fetch general data (replace with your actual query)
       /*$stmt = $pdo->query("
@@ -72,15 +74,16 @@
         </li>
         <li> <a class="delayed1" href="grids.php?gallery_status=gioco">Videogiochi</a> </li>
         <li> <a class="delayed2" href="grids.php?gallery_status=console">Console</a> </li>
+        <li> <a class="delayed2" href="grids.php?gallery_status=aste_old">Terminate</a> </li>
         <!-- <li> <a class="delayed3" href="index.php">Ultimi Annunci</a> </li> --> 
         <?php if ($is_logged_in): ?>
-          <li> <a class="delayed5" href="grids.php?gallery_status=user_aste">Le tue aste</a> </li>
+          <li> <a class="delayed4" href="grids.php?gallery_status=user_aste">Le tue aste</a> </li>
         <?php endif; ?>
         <li>
         <?php if ($is_logged_in): ?>
-          <a class="delayed4" href="user.php"><i class="fa-solid fa-user-astronaut"></i></a>
+          <a class="delayed5" href="user.php"><i class="fa-solid fa-user-astronaut"></i></a>
         <?php else: ?>
-          <a class="delayed4" href="login.php"><i class="fa-solid fa-user-secret"></i></a>
+          <a class="delayed5" href="login.php"><i class="fa-solid fa-user-secret"></i></a>
         <?php endif; ?>
         </li>
         <!-- <li> <a class="delayed5" href="#">Varie</a> </li>

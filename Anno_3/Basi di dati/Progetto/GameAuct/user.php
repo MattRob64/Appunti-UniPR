@@ -20,9 +20,10 @@
             <?php unset($_SESSION['successNewAsta']); ?>
         <?php endif; ?>
         <h1>Benvenuto nel tuo account <?php echo $dati_utente['nomeutente']; ?></h1>
-        <img class="user-avatar" src="http://goo.gl/ijai22" />
-        <a href="#">Cambia avatar</a>
-        <p>La tua e-mail: <?php echo $dati_utente['email']; ?> <a href="edit_user.php?edit=1">Cambia la tua email</a> </p>
+        <img class="user-avatar" src="<?php echo $dati_utente['avatar'];?>" width="80"/>
+        <a class="logout-butt" href="#">Cambia avatar</a>
+        <p>La tua e-mail: <?php echo $dati_utente['email']; ?> </p> 
+        <a class="logout-butt" href="edit_user.php?edit=1">Cambia la tua email</a> 
         <?php if (!is_null($dati_utente['biografia'])): ?>
             <h2>La tua biografia:</h2>
             <p class="bio"><?php echo $dati_utente['biografia']; ?></p>
@@ -33,7 +34,7 @@
         <a class="logout-butt" href="edit_user.php?edit=3">Modifica Nome Utente</a>
         <a class="logout-butt" href="edit_user.php?edit=4">Modifica Password</a>
         <a class="logout-butt" href="grids.php?gallery_status=user_aste">Le tue aste</a>
-        <a class="logout-butt" href="#">Le tue puntate</a>
+        <a class="logout-butt" href="grids.php?gallery_status=user_puntate">Le tue puntate</a>
         <a class="logout-butt" href="logout.php">Logout</a>
     </div>
 <?php include 'footer.html'?>

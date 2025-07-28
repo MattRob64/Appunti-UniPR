@@ -11,6 +11,7 @@
     // Handle form submissions
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errorAsta = false;
+        $inDb = false;
         $categoria = $_POST['categoria'];
         $titolo = $_POST['nomeAsta'];
         $desc = $_POST['descAsta'];
@@ -32,6 +33,7 @@
             }
         } else {
             $nome = $_POST['selNomeProd'];
+            $inDb = true;
         }
 
         if (empty(trim($titolo))) {
@@ -64,8 +66,12 @@
 
         //Inserimento nuova asta
         try {
-            $stmt = $pdo->prepare("INSERT INTO prodotto (nome, categoria) VALUES (?, ?)");
-            $stmt->execute([$nome, $categoria]);
+            if (!$inDb) {
+                $stmt = $pdo->prepare("INSERT INTO prodotto (nome, categoria) VALUES (?, ?)");
+                $stmt->execute([$nome, $categoria]);
+            } else {
+                $inDb = false;
+            }
             
             $stmt = $pdo->prepare("
             SELECT idprodotto 
