@@ -17,36 +17,21 @@ Ovviamente ogni puntata deve essere pi\'f9 alta della precedente.\
 L\'92utente che pubblica l'annuncio pu\'f2 concludere o eliminare l'asta prima della fine se ritiene che debba essere fatto.\
 \
 L'utente non pu\'f2 ritirare una puntata una volta che essa \'e8 stata confermata.\
-\
-
-\fs48 Struttura\
-
-\fs24 \
-Utente: Chi partecipa al sistema (venditori e acquirenti).\
-Prodotto: Modello generico (es. "PlayStation 1", "Super Mario 64"). Serve per catalogazione.\
-\
-Oggetto: Oggetto fisico specifico in vendita (es. "La mia PS1 con seriale XYZ"). Collega Prodotto e Annuncio.\
-\
-Annuncio: Asta attiva (contiene dati come prezzo di partenza, scadenza, ecc.).\
-Puntata: Offerta di un utente su un annuncio.\
-Tag: Categorie tematiche (es. "Retro", "Raro", "Nintendo").\
-\
-1 annuncio \'e8 composto da 1 utente che lo ha pubblicato e 1 prodotto che deve essere venduto\
-Annuncio(IdAnnuncio, IdUtente, IdProdotto, DataInizio, DataFine, BasePrezzo)\
-\
-Puntata(IdPuntata, IdAnnuncio, IdUtente, SommaPuntata, DataPuntata, OraPuntata)\
-1 utente pu\'f2 pubblicare pi\'f9 annunci, ma \
-\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - Vincolo: un utente non pu\'f2 puntare su un proprio annuncio\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
 
 \fs48 Schema Logico
 \fs24 \
 Tag(IDTag, NomeTag)\
-Prodotto(IDProdotto, Nome, Categoria, Condizione)\
-Utente(IDUtente, NomeUtente, Email, Password, Biografia, Avatar)\
-Asta(IDAsta, IDProdotto, IDUtentePubblicatore, Titolo, Descrizione, DataInizio, DataFine, BasePrezzo)\
-Puntata(IDPuntata, IDAnnuncio, IDUtenteOfferente, SommaPuntata, DataPuntata, OraPuntata)\
+Prodotto(IDProdotto, Nome, Categoria)\
+Utente(IDUtente, NomeUtente, Email, Pass, Biografia, Avatar)\
+Asta(IDAsta, IDProdotto, IDUtentePubblicatore, Titolo, Descrizione, DataInizio, DataFine, BasePrezzo, Condizione)\
+Puntata(IDPuntata, IDAsta, IDUtenteOfferente, SommaPuntata, DataPuntata, OraPuntata)\
+Immagine(IDImmagine, Path, IDAsta)\
 Relazioni:\
-Tag_Prodotto(IDTag, IDProdotto)                       -- \'c8 taggato con
+Tag_Asta(IDTag, IDAsta)              (Entrambe chiavi primarie, poich\'e8 un prodotto non pu\'f2 avere lo stesso tag)         -- \'c8 taggato con 
 \fs48 \
 \
 Idee per miglioramento (Da non implementare)\
@@ -57,14 +42,12 @@ Idee per miglioramento (Da non implementare)\
 - Messaggi: Una tabella per messaggi privati tra utenti.\
 - Storico: Tabelle per tracciare lo storico delle puntate e dei cambiamenti di stato.\
 - Segnalazioni: per contenuti inappropriati\
+- Visualizzazione profilo utente che ha pubblicato e utente che ha puntato\
+- Riattivazione asta: Dare la possibilit\'e0 di riattivare aste terminate senza puntate\
 \
 Sistema di autenticazione e profili:\
 - Entit\'e0 "Utente" con attributi come email, password_hash, nome, cognome, data_registrazione, ultimo_accesso\
 - Entit\'e0 "Profilo" collegata a Utente con informazioni aggiuntive come biografia, avatar, feedback_score\
-\
-Gestione delle aste:\
-- Entit\'e0 "Asta" separata da Annuncio, con attributi specifici come data_inizio, data_fine, prezzo_partenza, incremento_minimo, stato_asta\
-- Entit\'e0 "Offerta" per tracciare tutte le puntate con timestamp, importo, utente_offerente\
 \
 Sistema di pagamento e transazioni:\
 - Entit\'e0 "Transazione" per gestire pagamenti\
@@ -78,9 +61,6 @@ Categorizzazione avanzata:\
 \
 Storici e log:\
 - Entit\'e0 "Storico_Prezzi" per tracciare l'andamento dei valori\
-- Entit\'e0 "Log_Attivita" per audit trail delle azioni utente\
-\
-Vincolo: un utente non pu\'f2 puntare su un proprio annuncio\
-Riattivazione asta
+- Entit\'e0 "Log_Attivita" per audit trail delle azioni utente
 \fs48 \
 }

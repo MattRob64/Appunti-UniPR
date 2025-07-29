@@ -1,10 +1,10 @@
 <?php include 'header.php'?>
 <?php
-    $stmt = $pdo->query("
-    SELECT nomeutente, email, biografia, avatar 
+    //!! Gestire errore se utente prova ad accedere direttamente a pagina cambiando url
+    $stmt = $pdo->prepare("SELECT nomeutente, email, biografia, avatar 
     FROM utente 
-    WHERE idutente = " . $_SESSION['user_id']
-    . "");
+    WHERE idutente = ?");
+    $stmt->execute([$_SESSION['user_id']]);
     $dati_utente = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
     <div class="user-container">

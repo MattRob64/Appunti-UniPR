@@ -1,5 +1,6 @@
 <?php include 'header.php'?>
 <?php
+    //!! Gestire errore se utente prova ad accedere direttamente a pagina cambiando url
     $stmt = $pdo->query("
     SELECT nome 
     FROM prodotto 

@@ -1,5 +1,6 @@
 <?php include 'header.php'?>
 <?php
+    //!! Gestire errore se utente prova ad accedere direttamente a pagina cambiando url
     /** $edit variabile di stato con 5 stati:
      * 1: permette di cambiare la email
      * 2: permette di cambiare o aggiungere la bio

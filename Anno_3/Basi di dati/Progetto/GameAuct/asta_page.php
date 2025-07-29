@@ -1,5 +1,6 @@
 <?php include 'header.php'?>
 <?php
+    //!! Gestire errore se utente prova ad accedere direttamente a pagina cambiando url
     $idasta = $_GET['idasta'];
     //echo $idasta;
     $stmt = $pdo->prepare("SELECT a.*, p.nome AS nomeprodotto, p.categoria AS tipologia, u.nomeutente AS pubblicatore 
@@ -15,10 +16,9 @@
     $puntate = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt = $pdo->prepare("SELECT i.path AS path 
-    FROM img_asta ia 
-    JOIN immagine i ON ia.idimg = i.idimmagine 
-    JOIN asta a on ia.idasta = a.idasta 
-    WHERE ia.idasta = ?");
+    FROM immagine i
+    JOIN asta a ON i.idasta = a.idasta 
+    WHERE i.idasta = ?");
     $stmt->execute([$idasta]);
     $immagini = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

@@ -1,4 +1,5 @@
 <?php
+    //!! Gestire errore se utente prova ad accedere direttamente a pagina cambiando url
     $gal_title = '';
     $aste = '';
     $idasta = '';
