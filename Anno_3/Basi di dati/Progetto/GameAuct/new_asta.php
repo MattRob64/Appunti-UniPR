@@ -79,7 +79,7 @@
             WHERE nome = ?
             ");
             $stmt->execute([$nome]);
-            $idprodotto = $stmt->fetchColumn(); // cerca nella prima colonna della prima riga
+            $idprodotto = $stmt->fetchColumn(); // Cerca nella prima colonna della prima riga
 
             $stmt = $pdo->prepare("INSERT INTO asta (idprodotto, idutentepubblicatore, titolo, descrizione, datainizio, datafine, baseprezzo, condizione) VALUES (?, ?, ? , ? , ? , ?, ?, ?)");
             $stmt->execute([$idprodotto, $_SESSION['user_id'], $titolo, $desc, $dataInizio, $dataFine, $baseAsta, $stato]);

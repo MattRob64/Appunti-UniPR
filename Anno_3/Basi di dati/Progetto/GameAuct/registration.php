@@ -1,7 +1,8 @@
 <?php include 'header.php'?>
+    <!-- login e registrazione potevano essere fatti con un unica pagina e una variabile di stato--->
     <div class="register-container">
         <?php if (isset($_SESSION['user_id'])): ?>
-            <p>You are already logged in. <a href="user.php">Go to user page</a></p>
+            <p>Hai già eseguito l'accesso: <a href="user.php">Vai alla pagina utente</a></p>
         <?php else: ?>
             <h2>Registrazione</h2>
             
@@ -13,7 +14,7 @@
             <form method="POST">
                 <input type="hidden" name="register" value="1">
                 <p>
-                    <label>Username:</label><br>
+                    <label>Nome Utente:</label><br>
                     <input type="text" name="username" required>
                 </p>
                 <p>

@@ -1,12 +1,5 @@
 <?php include 'header.php'?>
 <?php
-    /** $edit variabile di stato con 4 stati
-     * 1: permette di cambiare la email
-     * 2: permette di cambiare o aggiungere la bio
-     * 3: permette di cambiare il nome utente
-     * 4: permette di modificare la password
-     * */
-    $edit = 0;
     $stmt = $pdo->query("
     SELECT nomeutente, email, biografia, avatar 
     FROM utente 

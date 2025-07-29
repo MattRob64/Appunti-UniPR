@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>GameAuct</title>
-    <link rel="icon" type="image/x-icon" href="./img/Favicon.ico"> 
+    <!-- <link rel="icon" type="image/x-icon" href="./img/Favicon.ico"> -->
     <link rel="stylesheet" href="./styles/styles_nav.css">
     <link rel="stylesheet" href="./styles/styles_body_standard.css">
     <link rel="stylesheet" href="./styles/style_footer.css">
@@ -21,32 +21,30 @@
     <?php
       //Inizializza la sessione e prende tutti i dati di sessione precedentemente creati
       session_start();
+      /**Inizializzazione variabile di stato gallery_status utilizzate nella pagina gallery.php
+       * newest: avvia una query che ottiene le ultime 20 aste attive ordinate per data di inizio
+       * user_aste: avvia una query che ottiene tutte le aste attive dell'utente (possibile miglioramento: visualizzare anche aste terminate)
+       * gioco: avvia una query che ottiene tutte le aste attive della categoria videogioco
+       * console: avvia una query che ottiene tutte le aste attive della categoria console
+       * aste_old: avvia una query che ottiene tutte le aste terminate
+       * user_puntate: avvia una query che ottiene tutte le puntate effettuate dall'utente (anche quelle su aste non più attive)
+       * */
       $gallery_status = '';
+
       //Controlla se l'utente è già loggato
-      $is_logged_in = isset($_SESSION['user_id']);
+      //$is_logged_in = isset($_SESSION['user_id']);
+      //Include script php per connessione al database
       include 'connection.php';
 
+      //Inizializzazione PHP Data Object per nell'header così da poterlo utilizzare ovunque
       $pdo = get_db_connection();
+      //Include script php per la gestione dell'utente
       include 'user_handling.php';
 
+      //Imposta data e ora corrente (nell'header) nel formato del database così da poterli utilizzare ovunque
       date_default_timezone_set(date_default_timezone_get());
       $oggi = date('Y-m-d', time());
       $ora = date('H:i:s', time());
-
-      // Fetch general data (replace with your actual query)
-      /*$stmt = $pdo->query("
-      SELECT item_id, item_name, description, created_at 
-      FROM public_data 
-      ORDER BY created_at DESC 
-      LIMIT 5
-      ");
-      $public_items = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
-
-      /*$result = pg_query($connection, "SELECT idutente, nomeutente, email, biografia, avatar FROM public.utente;");
-      if(!$result) {
-          echo "An Error Has Occured <br>";
-          exit;
-      }*/
     ?>
     <nav class="topnav">
 
@@ -75,19 +73,16 @@
         <li> <a class="delayed1" href="grids.php?gallery_status=gioco">Videogiochi</a> </li>
         <li> <a class="delayed2" href="grids.php?gallery_status=console">Console</a> </li>
         <li> <a class="delayed2" href="grids.php?gallery_status=aste_old">Terminate</a> </li>
-        <!-- <li> <a class="delayed3" href="index.php">Ultimi Annunci</a> </li> --> 
-        <?php if ($is_logged_in): ?>
+        <?php if (isset($_SESSION['user_id'])): ?>
           <li> <a class="delayed4" href="grids.php?gallery_status=user_aste">Le tue aste</a> </li>
         <?php endif; ?>
         <li>
-        <?php if ($is_logged_in): ?>
+        <?php if (isset($_SESSION['user_id'])): ?>
           <a class="delayed5" href="user.php"><i class="fa-solid fa-user-astronaut"></i></a>
         <?php else: ?>
           <a class="delayed5" href="login.php"><i class="fa-solid fa-user-secret"></i></a>
         <?php endif; ?>
         </li>
-        <!-- <li> <a class="delayed5" href="#">Varie</a> </li>
-        <li> <a class="delayed6" href="#">Contatti</a> </li> -->
 
       </ul>
 

@@ -1,6 +1,8 @@
 <?php include 'header.php'?>
 
     <?php 
+    // Molto simile a index.php cambia solo che viene utilizzato per visualizzare tutti gli altri tipi di gallerie
+    // Creato per non andare in conflitto con index
     $gallery_status = $_GET['gallery_status'];
     include 'gallery.php';?>
 

@@ -1,7 +1,8 @@
 <?php include 'header.php'?>
+    <!-- login e registrazione potevano essere fatti con un unica pagina e una variabile di stato--->
     <div class="login-container">
         <?php if (isset($_SESSION['user_id'])): ?>
-            <p>You are already logged in. <a href="user.php">Go to user page</a></p>
+            <p>Hai già eseguito l'accesso: <a href="user.php">Vai alla pagina utente</a></p>
         <?php else: ?>
             <h2>Accesso</h2>
             

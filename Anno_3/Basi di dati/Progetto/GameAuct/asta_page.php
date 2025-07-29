@@ -29,7 +29,7 @@
     <div class="asta-page-cont">
         <div class="container-contenuti">
             <div class="list-container">
-                <!-- Indicator Dots -->
+                <!-- Puntini Indicatori di Indice -->
                 <div class="indicators"></div>
                 <ul class="list">
                     <?php if(empty($immagini)): ?>
@@ -142,26 +142,32 @@
         const list = document.querySelector(".list");
         const items = document.querySelectorAll(".item");
 
+        // Vogliamo sapere la larghezza degli oggetti.
+        // Utilizziamo questa funzione per decidere di quanti pixel vogliamo che il nostro carosello si muova
         // We want to know the width of one of the items. 
         // We'll use this to decide how many pixels we want our carousel to scroll.
         const item = document.querySelector(".item");
         const itemHeight = item.offsetHeight;
 
+        // Inizializza l'indice attuale
         // Initialize the current index
         let currentIndex = 0;
-            
+
+        // Crea gli indicatori (Puntini in basso)
         // Create indicators
         const indicatorsContainer = document.querySelector(".indicators");
         items.forEach((_, index) => {
             const indicator = document.createElement("span");
             indicator.classList.add("indicator");
             if (index === 0) {
+                // Segna il primo come attivo all'inizio
                 // Mark the first as active initially
                 indicator.classList.add("active"); 
             }
             indicatorsContainer.appendChild(indicator);
         });
 
+        // Imposta l'indice attuale basandosi sulla posizione di scorrimento dopo il caricamento
         // Set the current index based on scroll position after loading
         function setCurrentIndexFromScroll() {
             const scrollTop = list.scrollTop;
@@ -169,6 +175,7 @@
             updateIndicators();
         }
 
+        // Aggiorna gli indicatori basandosi sull'indice attuale
         // Update indicators based on the current index
         function updateIndicators() {
             const indicators = document.querySelectorAll(".indicator");
@@ -182,7 +189,8 @@
         }
 
         function handleClick(direction) {
-            // Based on the direction we call `scrollBy` with the item width we got earlier
+            // Basandosi sulla direzione chiamiamo 'scrollBy' utilizzando la larghezza dell'oggetto che abbiamo ottenuto prima come parametro
+            // Based on the direction we call 'scrollBy' with the item width we got earlier
             if(direction === "previous" && currentIndex > 0) {
                 currentIndex -= 1;
                 list.scrollBy({ left: -itemHeight / 2, behavior: "smooth" });
@@ -199,9 +207,10 @@
             updateIndicators();
         }
 
+        // Inizializza l'indice attuale basandosi sulla posizione di scorrimento dopo un certo ritardo, per permettere al layout di caricarsi
         // Set initial current index based on scroll position after a delay to allow layout to load
         window.addEventListener("load", () => {
-            setTimeout(setCurrentIndexFromScroll, 200); // Adjust timeout if necessary
+            setTimeout(setCurrentIndexFromScroll, 200); // Tempo di timeout personalizzabile (Adjust timeout if necessary)
         });
     </script>
 <?php include 'footer.html'?>

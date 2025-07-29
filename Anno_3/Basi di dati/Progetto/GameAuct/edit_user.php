@@ -1,11 +1,25 @@
 <?php include 'header.php'?>
 <?php
-    // Handle form submissions
-    $edit = $_GET['edit'];
-    $minasta = (float)$_GET['minasta'];
-    $minpuntata = (float)$_GET['minpuntata'];
-    $idasta = (int)$_GET['idasta'];
-    //echo $ora;
+    /** $edit variabile di stato con 5 stati:
+     * 1: permette di cambiare la email
+     * 2: permette di cambiare o aggiungere la bio
+     * 3: permette di cambiare il nome utente
+     * 4: permette di modificare la password
+     * 5: permette di effettuare una puntata
+     * */
+    $edit = $_GET['edit']; //Prende edit dal link
+    
+    //Prende dato dal link solo se impostato così da evitare conflitti nel caso delle operazioni di modifica account
+    if (isset($_GET['minasta'])) {
+        $minasta = (float)$_GET['minasta'];
+    }
+    if (isset($_GET['minpuntata'])) {
+        $minpuntata = (float)$_GET['minpuntata'];
+    }
+    if (isset($_GET['idasta'])) {
+        $idasta = (int)$_GET['idasta'];
+    }
+
     $stmt = $pdo->prepare("SELECT biografia FROM utente WHERE idutente = ?");
     $stmt->execute([$_SESSION['user_id']]);
     $bio = $stmt->fetch();
