@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.robuschi.LoginController"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-background-color: #f5f5f5;">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Product Sales System" style="-fx-text-fill: #333333;">
+        <font>
+            <Font name="System Bold" size="28"/>
+        </font>
+    </Label>
+
+    <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 10;">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <Label text="Login" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="80"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200"/>
+            </columnConstraints>
+
+            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="usernameField"
+                       promptText="Enter username"
+                       GridPane.columnIndex="1"
+                       GridPane.rowIndex="0"/>
+
+            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <PasswordField fx:id="passwordField"
+                           promptText="Enter password"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+        </GridPane>
+
+        <Button text="Login"
+                onAction="#handleLogin"
+                defaultButton="true"
+                maxWidth="Infinity"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10;"/>
+    </VBox>
+
+    <Label text="Default users:&#10;admin / admin123&#10;user1 / password1&#10;user2 / password2"
+           style="-fx-text-fill: #666666; -fx-font-size: 11px;"
+           textAlignment="CENTER"/>
+
+</VBox>
