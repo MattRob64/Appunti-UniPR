@@ -37,7 +37,7 @@ public class LoginController {
         String password = passwordField.getText();
 
         if (username.isEmpty() || password.isEmpty()) {
-            showError("Please enter both username and password");
+            Protocol.InfoDialog.showError("Please enter both username and password");
             return;
         }
 
@@ -45,19 +45,6 @@ public class LoginController {
         Protocol.AuthCredentials credentials = new Protocol.AuthCredentials(username, password);
         Protocol.Message message = new Protocol.Message(Protocol.MessageType.AUTH_REQUEST, credentials);
         application.getNetworkManager().sendMessage(message);
-    }
-
-    /**
-     * Displays an error alert.
-     *
-     * @param message the error message
-     */
-    private void showError(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 
     /**

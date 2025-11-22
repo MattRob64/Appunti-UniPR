@@ -1,5 +1,7 @@
 package com.robuschi;
 
+import javafx.scene.control.Alert;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Protocol {
         PURCHASE_PRODUCT,
         RETURN_PRODUCT,
         ADD_NEW_PRODUCT,
+        USER_LOGOUT,
         CLOSE,
 
         // Server to Client
@@ -97,4 +100,33 @@ public class Protocol {
             return products;
         }
     }
+
+    public static class InfoDialog {
+        /**
+         * Displays an error alert.
+         *
+         * @param message the error message
+         */
+        public static void showError(String message) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+
+        /**
+         * Displays an information alert.
+         *
+         * @param message the information message
+         */
+        public static void showInfo(String message) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+    }
+
 }

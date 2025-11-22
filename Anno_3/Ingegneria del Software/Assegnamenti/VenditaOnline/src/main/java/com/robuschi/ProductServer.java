@@ -135,6 +135,9 @@ public class ProductServer {
                 case ADD_NEW_PRODUCT:
                     if (authenticated) handleAddProduct(message);
                     break;
+                case USER_LOGOUT:
+                    if (authenticated) handleUserLogout(message);
+                    break;
                 case CLOSE:
                     handleClose();
                     break;
@@ -183,19 +186,6 @@ public class ProductServer {
             }
         }
 
-        /*private void handleAddProduct(Protocol.Message message) throws IOException {
-            String productName = (String) message.getPayload();
-            synchronized (products) {
-                int newId = products.stream()
-                        .mapToInt(Product::getIdentifier)
-                        .max()
-                        .orElse(0) + 1;
-                Product newProduct = new Product(productName, 99.99, newId);
-                products.add(newProduct);
-                sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
-                System.out.println("New product added: " + productName);
-            }
-        }*/
         private void handleAddProduct(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
             synchronized (products) {
@@ -205,10 +195,13 @@ public class ProductServer {
                         .orElse(0) + 1;
                 Product newProduct = new Product(product.getName(), product.getPrice(), newId);
                 products.add(newProduct);
-                sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
-                System.out.println("New product added: " + product.getName() + " - €" +
-                        String.format("%.2f", product.getPrice()));
+                System.out.println("Product added successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
             }
+        }
+
+        private void handleUserLogout(Protocol.Message message) {
+            String username = (String) message.getPayload();
+            System.out.println("User disconnected: " + username);
         }
 
         private void handleClose() throws IOException {

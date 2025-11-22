@@ -3,6 +3,7 @@ package com.robuschi;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 
 import java.util.Optional;
@@ -69,7 +70,7 @@ public class MainController {
         Product selectedProduct = availableProductsList.getSelectionModel().getSelectedItem();
 
         if (selectedProduct == null) {
-            showError("Please select a product to purchase");
+            Protocol.InfoDialog.showError("Please select a product to purchase");
             return;
         }
 
@@ -88,7 +89,7 @@ public class MainController {
         Product selectedProduct = purchasedProductsList.getSelectionModel().getSelectedItem();
 
         if (selectedProduct == null) {
-            showError("Please select a product to return");
+            Protocol.InfoDialog.showError("Please select a product to return");
             return;
         }
 
@@ -100,29 +101,6 @@ public class MainController {
         purchasedProducts.remove(selectedProduct);
     }
 
-    /**
-     * Handles add product button action.
-     */
-    /*@FXML
-    private void handleAddProduct() {
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Add New Product");
-        dialog.setHeaderText("Add a new product type");
-        dialog.setContentText("Product name:");
-
-        Optional<String> result = dialog.showAndWait();
-        result.ifPresent(name -> {
-            if (!name.trim().isEmpty()) {
-                Protocol.Message message = new Protocol.Message(
-                        Protocol.MessageType.ADD_NEW_PRODUCT,
-                        name.trim()
-                );
-                application.getNetworkManager().sendMessage(message);
-                showInfo("Product added successfully");
-                requestProductList();
-            }
-        });
-    }*/
     /**
      * Handles add product button action.
      */
@@ -155,32 +133,50 @@ public class MainController {
 
         dialog.getDialogPane().setContent(grid);
 
+        // Get the Add button
+        Node addButton = dialog.getDialogPane().lookupButton(addButtonType);
+
+        // Add event filter to prevent closing on validation errors
+        addButton.addEventFilter(javafx.event.ActionEvent.ACTION, event -> {
+            String name = nameField.getText().trim();
+            String priceText = priceField.getText().trim();
+
+            // Validate name
+            if (name.isEmpty()) {
+                Protocol.InfoDialog.showError("Product name cannot be empty");
+                event.consume(); // Prevent dialog from closing
+                return;
+            }
+
+            // Validate price format
+            double price;
+            try {
+                price = Double.parseDouble(priceText);
+            } catch (NumberFormatException e) {
+                Protocol.InfoDialog.showError("Invalid price format. Please enter a valid number.");
+                event.consume(); // Prevent dialog from closing
+                return;
+            }
+
+            // Validate price value
+            if (price <= 0) {
+                Protocol.InfoDialog.showError("Price must be greater than 0");
+                event.consume(); // Prevent dialog from closing
+                return;
+            }
+
+            // If we reach here, validation passed - dialog will close normally
+        });
+
         // Request focus on name field
         javafx.application.Platform.runLater(() -> nameField.requestFocus());
 
         // Convert result when Add button is clicked
         dialog.setResultConverter(dialogButton -> {
             if (dialogButton == addButtonType) {
-                try {
-                    String name = nameField.getText().trim();
-                    double price = Double.parseDouble(priceField.getText().trim());
-
-                    if (name.isEmpty()) {
-                        showError("Product name cannot be empty");
-                        return null;
-                    }
-
-                    if (price <= 0) {
-                        showError("Price must be greater than 0");
-                        return null;
-                    }
-
-                    // Create temporary product (ID will be assigned by server)
-                    return new Product(name, price, 0);
-                } catch (NumberFormatException e) {
-                    showError("Invalid price format. Please enter a valid number.");
-                    return null;
-                }
+                String name = nameField.getText().trim();
+                double price = Double.parseDouble(priceField.getText().trim());
+                return new Product(name, price, 0);
             }
             return null;
         });
@@ -193,8 +189,7 @@ public class MainController {
                     product
             );
             application.getNetworkManager().sendMessage(message);
-            showInfo("Product added successfully: " + product.getName() + " - €" +
-                    String.format("%.2f", product.getPrice()));
+            Protocol.InfoDialog.showInfo("Product added successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
             requestProductList();
         });
     }
@@ -232,31 +227,5 @@ public class MainController {
      */
     public void addPurchasedProduct(Product product) {
         purchasedProducts.add(product);
-    }
-
-    /**
-     * Displays an error alert.
-     *
-     * @param message the error message
-     */
-    private void showError(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-
-    /**
-     * Displays an information alert.
-     *
-     * @param message the information message
-     */
-    private void showInfo(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 }

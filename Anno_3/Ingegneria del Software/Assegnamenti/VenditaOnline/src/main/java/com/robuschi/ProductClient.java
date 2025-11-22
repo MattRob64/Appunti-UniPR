@@ -20,6 +20,8 @@ public class ProductClient extends Application {
     private NetworkManager networkManager;
     private MainController mainController;
 
+    private String username;
+
     /**
      * Starts the JavaFX application.
      *
@@ -54,6 +56,14 @@ public class ProductClient extends Application {
         primaryStage.show();
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
     /**
      * Shows the login view.
      */
@@ -70,21 +80,21 @@ public class ProductClient extends Application {
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
-            showError("Error loading login view: " + e.getMessage());
+            Protocol.InfoDialog.showError("Error loading login view: " + e.getMessage());
         }
     }
 
     /**
      * Shows the main application view.
      */
-    private void showMainView(String usrLbl) {
+    private void showMainView() {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/com/robuschi/main.fxml"));
             Scene scene = new Scene(loader.load(), 800, 600);
             scene.getStylesheets().add(getClass().getResource("mainStyle.css").toExternalForm());
 
-            String userLabel = String.format("(" + usrLbl + ")");
+            String userLabel = String.format("(" + getUsername() + ")");
 
             mainController = loader.getController();
             mainController.setApplication(this);
@@ -93,7 +103,7 @@ public class ProductClient extends Application {
             primaryStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
-            showError("Error loading main view: " + e.getMessage());
+            Protocol.InfoDialog.showError("Error loading main view: " + e.getMessage());
         }
     }
 
@@ -105,12 +115,12 @@ public class ProductClient extends Application {
     private void handleServerMessage(Protocol.Message message) {
         switch (message.getType()) {
             case AUTH_SUCCESS:
-                //System.out.print("!!!User: " + message.getPayload() + "!!!");
-                showMainView(message.getPayload().toString());
+                setUsername(message.getPayload().toString());
+                showMainView();
                 break;
 
             case AUTH_FAILED:
-                showError("Authentication failed. Invalid credentials.");
+                Protocol.InfoDialog.showError("Authentication failed. Invalid credentials.");
                 break;
 
             case PRODUCT_LIST:
@@ -124,25 +134,25 @@ public class ProductClient extends Application {
                 if (mainController != null) {
                     Product product = (Product) message.getPayload();
                     mainController.addPurchasedProduct(product);
-                    showInfo("Product purchased: " + product.getName());
+                    Protocol.InfoDialog.showInfo("Product purchased: " + product.getName());
                     // Request updated list
                     networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.GET_PRODUCTS));
                 }
                 break;
 
             case RETURN_ACCEPTED:
-                showInfo("Product returned successfully");
+                Protocol.InfoDialog.showInfo("Product returned successfully");
                 // Request updated list
                 networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.GET_PRODUCTS));
                 break;
 
             case SERVER_CLOSE:
-                showInfo("Server is closing");
+                Protocol.InfoDialog.showInfo("Server is closing");
                 Platform.exit();
                 break;
 
             case ERROR:
-                showError((String) message.getPayload());
+                Protocol.InfoDialog.showError((String) message.getPayload());
                 break;
         }
     }
@@ -151,8 +161,10 @@ public class ProductClient extends Application {
      * Logs out and closes the application.
      */
     public void logout() {
+        networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT, getUsername()));
         networkManager.disconnect();
-        Platform.exit();
+        start(primaryStage);
+        //Platform.exit();
     }
 
     /**
@@ -162,32 +174,6 @@ public class ProductClient extends Application {
      */
     public NetworkManager getNetworkManager() {
         return networkManager;
-    }
-
-    /**
-     * Displays an error alert.
-     *
-     * @param message the error message
-     */
-    private void showError(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-
-    /**
-     * Displays an information alert.
-     *
-     * @param message the information message
-     */
-    private void showInfo(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 
     /**
