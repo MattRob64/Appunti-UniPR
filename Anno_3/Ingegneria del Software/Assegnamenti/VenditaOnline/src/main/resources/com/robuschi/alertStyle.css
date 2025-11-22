@@ -1,0 +1,34 @@
+/* The main container of the alert */
+.dialog-pane {
+    -fx-background-color: rgb(192,216,184);
+    -fx-font-family: "Courier New Bold";
+}
+
+/* The text content area */
+.dialog-pane > .content.label {
+    -fx-text-fill: rgb(65,20,25); /* Light text color */
+    -fx-font-size: 14px;
+}
+
+/* The header (if you use setHeaderText) */
+.dialog-pane:header .header-panel {
+    -fx-background-color: rgb(192,216,184);
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-text-fill: rgb(65,20,25);
+    -fx-font-size: 18px;
+}
+
+/* The buttons themselves */
+.button {
+    -fx-background-color: rgba(76,98,120,1);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: rgba(76,98,120,0.9);
+}

@@ -45,7 +45,7 @@
                 <Region HBox.hgrow="ALWAYS"/>
 
                 <Button id="logoutButton"
-                        text="Logout"
+                        text="Logout and Exit"
                         onAction="#handleLogout"/>
             </HBox>
         </VBox>

@@ -167,10 +167,11 @@ public class ProductServer {
 
         private void handlePurchase(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
+            String username = message.getUsername();
             synchronized (products) {
                 if (products.remove(product)) {
                     sendMessage(new Protocol.Message(Protocol.MessageType.PRODUCT_PURCHASED, product));
-                    System.out.println("Product purchased: " + product.getName());
+                    System.out.println("Product ("+ product.getName() + ") purchased by user: " + username);
                 } else {
                     sendMessage(new Protocol.Message(Protocol.MessageType.ERROR, "Product not available"));
                 }
@@ -179,15 +180,17 @@ public class ProductServer {
 
         private void handleReturn(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
+            String username = message.getUsername();
             synchronized (products) {
                 products.add(product);
                 sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
-                System.out.println("Product returned: " + product.getName());
+                System.out.println("Product ("+ product.getName() + ") returned by user: " + username);
             }
         }
 
         private void handleAddProduct(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
+            String username = message.getUsername();
             synchronized (products) {
                 int newId = products.stream()
                         .mapToInt(Product::getIdentifier)
@@ -195,7 +198,7 @@ public class ProductServer {
                         .orElse(0) + 1;
                 Product newProduct = new Product(product.getName(), product.getPrice(), newId);
                 products.add(newProduct);
-                System.out.println("Product added successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
+                System.out.println("user:" + username + " added a product successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
             }
         }
 

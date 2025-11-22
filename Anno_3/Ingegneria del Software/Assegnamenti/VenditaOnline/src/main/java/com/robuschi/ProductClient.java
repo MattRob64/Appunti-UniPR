@@ -36,7 +36,7 @@ public class ProductClient extends Application {
 
         // Connect to server
         if (!networkManager.connect()) {
-            showErrorAndExit("Cannot connect to server!\n\n" +
+            Protocol.InfoDialog.showErrorAndExit("Cannot connect to server!\n\n" +
                     "Please ensure the server is running first.\n" +
                     "Start the server with: java com.productsales.server.ProductServer");
             return;
@@ -163,8 +163,7 @@ public class ProductClient extends Application {
     public void logout() {
         networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT, getUsername()));
         networkManager.disconnect();
-        start(primaryStage);
-        //Platform.exit();
+        Platform.exit();
     }
 
     /**
@@ -174,21 +173,6 @@ public class ProductClient extends Application {
      */
     public NetworkManager getNetworkManager() {
         return networkManager;
-    }
-
-    /**
-     * Displays an error and exits the application.
-     *
-     * @param message the error message
-     */
-    private void showErrorAndExit(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        System.out.print("Connection Error");
-        alert.setTitle("Connection Error");
-        alert.setHeaderText("Cannot Start Application");
-        alert.setContentText(message);
-        alert.showAndWait();
-        Platform.exit();
     }
 
     /**

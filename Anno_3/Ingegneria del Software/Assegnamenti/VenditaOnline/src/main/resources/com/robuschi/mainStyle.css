@@ -18,6 +18,7 @@
     -fx-background-radius: 25px;
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
+    -fx-cursor: hand;
 }
 
 #addButton {
@@ -25,6 +26,7 @@
     -fx-background-radius: 25px;
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
+    -fx-cursor: hand;
 }
 
 #logoutButton {
@@ -32,6 +34,7 @@
     -fx-background-radius: 25px;
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
+    -fx-cursor: hand;
 }
 
 .mainLabel {
@@ -55,6 +58,7 @@
     -fx-padding: 10px;
     -fx-font-size: 14px;
     -fx-background-radius: 25px;
+    -fx-cursor: hand;
 }
 
 .mainList .list-cell:hover {
@@ -89,6 +93,7 @@
 /* 4. Darken the thumb when the user hovers over the scrollbar area */
 .list-view .scroll-bar:vertical:hover .thumb {
     -fx-background-color: rgba(65,20,25,0.8);
+    -fx-cursor: hand;
 }
 
 .list-view .scroll-bar:vertical .increment-button,
@@ -104,6 +109,7 @@
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
     -fx-padding: 10px;
+    -fx-cursor: hand;
 }
 
 #returnButton {
@@ -112,4 +118,5 @@
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
     -fx-padding: 10px;
+    -fx-cursor: hand;
 }

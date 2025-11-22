@@ -1,6 +1,8 @@
 package com.robuschi;
 
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 
 import java.io.Serializable;
 import java.util.List;
@@ -42,14 +44,20 @@ public class Protocol {
 
         private final MessageType type;
         private final Object payload;
+        private final String username;
 
-        public Message(MessageType type, Object payload) {
+        public Message(MessageType type, Object payload, String username) {
             this.type = type;
             this.payload = payload;
+            this.username = username;
+        }
+
+        public Message(MessageType type, Object payload) {
+            this(type, payload, null);
         }
 
         public Message(MessageType type) {
-            this(type, null);
+            this(type, null, null);
         }
 
         public MessageType getType() {
@@ -58,6 +66,10 @@ public class Protocol {
 
         public Object getPayload() {
             return payload;
+        }
+
+        public String getUsername() {
+            return username;
         }
     }
 
@@ -103,6 +115,25 @@ public class Protocol {
 
     public static class InfoDialog {
         /**
+         * Displays an error and exits the application.
+         *
+         * @param message the error message
+         */
+        public static void showErrorAndExit(String message) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            System.out.print("Connection Error");
+            alert.setTitle("Connection Error");
+            alert.setHeaderText("Cannot Start Application");
+            alert.setContentText(message);
+
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add(InfoDialog.class.getResource("alertStyle.css").toExternalForm());
+
+            alert.showAndWait();
+            Platform.exit();
+        }
+
+        /**
          * Displays an error alert.
          *
          * @param message the error message
@@ -112,6 +143,10 @@ public class Protocol {
             alert.setTitle("Error");
             alert.setHeaderText(null);
             alert.setContentText(message);
+
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add(InfoDialog.class.getResource("alertStyle.css").toExternalForm());
+
             alert.showAndWait();
         }
 
@@ -125,6 +160,10 @@ public class Protocol {
             alert.setTitle("Information");
             alert.setHeaderText(null);
             alert.setContentText(message);
+
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add(InfoDialog.class.getResource("alertStyle.css").toExternalForm());
+
             alert.showAndWait();
         }
     }

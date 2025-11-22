@@ -41,6 +41,10 @@ public class MainController {
         this.userLabel.setText(usrLbl);
     }
 
+    public String getUserLabelContent() {
+        return userLabel.getText();
+    }
+
     /**
      * Initializes the controller.
      * Called automatically by JavaFX.
@@ -76,7 +80,8 @@ public class MainController {
 
         Protocol.Message message = new Protocol.Message(
                 Protocol.MessageType.PURCHASE_PRODUCT,
-                selectedProduct
+                selectedProduct,
+                getUserLabelContent()
         );
         application.getNetworkManager().sendMessage(message);
     }
@@ -95,7 +100,8 @@ public class MainController {
 
         Protocol.Message message = new Protocol.Message(
                 Protocol.MessageType.RETURN_PRODUCT,
-                selectedProduct
+                selectedProduct,
+                getUserLabelContent()
         );
         application.getNetworkManager().sendMessage(message);
         purchasedProducts.remove(selectedProduct);
@@ -186,7 +192,8 @@ public class MainController {
             // Send product data to server
             Protocol.Message message = new Protocol.Message(
                     Protocol.MessageType.ADD_NEW_PRODUCT,
-                    product
+                    product,
+                    getUserLabelContent()
             );
             application.getNetworkManager().sendMessage(message);
             Protocol.InfoDialog.showInfo("Product added successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
