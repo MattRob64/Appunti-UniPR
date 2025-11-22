@@ -13,38 +13,40 @@
 <BorderPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.robuschi.MainController"
-            style="-fx-background-color: #f5f5f5;">
+            id="mainPane">
 
     <padding>
         <Insets top="10" right="10" bottom="10" left="10"/>
     </padding>
 
     <top>
-        <VBox spacing="10" style="-fx-background-color: white; -fx-background-radius: 5;">
+        <VBox styleClass="mainBox" spacing="10">
             <padding>
                 <Insets top="15" right="15" bottom="15" left="15"/>
             </padding>
 
-            <Label text="Product Management" style="-fx-text-fill: #333333;">
-                <font>
-                    <Font name="System Bold" size="22"/>
-                </font>
-            </Label>
+            <HBox spacing="10">
+                <Label styleClass="mainTitle" text="Product Management" >
+                </Label>
+
+                <Label styleClass="mainTitle" fx:id="userLabel" text="(User)">
+                </Label>
+            </HBox>
 
             <HBox spacing="10">
-                <Button text="Refresh Products"
-                        onAction="#handleRefresh"
-                        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button id="refreshButton"
+                        text="Refresh Products"
+                        onAction="#handleRefresh"/>
 
-                <Button text="Add New Product"
-                        onAction="#handleAddProduct"
-                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button id="addButton"
+                        text="Add New Product"
+                        onAction="#handleAddProduct"/>
 
                 <Region HBox.hgrow="ALWAYS"/>
 
-                <Button text="Logout"
-                        onAction="#handleLogout"
-                        style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button id="logoutButton"
+                        text="Logout"
+                        onAction="#handleLogout"/>
             </HBox>
         </VBox>
     </top>
@@ -55,34 +57,34 @@
                 <Insets top="10" right="0" bottom="0" left="0"/>
             </padding>
 
-            <VBox spacing="10" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+            <VBox styleClass="mainBox" spacing="10" HBox.hgrow="ALWAYS">
                 <padding>
                     <Insets top="15" right="15" bottom="15" left="15"/>
                 </padding>
 
-                <Label text="Available Products" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+                <Label styleClass="mainLabel" text="Available Products"/>
 
-                <ListView fx:id="availableProductsList" VBox.vgrow="ALWAYS"/>
+                <ListView styleClass="mainList" fx:id="availableProductsList" VBox.vgrow="ALWAYS"/>
 
-                <Button text="Purchase Selected"
+                <Button id="purchaseButton"
+                        text="Purchase Selected"
                         onAction="#handlePurchase"
-                        maxWidth="Infinity"
-                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10;"/>
+                        maxWidth="Infinity"/>
             </VBox>
 
-            <VBox spacing="10" HBox.hgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 5;">
+            <VBox styleClass="mainBox" spacing="10" HBox.hgrow="ALWAYS">
                 <padding>
                     <Insets top="15" right="15" bottom="15" left="15"/>
                 </padding>
 
-                <Label text="My Purchased Products" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+                <Label styleClass="mainLabel" text="My Purchased Products"/>
 
-                <ListView fx:id="purchasedProductsList" VBox.vgrow="ALWAYS"/>
+                <ListView styleClass="mainList" fx:id="purchasedProductsList" VBox.vgrow="ALWAYS"/>
 
-                <Button text="Return Selected"
+                <Button id="returnButton"
+                        text="Return Selected"
                         onAction="#handleReturn"
-                        maxWidth="Infinity"
-                        style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10;"/>
+                        maxWidth="Infinity"/>
             </VBox>
         </HBox>
     </center>

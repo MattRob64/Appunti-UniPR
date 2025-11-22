@@ -19,6 +19,9 @@ public class MainController {
     @FXML
     private ListView<Product> purchasedProductsList;
 
+    @FXML
+    private Label userLabel;
+
     private ProductClient application;
     private ObservableList<Product> availableProducts;
     private ObservableList<Product> purchasedProducts;
@@ -31,6 +34,10 @@ public class MainController {
     public void setApplication(ProductClient application) {
         this.application = application;
         requestProductList();
+    }
+
+    public void setUserLabel(String usrLbl) {
+        this.userLabel.setText(usrLbl);
     }
 
     /**
@@ -96,7 +103,7 @@ public class MainController {
     /**
      * Handles add product button action.
      */
-    @FXML
+    /*@FXML
     private void handleAddProduct() {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Add New Product");
@@ -114,6 +121,81 @@ public class MainController {
                 showInfo("Product added successfully");
                 requestProductList();
             }
+        });
+    }*/
+    /**
+     * Handles add product button action.
+     */
+    @FXML
+    private void handleAddProduct() {
+        // Create custom dialog
+        Dialog<Product> dialog = new Dialog<>();
+        dialog.setTitle("Add New Product");
+        dialog.setHeaderText("Enter product details");
+
+        // Set button types
+        ButtonType addButtonType = new ButtonType("Add", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(addButtonType, ButtonType.CANCEL);
+
+        // Create the form
+        javafx.scene.layout.GridPane grid = new javafx.scene.layout.GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new javafx.geometry.Insets(20, 150, 10, 10));
+
+        TextField nameField = new TextField();
+        nameField.setPromptText("Product name");
+        TextField priceField = new TextField();
+        priceField.setPromptText("Product price");
+
+        grid.add(new Label("Name:"), 0, 0);
+        grid.add(nameField, 1, 0);
+        grid.add(new Label("Price:"), 0, 1);
+        grid.add(priceField, 1, 1);
+
+        dialog.getDialogPane().setContent(grid);
+
+        // Request focus on name field
+        javafx.application.Platform.runLater(() -> nameField.requestFocus());
+
+        // Convert result when Add button is clicked
+        dialog.setResultConverter(dialogButton -> {
+            if (dialogButton == addButtonType) {
+                try {
+                    String name = nameField.getText().trim();
+                    double price = Double.parseDouble(priceField.getText().trim());
+
+                    if (name.isEmpty()) {
+                        showError("Product name cannot be empty");
+                        return null;
+                    }
+
+                    if (price <= 0) {
+                        showError("Price must be greater than 0");
+                        return null;
+                    }
+
+                    // Create temporary product (ID will be assigned by server)
+                    return new Product(name, price, 0);
+                } catch (NumberFormatException e) {
+                    showError("Invalid price format. Please enter a valid number.");
+                    return null;
+                }
+            }
+            return null;
+        });
+
+        Optional<Product> result = dialog.showAndWait();
+        result.ifPresent(product -> {
+            // Send product data to server
+            Protocol.Message message = new Protocol.Message(
+                    Protocol.MessageType.ADD_NEW_PRODUCT,
+                    product
+            );
+            application.getNetworkManager().sendMessage(message);
+            showInfo("Product added successfully: " + product.getName() + " - €" +
+                    String.format("%.2f", product.getPrice()));
+            requestProductList();
         });
     }
 

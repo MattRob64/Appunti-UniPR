@@ -1,0 +1,115 @@
+#mainPane {
+    -fx-background-color: rgb(192,216,184);
+}
+
+.mainBox {
+    -fx-background-color: rgb(169,163,105);
+    -fx-background-radius: 25px;
+}
+
+.mainTitle {
+    -fx-font-family: "Courier New Bold";
+    -fx-font-size: 22;
+    -fx-text-fill: rgb(65,20,25);
+}
+
+#refreshButton {
+    -fx-background-color: rgb(76,98,120);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+}
+
+#addButton {
+    -fx-background-color: rgb(85,107,89);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+}
+
+#logoutButton {
+    -fx-background-color: rgb(170,74,68);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+}
+
+.mainLabel {
+    -fx-font-family: "Courier New Bold";
+    -fx-text-fill: rgb(65,20,25);
+    -fx-font-size: 16px;
+}
+
+.mainList {
+    -fx-background-color: rgb(238,237,192);
+    -fx-border-color: rgb(238,237,192);
+    -fx-border-width: 1px;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-padding: 10px;
+}
+
+.mainList .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(65,20,25);
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-background-radius: 25px;
+}
+
+.mainList .list-cell:hover {
+    -fx-background-color: rgba(169,163,105,0.4);
+}
+
+.mainList .list-cell:selected {
+    -fx-background-color: rgba(169,163,105,0.9);
+    -fx-text-fill: rgb(65,20,25);
+}
+
+/* 1. Target the vertical scrollbar inside the list view */
+.list-view .scroll-bar:vertical {
+    /* Remove the default grey background */
+    -fx-background-color: rgba(169,163,105,0.4);
+    -fx-background-radius: 25px;
+
+    /* Adjust width to be thinner/sleeker */
+    -fx-pref-width: 12;
+    -fx-padding: 0 2 0 2; /* Add padding to float it slightly */
+}
+
+/* 3. Style the Thumb (the draggable part) */
+.list-view .scroll-bar:vertical .thumb {
+    /* A subtle grey color */
+    -fx-background-color: rgba(65,20,25,0.6);
+
+    /* Make it a rounded pill shape */
+    -fx-background-radius: 25px;
+}
+
+/* 4. Darken the thumb when the user hovers over the scrollbar area */
+.list-view .scroll-bar:vertical:hover .thumb {
+    -fx-background-color: rgba(65,20,25,0.8);
+}
+
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+}
+
+#purchaseButton {
+    -fx-background-color: rgb(85,107,89);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+    -fx-padding: 10px;
+}
+
+#returnButton {
+    -fx-background-color: rgb(178,93,51);
+    -fx-background-radius: 25px;
+    -fx-text-fill: rgb(245,240,230);
+    -fx-font-family: "Courier New Bold";
+    -fx-padding: 10px;
+}

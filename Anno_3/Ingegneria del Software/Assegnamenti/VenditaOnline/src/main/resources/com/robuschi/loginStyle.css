@@ -1,0 +1,42 @@
+#loginWindow{
+    -fx-background-color: rgb(192,216,184);
+}
+
+#loginTitle {
+    -fx-font-family: "Courier New Bold";
+    -fx-font-size: 28;
+    -fx-text-fill: rgb(65,20,25);
+}
+
+#loginInnerWindow {
+    -fx-background-color: rgb(169,163,105);
+    -fx-background-radius: 25;
+}
+
+#loginLabel {
+    -fx-font-family: "Courier New Bold";
+    -fx-font-size: 18;
+    -fx-text-fill: rgb(65,20,25);
+}
+
+.loginField {
+    -fx-background-color: rgb(238,237,192);
+    -fx-prompt-text-fill: rgba(65,20,25,0.3);
+    -fx-text-fill: rgb(65,20,25);
+    -fx-background-radius: 25;
+}
+
+#loginButton {
+    -fx-background-color: rgb(238,237,192);
+    -fx-font-family: "Courier New Bold";
+    -fx-font-size: 14px;
+    -fx-text-fill: rgb(65,20,25);
+    -fx-padding: 10;
+    -fx-background-radius: 25;
+}
+
+#loginFooterLabel {
+    -fx-font-family: "Courier New Bold";
+    -fx-font-size: 11;
+    -fx-text-fill: rgb(65,20,25);
+}

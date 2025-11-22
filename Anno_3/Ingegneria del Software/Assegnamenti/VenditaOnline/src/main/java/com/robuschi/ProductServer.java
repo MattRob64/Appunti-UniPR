@@ -147,7 +147,7 @@ public class ProductServer {
 
             if (storedPassword != null && storedPassword.equals(creds.getPassword())) {
                 authenticated = true;
-                sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_SUCCESS));
+                sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_SUCCESS, creds.getUsername()));
                 System.out.println("User authenticated: " + creds.getUsername());
             } else {
                 sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_FAILED));
@@ -183,7 +183,7 @@ public class ProductServer {
             }
         }
 
-        private void handleAddProduct(Protocol.Message message) throws IOException {
+        /*private void handleAddProduct(Protocol.Message message) throws IOException {
             String productName = (String) message.getPayload();
             synchronized (products) {
                 int newId = products.stream()
@@ -194,6 +194,20 @@ public class ProductServer {
                 products.add(newProduct);
                 sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
                 System.out.println("New product added: " + productName);
+            }
+        }*/
+        private void handleAddProduct(Protocol.Message message) throws IOException {
+            Product product = (Product) message.getPayload();
+            synchronized (products) {
+                int newId = products.stream()
+                        .mapToInt(Product::getIdentifier)
+                        .max()
+                        .orElse(0) + 1;
+                Product newProduct = new Product(product.getName(), product.getPrice(), newId);
+                products.add(newProduct);
+                sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
+                System.out.println("New product added: " + product.getName() + " - €" +
+                        String.format("%.2f", product.getPrice()));
             }
         }
 

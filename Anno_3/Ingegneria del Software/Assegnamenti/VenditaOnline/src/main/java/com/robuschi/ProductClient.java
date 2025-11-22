@@ -2,6 +2,7 @@ package com.robuschi;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -60,7 +61,8 @@ public class ProductClient extends Application {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/com/robuschi/login.fxml"));
-            Scene scene = new Scene(loader.load(), 400, 300);
+            Scene scene = new Scene(loader.load(), 500, 400);
+            scene.getStylesheets().add(getClass().getResource("loginStyle.css").toExternalForm());
 
             LoginController controller = loader.getController();
             controller.setApplication(this);
@@ -75,14 +77,18 @@ public class ProductClient extends Application {
     /**
      * Shows the main application view.
      */
-    private void showMainView() {
+    private void showMainView(String usrLbl) {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/com/robuschi/main.fxml"));
             Scene scene = new Scene(loader.load(), 800, 600);
+            scene.getStylesheets().add(getClass().getResource("mainStyle.css").toExternalForm());
+
+            String userLabel = String.format("(" + usrLbl + ")");
 
             mainController = loader.getController();
             mainController.setApplication(this);
+            mainController.setUserLabel(userLabel);
 
             primaryStage.setScene(scene);
         } catch (IOException e) {
@@ -99,7 +105,8 @@ public class ProductClient extends Application {
     private void handleServerMessage(Protocol.Message message) {
         switch (message.getType()) {
             case AUTH_SUCCESS:
-                showMainView();
+                //System.out.print("!!!User: " + message.getPayload() + "!!!");
+                showMainView(message.getPayload().toString());
                 break;
 
             case AUTH_FAILED:
