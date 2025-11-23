@@ -10,7 +10,7 @@
 
 #loginInnerWindow {
     -fx-background-color: rgb(169,163,105);
-    -fx-background-radius: 25;
+    -fx-background-radius: 25px;
 }
 
 #loginLabel {
@@ -23,7 +23,7 @@
     -fx-background-color: rgb(238,237,192);
     -fx-prompt-text-fill: rgba(65,20,25,0.3);
     -fx-text-fill: rgb(65,20,25);
-    -fx-background-radius: 25;
+    -fx-background-radius: 25px;
 }
 
 #loginButton {
@@ -32,7 +32,7 @@
     -fx-font-size: 14px;
     -fx-text-fill: rgb(65,20,25);
     -fx-padding: 10;
-    -fx-background-radius: 25;
+    -fx-background-radius: 25px;
 }
 
 #loginFooterLabel {

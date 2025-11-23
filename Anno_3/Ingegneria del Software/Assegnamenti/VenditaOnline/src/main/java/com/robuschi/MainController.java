@@ -59,14 +59,6 @@ public class MainController {
     }
 
     /**
-     * Handles refresh button action.
-     */
-    @FXML
-    private void handleRefresh() {
-        requestProductList();
-    }
-
-    /**
      * Handles purchase button action.
      */
     @FXML
@@ -112,6 +104,7 @@ public class MainController {
     private void handleAddProduct() {
         // Create custom dialog
         Dialog<Product> dialog = new Dialog<>();
+        dialog.getDialogPane().getStylesheets().add(getClass().getResource("alertStyle.css").toExternalForm());
         dialog.setTitle("Add New Product");
         dialog.setHeaderText("Enter product details");
 

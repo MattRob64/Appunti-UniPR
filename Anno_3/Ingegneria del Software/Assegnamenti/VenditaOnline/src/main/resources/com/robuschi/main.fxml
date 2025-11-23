@@ -34,10 +34,6 @@
             </HBox>
 
             <HBox spacing="10">
-                <Button id="refreshButton"
-                        text="Refresh Products"
-                        onAction="#handleRefresh"/>
-
                 <Button id="addButton"
                         text="Add New Product"
                         onAction="#handleAddProduct"/>

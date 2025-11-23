@@ -6,7 +6,7 @@
 
 /* The text content area */
 .dialog-pane > .content.label {
-    -fx-text-fill: rgb(65,20,25); /* Light text color */
+    -fx-text-fill: rgb(65,20,25);
     -fx-font-size: 14px;
 }
 
@@ -18,6 +18,18 @@
 .dialog-pane:header .header-panel .label {
     -fx-text-fill: rgb(65,20,25);
     -fx-font-size: 18px;
+}
+
+.label {
+    -fx-text-fill: rgb(65,20,25);
+    -fx-font-size: 14px;
+}
+
+.text-field {
+    -fx-background-color: rgb(238,237,192);
+    -fx-prompt-text-fill: rgba(65,20,25,0.3);
+    -fx-text-fill: rgb(65,20,25);
+    -fx-background-radius: 25;
 }
 
 /* The buttons themselves */

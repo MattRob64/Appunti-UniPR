@@ -118,18 +118,23 @@ public class ProductServer {
      */
     private String getConnectedUsernames() {
         synchronized (connectedClients) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("[");
-            boolean first = true;
-            for (ClientHandler client : connectedClients) {
-                if (client.authenticated && client.username != null) {
-                    if (!first) sb.append(", ");
-                    sb.append(client.username);
-                    first = false;
-                }
+            if (connectedClients.isEmpty()) {
+                return "No active clients";
             }
-            sb.append("]");
-            return sb.toString();
+            else {
+                StringBuilder sb = new StringBuilder();
+                sb.append("[");
+                boolean first = true;
+                for (ClientHandler client : connectedClients) {
+                    if (client.authenticated && client.username != null) {
+                        if (!first) sb.append(", ");
+                        sb.append(client.username);
+                        first = false;
+                    }
+                }
+                sb.append("]");
+                return sb.toString();
+            }
         }
     }
 
