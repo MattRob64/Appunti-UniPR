@@ -162,8 +162,7 @@ public class ProductClient extends Application {
      */
     public void logout() {
         networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT, getUsername()));
-        networkManager.disconnect();
-        Platform.exit();
+        Platform.exit(); // Calls the stop() method
     }
 
     /**
@@ -177,6 +176,7 @@ public class ProductClient extends Application {
 
     /**
      * Stops the application.
+     * Is called if the method Platform.exit() is called
      */
     @Override
     public void stop() {

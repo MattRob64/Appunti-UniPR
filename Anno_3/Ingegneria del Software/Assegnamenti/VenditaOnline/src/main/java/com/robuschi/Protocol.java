@@ -44,20 +44,14 @@ public class Protocol {
 
         private final MessageType type;
         private final Object payload;
-        private final String username;
-
-        public Message(MessageType type, Object payload, String username) {
-            this.type = type;
-            this.payload = payload;
-            this.username = username;
-        }
 
         public Message(MessageType type, Object payload) {
-            this(type, payload, null);
+            this.type = type;
+            this.payload = payload;
         }
 
         public Message(MessageType type) {
-            this(type, null, null);
+            this(type, null);
         }
 
         public MessageType getType() {
@@ -68,9 +62,6 @@ public class Protocol {
             return payload;
         }
 
-        public String getUsername() {
-            return username;
-        }
     }
 
     /**
