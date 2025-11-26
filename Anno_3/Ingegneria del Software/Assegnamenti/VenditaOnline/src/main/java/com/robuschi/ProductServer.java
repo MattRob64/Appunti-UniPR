@@ -212,6 +212,11 @@ public class ProductServer {
             }
         }
 
+        /**
+         * This method is called when...
+         * @param message
+         * @throws IOException
+         */
         private void handleAuthentication(Protocol.Message message) throws IOException {
             Protocol.AuthCredentials creds = (Protocol.AuthCredentials) message.getPayload();
             String storedPassword = users.get(creds.getUsername());

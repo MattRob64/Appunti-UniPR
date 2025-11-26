@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"com.robuschi.venditaonline"}];updateSearchResults();
