@@ -42,6 +42,8 @@ public class ProductClient extends Application {
             return;
         }
 
+        System.out.println("\033[0;32m" + "Connection started" + "\033[0m");
+
         // Set message handler
         networkManager.setMessageHandler(this::handleServerMessage);
 
@@ -116,11 +118,13 @@ public class ProductClient extends Application {
         switch (message.getType()) {
             case AUTH_SUCCESS:
                 setUsername(message.getPayload().toString());
+                System.out.println("\033[0;32m" + "Welcome: "+ username + "\033[0m");
                 showMainView();
                 break;
 
             case AUTH_FAILED:
                 Protocol.InfoDialog.showError("Authentication failed. Invalid credentials.");
+                System.err.println("Authentication failed. Invalid credentials.");
                 break;
 
             case PRODUCT_LIST:
@@ -128,6 +132,7 @@ public class ProductClient extends Application {
                     Protocol.ProductList productList = (Protocol.ProductList) message.getPayload();
                     mainController.updateAvailableProducts(productList.getProducts());
                 }
+                System.out.println("Product list updated");
                 break;
 
             case PRODUCT_PURCHASED:
@@ -135,6 +140,7 @@ public class ProductClient extends Application {
                     Product product = (Product) message.getPayload();
                     mainController.addPurchasedProduct(product);
                     Protocol.InfoDialog.showInfo("Product purchased: " + product.getName());
+                    System.out.println("You purchased: " + product.getName());
                     // Request updated list
                     networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.GET_PRODUCTS));
                 }
@@ -142,12 +148,14 @@ public class ProductClient extends Application {
 
             case RETURN_ACCEPTED:
                 Protocol.InfoDialog.showInfo("Product returned successfully");
+                System.out.println("You returned a product");
                 // Request updated list
                 networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.GET_PRODUCTS));
                 break;
 
             case SERVER_CLOSE:
                 Protocol.InfoDialog.showInfo("Server is closing");
+                System.out.println("Server is closing");
                 Platform.exit();
                 break;
 
@@ -162,6 +170,7 @@ public class ProductClient extends Application {
      */
     public void logout() {
         networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT, getUsername()));
+        System.out.println("\033[0;33m" + "Goodbye: "+ username + "\033[0m");
         Platform.exit(); // Calls the stop() method
     }
 

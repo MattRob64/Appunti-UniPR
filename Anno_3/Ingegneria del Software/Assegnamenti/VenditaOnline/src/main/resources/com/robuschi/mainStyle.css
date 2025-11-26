@@ -13,14 +13,6 @@
     -fx-text-fill: rgb(65,20,25);
 }
 
-#refreshButton {
-    -fx-background-color: rgb(76,98,120);
-    -fx-background-radius: 25px;
-    -fx-text-fill: rgb(245,240,230);
-    -fx-font-family: "Courier New Bold";
-    -fx-cursor: hand;
-}
-
 #addButton {
     -fx-background-color: rgb(85,107,89);
     -fx-background-radius: 25px;
@@ -29,12 +21,20 @@
     -fx-cursor: hand;
 }
 
+#addButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(238,237,192,0.9), 10, 0, 0, 0);
+}
+
 #logoutButton {
     -fx-background-color: rgb(170,74,68);
     -fx-background-radius: 25px;
     -fx-text-fill: rgb(245,240,230);
     -fx-font-family: "Courier New Bold";
     -fx-cursor: hand;
+}
+
+#logoutButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(238,237,192,0.9), 10, 0, 0, 0);
 }
 
 .mainLabel {
@@ -112,6 +112,10 @@
     -fx-cursor: hand;
 }
 
+#purchaseButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(238,237,192,0.9), 10, 0, 0, 0);
+}
+
 #returnButton {
     -fx-background-color: rgb(178,93,51);
     -fx-background-radius: 25px;
@@ -119,4 +123,8 @@
     -fx-font-family: "Courier New Bold";
     -fx-padding: 10px;
     -fx-cursor: hand;
+}
+
+#returnButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(238,237,192,0.9), 10, 0, 0, 0);
 }

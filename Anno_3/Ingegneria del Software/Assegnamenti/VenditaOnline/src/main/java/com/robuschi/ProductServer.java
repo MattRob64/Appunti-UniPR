@@ -49,15 +49,15 @@ public class ProductServer {
         try {
             serverSocket = new ServerSocket(PORT);
             running = true;
-            System.out.println("===========================================");
+            System.out.println("\033[0;36m" + "===========================================");
             System.out.println("Server started on port " + PORT);
             System.out.println("Waiting for clients...");
-            System.out.println("===========================================");
+            System.out.println("===========================================" + "\033[0m");
 
             while (running) {
                 try {
                     Socket clientSocket = serverSocket.accept();
-                    System.out.println("New client connected: " + clientSocket.getInetAddress());
+                    System.out.println("\033[0;32m" + "New client connected: " + clientSocket.getInetAddress() + "\033[0m");
                     ClientHandler handler = new ClientHandler(clientSocket);
                     connectedClients.add(handler);
                     threadPool.execute(handler);
@@ -170,7 +170,7 @@ public class ProductServer {
                     handleMessage(message);
                 }
             } catch (EOFException | SocketException e) {
-                System.out.println("Client disconnected: " + socket.getInetAddress());
+                System.out.println("\033[0;33m" + "Client disconnected: " + socket.getInetAddress() + "\033[0m");
             } catch (Exception e) {
                 System.err.println("Error handling client: " + e.getMessage());
             } finally {
@@ -178,8 +178,8 @@ public class ProductServer {
                 synchronized (connectedClients) {
                     connectedClients.remove(this);
                     if (username != null) {
-                        System.out.println("User removed from active clients: " + username);
-                        System.out.println("Active clients: " + getConnectedUsernames());
+                        System.out.println("\033[0;33m" + "User removed from active clients: " + username + "\033[0m");
+                        System.out.println("\033[0;32m" + "Active clients: " + getConnectedUsernames() + "\033[0m");
                     }
                 }
                 closeConnection();
@@ -220,10 +220,10 @@ public class ProductServer {
                 authenticated = true;
                 username = creds.getUsername();
                 sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_SUCCESS, creds.getUsername()));
-                System.out.println("User authenticated: " + creds.getUsername());
+                System.out.println("\033[0;32m" + "User authenticated: " + creds.getUsername() + "\033[0m");
             } else {
                 sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_FAILED));
-                System.out.println("Authentication failed for: " + creds.getUsername());
+                System.err.println("Authentication failed for: " + creds.getUsername());
             }
         }
 
@@ -274,7 +274,7 @@ public class ProductServer {
 
         private void handleUserLogout(Protocol.Message message) {
             String username = (String) message.getPayload();
-            System.out.println("User disconnected: " + username);
+            System.out.println("\033[0;33m" + "User disconnected: " + username + "\033[0m");
         }
 
         private void handleClose() throws IOException {

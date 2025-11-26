@@ -41,10 +41,6 @@ public class MainController {
         this.userLabel.setText(usrLbl);
     }
 
-    public String getUserLabelContent() {
-        return userLabel.getText();
-    }
-
     /**
      * Initializes the controller.
      * Called automatically by JavaFX.
@@ -187,6 +183,7 @@ public class MainController {
             );
             application.getNetworkManager().sendMessage(message);
             Protocol.InfoDialog.showInfo("Product added successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
+            System.out.println("You added the product: " + product.getName() + " selling at: " + String.format("%.2f", product.getPrice()) + "€");
             requestProductList();
         });
     }

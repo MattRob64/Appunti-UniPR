@@ -75,7 +75,7 @@ public class NetworkManager {
                     }
                 }
             } catch (EOFException | java.net.SocketException e) {
-                System.out.println("Connection closed");
+                System.out.println("\033[0;33m" + "Connection closed" + "\033[0m");
             } catch (Exception e) {
                 System.err.println("Error in listener: " + e.getMessage());
             }

@@ -112,7 +112,7 @@ public class Protocol {
          */
         public static void showErrorAndExit(String message) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            System.out.print("Connection Error");
+            System.err.print("Connection Error");
             alert.setTitle("Connection Error");
             alert.setHeaderText("Cannot Start Application");
             alert.setContentText(message);

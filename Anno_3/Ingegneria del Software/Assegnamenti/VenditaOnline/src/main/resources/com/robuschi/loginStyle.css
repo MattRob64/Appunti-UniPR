@@ -35,6 +35,10 @@
     -fx-background-radius: 25px;
 }
 
+#loginButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(65,20,25,0.9), 10, 0, 0, 0);
+}
+
 #loginFooterLabel {
     -fx-font-family: "Courier New Bold";
     -fx-font-size: 11;
