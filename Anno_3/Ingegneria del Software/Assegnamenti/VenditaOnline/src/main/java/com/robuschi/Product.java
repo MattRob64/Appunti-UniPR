@@ -9,8 +9,8 @@ import java.util.Objects;
  * It servers as the main object of the system, users can buy, return or add products.
  * The server keeps track of all the products.
  * A product has a name, price, and unique identifier.
- * @author Mattia Robuschi Caprara
  * @see Serializable
+ * @author Mattia Robuschi Caprara
  **/
 public class Product implements Serializable {
     @Serial

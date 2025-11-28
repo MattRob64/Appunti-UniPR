@@ -118,7 +118,7 @@ public class ProductClient extends Application {
         switch (message.getType()) {
             case AUTH_SUCCESS:
                 setUsername(message.getPayload().toString());
-                System.out.println("\033[0;32m" + "Welcome: "+ username + "\033[0m");
+                System.out.println("\033[0;32m" + "Welcome: "+ getUsername() + "\033[0m");
                 showMainView();
                 break;
 
@@ -169,8 +169,8 @@ public class ProductClient extends Application {
      * Logs out and closes the application.
      */
     public void logout() {
-        networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT, getUsername()));
-        System.out.println("\033[0;33m" + "Goodbye: "+ username + "\033[0m");
+        networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT));
+        System.out.println("\033[0;33m" + "Goodbye: "+ getUsername() + "\033[0m");
         Platform.exit(); // Calls the stop() method
     }
 

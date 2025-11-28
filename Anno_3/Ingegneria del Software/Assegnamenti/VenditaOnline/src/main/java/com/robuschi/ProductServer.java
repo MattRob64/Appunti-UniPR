@@ -6,8 +6,10 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * Multi-threaded server for handling online product sales.
- * Manages user authentication, product inventory, and client requests.
+ * Multithreaded server for handling online product sales.
+ * Manages user authentication, product inventory, client requests and server responses.
+ * @see ClientHandler
+ * @author Mattia Robuschi Caprara
  */
 public class ProductServer {
     private static final int PORT = 5500;
@@ -20,7 +22,12 @@ public class ProductServer {
 
 
     /**
-     * Creates a new ProductServer with initial users and products.
+     * Creates a new {@code ProductServer} instance with initial users and products.
+     * It initializes a thread-safe map for storing users.
+     * Creates a thread-safe list for products by wrapping an {@code ArrayList} with a synchronized wrapper.
+     * Initializes a thread pool that dynamically creates new threads as needed and reuses idle threads.
+     * Creates a thread-safe list for tracking connected clients.
+     * It also sets the default users and populate the product list with some items.
      */
     public ProductServer() {
         this.users = new ConcurrentHashMap<>();
@@ -30,9 +37,9 @@ public class ProductServer {
         this.running = false;
 
         // Initialize default users
-        users.put("admin", "admin123");
         users.put("user1", "password1");
         users.put("user2", "password2");
+        users.put("user3", "password3");
 
         // Initialize products
         products.add(new Product("Laptop", 999.99, 1));
@@ -91,6 +98,8 @@ public class ProductServer {
 
     /**
      * Broadcasts product list update to all connected clients.
+     * Used especially for the ListView refresh in the client, so when there is a change in
+     * the product inventory it gets immediately displayed.
      */
     private void broadcastProductList() {
         synchronized (products) {
@@ -112,9 +121,8 @@ public class ProductServer {
     }
 
     /**
-     * Gets a comma-separated list of connected usernames.
-     *
-     * @return string with all connected usernames
+     * Gets a comma-separated list of connected user's usernames.
+     * @return string with all connected usernames or the string: {@code No active clients} if there are no active clients.
      */
     private String getConnectedUsernames() {
         synchronized (connectedClients) {
@@ -140,6 +148,9 @@ public class ProductServer {
 
     /**
      * Handles individual client connections in a separate thread.
+     * Manages the socket connection for every user, the input and output streams, their authentication status and their username.
+     * All the messages that have to be sent to the clients are managed using this class
+     * @see Runnable
      */
     private class ClientHandler implements Runnable {
         private final Socket socket;
@@ -148,16 +159,29 @@ public class ProductServer {
         private boolean authenticated;
         private String username;
 
+        /**
+         * Creates a new {@code ClientHandler} instance and sets the username and the authentication status to {@code null}.
+         * @param socket is the socket that the client uses to connect to the server
+         */
         public ClientHandler(Socket socket) {
             this.socket = socket;
             this.authenticated = false;
             this.username = null;
         }
 
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
         public String getUsername() {
             return username;
         }
 
+        /**
+         * {@inheritDoc}
+         * This method manages the input and output stream of the various messages and checks for errors.
+         * When a client is disconnected it removes it from the {@code connectedClients} list.
+         */
         @Override
         public void run() {
             try {
@@ -177,8 +201,8 @@ public class ProductServer {
                 // Remove this client from connected clients list
                 synchronized (connectedClients) {
                     connectedClients.remove(this);
-                    if (username != null) {
-                        System.out.println("\033[0;33m" + "User removed from active clients: " + username + "\033[0m");
+                    if (getUsername() != null) {
+                        System.out.println("\033[0;33m" + "User removed from active clients: " + getUsername() + "\033[0m");
                         System.out.println("\033[0;32m" + "Active clients: " + getConnectedUsernames() + "\033[0m");
                     }
                 }
@@ -186,6 +210,11 @@ public class ProductServer {
             }
         }
 
+        /**
+         * Handles all the messages that receives from the login form and the user client.
+         * @param message based on this parameters it uses a switch-case to determinate which method has to use based on the request
+         * @throws IOException based on the exceptions that the methods used inside this method throws in return
+         */
         private void handleMessage(Protocol.Message message) throws IOException {
             switch (message.getType()) {
                 case AUTH_REQUEST:
@@ -204,7 +233,7 @@ public class ProductServer {
                     if (authenticated) handleAddProduct(message);
                     break;
                 case USER_LOGOUT:
-                    if (authenticated) handleUserLogout(message);
+                    if (authenticated) handleUserLogout();
                     break;
                 case CLOSE:
                     handleClose();
@@ -213,8 +242,12 @@ public class ProductServer {
         }
 
         /**
-         * This method is called when...
-         * @param message
+         * This method is called when the client makes an authentication attempt.
+         * After pressing on the login button in the dedicated form, it sends this message,
+         * and if the authentication is successful the user can access the main page of the client.
+         * If the credentials used by the user are incorrect it sends a message to the clients which states that the authentication attempt failed.
+         * It sends out a message of type {@code AUTH_SUCCESS} to the client if the authentication is successful, otherwise it sends out a message of type {@code AUTH_FAILED}.
+         * @param message contains the type and payload which in this case is the couple username and password
          * @throws IOException
          */
         private void handleAuthentication(Protocol.Message message) throws IOException {
@@ -223,7 +256,7 @@ public class ProductServer {
 
             if (storedPassword != null && storedPassword.equals(creds.getPassword())) {
                 authenticated = true;
-                username = creds.getUsername();
+                setUsername(creds.getUsername());
                 sendMessage(new Protocol.Message(Protocol.MessageType.AUTH_SUCCESS, creds.getUsername()));
                 System.out.println("\033[0;32m" + "User authenticated: " + creds.getUsername() + "\033[0m");
             } else {
@@ -232,6 +265,12 @@ public class ProductServer {
             }
         }
 
+        /**
+         * This method is called when the product list of the client needs to be updated.
+         * Usually called when we want to broadcast the changes in the list.
+         * It sends out a message of type {@code PRODUCT_LIST} to the client stating that it has to update its local list.
+         * @throws IOException
+         */
         private void handleGetProducts() throws IOException {
             synchronized (products) {
                 Protocol.ProductList productList = new Protocol.ProductList(new ArrayList<>(products));
@@ -239,13 +278,24 @@ public class ProductServer {
             }
         }
 
+        /**
+         * This method is called when a user tries to buy a product.
+         * Using the synchronized products list, it removes the product from the general product list
+         * and sends out a message to the client with the product as the payload so that the client can add it to its personal product list.
+         * If the general product list is not updated in the client and the user tries to buy a product that is not in the list anymore,
+         * this method sends out a message of type {@code ERROR} telling that the product is not available anymore.
+         * If the removal is successful it launches the {@code broadcastProductList()} method so that every client can update their server's product list.
+         * It sends out a message of type {@code PRODUCT_PURCHASED} to the client indicating that it can update its product list with the product that has bought.
+         * @param message contains the message type and the payload, which in this case is the product that the user wants to buy
+         * @throws IOException
+         */
         private void handlePurchase(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
 
             synchronized (products) {
                 if (products.remove(product)) {
                     sendMessage(new Protocol.Message(Protocol.MessageType.PRODUCT_PURCHASED, product));
-                    System.out.println("Product: "+ product.getName() + " purchased by user: " + username);
+                    System.out.println("Product: "+ product.getName() + " purchased by user: " + getUsername());
                     broadcastProductList();
                 } else {
                     sendMessage(new Protocol.Message(Protocol.MessageType.ERROR, "Product not available, press the refresh button please"));
@@ -253,16 +303,31 @@ public class ProductServer {
             }
         }
 
+        /**
+         * This method is called when a user tries to return a product.
+         * It gets the product that the user wants to return from the message payload and adds it back to the server product list.
+         * It then launches the {@code broadcastProductList()} method so that every client can update their server's product list.
+         * It sends out a message of type {@code RETURN_ACCEPTED} to the client stating that return process was successful and the client product list can be updated.
+         * @param message contains the message type and the payload, which in this case is the product that the user wants to return
+         * @throws IOException
+         */
         private void handleReturn(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
             synchronized (products) {
                 products.add(product);
                 sendMessage(new Protocol.Message(Protocol.MessageType.RETURN_ACCEPTED));
-                System.out.println("Product: "+ product.getName() + " returned by user: " + username);
+                System.out.println("Product: "+ product.getName() + " returned by user: " + getUsername());
                 broadcastProductList();
             }
         }
 
+        /**
+         * This method is called when the user wants to add a product to the server's product list.
+         * It gets the product (ID, Name, Price) from the message payload, then it adds it to the server's product list.
+         * It then launches the {@code broadcastProductList()} method so that every client can update their server's product list.
+         * @param message contains the message type and the payload, which in this case is the product that the user wants to add to the product list
+         * @throws IOException
+         */
         private void handleAddProduct(Protocol.Message message) throws IOException {
             Product product = (Product) message.getPayload();
             synchronized (products) {
@@ -272,26 +337,44 @@ public class ProductServer {
                         .orElse(0) + 1;
                 Product newProduct = new Product(product.getName(), product.getPrice(), newId);
                 products.add(newProduct);
-                System.out.println("user: " + username + " added a product successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
+                System.out.println("user: " + getUsername() + " added a product successfully: " + product.getName() + " - " + String.format("%.2f", product.getPrice()) + "€");
                 broadcastProductList();
             }
         }
 
-        private void handleUserLogout(Protocol.Message message) {
-            String username = (String) message.getPayload();
-            System.out.println("\033[0;33m" + "User disconnected: " + username + "\033[0m");
+        /**
+         * This method is called when the user wats to logout (and exit) from the client.
+         * It simply prints a message showing which user has disconnected.
+         */
+        private void handleUserLogout() {
+            System.out.println("\033[0;33m" + "User disconnected: " + getUsername() + "\033[0m");
         }
 
+        /**
+         * This method is called when the user wants to disconnect from the server.
+         * This message originates from the NetworkManager class.
+         * @throws IOException
+         * @see NetworkManager
+         */
         private void handleClose() throws IOException {
             sendMessage(new Protocol.Message(Protocol.MessageType.SERVER_CLOSE));
             closeConnection();
         }
 
+        /**
+         * This method handles the message sending process by sending on the output stream and then flushing the output stream.
+         * @param message is the message that a method wants to send out.
+         * @throws IOException
+         */
         private void sendMessage(Protocol.Message message) throws IOException {
             out.writeObject(message);
             out.flush();
         }
 
+        /**
+         * This method closes the input stream, the output stream and the socket.
+         * It throws an error if the connection can not be closed.
+         */
         private void closeConnection() {
             try {
                 if (in != null) in.close();

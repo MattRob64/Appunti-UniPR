@@ -57,7 +57,7 @@
                 maxWidth="Infinity"/>
     </VBox>
 
-    <Label id="loginFooterLabel" text="Default users:&#10;admin / admin123&#10;user1 / password1&#10;user2 / password2"
+    <Label id="loginFooterLabel" text="Default users:&#10;user1 / password1&#10;user2 / password2&#10;user3 / password3"
            textAlignment="CENTER"/>
 
 </VBox>

@@ -195,12 +195,13 @@ public class Protocol {
     /**
      * The {@code InfoDialog} class is used as a manager for all the dialog windows that pop up during
      * the execution of the program, except for the one that is used to add a product.
+     * The dialog windows are customizable using the parameter {@code message} which helps to show the message dynamically.
      * @see Alert
      */
     public static class InfoDialog {
         /**
-         * Displays an error and exits the application.
-         *
+         * Displays an error alert with a custom message and style and exits the application when clicking "ok".
+         * Often used when there's a server error or the application can't start properly.
          * @param message the error message
          */
         public static void showErrorAndExit(String message) {
@@ -218,8 +219,7 @@ public class Protocol {
         }
 
         /**
-         * Displays an error alert.
-         *
+         * Displays an error alert with a custom message and style.
          * @param message the error message
          */
         public static void showError(String message) {
@@ -235,8 +235,7 @@ public class Protocol {
         }
 
         /**
-         * Displays an information alert.
-         *
+         * Displays an information alert with a custom message and style.
          * @param message the information message
          */
         public static void showInfo(String message) {
