@@ -6,12 +6,13 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
- * Controller for the main application view.
- * Handles product management operations.
- */
+ * <p>The {@code MainController} class serves as a controller for the main application view.
+ * <p>Handles product management operations and the interaction with the GUI.
+**/
 public class MainController {
 
     @FXML
@@ -28,23 +29,29 @@ public class MainController {
     private ObservableList<Product> purchasedProducts;
 
     /**
-     * Sets the main application reference.
-     *
+     * <p>Sets the main application reference.
+     * <p>It is called in the {@code ProductClient} class when the main view is shown through the {@code mainController.setApplication(this)} method.
+     * <p>It calls the {@code requestProductList()} method to show the products in their respective lists.
      * @param application the main application
-     */
+    **/
     public void setApplication(ProductClient application) {
         this.application = application;
         requestProductList();
     }
 
+    /**
+     * <p>This method sets the label in the top of the main view, making it so that it displays the username.
+     * <p>It is called in the {@code ProductClient} class immediately after the user successfully logs in.
+     * @param usrLbl is the string that contains the username of the logged user
+    **/
     public void setUserLabel(String usrLbl) {
         this.userLabel.setText(usrLbl);
     }
 
     /**
-     * Initializes the controller.
-     * Called automatically by JavaFX.
-     */
+     * <p>Initializes the controller.
+     * <p>Called automatically by JavaFX.
+    **/
     @FXML
     private void initialize() {
         availableProducts = FXCollections.observableArrayList();
@@ -55,8 +62,9 @@ public class MainController {
     }
 
     /**
-     * Handles purchase button action.
-     */
+     * <p>This method handles the purchase button action.
+     * <p>If a product in the product list is selected it sends a message of type {@code PURCHASE_PRODUCT} and the selected product as payload to the server.
+    **/
     @FXML
     private void handlePurchase() {
         Product selectedProduct = availableProductsList.getSelectionModel().getSelectedItem();
@@ -74,8 +82,9 @@ public class MainController {
     }
 
     /**
-     * Handles return button action.
-     */
+     * <p>This method handles return button action.
+     * <p>If a product in the user's product list is selected it sends a message of type {@code PRODUCT_RETURN} and the selected product as payload to the server.
+    **/
     @FXML
     private void handleReturn() {
         Product selectedProduct = purchasedProductsList.getSelectionModel().getSelectedItem();
@@ -94,8 +103,12 @@ public class MainController {
     }
 
     /**
-     * Handles add product button action.
-     */
+     * <p>This method handles add product button action.
+     * <p>It creates a dialog window with the CSS style of the other dialogs, then checks the validity of the data inserted by the user
+     * [for example if one of the two text fields (the product name or the product price) is empty].
+     * <p>If the data inserted is correct it sends a message of type {@code ADD_NEW_PRODUCT} and the inserted product as payload to the server.
+     * <p>Lastly it calls the {@code requestProductList()} method to update the products in their respective lists.
+    **/
     @FXML
     private void handleAddProduct() {
         // Create custom dialog
@@ -189,36 +202,35 @@ public class MainController {
     }
 
     /**
-     * Handles logout button action.
-     */
+     * <p>Handles logout button action by calling the {@code application.logout()} method.
+     * <p>The application in this case is an instance of the {@code ProductClient} class.
+    **/
     @FXML
     private void handleLogout() {
         application.logout();
     }
 
     /**
-     * Requests the product list from the server.
-     */
+     * <p>Requests the product list from the server by sending a message of type {@code GET_PRODUCTS }.
+    **/
     private void requestProductList() {
         Protocol.Message message = new Protocol.Message(Protocol.MessageType.GET_PRODUCTS);
         application.getNetworkManager().sendMessage(message);
     }
 
     /**
-     * Updates the available products list.
-     *
+     * <p>Updates the available products list by clearing all the previous items that were shown and then replacing them with the updated ones.
      * @param products the new product list
-     */
-    public void updateAvailableProducts(java.util.List<Product> products) {
+    **/
+    public void updateAvailableProducts(List<Product> products) {
         availableProducts.clear();
         availableProducts.addAll(products);
     }
 
     /**
-     * Adds a product to the purchased list.
-     *
+     * <p>Adds a product to the purchased list.
      * @param product the purchased product
-     */
+    **/
     public void addPurchasedProduct(Product product) {
         purchasedProducts.add(product);
     }

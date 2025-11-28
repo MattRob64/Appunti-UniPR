@@ -2,18 +2,18 @@ package com.robuschi;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 /**
- * Main client application for the online product sales system.
- * Manages the JavaFX application lifecycle and view navigation.
- */
+ * <p>The {@code ProductClient} class is the main client application for the online product sales system.
+ * <p>Manages the JavaFX application lifecycle and view navigation.
+ * @see Application
+ * @author Mattia Robuschi Caprara
+**/
 public class ProductClient extends Application {
 
     private Stage primaryStage;
@@ -23,10 +23,14 @@ public class ProductClient extends Application {
     private String username;
 
     /**
-     * Starts the JavaFX application.
-     *
-     * @param primaryStage the primary stage
-     */
+     * {@inheritDoc}
+     * <p>This method starts the JavaFX application.
+     * <p>It is called by the {@code init()} method which is inherited from the {@code Application} class, which sets the {@code primaryStage}.
+     * <p>The method sets the title for the window, it tries to connect to the server,
+     * and if the connection is successful it sets the message handler and shows the login view.
+     * @param primaryStage is the primary stage of the application
+     * @see NetworkManager
+    **/
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -38,7 +42,7 @@ public class ProductClient extends Application {
         if (!networkManager.connect()) {
             Protocol.InfoDialog.showErrorAndExit("Cannot connect to server!\n\n" +
                     "Please ensure the server is running first.\n" +
-                    "Start the server with: java com.productsales.server.ProductServer");
+                    "Start the server with: java com.robuschi.ProductServer");
             return;
         }
 
@@ -67,8 +71,10 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Shows the login view.
-     */
+     * <p>This method shows the login view.
+     * <p>It loads the {@code login.fxml} FXML file from the resources, it sets the scene and sets the style of the view.
+     * <p>Gets called in the {@code start()} method.
+    **/
     private void showLoginView() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -76,8 +82,8 @@ public class ProductClient extends Application {
             Scene scene = new Scene(loader.load(), 500, 400);
             scene.getStylesheets().add(getClass().getResource("loginStyle.css").toExternalForm());
 
-            LoginController controller = loader.getController();
-            controller.setApplication(this);
+            LoginController loginController = loader.getController();
+            loginController.setApplication(this);
 
             primaryStage.setScene(scene);
         } catch (IOException e) {
@@ -87,8 +93,12 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Shows the main application view.
-     */
+     * <p>This method shows the main application view.
+     * <p>It loads the {@code main.fxml} FXML file from the resources, it sets the scene, sets the username
+     * visible on the main view and sets the style of the view.
+     * <p>Gets called if the authentication attempt is successful.
+     * @see MainController
+    **/
     private void showMainView() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -110,10 +120,21 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Handles incoming messages from the server.
-     *
+     * <p>This method handles all the incoming messages from the server.
+     * <ul>
+     *      <li>If the received message has type {@code AUTH_SUCCESS} the method sets the username and then launches the main view using {@code showMainView()}</li>
+     *      <li>If the received message has type {@code AUTH_FAILED} the method shows a dialog displaying the error "Authentication failed. Invalid credentials."</li>
+     *      <li>If the received message has type {@code PRODUCT_LIST} the method launches the function {@code mainController.updateAvailableProducts(productList.getProducts())} to update the product list</li>
+     *      <li>If the received message has type {@code PRODUCT_PURCHASED} the method add the purchased product into the user's product list and then sends a message of type {@code GET_PRODUCTS} to the server</li>
+     *      <li>If the received message has type {@code RETURN_ACCEPTED} the method removes the purchased product from the user's product list and then sends a message of type {@code GET_PRODUCTS} to the server</li>
+     *      <li>If the received message has type {@code SERVER_CLOSE} the method displays a dialog stating "Server is closing" and then launches the {@code Platform.exit()} method</li>
+     *      <li>If the received message has type {@code ERROR} the method shows an error dialog that displays the given error</li>
+     * </ul>
      * @param message the received message
-     */
+     * @see Protocol.MessageType
+     * @see MainController
+     * @see NetworkManager
+    **/
     private void handleServerMessage(Protocol.Message message) {
         switch (message.getType()) {
             case AUTH_SUCCESS:
@@ -166,8 +187,9 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Logs out and closes the application.
-     */
+     * <p>This method logs out and closes the application.
+     * <p>It sends a message of type {@code USER_LOGOUT} to the server, prints a goodbye message and then calls the {@code Platform.exit()} method.
+    **/
     public void logout() {
         networkManager.sendMessage(new Protocol.Message(Protocol.MessageType.USER_LOGOUT));
         System.out.println("\033[0;33m" + "Goodbye: "+ getUsername() + "\033[0m");
@@ -175,18 +197,20 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Gets the network manager instance.
-     *
+     * <p>This method gets the network manager instance.
      * @return the network manager
-     */
+    **/
     public NetworkManager getNetworkManager() {
         return networkManager;
     }
 
     /**
-     * Stops the application.
-     * Is called if the method Platform.exit() is called
-     */
+     * {@inheritDoc}
+     * <p>This method stops the application.
+     * <p>It is called when the method Platform.exit() is called.
+     * <p>It checks if the network manager is {@code null}, if not the method {@code networkManager.disconnect()} is called.
+     * @see NetworkManager
+    **/
     @Override
     public void stop() {
         if (networkManager != null) {
@@ -195,10 +219,12 @@ public class ProductClient extends Application {
     }
 
     /**
-     * Main method to launch the application.
-     *
+     * <p>Main method to launch the application.
+     * <p>It uses the {@code launch(args)} method to launch the default constructor of the class (which in this case is implicit).
+     * <p>Then, the default constructor launches the {@code init()} method which is inherited from the {@code Application} class.
+     * <p>The {@code init()} method launches the {@code start()} method which then actually starts the application.
      * @param args command line arguments
-     */
+    **/
     public static void main(String[] args) {
         launch(args);
     }

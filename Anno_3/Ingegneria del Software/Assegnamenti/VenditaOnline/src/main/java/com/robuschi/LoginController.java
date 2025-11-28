@@ -6,9 +6,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 /**
- * Controller for the login view.
- * Handles user authentication.
- */
+ * <p>The {@code LoginController} class serves as the controller for the login view.
+ * <p>Handles user authentication and the relative communication with the server.
+**/
 public class LoginController {
 
     @FXML
@@ -20,17 +20,21 @@ public class LoginController {
     private ProductClient application;
 
     /**
-     * Sets the main application reference.
-     *
+     * <p>Sets the main application reference.
+     * <p>It is called in the {@code ProductClient} class when the login view is shown through the {@code loginController.setApplication(this)} method.
      * @param application the main application
-     */
+    **/
     public void setApplication(ProductClient application) {
         this.application = application;
     }
 
     /**
-     * Handles login button action.
-     */
+     * <p>Handles login button action.
+     * <p>Gets the strings from the username and passwords fields and checks if the fields are empty.
+     * <p>If everything is fine it sends a message fo type {@code AUTH_REQUEST} with username and password inside the payload to the server.
+     * @see Protocol.AuthCredentials
+     * @see Protocol.Message
+    **/
     @FXML
     private void handleLogin() {
         String username = usernameField.getText().trim();
@@ -48,9 +52,9 @@ public class LoginController {
     }
 
     /**
-     * Initializes the controller.
-     * Called automatically by JavaFX.
-     */
+     * <p>Initializes the controller.
+     * <p>Called automatically by JavaFX.
+    **/
     @FXML
     private void initialize() {
         // Set enter key to trigger login

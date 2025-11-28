@@ -7,9 +7,9 @@ import java.net.Socket;
 import java.util.function.Consumer;
 
 /**
- * Manages network communication with the server.
- * Handles socket connection, message sending, and receiving.
- */
+ * <p>The {@code NetworkManager} class manages network communication with the server.
+ * <p>Handles socket connection, message sending, and receiving.
+**/
 public class NetworkManager {
     private static final String SERVER_HOST = "localhost";
     private static final int SERVER_PORT = 5500;
@@ -21,10 +21,11 @@ public class NetworkManager {
     private Consumer<Protocol.Message> messageHandler;
 
     /**
-     * Connects to the server.
-     *
+     * <p>Connects to the server.
+     * <p>Creates a socket connection using the class attributes: {@code SERVER_HOST} and {@code SERVER_PORT}.
+     * <p>Initializes the input and output object stream and if all is completed correctly launches the {@code startListening()} method.
      * @return true if connection successful, false otherwise
-     */
+    **/
     public boolean connect() {
         try {
             socket = new Socket(SERVER_HOST, SERVER_PORT);
@@ -40,19 +41,17 @@ public class NetworkManager {
     }
 
     /**
-     * Sets the message handler for incoming messages.
-     *
+     * <p>Sets the message handler for incoming messages.
      * @param handler consumer that processes incoming messages
-     */
+    **/
     public void setMessageHandler(Consumer<Protocol.Message> handler) {
         this.messageHandler = handler;
     }
 
     /**
-     * Sends a message to the server.
-     *
+     * <p>Sends a message to the server using the output object stream.
      * @param message the message to send
-     */
+    **/
     public void sendMessage(Protocol.Message message) {
         try {
             out.writeObject(message);
@@ -63,8 +62,8 @@ public class NetworkManager {
     }
 
     /**
-     * Starts listening for incoming messages from the server.
-     */
+     * <p>Starts listening for incoming messages from the server and does it until the thread is interrupted.
+    **/
     private void startListening() {
         listenerThread = new Thread(() -> {
             try {
@@ -85,8 +84,8 @@ public class NetworkManager {
     }
 
     /**
-     * Closes the connection to the server.
-     */
+     * <p>Closes the connection to the server by closing the socket and the input/output object stream.
+    **/
     public void disconnect() {
         try {
             if (listenerThread != null) {

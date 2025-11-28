@@ -5,13 +5,13 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * The {@code Product} class represents a product in the "online" sales system.
- * It servers as the main object of the system, users can buy, return or add products.
- * The server keeps track of all the products.
- * A product has a name, price, and unique identifier.
+ * <p>The {@code Product} class represents a product in the "online" sales system.
+ * <p>It servers as the main object of the system, users can buy, return or add products.
+ * <p>The server keeps track of all the products.
+ * <p>A product has a name, price, and unique identifier.
  * @see Serializable
  * @author Mattia Robuschi Caprara
- **/
+**/
 public class Product implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -21,12 +21,12 @@ public class Product implements Serializable {
     private final int identifier;
 
     /**
-     * Creates a new {@code Product} instance.
+     * <p>Creates a new {@code Product} instance.
      *
      * @param name the product name
      * @param price the product price
      * @param identifier the unique product identifier
-     */
+    **/
     public Product(String name, double price, int identifier) {
         this.name = name;
         this.price = price;
@@ -48,7 +48,7 @@ public class Product implements Serializable {
     /**
      * {@inheritDoc}
      * @return a formatted string containing all the attributes of the class
-     */
+    **/
     @Override
     public String toString() {
         return String.format("ID: %d | %s | €%.2f", identifier, name, price);
@@ -56,8 +56,8 @@ public class Product implements Serializable {
 
     /**
      * {@inheritDoc}
-     * @param o   the reference object with which to compare.
-     */
+     * @param o the reference object with which to compare.
+    **/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,7 +68,7 @@ public class Product implements Serializable {
 
     /**
      * {@inheritDoc}
-     */
+    **/
     @Override
     public int hashCode() {
         return Objects.hash(identifier);
