@@ -12,7 +12,7 @@ import java.util.List;
  * <p>The {@code Protocol} class defines the communication protocol between client and server.
  * <p>All messages are serializable for transmission over sockets.
  * <p>Inside of it are defined all the various message types, the message class,
- * the authentication credential class, the product list class and the dialog window manager class
+ * the authentication credential class, the product list class and the dialog window manager class.
  * @see MessageType
  * @see Message
  * @see AuthCredentials
@@ -93,7 +93,7 @@ public class Protocol {
 
     /**
      * <p>The {@code Message} class is a generic message class for client-server communication.
-     * <p>It is defined by a serial ID, a message type and a payload.
+     * <p>It is defined by a serial ID, a message type and a payload which uses the Object class to maintain a type-safe communication.
      * @see Serializable
      * @see MessageType
     **/

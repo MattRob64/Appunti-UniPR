@@ -220,7 +220,7 @@ public class MainController {
 
     /**
      * <p>Updates the available products list by clearing all the previous items that were shown and then replacing them with the updated ones.
-     * @param products the new product list
+     * @param products is the new product list
     **/
     public void updateAvailableProducts(List<Product> products) {
         availableProducts.clear();
@@ -229,7 +229,7 @@ public class MainController {
 
     /**
      * <p>Adds a product to the purchased list.
-     * @param product the purchased product
+     * @param product is the purchased product
     **/
     public void addPurchasedProduct(Product product) {
         purchasedProducts.add(product);
