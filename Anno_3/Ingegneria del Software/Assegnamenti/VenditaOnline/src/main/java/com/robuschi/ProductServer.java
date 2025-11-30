@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * <p>The {@code ProductServer} class is a multithreaded server for handling online product sales.
+ * <p>The {@code ProductServer} class is a multithreaded server for handling online product sales that listens on the port 5500.
  * <p>Manages user authentication, product inventory, client requests and server responses.
  * @see ClientHandler
  * @author Mattia Robuschi Caprara
@@ -151,6 +151,7 @@ public class ProductServer {
      * <p>Manages the socket connection for every user, the input and output streams, their authentication status and their username.
      * <p>All the messages that have to be sent to the clients are managed using this class.
      * @see Runnable
+     * @author Mattia Robuschi Caprara
     **/
     private class ClientHandler implements Runnable {
         private final Socket socket;

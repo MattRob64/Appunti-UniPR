@@ -1,24 +1,10 @@
-/*Traccia:
-* L’obiettivo è creare una semplice calcolatrice in grado di eseguire operazioni
-* aritmetiche di base: addizione, sottrazione, moltiplicazione, divisione e modulo.
-* La calcolatrice deve essere sviluppata con il linguaggio Java.
-* Le operazioni saranno applicate a numeri interi.
-* Inoltre, il sistema deve fornire:
-* 1) un’operazione per resettare la calcolatrice al valore iniziale (o) , e
-* 2) un’altra operazione per chiudere l’esecuzione della calcolatrice.
-*
-* Vincoli
-* - Il codice, commenti e documenti devono essere scritti in inglese.
-* - Un documento testuale deve spiegare le sequenze di passi che permettono
-*   di eseguire le operazioni correttamente.
-* */
-
 package com.robuschi;
 import java.util.Scanner;
 
 /**
  * Main class in which the program executes all of its main functions
- */
+ * @author Mattia Robuschi Caprara
+**/
 public class Main {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);

@@ -7,9 +7,10 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Server application that manages product sales to multiple clients.
- * Generates random prices and handles purchase requests from clients.
- */
+ * <p>Server application that manages product sales to multiple clients and listen on the port 5555.
+ * <p>Generates random prices and handles purchase requests from clients.
+ * @author Mattia Robuschi Caprara
+**/
 public class Server {
     private static final int PORT = 5555;
     private static final int MIN_PRICE = 10;
@@ -24,20 +25,20 @@ public class Server {
     private final Random random = new Random();
 
     /**
-     * Main method to start the server
-     */
+     * <p>Main method to start the server
+    **/
     public static void main(String[] args) {
         new Server().start();
     }
 
     /**
-     * Starts the server and initializes all components
-     */
+     * <p>Starts the server and initializes all components
+    **/
     public void start() {
         try {
             serverSocket = new ServerSocket(PORT);
-            System.out.println("Server started on port " + PORT);
-            System.out.println("Waiting for clients to connect...");
+            System.out.println("\033[0;36m" + "Server started on port " + PORT);
+            System.out.println("Waiting for clients to connect..." + "\033[0m");
 
             // Start price generator thread
             Thread priceGenerator = new Thread(this::generatePrices);
@@ -82,8 +83,8 @@ public class Server {
     }
 
     /**
-     * Accepts incoming client connections
-     */
+     * <p>Accepts incoming client connections
+    **/
     private void acceptConnections() {
         try {
             // Wait for at least 3 clients
@@ -112,8 +113,8 @@ public class Server {
     }
 
     /**
-     * Generates random prices periodically and broadcasts to all clients
-     */
+     * <p>Generates random prices periodically and broadcasts to all clients
+    **/
     private void generatePrices() {
         while (running) {
             try {
@@ -140,8 +141,8 @@ public class Server {
     }
 
     /**
-     * Handles individual client connections
-     */
+     * <p>Handles individual client connections
+    **/
     private class ClientHandler implements Runnable {
         private Socket socket;
         private PrintWriter out;
@@ -172,8 +173,8 @@ public class Server {
         }
 
         /**
-         * Handles messages received from the client
-         */
+         * <p>Handles messages received from the client
+        **/
         private void handleMessage(String message) {
             if (message.startsWith("PURCHASE:")) {
                 int requestedPrice = Integer.parseInt(message.substring(9));
@@ -194,8 +195,8 @@ public class Server {
         }
 
         /**
-         * Sends the current price to the client
-         */
+         * <p>Sends the current price to the client
+        **/
         public void sendPrice(int price) {
             if (!finished && out != null) {
                 out.println("PRICE:" + price);
@@ -203,15 +204,15 @@ public class Server {
         }
 
         /**
-         * Checks if the client has finished purchasing
-         */
+         * <p>Checks if the client has finished purchasing
+        **/
         public boolean hasFinished() {
             return finished;
         }
 
         /**
-         * Cleans up resources when client disconnects
-         */
+         * <p>Cleans up resources when client disconnects
+        **/
         private void cleanup() {
             try {
                 if (socket != null) socket.close();

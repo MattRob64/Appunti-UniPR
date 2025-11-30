@@ -3,7 +3,11 @@
 ## Before executing:
 This program was made using the IntelliJ IDEA IDE by JetBrains and was set up using Maven so if something unusual is found in the project structure I want to clarify that the project structure was created by the IDE and for convenience it was not changed.
 
-The javadoc is located inside the javadoc folder, at the root of the project. 
+The Javadoc is located inside the javadoc folder, at the root of the project. 
+
+The Javadoc was generated with the private visibility, so every item is visible, even the private ones.
+
+The messages in the execution terminal are coloured for a more readable experience.
 
 ## Step-by-step guide on how to use the Product Sales Manager application
 
@@ -58,7 +62,7 @@ This class is the main client application for the online product sales system.
 
 Manages the JavaFX application lifecycle and view navigation.
 ### ProductServer
-This class is a multithreaded server for handling online product sales.
+This class is a multithreaded server for handling online product sales that listens on the port 5500.
 
 Manages user authentication, product inventory, client requests and server responses.
 
@@ -76,7 +80,7 @@ I has a nested class called **ClientHandler** which handles individual client co
     - user1 / password1
     - user2 / password2
     - user3 / password3
-6. If the login is successful the login window should disappear and the application should start
+6. If the login is successful the login window should disappear and the application should start otherwise a pop-up dialog should appear saying that the login credentials are wrong
 7. If everything is fine you should be greeted by the user interface with the username written on top
 
 ### Buy a product

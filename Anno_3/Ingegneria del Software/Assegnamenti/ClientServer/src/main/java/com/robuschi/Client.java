@@ -5,9 +5,10 @@ import java.net.*;
 import java.util.Random;
 
 /**
- * Client application that connects to the product server and makes purchase decisions
+ * <p>Client application that connects to the product server and makes purchase decisions
  * based on randomly generated maximum purchase prices.
- */
+ * @author Mattia Robuschi Caprara
+**/
 public class Client {
     private static final String SERVER_HOST = "localhost";
     private static final int SERVER_PORT = 5555;
@@ -24,17 +25,17 @@ public class Client {
     private final int clientId;
 
     /**
-     * Constructor for Client
+     * <p>Constructor for Client
      * @param clientId Unique identifier for this client instance
-     */
+    **/
     public Client(int clientId) {
         this.clientId = clientId;
     }
 
     /**
-     * Main method to start multiple clients
-     * @param args Command line arguments (optional: number of clients)
-     */
+     * <p>Main method to start multiple clients
+     * @param args Command line arguments (optional: number of clients, if blank the program will execute with the default three users)
+    **/
     public static void main(String[] args) {
         int numClients = 3; // Default number of clients
 
@@ -42,15 +43,15 @@ public class Client {
             try {
                 numClients = Integer.parseInt(args[0]);
                 if (numClients < 3) {
-                    System.out.println("Minimum 3 clients required. Setting to 3.");
+                    System.err.println("Minimum 3 clients required. Setting to 3.");
                     numClients = 3;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid number of clients. Using default: 3");
+                System.err.println("Invalid number of clients. Using default: 3");
             }
         }
 
-        System.out.println("Starting " + numClients + " clients...");
+        System.out.println("\033[0;36m" + "Starting " + numClients + " clients..." + "\033[0m");
 
         // Start multiple client threads
         for (int i = 1; i <= numClients; i++) {
@@ -70,8 +71,8 @@ public class Client {
     }
 
     /**
-     * Starts the client and connects to the server
-     */
+     * <p>Starts the client and connects to the server
+    **/
     public void start() {
         try {
             // Connect to server
@@ -101,9 +102,9 @@ public class Client {
     }
 
     /**
-     * Handles messages received from the server
+     * <p>Handles messages received from the server
      * @param message The message received from the server
-     */
+    **/
     private void handleServerMessage(String message) {
         if (message.startsWith("PRICE:")) {
             int sellingPrice = Integer.parseInt(message.substring(6));
@@ -123,9 +124,9 @@ public class Client {
     }
 
     /**
-     * Handles price updates from the server
+     * <p>Handles price updates from the server
      * @param sellingPrice The current selling price from the server
-     */
+    **/
     private void handlePriceUpdate(int sellingPrice) {
         if (purchaseCount >= TARGET_PURCHASES) {
             return; // Already completed purchases
@@ -147,8 +148,8 @@ public class Client {
     }
 
     /**
-     * Informs the server that this client has finished purchasing
-     */
+     * <p>Informs the server that this client has finished purchasing
+    **/
     private void finishPurchasing() {
         System.out.println("[CLIENT " + clientId + "] " + "\033[0;92m" + "Completed all " + TARGET_PURCHASES +
                 " purchases. Notifying server." + "\033[0m");
@@ -157,8 +158,8 @@ public class Client {
     }
 
     /**
-     * Cleans up resources when client disconnects
-     */
+     * <p>Cleans up resources when client disconnects
+    **/
     private void cleanup() {
         try {
             if (socket != null) socket.close();

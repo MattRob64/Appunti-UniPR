@@ -24,6 +24,7 @@ public class Protocol {
 
     /**
      * <p>Message types for client-server communication.
+     * @author Mattia Robuschi Caprara
     **/
     public enum MessageType {
         /*
@@ -96,6 +97,7 @@ public class Protocol {
      * <p>It is defined by a serial ID, a message type and a payload which uses the Object class to maintain a type-safe communication.
      * @see Serializable
      * @see MessageType
+     * @author Mattia Robuschi Caprara
     **/
     public static class Message implements Serializable {
         @Serial
@@ -138,6 +140,7 @@ public class Protocol {
      * <p>The {@code AuthCredential} class serves as the authentication credentials container.
      * <p>It is defined by a serial ID, a username and a password.
      * @see Serializable
+     * @author Mattia Robuschi Caprara
     **/
     public static class AuthCredentials implements Serializable {
         @Serial
@@ -171,6 +174,7 @@ public class Protocol {
      * <p>It serves as the container for all the products that are stored in the program.
      * <p>It is defined by a list of {@code Product}.
      * @see Serializable
+     * @author Mattia Robuschi Caprara
     **/
     public static class ProductList implements Serializable {
         @Serial
@@ -197,6 +201,7 @@ public class Protocol {
      * the execution of the program, except for the one that is used to add a product.
      * <p>The dialog windows are customizable using the parameter {@code message} which helps to show the message dynamically.
      * @see Alert
+     * @author Mattia Robuschi Caprara
     **/
     public static class InfoDialog {
         /**

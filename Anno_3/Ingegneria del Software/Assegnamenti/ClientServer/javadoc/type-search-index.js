@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.robuschi","l":"Client"},{"p":"com.robuschi","l":"Server.ClientHandler"},{"p":"com.robuschi","l":"Server"}];updateSearchResults();
