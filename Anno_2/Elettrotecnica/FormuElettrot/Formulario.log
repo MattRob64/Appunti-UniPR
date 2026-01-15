@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  6 JUL 2025 17:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  15 JAN 2026 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,6 +786,19 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip66
+\f@nch@O@elh=\skip67
+\f@nch@O@erh=\skip68
+\f@nch@O@olh=\skip69
+\f@nch@O@orh=\skip70
+\f@nch@O@elf=\skip71
+\f@nch@O@erf=\skip72
+\f@nch@O@olf=\skip73
+\f@nch@O@orf=\skip74
+)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 
@@ -795,24 +808,24 @@ Package: import 2020/04/01  v 6.2
 (./Formulario.aux)
 \openout1 = `Formulario.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -874,15 +887,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 52.
 (./Formulario.out) (./Formulario.out)
 \@outlinefile=\write4
 \openout4 = `Formulario.out'.
 
-<./img/0.cover.jpg, id=634, 1686.3pt x 1053.9375pt>
+<./img/0.cover.jpg, id=658, 1686.3pt x 1053.9375pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
-Package pdftex.def Info: ./img/0.cover.jpg  used on input line 70.
+Package pdftex.def Info: ./img/0.cover.jpg  used on input line 73.
 (pdftex.def)             Requested size: 337.25403pt x 210.78377pt.
  [1
 
@@ -919,28 +932,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--25
 
  []
 
-<./img/1.jpeg, id=813, 333.245pt x 294.09875pt>
+<./img/1.jpeg, id=846, 333.245pt x 294.09875pt>
 File: ./img/1.jpeg Graphic file (type jpg)
 <use ./img/1.jpeg>
 Package pdftex.def Info: ./img/1.jpeg  used on input line 38.
 (pdftex.def)             Requested size: 133.29562pt x 117.6374pt.
-<./img/2.png, id=814, 538.01pt x 237.88875pt>
+<./img/2.png, id=847, 538.01pt x 237.88875pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 48.
 (pdftex.def)             Requested size: 215.20018pt x 95.15381pt.
 [4 <./img/1.jpeg>]
-<./img/3.jpeg, id=830, 312.16624pt x 394.47375pt>
+<./img/3.jpeg, id=862, 312.16624pt x 394.47375pt>
 File: ./img/3.jpeg Graphic file (type jpg)
 <use ./img/3.jpeg>
 Package pdftex.def Info: ./img/3.jpeg  used on input line 57.
 (pdftex.def)             Requested size: 124.86427pt x 157.7867pt.
-<./img/3b.jpeg, id=831, 1403.2425pt x 1006.76125pt>
+<./img/3b.jpeg, id=863, 1403.2425pt x 1006.76125pt>
 File: ./img/3b.jpeg Graphic file (type jpg)
 <use ./img/3b.jpeg>
 Package pdftex.def Info: ./img/3b.jpeg  used on input line 63.
 (pdftex.def)             Requested size: 140.33246pt x 100.68202pt.
-<./img/4.jpeg, id=832, 2080.77374pt x 1233.60875pt>
+<./img/4.jpeg, id=864, 2080.77374pt x 1233.60875pt>
 File: ./img/4.jpeg Graphic file (type jpg)
 <use ./img/4.jpeg>
 Package pdftex.def Info: ./img/4.jpeg  used on input line 72.
@@ -1009,31 +1022,29 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 471.
 
-) (./sections/transitori.tex) [14] (./sections/sinusoid.tex [15])
-(./sections/an_freq.tex) (./sections/doppi_bipoli.tex [16])
-(./sections/trasformatori.tex) [17] [18] (./Formulario.aux)
+) (./sections/transitori.tex [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+
+ []
+
+) [16] (./sections/sinusoid.tex) (./sections/an_freq.tex)
+(./sections/doppi_bipoli.tex [17]) (./sections/trasformatori.tex) [18] [19]
+(./Formulario.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `Formulario.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Formulario.out':
-(rerunfilecheck)             Before: 9CD780730F0A3EDE2E846E7FD796C13C;32523
-(rerunfilecheck)             After:  DA15940D7DD6443F09E1A6480C007D44;32865.
+Package rerunfilecheck Info: File `Formulario.out' has not changed.
+(rerunfilecheck)             Checksum: 8C3F8DFF5535BA6E1959106B64624263;33596.
  ) 
 Here is how much of TeX's memory you used:
- 26673 strings out of 474116
- 497791 string characters out of 5743683
- 1950187 words of memory out of 5000000
- 48375 multiletter control sequences out of 15000+600000
- 563187 words of font info for 55 fonts, out of 8000000 for 9000
+ 26870 strings out of 474116
+ 500575 string characters out of 5743683
+ 1951187 words of memory out of 5000000
+ 48562 multiletter control sequences out of 15000+600000
+ 563540 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,117p,465b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,117p,465b,1120s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
@@ -1044,15 +1055,16 @@ local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
-/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Formulario.pdf (19 pages, 1779149 bytes).
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Formulario.pdf (20 pages, 1808297 bytes).
 PDF statistics:
- 1040 PDF objects out of 1200 (max. 8388607)
- 972 compressed objects within 10 object streams
- 207 named destinations out of 1000 (max. 500000)
- 1291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 1007 compressed objects within 11 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 1339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

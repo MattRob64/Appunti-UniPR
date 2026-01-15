@@ -3,12 +3,61 @@
 \begin{document}
 	\subsection{Risolvere Equazioni Differenziali}
 	\subsection{Condensatori}
+	I condensatori sono dei bipoli in grado di immagazzinare e cedere energia.\\
+	Questi dispositivi sono formati da due facce piane e parallele, dette armature (Composte da materiali conduttori), separate da un materiale isolante, detto anche dielettrico (come ad esepio l'aria).\\
+	Collegandolo ad un generatore di tensione, avviene la carica del condensatore: le due armature accumulano una stessa quantità di carica, ma ciascuna di segno opposto.\\
+	Tra di esse si genera quindi un campo elettrico e di conseguenza anche una differenza di potenziale, $v$, proporzionale alla carica accumulata:
+	\[Q = C \cdot v\]
+	La capacità $C$ di un condensatore che si misura in Farad[$F$], che è un’unità di misura relativamente alta, e dipende dalla geometria del condensatore e dal dielettrico usato:
+	\[C = \varepsilon \cdot \frac{S}{d}\]
+	Dove $S$ è la superficie delle due armature, $d$ è la distanza tra di esse ed $\varepsilon$ e la costante dielettrica del materiale:
+	\[\varepsilon = \varepsilon_0 \cdot \varepsilon_r\]
+	Dove $\varepsilon_0$ è la costante dielettrica del vuoto:  $\varepsilon_0 = 8.854 \cdot 10^{-12} \frac{F}{m}$, mentre $\varepsilon_r$ è la costate dielettrica relativa, che dipende dal materiale scelto.
+	\subsubsection{Legge costitutiva di un condensatore}
+	La variazione assoluta di carica è $Q = C \cdot V_{AB}$.\\
+	La variazione di carica sulle armatire invece è
+	\[Q(t) = \int\limits_{-\infty}^{t} i(\tau) d\tau = \int\limits_{0}^{t} i(\tau) d\tau + Q(0)\]
+	Da cui possiamo ricavare:
+	\[ v_{AB} (t) = \frac{Q(t)}{C} = \frac{1}{C} \cdot \int\limits_{-\infty}^{t} i(\tau) d\tau = \frac{1}{C} \cdot \int\limits_{0}^{t} i(\tau) d\tau + v_{AB}(0)\]
+	Da cui possiamo dedurre la legge costitutiva di un condensatore, ovvero:
+	\[i(t) = C \cdot \frac{d v_{AB}(t)}{dt}\]
+	Si può dire dunque che un condensatore è un elemento con memoria, ovvero, la sua legge costitutiva dipende dall'istante di tempo di osservazione (vedere Teoria dei Segnali per una definizione migliore)
 	\subsubsection{Energia e Potenza di un Condensatore}
+	La potenza itantanea assorbita da un da un condensatore è
+	\[P_{ass}(t) = v(t) \cdot i(t) \]
+	Poiché in generale la potenza è $P(t) = \frac{dW}{dt'}$ l'\textbf{energia immagazzinata} del condensatore è: 
+	\[W = \int\limits_{0}^{Q_f} v(t) dQ = \frac{1}{2} \cdot \frac{Q_f^2}{C} = \frac{1}{2} C \cdot V_f^2\]
+	\subsubsection{Collegamenti fra condensatori}
+	Come gli altri bipoli, i condensatori possono essere collegati in serie o in parallelo.\\
+	Quinfi dati due condensatori di capacità $C_1$ e $C_2$:
+	\paragraph{In serie}
+	La corrente $i(t)$ è uguale per entrambi, ma le tensioni $v_1(t)$ e $v_2(t)$ differiscono fra di loro.\\
+	In questo cso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva è:
+	\[i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}\]
+	dove $v_{AB}(t) = v_1(t) + v_2(t)$, mentre $C_{eq} = \frac{C_1 \cdot C_2}{C_1 + C_2}$
+	\paragraph{In parallelo}
+	La tensione $v_{AB}(t)$ è uguale per entrambi, ma le correnti $i_1(t)$ e $i_2(t)$ differiscono fra di loro.\\
+	In questo cso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva è:
+	\[i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}\]
+	dove $i_{AB}(t) = i_1(t) + i_2(t)$, mentre $C_{eq} = C_1 + C_2$
 	\subsubsection{Transitorio di Carica di un Condensatore}
+	
 	\subsubsection{Transitorio di Scarica di un Condensatore}
 	\subsection{Elementi Parassiti}
 	\subsection{Rigidità Dielettrica}
+	Una proprietà importante del materiale dielettrico utilizzato nel condensatore è la sua rigidità dielettrica che si misura in $\left[ \frac{V}{m} \right]$ ed indica la tensione massima che si può applicare al condensatore in base alla distanza tra le due armature.\\
+	Se questo valore viene superato, il dielettrico viene “bruciato” e perde la sua funzione, causando una rottura del
+	condensatore.\\
+	Per fare un esempio, la rigidità dielettrica dell'aria secca è $R_{D \text{ aria secca}} = 30 \frac{kV}{cm}$
 	\subsection{Interruttori e Deviatori}
+	Gli \textbf{interruttori} sono dei bipoli che, a comando, possono agire da:
+	\begin{itemize}
+		\item Cortocircuito: in questo caso l’interruttore è chiuso;
+		\item Circuito aperto: in questo caso l’interruttore è aperto;
+	\end{itemize}
+	Su ogni interruttore devono essere precisati l’istante $t$ in cui viene modificato e la freccia che indica la modifica.\\\\
+	I \textbf{deviatori} rappresentano una versione “multi-polo” degli interruttori, ovvero: \\
+	a comando, il dispositivo collega un polo ad uno degli $n$-possibili nodi, trasformando gli altri in circuiti aperti (Forse è una forzatura ma è come un multiplexer).
 	\subsection{Elettromagnetismo}
 	\subsubsection{Legge di Circuitazione di Ampere}
 	\subsubsection{Relazione della Materia ai Campi Magnetici}
