@@ -1,0 +1,302 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+	\subsection{Risolvere Equazioni Differenziali (Linaeri del Primo Ordine)}
+	\subsubsection{Cosa sono le equazioni differenziali?}
+	\begin{definition}
+		Le equazioni differenziali ordinarie non sono altro che equazioni in cui l'incognita è una funzione e i cui termini sono le derivate della funzione stessa (a patto, ovviamente, che la funzione sia derivabile un numero sufficiente di volte).
+	\end{definition}
+	Le equazioni differenziali di primo ordine sono utili al fine di risolvere i problemi di transitorio.\\
+	Una equazione differenziale lineare del primo ordine si presenta nella forma:
+	\begin{equation}
+		f'(t)+a_0(t)f(t)=g(t)	
+	\end{equation}
+	Con $a_0(t)$ e $g(t)$ funzioni reali di una variabile reale continue nel loro insieme di definizione, ovvero:
+	\begin{equation}
+		a_0, \; g:I\subseteq\mathbb{R}\to\mathbb{R},\quad a_0, \; g \in C^0(I)
+	\end{equation}
+	Si può vedere come la somma di due contributi: \textbf{la soluzione omogenea associata} (trovando risolvendo la equazione con $0$ al posto di $g(t)$) e \textbf{l'integrale particolare}, una soluzione che vale in particolari casi.
+	\begin{equation}
+		f(t)=f_{SOA}(t)+f_{IP}(t)	
+	\end{equation}
+	\subsubsection{Come si risolvono le equazioni differenziali?}
+	\begin{enumerate}
+		\item Sia la equazione espressa nella forma:
+		\begin{equation}
+			a_n\frac{d^nx(t)}{dt^n}+a_{n-1} \frac{d^{n-1}x(t)}{dt^{n-1}}	+ \dots + a_1\frac{d^1 x(t)}{dt^1} + a_0 x(t) = b
+		\end{equation}
+		Generalmente nei problemi di transitorio:
+		\begin{itemize}
+			\item $a_1 = R \cdot C$
+			\item $a_0 = 1$
+			\item $b = E$
+			\item $x(t) = v_C$
+			\item $t = t$
+		\end{itemize}
+		\item Si scrive l'equazione omoegena associata (b=0)[Termine noto = 0]:
+		\begin{equation}
+			a_n\frac{d^nx(t)}{dt^n}+a_{n-1} \frac{d^{n-1}x(t)}{dt^{n-1}}	+ \dots + a_1\frac{d^1 x(t)}{dt^1} + a_0 x(t) = 0
+		\end{equation}
+		\item Passare attraverso l'\textbf{equazione caratteristica} $\left( \frac{d^nx(t)}{dt^n} = \alpha^n \right)$:
+		\begin{equation}
+			a_n\alpha^n+a_{n-1}\alpha^{n-1}+\dots+a_1\alpha^1+a_0=0	
+		\end{equation}
+		\item Risolvere l'equazione caratteristica per $\alpha_1, \alpha_2, \dots, \alpha_n$, che non si tratta d'altro se non risolvere una banale equazione che ha come incognita $\alpha$
+		\item Una volta trovate le soluzioni di $\alpha$ si costruisce il sistema omogeneo associato:
+		\begin{equation}
+			f_{SOA}(t)=K_1e^{\alpha_1t}+\dots+K_ne^{\alpha_nt}
+		\end{equation}
+		I valori di $K$ sono determinati dalle \textbf{condizioni iniziali}, quindi il valore all'istante iniziale $T=0$ della funzione incognita e tutte le sue derivate fino a $n-1$.\\
+		Una volta scritto il sistema omogeneo associato si possono \textbf{sostituire le alpha $\alpha_1, \alpha_2, \dots, \alpha_n$ con i valori che abbiamo calcolato nel passaggio 4}.
+		\item Calcoliamo l'integrale particolare\\
+		Che non altro che: 
+		\begin{equation}
+			\lim\limits_{t \to +\infty} f(t)
+		\end{equation}  
+		(Generalmente questo valore viene trovato durante lo studio del transitrio) \\
+		L'\textbf{integrale particolare} è un termine funzione del tempo che ha soluzioni in certe condizioni.
+		\item Si scrive la soluzione completa
+		\begin{equation}
+			f(t)=f_{SOA}(t)+f_{IP}(t)	
+		\end{equation}
+		A cui ovviamente si vanno a sostituire i valori trovati in precedenza e si risolve come equazione.
+	\end{enumerate}
+	% E poi...?
+	Nel caso in cui si considera la carica di un condensatore, per esempio, la condizione finale si determina che $f(t)=E$ per $t\rightarrow +\infty$.
+	\subsection{Condensatori}
+	\begin{definition}
+		I condensatori sono dei bipoli in grado di immagazzinare e cedere energia.
+	\end{definition}
+	Questi dispositivi sono formati da due facce piane e parallele, dette armature (Composte da materiali conduttori), separate da un materiale isolante, detto anche dielettrico (come ad esepio l'aria).\\
+	Collegandolo ad un generatore di tensione, avviene la carica del condensatore: le due armature accumulano una stessa quantità di carica, ma ciascuna di segno opposto.\\
+	Tra di esse si genera quindi un campo elettrico e di conseguenza anche una differenza di potenziale, $v$, proporzionale alla carica accumulata:
+	\[Q = C \cdot v\]
+	La \textbf{capacità} $C$ di un condensatore che si misura in Farad[$F$], che è un’unità di misura relativamente alta, e dipende dalla geometria del condensatore e dal dielettrico usato:
+	\[C = \varepsilon \cdot \frac{S}{d}\]
+	Dove $S$ è la superficie delle due armature, $d$ è la distanza tra di esse ed $\varepsilon$ e la \textbf{costante dielettrica} del materiale:
+	\[\varepsilon = \varepsilon_0 \cdot \varepsilon_r\]
+	Dove $\varepsilon_0$ è la costante dielettrica del vuoto:  $\varepsilon_0 = 8.854 \cdot 10^{-12} \frac{F}{m}$, mentre $\varepsilon_r$ è la costate dielettrica relativa, che dipende dal materiale scelto.
+	\subsubsection{Legge costitutiva di un condensatore}
+	La \textbf{variazione assoluta di carica} è $Q = C \cdot V_{AB}$.\\
+	La \textbf{variazione di carica sulle armature} invece è
+	\[Q(t) = \int\limits_{-\infty}^{t} i(\tau) d\tau = \int\limits_{0}^{t} i(\tau) d\tau + Q(0)\]
+	Da cui possiamo ricavare:
+	\begin{equation}
+		v_{AB} (t) = \frac{Q(t)}{C} = \frac{1}{C} \cdot \int\limits_{-\infty}^{t} i(\tau) d\tau = \frac{1}{C} \cdot \int\limits_{0}^{t} i(\tau) d\tau + v_{AB}(0)
+	\end{equation}
+	Da cui possiamo dedurre la legge costitutiva di un condensatore, ovvero:
+	\begin{equation}
+		i(t) = C \cdot \frac{d v_{AB}(t)}{dt}
+	\end{equation}
+	Si può dire dunque che un condensatore è un elemento con memoria, ovvero, la sua legge costitutiva dipende dall'istante di tempo di osservazione (vedere Teoria dei Segnali per una definizione migliore)
+	\subsubsection{Energia e Potenza di un Condensatore}
+	La \textbf{potenza itantanea assorbita} da un da un condensatore è
+	\begin{equation}
+		P_{ass}(t) = v(t) \cdot i(t)
+	\end{equation}
+	Poiché in generale la potenza è $P(t) = \frac{dW}{dt'}$ l'\textbf{energia immagazzinata} del condensatore è: 
+	\begin{equation}
+		W = \int\limits_{0}^{Q_f} v(t) dQ = \frac{1}{2} \cdot \frac{Q_f^2}{C} = \frac{1}{2} C \cdot V_f^2
+	\end{equation}
+	\subsubsection{Collegamenti fra condensatori}
+	Come gli altri bipoli, i condensatori possono essere collegati in serie o in parallelo.\\
+	Quinfi dati due condensatori di capacità $C_1$ e $C_2$:
+	\paragraph{In serie}
+	Nel caso di $n$ condensatori collegati in serie la loro capacità equivalente è:
+	\begin{equation}
+		C_{eq} = \frac{1}{\frac{1}{C_1} + \dots + \frac{1}{C_n}} = \frac{C_1 \cdot \dots \cdot C_n}{C_1 + \dots + C_n}
+	\end{equation}
+	Considerando invece solo due condensatori in serie (per semplicità), la corrente $i(t)$ è uguale per entrambi, ma le tensioni $v_1(t)$ e $v_2(t)$ differiscono fra di loro.\\
+	In questo caso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva istantanea è:
+	\begin{equation}
+		i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}
+	\end{equation}
+	dove 
+	\begin{equation}
+		v_{AB}(t) = v_1(t) + v_2(t)
+	\end{equation}
+	\paragraph{In parallelo}
+	Nel caso di $n$ condensatori collegati in serie la loro capacità equivalente è:
+	\begin{equation}
+		C_{eq} = C_1 + \dots C_n
+	\end{equation}
+	Considerando invece solo due condensatori in parallelo (per semplicità), la tensione $v_{AB}(t)$ è uguale per entrambi, ma le correnti $i_1(t)$ e $i_2(t)$ differiscono fra di loro.\\
+	In questo caso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva è:
+	\begin{equation}
+		i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}
+	\end{equation}
+	dove 
+	\begin{equation}
+		i_{AB}(t) = i_1(t) + i_2(t)
+	\end{equation}
+	\subsubsection{Transitorio di Carica di un Condensatore}
+	\begin{definition}
+		Il regime transitorio può essere descritto come una risposta temporanea di un circuito elettrico. \\
+		È una fase che ha un inizio e una fine, destinata a esaurirsi col tempo per lasciare spazio al regime stazionario, ovvero la condizione stabile in cui il circuito si assesta dopo che l'evento perturbatore è passato.
+	\end{definition}
+	\paragraph{Tensione nel transitorio di carica}
+	Il processo di carica di un condensatore rappresenta un regime transitorio, perché le grandezze del condensatore sono variabili nel tempo.\\
+	Per esempio, sia dato un circuito formato da:
+	\begin{itemize}
+		\item una resistenza $R$;
+		\item un interruttore, inizialmente aperto, che viene chiuso all’istante $t=0$;
+		\item un generatore ideale di tensione $E$;
+		\item un condensatore di capacità $C$;
+	\end{itemize}
+	Quando si chiude l’interruttore viene innescata una corrente che impone una tensione uguale a quella del generatore ai capi del condensatore. \\
+	Man mano che il condensatore si carica, il potenziale ai capi di esso aumenta e per la seconda legge di Kirchhoﬀ il potenziale ai capi del resistore diminuisce.\\\\
+	Se la tensione ai capi del condensatore dovesse mai arrivare a E (e non lo farà mai perchè ci arriva asintoticamente) questo implicherebbe una corrente uguale a zero e una diﬀerenza di potenziale ai capi della resistenza nullo.
+	Per $t<0$ e $t \to +\infty$  il circuito si trova in regime continuo, ovvero le correnti e le tensioni sono costanti.\\
+	Mentre per $0<t<T_f$ il circuito si trova in regime di transitorio.\\
+	Si ipotizza che possa esistere un momento $T_f$ per cui la tensione finale ai capi del condensatore sia uguale a E. \\
+	La funzione deve essere evidentemente monotona crescente, ma ancora non si conosce lo stato di transitorio.\\\\
+	A livello pratico si considera un tempo ragionevole per cui il condensatore si può considerare carico vicino al $99\%$ della carica completa. \\
+	Definendo una costante di tempo del transitorio come $\tau = RC$ (più è piccola più arriva velocemente alla carica totale), si può dire che per convenzione quando $t = T_f = 5\tau$ ($99\%$ della carica) esso si può considerare completamente carico.
+	Quindi, per la seconda legge di Kirchhoﬀ otteniamo che:
+	\[E = RC \cdot \frac{d v_C(t)}{dt} + v_C(t)\]
+	L'equazione ottenuta è un'equazione differenziale che si risolve applicando i assaggi esplicati meglio nella sezione 2.1.\\
+	Alla fine otteniamo che
+	\begin{equation}
+		v_C(0) = (V_{C_0} - E) \cdot e^{-\frac{1}{RC}t}+E
+	\end{equation}
+	\paragraph{Corrente nel Transitorio di Carica}
+	Per studiare il transitorio della corrente si applica la seconda legge di Kirchhoﬀ:
+	\[E=v_C(t)+Ri(t)=\frac{1}{C}\int_{-\infty}^ti(t)dt+Ri(t)\]
+	La equazione trovata è diﬀerenziale di primo grado. \\
+	Si calcola da $-\infty$ per indicare (a livello matematico) la condizione di quando era scarico "all’inizio del tempo", quindi $V_{C_0}$ non si conta. \\
+	Riordinando i termini:
+	\[0 = RC\frac{d i(t)}{dt} + i(t)\]
+	E risolvendo la equazione diﬀerenziale otteniamo che:
+	\begin{equation}
+		i(t) = \frac{E-V_{C_0}}{R} \cdot e^{-\frac{1}{RC}t}
+	\end{equation}
+	\subsubsection{Scarica di un Condensatore}
+	Prendendo un condensatore carico, si mettono in cortocircuito i poli del circuito (non del condensatore ideale avrebbe una corrente infinita). \\
+	Sempre con la seconda legge di Kirchhoﬀ si costruisce una equazione diﬀerenziale:
+	\[0 = v_C(t) + R \cdot i(t) = v_C(t) + RC \cdot \frac{d v_C(t)}{dt}\]
+	Ottenendo quindi che:
+	\begin{equation}
+		v_C(t) = V_{C_0} \cdot e^{-\frac{1}{RC}t}
+	\end{equation}
+	e
+	\begin{equation}
+		i(t) = C \cdot \frac{d v_C(t)}{dt} = - \frac{V_{C_0}}{R} \cdot e^{-\frac{1}{RC}t}
+	\end{equation}
+	Osservando i grafici si nota che la corrente presenta una discontinuità (da zero va istantaneamente a $- \frac{E}{R}$, mentre la tensione non può farlo.\\
+	Infine, quando un condensatore si trova in regime continuo, questo agisce come un circuito aperto, cioè $i_C=0$
+	\subsection{Capacità Parassita (Elementi Parassiti)}
+	Un elemento parassita è una caratteristica che un componente non dovrebbe avere, ad esempio un filo elettrico ha una resistenza interna, anche se viene considerato equipotenziale, oppure ad esempio un elemento di quarzo funziona anche come condensatore, avendo lamine a poca distanza fra loro.\\
+	In particolare i fili elettrici, se posti a breve distanza, possono presentare fenomeni di capacità parassita. \\
+	I cavi coassiali fanno in modo di ridurre il fenomeno ponendo il conduttore all’interno di una schermatura metallica, che eﬀettivamente forma un condensatore con quello interno, ma viene scaricato poi a massa.\\
+	Il cavo coassiale possiede una caratteristica capacitiva per ogni metro, quindi $\left[ \frac{F}{m} \right]$, misurata allo stesso modo della resistenza parassita $\left[ \frac{\Omega}{m}\right]$.
+	\subsection{Rigidità Dielettrica}
+	Una proprietà importante del materiale dielettrico utilizzato nel condensatore è la sua rigidità dielettrica che si misura in $\left[ \frac{V}{m} \right]$ ed indica la tensione massima che si può applicare al condensatore in base alla distanza tra le due armature.\\
+	Se questo valore viene superato, il dielettrico viene “bruciato” e perde la sua funzione, causando una rottura del
+	condensatore.\\
+	Per fare un esempio, la rigidità dielettrica dell'aria secca è $R_{D \text{ aria secca}} = 30 \frac{kV}{cm}$
+	\subsection{Interruttori e Deviatori}
+	Gli \textbf{interruttori} sono dei bipoli che, a comando, possono agire da:
+	\begin{itemize}
+		\item Cortocircuito: in questo caso l’interruttore è chiuso;
+		\item Circuito aperto: in questo caso l’interruttore è aperto;
+	\end{itemize}
+	Su ogni interruttore devono essere precisati l’istante $t$ in cui viene modificato e la freccia che indica la modifica.\\\\
+	I \textbf{deviatori} rappresentano una versione “multi-polo” degli interruttori, ovvero: \\
+	a comando, il dispositivo collega un polo ad uno degli $n$-possibili nodi, trasformando gli altri in circuiti aperti (Forse è una forzatura ma è come un multiplexer).
+	\subsection{Elettromagnetismo}
+	Un filo percorso da corrente genera sempre un campo magnetico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{CampElFil.png}
+			\caption{Campo elettrico di un filo}
+			\label{fig:im-5}
+		\end{figure}
+	\end{center}
+	\subsubsection{Legge di Circuitazione di Ampere}
+	\begin{definition}
+		Supponendo di avere un filo in cui scorre una corrente $I$, ad una distanza $R$ concentrica con il centro del filo si può osservare un campo elettrico che, se integrato, ha lo stesso valore di $I$
+	\end{definition}
+	Da questo possiamo dedurre che se una corrente genera un campo magnetico allora la corrente è data dalla somma dei contributi di campo magnetico (vettore) nella circonferenza posta a distanza $R$ dal centro:
+	\begin{equation}
+		\bar{H} \cdot \oint_l dl = I
+	\end{equation}
+	\\Ovvero che l'\textbf{integrale lungo una linea chiusa} $l$ (Ovvero la \href{https://it.wikipedia.org/wiki/Circuitazione}{circuitazione}) (come si può vedere in figura \ref{fig:im-5}) del campo magnetico è uguale alla somma delle correnti elettriche ad essa concatenate.\\
+	Se ci si mette a distanza $R$ dal filo percorso da corrente $I$ si viene sottoposti ad un \textbf{campo magnetico di intensità}:
+	\begin{equation}
+		\left| \overrightarrow{H} \right| = \frac{I}{2 \pi R} 
+	\end{equation}
+	con direzione tangente alla circonferenza.
+	\begin{figure}
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.5\linewidth]{Solenoide.png}
+			\caption{Solenoide}
+			\label{fig:im-6a}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.5\linewidth]{Toroide.png}
+			\caption{Toroide}
+			\label{fig:im-6b}
+		\end{subfigure}
+		\caption{Induttori}
+		\label{fig:im-6}
+	\end{figure}
+	\\Volendo accumulare campo magnetico si può avvolgere il filo in un elemento toroidale (come in figura \ref{fig:im-6b}) , indicando con $N$ il numero di avvolgimenti. \\
+	Il campo ottenuto sarà dato dalla somma di tutti i contributi, quindi $N$ volte quello del singolo avvolgimento:
+	\begin{equation}
+		\oint_l \bar{H} \; d\bar{l} = N \cdot I \coloneq I_C
+	\end{equation}
+	Dove $I_C$ indica le \textbf{correnti concatenate}.\\
+	Se si prende una linea chiusa all’esterno dell’avvolgimento ($l'$ sempre in figura  \ref{fig:im-6b}) si nota che il campo magnetico risulta nullo, stessa cosa per quello che riguarda una linea presa vicino al centro. \\
+	La lunghezza che eﬀettivamente serve è quella del toroide contenuto dalle spire:
+	\begin{equation}
+		\oint \bar{H} \; d\bar{l} = H \cdot L
+	\end{equation}
+	Otterremo quindi che:
+	\begin{equation}
+		H = I \cdot \frac{N}{L}
+	\end{equation}
+	Dove $\overrightarrow{H}$ è ovviamente il campo elettromegnetico misurato in $\left[ \frac{A}{m} \right]$, $I$ è la corrente, $N$ è il numero di avvolgimenti (o spire) e $L$ è la densità degli avvolgimenti.\\
+	Questo vale anche per un "toroide con raggio infinito", quindi un solenoide, quello che conta è la densità di spire.\\
+	L’intensità del campo dipende quindi dalla densità di spire e dalla corrente in entrata.\\
+	Le linee del campo magnetico sono sempre chiuse, quindi nel caso dell’induttore toroidale sono interamente contenute nel nucleo, e per il solenoide escono ed entrano dai capi.
+	\subsubsection{Permeabilità magnetica (Relazione della Materia ai Campi Magnetici)}
+	Esiste un campo $\overrightarrow{B}$ detto \textbf{campo di induzione magnetica} (o densità di flusso magnetico), misurato in Tesa $\left[ T \right]$.\\
+	Dato un campo magnetico moltiplicato per una costante $\mu$ $\left[ \frac{N}{A^2} \right] $ che dipende dal materiale usato come nucleo, detta \textbf{permeabilità magnetica}:
+	\begin{equation}
+		\overrightarrow{B} = \mu \cdot \overrightarrow{H}
+	\end{equation}
+	Questo implica che $\overrightarrow{H}$ non dipende dal materiale, anzi, viene alterato a seconda della costante di permeabilità magnetica $\mu$ applicata.\\
+	Lapermeabilitàmagnetica, come la costante dielettrica (Descritta nella sezione 2.2), si scompone in due parti, $\mu_0$ che è la \textbf{permeabilità magnetica nel vuoto} e $\mu_R$, quella relativa al materiale:
+	\begin{equation}
+		\mu = \mu_0 \cdot \mu_R
+	\end{equation}
+	Esistono diversi tipi di materiali che variano a seconda della permeabilità magnetica:
+	\begin{itemize}
+		\item Materiali \textbf{Diamagnetici}: dove $\mu_R < 1$ ($\mu_R$ < $\mu_0$), oppongono un debole campo magnetico a quello esterno
+		\item Materiali \textbf{Paramagnetici}: dove $\mu_R > 1$, forniscono un piccolo contributo al campo magnetico
+		\item Materiali \textbf{Ferromagnetici}: dove $\mu_R \gg 1$, si polarizzano a seconda del campo magnetico e possono "memorizzare" una direzione
+	\end{itemize}
+	Sia nel caso dei materiali diamagnetici che nei materiali paramagnetici $\mu_R$ si avvicina a uno, il suo valore non è lontano da 1.
+	\paragraph{Ferromagnetismo e Perdite di Potenza del Ferro}
+	I materiali ferromagnetici sono a livello microscopico divisi in partizioni dette \textbf{domini di Weiss}, ognuna con una polarità casuale rispetto alle altre. \\
+	In presenza di un campo magnetico, i domini si orientano (non completamente) nella stessa direzione del campo, con l’eﬀetto che tutti i domini contribuiscono all’intensità del campo magnetico.\\
+	Non si può mai arrivare alla situazione in cui ogni singolo dominio è perfettamente allineato al campo, essendo un andamento asintotico, ma si può determinare dopo una certa intensità del campo magnetico che il materiale sia "saturato".
+	\subsubsection{Legge di Faraday-Lenz (Legge di Induzione Magnetica)}
+	\subsubsection{Campo Magnetico Incidente}
+	\subsubsection{Circuiti Magnetici}
+	\subsubsection{Legge di Hopkinson}
+	\subsection{Induttori}
+	\subsubsection{Energia e Potenza Induttore}
+	\subsubsection{Comportamento a Regime di Condensatore e Induttore}
+	\subsubsection{Transitorio di Carica Induttore}
+	\subsection{Collegamenti fra Componenti Reattivi}
+	\subsubsection{Codensatori in Parallelo}
+	\subsubsection{Condensatori in Serie}
+	\subsubsection{Induttori in Parallelo}
+	\subsubsection{Induttori in Serie}
+	\subsection{Analisi di Circuiti in Transitorio}
+\end{document}

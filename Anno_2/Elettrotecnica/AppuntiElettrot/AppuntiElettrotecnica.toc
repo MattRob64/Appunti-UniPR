@@ -1,0 +1,165 @@
+\contentsline {section}{\numberline {1}Circuiti in Corrente Continua}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Carica elettrone}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Prima legge di Ohm}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Seconda legge di Ohm}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Variazione di Resistività (o Concudibilità) con la temperatura}{5}{subsubsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.4}Bipoli}{5}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Bipolo Elettrico (generico)}{5}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Filo Elettrico}{6}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Bipolo "Resistenza"}{6}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4}Bipolo "Generatore Ideale di Tensione"}{6}{subsubsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.5}Bipolo "Generatore Ideale di Corrente"}{6}{subsubsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.5}Convenzione del Generatore}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Convenzione del'Utilizzatore}{6}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Principio di Kirchhoff al Nodo (1° Principio di Kirchhoff)}{6}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Principio di Kirchhoff alla Maglia (2° Principio di Kirchhoff)}{6}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Conduttanza Elettrica}{7}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Potenza Elettrica di un Bipolo}{7}{subsection.1.10}%
+\contentsline {subsubsection}{\numberline {1.10.1}Convenzione Utilizzatore}{7}{subsubsection.1.10.1}%
+\contentsline {subsubsection}{\numberline {1.10.2}Convenzione Generatore}{7}{subsubsection.1.10.2}%
+\contentsline {subsubsection}{\numberline {1.10.3}Potenza Assorbita di una Resistenza}{7}{subsubsection.1.10.3}%
+\contentsline {subsection}{\numberline {1.11}Fenomeni Termici}{7}{subsection.1.11}%
+\contentsline {subsubsection}{\numberline {1.11.1}Legge di Ohm Termica}{7}{subsubsection.1.11.1}%
+\contentsline {subsubsection}{\numberline {1.11.2}Resistenza Termica}{7}{subsubsection.1.11.2}%
+\contentsline {subsection}{\numberline {1.12}Collegamenti fra Bipoli}{8}{subsection.1.12}%
+\contentsline {subsubsection}{\numberline {1.12.1}Collegamento in Serie}{8}{subsubsection.1.12.1}%
+\contentsline {subsubsection}{\numberline {1.12.2}Collegamento in Parallelo}{8}{subsubsection.1.12.2}%
+\contentsline {subsubsection}{\numberline {1.12.3}Partitore di Tensione (Serie di Resistenze)}{8}{subsubsection.1.12.3}%
+\contentsline {subsubsection}{\numberline {1.12.4}Partitore di Corrente (Parallelo di Resistenze)}{8}{subsubsection.1.12.4}%
+\contentsline {subsubsection}{\numberline {1.12.5}Serie di Generatori Ideali di Tensione}{8}{subsubsection.1.12.5}%
+\contentsline {subsubsection}{\numberline {1.12.6}Parallelo di Generatori Ideali di Tensione}{8}{subsubsection.1.12.6}%
+\contentsline {subsubsection}{\numberline {1.12.7}Serie di Generatori Ideali di Corrente}{8}{subsubsection.1.12.7}%
+\contentsline {subsubsection}{\numberline {1.12.8}Parallelo di Generatori Ideali di Corrente}{8}{subsubsection.1.12.8}%
+\contentsline {subsection}{\numberline {1.13}Generatori Reali}{9}{subsection.1.13}%
+\contentsline {subsubsection}{\numberline {1.13.1}Generatore Reale di Tensione}{9}{subsubsection.1.13.1}%
+\contentsline {subsubsection}{\numberline {1.13.2}Generatore Reale di Corrente}{9}{subsubsection.1.13.2}%
+\contentsline {subsubsection}{\numberline {1.13.3}Equivalenze fra Generatori Reali}{9}{subsubsection.1.13.3}%
+\contentsline {subsubsection}{\numberline {1.13.4}Considerazioni Energetiche sui Generatori Reali}{9}{subsubsection.1.13.4}%
+\contentsline {subsubsection}{\numberline {1.13.5}Generatori Reali di Tensione in Serie}{9}{subsubsection.1.13.5}%
+\contentsline {subsubsection}{\numberline {1.13.6}Generatori Reali di Corrente in (Serie) Parallelo}{9}{subsubsection.1.13.6}%
+\contentsline {subsection}{\numberline {1.14}Strumenti di Misura}{9}{subsection.1.14}%
+\contentsline {subsubsection}{\numberline {1.14.1}Voltmetro}{9}{subsubsection.1.14.1}%
+\contentsline {subsubsection}{\numberline {1.14.2}Amperometro}{10}{subsubsection.1.14.2}%
+\contentsline {subsubsection}{\numberline {1.14.3}Ohmetro}{10}{subsubsection.1.14.3}%
+\contentsline {subsubsection}{\numberline {1.14.4}Wattmetro}{10}{subsubsection.1.14.4}%
+\contentsline {subsection}{\numberline {1.15}Generatori Pilotati}{10}{subsection.1.15}%
+\contentsline {subsubsection}{\numberline {1.15.1}Generatore di Tensione Pilotato da Una Tensione}{10}{subsubsection.1.15.1}%
+\contentsline {subsubsection}{\numberline {1.15.2}Generatore di Tensione Pilotato da Una Corrente}{10}{subsubsection.1.15.2}%
+\contentsline {subsubsection}{\numberline {1.15.3}Generatore di Corrente Pilotato da Una Tensione}{10}{subsubsection.1.15.3}%
+\contentsline {subsubsection}{\numberline {1.15.4}Generatore di Corrente Pilotato da Una Corrente}{10}{subsubsection.1.15.4}%
+\contentsline {subsection}{\numberline {1.16}Teorema di Millman}{11}{subsection.1.16}%
+\contentsline {subsection}{\numberline {1.17}Trasformazioni Stella-Triangolo}{11}{subsection.1.17}%
+\contentsline {subsubsection}{\numberline {1.17.1}Leggi Costitutive a Stella}{11}{subsubsection.1.17.1}%
+\contentsline {subsubsection}{\numberline {1.17.2}Leggi Costitutive a Triangolo}{11}{subsubsection.1.17.2}%
+\contentsline {subsubsection}{\numberline {1.17.3}Trasformazione da Stella a Triangolo}{11}{subsubsection.1.17.3}%
+\contentsline {subsubsection}{\numberline {1.17.4}Trasformazione da Triangolo a Stella}{11}{subsubsection.1.17.4}%
+\contentsline {subsection}{\numberline {1.18}Linearità}{12}{subsection.1.18}%
+\contentsline {subsection}{\numberline {1.19}Principio di Sovrapposizione degli Effetti}{12}{subsection.1.19}%
+\contentsline {subsubsection}{\numberline {1.19.1}Metodo della Sovrapposizione degli Effetti}{12}{subsubsection.1.19.1}%
+\contentsline {subsection}{\numberline {1.20}Teorema di Thevenin}{12}{subsection.1.20}%
+\contentsline {subsection}{\numberline {1.21}Teorema di Norton}{13}{subsection.1.21}%
+\contentsline {subsection}{\numberline {1.22}Thevenin e Norton in Presenza di Generatori Pilotati}{13}{subsection.1.22}%
+\contentsline {subsubsection}{\numberline {1.22.1}Metodo 1}{13}{subsubsection.1.22.1}%
+\contentsline {subsubsection}{\numberline {1.22.2}Metodo 2 di Norton}{13}{subsubsection.1.22.2}%
+\contentsline {subsubsection}{\numberline {1.22.3}Metodo 3 di Thevenin}{13}{subsubsection.1.22.3}%
+\contentsline {subsection}{\numberline {1.23}Metodi Risolutivi}{13}{subsection.1.23}%
+\contentsline {subsubsection}{\numberline {1.23.1}Metodo delle Correnti di Maglia}{13}{subsubsection.1.23.1}%
+\contentsline {subsubsection}{\numberline {1.23.2}Metodo dei Potenziali di Nodo}{14}{subsubsection.1.23.2}%
+\contentsline {subsubsection}{\numberline {1.23.3}Casi Degeneri}{14}{subsubsection.1.23.3}%
+\contentsline {paragraph}{\numberline {1.23.3.1}Ramo con $G_{Inc} = 0$}{14}{paragraph.1.23.3.1}%
+\contentsline {paragraph}{\numberline {1.23.3.2}Ramo con $R_{Inc} = 0$}{15}{paragraph.1.23.3.2}%
+\contentsline {section}{\numberline {2}Trasitori Elettrici}{15}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Risolvere Equazioni Differenziali (Linaeri del Primo Ordine)}{15}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Cosa sono le equazioni differenziali?}{15}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Come si risolvono le equazioni differenziali?}{15}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Condensatori}{16}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Legge costitutiva di un condensatore}{16}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Energia e Potenza di un Condensatore}{17}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Collegamenti fra condensatori}{17}{subsubsection.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.3.1}In serie}{17}{paragraph.2.2.3.1}%
+\contentsline {paragraph}{\numberline {2.2.3.2}In parallelo}{17}{paragraph.2.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.2.4}Transitorio di Carica di un Condensatore}{18}{subsubsection.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.4.1}Tensione nel transitorio di carica}{18}{paragraph.2.2.4.1}%
+\contentsline {paragraph}{\numberline {2.2.4.2}Corrente nel Transitorio di Carica}{18}{paragraph.2.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.2.5}Scarica di un Condensatore}{19}{subsubsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.3}Capacità Parassita (Elementi Parassiti)}{19}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Rigidità Dielettrica}{19}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Interruttori e Deviatori}{19}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Elettromagnetismo}{19}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Legge di Circuitazione di Ampere}{20}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Permeabilità magnetica (Relazione della Materia ai Campi Magnetici)}{21}{subsubsection.2.6.2}%
+\contentsline {paragraph}{\numberline {2.6.2.1}Ferromagnetismo e Perdite di Potenza del Ferro}{21}{paragraph.2.6.2.1}%
+\contentsline {subsubsection}{\numberline {2.6.3}Legge di Faraday-Lenz (Legge di Induzione Magnetica)}{22}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Campo Magnetico Incidente}{22}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Circuiti Magnetici}{22}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.6}Legge di Hopkinson}{22}{subsubsection.2.6.6}%
+\contentsline {subsection}{\numberline {2.7}Induttori}{22}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Energia e Potenza Induttore}{22}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Comportamento a Regime di Condensatore e Induttore}{22}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Transitorio di Carica Induttore}{22}{subsubsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.8}Collegamenti fra Componenti Reattivi}{22}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Codensatori in Parallelo}{22}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Condensatori in Serie}{22}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.3}Induttori in Parallelo}{22}{subsubsection.2.8.3}%
+\contentsline {subsubsection}{\numberline {2.8.4}Induttori in Serie}{22}{subsubsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.9}Analisi di Circuiti in Transitorio}{22}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Regime Sinusoidale}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bipoli Elettrici}{22}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Generatore Ideale di Tensione Sinusoidale}{22}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Generatore Reale di Tensione Sinusoidale}{22}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Generatore Ideale di Corrente Sinusoidale}{22}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Generatore Reale di Corrente Sinusoidale}{22}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}Grandezze nel Regime Sinusoidale}{22}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Trasformata di Steinitz}{23}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Metodo Risolutivo per Regime Sinusoidale}{23}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Potenze in Regime Sinusoidale}{23}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Valore Efficace di Tensioni e Correnti}{23}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Teorema di Boucherot}{23}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Rifasamento}{23}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Teorema del Massimo Trasferimento di Potenza}{23}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Sistemi Trifase}{23}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Collegamento a Triangolo}{23}{subsubsection.3.10.1}%
+\contentsline {subsubsection}{\numberline {3.10.2}Collegamento a Stella}{23}{subsubsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.3}Misura di Ptenza Trifase}{23}{subsubsection.3.10.3}%
+\contentsline {subsubsection}{\numberline {3.10.4}Inserzione Aaron}{23}{subsubsection.3.10.4}%
+\contentsline {section}{\numberline {4}Analisi in Frequenza (Sempre parte del regime sinusoidale)}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Diagramma di Bode in Ampiezza e Fase}{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Filtro Passa-Basso (RC)}{23}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Filtro Passa-Alto (RC)}{23}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Filtro Passa-Alto (RL)}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Filtro RLC Serie}{24}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Pulsazione di Risonanza}{24}{subsubsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.5}Fattore Qualità Q}{24}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Filtro RLC Parallelo (Antirisonanza)}{24}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Picchi di Risonanza o Antirisonanza Parassiti}{24}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Funzioni di Trasferimento}{24}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}Zeri delle Fuzioni di Trasferimento}{24}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Poli delle Funzioni di Trasferimento}{24}{subsubsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.3}Costanti di Trasferimento}{24}{subsubsection.4.8.3}%
+\contentsline {subsubsection}{\numberline {4.8.4}Come Disegnare una Funzione di Trasferimento}{24}{subsubsection.4.8.4}%
+\contentsline {subsection}{\numberline {4.9}Decibel e Scala Logaritmica}{24}{subsection.4.9}%
+\contentsline {subsubsection}{\numberline {4.9.1}Guadagno di Potenza}{24}{subsubsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.2}Logaritmi Fondamentali}{24}{subsubsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.10}Poli e Zeri}{24}{subsection.4.10}%
+\contentsline {subsubsection}{\numberline {4.10.1}Reali e Distinti}{24}{subsubsection.4.10.1}%
+\contentsline {subsubsection}{\numberline {4.10.2}Reali Coincidenti}{24}{subsubsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.3}Complessi e Coniugati}{24}{subsubsection.4.10.3}%
+\contentsline {subsection}{\numberline {4.11}Pulsazione di Risonanza e Fattore di Smorzamento}{24}{subsection.4.11}%
+\contentsline {section}{\numberline {5}Doppi Bipoli}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Metodi per Rappresentare un Doppio Bipolo}{25}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Matrice delle Impedenze}{25}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Matrice delle Ammettenze}{25}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Matrice Ibrida}{25}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Matrice di Trasmissione Diretta}{25}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Sintesi di Doppi Bipoli}{25}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Collegamenti fra Doppi Bipoli}{25}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Collegamento in Serie}{25}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Collegamento in Parallelo}{25}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Collegamento in Cascata}{25}{subsubsection.5.3.3}%
+\contentsline {section}{\numberline {6}Trasformatori}{25}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Mutua Induzione}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Trasformatore Ideale}{25}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Proprietà dei Trasformatori}{25}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Utilizzi di un Trasformatore}{25}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Autotrasformatore}{25}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Trasformatore Reale}{25}{subsection.6.6}%

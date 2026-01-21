@@ -24,7 +24,9 @@
 	L'inverso della resistività è la \textbf{conducibilità}, ovvero quanto un materiale conduce elettricità, viene indicata con:
 	\[ \sigma = \frac{1}{\rho} \]
 	\subsubsection{Variazione di Resistività (o Concudibilità) con la temperatura}
-	\[\rho = \rho_0 \cdot \left[ 1 + \alpha \cdot (T - T_0)\right] \]
+	\begin{equation}
+		\rho = \rho_0 \cdot \left[ 1 + \alpha \cdot (T - T_0)\right]
+	\end{equation}
 	\begin{itemize}
 		\item $\rho_0$ è la resistività calcolata ad una certa temperatura $T_0$
 		\item $\alpha$ è il coefficiente termico di resistività che cambia a seconda del materiale, si musira in $\left[ \frac{1}{ ^\circ C}\right]$
@@ -51,20 +53,23 @@
 		\end{figure}
 	\end{center}
 	\subsubsection{Bipolo "Generatore Ideale di Tensione"}
-	\begin{center}
-		\begin{figure}[h]
+	\begin{figure}
+		\centering
+		\begin{subfigure}{.5\textwidth}
 			\centering
-			\includegraphics[scale=0.4]{3.jpeg}
+			\includegraphics[width=.5\linewidth]{3.jpeg}
 			\caption{Bipolo Generatore Ideale di Tensione}
-			\label{fig:im-3}
-		\end{figure}
-		\begin{figure}[h]
+			\label{fig:im-3a}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
 			\centering
-			\includegraphics[scale=0.1]{3b.jpeg}
+			\includegraphics[width=.5\linewidth]{3b.jpeg}
 			\caption{Bipolo Generatore Ideale di Tensione}
 			\label{fig:im-3b}
-		\end{figure}
-	\end{center}
+		\end{subfigure}
+		\caption{Bipolo Generatore Ideale di Tensione}
+		\label{fig:im-3}
+	\end{figure}
 	\subsubsection{Bipolo "Generatore Ideale di Corrente"}
 	\begin{center}
 		\begin{figure}[h]
@@ -89,59 +94,99 @@
 	\subsection{Principio di Kirchhoff alla Maglia (2° Principio di Kirchhoff)}
 	Il secondo principio di Kirchhoff afferma che,data una maglia, la sommatoria ordinata (cioè secondo un unico verso, orario o antiorario, del percorso) di tutte le tensioni della maglia è nulla.
 	\subsection{Conduttanza Elettrica}
-	\[G = \frac{1}{R} \;\; [\Omega ^{-1}] = [S]\]
+	\begin{equation}
+		G = \frac{1}{R} \;\; [\Omega ^{-1}] = [S]
+	\end{equation}
 	L'unità di misura della conduttanza è il Siemens
 	\subsection{Potenza Elettrica di un Bipolo}
 	L'unità di misura della potenza elettrica è il Watt
 	\subsubsection{Convenzione Utilizzatore}
-	\[P_{Assorbita} = \Delta V \cdot I \;\; [W]\]
-	\[P_{Generata} = -\Delta V \cdot I \;\; [W]\]
+	\begin{equation}
+		P_{Assorbita} = \Delta V \cdot I \;\; [W]
+	\end{equation}
+	\begin{equation}
+		P_{Generata} = -\Delta V \cdot I \;\; [W]
+	\end{equation}
 	\subsubsection{Convenzione Generatore}
-	\[P_{Assorbita} = -\Delta V \cdot I \;\; [W]\]
-	\[P_{Generata} = \Delta V \cdot I \;\; [W]\]
+	\begin{equation}
+		P_{Assorbita} = -\Delta V \cdot I \;\; [W]
+	\end{equation}
+	\begin{equation}
+		P_{Generata} = \Delta V \cdot I \;\; [W]
+	\end{equation}
 	\subsubsection{Potenza Assorbita di una Resistenza}
 	È sempre positiva:
-	\[P_{Assorb} = \Delta V \cdot I = R \cdot I \cdot I = R \cdot I^2\]
-	\[P_{Assorb} = \Delta V \cdot I = \Delta V \cdot \frac{\Delta V}{R} = \frac{(\Delta V)^2}{R}\]
+	\begin{equation}
+		P_{Assorb} = \Delta V \cdot I = R \cdot I \cdot I = R \cdot I^2 
+	\end{equation}
+	\begin{equation}
+		P_{Assorb} = \Delta V \cdot I = \Delta V \cdot \frac{\Delta V}{R} = \frac{(\Delta V)^2}{R}
+	\end{equation}
 	\subsection{Fenomeni Termici}
 	\subsubsection{Legge di Ohm Termica}
-	\[T_{Fin} = T_{Amb} + P_{Assorbita} \cdot R_T \;\; [^\circ C]\]
+	\begin{equation}
+		T_{Fin} = T_{Amb} + P_{Assorbita} \cdot R_T \;\; [^\circ C]
+	\end{equation}
 	Dove $R_T$ è la Resistenza Termica
 	\subsubsection{Resistenza Termica}
-	\[R_T = \frac{T_{Fin} - T_{Amb}}{P_{Assorb}} \;\; \left[ \frac{^\circ C}{W}\right]\]
+	\begin{equation}
+		R_T = \frac{T_{Fin} - T_{Amb}}{P_{Assorb}} \;\; \left[ \frac{^\circ C}{W}\right]
+	\end{equation}
 	\subsection{Collegamenti fra Bipoli}
 	\subsubsection{Collegamento in Serie}
 	In una serie di Bipoli, tutte le correnti sono uguali fra loro:
-	\[I_1 = I_2 = \dots = I_n\]
+	\begin{equation}
+		I_1 = I_2 = \dots = I_n
+	\end{equation}
 	Mentre invece utilizzando il secondo principio di Kirchhoff otteniamo che la tensione della serie è uguale alla somma delle tensioni di ogni bipolo:
-	\[\Delta V = \sum_{i = 1}^{n} \Delta V_i\]
-	Una serie di Bipoli è essa stessa un bipolo.
+	\begin{equation}
+		\Delta V = \sum_{i = 1}^{n} \Delta V_i
+	\end{equation}
+	\textbf{Una serie di Bipoli è essa stessa un bipolo.}
 	\subsubsection{Collegamento in Parallelo}
 	In un parallelo di Bipoli, tutte le tensioni sono uguali fra loro:
-	\[\Delta V_1 = \Delta V_2 = \dots = \Delta V_n\]
+	\begin{equation}
+		\Delta V_1 = \Delta V_2 = \dots = \Delta V_n
+	\end{equation}
 	Mentre invece utilizzando il primo principio di Kirchhoff otteniamo che la corrente della serie è uguale alla somma delle correnti di ogni bipolo:
-	\[I = \sum_{i = 1}^{n} I_i\]
+	\begin{equation}
+		I = \sum_{i = 1}^{n} I_i
+	\end{equation}
 	\subsubsection{Partitore di Tensione (Serie di Resistenze)}
-	\[R_{Eq} = R_1 + R_2 + \dots + R_n\]
-	\[V_{i} = V_{AB} \cdot \frac{R_i}{\sum_{j=1}^{n} R_j} \]
+	\begin{equation}
+		R_{Eq} = R_1 + R_2 + \dots + R_n
+	\end{equation}
+	\begin{equation}
+		V_{i} = V_{AB} \cdot \frac{R_i}{\sum_{j=1}^{n} R_j} 
+	\end{equation}
 	Dove $A$ e $B$ sono i capi della serie di resistori e dove $R_i$ e $V_i$ sono rispettivamente la resistenza e la tensione che del resistore/bipolo preso in considerazione.\\
 	Ad esempio, se avessimo due resistenze, $R_n = R_2$
 	\subsubsection{Partitore di Corrente (Parallelo di Resistenze)}
-	\[R_{Eq} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}\]
-	\[I_i = I_{AB} \cdot \frac{G_i}{\sum_{j = 1}^{n} G_j} = I_{AB} \cdot \frac{\frac{1}{R_i}}{\sum_{j=1}^{n} \frac{1}{R_j}}\]
+	\begin{equation}
+		R_{Eq} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
+	\end{equation}
+	\begin{equation}
+		I_i = I_{AB} \cdot \frac{G_i}{\sum_{j = 1}^{n} G_j} = I_{AB} \cdot \frac{\frac{1}{R_i}}{\sum_{j=1}^{n} \frac{1}{R_j}}
+	\end{equation}
 	\subsubsection{Serie di Generatori Ideali di Tensione}
-	\[E_{Eq} = \sum_{i = 1}^{n} E_i\]
+	\begin{equation}
+		E_{Eq} = \sum_{i = 1}^{n} E_i
+	\end{equation}
 	\subsubsection{Parallelo di Generatori Ideali di Tensione}
 	{\color{red} Non esiste è un ASSURDO!!}
 	\subsubsection{Serie di Generatori Ideali di Corrente}
 	{\color{red} Non esiste è un ASSURDO!!}
 	\subsubsection{Parallelo di Generatori Ideali di Corrente}
-	\[I_{Eq} = \sum_{i = 1}^{n} I_i\]
+	\begin{equation}
+		I_{Eq} = \sum_{i = 1}^{n} I_i
+	\end{equation}
 	\subsection{Generatori Reali}
 	\subsubsection{Generatore Reale di Tensione}
 	È composto da una resistenza $R$, la cui tensione è $V_R = R \cdot I$, ed un generatore ideale di tensione $E_0$, collegati in serie.\\
 	La sua legge costitutiva è:
-	\[V_{AB} = E_0 - V_R = E_0 - R \cdot I\]
+	\begin{equation}
+		V_{AB} = E_0 - V_R = E_0 - R \cdot I
+	\end{equation}	
 	da cui si ricava che $E_0$ ha verso opposto rispetto a $V_{AB}$ e $V_R$.\\
 	In un grafico corrente-tensione, la legge è descritta da una retta la cui pendenza è $R$.
 	\begin{itemize}
@@ -151,7 +196,9 @@
 	\subsubsection{Generatore Reale di Corrente}
 	È composto da una resistenza $R$, la cui corrente è $I_R = \frac{V_{AB}}{R}$, ed un generatore ideale di corrente $I_0$, collegati in parallelo.\\
 	La sua legge costitutiva è:
-	\[I = I_0 + I_R = I_0 - \frac{V_{AB}}{R}\]
+	\begin{equation}
+		I = I_0 + I_R = I_0 - \frac{V_{AB}}{R}
+	\end{equation}
 	In un grafico corrente-tensione, la legge è descritta da una retta la cui pendenza è $R$.\\
 	\begin{itemize}
 		\item $V_{AB} = R \cdot I_0$ Tensione a vuoto: Circuito Aperto
@@ -159,32 +206,32 @@
 	\end{itemize}
 	\subsubsection{Equivalenze fra Generatori Reali}
 	È sempre possibile trasformare un generatore reale di tensione in uno reale di corrente, e viceversa, a patto che vengano rispettate le condizioni di equivalenza:
-	\[
+	\begin{equation}
 		\begin{cases}
 			E_0 = R \cdot I_0 \\
 			I_0 = \frac{E_0}{R}
 		\end{cases}
-	\]
+	\end{equation}
 	\subsubsection{Considerazioni Energetiche sui Generatori Reali}
 	L’equivalenza tra i 2 generatori è solamente elettrica, non  energetica, infatti la potenza generata dai due può variare a seconda del circuito.\\
 	Quindi nel caso si debba calcolare la potenza di un circuito è sconsigliato l'utilizzo delle equivalenze.
 	\subsubsection{Generatori Reali di Tensione in Serie}
 	Formato da $n$ generatori reali di tensione in serie.
-	\[
+	\begin{equation}
 		\begin{cases}
 			E_{Eq} = E_1 + E_2 + \dots + E_n \\
 			R_{Eq} = R_1 + R_2 + \dots + R_n 
 		\end{cases}
-	\]
+	\end{equation}
 	Se uno dei generatori ha verso invertito rispetto al senso scelto, allora la sua tensione è negativa.
 	\subsubsection{Generatori Reali di Corrente in (Serie) Parallelo}
 	Formato da $n$ generatori reali di corrente in parallelo.
-	\[
+	\begin{equation}
 		\begin{cases}
 			I_{Eq} = I_1 + I_2 + \dots + I_n \\
 			G_{Eq} = G_1 + G_2 + \dots + G_n = \frac{1}{R_1} + \dots + \frac{1}{R_n}
 		\end{cases}
-	\]
+	\end{equation}
 	\subsection{Strumenti di Misura}
 	\subsubsection{Voltmetro}
 	Strumento utilizzato per misurare la tensione di un circuito.\\
@@ -212,42 +259,55 @@
 	\subsection{Generatori Pilotati}
 	\subsubsection{Generatore di Tensione Pilotato da Una Tensione}
 	Legge costitutiva:
-	\[V_{AB} = \alpha \cdot V_k\]
+	\begin{equation}
+		V_{AB} = \alpha \cdot V_k
+	\end{equation}
 	\begin{itemize}
 		\item $\alpha$ è una costante caratteristica del generatore
 		\item $V_k$ è la tensione prelevata in un altro punto del circuito
 	\end{itemize}
 	\subsubsection{Generatore di Tensione Pilotato da Una Corrente}
 	Legge costitutiva:
-	\[V_{AB} = R \cdot I_k\]
+	\begin{equation}
+		V_{AB} = R \cdot I_k
+	\end{equation}
 	\begin{itemize}
 		\item $R$ è la resistenza del generatore (Costante) $[\Omega]$
 		\item $I_k$ è la corrente prelevata in un altro punto del circuito
 	\end{itemize}
 	\subsubsection{Generatore di Corrente Pilotato da Una Tensione}
 	Legge costitutiva:
-	\[I = G \cdot V_k\]
+	\begin{equation}
+		I = G \cdot V_k
+	\end{equation}
 	\begin{itemize}
 		\item $G$ è la conduttanza del generatore (Costante) $[\frac{1}{\Omega}]$
 		\item $V_k$ è la tensione prelevata in un altro punto del circuito
 	\end{itemize}
 	\subsubsection{Generatore di Corrente Pilotato da Una Corrente}
 	Legge costitutiva:
-	\[I = \beta \cdot I_k\]
+	\begin{equation}
+		I = \beta \cdot I_k
+	\end{equation}
 	\begin{itemize}
 	\item $\beta$ è una costante caratteristica del generatore
 	\item $I_k$ è la corrente prelevata in un altro punto del circuito
 	\end{itemize}
 	\subsection{Teorema di Millman}
-	Enunciato:
-	In un circuito composto da $n$ rami in parallelo qualsiasi, la tensione di esso è data dal rapporto di tutte le correnti di corto-circuito entranti nel nodo $A$ e tutte le conduttanze incrementali.
-	\[V_{AB} = \frac{\sum_{RAMI} I_{CC\textbf{ (Entranti in A)}}}{\sum_{RAMI} G_{Inc}}\]
-	\begin{itemize}
-		\item Il numeratore corrisponde alla somma della corrente di ciascun ramo, calcolata come se il ramo stesso fosse staccato dal circuito e collegato in cortocircuito
-		\item Il denominatore corrisponde alla somma dell’inverso delle resistenze di ciascun ramo, calcolata come se il ramo stesso fosse staccato dal circuito e collegato in cortocircuito
-	\end{itemize}
+	\begin{theorem}
+		In un circuito composto da $n$ rami in parallelo qualsiasi, la tensione di esso è data dal rapporto di tutte le correnti di corto-circuito entranti nel nodo $A$ e tutte le conduttanze incrementali.
+		\begin{equation}
+			V_{AB} = \frac{\sum_{RAMI} I_{CC\textbf{ (Entranti in A)}}}{\sum_{RAMI} G_{Inc}}
+		\end{equation}
+		\begin{itemize}
+			\item Il numeratore corrisponde alla somma della corrente di ciascun ramo, calcolata come se il ramo stesso fosse staccato dal circuito e collegato in cortocircuito
+			\item Il denominatore corrisponde alla somma dell’inverso delle resistenze di ciascun ramo, calcolata come se il ramo stesso fosse staccato dal circuito e collegato in cortocircuito
+		\end{itemize}
+	\end{theorem}
 	Nel caso in cui vi siano $n$ generatori reali di tensione collegati in parallelo ciascuno dei quali è composto da una resistenza $R_i$ e un generatore di tensione $E_i$, allora la formula diventa:
-	\[V_{AB} = \frac{\sum_{i=1}^{n} \frac{E_i}{R_i}}{\sum_{i=1}^{n} \frac{1}{R_i}}\]
+	\begin{equation}
+		V_{AB} = \frac{\sum_{i=1}^{n} \frac{E_i}{R_i}}{\sum_{i=1}^{n} \frac{1}{R_i}}
+	\end{equation}
 	Nel caso il circuito contenga un generatore pilotato che preleva una corrente $I_k$ o una tensione $V_k$ incognita, per calcolare $V_{AB}$ è necessario ricavare tale incognita in funzione di $V_{AB}$.
 	\subsection{Trasformazioni Stella-Triangolo}
 	Le trasformazioni stella-triangolo permettono di trovare i valori di resistenza dei resistori quando si trovano in una disposizione a stella o a triangolo.\\
@@ -272,23 +332,23 @@
 	\]
 	Una volta ottenuti i sistemi di equazioni costitutive possiamo eseguire le trasformazioni semplicemente sostituendo i valori di una nell'altra e viceversa e saltando alcuni passaggi otteniamo:
 	\subsubsection{Trasformazione da Stella a Triangolo}
-	\[
-	\rotatebox[origin=c]{180}{Y} \rightarrow \Delta =
-	\begin{cases}
-		R_A = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_A} \\\\
-		R_B = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_B}\\\\
-		R_C = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_C}
-	\end{cases}
-	\]
+	\begin{equation}
+		\rotatebox[origin=c]{180}{Y} \rightarrow \Delta =
+		\begin{cases}
+			R_A = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_A} \\\\
+			R_B = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_B}\\\\
+			R_C = \frac{R_A \cdot R_B + R_B \cdot R_C + R_C \cdot R_A}{R_C}
+		\end{cases}
+	\end{equation}
 	\subsubsection{Trasformazione da Triangolo a Stella}
-	\[
-	\Delta \rightarrow \rotatebox[origin=c]{180}{Y} =
-	\begin{cases}
-		R_A = \frac{R_B \cdot R_C}{R_A + R_B + R_C} \\\\
-		R_B = \frac{R_A \cdot R_C}{R_A + R_B + R_C} \\\\
-		R_C = \frac{R_B \cdot R_A}{R_A + R_B + R_C}
-	\end{cases}
-	\]
+	\begin{equation}
+		\Delta \rightarrow \rotatebox[origin=c]{180}{Y} =
+		\begin{cases}
+			R_A = \frac{R_B \cdot R_C}{R_A + R_B + R_C} \\\\
+			R_B = \frac{R_A \cdot R_C}{R_A + R_B + R_C} \\\\
+			R_C = \frac{R_B \cdot R_A}{R_A + R_B + R_C}
+		\end{cases}
+	\end{equation}
 	\subsection{Linearità}
 	Un circuito si dice lineare quando i grafici dei suoi segnali d’ingresso e d’uscita sono delle rette, ovvero, dati gli ingressi $x_1$ e $x_2$ e le rispettive uscite $y_1 = f(x_1)$ e $y_2 = f(x_2)$, possiamo definire il circuito lineare se:
 	\[f(\alpha x_1 + \beta x_2) = \alpha y_1 + \beta y_2\]
@@ -322,21 +382,25 @@
 		\item Si sommano fra di loro le uscite parziali
 	\end{enumerate}
 	\subsection{Teorema di Thevenin}
-	Dato un bipolo lineare $X$ collegato ad un qualisasi bipolo $Y$\\
-	Esiste sempre un generatore reale di tensione ($V$) equivalente ad $X$\\\\
-	Per ottenere il generatore reale di tensione equivalente si prosegue nel seguente modo:
-	\begin{enumerate}
-		\item Suddividere il circuito in una rete $X$ ed una rete $Y$, collegate tra loro nei nodi $A$ e $B$.\\
-		Quando è richiesto di calcolare una grandezza incognita, solitamente si pone come rete $Y$ la rete contenente tale grandezza.
-		\item Calcolare $R_{Eq}$ della rete $X$.\\
-		Per fare ciò, si devono spegnere contemporaneamente tutti i generatori indipendenti contenuti in $X$.
-		\item Si calcola $E_{Eq'}$ che corrisponde a $V_{AB_{0'}}$, ovvero si lascia aperta la rete $X$ nei poli $A$ e $B$.
-		\item Si uniscono i risultati, ottenendo un generatore reale di tensione $E_{Eq}$ e resistenza $R_{Eq}$.
-	\end{enumerate}
+	\begin{theorem}
+		Dato un bipolo lineare $X$ collegato ad un qualisasi bipolo $Y$\\
+		Esiste sempre un generatore reale di tensione ($V$) equivalente ad $X$
+	\end{theorem}
+	\begin{proof}[Dimostrazione]
+		Per ottenere il generatore reale di tensione equivalente si prosegue nel seguente modo:
+		\begin{enumerate}
+			\item Suddividere il circuito in una rete $X$ ed una rete $Y$, collegate tra loro nei nodi $A$ e $B$.\\
+			Quando è richiesto di calcolare una grandezza incognita, solitamente si pone come rete $Y$ la rete contenente tale grandezza.
+			\item Calcolare $R_{Eq}$ della rete $X$.\\
+			Per fare ciò, si devono spegnere contemporaneamente tutti i generatori indipendenti contenuti in $X$.
+			\item Si calcola $E_{Eq'}$ che corrisponde a $V_{AB_{0'}}$, ovvero si lascia aperta la rete $X$ nei poli $A$ e $B$.
+			\item Si uniscono i risultati, ottenendo un generatore reale di tensione $E_{Eq}$ e resistenza $R_{Eq}$.
+		\end{enumerate}
+	\end{proof}
 	Esiste anche una versione più estesa del teorema nel quale $X$ contiene $n$ generatori ideali di tensione e $n$ generatori ideali di corrente, ma non verrà approfondità in questi appunti:
-	\[
-	V_{AB} = \sum_{k=1}^{n} H_k \cdot E_k + \sum_{k=1}^{n} L_k \cdot I_{g_k} + K \cdot I
-	\]
+	\begin{equation}
+		V_{AB} = \sum_{k=1}^{n} H_k \cdot E_k + \sum_{k=1}^{n} L_k \cdot I_{g_k} + K \cdot I
+	\end{equation}
 	Dove:
 	\begin{itemize}
 		\item $H_k$ è un coefficiente
@@ -346,21 +410,27 @@
 		\item $K \cdot I$ in fondo alla formula è detto Contributo Esterno
 	\end{itemize}
 	\subsection{Teorema di Norton}
-	Dato un bipolo lineare $X$ collegato ad un qualisasi bipolo $Y$\\
-	Esiste sempre un generatore reale di corrente ($I$) equivalente ad $X$\\\\
-	Per ottenere il generatore reale di tensione equivalente si prosegue nel seguente modo:
-	\begin{enumerate}
-		\item Suddividere il circuito in una rete $X$ ed una rete $Y$, collegate tra loro nei nodi $A$ e $B$.\\
-		Quando è richiesto di calcolare una grandezza incognita, solitamente si pone come rete $Y$ la rete contenente tale grandezza.
-		\item Calcolare $R_{Eq}$ della rete $X$.\\
-		Per fare ciò, si devono spegnere contemporaneamente tutti i generatori indipendenti contenuti in $X$.
-		\item Si calcola $I_{Eq'}$ che corrisponde a $I_{CC'}$, ovvero si mette la rete $X$ in cortocircuito nei poli $A$ e $B$.
-		\item Si uniscono i risultati, ottenendo un generatore reale di corrente $I_{Eq}$ e resistenza $R_{Eq}$.
-	\end{enumerate}
+	\begin{theorem}
+		Dato un bipolo lineare $X$ collegato ad un qualisasi bipolo $Y$\\
+		Esiste sempre un generatore reale di corrente ($I$) equivalente ad $X$
+	\end{theorem}
+	\begin{proof}[Dimostrazione]
+		Per ottenere il generatore reale di tensione equivalente si prosegue nel seguente modo:
+		\begin{enumerate}
+			\item Suddividere il circuito in una rete $X$ ed una rete $Y$, collegate tra loro nei nodi $A$ e $B$.\\
+			Quando è richiesto di calcolare una grandezza incognita, solitamente si pone come rete $Y$ la rete contenente tale grandezza.
+			\item Calcolare $R_{Eq}$ della rete $X$.\\
+			Per fare ciò, si devono spegnere contemporaneamente tutti i generatori indipendenti contenuti in $X$.
+			\item Si calcola $I_{Eq'}$ che corrisponde a $I_{CC'}$, ovvero si mette la rete $X$ in cortocircuito nei poli $A$ e $B$.
+			\item Si uniscono i risultati, ottenendo un generatore reale di corrente $I_{Eq}$ e resistenza $R_{Eq}$.
+		\end{enumerate}
+	\end{proof}
 	Un altro metodo per ricavare l’equivalente generatore reale di corrente è seguire il metodo alternativo enunciato
 	per il teorema di Thevenin, sostituendo alla fine il generatore reale di tensione con un generatore reale di
 	corrente utilizzando le trasformazioni fra generatori reali:
-	\[I_{Eq} = \frac{E_{Eq}}{R_{Eq}}\]
+	\begin{equation}
+		I_{Eq} = \frac{E_{Eq}}{R_{Eq}}
+	\end{equation}
 	\subsection{Thevenin e Norton in Presenza di Generatori Pilotati}
 	\subsubsection{Metodo 1}
 	Calcolo la $R_{Eq}$ come Thevenin diviso Norton:
