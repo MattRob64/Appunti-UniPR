@@ -99,15 +99,16 @@
 		W = \int\limits_{0}^{Q_f} v(t) dQ = \frac{1}{2} \cdot \frac{Q_f^2}{C} = \frac{1}{2} C \cdot V_f^2
 	\end{equation}
 	\subsubsection{Collegamenti fra condensatori}
+	(Per questi casi teniamo conto di utilizzare la convenzione dell'utilizzatore)\\
 	Come gli altri bipoli, i condensatori possono essere collegati in serie o in parallelo.\\
-	Quinfi dati due condensatori di capacità $C_1$ e $C_2$:
+	Quindi dati due condensatori di capacità $C_1$ e $C_2$:
 	\paragraph{In serie}
 	Nel caso di $n$ condensatori collegati in serie la loro capacità equivalente è:
 	\begin{equation}
 		C_{eq} = \frac{1}{\frac{1}{C_1} + \dots + \frac{1}{C_n}} = \frac{C_1 \cdot \dots \cdot C_n}{C_1 + \dots + C_n}
 	\end{equation}
 	Considerando invece solo due condensatori in serie (per semplicità), la corrente $i(t)$ è uguale per entrambi, ma le tensioni $v_1(t)$ e $v_2(t)$ differiscono fra di loro.\\
-	In questo caso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva istantanea è:
+	In questo caso i due condensatori possono essere sostituiti da uno solo, la cui legge costitutiva istantanea è:
 	\begin{equation}
 		i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}
 	\end{equation}
@@ -116,12 +117,12 @@
 		v_{AB}(t) = v_1(t) + v_2(t)
 	\end{equation}
 	\paragraph{In parallelo}
-	Nel caso di $n$ condensatori collegati in serie la loro capacità equivalente è:
+	Nel caso di $n$ condensatori collegati in parallelo la loro capacità equivalente è:
 	\begin{equation}
 		C_{eq} = C_1 + \dots C_n
 	\end{equation}
 	Considerando invece solo due condensatori in parallelo (per semplicità), la tensione $v_{AB}(t)$ è uguale per entrambi, ma le correnti $i_1(t)$ e $i_2(t)$ differiscono fra di loro.\\
-	In questo caso i due condensatori posono essere sostituiti da uno solo, la cui legge costitutiva è:
+	In questo caso i due condensatori possono essere sostituiti da uno solo, la cui legge costitutiva è:
 	\begin{equation}
 		i(t) = C_{eq} \cdot \frac{dv_{AB}(t)}{dt}
 	\end{equation}
@@ -281,22 +282,301 @@
 		\item Materiali \textbf{Ferromagnetici}: dove $\mu_R \gg 1$, si polarizzano a seconda del campo magnetico e possono "memorizzare" una direzione
 	\end{itemize}
 	Sia nel caso dei materiali diamagnetici che nei materiali paramagnetici $\mu_R$ si avvicina a uno, il suo valore non è lontano da 1.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{SaturMat.png}
+			\caption{Grafico di saturazione di un materiale}
+			\label{fig:im-7}
+		\end{figure}
+	\end{center}
 	\paragraph{Ferromagnetismo e Perdite di Potenza del Ferro}
 	I materiali ferromagnetici sono a livello microscopico divisi in partizioni dette \textbf{domini di Weiss}, ognuna con una polarità casuale rispetto alle altre. \\
 	In presenza di un campo magnetico, i domini si orientano (non completamente) nella stessa direzione del campo, con l’eﬀetto che tutti i domini contribuiscono all’intensità del campo magnetico.\\
-	Non si può mai arrivare alla situazione in cui ogni singolo dominio è perfettamente allineato al campo, essendo un andamento asintotico, ma si può determinare dopo una certa intensità del campo magnetico che il materiale sia "saturato".
+	Non si può mai arrivare alla situazione in cui ogni singolo dominio è perfettamente allineato al campo, essendo un andamento asintotico, ma si può determinare dopo una certa intensità del campo magnetico che il materiale sia "saturato".\\
+	Se dopo viene spenta la sorgente di campo magnetico, i domini di Weiss non tornano esattamente al loro posto, ma tendono a mantenere una leggera polarizzazione in direzione del campo passato, quindi in presenza di campo $0$ la induzione magnetica $B$ non è nulla.\\\\
+	Questo fenomeno viene rappresentato dalla cosiddetta \textbf{curva di isteresi magnetica} in fig.\ref{fig:im-8}. Si parte dalla curva di prima magnetizzazione (Quella tratteggiata), aumentando il campo $H$ si arriva alla saturazione, quando si torna indietro si incontra il punto $B_R$ a campo zero, ogni materiale ha un valore massimo; se poi il campo diventa negativo viene percorsa la seconda curva (quella in basso), che eventualmente arriverà a $-B_R$.\\\\
+	La smagnetizzazione di un materiale avviene percorrendo diverse volte la curva di isteresi per fare in modo di ridurre in modo incrementale il valore $B_R$; la oscillazione si può notare per esempio nei vecchi schermi CRT quando venivano "smagnetizzati" all'avvio.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{CurvaIster.png}
+			\caption{Curva di isteresi}
+			\label{fig:im-8}
+		\end{figure}
+	\end{center}
 	\subsubsection{Legge di Faraday-Lenz (Legge di Induzione Magnetica)}
+	\begin{definition}
+		Un campo magnetico, oltre ad essere generato da una corrente, può a sua volta generarne una. \\
+		La corrente (quindi la differenza di potenziale) viene formalizzata dalla legge di Faraday-Lenz, si ha quindi tutto il passaggio dalla legge di Ampére, attraverso la permeabilità magnetica a questo caso:
+		\begin{equation}
+			I\xrightarrow{Ampere} H \xrightarrow{\mu} B \xrightarrow{F-Lenz} E
+		\end{equation}
+		La legge indica che la tensione indotta $e$ da un campo magnetico è data da:
+		\begin{equation}
+			e_2=-\frac{d\phi_C}{dt}	
+		\end{equation}
+		Il segno $-$ davanti alla derivata è detto \textbf{contributo di Lenz}.
+	\end{definition}
+	Detta in altre parole, data una corrente $i_1$, si crea un flusso magnetico in tutto il materiale, questo flusso a sua volta crea una differenza di tensione che simula quella di un generatore di tensione.\\\\
+	Il \textbf{flusso magnetico $\phi$}, misurato in Weber $\left[ Wb=T\cdot m^2 \right] $, è dato dal prodotto del campo di induzione magnetica $B$ e la \textbf{sezione del nucleo} $S$, e il flusso concatenato è dato dal prodotto del flusso per il numero di spire:
+	\begin{gather}
+		\phi=B\cdot S \\
+		\phi_C=\phi\cdot N
+	\end{gather}
+	Quindi la tensione in uscita risulterà:
+	\begin{equation}
+		e_2=-\mu_2 \cdot S\cdot\frac{dB}{dt}	
+	\end{equation}
+	Essendo una derivata nel tempo, per produrre una tensione non si può avere un campo "fermo", ma deve variare in continuazione.\\\\
+	Per quello che riguarda il segno negativo, il contributo di Lenz, bisogna notare che il campo induce una tensione $e_1$ anche sull'avvolgimento che lo ha generato, ma se questo non si opponesse, allora si formerebbe una induzione infinita fra tensione e campo.
 	\subsubsection{Campo Magnetico Incidente}
+	Un campo magnetico incidente è un fenomeno simile a quello delle resistenze parassita, solo che in questo caso va a generare delle "correnti parassita", questo può essere combattuto suddividento un "pezzo" di materiale ferromagnetico in piccole lamiere isolate fra di loro.
 	\subsubsection{Circuiti Magnetici}
-	\subsubsection{Legge di Hopkinson}
+	Le linee di forza del campo magnetico si possono vedere come contenute in un "tubo di flusso" di sezione $S$. \\
+	Le linee possono allargarsi o restringersi, ma rimangono sempre le stesse, non se ne creano nè distruggono altre.\\
+	Si può quindi dichiarare il prodotto della densità di flusso per la sezione costante:
+	\begin{equation}
+		B\cdot S = \phi = cost	
+	\end{equation}
+	Per lavorare in modo più semplice con circuiti magnetici si possono identificare similitudini con le leggi studiate finora, in particolare quella di Ohm, in questo modo si possono anche applicare tutti i metodi di risoluzione. \\
+	Bisogna identificare grandezze analoghe di $V$, $I$, $R$, per esempio il flusso costante può essere paragonato alla corrente.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{ToroidAper.png}
+			\caption{Toroide Aperto}
+			\label{fig:im-9}
+		\end{figure}
+	\end{center}
+	Studiando un toroide aperto come in fig.\ref{fig:im-9} con una apertura $l_0$ si osserva che le linee di forza sono concentrate all'interno del materiale, mentre all'apertura tendono ad "allargarsi" distanziandosi tra di loro, per poi rientrare nel toroide.\\
+	Supponendo che $l_fe$ (la lunghezza del toroide) sia molto minore di $l_0$ si può   considerare il tubo di flusso come di sezione costante, dato che l'allargamento è poco significativo.\\
+	La densità di flusso è quindi considerabile come costante, quindi c'è la stessa induzione magnetica lungo tutto il percorso:
+	\begin{equation}
+		\phi=B\cdot S = \text{cost} \cdot \text{cost} \implies B=\text{cost}	
+	\end{equation}
+	Essendo i materiali diversi (ferro e aria) risulta che $H_0 \gg H_{fe}$ dato che la densità di flusso è stata dichiarata come costante. \\
+	Per il teorema di circuitazione di Ampére vale che:
+	\begin{equation}
+		\oint_l \bar H d\bar l = N\cdot I \implies H_{fe}\cdot l_{fe} + H_0 \cdot l_0 = N\cdot I	
+	\end{equation}
+	Ipotizzando di avere diversi materiali oppure diverse aree si ha che:
+	\begin{equation}
+		\sum_i H_i l_i = N\cdot I	
+	\end{equation}
+	Eseguendo operazioni algebriche e ipotizzando $\phi$ come costante si ottiene una  forma simile alla legge di Ohm:
+	\begin{equation}
+		\phi \sum_i \frac{l_i}{S_i\mu_i}=N\cdot I	
+	\end{equation}
+	\paragraph{Legge di Hopkinson}
+	La parte interna alla sommatoria viene chiamata \textbf{riluttanza}, e da ciò si ottiene la \textbf{legge di Hopkinson}, dove $N$ indica il numero di spire, $I$ la corrente e $\mathscr{R}$ la riluttanza:
+	\begin{equation}
+		N\cdot I = \mathscr{R} \cdot \phi	
+	\end{equation}
+	Le similitudini rispetto alla legge di ohm si notano osservando che $N \cdot I$ si può paragonare alla tensione (detta qui \textbf{forza magnetomotrice}), $\mathscr{R}$ si vede come la resistenza e $\phi$ la corrente.\\
+	La stessa riluttanza si può vedere come somma di tutti i singoli contributi nel circuito:
+	\begin{equation}
+		\mathscr{R}=\sum_I \frac{l_i}{S_i\mu_i}=\sum \mathscr{R}_i	
+	\end{equation}
+	Indica di fatto \textbf{quanto il materiale si oppone al flusso magnetico} generato dalla induttanza, a differenza della permeabilità magnetica che indica quanto il materiale tende a magnetizzarsi.\\
+	Possiamo quindi sintetizzare questi parallelismi come:
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			& \textbf{Circuiti Elettrici} & \textbf{Circuiti Magnetici} \\
+			\hline
+			Tensione $\rightarrow$ Forza magneto-motrice & $v$ & $N \cdot i \; \left[ A \cdot S_P \right] $ \\
+			\hline
+			Corrente $\rightarrow$ Flusso magnetico & $i$ & $\phi \; \left[ W_b \right]$ \\
+			\hline
+			Resisteza $\rightarrow$ Riluttanza & $R$ & $\mathscr{R} \; \left[ \frac{A \cdot S_P}{W_b} \right]$ \\
+			\hline
+			1$^a$ legge di Ohm $\rightarrow$ Legge di Hopkins & $v = R \cdot i$ & $N \cdot i = \mathscr{R} \cdot \phi$ \\
+			\hline
+			2$^a$ legge di Ohm $\rightarrow$ ?? & $R = \phi \frac{l}{S}$ & $\mathscr{R} = \frac{l}{S \cdot \mu}$\\
+			\hline
+			1$^o$ principio di Kirchoff $\rightarrow$ ?? & $\sum_k I_k = 0$ & $\phi_{tot} = \sum_{k} \phi_k$\\
+			\hline
+		\end{tabular}
+	\end{center}
+	Dove ovviamente con $S_P$ indichiamo il numero di spire (poteva essere trascurato nelle unità di misura).\\\\
+	Così facendo si possono estendere tutti i concetti e metodi risolutivi già affrontati ai circuiti magnetici.
 	\subsection{Induttori}
+	È il componente che viene effettivamente utilizzato nei circuiti elettronici e cme un condensatore è in grado di immagazzinare e cedere energia.\\
+	Questi dispositivi sono formati su una spira di$N$ avvolgimenti attorno ad un materiale generalmente ferromagnetico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{Induttore.png}
+			\caption{Induttore}
+			\label{fig:im-10}
+		\end{figure}
+	\end{center}
+	Il flusso è proporzionale alla corrente e all'induttanza definita come segue:
+	\begin{equation}
+		\phi_C=N\varphi = NBS = N\mu HS	= NS\mu \frac{NI}{l} = LI
+	\end{equation}
+	Per avere risultati esatti bisogna fare in modo di mantenere una certa linearità, quindi non bisogna andare troppo avanti nella curva di isteresi del materiale ma si devono mantenere i componenti in punti dove la pendenza della curva si può pensare come costante.
+	\subsubsection{Legge costitutiva di un induttore}
+	La \textbf{legge costitutiva}  di un induttore è:
+	\begin{equation}
+		v(t) = \frac{d \phi_C}{dt} \underset{Faraday-Lenz}{\underbrace{=}} L \cdot \frac{d \; i}{dt}
+	\end{equation}
+	Dove $L$ è una costante dell'induttore che indica l'induttanza che veiene misurata in Henry $\left[ H \right]$ ed è pari a:
+	\begin{equation}
+		L = \underset{\mathscr{R}^{-1}}{\underbrace{\mu \cdot \frac{S}{l}}} \cdot N^2
+	\end{equation}
+	Dove $S$ è la sezione dell'induttore e $l$ è la sua sunghezza.\\
+	Quindi si può dire che l'induttore è un elemento con memoria proprio come il condensatore.
 	\subsubsection{Energia e Potenza Induttore}
-	\subsubsection{Comportamento a Regime di Condensatore e Induttore}
+	Dal punto di vista energetico l'energia imagazzinata all'interno di un induttore vale:
+	\begin{equation}
+		W = \frac{1}{2} L I_f^2
+	\end{equation}
+	\subsubsection{Collegamenti fra induttori}
+	(Per questi casi teniamo conto di utilizzare la convenzione dell'utilizzatore)\\
+	Come gli altri bipoli, gli induttori possono essere collegati in serie o in parallelo.\\
+	Quindi dati due induttori di induttanza $L_1$ e $L_2$:
+	\paragraph{In serie}
+	Nel caso di $n$ induttori collegati in serie la loro induttanza equivalente è:
+	\begin{equation}
+		L_{eq} = L_1 + L_2 + \dots + L_n 
+	\end{equation}
+	Considerando invece solo due induttori in serie (per semplicità), la corrente $i(t)$ è uguale per entrambi, ma le tensioni $v_1(t)$ e $v_2(t)$ differiscono fra di loro.\\
+	In questo caso i due induttori possono essere sostituiti da uno solo, la cui legge costitutiva istantanea è:
+	\begin{equation}
+		v_{AB}(t) = L_{eq} \cdot \frac{di(t)}{dt}
+	\end{equation}
+	dove 
+	\begin{equation}
+		v_{AB}(t) = v_1(t) + v_2(t)
+	\end{equation}
+	\paragraph{In parallelo}
+	Nel caso di $n$ induttori collegati in parallelo la loro capacità equivalente è:
+	\begin{equation}
+		L_{eq} = \frac{1}{\frac{1}{L_1} + \dots + \frac{1}{L_n}} = \frac{L_1 \cdot \dots \cdot L_n}{L_1 + \dots + L_n}
+	\end{equation}
+	Considerando invece solo due induttori in parallelo (per semplicità), la tensione $v_{AB}(t)$ è uguale per entrambi, ma le correnti $i_1(t)$ e $i_2(t)$ differiscono fra di loro.\\
+	In questo caso i due induttori possono essere sostituiti da uno solo, la cui legge costitutiva è:
+	\begin{equation}
+		v_{AB}(t) = l_{eq} \cdot \frac{di(t)}{dt}
+	\end{equation}
+	dove 
+	\begin{equation}
+		i(t) = i_1(t) + i_2(t)
+	\end{equation}
 	\subsubsection{Transitorio di Carica Induttore}
-	\subsection{Collegamenti fra Componenti Reattivi}
-	\subsubsection{Codensatori in Parallelo}
-	\subsubsection{Condensatori in Serie}
-	\subsubsection{Induttori in Parallelo}
-	\subsubsection{Induttori in Serie}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{TransInd.png}
+			\caption{Transitorio di carica di un induttore}
+			\label{fig:im-11}
+		\end{figure}
+	\end{center}
+	Una induttanza sottoposta a corrente continua si comporta come un conduttore, tranne per un primo momento di carica. \\
+	Con $t<0$ si indica lo stato della tensione e della corrente prima della chiusura dell'interruttore, con $t=0^+$ il momento appena dopo la chiusura.\\
+	Appena viene chiuso il circuito, la corrente sulla induttanza non può variare istantaneamente, dato che deve generare il suo campo magnetico. \\
+	In questo momento quindi si comporterà come un generatore di corrente che tenderà a tenere la stessa a $0A$. Si avrà quindi una corrente che genera una caduta di tensione:
+	\begin{equation}
+		v_L(0^+) = E-Ri(0^+) = E	
+	\end{equation}
+	Man mano che il tempo avanza si ha una situazione descrivibile con una equazione differenziale:
+	\begin{gather}
+		E-Ri(t)-v_L(t)=0 \\
+		E=Ri(t)+L\frac{di(t)}{dt}
+	\end{gather}
+	L'integrale particolare risulta $\frac{E}{R}$ e la corrente rispetto al tempo varia:
+	\begin{equation}
+		i(t)=\frac{E}{R}(1-e^{\frac{R}{L}\cdot t})	
+	\end{equation}
+	La crescita della corrente è quindi asintotica, e come con il condensatore si può considerare il transitorio come completato al punto $5\tau$, dove $\tau = \frac{L}{R}$.\\
+	Ovviamente questo vale per una sola induttanza per volta, non nel caso in cui ce ne siano diverse.
+	\subsubsection{Scarica di un induttore}
+	Si procede ad aprire un circuito con un induttore a regime e ci si chiede come procederà la corrente.\\
+	La condizione iniziale è quindi data da:
+	\begin{gather}
+		i(0)=\frac{E}{R} \\
+		i(0^+)=i(0^-)	
+	\end{gather}
+	Che però risulta in conflitto con il fatto che in un circuito aperto non circola corrente. \\
+	La induttanza tende a far rimanere la corrente costante, ma essa non può circolare se il circuito è aperto.\\
+	L'interruttore impiega un certo tempo per spegnersi, e se per ipotesi la corrente fosse discontinua la induttanza (facendo la derivata) produce un delta di Dirac, che ha potenza infinita. \\
+	In realtà produce una tensione molto elevata che crea una scarica (scintilla) all'interno dell'interruttore quando si apre, che provvede quindi a scaricare la energia residua.\\
+	Per ovviare al problema si procede ad aggiungere un diodo in parallelo alla resistenza che scarica la corrente inversa prodotta.
+	\subsection{Comportamento a Regime di Condensatore e Induttore}
+	Quando un \textbf{condensatore} si trova a regime (in corrente continua) agisce come un circuito aperto, ovvero:
+	\begin{equation}
+		i_C(t) = 0
+	\end{equation}
+	Quando un \textbf{induttore} si trova a regime agisce come un cortocircuito, ovvero:
+	\begin{equation}
+		v_L(t) = 0
+	\end{equation}
 	\subsection{Analisi di Circuiti in Transitorio}
+	Si definiscono circuiti di 1$^o$ o di 2$^o$ ordine quei circuito in cui è presente, nel primo caso, un solo elemento dinamico (condensatore o induttore) oppure, nel secondo caso, una coppia di elementi dinamici (un condensatore e un induttore, due condensatori o due induttori).\\
+	L'ordine del circuito influenza anche l'ordine dell'equazione differenziale da risolvere.\\
+	L’analisi di questa categoria di circuiti si divide in due parti: lo studio dei regimi continui e lo studio dei regimi in transitorio.
+	\subsubsection{Studio dei regimi continui}
+	Si analizza il comportamento del circuito nei tempo: $t<0$, $t=0^+$ e $t \to +\infty$.\\
+	È consigliato ridisegnare il circuito per ogni tempo studiato.
+	Infine, con i risultati ottenuti, si dovrà compilare la seguente tabella:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			& $t < 0$ & $t=0^+$ & $t \to +\infty$\\
+			\hline
+			\textbf{Grandezza incognita} & & & \\
+			\hline
+			\textbf{Variabili di stato} & & & \\
+			\hline
+			\thead{\textbf{Variabili complementari} \\ \textbf{(solo per i circuiti di 2$^o$ ordine)}} & & & \\
+			\hline
+		\end{tabular}
+	\end{center}
+	Le \textbf{variabili di stato} corrispondono alle \textbf{correnti degli induttori} ed alle \textbf{tensioni dei condensatori} presenti nel circuito, mentre le \textbf{variabili complementari} (necessarie solo per circuiti di ordine superiore al primo) sono le \textbf{tensioni degli induttori }e le \textbf{correnti dei condensatori}.\\\\
+	 Le variabili di stato sono funzioni continue, dunque i loro valori sono uguali per $t<0$ e per $t=0^+$
+	\subsubsection{Studio dei regimi in transitorio}
+	Si analizza il comportamento del circuito nell’intervallo temporale successivo a $t=0^+$ ovvero per $t>0$.\\
+	Per fare ciò, si deve ricavare l’equazione risolutiva del circuito.\\
+	\paragraph{Circuiti di primo ordine}
+	Se il circuito è di 1$^o$ ordine, l’equazione differenziale presenterà derivate prime.\\
+	In questo caso, generalmente la soluzione dell’equazione differenziale di 1$^o$ ordine è della forma:
+	\begin{equation}
+		x(t) = \left[ x(0) - x(+\infty) \right] \cdot e^{-\frac{t}{\tau}} + x(+\infty)
+	\end{equation}
+	dove $\tau = RC$ nel caso ci sia un condensatore e una resistenza, oppure $\tau = \frac{L}{R}$ se è presente un induttore e una resistenza.
+	Altrimenti si può ricavare $\tau$ impostando solamente l’equazione caratteristica, infatti $\tau = - \frac{1}{\lambda}$
+	\paragraph{Circuiti di ordine superiore al primo}
+	Se invece il circuito è del 2$^o$ ordine, l’equazione presenterà derivate seconde.\\
+	In quest’ultimo caso, l’equazione caratteristica avrà due soluzioni, $\lambda_1$ e $\lambda_2$, che distingueranno 3 casi
+	diversi:
+	\begin{enumerate}
+		\item $\lambda_1$ e $\lambda_2$ sono \textbf{soluzioni Reali e Distinte (R.D.)}\\
+		$\lambda_1, \lambda_2 \in \mathbb{R}$ e $\lambda_1 \neq \lambda_2$\\
+		In questo caso la soluzione dell'equazione omogenea associata saranno:
+		\begin{equation}
+			y_{SOA}(x) = k_1 \cdot e^{\lambda_1 x} + k_2 \cdot e^{\lambda_2 x}
+		\end{equation}
+		\item $\lambda_1$ e $\lambda_2$ sono \textbf{soluzioni Reali e Coincidenti (R.C.)}\\
+		$\lambda_1, \lambda_2 \in \mathbb{R}$ e $\lambda_1 = \lambda_2 = \lambda$\\
+		In questo caso la soluzione dell'equazione omogenea associata saranno:
+		\begin{equation}
+			y_{SOA}(x) = (k_1 + k_2) \cdot e^{\lambda x}
+		\end{equation}
+		\item $\lambda_1$ e $\lambda_2$ sono \textbf{soluzioni Complesse e Congiunte (C.C.)}\\
+		\begin{align}
+			\lambda_1, \lambda_2 \in \mathbb{C} \text{ e } \lambda_1 = \lambda_2^* \Leftrightarrow \begin{cases}
+				\lambda_1 = \lambda_{\mathcal{R}} + j \lambda_{\mathcal{I}} \\
+				\lambda_2 = \lambda_{\mathcal{R}} - j \lambda_{\mathcal{I}}
+			\end{cases}
+		\end{align}
+		In questo caso la soluzione dell'equazione omogenea associata saranno:
+		\begin{equation}
+			y_{SOA}(x) = k \cdot e^{x \cdot \lambda_{\mathcal{R}}} \cdot \sin(x \cdot \lambda_{\mathcal{I}} + \varphi)
+		\end{equation}
+		Dove $\lambda_{\mathcal{I}}$ rappresenta la pulsazione naturale dell'oscillazione e $\varphi$ rappresenta la sua fase.\\
+		Le incognite che devono essere ricavate tramite le condizioni iniziali sono $k$ e $\varphi$.\\
+		Inoltre la costante di tempo è pari a $\tau = - \frac{1}{\lambda_{\mathcal{R}}}$.
+	\end{enumerate}
 \end{document}

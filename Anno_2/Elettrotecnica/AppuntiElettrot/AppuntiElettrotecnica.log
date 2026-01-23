@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  21 JAN 2026 23:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  23 JAN 2026 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,6 +1114,10 @@ LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
 ))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup9
+)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 
@@ -1126,24 +1130,24 @@ Package: import 2020/04/01  v 6.2
 (./AppuntiElettrotecnica.aux)
 \openout1 = `AppuntiElettrotecnica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1201,21 +1205,21 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 59.
-LaTeX Info: Command `\ddddot' is already robust on input line 59.
+LaTeX Info: Command `\dddot' is already robust on input line 60.
+LaTeX Info: Command `\ddddot' is already robust on input line 60.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 60.
 (./AppuntiElettrotecnica.out) (./AppuntiElettrotecnica.out)
 \@outlinefile=\write4
 \openout4 = `AppuntiElettrotecnica.out'.
 
-<./img/0.cover.jpg, id=670, 1686.3pt x 1053.9375pt>
+<./img/0.cover.jpg, id=686, 1686.3pt x 1053.9375pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
-Package pdftex.def Info: ./img/0.cover.jpg  used on input line 80.
+Package pdftex.def Info: ./img/0.cover.jpg  used on input line 81.
 (pdftex.def)             Requested size: 337.25403pt x 210.78377pt.
  [1
 
@@ -1231,6 +1235,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -1253,28 +1263,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--25
 
  []
 
-<./img/1.jpeg, id=867, 333.245pt x 294.09875pt>
+<./img/1.jpeg, id=887, 333.245pt x 294.09875pt>
 File: ./img/1.jpeg Graphic file (type jpg)
 <use ./img/1.jpeg>
 Package pdftex.def Info: ./img/1.jpeg  used on input line 40.
 (pdftex.def)             Requested size: 133.29562pt x 117.6374pt.
-<./img/2.png, id=868, 538.01pt x 237.88875pt>
+<./img/2.png, id=888, 538.01pt x 237.88875pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 50.
 (pdftex.def)             Requested size: 215.20018pt x 95.15381pt.
 [5 <./img/1.jpeg>]
-<./img/3.jpeg, id=882, 312.16624pt x 394.47375pt>
+<./img/3.jpeg, id=902, 312.16624pt x 394.47375pt>
 File: ./img/3.jpeg Graphic file (type jpg)
 <use ./img/3.jpeg>
 Package pdftex.def Info: ./img/3.jpeg  used on input line 60.
 (pdftex.def)             Requested size: 120.92421pt x 152.80281pt.
-<./img/3b.jpeg, id=883, 1403.2425pt x 1006.76125pt>
+<./img/3b.jpeg, id=903, 1403.2425pt x 1006.76125pt>
 File: ./img/3b.jpeg Graphic file (type jpg)
 <use ./img/3b.jpeg>
 Package pdftex.def Info: ./img/3b.jpeg  used on input line 66.
 (pdftex.def)             Requested size: 120.92421pt x 86.74875pt.
-<./img/4.jpeg, id=884, 2080.77374pt x 1233.60875pt>
+<./img/4.jpeg, id=904, 2080.77374pt x 1233.60875pt>
 File: ./img/4.jpeg Graphic file (type jpg)
 <use ./img/4.jpeg>
 Package pdftex.def Info: ./img/4.jpeg  used on input line 77.
@@ -1334,82 +1344,155 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 541.
 
 ) (./sections/transitori.tex [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 146--156
+Underfull \hbox (badness 10000) in paragraph at lines 147--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--156
+Underfull \hbox (badness 10000) in paragraph at lines 147--157
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
+Underfull \hbox (badness 10000) in paragraph at lines 204--207
 
  []
 
-<./img/CampElFil.png, id=1045, 340.27126pt x 216.81pt>
+<./img/CampElFil.png, id=1065, 340.27126pt x 216.81pt>
 File: ./img/CampElFil.png Graphic file (type png)
 <use ./img/CampElFil.png>
-Package pdftex.def Info: ./img/CampElFil.png  used on input line 211.
+Package pdftex.def Info: ./img/CampElFil.png  used on input line 212.
 (pdftex.def)             Requested size: 136.10608pt x 86.72246pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19]
-<./img/Solenoide.png, id=1054, 277.035pt x 242.9075pt>
+<./img/Solenoide.png, id=1074, 277.035pt x 242.9075pt>
 File: ./img/Solenoide.png Graphic file (type png)
 <use ./img/Solenoide.png>
-Package pdftex.def Info: ./img/Solenoide.png  used on input line 234.
+Package pdftex.def Info: ./img/Solenoide.png  used on input line 235.
 (pdftex.def)             Requested size: 120.92421pt x 106.02713pt.
-<./img/Toroide.png, id=1055, 307.64937pt x 242.9075pt>
+<./img/Toroide.png, id=1075, 307.64937pt x 242.9075pt>
 File: ./img/Toroide.png Graphic file (type png)
 <use ./img/Toroide.png>
-Package pdftex.def Info: ./img/Toroide.png  used on input line 240.
+Package pdftex.def Info: ./img/Toroide.png  used on input line 241.
 (pdftex.def)             Requested size: 120.92421pt x 95.47482pt.
- [20 <./img/CampElFil.png> <./img/Solenoide.png> <./img/Toroide.png>])
-(./sections/sinusoid.tex [21]) (./sections/an_freq.tex [22])
-(./sections/doppi_bipoli.tex [23]) (./sections/trasformatori.tex) [24] [25]
+ [20 <./img/CampElFil.png> <./img/Solenoide.png> <./img/Toroide.png>]
+<./img/SaturMat.png, id=1094, 372.39125pt x 203.25937pt>
+File: ./img/SaturMat.png Graphic file (type png)
+<use ./img/SaturMat.png>
+Package pdftex.def Info: ./img/SaturMat.png  used on input line 288.
+(pdftex.def)             Requested size: 148.95386pt x 81.30229pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--300
+
+ []
+
+<./img/CurvaIster.png, id=1096, 372.39125pt x 219.82124pt>
+File: ./img/CurvaIster.png Graphic file (type png)
+<use ./img/CurvaIster.png>
+Package pdftex.def Info: ./img/CurvaIster.png  used on input line 303.
+(pdftex.def)             Requested size: 148.95386pt x 87.92693pt.
+[21 <./img/SaturMat.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 321--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--333
+
+ []
+
+[22 <./img/CurvaIster.png>]
+<./img/ToroidAper.png, id=1117, 314.17375pt x 262.9825pt>
+File: ./img/ToroidAper.png Graphic file (type png)
+<use ./img/ToroidAper.png>
+Package pdftex.def Info: ./img/ToroidAper.png  used on input line 347.
+(pdftex.def)             Requested size: 125.66727pt x 105.19113pt.
+ [23 <./img/ToroidAper.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
+
+ []
+
+<./img/Induttore.png, id=1134, 230.8625pt x 183.68625pt>
+File: ./img/Induttore.png Graphic file (type png)
+<use ./img/Induttore.png>
+Package pdftex.def Info: ./img/Induttore.png  used on input line 410.
+(pdftex.def)             Requested size: 92.34335pt x 73.47318pt.
+[24 <./img/Induttore.png>]
+<./img/TransInd.png, id=1147, 618.31pt x 204.765pt>
+File: ./img/TransInd.png Graphic file (type png)
+<use ./img/TransInd.png>
+Package pdftex.def Info: ./img/TransInd.png  used on input line 472.
+(pdftex.def)             Requested size: 340.07155pt x 112.62108pt.
+ [25 <./img/TransInd.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 537--539
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+
+ []
+
+) (./sections/sinusoid.tex [27]) (./sections/an_freq.tex)
+(./sections/doppi_bipoli.tex [28]) (./sections/trasformatori.tex) [29] [30]
 (./AppuntiElettrotecnica.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `AppuntiElettrotecnica.out' has not changed.
-(rerunfilecheck)             Checksum: BF1C206425E31A18C4CD09ADB600A020;35350.
+(rerunfilecheck)             Checksum: 85FF44C2ABD8489A6C958832E8E6C952;36186.
  ) 
 Here is how much of TeX's memory you used:
- 27768 strings out of 474116
- 511628 string characters out of 5743683
+ 27966 strings out of 474116
+ 515306 string characters out of 5743683
  1951187 words of memory out of 5000000
- 49347 multiletter control sequences out of 15000+600000
- 568479 words of font info for 70 fonts, out of 8000000 for 9000
+ 49465 multiletter control sequences out of 15000+600000
+ 574806 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,117p,499b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,15n,117p,550b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/t
-exlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettrotecnica.pdf (26 pages, 1920793 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2024/texmf
+-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiElettrotecnica.pdf (31 pages, 2080828 bytes).
 PDF statistics:
- 1250 PDF objects out of 1440 (max. 8388607)
- 1157 compressed objects within 12 object streams
- 301 named destinations out of 1000 (max. 500000)
- 1378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1387 PDF objects out of 1440 (max. 8388607)
+ 1266 compressed objects within 13 object streams
+ 354 named destinations out of 1000 (max. 500000)
+ 1435 words of extra memory for PDF output out of 10000 (max. 10000000)
 
