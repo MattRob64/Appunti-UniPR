@@ -14,26 +14,320 @@
 	\begin{itemize}
 		\item La frequenza dell’onda come $f = \frac{\omega}{2 \pi} \;\; [Hz]$
 		\item Il suo periodo come $T = \frac{1}{f} = \frac{2 \pi}{\omega} \;\; [s]$
-		\item La sua pulsazione come $2 \pi f \;\; [rad/s]$
+		\item La sua pulsazione come $\omega = 2 \pi f \;\; [rad/s]$
 	\end{itemize}
-	I circuiti in regimi sinusoidali sono anche detti circuiti isofrequenziali, proprio perché tutte le correnti e le tensioni coinvolte presentano la stessa pulsazione $\omega$.
+	I circuiti in regimi sinusoidali sono anche detti \textbf{circuiti isofrequenziali}, proprio perché tutte le correnti e le tensioni coinvolte presentano la stessa pulsazione $\omega$.\\\\
+	I circuiti in regime sinusoidale sono caratterizzati da tensione e corrente che variano nel tempo secondo una sinusoide con una certa frequenza, ampiezza e fase.\\\\
+	Bisogna fare attenzione a non confondere il regime sinusoidale con la corrente alternata, esso è solo uno dei tanti modi di alternare la corrente.\\\\
+	Qualunque situazione di corrente alternata può essere studiata (grazie alla serie di Fourier) come sovrapposizione di sinusoidi; chiaramente il regime sinusoidale porta ad avere la massima semplificazione possibile, dato che è presente una sola onda nella serie.\\\\
+	La corrente domestica funziona con una frequenza di $50hz$ in europa, quindi la velocità angolare è $\omega = 314 rad/s$.\\\\
+	Quando in una maglia è presente un generatore di tensione sinusoidale, tutte le correnti e tensioni variano allo stesso modo, quindi tutte le altre grandezze sono identificate da ampiezza e fase.
 	\subsection{Bipoli Elettrici}
+	I principali bipoli elettrici che si possono incontrare nel regime sinusoidale sono 4.
 	\subsubsection{Generatore Ideale di Tensione Sinusoidale}
+	Genera una tensione $e(t)$ con andamento sinusoidale.\\
+	Nel suo simbolo elettrico bisogna indicare con $+$ il morsetto positivo.
 	\subsubsection{Generatore Reale di Tensione Sinusoidale}
+	Genera una corrente $i(t)$ con andamento sinusoidale.\\
+	Nel suo simbolo elettrico bisogna indicare con $\uparrow$ il senso di circolazione della corrente.
 	\subsubsection{Generatore Ideale di Corrente Sinusoidale}
+	È composto da un generatore di tensione $e(t)$ ed una resistenza $R$ collegati in serie.
 	\subsubsection{Generatore Reale di Corrente Sinusoidale}
-	\subsection{Grandezze nel Regime Sinusoidale}
-	Impedenza
+	È composto da un generatore di corrente $i(t)$ ed una resistenza $R$ collegati in parallelo.
 	\subsection{Trasformata di Steinitz}
+	Per analizzare meglio i circuiti in regime sinusoidale si fa uso di un metodo di analisi che permette di semplificare il circuito in un modello risolvibile come se fosse in corrente continua, senza fare uso di equazioni trigonometriche.
+	\begin{equation}
+		x(t)=X_{max}\cos(\omega t + \gamma_x)\leftrightarrow \bar X = X_{max} e^{\gamma_x}	
+	\end{equation}
+	Dove $\bar X$ rappresenta un vettore bidimensionale (numero complesso).\\
+	Per dimostrarlo si pone la seconda legge di Kirchhoff alla maglia composta da una resistenza, una induttanza ed un condensatore:
+	\begin{gather}
+		e(t)=Ri(t)+L\frac{di(t)}{dt}+\frac{1}{C} \int_{-\infty}^t i(\tau) d\tau	\\
+		E_{max}\cos(\omega t + \alpha) = RI_{max} \cos (\omega t + \beta) - LI_{max} \omega \sin(\omega t + \beta) + \frac{1}{\omega C}I_{max} \sin (\omega t + \beta)
+	\end{gather}
+	Si pone per la \textbf{legge di Eulero}:
+	\begin{gather}
+		Ae^{j(\omega t + \alpha)} = A\cos (\omega t + \alpha) + j A\sin (\omega t + \alpha) \\
+		A\cos(\omega t + \alpha) = \Re [Ae^{j(\omega t + \alpha)}] \\
+		A\sin(\omega t + \alpha) = \Im [Ae^{j(\omega t + \alpha)}] \\
+		E_{max} \cos(\omega t + \alpha) = \Re [ E_{max}e^{j(\omega t + \alpha)}] \\
+		\frac{di(t)}{dt}=\frac{d}{dt}[I_{max}\cos(\omega t + \beta)] = -I_{max} \omega \sin(\omega t + \beta) 
+		= -I_{max}\omega \Im[e^{j(\omega t + \beta)}] = \omega I_{max} \Re [je^{j(\omega t + \beta)}] 
+	\end{gather}
+	\begin{gather}
+		\int_{-\infty}^t i(\tau)d\tau = \int_{-\infty}^t I_{max} \cos (\omega \tau + \beta) d\tau = \\
+		\frac{1}{\omega} I_{max} \Re [\frac{1}{j}e^{j(\omega t + \beta)]}= E_{max} \Re [e^{j(\omega t + \alpha)}] = \\
+		RI_{max} \Re [e^j(\omega t + \beta)] + LI_{max}\omega \Re [je^{j(\omega t + \beta)}] + \frac{1}{\omega c}I_{max} \Re [\frac{1}{j}e^{j(\omega t + \beta)}]
+	\end{gather}
+	Si ottiene una combinazione lineare a coefficienti costanti di parti reali con esponenziali aventi lo stesso $\omega$.\\
+	Deve quindi valere:
+	\begin{equation}
+		E_{max}e^{j\dots} = \text{parte senza reale}
+	\end{equation}
+	Tutti i termini hanno in comune $e^{j(\omega t)}$ e si possono semplificare.
+	\begin{equation}
+		E_{max} e^{j\alpha} = [R+j\omega L + \frac{1}{j\omega C}] I_{max} e^{j\beta}	
+	\end{equation}
+	Ottenendo i fasori rappresentativi di $e(t)$ e $i(t)$:
+	\begin{gather}
+		E_{max} e^{j\alpha} \leftrightarrow e(t) \\
+		I_{max} e^{j\beta} \leftrightarrow i(t)
+	\end{gather}
+	Passando da una rappresentazione nel dominio del tempo ad una rappresentazione fasoriale. \\
+	Ogni grandezza è quindi rappresentabile da un numero complesso, quindi un vettore nel piano.\\
+	I componenti passivi non subiscono trasformazione (vedi la resistenza $R$) mentre quelli attivi vengono indicati come segue, rispettivamente per induttanze $L$ e condensatori $C$:
+	\begin{equation}
+		\bar E = [R+j\omega L + \frac{1}{j\omega C}]\bar I	
+	\end{equation}
+	Induttanze e condensatori sono usati come "resistenze immaginarie" nella equazione.\\
+	Questo permette di risolvere un circuito in corrente alternata esattamente come se fosse in regime continuo, trasformando i componenti in modo appropriato, come in figura \ref{fig:im-12}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Componenti equivalenti}
+			\label{fig:im-12}
+		\end{figure}
+	\end{center}
+	Il metodo risolutivo quindi comporterà la trasformazione del circuito e di tutte le grandezze, per poi poterlo risolvere e tornare nel dominio del tempo con la antitrasformata.
+	\begin{equation}
+		x(t)=X_{max}\cos(\omega t + \gamma x) \leftrightarrow \bar X = X_{max} e^{\gamma x}	
+	\end{equation}
+	La resistenza complessa che rappresenta i componenti reattivi prende il nome di \textbf{impedenza}, ed essa dipende dalla frequenza in entrata.
+	\subsection{Rappresentazione fasoriale}
+	La rappresentazione fasoriale permette di indicare i componenti del segnale come vettori in un piano.\\
+	Se due vettori rappresentano rispettivamente tensione e corrente, questi hanno il modulo che non è paragonabile, ma la fase corrisponde, quindi per esempio la tensione ai capi di una resistenza e la corrente che ci passa hanno la stessa fase, dato che essa è un componente passivo.\\\\
+	In una maglia con diversi componenti reattivi si produce una corrente con uno sfasamento rispetto alla tensione; a regime essa può essere anticipata o ritardata.\\
+	La tensione su una induttanza è a 90º in anticipo rispetto alla corrente, dato che uno è la derivata dell'altro (seno-coseno), mentre quella su un condensatore è in ritardo di 90º.\\\\
+	Ovviamente nel grafico tutte le tensioni sommate fanno zero per la legge di Kirchhoff alla maglia.
+	\begin{gather}
+		\bar E = \bar V_R + \bar V_L + \bar V_C	\\
+		\bar V_L = j\omega L \cdot \bar I \\
+		\bar V_C = \frac{1}{j\omega C}\cdot I = -j \frac{1}{\omega C}\bar I
+	\end{gather}
+	\subsection{Bipolo generico}
+	Un componente (o un circuito formato da componenti reattivi) può essere rappresentato da un dipolo generico con la trasformata.\\
+	Rispetto alla tensione ai capi, la corrente può essere in anticipo (fig.\ref{fig:im-13}) o in ritardo di un certo angolo $\varphi$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Vettori rappresentativi}
+			\label{fig:im-13}
+		\end{figure}
+	\end{center}
+	\begin{gather}
+		v(t)=V_{max}\cdot \cos(\omega t) \\
+		i(t)=I_{max}\cdot \cos(\omega t - \varphi)
+	\end{gather}
+	Se l'angolo $\varphi > 0$ (corrente in anticipo rispetto alla fase) si dice che il componente è \textbf{ohmico-induttivo}, mentre se $\varphi < 0$ è \textbf{ohmico-capacitivo}.
+	\subsection{Grandezze nel Regime Sinusoidale}
+	\begin{definition}[\textbf{Impedenza}]
+		Un numero complesso, si indica con $\bar E = R+jX$, se è reale il componente è una resistenza, se è immaginario puro è una induttanza o un condensatore.\\
+		Indica quanto il componente si oppone al passaggio di corrente alternata.
+	\end{definition}
+	\begin{definition}[\textbf{Reattanza}]
+		Numero reale, la parte immaginaria della impedenza. Si indica con $X=\Im[\bar z]$. \\
+		Dipende dai componenti reattivi.
+	\end{definition}
+	\begin{definition}[\textbf{Resistenza}]
+		La parte reale della impedenza, misurata in Ohm complessi.
+	\end{definition}
+	\begin{definition}[\textbf{Ammettenza}]
+		L'inverso della impedenza. $\bar Y = \frac{1}{\bar z}$
+	\end{definition}
+	\begin{definition}[\textbf{Conduttanza}]
+		$G=\Re [\bar Y]$
+	\end{definition}
+	\begin{definition}[\textbf{Suscettanza}]
+		$B=\Im [\bar Y]$
+	\end{definition}
+	Da notare che in questo caso:
+	\begin{equation}
+		G\neq \frac{1}{R}
+	\end{equation}
 	\subsection{Metodo Risolutivo per Regime Sinusoidale}
+	Magari una sezione un po' ridondante visto che no ho già parlato nella sezione della trasformata di Steinitz, ma meglio ripetersi che non capire l'argomento.\\
+	Il metodo risolutivo "standard" per svolgere un problema con un circuito in regime sinusoidale è composto dai seguenti passaggi:
+	\begin{itemize}
+		\item Trasformare il circuito tramite Steinitz
+		\item Risolvere il circuito nel dominio di Steinitz
+		\item Anti-trasformare per tornare tornare nel regime sinusoidale
+	\end{itemize}
 	\subsection{Potenze in Regime Sinusoidale}
-	\subsection{Valore Efficace di Tensioni e Correnti}
+	La potenza assorbita istantanea in $t$ è data da:
+	\begin{equation}
+		p(t)=v(t)\cdot i(t)	
+	\end{equation}
+	Si possono distinguere due tipi di potenze da quella istantanea, quella \textbf{attiva} e quella \textbf{fluttuante}:
+	\begin{gather}
+		p(t)=V_{max}\cdot I_{max} \cdot \cos(\omega t) \cdot \cos (\omega t - \varphi)
+		= \frac{1}{2}V_{max} I_{max} \cos \varphi \quad + \quad \frac{1}{2}V_{max}I_{max} \cos (2\omega t - \varphi)
+	\end{gather}
+	In questo caso possiamo dire che $\varphi$ ci indica l'angolo di ritardo di $i$ rispetto a $v$.\\
+	La potenza attiva è il \textbf{valore medio della potenza istantanea}.\\
+	Avere una potenza negativa (grafico che va sotto lo zero) indica che il bipolo si sta comportando come generatore, quindi i componenti reattivi cedono potenza.\\\\
+	Esiste anche un altro metodo per distinguere le potenze in corrente alternata, la potenza istantanea si può dividere in potenza \textbf{attiva} e \textbf{reattiva}.\\
+	La \textbf{corrente attiva}, quindi la parte di corrente in fase con la tensione è data da:
+	\begin{equation}
+		I_{max}\cos (\omega t ) \cos \varphi	
+	\end{equation}
+	Mentre la \textbf{corrente reattiva}, in fase a 90º rispetto alla corrente attiva, è:
+	\begin{equation}
+		I_{max}\sin (\omega t) \sin \varphi	
+	\end{equation}
+	Si ottengono quindi potenza attiva e potenza reattiva, la prima contiene il coseno perché si tratta della parte in fase, la seconda invece è sfasata di 90º rispetto alla corrente:
+	\begin{gather}
+		P_A(t)=\frac{1}{2} \left[ V_{max}I_{max}+V_{max}I_{max}\cos (2\omega t) \right] \cos \varphi \\
+		P_R(t)=\frac{1}{2}V_{max}I_{max} \sin(2\omega t) \sin \varphi
+	\end{gather}
+	La potenza reattiva transita in continuazione fra generatore ed utilizzatore, ma dato che i cavi hanno una resistenza interna, questa potenza viene in parte dissipata per effetto Joule.\\
+	Per questo motivo i fornitori di energia elettrica impongono un limite nel valore di $\varphi$ che può essere raggiunto.\\\\
+	Ricapitolando, la potenza può essere vista in due modi, con la potenza fluttuante o la somma di potenza attiva e reattiva:
+	\begin{gather}
+		P(t)=P+P_F(t) \\
+		P(t)=P_A(t)+P_R(t)
+	\end{gather}
+	\subsubsection{Confronto con regime continuo}
+	Effettuando un confronto energetico della potenza con quella misurata in regime continuo si ha che:
+	\begin{equation}
+		P=RI^2=\frac{V^2}{R}	
+	\end{equation}
+	Mentre per la corrente alternata, ipotizzando che il carico sia resistivo, quindi $\bar z = R$:
+	\begin{equation}
+		p(t)=v(t)i(t)=V_{max}I_{max}\cos^2(\omega t) = P_A(t)	
+	\end{equation}
+	\subsubsection{Potenza media assorbita (Valori efficaci)}
+	La potenza media che viene assorbita e dissipata si ottiene con la media integrale:
+	\begin{equation}
+		P_M=\frac{1}{T}\int_0^T Ri^2(t)dt=R\frac{1}{T}\int_0^T i^2(t)dt	
+	\end{equation}
+	Data una forma d'onda qualsiasi con cui si sta alimentando una resistenza, ci si chiede qual è il valore di corrente continua che bisognerebbe dare per dissipare in media la stessa energia. \\
+	Rispettivamente, per corrente continua e alternata si ha:
+	\begin{gather}
+		P_M=RI^2 \\
+		P_M=R\frac{1}{T}\int_0^T i^2(t)dt
+	\end{gather}
+	Euguagliando le due parti, si ottiene la \textbf{corrente efficace RMS}, che quindi genererebbe gli \textbf{stessi effetti termici in regime continuo}.
+	\begin{equation}
+		I_{eff}=\sqrt{\frac{1}{T}\int_0^T i^2(t)dt}	
+	\end{equation}
+	RMS sta per "\textbf{Root Mean Square}", radice della media del quadrato. \\
+	Una volta ottenuto il valore RMS della corrente la potenza si calcola in modo classico.\\\\
+	In particolare, se si prende in considerazione il regime sinusoidale, la \textbf{corrente efficace} e la \textbf{tensione efficace} si possono calcolare semplicemente:
+	\begin{gather}
+		I_{eff}=\frac{I_{max}}{\sqrt{2}} \\
+		V_{eff}=\frac{V_{max}}{\sqrt{2}}
+	\end{gather}
+	\begin{equation}
+		P=\frac{V_{max}I_{max}}{2}\cos \varphi = V\cdot I \cdot \cos \varphi	
+	\end{equation}
+	\subsubsection{Potenza Complessa}
+	La potenza complessa è rappresentata da un numero immaginario che contiene potenza attiva e reattiva in un solo oggetto.
+	\begin{gather}
+		\bar A = P+jQ = VI\cos \varphi + jVI\sin \varphi \\
+		|\bar A |=VI:= A
+	\end{gather}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Potenza complessa}
+			\label{fig:im-14}
+		\end{figure}
+	\end{center}
+	La potenza denotata con $|\bar A |$ è detta \textbf{potenza apparente}, ed è data dal modulo del vettore sul piano di Gauss. \\
+	È detta anche "di dimensionamento", dato che è quella considerata quando si dimensiona la potenza che deve portare un circuito.\\\\
+	Inoltre essa può essere data dal \textbf{prodotto del fasore della tensione} e il \textbf{complesso coniugato del fasore della corrente}:
+	\begin{align}
+		\bar A &= VI\cos \varphi + jVI\sin \varphi \\
+		&= VI(\cos\varphi + j\sin \varphi) = VIe^{j\varphi} \\
+		&=\bar V \cdot \bar I^\ast
+	\end{align}
+	\subsubsection{Unità di misura}
+	Le unità di misura delle potenze cambiano a seconda dell'uso.\\\\
+	La potenza apparente si misura in Volt-Ampére:
+	\begin{equation}
+		A[VA]	
+	\end{equation}
+	Per potenza attiva e reattiva si usano rispettivamente Watt e Volt-Ampére Reattivi:
+	\begin{gather}
+		P[W] \\
+		Q[VAR]
+	\end{gather}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Riepilogo delle potenze}
+			\label{fig:im-15}
+		\end{figure}
+	\end{center}
 	\subsection{Teorema di Boucherot}
+	\begin{theorem}
+		La somma delle potenze attive generate da un generatore in regime sinusoidale è uguale alla somma delle potenze attive utilizzate.\\
+		Stessa cosa per quelle reattive.
+	\end{theorem}
+	\begin{gather}
+		\sum P_u=\sum P_U \\
+		\sum Q_u=\sum Q_U 
+	\end{gather}
+	Di conseguenza vale anche per le potenze complesse:
+	\begin{equation}
+		\sum \bar A _u=\sum \bar A_U 	
+	\end{equation}
 	\subsection{Rifasamento}
+	Un fornitore di energia elettrica, per non dovere sovradimensionare i cavi e perdere energia per nulla, cerca di limitare la potenza reattiva usata dai clienti.\\
+	Ridurre il valore di $\varphi$ vuol dire ridurre il carico che viene continuamente trasferito fra generatore ed utilizzatore, che in casi reali porta ad avere una maggiore energia dissipata per effetto Joule.\\\\
+	Solitamente gli impianti industriali (a causa principalmente dei motori elettrici) causano un uso di potenza reattiva di tipo induttivo $\varphi>0$, che andrà quindi compensata con dei condensatori per portare il valore $\cos \varphi$ sopra $0.9$, come definito per legge.\\\\
+	I condensatori fanno in modo di accumulare la potenza reattiva che andrebbe altrimenti a passare per i cavi del fornitore, trasformando il carico in uno quasi puramente resistivo.\\
+	La fase della corrente viene spostata per essere più vicina possibile a quella della tensione.\\\\
+	Ovviamente lo stesso varrebbe anche per il caso contrario, se si ha un carico capacitivo si compensa con delle induttanze, ma questo non succede mai nella realtà.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Rifasamento con condensatore}
+			\label{fig:im-16}
+		\end{figure}
+	\end{center}
+	\begin{gather}
+		Q'=Q+Q_C \\
+		Q=VI\sin \varphi = VI\sin \varphi \frac{\cos \varphi}{\cos \varphi} = P\tan \varphi\\
+		Q'=P\tan \varphi' \\
+		Q_C = Q'-Q = P(\tan \varphi'-\tan \varphi)
+	\end{gather}
+	Si utilizza la impedenza del condensatore $X_C$ per formulare la potenza, e poi si pone in relazione a $V$:
+	\begin{gather}
+		|Q_C|=X_CI_C^2=\frac{V^2}{X_C}
+	\end{gather}
+	Ricordando che $X_C=\frac{1}{j\omega C}$ si può prendere il valore assoluto rimuovendo $j$:
+	\begin{gather}
+		X_C=\frac{V^2}{|Q_C|}=\frac{1}{\omega C} \quad \text{(reattanza capacitiva)}\\
+		C=\frac{|Q_C|}{\omega V^2}=\frac{P(\tan \varphi-\tan \varphi')}{\omega V^2}
+	\end{gather}
 	\subsection{Teorema del Massimo Trasferimento di Potenza}
+	\begin{theorem}
+		Per ottenere la massima potenza esterna da un generatore con una resistenza interna finita, la resistenza del carico deve essere uguale alla resistenza del generatore vista dai suoi terminali di uscita
+	\end{theorem}
+	Detta in altre parole:\\
+	Un carico riceverà la massima potenza da una sorgente quando la sua resistenza ($R_L$) è uguale alla resistenza interna ($R_I$) della fonte.\\\\
+	Quando si effettua un trasferimento di energia si possono avere due obiettivi:
+	\begin{itemize}
+		\item Trasferimento d Energia $\rightarrow$ Massimizzare l'efficienza, quindi perdere meno energia possibile
+		\item Trasferimento di Informazione $\rightarrow$ Massimizzare (la potenza utile) la quota di energia che arriva a destinazione, ignorando l'efficienza
+	\end{itemize}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Trasferimento di energia}
+			\label{fig:im-17}
+		\end{figure}
+	\end{center}
 	\subsection{Sistemi Trifase}
 	\subsubsection{Collegamento a Triangolo}
 	\subsubsection{Collegamento a Stella}
-	\subsubsection{Misura di Ptenza Trifase}
+	\subsubsection{Misura di Potenza Trifase}
 	\subsubsection{Inserzione Aaron}
 \end{document}
