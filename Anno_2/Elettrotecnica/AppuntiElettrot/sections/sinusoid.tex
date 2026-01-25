@@ -308,10 +308,20 @@
 	\end{gather}
 	\subsection{Teorema del Massimo Trasferimento di Potenza}
 	\begin{theorem}
-		Per ottenere la massima potenza esterna da un generatore con una resistenza interna finita, la resistenza del carico deve essere uguale alla resistenza del generatore vista dai suoi terminali di uscita
+		Per ottenere la massima potenza esterna da un generatore con una resistenza interna finita, la resistenza del carico deve essere uguale alla resistenza del generatore vista dai suoi terminali di uscita.\\
+		Data una soregnte con impedenza interna $Z_S = R_s + jX_S$, la massima potenza possibile viene trasferita al carico $Z_L$ se e solo se:
+		\begin{equation}
+			Z_L = Z_S^*
+		\end{equation}
+		Ovvero se:
+		\begin{itemize}
+			\item La resistenza del carico è uguale a quella della sorgente: $R_C = R_S$
+			\item La reattanza del carico è l'opposto di quella della sorgente: $X_C = -X_S$
+		\end{itemize}
+		Questa condizione annulla la parte reattiva totale del circuito (risonanza) e bilancia le parti resistive.
 	\end{theorem}
 	Detta in altre parole:\\
-	Un carico riceverà la massima potenza da una sorgente quando la sua resistenza ($R_L$) è uguale alla resistenza interna ($R_I$) della fonte.\\\\
+	Un carico riceverà la massima potenza da una sorgente quando la sua resistenza ($R_L$) è uguale alla resistenza interna ($R_S$) della fonte.\\\\
 	Quando si effettua un trasferimento di energia si possono avere due obiettivi:
 	\begin{itemize}
 		\item Trasferimento d Energia $\rightarrow$ Massimizzare l'efficienza, quindi perdere meno energia possibile
@@ -325,9 +335,208 @@
 			\label{fig:im-17}
 		\end{figure}
 	\end{center}
+	Se per esempio si vuole trasmettere un'informazione si deve fare in modo di ricadere nel secondo caso, dato che si vuole massimizzare la quantità di energia a destinazione.\\
+	Tenere presente che la efficienza è data dal rapporto della potenza utilizzabile e la potenza totale:
+	\begin{equation}
+		\eta = \frac{P_U}{P_T}	
+	\end{equation}
+	\begin{proof}[Dimostrazione]
+		Per modellizzare il secondo caso si inizia considerando i componenti come $\bar V_g$ per il generatore, $\bar z_g$ la resistenza del generatore e $\bar z_c$ quella dell'utilizzatore (carico). \\
+		Entrambi vengono visti come impedenze.
+		\begin{gather}
+			\bar z_g = R_g	+ jX_g \\ 
+			\bar z_c = R_c+jX_c
+		\end{gather}
+		La corrente alternata varia per trasmettere delle informazioni.\\
+		Per semplificare i calcoli si ipotizza che la tensione non abbia fase, quindi il generatore all'istante zero è reale:
+		\begin{equation}
+			\bar V_g(0) = V_g(0)
+		\end{equation}
+		La corrente di conseguenza si ottiene con la corrente reale moltiplicata per il fasore:
+		\begin{equation}
+			\bar I_g = I_g \cdot e^{j\varphi_i}	
+		\end{equation}
+		Si calcola quindi la potenza complessa:
+		\begin{equation}
+			\bar A_g = V_g \cdot \bar I_g^\ast = V_g \cdot I_g \cdot e^{-j\varphi_i} = P_g+jQ_g	
+		\end{equation}
+		Dopo il transitorio iniziale si trascura la potenza reattiva, ottenendo quindi la potenza del generatore, che si vuole massimizzare:
+		\begin{equation}
+			P_g = \Re{\bar A_g} = V_gI_g \cos \varphi_i	
+		\end{equation}
+		La potenza persa sul generatore e la potenza ricevuta si calcolano rispettivamente:
+		\begin{gather}
+			P_{Rg} = R_g I_g^2 \\
+			P_{Rc} = R_c I_g^2
+		\end{gather}
+		Si sa che la potenza generata deve essere uguale a quella persa:
+		\begin{equation}
+			P_g = P_{Rg}+P_{Rc}	
+		\end{equation}
+		Quindi si può calcolare esplicitamente la potenza ricevuta:
+		\begin{equation} \label{reatt}
+			P_{Rc}=R_cI_g^2 = P_g - P_{Rg} = V_gI_g \cos \varphi_i - R_gI_g^2 = f(I_g, \varphi_i)	
+		\end{equation}
+		Questa potenza si può ottimizzare modificando le variabili da cui dipende, quindi se si imposta $\cos\varphi = 1$ si ottengono tensione e corrente in fase, quindi le reattanze uguali e contrarie si annullano:
+		\begin{equation}
+			\bar I_g = \frac{V_g}{\bar z_y + \bar z_c} = \frac{V_g}{R_g+jX_g + R_c+jX_c} = \frac{V_g}{R_g+R_c}	
+		\end{equation}
+		Si riprende dalla formula \ref{reatt} la potenza della resistenza ricevente:
+		\begin{equation}
+			P_{Rc} = V_gI_g	-R_gI_g^2
+		\end{equation}
+		Bisogna cercare un punto di massimo di $I_g$, si esegue cercando i punti in cui si annulla la derivata:
+		\begin{equation}
+			\frac{dP_{Rc}}{dI_g}=V_g-2R_gI_g = 0 \implies I_g = \frac{V_g}{R_g+R_c}\implies R_c=R_g	
+		\end{equation}
+		Quindi si ottiene che l'unico modo di avere la massima potenza a destinazione è dividendo le perdite al 50\%. \\
+		Questo significa che per trasmettere più energia possibile bisogna perderne metà dal trasmettitore.\\\\
+		Le impedenze risultano uguali ma complesse coniugate quindi le \textbf{Condizioni di massimo trasferimento di potenza} saranno:
+		\begin{equation}
+			\begin{cases}
+				x_c = x_g \\
+				R_c = R_g
+			\end{cases}	\implies \bar z_c = \bar z_g ^\ast
+		\end{equation}
+	\end{proof}
+	\subsubsection{Condizione di adattamento debole di impedenza}
+	La condizione di adattamento debole si verifica quando non è possibile modificare la reattanza del carico per compensare quella della sorgente (ad esempio, non possiamo aggiungere condensatori o induttori variabili), ma possiamo solo variare il modulo (la grandezza totale) dell'impedenza del carico.\\\\
+	Questo accade spesso quando:
+	\begin{itemize}
+		\item Il carico è puramente resistivo $R_L$, ma la soregnet è una componente reattiva
+		\item L'angolo di fase dell'impedenza del carico è fisso
+	\end{itemize}
+	In questo scenario vincolato, il teorema dimostra che la potenza trasferita è massima quando il modulo dell'impedenza del carico è uguale al modulo dell'impedenza della sorgente:
+	\begin{equation}
+		\left| Z_L \right| = \left| Z_S \right| 
+	\end{equation}
+	In termini espansi, se il carico è una resistenza pura $R_L$ e la sorgente è $R_S + jX_S$, la condizione di adattamento debole è:
+	\begin{equation}
+		R_L = \sqrt{R_S^2 + X_S^2}
+	\end{equation}
 	\subsection{Sistemi Trifase}
-	\subsubsection{Collegamento a Triangolo}
-	\subsubsection{Collegamento a Stella}
+	\begin{definition}
+		Un sistema trifase è un modo di trasmettere energia elettrica attraverso tre flussi di corrente alternata sfasati tra di loro.
+	\end{definition}
+	La frequenza di ogni tensione è uguale, ma le tre generate sono sfasate di 120º.
+	\begin{equation}
+		\begin{cases}
+			e_1(t)=\sqrt{2} E \cos(\omega t \underset{\text{Fase 1}}{\underbrace{+ 0}}) \\
+			e_2(t)=\sqrt{2} E \cos(\omega t \underset{\text{Fase 2}}{\underbrace{- \frac{2}{3}\pi}} ) \\
+			e_3(t)=\sqrt{2} E \cos(\omega t \underset{\text{Fase 2}}{\underbrace{+ \frac{2}{3}\pi}} ) 
+		\end{cases}
+	\end{equation}
+	La tensione massima in ogni momento è data da $\sqrt{2}E$: 
+	\begin{equation}
+		\begin{cases}
+			\bar E_1 = \sqrt{2} E \cdot e^{-j \cdot 0}\\
+			\bar E_1 = \sqrt{2} E \cdot e^{-j \cdot \frac{2}{3}\pi}\\
+			\bar E_1 = \sqrt{2} E \cdot e^{+j \cdot \frac{2}{3}\pi}
+		\end{cases}
+	\end{equation}
+	E si nota che la somma di tutte le fasi è uguale a zero:
+	\begin{equation}
+		\bar E_1 + \bar E_2 + \bar E_3 = 0	\rightarrow e_1(t) + e_2(t) + e_3(t) = 0
+	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Tensioni in regime trifase}
+			\label{fig:im-18}
+		\end{figure}
+	\end{center}
+	Un generatore trifase si può creare collegando a stella tre generatori di corrente alternata sfasati tra di loro, come in figura\ref{fig:im-19}. \\
+	Facendo in questo modo la energia si può trasportare attraverso solo tre cavi invece che sei.\\
+	La tensione in uscita si ha con la differenza tra i due cavi considerati:
+	\begin{equation}
+		\bar V_{1, 2} = \bar E_1 - \bar E_2	
+	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Generatori in regime trifase}
+			\label{fig:im-19}
+		\end{figure}
+	\end{center}
+	Le tensioni uscenti dai singoli generatori vengono dette \textbf{tensioni di fase}, mentre quelle misurate tra due cavi sono \textbf{tensioni di linea}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Tensioni misurate come vettori}
+			\label{fig:im-20}
+		\end{figure}
+	\end{center}
+	Negli impianti reali si collega il centro stella alla terra in modo da avere un potenziale di riferimento uguale per ogni utilizzatore, oltre ad aumentare la sicurezza.\\\\
+	Idealmente il consumo di corrente sui tre cavi di una linea trifase dovrebbe essere uguale, ma dato che le utenze ne usano solo una questo non succede; ciò fa in modo di "muovere" il centro stella (la tensione nulla di riferimento) dato che la tensione viene abbassata in modo non uniforme.\\
+	Normalmente vengono assegnate le fasi agli utilizzatori in modo casuale per bilanciare i carichi.\\\\
+	I nomi convenzionali dei generatori e utilizzatori sono indicati in figura\ref{fig:im-21}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Convenzione di nomenclatura}
+			\label{fig:im-21}
+		\end{figure}
+	\end{center}
+	Per risolvere il problema della divisione dei carichi e tenere "fermo" il centro stella si può ricorrere ad un tipo di collegamento alternativo, come in figura\ref{fig:im-22}. \\
+	In questo modo ogni tensione presente negli utilizzatori corrisponde con la corrispettiva tensione al generatore.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Connessione alternativa}
+			\label{fig:im-22}
+		\end{figure}
+	\end{center}
+	\subsubsection{Connessioni fra genertori in un circuito trifase}
+	I generatori di un circuito trifase possono essere collegati in 2 modi.
+	\paragraph{Collegamento a Stella}
+	Le tensioni $\bar E_1 , \bar E_2 , \bar E_3$ dette tensioni di fase (o stellate).\\
+	Le tensioni $\bar V_{x, y} = \bar E_x - \bar E_y$ dette tensioni di linea (o blianciate).\\
+	La relazione fra i due tipi di tensione è:
+	\begin{equation}
+		\left| \bar V \right| = \sqrt{3} \left| \bar E \right| 
+	\end{equation}
+	Dove $\bar V$ è una qualsiasi tensione di linea e $\bar E$ è una qualsiasi tesione di fase.
+	\paragraph{Collegamento a Triangolo}
+	Le tensioni $\bar E_1 , \bar E_2 , \bar E_3$ dette tensioni di fase (o stellate).\\
+	Le tensioni $\bar V_{x, y} = \bar E_x - \bar E_y$ dette tensioni di linea (o blianciate).\\
+	La relazione fra i due tipi di tensione è:
+	\begin{equation}
+		\left| \bar V \right| = \left| \bar E \right| 
+	\end{equation}
+	Dove $\bar V$ è una qualsiasi tensione di linea e $\bar E$ è una qualsiasi tesione di fase.
 	\subsubsection{Misura di Potenza Trifase}
-	\subsubsection{Inserzione Aaron}
+	Per misurare la potenza in regime trifase si può procedere in diversi modi. \\
+	Il primo prevede l'uso di tre wattmetri collegati a terra che misurano la potenza utilizzata da ogni singola fase (figura \ref{fig:im-23}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Misurazione della potenza}
+			\label{fig:im-23}
+		\end{figure}
+	\end{center}
+	\begin{gather}
+		P=P_1+P_2+P_3 \\
+		Q=Q_1+Q_2+Q_3
+	\end{gather}
+	Questa configurazione purtroppo non è di facile utilizzo, dato che il trasporto di linee trifase non include il neutro (centro stella). \\
+	Per effettuare la misurazione in assenza del quarto cavo si fa uso di un metodo alternativo rappresentato in figura \ref{fig:im-24} chiamato \textbf{Inserzione Aron (o Metodo di Aron)}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Misurazione della potenza}
+			\label{fig:im-24}
+		\end{figure}
+	\end{center}
+	\begin{gather}
+		P=P_1+P_2 \\
+		Q=Q_1+Q_2 \\
+		Q=\sqrt{3}(P_1-P_2)
+	\end{gather}
 \end{document}

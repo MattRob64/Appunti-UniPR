@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  24 JAN 2026 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  25 JAN 2026 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1126,41 +1126,42 @@ Package: import 2020/04/01  v 6.2
 ))
 \c@definition=\count353
 \c@theorem=\count354
+\c@exmp=\count355
 
 (./AppuntiElettrotecnica.aux)
 \openout1 = `AppuntiElettrotecnica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
+\scratchcounter=\count356
 \scratchdimen=\dimen304
 \scratchbox=\box74
-\nofMPsegments=\count356
-\nofMParguments=\count357
+\nofMPsegments=\count357
+\nofMParguments=\count358
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count358
+\MPscratchCnt=\count359
 \MPscratchDim=\dimen305
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
 \everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1205,13 +1206,13 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 60.
-LaTeX Info: Command `\ddddot' is already robust on input line 60.
+LaTeX Info: Command `\dddot' is already robust on input line 61.
+LaTeX Info: Command `\ddddot' is already robust on input line 61.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 61.
 (./AppuntiElettrotecnica.out) (./AppuntiElettrotecnica.out)
 \@outlinefile=\write4
 \openout4 = `AppuntiElettrotecnica.out'.
@@ -1219,7 +1220,7 @@ Package hyperref Info: Link coloring OFF on input line 60.
 <./img/0.cover.jpg, id=706, 1686.3pt x 1053.9375pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
-Package pdftex.def Info: ./img/0.cover.jpg  used on input line 81.
+Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
 (pdftex.def)             Requested size: 337.25403pt x 210.78377pt.
  [1
 
@@ -1546,34 +1547,187 @@ File: example-image-a.pdf Graphic file (type pdf)
 Package pdftex.def Info: example-image-a.pdf  used on input line 289.
 (pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--317
+Underfull \hbox (badness 10000) in paragraph at lines 323--327
+
+ []
+
+[34]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 333.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+ [35]
+Underfull \hbox (badness 10000) in paragraph at lines 391--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--406
+
+ []
+
+
+Overfull \hbox (18.38744pt too wide) in paragraph at lines 409--410
+\OT1/cmr/m/n/10 In questo sce-nario vin-co-lato, il teo-rema di-mostra che la p
+otenza trasferita ^^Re mas-sima quando il mod-ulo dell'impedenza
+ []
+
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 444.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+[36]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 458.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 467.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--476
+
+ []
+
+[37]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 479.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 489.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+ [38]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 518.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 532.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+) (./sections/an_freq.tex [39]
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
 
  []
 
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 323.
+Package pdftex.def Info: example-image-a.pdf  used on input line 27.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 42.
 (pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./sections/an_freq.tex [34]) (./sections/doppi_bipoli.tex [35])
-(./sections/trasformatori.tex) [36] [37] (./AppuntiElettrotecnica.aux)
+[40]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 55.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--68
+
+ []
+
+[41]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 87.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 101.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 118.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--126
+
+ []
+
+[42]
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 143.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 152.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--163
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
+
+ []
+
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 244.
+(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./sections/doppi_bipoli.tex [45]) (./sections/trasformatori.tex) [46]
+[47] (./AppuntiElettrotecnica.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `AppuntiElettrotecnica.out' has not changed.
-(rerunfilecheck)             Checksum: DC323C2A7D6CD02CFC97EEC8B141C90C;36871.
+(rerunfilecheck)             Checksum: 5263D93174B41F36D60ADF834E47C0E8;36953.
  ) 
 Here is how much of TeX's memory you used:
- 28082 strings out of 474116
- 517141 string characters out of 5743683
+ 28229 strings out of 474116
+ 519244 string characters out of 5743683
  1951187 words of memory out of 5000000
- 49496 multiletter control sequences out of 15000+600000
+ 49553 multiletter control sequences out of 15000+600000
  574806 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,117p,550b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,117p,550b,1113s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1602,10 +1756,10 @@ mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024
 ist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2024/texmf-dist/fonts
 /type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
 ype1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettrotecnica.pdf (38 pages, 2129343 bytes).
+Output written on AppuntiElettrotecnica.pdf (48 pages, 2167101 bytes).
 PDF statistics:
- 1550 PDF objects out of 1728 (max. 8388607)
- 1416 compressed objects within 15 object streams
- 438 named destinations out of 1000 (max. 500000)
+ 1701 PDF objects out of 1728 (max. 8388607)
+ 1556 compressed objects within 16 object streams
+ 528 named destinations out of 1000 (max. 500000)
  1480 words of extra memory for PDF output out of 10000 (max. 10000000)
 

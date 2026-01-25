@@ -1,17 +1,252 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
+	Analisi in Frequenza di Circuiti in Regime Sinusoidale.\\
+	Un circuito che include componenti reattivi ha una risposta che cambia a seconda della frequenza in entrata.\\
+	Le trasformate di condensatori e induttanze sono:
+	\begin{gather}
+		\bar z_L = j\omega L \\
+		\bar z_C = \frac{1}{j\omega C}
+	\end{gather}
+	La velocità angolare $\omega$ viene espressa in radianti al secondo$\left[ rad/s \right]$, ed è uguale a $\omega = 2\pi f$, dove $f$ rappresenta la frequenza in cicli al secondo (Hertz $\left[ Hz \right]$).\\\\
+	Un filtro è un circuito che lascia passare una certa gamma di frequenze, e si distingue in ideale o reale a seconda di quanto può essere preciso (un filtro ideale annulla completamente le altre frequenze, mentre un filtro reale le attenua).\\
+	Quello che è importante capire nei filtri è che la frequenza rimane invariata, mentre vengono alterati ampiezza e fase del segnale in uscita.
 	\subsection{Diagramma di Bode in Ampiezza e Fase}
-	\subsection{Filtro Passa-Basso (RC)}
-	\subsubsection{Filtro Passa-Alto (RC)}
-	Se prelevo $V_R$ al posto di $V_C$
-	\subsection{Filtro Passa-Alto (RL)}
-	\subsection{Filtro RLC Serie}
-	\subsubsection{Pulsazione di Risonanza}
+	Un diagramma di Bode è una rappresentazione della risposta in frequenza di un sistema, come in fig.\ref{fig:im-26}. \\
+	Esso indica come vengono modificati ampiezza e fase del segnale data la frequenza in entrata.
+	\subsection{Filtri}
+	\subsubsection{Filtro RC}
+	Si tratta di un filtro formato da una resistenza e un condensatore in serie.\\
+	La tensione in entrata è data da:
+	\begin{equation}
+		e(t)=\sqrt{2}\cos(\omega t)	
+	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Circuito filtro RC}
+			\label{fig:im-25}
+		\end{figure}
+	\end{center}
+	Costruendo l'equivalente di Steinmetz si può scrivere la tensione che si può prelevare ai capi del condensatore:
+	\begin{gather}
+		\bar V_C = \bar I \cdot \frac{1}{j\omega C} = \frac{E}{1+j\omega RC} \\
+		|\bar V_C| = \frac{E}{\sqrt{1+\omega^2R^2C^2}}
+	\end{gather}
+	Il filtro risulta essere un \textbf{passa-basso} (considerando la tensione ai capi del condensatore) poiché se la frequenza tende a zero $\bar V_C\rightarrow E$, mentre se tende all'infinito $\bar V_C \rightarrow 0$. \\
+	Le frequenze basse non vengono attenuate, mentre quelle alte si. Da notare che la curva di attenuazione procede in modo naturale e senza discontinuità (fig.\ref{fig:im-26}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Diagramma di Bode filtro RC passa-basso}
+			\label{fig:im-26}
+		\end{figure}
+	\end{center}
+	La frequenza di taglio, quindi il valore della velocità angolare in cui si dimezza la potenza (che è legata al quadrato della corrente) si ottiene:
+	\begin{gather}
+		\omega_C = \frac{1}{RC} 
+	\end{gather}
+	Dato che la resistenza non è un componente reattivo, la tensione ai capi di essa è in fase con il generatore, mentre per quello che riguarda la tensione ai capi del condensatore, essa viene sfasata con un angolo di 90º (vedi diagramma vettoriale di fig.\ref{fig:im-27}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Diagramma vettoriale}
+			\label{fig:im-27}
+		\end{figure}
+	\end{center}
+	Geometricamente la presenza dell'angolo retto implica che tra lo zero, $\bar V_R$ e $\bar E$ esiste una circonferenza, e se si varia il valore del condensatore $\bar V_R$ continua a rimanere su questa circonferenza. \\
+	Quando ci si trova sul valore della pulsazione critica $\omega = \omega_C = \frac{1}{RC}$ la corrente diventa con parte reale e immaginaria uguali:
+	\begin{equation}
+		\bar I = \frac{E}{R+\frac{1}{j\frac{1}{RC}}C}= E \frac{R+jR}{R^2} = \frac{E}{R} + j\frac{E}{R}	
+	\end{equation}
+	Dato che le tensioni $\bar V_R$ e $\bar V_C$ sono uguali, l'angolo formato risulta $-\frac{\pi}{4}$.\\\\
+	Facendo tendere la frequenza a zero, si nota che la tensione ai capi del condensatore tende a $\bar E$, mentre quella sulla resistenza diventa infinitesima, viceversa se $\omega \rightarrow +\infty$ (l'impedenza tende ad annullarsi).\\\\
+	Se nello stesso circuito si prendesse la tensione in uscita sulla resistenza si avrebbe una situazione diversa:
+	\begin{equation}
+		\bar V_R = R\cdot \bar I = R\cdot \frac{\bar E}{R+\frac{1}{j\omega C}} = E \frac{j\omega RC}{j\omega RC + 1}	
+	\end{equation}
+	Il modulo della tensione è quindi:
+	\begin{equation}
+		|\bar V_R| = \frac{E\omega RC}{\sqrt{\omega ^2 R^2 C^2 + 1}}	
+	\end{equation}
+	Il filtro configurato in questo modo ha caratteristiche \textbf{passa-alto}.
+	\subsubsection{Filtro RL}
+	Risulta simile al filtro RC con la unica differenza che al posto del condensatore vi è una induttanza.
+	\begin{gather}
+		\bar V_L = j\omega L \bar I = j\omega L \frac{\bar E}{R+j\omega L} \\
+		|\bar V_L| = E\frac{\omega L}{\sqrt{R^2 + \omega^2 L^2}} = E \frac{\omega \frac{L}{R}}{\sqrt{R+\omega ^2 \frac{L^2 }{R^2}}} \\
+		\omega_L = \frac{R}{L} \implies |\bar V_L| = \frac{E}{\sqrt{2}}
+	\end{gather}
+	Il filtro ha caratteristiche \textbf{passa-alto} se si prende $\bar V_L$, mentre è \textbf{passa-basso} se la tensione si estrae da $R_L$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Circuito filtro RL}
+			\label{fig:im-28}
+		\end{figure}
+	\end{center}
+	\subsubsection{Filtro RLC Serie}
+	Comprende la serie di tutti e tre i componenti, una resistenza, un condensatore e una induttanza.\\
+	La corrente di maglia è data:
+	\begin{equation}
+		\bar I = \frac{\bar E}{R+j\omega L + \frac{1}{j\omega C}} = \frac{\bar E}{R+j(\omega L - \frac{1}{\omega C})}	
+	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Circuito filtro RLC}
+			\label{fig:im-29}
+		\end{figure}
+	\end{center}
+	Dati certi valori specifici di $L$ e $C$ si può raggiungere una situazione particolare in cui tensione e corrente vanno in fase, quindi la reattanza del condensatore annulla quella della induttanza. \\
+	Si forma quindi un fenomeno detto \textbf{risonanza serie}.
+	\begin{gather}
+		\omega L = \frac{1}{\omega C} \implies \bar I = \frac{\bar E }{R} 
+	\end{gather}
+	Negli altri casi si ha un filtro passa-banda con una pulsazione centrale detta \textbf{pulsazione di risonanza}:
+	\begin{equation}
+		\omega ^\ast = \frac{1}{\sqrt{LC}}	
+	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Corrente in un circuito RLC}
+			\label{fig:im-30}
+		\end{figure}
+	\end{center}
+	Nel grafico in figura \ref{fig:im-30} si nota che alla pulsazione $\omega_C$ il circuito va in risonanza, e non viene effettuata alcuna attenuazione.\\\\
+	La banda $B$ indica la dimensione dell'intervallo compreso fra le due pulsazioni di taglio $\omega_1$ e $\omega_2$. \\
+	Il modulo della corrente si ottiene:
+	\begin{equation}
+		|\bar I| = \frac{E}{\sqrt{R^2+(\omega C - \frac{1}{\omega C})^2}}	
+	\end{equation}
+	Sapendo che $\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2} = R\sqrt{2}$ si può fare in modo di estrarre le pulsazioni di taglio:
+	\begin{equation}
+		\omega_{1, 2}=\sqrt{\left(\frac{R}{2L}\right)^2+\frac{1}{LC}}	\pm \frac{R}{2L}
+	\end{equation}
+	Da cui si trova che la prima parte della equazione rappresenta la pulsazione centrale, e quella dopo $\pm$ le pulsazioni di taglio.
+	La banda risulta quindi molto semplicemente:
+	\begin{equation}
+		B=\frac{R}{L}	
+	\end{equation}
+	\subsubsection{Filtro RLC Parallelo}
+	Mettendo in parallelo una induttanza e un condensatore si ottiene un filtro che elimina una determinata banda, detto "\textbf{Notch}" (o anche \textbf{Filtro Anti-risonanza} oppure ancora \textbf{Filtro Elimina-banda}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Circuito di un filtro Notch}
+			\label{fig:im-31}
+		\end{figure}
+	\end{center}
+	Per la frequenza $\omega$ che tende a infinito oppure zero si ha che la corrente tende a $\frac{\bar E}{R}$, mentre si ha un punto in cui essa diventa zero dove si raggiunge la frequenza $\omega^\ast$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Modulo della corrente per Notch}
+			\label{fig:im-32}
+		\end{figure}
+	\end{center}
+	\begin{equation}
+		\bar I = \frac{\bar E}{\bar z}=\frac{\bar E}{R+\frac{j\omega L \frac{1}{j\omega C}}{j\omega L+\frac{1}{j\omega L}}}=\frac{\bar E}{R+\frac{j\omega L}{1-\omega^2LC}}	
+	\end{equation}
+	Quando $\omega\rightarrow 0$ la parte immaginaria si annulla e la seconda parte del denominatore diventa zero, stessa cosa per quando $\omega \rightarrow + \infty$, la frazione tende ad essere infinitesima e rimane $\frac{\bar E}{R}$. \\
+	In risonanza si hanno due correnti $\bar I_C$ e $\bar I_L$ uguali e opposte che possono esser anche molto forti, quando il circuito funziona in questo modo si dice che si hanno \textbf{condizioni di antirisonanza}.\\\\
+	Se si impone $1-\omega^2LC=0$ si ottiene che:
+	\begin{equation}
+		\omega^\ast = \frac{1}{\sqrt{LC}}	
+	\end{equation}
+	La banda si calcola:
+	\begin{gather}
+		\omega_{1, 2}=\sqrt{\frac{1}{LC}+\left(\frac{1}{2RC}\right)^2}\pm \frac{1}{2RC} \\
+		B=\omega_2-\omega_1 = \frac{1}{RC}
+	\end{gather}
+	Un uso frequente dei filtri notch è per eliminare il rumore a 50hz presente negli apparati collegati alla corrente domestica.\\\\
+	In un circuito in risonanza non si può fare in modo di utilizzare la energia dei componenti reattivi (per esempio per creare un elevatore di corrente o tensione), dato che andrebbe a "squilibrare" il fenomeno.
+	\paragraph{Picchi di Risonanza o Antirisonanza Parassiti}
 	\subsection{Fattore Qualità Q}
-	\subsection{Filtro RLC Parallelo (Antirisonanza)}
-	\subsection{Picchi di Risonanza o Antirisonanza Parassiti}
-	\subsection{Funzioni di Trasferimento}
+	Un altro valore importante per i filtri è il fattore di qualità, il quale misura il grado di selettività del filtro.\\\\
+	Il fattore di qualità può assumere diversi significati:
+	\begin{itemize}
+		\item (energetico) quantità di energia immagazzinata rispetto a quella dissipata
+		\item Rapporto fra centro banda e larghezza
+		\item Rapporto fra tensione su uno dei componenti reattivi e totale
+	\end{itemize}
+	\begin{equation}
+		Q:=2\pi \cdot \frac{1}{2}LI_{max}^2\cdot \frac{1}{\frac{1}{2}RI_{max}^2 T}	
+	\end{equation}
+	La prima parte della equazione rappresenta la energia immagazzinata da una induttanza percorsa da una corrente, mentre la seconda quella dissipata dalla resistenza in un periodo.\\\\
+	Se si ha una risonanza, quindi $\omega = \frac{1}{\sqrt{LC}}=\omega^\ast$, la formula restituisce la energia di picco immagazzinata dai componenti reattivi di un filtro.
+	\begin{gather}
+		Q:=\frac{\omega^\ast}{B}=\frac{\omega^\ast}{\frac{R}{L}}	=\frac{\omega^\ast L}{R}\cdot \frac{I}{I}=\frac{|\bar V_L|}{|\bar E|}=V_C
+	\end{gather}
+	Quindi rispetto alla banda un filtro sottoposto ad una frequenza più elevata ha una qualità maggiore.
+	\subsection{Funzioni di Trasferimento e di Guadagno}
+	Si utilizza una funzione di trasferimento per studiare il funzionamento di filtri e circuiti. \\
+	Dato un sistema con entrata $\bar X$ e uscita $\bar Y$, la funzione è data da:
+	\begin{equation} \label{wow}
+		\bar H(j\omega) := \frac{\bar Y(j\omega)}{\bar X(j\omega)}	
+	\end{equation}
+	Per trovare quindi l'uscita dato il segnale in entrata e la risposta si fa il prodotto complesso fra i due (somma di fasi, prodotto di moduli):
+	\begin{equation}
+		\bar Y(j\omega) = \bar X(j\omega) \cdot \bar H(j\omega)	
+	\end{equation}
+	Si possono distinguere diversi tipi di trasferimenti:
+	\begin{itemize}
+		\item $H(j\omega) = \frac{\bar I_u}{\bar I_i}$ - \textbf{Guadagno di corrente}
+		\item $H(j\omega) = \frac{\bar V_u}{\bar V_i}$ - \textbf{Guadagno di tensione}
+		\item $H(j\omega) = \frac{\bar V_u}{\bar I_i}$ - \textbf{Impedenza di trasferimento}
+		\item $H(j\omega) = \frac{\bar I_u}{\bar V_i}$ - \textbf{Ammettenza di trasferimento}
+	\end{itemize}
+	Riprendendo la formula \ref{wow} si può fare in modo di scrivere numeratore e denominatore come polinomi in funzione di $j\omega$ in forma estesa ($n$ indica il numeratore, $d$ il denominatore):
+	\begin{equation}
+		\bar H(j\omega) = \frac{n_0 (j\omega)^n + n_1(j\omega)^{n-1} + \dots + n_{n-1}(j\omega) + n_n}{d_0(j\omega)^d+d_1(j\omega)^{d-1}+\dots+d_{d-1}(j\omega) +d_d}
+	\end{equation}
+	Gli ultimi termini, $n_n$ e $d_d$ sono i termini noti, e $n, d$ indicano i gradi dei polinomi. \\
+	Si avranno quindi (teorema fondamentale dell'algebra) $n, d$ soluzioni denominate $z\rightarrow$ zeri (numeratore) e $p\rightarrow$ poli (denominatore). \\
+	Il tutto si può scrivere quindi direttamente con le soluzioni:
+	\begin{equation}
+		\bar H(j\omega) = \frac{n_0}{d_0} \cdot \frac{(j\omega - z_1 ')(j\omega - z_2') \dots (j\omega - z_n')}{(j\omega - p_1')(j\omega - p_2')\dots(j\omega - p_n')}	
+	\end{equation}
+	Dove $\frac{n_0}{d_0}$ rappresenta il coefficiente di ordine massimo.
+	\begin{definition}
+		Per \textbf{zeri} delle funzioni di trasferimento indichiamo le soluzioni di $\bar n (j \omega) = 0$ cambiati di segno e gli indichiamo con i simboli: $Z_1, Z_2, \dots , Z_n$
+	\end{definition}
+	\begin{definition}
+		Per \textbf{poli} delle funzioni di trasferimento indichiamo le soluzioni di $\bar d (j \omega) = 0$ cambiati di segno e gli indichiamo con i sombli: $P_1, P_2, \dots , P_n$
+	\end{definition}
+	\begin{definition}
+		Definiamo \textbf{costanti di trasferimento} $k_0 = \frac{n_0}{d_0}$
+	\end{definition}
+	Tornando all'equazione, invertendo i segni si ha:
+	\begin{equation}
+		\bar H(j\omega) = \frac{n_0}{d_0} \cdot \frac{(j\omega + z_1)(j\omega + z_2) \dots (j\omega + z_n)}{(j\omega + p_1)(j\omega + p_2)\dots(j\omega + p_n)}	
+	\end{equation}
+	Si possono avere casi in cui uno o più poli o zeri si trovino nell'origine, quindi $p=0$ oppure $z=0$. \\
+	Riscrivendo la stessa forma con i termini al denominatore, si fa in modo di estrarre poli e zeri nulli e di portarli in un termine esterno (altrimenti si creano divisioni impossibili).
+	\begin{equation} \label{eq-stramba}
+		\bar H(j\omega) = H_0 \frac{\left(\frac{j\omega}{z_1}+1\right)\left(\frac{j\omega}{z_2}+1\right)\dots\left(\frac{j\omega}{z_n}+1\right)}{\left(\frac{j\omega}{p_1}+1\right)\left(\frac{j\omega}{p_2}+1\right)\dots\left(\frac{j\omega}{p_d}+1\right)}(j\omega )^m
+	\end{equation}
+	L'ultimo termine contiene tutti i poli e zeri nulli, il numero $m$ si ottiene facendo la differenza del numero di zeri e poli all'origine.\\\\
+	Una qualunque funzione di trasferimento si può esprimere in questa forma, i termini possono essere reali o complessi coniugati a coppie.
+	\begin{exmp}
+		Si consideri un filtro RC usato come passa-basso (fig.\ref{fig:im-33}).
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{example-image-a}
+				\caption{Circuito dell'esempio}
+				\label{fig:im-33}
+			\end{figure}
+		\end{center}
+	\end{exmp}
 	\subsubsection{Zeri delle Fuzioni di Trasferimento}
 	\subsubsection{Poli delle Funzioni di Trasferimento}
 	\subsubsection{Costanti di Trasferimento}
