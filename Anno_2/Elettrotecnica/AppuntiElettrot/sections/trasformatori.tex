@@ -2,9 +2,137 @@
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
 	\subsection{Mutua Induzione}
+	Quando una induttanza viene percorsa da corrente, essa genera un campo magnetico che si concentra con l'aumentare del numero di spire, generando un flusso magnetico concatenato.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Mutua Induzione}
+			\label{fig:im-49}
+		\end{figure}
+	\end{center}
+	Se si avvicina un secondo avvolgimento (seconda bobina), si fa in modo che il campo magnetico venga ricevuto e trasformato nuovamente in una corrente. \\
+	Ricordando la legge di Hopkinson, si ha un legame fra il numero di spire $N$ della bobina che generano il flusso, la corrente $i$, la riluttanza magnetica $\mathscr{R}$ e il flusso magnetico $\phi$:
+	\begin{gather}
+		N\cdot i = \mathscr{R} \cdot \phi \Rightarrow \phi = \frac{N \cdot i}{\mathscr{R}}
+	\end{gather}
+	Per ottenere il \textbf{flusso concatenato totale}:
+	\begin{gather}
+		\phi_C=N\cdot \phi = \frac{N^2 i}{\mathscr{R}}:=L\cdot i
+	\end{gather}
+	Dove in questo caso $N$ indica il numero di avvolgimenti della bobina che riceve il flusso.\\
+	Si distinguono quindi 2 possibilità:
+	\begin{itemize}
+		\item \textbf{Auto-induzione}: la bobina che genera il flusso è uguale da quella che lo riceve: $g = r$
+			\begin{equation}
+				\phi_C = L \cdot i
+			\end{equation}
+			con $L = \frac{N^2}{\mathscr{R}}$
+		\item \textbf{Mutua Induzione} la bobina che genera il flusso è uguale da quella che lo riceve: $g \neq r$
+			\begin{equation}
+				\phi_C = M \cdot i
+			\end{equation}
+			con $M = \frac{N_g \cdot N_r}{\mathscr{R}}$
+	\end{itemize}
+	Lo stesso si divide in vari flussi, a seconda se sono concatenati anche alla seconda induttanza oppure no (possono generarsi delle linee di forza che passano per il primo ma non per il secondo), il primo numero al pedice indica \textbf{quale filamento ha subito il campo} (riceve il flusso) e il secondo \textbf{quale lo ha generato} (genera il flusso):
+	\begin{gather}
+		\text{Flusso concatenato primo avvolgimento: }\phi_{C1}=\phi_{C11}+\phi_{C12} \\
+		\text{Flusso concatenato secondo avvolgimento: }\phi_{C2}=\phi_{C21}+\phi_{C22}
+	\end{gather}
+	La stessa relazione si può vedere diversamente inserendo un coefficiente di \textbf{mutua induzione} $\mu$ e la \textbf{auto-induttanza} $L$:
+	\begin{gather}
+		\phi_{C11}=\frac{N_1i_1}{\mathscr{R}_1}\cdot N_1 = L_1 i_1 \\
+		\phi_{C12}=\frac{N_2i_2}{\mathscr{R}_{12}}\cdot N_1=\mu_{12}i_2 \\
+		\phi_{C21}=\frac{N_1i_1}{\mathscr{R}_{21}}\cdot N_2=\mu_{21}i_1
+		\phi_{C1}=L_1\cdot i_1+\mu_{12}\cdot i_2 \\
+		\phi_{C2}=L_2\cdot i_2+\mu_{21}\cdot i_1 \\
+		L_1=\frac{N_1^2}{\mathscr{R}_1}, \quad L_2=\frac{N_2^2}{\mathscr{R}_2} \\
+		\mu_{12}=\frac{N_2N_1}{\mathscr{R}_{12}}, \quad \mu_{21}=\frac{N_1N_2}{\mathscr{R}_{21}} \\
+		\mathscr{R}_{12}=\mathscr{R}_{21}\implies \mu_{12}=\mu_{21}:=\mu
+	\end{gather}
+	Il coefficiente $\mu$ può essere:
+	\begin{itemize}
+		\item $\mu > 0$ $\Rightarrow$ I due circuiti sono concordi magneticamente (i flussi si sommano in modo costruttivo)
+		\item $\mu < 0$ $\Rightarrow$ I due circuiti sono discordi magneticamente (i flussi si sommano in modo distruttivamente)
+	\end{itemize}
+	Definiamo quindi un \textbf{fattore di accoppiamento}:
+	\begin{equation}
+		k = \frac{\left| \mu \right|}{\sqrt{L_1 L_2}} \in \left[ 0;1 \right]
+	\end{equation}
+	In base al valore che assume possiamo distinguere 2 casi: Nessun accoppiamento($k=0$) (Nessuna interazione magnetica) ; Accoppiamento magnetico perfetto($k=1$).
+	\subsubsection{Nessun Accoppiamento}
+	Nel caso in cui $k=0$, se i due filamenti sono così distanti da non avere nessun flusso magnetico in comune, si hanno solo flussi dispersi:
+	\begin{gather}
+		\phi_{C12}=0, \quad \phi_{C21}=0 \\
+		\mu=0
+	\end{gather}
+	\subsubsection{Accoppiemanto Perfetto}
+	Nel caso in cui $k=1$:
+	\begin{gather}
+		\frac{N_1i_1}{\mathscr{R}_1} = \frac{N_2i_2}{\mathscr{R}_2} = \frac{N_2i_2}{\mathscr{R}_{12}} = \frac{N_1i_1}{\mathscr{R}_{21}} = \frac{L_1i_1}{N_1}=\frac{L_2i_2}{N_2}=\frac{\mu_{12}i_2}{N_1}=\frac{\mu_{21}i_1}{N_2}
+	\end{gather}
+	\begin{gather}
+		\begin{cases}
+			\frac{L_1}{N_1}=\frac{\mu_{21}}{N_2} \\
+			\frac{L_2}{N_2}=\frac{\mu_{12}}{N_1}
+		\end{cases} \implies \frac{L_1}{\mu}=\frac{\mu}{L_2}=\frac{N_1}{N_2}\implies \mu^2=L_1\cdot L_2 \\
+		|\mu|=\sqrt{L_1L_2}
+	\end{gather}
 	\subsection{Trasformatore Ideale}
-	\subsection{Proprietà dei Trasformatori}
-	\subsection{Utilizzi di un Trasformatore}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Trasformatore}
+			\label{fig:im-50}
+		\end{figure}
+	\end{center}
+	Un trasformatore è un doppio bipolo che lavora in isolamento elettrico completo fra le due spire, quindi la corrente $I_2$ dipende solo dal flusso di campo magnetico creato da $I_1$.\\
+	Il nucleo è ferromagnetico, e permette un trasferimento più efficiente per fare in modo di considerare i flussi dispersi nulli.\\\\
+	La legge di Faraday-Lenz afferma che la tensione è legata alla derivata del flusso concatenato rispetto al tempo:
+	\begin{gather}
+		\begin{cases}
+			v_1=N_1\frac{d\phi}{dt} \\
+			v_2=N_2\frac{d\phi}{dt}
+		\end{cases}
+	\end{gather}
+	Si può quindi costruire un rapporto esprimibile con uno scalare che indica il funzionamento del componente:
+	\begin{gather}
+		\frac{v_2}{v_1}=\frac{N_2}{N_1}=n
+	\end{gather}
+	Si può utilizzare un trasformatore per elevare o abbassare la tensione in uscita dal doppio bipolo, ottenendo in condizioni ideali la stessa potenza, quindi se la tensione in uscita viene alzata la corrente massima generata sarà più bassa e viceversa.\\
+	Ciò che determina quanto verrà variata la tensione è solo il rapporto, non il numero di spire, che invece determina la induttanza complessiva del trasformatore, un fattore che va considerato in altri casi (trasformatori reali).\\\\
+	In queste condizioni si vuole avere:
+	\begin{itemize}
+		\item $k=1$, fattore di accoppiamento perfetto
+		\item $\mu\rightarrow +\infty$, permeabilità magnetica infinita del nucleo
+		\item $\mathscr{R}\rightarrow 0$, riluttanza minima
+		\item Nessuna perdita
+	\end{itemize}
+	Facendo queste ipotesi quindi:
+	\begin{gather}
+		\phi= B\cdot S
+	\end{gather}
+	$B$ e $S$ sono finiti, $\mu\rightarrow +\infty$, $B=\mu H$, di conseguenza l'intensità di campo magnetico è infinitesima $H\rightarrow 0$. Quindi la forza elettromotrice complessiva deve risultare nulla, si ricava la condizione sulle correnti:
+	\begin{gather}
+		N_1i_1+N_2i_2=0 \implies \frac{i_2}{i_1}=-\frac{N_1}{N_2}
+	\end{gather}
+	Un'altra cosa da notare è che se ci si avvicina alla saturazione magnetica del materiale si esce dalle condizioni di linearità, quindi gli effetti non vengono più descritti da queste formule.\\\\
+	Esso inoltre conserva la potenza, quindi di fatto viene interamente trasferita dal primo filamento al secondo. $P=v_1i_1+v_2i_2=0$
+	\subsubsection{Simbolo bidimensionale}
+	Per indicare un trasformatore in un diagramma elettrico si usa il simbolo in figura \ref{fig:im-51}, dove i puntini indicano la direzione dell'avvolgimento che altrimenti sarebbe ambigua.\\\\
+	Se in corrispondenza dei punti $v_1$ e $v_2$ hanno entrambe il morsetto positivo allora $v_2=nv_1$ altrimenti si cambia segno.\\\\
+	Il contrario vale per la corrente, se due correnti sono entrambe entranti in corrispondenza dei punti allora una corrente è opposta all'altra, quindi $i_2=-\frac{1}{n}i_1$.\\\\
+	Tensioni uguali, correnti opposte, il tutto deriva da come funziona la induzione magnetica.
+	\subsubsection{Proprietà}
+	\paragraph{Conservazione della Potenza}
+	\paragraph{Trasformazione delle Impedenze}
+	\subsubsection{Utilizzi di un Trasformatore}
+	\paragraph{Trasformazione dell'imedenza}
+	\paragraph{Trasformatore di correnti e tensioni}
+	\paragraph{Adattatore di impedenza}
+	\paragraph{Isolatore}
+	\paragraph{Misura di correnti o tensioni elevate}
 	\subsection{Autotrasformatore}
 	\subsection{Trasformatore Reale}
 \end{document}

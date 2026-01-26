@@ -1,14 +1,283 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
+	Un doppio bipolo (detto anche quadripolo o rete biporta) non è solo un componente che ha quattro connessioni per entrate e uscite, ma mostra anche un comportamento specifico rispetto ad esse.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Doppio Bipolo}
+			\label{fig:im-42}
+		\end{figure}
+	\end{center}
+	In particolare la corrente in entrata nella prima porta deve sempre essere uguale a quella in uscita dalla seconda, stessa cosa per la terza e la quarta.\\
+	Si hanno quindi dei \textbf{terminali collegati a coppie} individuati da quattro grandezze: $I_1, I_2, V_1, V_2$. \\
+	Le correnti solitamente sono in entrata dai morsetti positivi.
 	\subsection{Metodi per Rappresentare un Doppio Bipolo}
+	Nei problemi che includono un doppio bipolo, date 4 grandezze, se ne individuano due dipendenti e due indipendenti, a seconda del caso vengono impostate diverse equazioni in forma matriciale.
 	\subsubsection{Matrice delle Impedenze}
+	Si può quindi avere, per esempio, un legame tra le tensioni e le correnti dato dalla matrice:
+	\begin{equation}
+		\begin{bmatrix}
+			V_1 \\
+			V_2
+		\end{bmatrix} = \begin{bmatrix}
+			z_{11} & z_{12} \\
+			z_{21} & z_{22}
+		\end{bmatrix} \cdot \begin{bmatrix}
+			I_1 \\
+			I_2
+		\end{bmatrix}
+	\end{equation}
+	La matrice $\bar Z$ avrà quindi come unità di misura la impedenza (che in corrente continua diventa una resistenza).
 	\subsubsection{Matrice delle Ammettenze}
+	Se invece si volesse avere la matrice delle ammettenze:
+	\begin{equation}
+		\begin{bmatrix}
+			I_1 \\
+			I_2
+		\end{bmatrix} = \begin{bmatrix}
+			y_{11} & y_{12} \\
+			y_{21} & y_{22}
+		\end{bmatrix} \cdot \begin{bmatrix}
+			V_1 \\
+			V_2
+		\end{bmatrix}
+	\end{equation}
 	\subsubsection{Matrice Ibrida}
+	La matrice $\left\|\bar h\right\|$ si ottiene considerando come variabili indipendenti una tensione e una corrente.
+	\begin{gather} 
+		\begin{bmatrix}
+			V_1 \\
+			I_2
+		\end{bmatrix} = \begin{bmatrix}
+			h_{11} & h_{12} \\
+			h_{21} & h_{22}
+		\end{bmatrix} \begin{bmatrix}
+			I_1 \\
+			V_2
+		\end{bmatrix}
+	\end{gather} \label{matr-ibrida}
+	Dato che viene sempre rispettata la linearità, si procede nello stesso modo:
+	\begin{gather}
+		h_{11} = \frac{V_1}{I_1}|_{V_2=0} [\Omega] \quad	h_{21} = \frac{I_2}{I_1}|_{V_2=0} \\
+		h_{12} = \frac{V_1}{V_2}|_{I_1=0} [\Omega^{-1}] \quad	h_{22} = \frac{I_2}{V_1}|_{I_1=0} 
+	\end{gather}
+	Di solito viene utilizzata in corrente continua per costruire l'equivalente di un transistor ($V_1$ corrisponde alla base rispetto all'emettitore, $V_2$ al collettore), ma funziona anche in alternata.
 	\subsubsection{Matrice di Trasmissione Diretta}
+	Si usano come variabili calcolate la tensione e la corrente sulla porta 1.\\
+	La corrente $I_2$, a differenza della convenzione usata, si considera uscente dal bipolo.
+	\begin{gather}
+		\begin{bmatrix}
+			V_1 \\
+			I_1
+		\end{bmatrix} = \begin{bmatrix}
+			A & B \\C & D
+		\end{bmatrix} \begin{bmatrix}
+			V_2 \\ I_2
+		\end{bmatrix} \\
+		A = \frac{V_1}{V_2}|_{I_2=0} \quad C=\frac{I_1}{V_2}|_{I_2=0} \\
+		B = \frac{V_1}{I_2}|_{V_2=0} \quad D=\frac{I_1}{I_2}|_{V_2=0}
+	\end{gather}
+	\subsubsection{Individuazione della Matrice}
+	\begin{exmp}
+		Prendendo come riferimento il circuito in fig.\ref{fig:im-43}, si vuole determinare la matrice delle impedenze e ammettenze.
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{example-image-a}
+				\caption{Circuito di riferimento}
+				\label{fig:im-43}
+			\end{figure}
+		\end{center}
+		Usando il metodo delle correnti di maglia si ottiene una formula simile alla precedente, ma \textbf{non} si può procedere per ispezione dato che le correnti passanti per $z_0$ sono in verso contrario.\\\\
+		Per la prima legge di Kirchoff:
+		\begin{gather}
+			\begin{cases}
+				\bar V_1 = \bar z_1 \bar I_1 + \bar z_0 (\bar I_1 + \bar I_2) \\
+				\bar V_2 = \bar z_2 \bar I_2 + \bar z_0 (\bar I_1 + \bar I_2)
+			\end{cases} \\
+			\begin{cases}
+				V_1=I_1(z_1+z_0)+I_2z_0 \\
+				V_2=I_1z_0 + I_2(z_2+z_0)
+			\end{cases}
+		\end{gather}
+		La matrice delle impedenze $\left\|\bar z\right\|$ diventa quindi:
+		\begin{equation}
+			\left\|\bar z\right\| = \begin{bmatrix}
+				z_1+z_0 & z_0 \\
+				z_0 & z_2+z_0
+			\end{bmatrix}
+		\end{equation}
+		Si può notare che per avere la matrice delle ammettenze $\left\|\bar y\right\|$ basta trovare la inversa di quella delle impedenze. \\
+		In alcuni casi una risulta più semplice da calcolare rispetto all'altra.\\\\		
+		Per calcolare direttamente la matrice $\left\|\bar y\right\|$ si impongono, una per volta, le due tensioni a zero:
+		\begin{itemize}
+			\item $\bar V_2=0 \rightarrow \begin{cases}
+				\bar I_1=y_{11} \bar V_1 \\
+				\bar I_2 = y_{21} \bar V_1
+			\end{cases} \rightarrow \begin{cases}
+				y_{11}=\frac{\bar I_1}{\bar V_1} \\
+				y_{21}=\frac{\bar I_2}{\bar V_1}
+			\end{cases}$
+			\item $\bar V_1=0 \rightarrow \begin{cases}
+				\bar I_1=y_{12} \bar V_2 \\
+				\bar I_2 = y_{22} \bar V_2
+			\end{cases} \rightarrow \begin{cases}
+				y_{12}=\frac{\bar I_1}{\bar V_2} \\
+				y_{22}=\frac{\bar I_2}{\bar V_2}
+			\end{cases}$
+		\end{itemize}
+		Procedendo poi al calcolo delle correnti:
+		\begin{gather}
+			y_{11}=\frac{I_1}{V_1}|_{V_2=0} \\
+			I_1 = \frac{V_1}{z_1+z_0 \parallel z_2} \rightarrow y_{11}=\frac{1}{z_1+z_0 \parallel z_2} \\
+		\end{gather}
+		Si applica il partitore di corrente per trovare $I_2$:
+		\begin{gather}
+			I_2=-I_1\frac{z_0}{z_0+z_2}=\frac{-V_1}{z_1+z_0 \parallel z_2} \cdot \frac{z_0}{z_0+z_2} \rightarrow y_{21}=-\frac{z_0}{z_0+z_2} \cdot \frac{1}{z_1+z_0 \parallel z_2}
+		\end{gather}
+		Stessa cosa per l'altro caso:
+		\begin{gather}
+			I_2 = \frac{V_2}{z_2+z_1 \parallel z_0} \rightarrow y_{22} = \frac{I_2}{V_2}|_{V_1=0} = \frac{1}{z_2+z_0 \parallel z_1} 
+		\end{gather}
+		È possibile anche trovare i coefficienti $z$ ponendo il caso contrario, quindi annullando le correnti:
+		\begin{gather}
+			\begin{cases}
+				V_1=z_{11} I_1 + z_{12}I_2 \\
+				V_2=z_{21} I_1 + z_{22}I_2
+			\end{cases} \\
+		\end{gather}
+		\begin{itemize}
+			\item $\bar I_2=0 \rightarrow \begin{cases}
+				z_{11}=\frac{\bar V_1}{\bar I_1} \\
+				z_{21}=\frac{\bar V_2}{\bar I_1}
+			\end{cases}$
+			\item $\bar I_1=0  \rightarrow \begin{cases}
+				z_{12}=\frac{\bar V_1}{\bar I_2} \\
+				z_{22}=\frac{\bar V_2}{\bar I_2}
+			\end{cases}$
+		\end{itemize}
+	\end{exmp}
 	\subsection{Sintesi di Doppi Bipoli}
+	In questo caso si conosce la matrice che rappresenta il circuito contenuto dal doppio bipolo e si vuole sintetizzare un diagramma con i componenti disposti in modo da comportarsi come descritto.\\\\
+	Nel caso in cui si dispone della matrice delle ammettenze si crea un circuito come in figura \ref{fig:im-44}.\\
+	In questo modo si mettono in relazione le due parti di circuito senza complicare troppo lo schema (nota, il primo generatore è sensibile alla seconda tensione e viceversa).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Sintesi di un doppio bipolo}
+			\label{fig:im-44}
+		\end{figure}
+	\end{center}
+	Una matrice ibrida come la \ref{matr-ibrida} si può sintetizzare come in fig.\ref{fig:im-45}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Sintesi di un doppio bipolo(matrice $h$)}
+			\label{fig:im-45}
+		\end{figure}
+	\end{center}
 	\subsection{Collegamenti fra Doppi Bipoli}
 	\subsubsection{Collegamento in Serie}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Doppi bipoli in serie}
+			\label{fig:im-46}
+		\end{figure}
+	\end{center}
+	Si collegano le uscite del primo doppio bipolo alle entrate del secondo, come da fig.\ref{fig:im-46}.
+	\begin{gather}
+		\begin{cases}
+			I_1' = I_1''=I_1, \quad I_2'=I_2''=I_2 \\
+			V_2=V_2'+V_2'', \quad V_1=V_1'+V_1''
+		\end{cases}
+	\end{gather}
+	Se si considerano le matrici delle impedenze vale la somma delle due:
+	\begin{gather}
+		\begin{bmatrix}
+			V_1 \\
+			V_2
+		\end{bmatrix} = \begin{bmatrix}
+			z_{11} ' + z_{11}'' & z_{12}'+z_{12}'' \\
+			z_{21} ' + z_{21}'' & z_{22}'+z_{22}''
+		\end{bmatrix} \cdot \begin{bmatrix}
+			I_1 \\
+			I_2
+		\end{bmatrix}
+	\end{gather}
 	\subsubsection{Collegamento in Parallelo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Doppi bipoli in parallelo}
+			\label{fig:im-47}
+		\end{figure}
+	\end{center}
+	\begin{gather}
+		V_1=V_1'=V_1'', \quad V_2=V_2'=V_2'' \\
+		I_1=I_1'+I_2'', \quad I_2=I_2'+I_2''
+	\end{gather}
+	Il caso è duale al precedente, si sommano quindi le matrici delle ammettenze:
+	\begin{gather}
+		\left\| Y \right\| = \left\|Y'\right\| + \left\|Y''\right\|
+	\end{gather}
 	\subsubsection{Collegamento in Cascata}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Doppi bipoli in cascata}
+			\label{fig:im-48}
+		\end{figure}
+	\end{center}
+	Si usa la matrice di trasmissione diretta (da qui le porte tutte uscenti per convenzione).
+	\begin{gather}
+		V_1'=V_1, \quad V_2''=V_2, \quad V_2'=V_1'' \\
+		I_1'=I_1, \quad I_2''=I_2, \quad I_2'=I_1'' \\
+		\begin{bmatrix}
+			V_1' \\
+			I_1'
+		\end{bmatrix} = \begin{bmatrix}
+			A' & B' \\
+			C' & D'
+		\end{bmatrix} \begin{bmatrix}
+			V_2' \\
+			I_2'
+		\end{bmatrix} \\
+		\begin{bmatrix}
+			V_2' \\
+			I_2'
+		\end{bmatrix} =\begin{bmatrix}
+			V_1'' \\
+			I_1''
+		\end{bmatrix} =\begin{bmatrix}
+			A'' & B'' \\
+			C'' & D''
+		\end{bmatrix} \begin{bmatrix}
+			V_2'' \\
+			I_2''
+		\end{bmatrix}
+	\end{gather}
+	Si ottiene il risultato moltiplicando le matrici:
+	\begin{gather}
+		\begin{bmatrix}
+			V_1 \\
+			I_1
+		\end{bmatrix} =  \begin{bmatrix}
+			A' & B' \\
+			C' & D'
+		\end{bmatrix} \cdot \begin{bmatrix}
+			A'' & B'' \\
+			C'' & D''
+		\end{bmatrix} \cdot \begin{bmatrix}
+			V_2' \\
+			I_2'
+		\end{bmatrix}
+	\end{gather}
 \end{document}

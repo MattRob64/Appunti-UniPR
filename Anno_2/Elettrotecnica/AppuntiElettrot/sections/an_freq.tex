@@ -234,8 +234,20 @@
 	\begin{equation} \label{eq-stramba}
 		\bar H(j\omega) = H_0 \frac{\left(\frac{j\omega}{z_1}+1\right)\left(\frac{j\omega}{z_2}+1\right)\dots\left(\frac{j\omega}{z_n}+1\right)}{\left(\frac{j\omega}{p_1}+1\right)\left(\frac{j\omega}{p_2}+1\right)\dots\left(\frac{j\omega}{p_d}+1\right)}(j\omega )^m
 	\end{equation}
-	L'ultimo termine contiene tutti i poli e zeri nulli, il numero $m$ si ottiene facendo la differenza del numero di zeri e poli all'origine.\\\\
-	Una qualunque funzione di trasferimento si può esprimere in questa forma, i termini possono essere reali o complessi coniugati a coppie.
+	Dove $H_0$ per noi è la \textbf{costante di guadagno} della funzione.\\
+	Una qualunque funzione di trasferimento si può esprimere in questa forma, i termini possono essere reali o complessi coniugati a coppie.\\
+	L'ultimo termine contiene tutti i poli e zeri nulli\\\\\\
+	Con $n_{Z_0}$ indichiamo gli \textbf{zeri nell'origine}, mentre con $n_{P_0}$ indichiamo i \textbf{poli nell'origine}.
+	Il numero $m$ si ottiene facendo la differenza del numero di zeri e poli all'origine:
+	\begin{equation}
+		m = n_{Z_0} - n_{P_0} \in \mathbb{Z}
+	\end{equation}
+	Dal numero $m$ possiamo ricavare che:
+	\begin{itemize}
+		\item Se $m=0$ allora il sistema sarà ti tipo 0 $\rightarrow$ $H_0 =$ Guadagno Statico (a Regime)
+		\item Se $m=-1$ allora il sistema sarà ti tipo 1 $\rightarrow$ $H_0 =$ Guadagno di Velocità
+		\item Se $m=-2$ allora il sistema sarà ti tipo 2 $\rightarrow$ $H_0 =$ Guadagno di Accelerazione
+	\end{itemize}
 	\begin{exmp}
 		Si consideri un filtro RC usato come passa-basso (fig.\ref{fig:im-33}).
 		\begin{center}
@@ -246,17 +258,243 @@
 				\label{fig:im-33}
 			\end{figure}
 		\end{center}
+		\begin{equation*}
+			\bar H (j\omega) = \frac{\bar V_u}{\bar V_i} = \frac{\frac{1}{j\omega C} \bar I}{(R+\frac{1}{j\omega C}) \bar I}
+		\end{equation*}
+		Calcolando la risposta rispetto alla stessa grandezza (corrente) si può fare in modo di semplificarla.
+		\begin{equation*}
+			\bar H(j\omega) = \frac{1}{j\omega RC+1}=\frac{\bar N(j\omega)}{\bar D (j\omega)}
+		\end{equation*}
+		Non ci sono zeri, ma è presente un polo, che si trova risolvendo la parte al denominatore:
+		\begin{gather*}
+			\bar D(j\omega)=0 \implies j\omega = -\frac{1}{RC} \\
+			p_1=\frac{1}{RC}
+		\end{gather*}
+		In forma canonica risulta quindi:
+		\begin{equation*}
+			\cfrac{1}{\left(\cfrac{j\omega}{\cfrac{1}{RC}} + 1 \right)}
+		\end{equation*}
 	\end{exmp}
-	\subsubsection{Zeri delle Fuzioni di Trasferimento}
-	\subsubsection{Poli delle Funzioni di Trasferimento}
-	\subsubsection{Costanti di Trasferimento}
-	\subsubsection{Come Disegnare una Funzione di Trasferimento}
+	\begin{exmp}
+		Riprendendo il circuito dell'esempio precedente, si vuole calcolare la risposta quando la tensione viene prelevata sulla resistenza.
+		\begin{equation*}
+			\bar H (j\omega) = \frac{\bar V_u}{\bar V_i}=\frac{R\bar I}{(R+\frac{1}{j\omega C}) \bar I}= \frac{j\omega RC}{j\omega RC + 1}
+		\end{equation*}	
+		Per riconoscere la forma canonica si mette in modo da ricostruire la formula che si cerca, trovando che sono presenti uno zero nell'origine e un polo semplice.\\
+		Al numeratore $RC$ è un termine noto.
+		\begin{equation*}
+			=\cfrac{(j\omega+0)RC}{\left(\cfrac{j\omega}{\cfrac{1}{RC} } + 1\right)} = RC(j\omega)^-1 \cdot \frac{1}{\left(\cfrac{j\omega}{\cfrac{1}{RC} } + 1\right)}
+		\end{equation*} 
+	\end{exmp}
+	\subsection{Concatenazione di Filtri}
+	Con la forma utilizzata risulta semplice mettere in cascata diversi circuiti per poter calcolare l'effetto finale.\\
+	Per concatenare gli effetti di $n$ filtri basta semplicemente fare il prodotto complesso.\\\\
+	Dato per esempio una entrata $\bar X$ che passa attraverso due filtri con risposte in frequenza $\bar H_1$ e $\bar H_2$ si può calcolare il risultato:
+	\begin{gather}
+		\bar X \xrightarrow{\bar H_1} \bar Y \xrightarrow{\bar H_2} \bar Z \\
+		\bar Z = \bar H_1 \cdot \bar H_2 \cdot \bar X
+	\end{gather}
+	Si può sfruttare questo principio per osservare la equazione \ref{eq-stramba} come una composizione di singoli contributi al numeratore e al denominatore più il termine noto. \\
+	Si ha quindi che il segnale passa attraverso ogni singolo "modulo" che lo altera fino ad arrivare ad avere il segnale in uscita.
+	\begin{equation}
+		\bar X \rightarrow H_0 \rightarrow (j\omega)^m \rightarrow \frac{j\omega}{z_1} + 1 \rightarrow \dots \rightarrow \left(\frac{j\omega}{p_1}\right)^{-1}\rightarrow \dots \rightarrow \bar Y	
+	\end{equation}
+	A questo punto si prende ogni parte e si scompone in ampiezza e fase:
+	\begin{equation}
+		\bar H(j\omega) = H_0 \cdot e^{j[1- sgn (H_0)]\frac{\pi}{2}} \cdot |\omega| ^m \cdot N_1 \cdot e^{j\varphi_{N_1}} \dots N_n e^{j\varphi n_m}\cdot \frac{1}{D_1}\cdot e^{j\varphi_{D1}} \dots \frac{1}{D_d}e^{-j_{Dd}}	
+	\end{equation}
+	L'operatore di segno $sgn$ compare solo per prendere la parte complessa corretta di un numero positivo o negativo reale.\\\\
+	Il modulo della funzione di trasferimento è ottenibile moltiplicando i singoli moduli presenti nella equazione, mentre la fase si ottiene con la somma delle fasi:
+	\begin{gather}
+		|H(j\omega)| = |H_0|\cdot |\omega|^n \cdot N_1 \dots N_n\cdot \frac{1}{D_1}\dots \frac{1}{D_d}	\\
+		\angle \bar H(j\omega) = [1- sgn (H_0)]\frac{\pi}{2}+m\frac{\pi}{2}+\varphi_{z1}+\dots+\varphi_{zn}-\varphi_{d1}-\dots-\varphi_{dd}
+	\end{gather}	
 	\subsection{Decibel e Scala Logaritmica}
-	\subsubsection{Guadagno di Potenza}
-	\subsubsection{Logaritmi Fondamentali}
-	\subsection{Poli e Zeri}
-	\subsubsection{Reali e Distinti}
-	\subsubsection{Reali Coincidenti}
-	\subsubsection{Complessi e Coniugati}
-	\subsection{Pulsazione di Risonanza e Fattore di Smorzamento}
+	\begin{definition}[\textbf{Guadagno di Potenza}]
+			Indichiamo come guadagno di potenza:
+		\begin{equation}
+			\frac{P_U (j \omega)}{P_I(j \omega)}
+		\end{equation}
+		dove $U$ indica la potenza in uscita e $I$ quella in ingresso.
+	\end{definition}
+	Volendo trasformare nel modulo i prodotti in somme per semplificare l'utilizzo successivo, si utilizzano i logaritmi per indicare le grandezze in \textbf{bel} e \textbf{decibel}.\\
+	Essi vengono utilizzati per indicare rapporti fra tensioni e correnti in modo logaritmico.
+	\begin{gather}
+		\text{BEL}\rightarrow\log_{10}\frac{P_U}{P_I} \\
+		\text{DECIBEL} \rightarrow 10\log_{10}\frac{P_U}{P_I} \text{ [dB]}
+	\end{gather}
+	Per esempio, se un amplificatore è dichiarato che guadagna 10dB di potenza vuol dire che la potenza in ingresso e quella in uscita differiscono di un ordine di grandezza, quindi ne esce una grande 10 volte quella in ingresso.\\\\
+	Quando si mettono in paragone altre grandezze bisogna portare fuori il quadrato della potenza (dato che la potenza è il quadrato della corrente), ottenendo una forma diversa per tensione e corrente:
+	\begin{equation}
+		20\log_{10} \frac{V_u, I_u}{V_i, I_i}	
+	\end{equation}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|l|l|}
+			\hline
+			$I_u / I_i$	&	$\log_{10}$	&	$20\log_{10}$ \\ \hline
+			1000	&	3	&	60dB \\ 
+			100		&	2	&	40dB \\ 
+			10		&	1	&	20dB \\ 
+			2		&	0.3	&	6dB \\
+			$\sqrt{2}$	&	0.15 & 3dB \\
+			1	&	0	&	0 \\
+			$1/\sqrt{2}$& -0.15 & -3dB \\
+			$1/2$ &	-0.3	& -6dB \\
+			$1/10$ 	& -1 & -20dB \\
+			\hline
+		\end{tabular}
+		\caption{Logaritmi Fondamentali}
+		\label{log}
+	\end{table}
+	Usando i decibel e la scala logaritmica, si può fare in modo di disegnare il diagramma di Bode come una somma di contributi, rendendo più facile il tutto.\\
+	Inoltre è possibile esprimere in un solo sistema quantitativo valori molto grandi e molto piccoli assieme.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Diagramma di Bode in decibel}
+			\label{fig:im-34}
+		\end{figure}
+	\end{center}
+	Osservando il diagramma in figura \ref{fig:im-34} si nota che l'asse delle frequenze (rad/s) non ha lo zero, esso va a $-\infty$ per come funziona il logaritmo.\\
+	Di conseguenza la frequenza zero non è rappresentabile, per convenzione l'asse delle ordinate è fissato nel punto 1.\\\\
+	A questo punto si può creare il diagramma del modulo sommando ogni contributo:
+	\begin{equation}
+		20\log |\bar H(j\omega)| = 20\log |H_0| +  m 20\log(\omega) + 20\log \left|\left(\frac{j\omega}{z_1}+1\right)\right| + \dots -20\log \left|\left(\frac{j\omega}{p_d}+1\right)\right|	
+	\end{equation}
+	\begin{enumerate}
+		\item $20\log|H_0|$, questo dà un contributo costante, quindi trasla il grafico verticalmente.
+		\item $20\log \omega$, si ha un contributo lineare, quindi una retta con pendenza variabile (20db/dec per $m=1$) che passa per $(1, 0)$.
+		\item $20\log \left|\left(\frac{j\omega}{z_1}+1\right)\right|$, qui si avrebbe una curva, che può essere semplificata in una retta che cambia pendenza da un certo punto. Per valori in cui $|j\omega| \ll z_k$ vale $0dB$, mentre per valori dove $|j\omega| \gg z_k$ la retta è data da $20\log \omega - 20\log z_k$. Si ha quindi una retta di pendenza costante di 20 dB/dec (decibel per decade) che parte da $z_k$ (figura \ref{fig:im-35}).
+		\item $-20\log \left|\left(\frac{j\omega}{p_d}+1\right)\right|$, vale la stessa cosa del punto precedente, ma il grafico è ribaltato rispetto all'asse delle ascisse.
+	\end{enumerate}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Modulo di un componente dell'equazione}
+			\label{fig:im-35}
+		\end{figure}
+	\end{center}
+	Per il diagramma della fase vale un discorso simile:
+	\begin{enumerate}
+		\item 0 oppure 180º
+		\item $m\frac{\pi}{2	}$
+		\item Qui si può semplificare con 0º e 90º studiando il diagramma in modo asintotico come prima oppure utilizzare un modello matematico più accurato che approssima meglio la curva (figura \ref{fig:im-36}).
+		\item Stessa cosa per prima, 0º e -90º.
+	\end{enumerate}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Fase del componente singolo}
+			\label{fig:im-36}
+		\end{figure}
+	\end{center}
+	\subsection{Come Disegnare una Funzione di Trasferimento}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Filtro RLC di Riferimento}
+			\label{fig:im-37}
+		\end{figure}
+	\end{center}
+	Dato il circuito in fig.\ref{fig:im-37}, si vuole ricavare la funzione di trasferimento.\\\\
+	In modo molto facile si esegue il rapporto fra la uscita e la entrata:
+	\begin{equation}
+		\bar H(j\omega) = \frac{R\bar I}{(R+j\omega L + \frac{1}{j\omega C})\bar I}=RC(j\omega)\frac{1}{(j\omega)^2LC+j\omega RC + 1}	
+	\end{equation}
+	Si possono avere diversi tipi di soluzioni, con due poli reali e distinti, reali e coincidenti o complessi coniugati.
+	\subsubsection{Poli Reali e Distinti}
+	Prendendo come valori $E=2V, L=10^{-4}H, R=0.2\Omega, C=40mF$, si calcola la funzione di trasferimento:
+	\begin{equation*}
+		\bar H(j\omega) = 8\cdot 10^{-3}(j\omega) \frac{1}{(\frac{j\omega}{130}+1)(\frac{j\omega}{1870}+1)}
+	\end{equation*}	
+	Il grafico della risposta in frequenza è in fig.\ref{fig:im-38}. Si può notare che il valore $\omega^\ast = \frac{1}{\sqrt{LC}}$ rappresenta la media geometrica fra $130$ e $1870$, quindi è esattamente alla punta della curva.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Filtro RLC di Riferimento}
+			\label{fig:im-38}
+		\end{figure}
+	\end{center}
+	\subsubsection{Poli Complessi e Coniugati}
+	\begin{equation}
+		\bar H(j\omega) = RC(j\omega) \frac{1}{\left(\frac{j\omega}{\sigma_1+j\omega_1}+1\right)\left(\frac{j\omega}{\sigma_1-j\omega_1}+1\right)}	
+	\end{equation}
+	La equazione viene indicata con il denominatore sotto forma di equazione di secondo grado in funzione di $j\omega / \omega^\ast)$:
+	\begin{equation}
+		\bar H(j\omega) = RC(j\omega) \frac{1}{(\frac{j\omega}{\omega^\ast})^2+2\delta (\frac{j\omega}{\omega^\ast}) + 1}
+	\end{equation}
+	Dove $\omega^\ast = \sqrt{\sigma_1^2 + \omega_1^2}$ e $\delta = \frac{\sigma_1}{\omega^\ast}$.\\\\
+	Si impone il denominatore a zero per cercare le soluzioni:
+	\begin{gather}
+		\left(\frac{j\omega}{\omega^\ast}\right)^2+2\delta \left(\frac{j\omega}{\omega^\ast}\right) + 1 = 0 \\
+		\frac{j\omega}{\omega^\ast}|_{1, 2}= -\delta \pm \sqrt{\delta^2-1}
+	\end{gather}
+	Possono essere quindi distinti tre casi:
+	\begin{itemize}
+		\item $\delta > 1$ - Soluzioni reali e distinte (\textbf{sistema sovrasmorzato}, non oscilla)
+		\item $\delta = 1$ - Soluzioni reali e coincidenti (\textbf{smorzamento critico})
+		\item $\delta < 1$ - Soluzioni complesse coniugate (\textbf{sistema sottosmorzato}, oscilla)
+	\end{itemize}
+	Studiando la funzione per $\omega$ che varia rispetto al valore centrale $\omega^\ast$, si ottiene che la fase varia da 0º a 180º:
+	\begin{gather}
+		20\log \left|\left[\left(\frac{j\omega}{\omega^\ast}\right)^2+2\delta\left(\frac{j\omega}{w^\ast}\right)+1\right]\right| \\
+		\omega \ll \omega^\ast \rightarrow \simeq 1 \quad 0º \\
+		\omega \gg \omega^\ast \rightarrow \simeq 20\log\left|\frac{j\omega}{\omega^\ast}\right|^2 \quad 180º \\
+	\end{gather}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{example-image-a}
+			\caption{Zeri e Poli}
+			\label{fig:im-39}
+		\end{figure}
+	\end{center}
+	Quando ci si avvicina alla frequenza di risonanza $\omega^\ast$ si ha che il valore diventa $20\log(-1+2\delta j1+1)$. \\
+	L'\textbf{errore} è dato dal rapporto tra cosa esce dalla approssimazione e il guadagno vero:
+	\begin{equation}
+		ERR=\frac{1}{2\delta}	
+	\end{equation}
+	Il valore $\delta$, detto \textbf{fattore di smorzamento}, a seconda di come varia può rendere questo errore più grande (se è più piccolo).\\
+	Per esempio per un valore $\delta$ uguale a $0.005$ il guadagno si aggira sui $40dB$. \\
+	Se il fattore di qualità è elevato si presenta più facilmente una risonanza.
+	\begin{equation}
+		\delta = \frac{1}{2}R\sqrt{\frac{C}{L}}=\frac{1}{2Q}	
+	\end{equation}
+	Quindi più $\delta$ è alto più smorzate saranno le oscillazioni nel punto di risonanza, e viceversa.\\\\
+	Il fattore di qualità indica come viene filtrata la banda, quindi se bisogna amplificare il segnale, $Q$ deve essere basso, altrimenti vengono generate oscillazioni.
+	\begin{exmp}
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{example-image-a}
+				\caption{Circuito di riferimento}
+				\label{fig:im-40}
+			\end{figure}
+		\end{center}
+		Si prenda il circuito in figura \ref{fig:im-40}, vengono dati i valori $R=0.2\Omega, L=10^{-4}H, C=40mF$. \\
+		Si vuole calcolare la funzione di trasferimento $\bar H(j\omega)$.\\\\
+		Per ottenerla si fa il rapporto fra la correte in uscita e la corrente in entrata:
+		\begin{equation*}
+			\bar H(j\omega) = \frac{\bar I_u}{\bar I_i}=\frac{\bar V (\frac{1}{j\omega C})^{-1}}{(\frac{1}{R+j\omega L}+j\omega C)} = \frac{j\omega C(R+j\omega L)}{(j\omega)^2LC+j\omega RC+1}
+		\end{equation*}
+		Inserendo i valori:
+		\begin{equation*}
+			\bar H(j\omega) = 8\cdot 10^3(j\omega) \frac{(\frac{j\omega}{2000}+1)}{(\frac{j\omega}{120}+1)(\frac{j\omega}{1300}+1)}
+		\end{equation*}
+		Da qui si può costruire il grafico in figura \ref{fig:im-41}.
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{example-image-a}
+				\caption{Grafico circuito di riferimento}
+				\label{fig:im-41}
+			\end{figure}
+		\end{center}
+	\end{exmp}
 \end{document}
