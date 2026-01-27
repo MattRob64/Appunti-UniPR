@@ -48,12 +48,12 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.4]{2.png}
-			\caption{Bipolo Resistenza}
+			\caption{Bipolo Resistore}
 			\label{fig:im-2}
 		\end{figure}
 	\end{center}
 	\subsubsection{Bipolo "Generatore Ideale di Tensione"}
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\begin{subfigure}{.5\textwidth}
 			\centering
@@ -84,15 +84,47 @@
 	\begin{equation}
 		\Delta V = - (R \cdot I)
 	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.25]{57.png}
+			\caption{Convenzione Generatore}
+			\label{fig:im-57}
+		\end{figure}
+	\end{center}
 	\subsection{Convenzione del'Utilizzatore}
 	Convenzione in cui la tensione $\Delta V$ e la corrente $I$ elettrica hanno verso discorde, in questo caso la prima legge di Ohm diventa:
 	\begin{equation}
 		\Delta V = R \cdot I
 	\end{equation}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.25]{58.png}
+			\caption{Convenzione Utilizzatore}
+			\label{fig:im-58}
+		\end{figure}
+	\end{center}
 	\subsection{Principio di Kirchhoff al Nodo (1° Principio di Kirchhoff)}
 	Il primo principio di Kirchhoff afferma che, dato un nodo in cui convergono 3 o più fili, ciascuno con una propria corrente $I_1,I_2, \dots,I_n$, la sommatoria di tutte le correnti entranti è nulla, ovvero la sommatoria delle correnti entranti è uguale alla sommatoria delle correnti uscenti dal nodo.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{59.png}
+			\caption{Nodo}
+			\label{fig:im-59}
+		\end{figure}
+	\end{center}
 	\subsection{Principio di Kirchhoff alla Maglia (2° Principio di Kirchhoff)}
 	Il secondo principio di Kirchhoff afferma che,data una maglia, la sommatoria ordinata (cioè secondo un unico verso, orario o antiorario, del percorso) di tutte le tensioni della maglia è nulla.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{60.png}
+			\caption{Maglia}
+			\label{fig:im-60}
+		\end{figure}
+	\end{center}
 	\subsection{Conduttanza Elettrica}
 	\begin{equation}
 		G = \frac{1}{R} \;\; [\Omega ^{-1}] = [S]
@@ -153,6 +185,14 @@
 		I = \sum_{i = 1}^{n} I_i
 	\end{equation}
 	\subsubsection{Partitore di Tensione (Serie di Resistenze)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{61.png}
+			\caption{Partitore di Tensione}
+			\label{fig:im-61}
+		\end{figure}
+	\end{center}
 	\begin{equation}
 		R_{Eq} = R_1 + R_2 + \dots + R_n
 	\end{equation}
@@ -162,6 +202,14 @@
 	Dove $A$ e $B$ sono i capi della serie di resistori e dove $R_i$ e $V_i$ sono rispettivamente la resistenza e la tensione che del resistore/bipolo preso in considerazione.\\
 	Ad esempio, se avessimo due resistenze, $R_n = R_2$
 	\subsubsection{Partitore di Corrente (Parallelo di Resistenze)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.5]{62.png}
+			\caption{Partitore di Corrente}
+			\label{fig:im-62}
+		\end{figure}
+	\end{center}
 	\begin{equation}
 		R_{Eq} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
 	\end{equation}
@@ -182,6 +230,14 @@
 	\end{equation}
 	\subsection{Generatori Reali}
 	\subsubsection{Generatore Reale di Tensione}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{63.png}
+			\caption{Generatore Reale di Tensione}
+			\label{fig:im-63}
+		\end{figure}
+	\end{center}
 	È composto da una resistenza $R$, la cui tensione è $V_R = R \cdot I$, ed un generatore ideale di tensione $E_0$, collegati in serie.\\
 	La sua legge costitutiva è:
 	\begin{equation}
@@ -194,6 +250,14 @@
 		\item $I = \frac{E_0}{R}$ Corrente di Corto Circuito ($I_{CC}$)
 	\end{itemize}
 	\subsubsection{Generatore Reale di Corrente}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{64.png}
+			\caption{Generatore Reale di Corrente}
+			\label{fig:im-64}
+		\end{figure}
+	\end{center}
 	È composto da una resistenza $R$, la cui corrente è $I_R = \frac{V_{AB}}{R}$, ed un generatore ideale di corrente $I_0$, collegati in parallelo.\\
 	La sua legge costitutiva è:
 	\begin{equation}
@@ -205,6 +269,14 @@
 		\item $I = I_0$ Corrente di Cortocircuito
 	\end{itemize}
 	\subsubsection{Equivalenze fra Generatori Reali}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{65.png}
+			\caption{Equivalenze fra Generatori Reali}
+			\label{fig:im-65}
+		\end{figure}
+	\end{center}
 	È sempre possibile trasformare un generatore reale di tensione in uno reale di corrente, e viceversa, a patto che vengano rispettate le condizioni di equivalenza:
 	\begin{equation}
 		\begin{cases}
@@ -216,6 +288,14 @@
 	L’equivalenza tra i 2 generatori è solamente elettrica, non  energetica, infatti la potenza generata dai due può variare a seconda del circuito.\\
 	Quindi nel caso si debba calcolare la potenza di un circuito è sconsigliato l'utilizzo delle equivalenze.
 	\subsubsection{Generatori Reali di Tensione in Serie}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{66.png}
+			\caption{Generatori Reali di Tensione in Serie}
+			\label{fig:im-66}
+		\end{figure}
+	\end{center}
 	Formato da $n$ generatori reali di tensione in serie.
 	\begin{equation}
 		\begin{cases}
@@ -224,7 +304,15 @@
 		\end{cases}
 	\end{equation}
 	Se uno dei generatori ha verso invertito rispetto al senso scelto, allora la sua tensione è negativa.
-	\subsubsection{Generatori Reali di Corrente in (Serie) Parallelo}
+	\subsubsection{Generatori Reali di Corrente in Serie (Parallelo)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{67.png}
+			\caption{Generatori Reali di Corrente in Serie}
+			\label{fig:im-67}
+		\end{figure}
+	\end{center}
 	Formato da $n$ generatori reali di corrente in parallelo.
 	\begin{equation}
 		\begin{cases}
@@ -257,6 +345,14 @@
 		\item Un Voltmetro
 	\end{itemize}
 	\subsection{Generatori Pilotati}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.4]{68.png}
+			\caption{Generatori Pilotati}
+			\label{fig:im-68}
+		\end{figure}
+	\end{center}
 	\subsubsection{Generatore di Tensione Pilotato da Una Tensione}
 	Legge costitutiva:
 	\begin{equation}

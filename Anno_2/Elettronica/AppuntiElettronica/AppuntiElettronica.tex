@@ -1,0 +1,100 @@
+\documentclass{article}
+\setcounter{tocdepth}{4} %Required to insert paragraph in TOC
+\setcounter{secnumdepth}{4} %Required to insert paragraph in TOC
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{ {./img/} }
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=25mm,
+	top=20mm,
+}
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{chronology}
+\usepackage{cleveref}
+\usepackage{fancyhdr}
+\usepackage{mathabx}
+\usepackage{mathrsfs}
+\usepackage{subfiles} %best loaded last in preamble
+
+\pagestyle{fancy}
+
+\setcounter{secnumdepth}{4}
+
+\newcommand{\foo}{\hspace{-2.3pt}$\bullet$ \hspace{5pt}}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\newtheorem{definition}{Definizione}[section]
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{exmp}{Esempio}[section]
+
+\numberwithin{equation}{subsection}
+
+\title{Appunti Elettronica}
+\author{Mattia Robuschi Caprara}
+\date{}
+
+\definecolor{CoverGreen}{RGB}{11, 112, 0}
+
+\begin{document}
+
+	\begin{titlepage}
+		
+		\pagecolor{CoverGreen}
+		
+		\vspace{25 mm}
+		\begin{center}
+			\large
+			{\color{white}\textbf{Mattia Robuschi Caprara}} 
+		\end{center}
+		
+		\begin{center}
+			\huge
+			{\color{white}\textbf{Appunti Elettronica}}
+		\end{center}
+		
+		\vspace{45 mm}
+		
+		\begin{figure}[h]
+			\centering
+			\adjustbox{cfbox=white 5pt 0cm}{\includegraphics[scale=0.3]{0.cover.jpg}}
+			%\caption{Caption}
+			\label{fig:cover}
+		\end{figure}
+		
+		\thispagestyle{empty} 
+	\end{titlepage}
+
+	\newpage
+	\pagecolor{white}
+	\section*{Prefazione}
+	Un riassunto di elettronica (1) (Professor. Paolo Ciampolini)
+	\tableofcontents
+	\newpage
+	
+	\section{Sezione1}
+	\subfile{sections/blank}
+	
+\end{document}

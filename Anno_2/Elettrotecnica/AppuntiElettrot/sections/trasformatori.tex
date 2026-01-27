@@ -6,7 +6,7 @@
 	\begin{center}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.55]{example-image-a}
+			\includegraphics[scale=0.35]{49.png}
 			\caption{Mutua Induzione}
 			\label{fig:im-49}
 		\end{figure}
@@ -82,7 +82,7 @@
 	\begin{center}
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale=0.55]{example-image-a}
+			\includegraphics[scale=0.55]{50.png}
 			\caption{Trasformatore}
 			\label{fig:im-50}
 		\end{figure}
@@ -125,14 +125,159 @@
 	Il contrario vale per la corrente, se due correnti sono entrambe entranti in corrispondenza dei punti allora una corrente è opposta all'altra, quindi $i_2=-\frac{1}{n}i_1$.\\\\
 	Tensioni uguali, correnti opposte, il tutto deriva da come funziona la induzione magnetica.
 	\subsubsection{Proprietà}
+	Le principali proprietà dei trasformatori sono 2:
 	\paragraph{Conservazione della Potenza}
+	La potenza istantanea assorbita dal trasformatore è nulla, questo perché tutta la potenza fornita al circuito primario viene sempre trasferita senza perdite a quello secondario:
+	\begin{gather}
+		p(t) = v_1(t)i_1(t) + v_2(t)i_2(t) = v_1(t)i_1(t) + n v_1 \left[ -\frac{1}{n} i_1 \right] = 0 \\
+		\Updownarrow \\
+		\bar{A}_1 = \bar{V}_1 \bar{I}_1^* = \bar{A}_2 = \bar{V}_2 \bar{I}_2^*
+	\end{gather}
 	\paragraph{Trasformazione delle Impedenze}
+	Collegando un generatore di tensione al circuito primario, ed una impedenza $\bar Z_L$ a quello secondario l’impedenza nel primario è pari a:
+	\begin{equation}
+		\bar{Z}_1 = \frac{\bar{V}_1}{\bar{I}_1} = \frac{\frac{1}{n} \cdot \bar{V}_2}{ \frac{1}{n} \cdot \bar{I}_2} = \left( \frac{1}{n} \right)^2 \cdot \frac{\bar{V}_2}{\bar{I}_2} = \frac{\bar{Z}_L}{n^2}
+	\end{equation}
 	\subsubsection{Utilizzi di un Trasformatore}
 	\paragraph{Trasformazione dell'imedenza}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{51.png}
+			\caption{Circuito di riferimento}
+			\label{fig:im-51}
+		\end{figure}
+	\end{center}
+	Si prenda il circuito in figura \ref{fig:im-51}, si vuole sapere come la impedenza (resistenza) del componente viene trasformata dal trasformatore.\\\\
+	La resistenza equivalente in ingresso si ottiene:
+	\begin{gather}
+		R_{in}=\frac{v_1}{i_1}
+	\end{gather}
+	Costruendo le relazioni si ottiene:
+	\begin{gather}
+		v_1=\frac{1}{n}v_2, \quad v_1=\frac{1}{n}v-2=-\frac{1}{n}R_2i_2=\frac{1}{n^2}R_2i_1 \\
+		i_2=-\frac{1}{n}i_1, \quad v_2=-R_2i_2 \\
+		R_{in}=\frac{R_L}{n^2}
+	\end{gather}
 	\paragraph{Trasformatore di correnti e tensioni}
+	Un trasformatore può essere usato come convertitore step-up o step-down per elevare o abbassare tensioni o correnti.\\
+	Chiaramente se la tensione viene elevata la corrente erogata sarà minore e viceversa.
 	\paragraph{Adattatore di impedenza}
+	Per capire questo meglio fare un esempio:\\
+	Nei vecchi amplificatori a tubi termoionici (valvole) c'era bisogno di un trasformatore per adattare la impedenza da $8\Omega$ dello speaker all'uscita dell'amplificatore, rappresentabile come un generatore reale di tensione alternata, al fine di \textbf{massimizzare la potenza trasferita}.\\\\
+	Le due impedenze devono essere complesse coniugate perchè questo avvenga.
 	\paragraph{Isolatore}
+	Un circuito collegato al secondo nucleo del trasformatore è elettricamente isolato dal primo, quindi se qualcuno accidentalmente lo tocca (figura \ref{fig:im-52}) ci sono meno possibilità di rimanere fulminati, dato che non è possibile costruire un circuito chiuso per fare circolare la corrente.\\
+	Questo non vale in tutti i casi o per tutte le tensioni o frequenze, ma viene comunque spesso utilizzato nei trasformatori switching per questioni di sicurezza.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{52.png}
+			\caption{Protezione da folgoramento}
+			\label{fig:im-52}
+		\end{figure}
+	\end{center}
+	Ciò che in realtà può succedere è che viene trasferita una quantità infinitesima di cariche per parificare le tensioni, ma non viene costruita una corrente. \\
+	Caso diverso se la tensione ha una frequenza molto alta, alcune parti potrebbero avere una ridotta capacità parassita che permette la circolazione di corrente che chiuderebbe quindi il circuito (aumenta con la frequenza).
 	\paragraph{Misura di correnti o tensioni elevate}
-	\subsection{Autotrasformatore}
+	Essendo pericoloso misurare valori elevati in modo diretto, si può fare in modo di interporre un trasformatore fra il cavo misurato e lo strumento misuratore per abbassare i valori e poterli rilevare con più precisione.\\\\
+	Il rapporto fra il numero di spire relative al generatore e quelle dello strumento deve essere molto elevato:
+	\begin{gather}
+		\frac{N_1}{N_2}\gg 1
+	\end{gather}
 	\subsection{Trasformatore Reale}
+	Per estendere le proprietà ad un trasformatore reale, effettivamente composto da fili attorno ad un nucleo ferromagnetico, si fanno cadere le ipotesi fatte all'inizio; di conseguenza si ha un accoppiamento magnetico non perfetto, una permeabilità magnetica finita e dispersioni date da effetto Joule.\\\\
+	Si rifanno quindi i conti con la legge di circuitazione di Ampére.\\\\
+	Il flusso concatenato disperso dipende da un parametro detto induttanza di dispersione:
+	\begin{gather}
+		\phi _{CD1}=Ld_1i_1 \\
+		\phi _{CD2}=Ld_2 i_2
+	\end{gather}
+	Per la legge di circuitazione, dato che il mezzo è omogeneo e ha sezione costante:
+	\begin{gather}
+		\oint  \bar H\, d\bar l = H\cdot l = N_1i_1 \\
+		B=\mu H = \frac{\mu}{l}N_1 \left(i_2+\frac{N_2}{N_1}i_2\right)
+	\end{gather}
+	In un trasformatore ideale si ha che $\mu\rightarrow \infty$, di conseguenza $H\rightarrow 0$ per avere un valore di $B$ finito; avendo un valore di $\mu$ finito cade la ipotesi, quindi non è più vero che tutte le correnti $i_1$ si trasformano in correnti $i_2$.\\\\
+	Viene denominato \textbf{principale} il flusso che concatena 1 e 2:
+	\begin{gather}
+		\phi _{CP1} = \frac{\mu}{l}AN_1^2(i_1+ni_2) \\
+		\phi _{CP2} = n\phi_{CP1}
+	\end{gather}
+	\begin{gather}
+		\begin{cases}
+			\phi_{C1}=Ld_1i_1+\phi _{CP2} = Ld_1i_1 + L_m(i_1+ni_2) \\
+			\phi_{C2}=\phi_{CP2}+Ld_2i_2=nL_m(i_1+ni_2)+Ld_2i_2
+		\end{cases} \\
+		L_m:=\frac{\mu}{l}AN_1^2
+	\end{gather}
+	Riordinando i termini e raccogliendo:
+	\begin{gather}
+		\begin{cases}
+			\phi_{C1}=(Ld_1+L_m)i_1+nL_mi_2=L_1i_1Mi_2 \\
+			\phi_{C2}=nL_mi_1+(Ld_2+n^2L_m)i_2=\mu i_2+L_2i_2
+		\end{cases}
+	\end{gather}
+	Si ottiene quindi la relazione fra i due avvolgimenti, oltre alla \textbf{induttanza di magnetizzazione} che rappresenta lo stato iniziale di carica del trasformatore.\\
+	Esso, quando passa da spento ad acceso ha bisogno di una certa energia in più per iniziare a produrre il campo magnetico, e viene rappresentata da una induttanza in parallelo all'avvolgimento principale.
+	\begin{gather}
+		\begin{cases}
+			L_1:=Ld_1+L_m \\
+			L_1:=Ld_2+n^2L_m \\
+			M:=nL_m
+		\end{cases}
+	\end{gather}
+	Il \textbf{fattore di accoppiamento} è dato da:
+	\begin{gather}
+		K=\frac{|M|}{\sqrt{L_1L_2}}=\frac{nL_m}{\sqrt{(Ld_1+L_m)(Ld_2+n^2L_m)}}
+	\end{gather}
+	Le tensioni $V_1$ e $V_2$:
+	\begin{gather}
+		\bar V_1 = \frac{d \bar \phi_{C1}}{dt}=j\omega Ld_1\bar I_1 + j\omega L_m (\bar I_1+n\bar I_2) \\
+		\bar V_2 = \frac{d \bar \phi_{C2}}{dt}=j\omega Ld_2\bar I_2 + nj\omega L_m(\bar I_1 + n\bar I_2)
+	\end{gather}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{53.png}
+			\caption{Modello di trasformatore reale}
+			\label{fig:im-53}
+		\end{figure}
+	\end{center}
+	Un modello approssimativo si può quindi costruire in figura \ref{fig:im-53}, e aggiungendo il fatto che il filo pone una resistenza si ha figura \ref{fig:im-54}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{54.png}
+			\caption{Modello di trasformatore reale}
+			\label{fig:im-54}
+		\end{figure}
+	\end{center}
+	\subsubsection{Determinazione dei parametri}
+	Si vogliono estrarre i parametri di un trasformatore fisico osservando come funziona.\\
+	Il numero di spire è facilmente misurabile alimentando il primo avvolgimento e misurando la tensione in uscita.\\\\
+	Per gli altri si effettua una prova a vuoto, quindi alimentando il componente con una tensione $V_1$ nominale e lasciando aperto il secondo morsetto.\\
+	In questo modo si possono misurare i parametri dell'avvolgimento primario; se è ben costruito dovrebbe risultare che $Ld_1 \ll L_m$.\\\\
+	È possibile ricavare $R_0$ e $L_m$ dalla corrente:
+	\begin{gather}
+		I_1\simeq \frac{\bar V_{1n}}{R_0 //j\omega L_m}
+	\end{gather}
+	Mettendo ora in cortocircuito l'avvolgimento secondario (e facendo entrare una tensione molto bassa per non fare incendiare il tutto) si possono trascurare $L_m$ e $R_0$.\\
+	Si pongono le correnti come $I_1\simeq -nI_{2n}$, dove $I_{2n}$ rappresenta la corrente nominale indicata sul componente.\\\\
+	Riportando al primario si ha un generatore collegato a $R_1, L_1, L_{21}, R_{21}$ in cui passa la corrente $I_1$:
+	\begin{gather}
+		I_1=\frac{\bar V_{1r}}{R_1+R_2+j\omega (Ld1+Ld21)}
+	\end{gather}
+	Non potendo separare $R_1+R_{21}$ e $Ld1+Ld21$, si ottengono due a due. $R_1$ e $R_2$ sono direttamente misurabili con uno strumento a quattro morsetti, per $L$ si fa a metà.
+	\subsection{Autotrasformatore (Variac)}
+	Si tratta di un trasformatore composto da un solo filamento, quindi non galvanicamente isolato, con il numero di spire regolabile da un cursore.\\
+	Il primario e il secondario quindi condividono lo stesso avvolgimento (figura \ref{fig:im-55}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{55.png}
+			\caption{Trasformatore Variac}
+			\label{fig:im-55}
+		\end{figure}
+	\end{center}
 \end{document}
