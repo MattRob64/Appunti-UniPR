@@ -201,6 +201,25 @@
 	\end{equation}
 	Dove $A$ e $B$ sono i capi della serie di resistori e dove $R_i$ e $V_i$ sono rispettivamente la resistenza e la tensione che del resistore/bipolo preso in considerazione.\\
 	Ad esempio, se avessimo due resistenze, $R_n = R_2$
+	\begin{proof}[Dimostrazione]
+		Prendiamo in considerazione un circuito con un generatore ideale di tensione $E$ in serie con 2 resistenze $R_1$ e $R_2$.\\
+		Vogliamo sapere la tensione $V_2$ della resistenza 2.
+		Osservando il circuito possiamo osservare che:
+		$$ I_1 = I_2 = I $$
+		Sappiamo anche che per la legge di Ohm la tensione ai capi delle resistenze è:
+		$$ V_1 = I_1 \cdot R_1  = I \cdot R_1$$
+		$$ V_2 = I_2 \cdot R_2  = I \cdot R_2$$
+		Ricordiamo che per Kirchoff alla maglia abbiamo che:
+		$$ E - V_1 - V_2 = 0 \rightarrow E = V_1 + V_2 $$
+		Che posso riscrovere come:
+		$$ E = I \cdot R_1 + I \cdot R_2$$
+		Raccogliendo la $I$ posso poi ricavarla come:
+		$$ E = I \cdot (R_1 + R_2) \rightarrow I = \frac{E}{R_1 + R_2}$$
+		La tensione ai capi del resistore $R_2$ sarà quindi, sempre per la legge di Ohm:
+		$$ I = \frac{V_2}{R_2}$$
+		Sostituendo:
+		$$ \frac{V_2}{R_2} = \frac{E}{R_1 + R_2} \rightarrow V_2 = E \cdot \frac{R_2}{R_1 + R_2}$$
+	\end{proof}
 	\subsubsection{Partitore di Corrente (Parallelo di Resistenze)}
 	\begin{center}
 		\begin{figure}[h]
@@ -216,6 +235,10 @@
 	\begin{equation}
 		I_i = I_{AB} \cdot \frac{G_i}{\sum_{j = 1}^{n} G_j} = I_{AB} \cdot \frac{\frac{1}{R_i}}{\sum_{j=1}^{n} \frac{1}{R_j}}
 	\end{equation}
+	\begin{proof}[Dimostrazione]
+		Guardando il circuito si vede che tutte le resistenze sono parte di un unico nodo, così posso scrivere le Legge di Kirchoff al nodo.\\
+		Da qui procedo in modo simile alla dimostrazione del partitore di tensione.
+	\end{proof}
 	\subsubsection{Serie di Generatori Ideali di Tensione}
 	\begin{equation}
 		E_{Eq} = \sum_{i = 1}^{n} E_i
@@ -511,7 +534,7 @@
 		Esiste sempre un generatore reale di corrente ($I$) equivalente ad $X$
 	\end{theorem}
 	\begin{proof}[Dimostrazione]
-		Per ottenere il generatore reale di tensione equivalente si prosegue nel seguente modo:
+		Per ottenere il generatore reale di corrente equivalente si prosegue nel seguente modo:
 		\begin{enumerate}
 			\item Suddividere il circuito in una rete $X$ ed una rete $Y$, collegate tra loro nei nodi $A$ e $B$.\\
 			Quando è richiesto di calcolare una grandezza incognita, solitamente si pone come rete $Y$ la rete contenente tale grandezza.
