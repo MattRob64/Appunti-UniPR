@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  4 FEB 2026 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  15 JUN 2026 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,7 +1217,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiFisica2.out'.
 
-<./img/0.cover.jpg, id=183, 1204.5pt x 803.0pt>
+<./img/0.cover.jpg, id=191, 1204.5pt x 803.0pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1252,13 +1252,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.95 	\newpage
-               [1]
-<example-image-a.pdf, id=242, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 100.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
- (./sections/elettrostat.tex
+               [1] (./sections/elettrostat.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
@@ -1268,94 +1262,137 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 16.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 26.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+<./img/1.png, id=252, 263.98625pt x 181.67876pt>
+File: ./img/1.png Graphic file (type png)
+<use ./img/1.png>
+Package pdftex.def Info: ./img/1.png  used on input line 16.
+(pdftex.def)             Requested size: 145.19287pt x 99.92361pt.
+<./img/2.png, id=253, 265.99374pt x 169.63374pt>
+File: ./img/2.png Graphic file (type png)
+<use ./img/2.png>
+Package pdftex.def Info: ./img/2.png  used on input line 26.
+(pdftex.def)             Requested size: 146.297pt x 93.29883pt.
+<./img/3.png, id=254, 265.99374pt x 185.69376pt>
+File: ./img/3.png Graphic file (type png)
+<use ./img/3.png>
+Package pdftex.def Info: ./img/3.png  used on input line 35.
+(pdftex.def)             Requested size: 146.297pt x 102.13187pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 35.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
-[2 </usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image-a.pdf>]
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 56.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
+[2 <./img/1.png> <./img/2.png>]
+<./img/4.png, id=261, 439.6425pt x 97.36375pt>
+File: ./img/4.png Graphic file (type png)
+<use ./img/4.png>
+Package pdftex.def Info: ./img/4.png  used on input line 56.
+(pdftex.def)             Requested size: 241.80411pt x 53.55022pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
+
+ []
+
+<./img/5.png, id=263, 345.29pt x 324.21124pt>
+File: ./img/5.png Graphic file (type png)
+<use ./img/5.png>
+Package pdftex.def Info: ./img/5.png  used on input line 82.
+(pdftex.def)             Requested size: 189.91008pt x 178.31673pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--78
+[3 <./img/3.png> <./img/4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 92--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--78
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
-[3]
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 82.
-(pdftex.def)             Requested size: 176.66054pt x 132.49539pt.
- [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.en
-c}]
-Underfull \hbox (badness 10000) in paragraph at lines 99--104
+<./img/6.png, id=281, 515.9275pt x 309.155pt>
+File: ./img/6.png Graphic file (type png)
+<use ./img/6.png>
+Package pdftex.def Info: ./img/6.png  used on input line 119.
+(pdftex.def)             Requested size: 232.16522pt x 139.11845pt.
+[4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+} <./img/5.png>]
+<./img/7.png, id=291, 243.91125pt x 74.2775pt>
+File: ./img/7.png Graphic file (type png)
+<use ./img/7.png>
+Package pdftex.def Info: ./img/7.png  used on input line 148.
+(pdftex.def)             Requested size: 134.1516pt x 40.85274pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--156
+
+ []
+
+[5 <./img/6.png> <./img/7.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--161
 
  []
 
 ) (./sections/elettrodin.tex) (./sections/magnetostat.tex)
-(./sections/induzElettromag.tex) (./sections/onde.tex) [5] [6]
-Overfull \vbox (39.84126pt too high) has occurred while \output is active []
+(./sections/induzElettromag.tex) (./sections/onde.tex) [6] [7]
+Overfull \vbox (19.38295pt too high) has occurred while \output is active []
 
 
-[7] (./AppuntiFisica2.aux)
+[8] (./AppuntiFisica2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `AppuntiFisica2.out' has not changed.
-(rerunfilecheck)             Checksum: 86DBD3806ED65485B41FB3414DFA64C3;7231.
+
+
+Package rerunfilecheck Warning: File `AppuntiFisica2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `AppuntiFisica2.out':
+(rerunfilecheck)             Before: 43D41A60FDEE47EC0EFEE41C2DC863C7;7779
+(rerunfilecheck)             After:  8BB06FFE923BBCEFC85C18B9733A8845;7770.
  ) 
 Here is how much of TeX's memory you used:
- 27340 strings out of 474116
- 504609 string characters out of 5743683
+ 27427 strings out of 474116
+ 505643 string characters out of 5743683
  1945187 words of memory out of 5000000
- 49163 multiletter control sequences out of 15000+600000
- 566559 words of font info for 66 fonts, out of 8000000 for 9000
+ 49226 multiletter control sequences out of 15000+600000
+ 569008 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,117p,441b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiFisica2.pdf (8 pages, 549972 bytes).
+ 99i,13n,117p,441b,720s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsubsection.1.4.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiFisica2.pdf (9 pages, 650441 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 65 named destinations out of 1000 (max. 500000)
- 375 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
