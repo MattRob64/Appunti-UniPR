@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  15 JUN 2026 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.7)  16 JUN 2026 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,7 +1217,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiFisica2.out'.
 
-<./img/0.cover.jpg, id=191, 1204.5pt x 803.0pt>
+<./img/0.cover.jpg, id=224, 1204.5pt x 803.0pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1242,17 +1242,18 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
-\tf@toc=\write5
-\openout5 = `AppuntiFisica2.toc'.
-
-
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 	\newpage
-               [1] (./sections/elettrostat.tex
+l.52 ...}Equazioni di Maxwell}{16}{subsection.5.1}
+                                                  % [1])
+\tf@toc=\write5
+\openout5 = `AppuntiFisica2.toc'.
+
+ [2]
+(./sections/elettrostat.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
@@ -1262,17 +1263,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
-<./img/1.png, id=252, 263.98625pt x 181.67876pt>
+<./img/1.png, id=296, 263.98625pt x 181.67876pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 16.
 (pdftex.def)             Requested size: 145.19287pt x 99.92361pt.
-<./img/2.png, id=253, 265.99374pt x 169.63374pt>
+<./img/2.png, id=297, 265.99374pt x 169.63374pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 26.
 (pdftex.def)             Requested size: 146.297pt x 93.29883pt.
-<./img/3.png, id=254, 265.99374pt x 185.69376pt>
+<./img/3.png, id=298, 265.99374pt x 185.69376pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 35.
@@ -1280,8 +1281,8 @@ Package pdftex.def Info: ./img/3.png  used on input line 35.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./img/1.png> <./img/2.png>]
-<./img/4.png, id=261, 439.6425pt x 97.36375pt>
+[3 <./img/1.png> <./img/2.png>]
+<./img/4.png, id=305, 439.6425pt x 97.36375pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 56.
@@ -1301,7 +1302,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--78
 
  []
 
-<./img/5.png, id=263, 345.29pt x 324.21124pt>
+<./img/5.png, id=307, 345.29pt x 324.21124pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 82.
@@ -1309,7 +1310,7 @@ Package pdftex.def Info: ./img/5.png  used on input line 82.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./img/3.png> <./img/4.png>]
+[4 <./img/3.png> <./img/4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 92--96
 
  []
@@ -1319,14 +1320,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
-<./img/6.png, id=281, 515.9275pt x 309.155pt>
+<./img/6.png, id=325, 515.9275pt x 309.155pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 119.
 (pdftex.def)             Requested size: 232.16522pt x 139.11845pt.
-[4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+[5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 } <./img/5.png>]
-<./img/7.png, id=291, 243.91125pt x 74.2775pt>
+<./img/7.png, id=336, 243.91125pt x 74.2775pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
 Package pdftex.def Info: ./img/7.png  used on input line 148.
@@ -1336,63 +1337,219 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--156
 
  []
 
-[5 <./img/6.png> <./img/7.png>]
+[6 <./img/6.png> <./img/7.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 156--161
 
  []
 
-) (./sections/elettrodin.tex) (./sections/magnetostat.tex)
-(./sections/induzElettromag.tex) (./sections/onde.tex) [6] [7]
-Overfull \vbox (19.38295pt too high) has occurred while \output is active []
+<./img/8.png, id=350, 209.78375pt x 85.31876pt>
+File: ./img/8.png Graphic file (type png)
+<use ./img/8.png>
+Package pdftex.def Info: ./img/8.png  used on input line 179.
+(pdftex.def)             Requested size: 115.38141pt x 46.92545pt.
+[7 <./img/8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
+
+ []
 
 
-[8] (./AppuntiFisica2.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
+
+ []
+
+<./img/9.png, id=358, 230.8625pt x 200.75pt>
+File: ./img/9.png Graphic file (type png)
+<use ./img/9.png>
+Package pdftex.def Info: ./img/9.png  used on input line 203.
+(pdftex.def)             Requested size: 126.97476pt x 110.41283pt.
+<./img/10.png, id=359, 181.67876pt x 184.69pt>
+File: ./img/10.png Graphic file (type png)
+<use ./img/10.png>
+Package pdftex.def Info: ./img/10.png  used on input line 222.
+(pdftex.def)             Requested size: 217.66965pt x 170.7172pt.
+<./img/11.png, id=360, 189.70876pt x 184.69pt>
+File: ./img/11.png Graphic file (type png)
+<use ./img/11.png>
+Package pdftex.def Info: ./img/11.png  used on input line 227.
+(pdftex.def)             Requested size: 217.66547pt x 170.7172pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 221--231
+[][] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/12.png, id=361, 97.36375pt x 74.2775pt>
+File: ./img/12.png Graphic file (type png)
+<use ./img/12.png>
+Package pdftex.def Info: ./img/12.png  used on input line 240.
+(pdftex.def)             Requested size: 53.55022pt x 40.85274pt.
+[8 <./img/9.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
+
+ []
+
+<./img/13.png, id=368, 176.66pt x 276.03125pt>
+File: ./img/13.png Graphic file (type png)
+<use ./img/13.png>
+Package pdftex.def Info: ./img/13.png  used on input line 252.
+(pdftex.def)             Requested size: 97.16328pt x 151.81764pt.
+
+Overfull \hbox (11.11304pt too wide) in paragraph at lines 257--258
+$\OML/cmm/m/it/10 p$ \OT1/cmr/m/n/10 carat-ter-izza com-ple-ta-mente il dipolo:
+ conoscen-done il val-ore ^^Re pos-si-bile cal-co-lare gli ef-fetti del dipolo 
+sull'ambiente
+ []
+
+<./img/14.png, id=369, 570.13pt x 371.16444pt>
+File: ./img/14.png Graphic file (type png)
+<use ./img/14.png>
+Package pdftex.def Info: ./img/14.png  used on input line 262.
+(pdftex.def)             Requested size: 313.57246pt x 204.14107pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./img/10.png> <./img/11.png> <./img/12.png> <./img/13.png>] [10 <./img/14.p
+ng>]
+<./img/15.png, id=386, 340.27126pt x 157.58875pt>
+File: ./img/15.png Graphic file (type png)
+<use ./img/15.png>
+Package pdftex.def Info: ./img/15.png  used on input line 294.
+(pdftex.def)             Requested size: 187.14977pt x 86.67407pt.
+<./img/16.png, id=387, 314.17375pt x 119.44624pt>
+File: ./img/16.png Graphic file (type png)
+<use ./img/16.png>
+Package pdftex.def Info: ./img/16.png  used on input line 304.
+(pdftex.def)             Requested size: 172.79608pt x 65.69562pt.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 310.
+
+<./img/17.png, id=388, 338.26375pt x 335.2525pt>
+File: ./img/17.png Graphic file (type png)
+<use ./img/17.png>
+Package pdftex.def Info: ./img/17.png  used on input line 316.
+(pdftex.def)             Requested size: 186.04562pt x 184.38943pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./img/15.png> <./img/16.png>]
+<./img/18.png, id=395, 225.84375pt x 348.30125pt>
+File: ./img/18.png Graphic file (type png)
+<use ./img/18.png>
+Package pdftex.def Info: ./img/18.png  used on input line 338.
+(pdftex.def)             Requested size: 124.21443pt x 191.56627pt.
+ [12 <./img/17.png> <./img/18.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 356--358
+
+ []
+
+<./img/19.png, id=403, 258.9675pt x 224.84pt>
+File: ./img/19.png Graphic file (type png)
+<use ./img/19.png>
+Package pdftex.def Info: ./img/19.png  used on input line 361.
+(pdftex.def)             Requested size: 142.43254pt x 123.66237pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--369
+
+ []
+
+<./img/20.png, id=404, 212.795pt x 150.5625pt>
+File: ./img/20.png Graphic file (type png)
+<use ./img/20.png>
+Package pdftex.def Info: ./img/20.png  used on input line 374.
+(pdftex.def)             Requested size: 117.0376pt x 82.80962pt.
+<./img/21.png, id=405, 206.7725pt x 141.52875pt>
+File: ./img/21.png Graphic file (type png)
+<use ./img/21.png>
+Package pdftex.def Info: ./img/21.png  used on input line 385.
+(pdftex.def)             Requested size: 113.72522pt x 77.84105pt.
+<./img/22.png, id=406, 302.12875pt x 126.4725pt>
+File: ./img/22.png Graphic file (type png)
+<use ./img/22.png>
+Package pdftex.def Info: ./img/22.png  used on input line 390.
+(pdftex.def)             Requested size: 166.17131pt x 69.56007pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 384--394
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--402
+
+ []
+
+[13 <./img/19.png> <./img/20.png>]
+<./img/23.png, id=413, 221.82875pt x 166.6225pt>
+File: ./img/23.png Graphic file (type png)
+<use ./img/23.png>
+Package pdftex.def Info: ./img/23.png  used on input line 405.
+(pdftex.def)             Requested size: 122.00616pt x 91.64265pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--422
+
+ []
+
+<./img/24.png, id=414, 162.6075pt x 175.65625pt>
+File: ./img/24.png Graphic file (type png)
+<use ./img/24.png>
+Package pdftex.def Info: ./img/24.png  used on input line 425.
+(pdftex.def)             Requested size: 89.43439pt x 96.61122pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./img/21.png> <./img/22.png> <./img/23.png>]) (./sections/elettrodin.tex)
+(./sections/magnetostat.tex) (./sections/induzElettromag.tex)
+(./sections/onde.tex) [15 <./img/24.png>] [16] (./AppuntiFisica2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `AppuntiFisica2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `AppuntiFisica2.out':
-(rerunfilecheck)             Before: 43D41A60FDEE47EC0EFEE41C2DC863C7;7779
-(rerunfilecheck)             After:  8BB06FFE923BBCEFC85C18B9733A8845;7770.
+Package rerunfilecheck Info: File `AppuntiFisica2.out' has not changed.
+(rerunfilecheck)             Checksum: AE65462CC676AD6AAA94575E5604B898;10569.
  ) 
 Here is how much of TeX's memory you used:
- 27427 strings out of 474116
- 505643 string characters out of 5743683
- 1945187 words of memory out of 5000000
- 49226 multiletter control sequences out of 15000+600000
- 569008 words of font info for 74 fonts, out of 8000000 for 9000
+ 27723 strings out of 474116
+ 510090 string characters out of 5743683
+ 1948187 words of memory out of 5000000
+ 49462 multiletter control sequences out of 15000+600000
+ 574533 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,117p,441b,720s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsubsection.1.4.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ 99i,13n,117p,538b,895s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
 texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiFisica2.pdf (9 pages, 650441 bytes).
+live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiFisica2.pdf (17 pages, 930466 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 72 named destinations out of 1000 (max. 500000)
- 421 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 570 words of extra memory for PDF output out of 10000 (max. 10000000)
 

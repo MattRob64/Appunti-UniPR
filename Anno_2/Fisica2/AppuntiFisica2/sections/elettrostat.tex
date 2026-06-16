@@ -167,9 +167,267 @@
 	Questo dimostra che è più forte la forza elettrica rispetto a quella gravitazionale.\\
 	Tra un protone e un elettrone, la forza di attrazione elettrica è circa $10^{39}$ volte più intensa rispetto alla forza di attrazione gravitazionale.
 	\subsection{Campo Elettrico}
+	\subsubsection{Campi scalari e campi vettoriali}
+	\begin{itemize}
+		\item \textbf{Campo scalare}: ad ogni punto dello spazio e’ associato un numero con unita’ di misura (es: previsioni temperatura).
+		\item \textbf{Campo vettoriale}: ad ogni punto dello spazio e’ associato un vettore (modulo, direzione e verso) (es: previsioni della velocita’ del vento). 
+	\end{itemize}
+	\subsubsection{Campo elettrico di una carica puntiforme}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{8.png}
+			\caption{}
+			\label{fig:im-8}
+		\end{figure}
+	\end{center}
+	La presenza della carica $Q$ modifica le proprietà dello spazio circostante (assumiamo che $Q$ sia fissata in un punto).\\
+	N.B: Dato che ogni punto può subire una forza, allora la carica $Q$ genera un campo di forze\\
+	Infatti una carica $q$ (detta carica di prova) in un punto a distanza $r$ subisce una forza
+	$$ \vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{qQ}{r^3} \vec{r} $$
+	In analogia con quanto fatto per il campo gravitazionale, definiamo campo elettrico $E$
+	$$ \vec{E}(\vec{r}) \equiv \vec{E}(x,y,z) = \frac{\vec{F}}{q} $$
+	Quindi possiamo dire che:
+	\begin{equation}
+		\vec{E}_0 (\vec{r}) = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^3} \vec{r}
+	\end{equation}
+	Dove $\vec{E}_0$ è un campo elettrico nel vuoto.\\\\
+	$E$ ha le dimensioni di una forza diviso una carica e si misura in Newton/Coulomb o in Volt/Metro.\\
+	\subsubsection{Campo elettrico di un gruppo di cariche puntiformi}
+	Se ho un gruppo di cariche che generano il campo elettrico $E$, in un punto $P$ il campo è sempre definito come rapporto tra la forza elettrica $F$ esercitata dal gruppo sulla carica di prova $q$ e la carica $q$ stessa:
+	$$ \vec{E}(\vec{r}) \equiv \vec{E}(x, y, z) = \frac{\vec{F}}{q} $$
+	Siccome il principio di sovrapposizione vale per la forza di Coulomb, si avrà un principio di sovrapposizione per il campo elettrico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{9.png}
+			\caption{}
+			\label{fig:im-9}
+		\end{figure}
+	\end{center}
+	$$ \vec{E}_0(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \frac{Q_1}{|\vec{r} - \vec{r}_1|^3} (\vec{r} - \vec{r}_1) + \frac{1}{4\pi \varepsilon_0} \frac{Q_2}{|\vec{r} - \vec{r}_2|^3} (\vec{r} - \vec{r}_2) $$
+	$$ \boxed{\vec{E}_0(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \sum_{i=1}^{n} \frac{Q_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)} $$
+	Ad es.
+	$$ E_{0 x}(x, y, z) = \frac{1}{4\pi \varepsilon_0} \sum_{i=1}^{n} \frac{Q_i(x - x_i)}{\left[(x - x_i)^2 + (y - y_i)^2 + (z - z_i)^2\right]^{\frac{3}{2}}} $$
+	Quando si misura un campo elettrico, la carica di prova deve essere sufficientemente piccola da non alterare in modo significativo la distribuzione di carica che genera il campo.
+	\subsubsection{Linee di forza di un campo elettrico (Visualizzazione dei campi vettoriali)}
+	Le linee di forza del campo elettrico sono quelle linee orientate la cui tangente in ogni punto ha la stessa direzione e verso del campo $E$ in quel punto.\\
+	In una data rappresentazione, la densità di linee di forza dipende dal modulo del campo. \\
+	Nelle regioni in cui le linee sono fitte $E$ è grande, mentre dove sono rade $E$ è piccolo.\\
+	Un campo uniforme è rappresentato da linee di forza equidistanti, rettilinee e parallele.
+	$$ \vec{E}_0(\vec{r}) = \frac{1}{4\pi \epsilon_0} \frac{Q}{r^3} \vec{r} $$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{10.png} 
+			\caption{$Q>0$}
+			\label{fig:im-10}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{11.png}
+			\caption{$Q<0$}
+			\label{fig:im-11}
+		\end{subfigure}
+		
+		\caption{Caption}
+		\label{fig:image2}
+	\end{figure}
 	\subsection{Dipolo Elettrico}
-	\subsection{Distribuzione Continua di Carica}
+	Un dipolo elettrico è costituito da due cariche opposte $(q_{1} = Q = -q_{2})$ a distanza fissa $d$ (in genere molto piccola rispetto alle altre distanze).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{12.png}
+			\caption{Momento elettrico del dipolo}
+			\label{fig:im-12}
+		\end{figure}
+	\end{center}
+	Il \textbf{momento elettrico del dipolo} è definito come: $\vec{p} = Q \cdot \vec{d}$\\\\
+	Il campo $E$ si calcola sfruttando il principio di sovrapposizione. \\
+	Si trova che il campo elettrico prodotto da un dipolo elettrico in un punto a distanza grande rispetto alle dimensioni del dipolo stesso $(r \gg d)$ è
+	$$ \vec {\mathbf {E}} (\vec {\mathbf {r}}) = \frac {1}{4 \pi \varepsilon_ {0}} \frac {p}{r ^ {3}} \big [ 3 (\hat {\mathbf {r}} \cdot \hat {\mathbf {p}}) \hat {\mathbf {r}} - \hat {\mathbf {p}} \big ] $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{13.png}
+			\caption{}
+			\label{fig:im-13}
+		\end{figure}
+	\end{center}
+	$p$ caratterizza completamente il dipolo: conoscendone il valore è possibile calcolare gli effetti del dipolo sull’ambiente circostante e gli effetti dell’ambiente circostante sul dipolo.
+	\subsubsection{Calcolo campo elettrico nel campo equatoriale del dipolo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{14.png}
+			\caption{Calcolo campo elettrico nel campo equatoriale del dipolo}
+			\label{fig:im-14}
+		\end{figure}
+	\end{center}
+	$$\vec{r} \equiv (x,y,z) = (0,D,0)$$
+	$$\vec{r}_1 \equiv (x_1,y_1,z_1) = (0,0,\frac{d}{2})$$
+	$$\vec{r}_2 \equiv (x_2,y_2,z_2) = (0,0,-\frac{d}{2})$$
+	Distanza tra punto e carica (Norma del vettore):
+	$$ \left| \vec{r} - \vec{r_1} \right| = \sqrt{(x - x_1)^2 + (y - y_1)^2 + (z - z_1)^2} = \sqrt{D^2 + \left(\frac{d}{2}\right)^2} \equiv \Delta $$
+	Campo elettrico all’origine in direzione $x$, ha senso che sia zero
+	$$ E_{0x} = \frac{1}{4\pi \varepsilon_0} \frac{1}{\Delta^3} \left[ Q(x - x_1) - Q(x - x_2) \right] = 0 $$
+	Campo elettrico all’origine in direzione $y$.\\
+	I contributi delle due cariche si annullano su entrambe gli assi.
+	$$ E_{0y} = \frac{1}{4\pi \varepsilon_0} \frac{1}{\Delta^3} \left[ Q(y - y_1) - Q(y - y_2) \right] = \frac{1}{4\pi \varepsilon_0} \frac{1}{\Delta^3} [QD - QD] = 0 $$
+	$\uparrow$Stessa cosa, il dipolo non può esercitare forza sull’asse y quando la particella è nell’origine
+	$$ E_{0z} = \frac{1}{4\pi \varepsilon_0} \frac{1}{\Delta^3} \left[ Q(z - z_1) - Q(z - z_2) \right] $$
+	$$= \frac{1}{4\pi \varepsilon_0} \frac{1}{\Delta^3} \left[ Q\left(-\frac{d}{2}\right) - Q \left(\frac{d}{2}\right) \right] = \frac{1}{4\pi \varepsilon_0} \frac{-Qd}{\Delta^3} $$
+	$$\vec{E}_0(0, D, 0) = \frac{-\vec{P}}{4\pi \varepsilon_0 \left[ D^2 + \left(\frac{d}{2}\right)^2 \right]^{3/2}}$$
+	\subsection{Campo elettrico generato da distribuzioni continue di carica}
+	La carica che si manifesta nei corpi macroscopici, come le bacchette di prima, è dovuta a uno squilibrio tra il numero di elettroni e di protoni.\\
+	Le cariche presenti su corpi macroscopici sono dovute a grandi numeri di elettroni in eccesso o in difetto. \\
+	Quindi è possibile trattare la carica come una distribuzione continua di elementi infinitesimi di carica $dq$.
+	Densità spaziale di carica $\rho(x,y,z)$
+	$$ dq = \rho(x, y, z) \, d\tau $$
+	Dove $d\tau = dx \; dy \; dz$
+	Integriamo una densità di carica in un volume
+	$$ \vec{E}_0(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \int_\tau \frac{dq(\vec{r'})}{\left| \vec{r} - \vec{r}' \right|^3} (\vec{r} - \vec{r}') $$
+	$$ \boxed{\vec{E}_0(\vec{r}) = \frac{1}{4\pi\varepsilon_0} \int_\tau \frac{\rho(x', y', z')}{\left| \vec{r} - \vec{r}' \right|^3} (\vec{r} - \vec{r}') , dx' , dy' , dz'} $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{15.png}
+			\caption{Densità superficiale di carica $\sigma(x,y,z)$}
+			\label{fig:im-15}
+		\end{figure}
+	\end{center}
+	$$ dq = \sigma(x, y, z) \, ds $$
+	$$ \vec{E_0}(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int_{\Sigma} \frac{\sigma(x', y', z') (\vec{r} - \vec{r}')}{\left| \vec{r} - \vec{r}' \right|^3} \, ds' $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{16.png}
+			\caption{Densità lineare di carica $\lambda(x,y,z)$}
+			\label{fig:im-16}
+		\end{figure}
+	\end{center}
+	$$ dq = \lambda(x, y, z) \, dl $$
+	$$ \vec{E_0}(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int_{\Lambda} \frac{\lambda(x', y', z') (\vec{r} - \vec{r}')}{\left| \vec{r} - \vec{r}' \right|^3} \, dl’ $$
+	\subsection{Campo elettrico di una distribuzione lineare di carica}
+	Vogliamo calcolare il campo nel punto $P$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{17.png}
+			\caption{}
+			\label{fig:im-17}
+		\end{figure}
+	\end{center}
+	$$ \lambda = \frac{Q}{L}$$
+	$$ r = \frac {R}{\cos \theta} $$
+	$$ l = R \tan \theta $$
+	$$ d l = R \frac {d \theta}{\cos^ {2} \theta} $$
+	Prendo due punti simmetrici per poi integrare da $0$ a infinito invece che da -inf a +inf.
+	$$ d\vec {E _ {0}} = d\vec { E _ {1}} + d\vec { E _ {2}} = ( d E _ {1} + d E _ {2}) \cos \theta \hat {n} \ $$
+	$$ = \frac {2 \cos \theta}{4 \pi \varepsilon_ {0}} \frac {\lambda d l}{r ^ {2}} \hat {n} $$
+	$$\qquad$$
+	$$ \vec {E _ {0}} = \int d \vec {E _ {0}} = \frac {\lambda \hat {n}}{2 \pi \varepsilon_ {0}} \int_ {0} ^ {\infty} \frac {\cos \theta}{r ^ {2}} d l $$
+	Espando $dl$ e $r$, facendo riferimento all'iizio del paragrafo dove sono definite
+	$$ = \frac {\lambda \hat {n}}{2 \pi \varepsilon_ {0}} \int_ {0} ^ {\pi / 2} \frac {\cos^ {\cancel{3}} \theta}{R ^ {\cancel{2}}} \times \cancel{R} \frac { d \theta}{\cancel{\cos^ {2} \theta}} $$
+	$$ = \frac {\lambda}{2 \pi \varepsilon_ {0} R} \hat {n} \int_ {0} ^ {\pi / 2} \cos \theta d \theta $$
+	$$ \vec {E _ {0}} = \frac {1}{2 \pi \varepsilon_ {0}} \frac {\lambda}{R} \hat {n} $$
+	\subsection{Spira circolare uniformemente carica (campo lungo l’asse)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{18.png}
+			\caption{}
+			\label{fig:im-18}
+		\end{figure}
+	\end{center}
+	$$ \lambda = \frac{Q}{2\pi R} $$
+	Calcolo il micro-campo diretto sul punto per una lunghezza infinitesima del filo
+	$$ \vec{dE_0} = \frac{1}{4\pi \varepsilon_0} \frac{\lambda dl}{r^3} \vec{r} $$
+	Calcolo la componente tangente all’asse del campo infinitesimo
+	$$ dE_{0x} = \frac{1}{4\pi \varepsilon_0} \frac{\lambda dl}{r^2} \cos \alpha $$
+	Integrazione di tutti i campi infinitesimi
+	$$ E_{0x} = \int dE_{0x} $$
+	Espando $dE_{0x}$:
+	$$ = \frac{1}{4\pi \varepsilon_0} \int_{\text{Spira}} \frac{\lambda \cos \alpha}{r^2} dl = \frac{\lambda \cos \alpha}{4\pi \varepsilon_0 r^2} \int_{\text{Spira}} dl = \frac{2\pi R}{4\pi \varepsilon_0} \frac{\lambda \cos \alpha}{r^2} $$
+	$$ = \frac{\lambda R}{2\varepsilon_0} \frac{\cos \alpha}{r^2} = \frac{\lambda R}{2\varepsilon_0} \frac{x}{r^3} = \frac{\lambda R}{2\varepsilon_0} \frac{x}{(x^2 + R^2)^{\frac{3}{2}}} $$
+	$$ E_{0x}(0) = 0 $$
+	$$ E_{0x}(x) \xrightarrow[x \to \infty]{} 0 $$
+	\subsection{Flusso di un campo vettoriale}
+	Il concetto è stato originariamente introdotto nella teoria dei fluidi, dove il flusso è legato alla quantità di fluido che passa attraverso una data superficie geometrica, quale per esempio la sezione di un condotto.\\
+	Il flusso $\Phi$ di un campo vettoriale è una grandezza scalare che dipende dal campo e dalla superficie rispetto alla quale viene calcolato.\\
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{19.png}
+			\caption{Campo vettoriale A uniforme sulla superficie}
+			\label{fig:im-19}
+		\end{figure}
+	\end{center}
+	Il vettore superficie lo chiamiamo $\delta S$ perchè dopo verrà usato come $dS$ in un integrale\\\\
+	Per superfici chiuse, convenzione vettore normale uscente.\\
+	Si introduce un vettore superficie $\Delta S$ con modulo uguale all’area della superficie e direzione perpendicolare alla superficie stessa (due versi possibili). 
+	$$ \Delta \vec{S} = \Delta S \hat{n} $$
+	Definizione di flusso: $ \boxed{\Phi = \vec{A} \cdot \Delta \vec{S}} $
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{20.png}
+			\caption{}
+			\label{fig:im-20}
+		\end{figure}
+	\end{center}
+	$$ \boxed{\Phi = \vec {A} \cdot \Delta \vec {S} = A \cdot \Delta S \cdot \cos \alpha} $$
+	$\Phi$ è definito come un prodotto scalare, quindi se i vettori sono ortogonali il flusso è 0.\\\\
+	Per farsi un’idea intuitiva del flusso si può ricorrere alle linee di forza: il numero delle linee che attraversano una superficie è proporzionale al flusso relativo a tale superficie.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{21.png} 
+			\caption{}
+			\label{fig:im-21}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{22.png}
+			\caption{}
+			\label{fig:im-22}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image3}
+	\end{figure}
+	L’ambiguità nel verso della normale alla superficie può essere eliminata quando la superficie è chiusa: si considera la normale uscente.\\\\
+	Se la superficie $S$ è curva o il campo elettrico varia da punto a punto, il flusso si calcola dividendo $S$ in piccoli elementi di superficie, ciascuno abbastanza piccolo da poter essere considerato piano e tale che su di esso la variazione del campo elettrico possa essere trascurata. \\
+	Il flusso attraverso l’intera superficie è allora la somma dei contributi dovuti a ciascuno dei piccoli elementi di superficie.\\\\
+	Facendo tendere a zero le dimensioni di ciascun elemento ed a infinito il loro numero, la somma diventa un integrale:
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{23.png}
+			\caption{}
+			\label{fig:im-23}
+		\end{figure}
+	\end{center}
+	$$ \vec {d s} = \hat {n} \; d s $$
+	$$ d \phi (\vec {A}) = \vec {A} \cdot \vec {d s} = \vec {A} \cdot \hat {n} \; d s = A \; d s \cos \theta $$
+	$$ \Phi_ {S} (\vec {A}) \equiv \int_ {S} d \phi (\vec {A}) = \int_ {S} \vec {A} \cdot \vec {d s} $$
+	Dove notiamo che $\Phi_ {S} (\vec {A})$ equivale ad un integrale in $S$ si un prodotto scalare.
 	\subsection{Legge di Gauss}
+	\begin{definition}
+			Il flusso del campo elettrico attraverso una qualunque superficie chiusa (come una sfera: una superficie in 3 dimensioni chiusa) è pari alla somma algebrica delle cariche contenute all’interno del volume racchiuso dalla superficie divisa per la costante dielettrica del vuoto.
+	\end{definition}
+	$$ \Phi_ {S} (\vec {E _ {0}}) \equiv \int_ {S} \vec {E _ {0}} \cdot \hat {\vec {n}} \; d s = \frac {1}{\varepsilon _ {o}} \sum Q _ {int} = \frac {Q ^{int}_ {tot}}{\varepsilon _ {0}} $$
+	Dove $\hat{n}$ è la normale.\\\\
+	La superficie chiusa attraverso la quale si calcola il flusso del campo elettrico generalmente è una superficie geometrica immaginaria che non corrisponde alla superficie di un oggetto.\\
+	Il campo vettoriale esterno in una superficie chiusa non provoca alcun flusso, quindi rimane solo quello provocato dalle cariche interne.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{24.png}
+			\caption{}
+			\label{fig:im-24}
+		\end{figure}
+	\end{center}
+	Il campo E nell’integrale del flusso è il campo dovuto a tutte le particelle cariche, sia interne che esterne alla superficie considerata, ma il flusso attraverso l’intera superficie è dovuto soltanto alle cariche che si trovano all’interno.
 	\subsection{Potenziale Elettrico}
 	\subsection{Energia Potenziale Elettrica}
 	\subsection{Energia Elettrostatica}
