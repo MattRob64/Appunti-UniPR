@@ -21,34 +21,44 @@
 \contentsline {subsection}{\numberline {1.10}Spira circolare uniformemente carica (campo lungo l’asse)}{12}{subsection.1.10}%
 \contentsline {subsection}{\numberline {1.11}Flusso di un campo vettoriale}{13}{subsection.1.11}%
 \contentsline {subsection}{\numberline {1.12}Legge di Gauss}{14}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Potenziale Elettrico}{16}{subsection.1.13}%
-\contentsline {subsection}{\numberline {1.14}Energia Potenziale Elettrica}{16}{subsection.1.14}%
-\contentsline {subsection}{\numberline {1.15}Energia Elettrostatica}{16}{subsection.1.15}%
-\contentsline {subsection}{\numberline {1.16}Condensatori}{16}{subsection.1.16}%
-\contentsline {section}{\numberline {2}Elettrodinamica}{16}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Corrente Elettrica}{16}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Resistenza}{16}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Forza Elettromotrice}{16}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Energia Elettrica e Potenza}{16}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Leggi di Kirchoff}{16}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Circuiti RC}{16}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Magnetostatica}{16}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{16}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{16}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Moti della Particella}{16}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{16}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{16}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{16}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{16}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{16}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{16}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{16}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{16}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{16}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{16}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{16}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{16}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{16}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{16}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {1.12.1}Campo in prossimità di una distribuzione lineare di carica molto lunga}{17}{subsubsection.1.12.1}%
+\contentsline {subsubsection}{\numberline {1.12.2}Campo in prossimità di una grande lamina piana uniformemente carica}{17}{subsubsection.1.12.2}%
+\contentsline {subsubsection}{\numberline {1.12.3}Sfera uniformemente carica}{18}{subsubsection.1.12.3}%
+\contentsline {subsubsection}{\numberline {1.12.4}Doppio strato piano}{19}{subsubsection.1.12.4}%
+\contentsline {subsection}{\numberline {1.13}Potenziale Elettrico}{19}{subsection.1.13}%
+\contentsline {subsubsection}{\numberline {1.13.1}Potenziale di una particella di prova nel campo di un numero qualsiasi di cariche puntiformi}{22}{subsubsection.1.13.1}%
+\contentsline {subsubsection}{\numberline {1.13.2}Distribuzione continua di carica}{22}{subsubsection.1.13.2}%
+\contentsline {subsubsection}{\numberline {1.13.3}Dipolo elettrico e potenziale elettrico}{23}{subsubsection.1.13.3}%
+\contentsline {subsubsection}{\numberline {1.13.4}Energia potenziale di un dipolo in un campo elettrico uniforme}{23}{subsubsection.1.13.4}%
+\contentsline {subsubsection}{\numberline {1.13.5}Potenziale del campo generato da una distribuzione lineare di carica}{24}{subsubsection.1.13.5}%
+\contentsline {subsubsection}{\numberline {1.13.6}Relazione tra campo e potenziale elettrico}{26}{subsubsection.1.13.6}%
+\contentsline {subsection}{\numberline {1.14}Energia Potenziale Elettrica}{26}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.15}Energia Elettrostatica}{26}{subsection.1.15}%
+\contentsline {subsection}{\numberline {1.16}Condensatori}{26}{subsection.1.16}%
+\contentsline {section}{\numberline {2}Elettrodinamica}{26}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Corrente Elettrica}{26}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Resistenza}{26}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Forza Elettromotrice}{26}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Energia Elettrica e Potenza}{26}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Leggi di Kirchoff}{26}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Circuiti RC}{26}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Magnetostatica}{26}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{26}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{26}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Moti della Particella}{26}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{26}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{26}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{26}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{26}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{26}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{26}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{26}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{26}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{26}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{26}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{26}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{26}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{26}{subsection.5.3}%

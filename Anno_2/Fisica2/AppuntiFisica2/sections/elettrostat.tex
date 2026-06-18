@@ -428,7 +428,329 @@
 		\end{figure}
 	\end{center}
 	Il campo E nell’integrale del flusso è il campo dovuto a tutte le particelle cariche, sia interne che esterne alla superficie considerata, ma il flusso attraverso l’intera superficie è dovuto soltanto alle cariche che si trovano all’interno.
+	\begin{proof}[Carica Interna]
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{25.png}
+				\caption{Carica Interna}
+				\label{fig:im-25}
+			\end{figure}
+		\end{center}
+		$$ d \vec {\Phi} (\vec {E _ {0}}) = \vec {E _ {0}} \cdot \vec {d s} $$
+		$$ = \frac {1}{4 \pi \varepsilon_ {0}} \frac {Q}{r ^ {2}} \hat {r} \cdot \hat {n} \; d s $$
+		$$\qquad$$
+		Angolo solido del cono con vertice in $Q$ delimitato da $dS$: 
+		$$ d\Omega = \frac{dS_n}{r^2} $$
+		Traimte $dS$ abbiamo un'estensione allo spazio tridimensionale del concetto di angolo piano
+		$$ = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^2} \cos\theta \, dS = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^2} \, dS_n $$
+		Dove $dS_n$ = $dS \cos \theta$\\
+		Alla fine otteniamo:
+		$$d\Phi(\vec{\varepsilon}_0) = \frac{Q}{4\pi\varepsilon_0} \, d\Omega $$
+		Ragioniamo in 3 dimensioni, è come se la carica $Q$ “proiettasse” su infinitesime sezioni della superficie, e stiamo calcolando in quei punti il flusso di campo elettrico, da qui $d\Omega$\\\\
+		Se volessimo ottenere $\Omega (\vec{ E _ {0}})$ dovremmo integrare:
+		$$ \Omega (\vec{ E _ {0}}) = \int_{S} d\Phi(\vec{E_0}) = \int_{4 \pi} \frac{Q}{4\pi\varepsilon_0} \; d\Omega = \frac{Q}{4\pi\varepsilon_0} \cdot \int_{4 \pi } d \Omega = \frac{Q}{\varepsilon_{0}}$$
+		$$\qquad$$
+		Se si hanno più cariche interne $Q_i$ $(i=1,2,…,N)$:
+		$$ \vec{E_0} \cdot d\vec{S} = \left( \sum_i \vec{E_{0i}} \right) \cdot d\vec{S} = \sum_i \vec{E_{0i}} \cdot d\vec{S} = \sum_i d\Phi \cdot (\vec{E_{0i}}) $$
+		$$ \Phi(\vec{E_0}) = \int_S \sum_i d\Phi(\vec{E_{0i}}) = \sum_i \int_S d\Phi(\vec{E_{0i}}) = \sum_i \frac{Q_i}{\varepsilon_0} $$
+	\end{proof}
+	\begin{proof}[Carica Esterna]
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.55]{26.png}
+				\caption{Carica Esterna}
+				\label{fig:im-26}
+			\end{figure}
+		\end{center}
+		$$ | d \Phi _ {1} | = \frac {Q}{4 \pi \varepsilon_ {0}} \frac {| d S _ {n 1} |}{r _ {1} ^ {2}} = \frac {Q}{4 \pi \varepsilon_ {0}} \, d \Omega $$
+		$$ | d \Phi_ {2} | = \frac {Q}{4 \pi \varepsilon_ {0}} \frac {| d S _ {n 2} |}{r _ {2} ^ {2}} = \frac {Q}{4 \pi \varepsilon_ {0}} \, d \Omega $$
+		$$ | d \Phi_ {1} | = | d \Phi_ {2} | $$
+		Osserviamo che $ d \Phi_ {1} < 0 $ e $ d \Phi_ {2} > 0 $
+		$\downarrow$
+		$$ \phi_ {S} (\vec {E _ {0}}) = 0 $$
+		La legge di Gauss è una delle proprietà fondamentali del campo elettrico.\\\\
+		Se la distribuzione di carica è dotata di particolare simmetrie può essere utilizzata per determinare il campo elettrico.\\\\
+		In questi casi la direzione e il verso di $E$ e informazioni sulle superfici su cui il modulo del campo è costante possono essere dedotte dalla simmetria senza bisogno di calcoli. \\
+		Si procede per passi:
+	\begin{itemize}
+		\item si sceglie una superficie chiusa che sfrutti la simmetria
+		\item si calcola il flusso in termini del modulo di $E$
+		\item si scrive e si risolve l’equazione che deriva dall’applicazione della legge di Gauss
+	\end{itemize}
+	\end{proof}
+	\subsubsection{Campo in prossimità di una distribuzione lineare di carica molto lunga}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{27.png}
+			\caption{}
+			\label{fig:im-27}
+		\end{figure}
+	\end{center}
+	$$\begin{cases}
+		\phi_{S} (\vec{ E _ {0}}) = E_0 (r) \cdot 2 \pi r L \\
+		Q_{int} = \lambda \, L
+	\end{cases}$$
+	Dalla definizione di flusso: $\Phi$ = Campo esterno (elettrico) $\cdot$ superficie attraversata
+	$$E_0 (r) = 2 \pi r L= \frac{\lambda L}{\varepsilon_{0}}$$
+	Dove $2 \pi r L$ è la superficie esterna.
+	$$ E_0(r) = \frac{\lambda}{2\pi \varepsilon_0 r} $$
+	\subsubsection{Campo in prossimità di una grande lamina piana uniformemente carica}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{28.png}
+			\caption{Lamina piana}
+			\label{fig:im-28}
+		\end{figure}
+	\end{center}
+	Nel disegno sigma è la \textbf{densità superficiale di carica}, che dice quanta carica per area unitaria.
+	\begin{itemize}
+		\item Se $E$ dipende dalla posizione, può dipendere soltanto dalla distanza $\frac{D}{2}$ dal piano
+		\item Il flusso attraverso la superficie laterale è nullo
+	\end{itemize}
+	$$\begin{cases}
+		\Phi_S (\vec{ E _ {0}}) = 2 A E_0 \\
+		Q_{int} = \sigma A
+	\end{cases}$$
+	Dove $S$ è la superficie totale del cilindro, non quella laterale.\\
+	Notiamo inoltre che raddoppia il campo uscente dall’area coperta, essendo due superfici: davanti e dietro; Per questo nella formula moltiplichiamo $E_0$ con $2 \cdot A$.
+	$$\Rightarrow E_0 \times 2A = \frac{\sigma A}{\varepsilon_0} = \frac{Q_{int}}{\varepsilon_{0}} $$
+	$$\downarrow \quad \textbf{Legge di gauss} = \frac{Q}{\varepsilon_{0}}$$
+	$$ \boxed{E_0 = \frac{\sigma}{2 \varepsilon_{0}}}$$
+	\begin{center}
+		Campo Uniforme
+	\end{center}
+	\subsubsection{Sfera uniformemente carica}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{29.png} 
+			\caption{}
+			\label{fig:im-29}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{30.png}
+			\caption{}
+			\label{fig:im-30}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image4}
+	\end{figure}
+	$$ \rho = \frac {Q}{4 \pi r _ {0} ^ {3} / 3} $$
+	Dove il denominatore indica il \textbf{volume della sfera}.\\
+	Densità di carica, all’interno della sfera sono distribuite.\\\\
+	Per simmetria ci aspettiamo che $E$ abbia soltanto una componente radiale $E_r$ e che il suo modulo dipenda solo dalla distanza $r$ dal centro della sfera.
+	\begin{itemize}
+		\item Se $r > r_0$ ovvero fuori dalla sfera:\\
+		$$ E _ {r} 4 \pi r ^ {2} = \frac {Q}{\varepsilon_ {0}} \quad \longrightarrow \quad E _ {r} = \frac {Q}{4 \pi \varepsilon_ {0} r ^ {2}} $$
+		\item Se $r < r_0$ ovvero dentro alla sfera:\\
+		$$ Q _ {int} = \rho \frac {4 \pi r ^ {3}}{3} = \frac {Q}{4 \pi r _ {0} ^ {3} / 3} \frac {4 \pi r ^ {3}}{3} = Q \frac {r ^ {3}}{r _ {0} ^ {3}} $$
+		$$ E _ {r} 4 \pi r ^ {2} = \frac {Q \frac {r ^ {3}}{r _ {0} ^ {3}}}{\varepsilon_ {0}} \quad \longrightarrow \quad  \underset{\textbf{Dentro la sfera il campo aumenta man mano che ci si allontana dal centro}}{E _ {r} = \frac {Q r}{4 \pi \varepsilon_ {0} r _ {0} ^ {3}}} $$
+	\end{itemize}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{31.png}
+			\caption{Dove $r_0$ indica il raggio della sfera}
+			\label{fig:im-31}
+		\end{figure}
+	\end{center}
+	$E_r = \frac{Q}{2 \pi \varepsilon_{0} r^2}$ (Vedi legge di Coulomb)All’esterno della superficie il campo elettrico è identico a quello generato da una particella di carica $Q$ posta nel centro della sfera.\\\\
+	In generale si dimostra facilmente che il campo all’esterno di una distribuzione di carica a simmetria sferica è diretto radialmente ed è lo stesso che si avrebbe se la carica totale fosse concentrata nel centro della sfera (provare per esercizio $\rho(\mathbf{r}) = \rho(r)$).
+	\subsubsection{Doppio strato piano}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{32.png}
+			\caption{}
+			\label{fig:im-32}
+		\end{figure}
+	\end{center}
+	Prima di tutto, calcolato il campo dato da lamina:
+	$$\boxed{\left|E_1\right| = \left|E_2\right| = \frac{\sigma}{2 \varepsilon_{0}}}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{33.png}
+			\caption{}
+			\label{fig:im-33}
+		\end{figure}
+	\end{center}
+	Le due frecce nel disegno indicano che all'interno si sommano, mentre invece all'esterno si annullano.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{34.png} 
+			\caption{}
+			\label{fig:im-34}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{35.png}
+			\caption{In linea teorica il campo elettrico nel vuoto non si attenua}
+			\label{fig:im-35}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image5}
+	\end{figure}
 	\subsection{Potenziale Elettrico}
+	Il potenziale elettrostatico non è altro che il lavoro legato al campo elettrico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{36.png}
+			\caption{}
+			\label{fig:im-36}
+		\end{figure}
+	\end{center}
+	Consideriamo il lavoro compiuto dalla forza elettrica quando una particella di prova di carica $q$ viene spostata in un campo elettrico $E$.\\\\
+	Per fare un paragone nel caso del lavoro in meccanica, $E$ "si comporta come la forza di gravità".\\\\
+	La carica $q$ subirà una forza, ci chiediamo quale sia il lavoro associato alla forza $Q\cdot E$.
+	$$ dL = \vec{F} \cdot \vec{dl} = q \vec{E_0} \cdot \vec{dl} $$
+	Dove $dL$ è un contributo infinitesimo al lavoro.\\\\
+	Lavoro eseguito su una carica (che può essere non unitaria), la renderemo successivamente unitaria per rendere il concetto più universale:
+	$$ L_{A \rightarrow B} \equiv \int_{A}^{B} dL = \int_{A}^{B} \vec{F} \cdot \vec{dl} = q \int_{A}^{B} \vec{E_0} \cdot \vec{dl} $$
+	$ L_{A \rightarrow B}$: Per avere lavoro complessivo lungo la traiettoria.\\
+	Un lavoro è positivo quando lo spostamento è nello stesso verso della forza\\\\
+	Possiamo definire il lavoro per unità di carica (Quando carica di prova $q$ si sposta da A a B):
+	$$ \mathscr{L}_{A \rightarrow B} = \frac{L}{q} = \int_{A}^{B} \vec{E_0} \cdot \vec{dl} $$
+	Quindi per ogni tratto infinitesimo $dl$ faccio un prodotto scalare, poi li sommo con integrale.\\\\
+	Consideriamo il caso del campo generato da una carica puntiforme $Q$:
+	$$ \vec{E_0}(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r^2} \hat{r} $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{37.png}
+			\caption{Dove $E_0$ indica il campo generato da $Q$}
+			\label{fig:im-37}
+		\end{figure}
+	\end{center}
+	$$ \hat{r} \cdot \vec{dl} = dr $$
+	$$ d\mathscr{L} = \vec{E_0} \cdot \vec{dl} = E_0 \,dr $$
+	$$  \mathscr{L}_{A \rightarrow B} = \int_{A}^{B} d\mathscr{L} = \frac{Q}{4\pi \varepsilon_0} \int_{A}^{B} \frac{dr}{r^2}  $$
+	$$ = \frac{Q}{4\pi \varepsilon_0} \left[ -\frac{1}{r} \right]_{r_A}^{r_B}  $$
+	La scrittura soprastante indica un integrale definito, Torricelli.
+	$$ \Downarrow$$
+	$$\boxed{ \mathscr{L}_{A \rightarrow B} = \frac{Q}{4\pi \varepsilon_0} \left[ \frac{1}{r_A} - \frac{1}{r_B} \right]} $$
+	Non dipende dal particolare cammino scelto per andare da A a B $\Rightarrow$ Il campo elettrostatico è \textbf{conservativo}, ovvero non viene dissipata energia ma si trasforma in potenziale e può essere riutilizzata.\\\\\\
+	Se definiamo una funzione della distanza $r$ dalla carica $Q$:
+	$$ V_0(r) = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r} + c $$
+	Dove $c$ è una costante arbitraria.\\
+	Qui stiamo generalizzando la formula di prima, la costante deriva dall’integrale indefinito.\\
+	La tensione diminuisce esponenzialmente con la distanza dalla carica che emette il campo\\
+	Quando misuriamo vicino a $Q$ la tensione sarà alta, lontano è più bassa e cala in modo esponenziale.\\\\
+	Il lavoro che serve per spostare una carica unitaria da A a B è dato dalla differenza del potenziale elettrostatico tra i due punti:
+	$$ \mathcal{L}_{A \to B} = V_0(A) - V_0(B) $$
+	$\uparrow$Potenziale elettrostatico per il campo elettrico generato da una carica puntiforme.
+	$$ \boxed{\int_{A}^{B} \vec{E_0} \cdot d\vec{l} = V_0(A) - V_0(B)} $$
+	Questo ha \textbf{validità generale}.\\
+	$\uparrow$Lavoro che il campo compie per spostare una carica unitaria da A a B (si misura in $\frac{J}{C}$ = Volt).\\\\
+	Il potenziale corrisponde all’energia potenziale per unità di carica.\\
+	Circuitazione integrale riferita ad un percorso chiuso
+	$$ \oint \vec{E_s} \cdot d\vec{l} = 0 $$
+	Deduciamo quindi che il campo elettrostatico è conservativo:\\
+	$ = V(A) - V(A) $ ovvero per un percorso chiuso, il lavoro è nullo.
+	$$ \boxed{\int_{A}^{B} \vec{E_{0}} \cdot d\vec{l} = V_{0}(A) - V_{0}(B)} $$
+	$\uparrow$Lavoro che il campo compie per spostare una carica unitaria da A a B.\\\\
+	Quindi se A è un punto di riferimento e P il punto generico di coordinate $(x,y,z)$ si può scrivere:
+	$$ V_{0}(x, y, z) = - \int_{A}^{P} \vec{E_{0}} \cdot d\vec{l} + V_{0}(A) $$
+	È comodo scegliere una posizione di riferimento nella quale porre il potenziale uguale a zero.\\
+	Riferimento, perchè il potenziale è sempre una DIFFERENZA. \\
+	Il terminale della massa (riferimento 0V) in realtà contiene sempre cariche, ci interessa quale sia la diversità di cariche fra questo e un terminale positivo.\\\\
+	Se le cariche sorgenti del campo elettrico sono tutte al finito, solitamente si assume $V(\infty) = 0$\\\\
+	Campo generato da una carica puntiforme $Q$:
+	$$ V_{0}(r) = \frac{1}{4\pi \varepsilon_{0}} \frac{Q}{r} $$
+	Lavoro fatto dal campo per portare una carica unitaria da P a $\infty$:
+	$$ V_{0}(x, y, z) = \int_{P}^{\infty} \vec{E_{0}} \cdot d\vec{l} $$
+	\subsubsection{Potenziale di una particella di prova nel campo di un numero qualsiasi di cariche puntiformi}
+	Supponiamo che la particella di prova si trovi nel campo generato da due cariche puntiformi $q_1$ e $q_2$. \\
+	Per il principio di sovrapposizione, la forza elettrica $\mathbf{F}$ agente sulla particella di prova è:
+	$$ \vec{\mathbf{F}} = q_0 \vec{\mathbf{E}} = q_0 (\vec{\mathbf{E}}_1 + \vec{\mathbf{E}}_2) $$
+	Il lavoro compiuto da $\mathbf{F}$ quando la particella di prova viene portata da $a$ e $b$ è
+	$$ \int_a^b \vec{\mathbf{F}} \cdot d\vec{\ell} = \int_a^b q_0 \left(\vec{\mathbf{E}}_1 + \vec{\mathbf{E}}_2\right) \cdot d\vec{\ell} $$
+	$$ = q_0 \left[ \int_a^b \vec{\mathbf{E}}_1 \cdot d\vec{\ell} + \int_a^b \vec{\mathbf{E}}_2 \cdot d\vec{\ell} \right]  $$
+	Quindi il lavoro può essere suddiviso in due contributi, ciascuno dei quali è indipendente dal cammino percorso tra $a$ e $b$ (è del tipo calcolato prima). \\
+	Quindi anche la somma è indipendente dal percorso e la forza $\mathbf{F}$ è conservativa. \\
+	Ovviamente anche il campo elettrostatico $\mathbf{E} = \frac{\mathbf{F}}{q_0}$ è conservativo.
+	$$ V(\mathbf{r}) = \frac{1}{4\pi\varepsilon_0} \left( \frac{q_1}{r_1} + \frac{q_2}{r_2} \right) \quad \text{Con } V(\infty) = 0 $$
+	$r_1$ e $r_2$ sono le distanze della carica di prova dalle cariche 1 e 2
+	$$ V = \frac {1}{4 \pi \varepsilon_ {0}} \sum \frac {q _ {i}}{r _ {i}} $$
+	$$ U = q _ {0} V $$
+	\subsubsection{Distribuzione continua di carica}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{38.png}
+			\caption{}
+			\label{fig:im-38}
+		\end{figure}
+	\end{center}
+	Stiamo generalizzando dal caso discreto al caso continuo sostituendo la sommatoria con un integrale
+	$$ V _ {0} (\vec {r}) = \frac {1}{4 \pi \varepsilon_ {0}} \int_ {\tau} \frac {\rho (x ^ {\prime} , y ^ {\prime} , z ^ {\prime}) \, d \tau ^ {\prime}}{| \vec {r} - \vec {r} ^ {\prime} |} $$
+	$$ V _ {0} (\vec {r}) = \frac {1}{4 \pi \varepsilon_ {0}} \int_ {\Sigma} \frac {\sigma (x ^ {\prime} , y ^ {\prime} , z ^ {\prime}) d S ^ {\prime}}{| \vec {r} - \vec {r} ^ {\prime} |} $$
+	$$ V _ {0} (\vec {r}) = \frac {1}{4 \pi \varepsilon_ {0}} \int_ {\Lambda} \frac {\lambda (x ^ {\prime} , y ^ {\prime} , z ^ {\prime}) d l ^ {\prime}}{| \vec {r} - \vec {r} ^ {\prime} |} $$
+	In fisica atomica si usa spesso come unità di misura dell’energia l’\textbf{elettronvolt} ($eV$).
+	$$ 1 \mathrm{eV} = (1.6 \times 10^{-19} \mathrm{C}) (1 \mathrm{V}) = 1.6 \times 10^{-19} \mathrm{J} $$
+	rappresenta l’energia guadagnata da un elettrone che attraversi una differenza di potenziale di 1 $V$.
+	\subsubsection{Dipolo elettrico e potenziale elettrico}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{39.png}
+			\caption{}
+			\label{fig:im-39}
+		\end{figure}
+	\end{center}
+	$$ \vec {P} = q \vec {\delta} $$
+	Applichiamo la sommatoria, un termine è positivo e l’altro negativo
+	$$ V _ {0} (P) = \frac {1}{4 \pi \varepsilon_ {0}} \frac {q}{r _ {+}} - \frac {1}{4 \pi \varepsilon_ {0}} \frac {q}{r _ {-}} = \frac {q}{4 \pi \varepsilon_ {0}} \frac {(r _ {-} - r _ {+})}{r _ {-} \cdot r _ {+}} $$
+	$$ r \gg \delta \Rightarrow r _ {-} r _ {+} \approx r ^ {2}, (r _ {-} - r _ {+}) \approx \delta \cos \alpha $$
+	$$ V _ {0} (P) = \frac {q \delta \cdot \cos \alpha}{4 \pi \varepsilon_ {0} r ^ {2}} = \frac {P \cdot \cos \alpha}{4 \pi \varepsilon_ {0} r ^ {2}} = \frac {P \cdot r \cos \alpha}{4 \pi \varepsilon_ {0} r ^ {3}} $$
+	$$ V _ {0} (P) = \frac {1}{4 \pi \varepsilon_ {0}} \frac {\vec {P} \cdot \vec {r}}{r ^ {3}} $$
+	$$ V _ {0} (x, y, z) = \frac {P}{4 \pi \varepsilon_ {0}} \frac {z}{(x ^ {2} + y ^ {2} + z ^ {2}) ^ {\frac{3}{2}}} $$
+	\subsubsection{Energia potenziale di un dipolo in un campo elettrico uniforme}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{40.png}
+			\caption{}
+			\label{fig:im-40}
+		\end{figure}
+	\end{center}
+	$$ x _ {+} = x _ {0} + a \cos \vartheta $$
+	$$ x _ {-} = x _ {0} - a \cos \vartheta $$
+	Per un campo uniforme nella direzione  $x$:
+	$$ V (x) = - E \cdot x + V _ {0} $$
+	$$ U _ {+} = q \left(- E \cdot x _ {+} + V _ {0}\right) \quad U _ {-} = - q \left(- E \cdot x _ {-} + V _ {0}\right) $$
+	$$ U = U _ {+} + U _ {-} = - 2 \cdot a \cdot q \cdot \cos \theta \cdot E $$
+	$$ U = - \boldsymbol {p} \cdot \boldsymbol {E} $$
+	L’energia potenziale di un dipolo elettrico in un campo uniforme non dipende dalla sua posizione.\\
+	L’energia potenziale dipende dall’orientamento del momento del dipolo rispetto alla direzione del campo ed è minima quando il dipolo è orientato parallelamente al campo.\\\\
+	Le forze esterne che agiscono sul dipolo sono $F_{+} = qE$ e $F_{-} = -qE$. \\
+	È evidente che il risultante delle forze esterne è nullo.
+	$$ \vec{\tau} = \vec{r}_{+} \times \vec{F}_{+} + \vec{r}_{-} \times \vec{F}_{-} = \vec{r}_{+} \times (+q)\vec{E} + \vec{r}_{-} \times (-q)\vec{E} = q(\vec{r}_{+} - \vec{r}_{-}) \times \vec{E} $$
+	$r_{+} - r_{-}$ è il vettore che va dalla carica negativa a quella positiva, quindi si può scrivere:
+	$$ \vec{\tau} = \vec{p} \times \vec{E} $$
+	Il dipolo non subisce alcun effetto da parte del campo se è allineato con esso, ossia se $p$ è parallelo e concorde oppure opposto a $E$ (solo nel primo caso si ha una situazione di equilibrio stabile) negli altri casi sul dipolo agisce un momento meccanico che tende ad allineare il dipolo al campo.
+	\subsubsection{Potenziale del campo generato da una distribuzione lineare di carica}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{41.png}
+			\caption{}
+			\label{fig:im-41}
+		\end{figure}
+	\end{center}
+	$$ V(\mathbf{r}) = - \int_{\mathbf{r}_A}^{\mathbf{r}} \mathbf{E}(\mathbf{r}^\prime) \cdot d\mathbf{r}^\prime + V(\mathbf{r}_A) $$
+	Ponendo $V(r_A) = 0$:
+	$$ \mathbf{E}(\mathbf{r}) = \frac{\lambda}{2\pi\epsilon_0} \frac{1}{r} \hat{r} $$
+	$$ V(r) = - \frac{\lambda}{2\pi\epsilon_0} \int_{r_A}^{r} \frac{dr’}{r’} $$
+	$$ V(r) = \frac{-\lambda}{2\pi\epsilon_0} \ln \frac{r}{r_A} $$
+	\subsubsection{Relazione tra campo e potenziale elettrico}
 	\subsection{Energia Potenziale Elettrica}
 	\subsection{Energia Elettrostatica}
 	\subsection{Condensatori}
