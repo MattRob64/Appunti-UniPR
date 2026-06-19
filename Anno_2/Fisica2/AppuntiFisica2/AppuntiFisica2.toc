@@ -37,7 +37,7 @@
 \contentsline {subsubsection}{\numberline {1.13.9}Campo elettrico nelle immediate vicinanze di un conduttore}{27}{subsubsection.1.13.9}%
 \contentsline {subsubsection}{\numberline {1.13.10}Conduttori in equilibrio elettrostatico (2)}{27}{subsubsection.1.13.10}%
 \contentsline {paragraph}{\numberline {1.13.10.1}Conduttore cavo}{28}{paragraph.1.13.10.1}%
-\contentsline {subsection}{\numberline {1.14}Conduttori, Capacità e Dielettrici}{28}{subsection.1.14}%
+\contentsline {subsection}{\numberline {1.14}Conduttori e Capacità}{28}{subsection.1.14}%
 \contentsline {subsubsection}{\numberline {1.14.1}Capacità di un conduttore isolato}{28}{subsubsection.1.14.1}%
 \contentsline {subsubsection}{\numberline {1.14.2}Capacità di una sfera conduttrice isolata}{29}{subsubsection.1.14.2}%
 \contentsline {subsubsection}{\numberline {1.14.3}Condensatore}{30}{subsubsection.1.14.3}%
@@ -47,30 +47,35 @@
 \contentsline {subsubsection}{\numberline {1.14.7}Energia Elettrostatica}{32}{subsubsection.1.14.7}%
 \contentsline {subsubsection}{\numberline {1.14.8}Energia elettrostatica immagazzinata in un condensatore}{34}{subsubsection.1.14.8}%
 \contentsline {subsubsection}{\numberline {1.14.9}Densità di energia elettrostatica di un campo elettrico}{34}{subsubsection.1.14.9}%
-\contentsline {section}{\numberline {2}Elettrodinamica}{35}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Corrente Elettrica}{35}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Resistenza}{35}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Forza Elettromotrice}{35}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Energia Elettrica e Potenza}{35}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Leggi di Kirchoff}{35}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Circuiti RC}{35}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Magnetostatica}{35}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{35}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{35}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Moti della Particella}{35}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{35}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{35}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{35}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{35}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{35}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{35}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{35}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{35}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{35}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{35}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{35}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{35}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{35}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{35}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{35}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{35}{subsection.5.3}%
+\contentsline {subsection}{\numberline {1.15}Dielettrici}{34}{subsection.1.15}%
+\contentsline {subsubsection}{\numberline {1.15.1}Proprietà elettrostatica dei dielettrici}{34}{subsubsection.1.15.1}%
+\contentsline {subsubsection}{\numberline {1.15.2}Descrizione molecolare dei dielettrici}{36}{subsubsection.1.15.2}%
+\contentsline {paragraph}{\numberline {1.15.2.1}Polarizzazione per deformazione}{36}{paragraph.1.15.2.1}%
+\contentsline {paragraph}{\numberline {1.15.2.2}Polarizzazione per orientamento}{36}{paragraph.1.15.2.2}%
+\contentsline {section}{\numberline {2}Elettrodinamica}{39}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Corrente Elettrica}{39}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Resistenza}{39}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Forza Elettromotrice}{39}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Energia Elettrica e Potenza}{39}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Leggi di Kirchoff}{39}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Circuiti RC}{39}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Magnetostatica}{39}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{39}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{39}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Moti della Particella}{39}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{39}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{39}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{39}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{39}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{39}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{39}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{39}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{39}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{39}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{39}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{39}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{39}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{39}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{39}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{39}{subsection.5.3}%

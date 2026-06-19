@@ -879,7 +879,7 @@
 			\label{fig:im-47}
 		\end{figure}
 	\end{center}
-	\subsection{Conduttori, Capacità e Dielettrici}
+	\subsection{Conduttori e Capacità}
 	\subsubsection{Capacità di un conduttore isolato}
 	\begin{center}
 		\begin{figure}[h]
@@ -1069,4 +1069,127 @@
 	Questa relazione suggerisce la possibilità di considerare l’energia elettrostatica di una distribuzione di carica come associata al campo elettrico prodotto dalla distribuzione di carica stessa.\\\\
 	Questo concetto risulterà utile nello studio delle onde elettromagnetiche. \\
 	La grandezza fisica che si propaga è l’energia associata al campo elettrico e al campo magnetico.
+	\subsection{Dielettrici}
+	\subsubsection{Proprietà elettrostatica dei dielettrici}
+	Prendiamo in considerazione ciò che accade quando si riempie lo spazio con un isolante. Consideriamo un condensatore piano con il vuoto tra le armature.\\
+	Carichiamo il condensatore e poi togliamo il collegamento con la batteria in modo che le cariche presenti sulle armature non possano variare.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{58.png}
+			\caption{}
+			\label{fig:im-58}
+		\end{figure}
+	\end{center}
+	$$ V _ {A} - V _ {B} = \Delta V _ {0} $$
+	$$ C _ {0} = \frac {Q}{\Delta V _ {0}} = \frac {\varepsilon_ {0} S}{d} $$
+	Ora Inseriamo il materiale isolante nella regione compresa tra le armature e misuriamo nuovamente la differenza di potenziale $\Delta V$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{59.png}
+			\caption{}
+			\label{fig:im-59}
+		\end{figure}
+	\end{center}
+	$$ \Delta V \leq \Delta V _ {0} $$
+	La diminuzione di differenza di potenziale in seguito all’inserimento dell’isolante non può essere dovuta ad una riduzione della carica presente sulle armature perché ciascuna armatura è isolata.\\
+	Si vede che il rapporto $\frac{\Delta V_{0}}{\Delta V}$ dipende dal tipo di materiale.\\\\
+	\textbf{Gli isolanti vengono spesso chiamati dielettrici} e questo rapporto è la \textbf{costante dielettrica} relativa $k$:
+	$$ k = \frac {\Delta V _ {0}}{\Delta V} > 1 \text{ per tutti i materiali isolanti} $$
+	$$ \varepsilon = k \varepsilon_ {0} \quad \text{Costante dielettrica del materiale} \quad \text{(stesse dimensioni di } \varepsilon_ {0}, \text{ si misura in } F/m) $$
+	La costante dielettrica dell’aria è quasi esattamente uguale a quella del vuoto:
+	$$ \Delta V _ {0} = E _ {0} d \quad \Delta V = E d $$
+	$$ k = \frac {\Delta V _ {0}}{\Delta V} = \frac {E _ {0} d}{E d} = \frac {E _ {0}}{E} $$
+	$$ E = \frac {E _ {0}}{K} $$
+	Come la differenza di potenziale, anche l’intensità del campo elettrico si riduce di un fattore $1/k$ quando viene inserito un dielettrico.
+	$$ k = \frac {\Delta V _ {0}}{\Delta V} = \frac {Q / C _ {0}}{Q / C} = \frac {C}{C _ {0}} \qquad\qquad C = K C _ {0} $$
+	L’inserimento di un dielettrico fa aumentare la capacità di un fattore $k$.\\\\
+	Nel caso dell’energia di un condensatore $U = \frac{1}{2} QV$
+	$$ k = \frac{\Delta V_0}{\Delta V} = \frac{2 U_0 / Q}{2 U / Q} = \frac{U_0}{U} $$
+	$$ U = \frac{U_0}{k} $$
+	L’energia del condensatore si riduce di in seguito all’inserimento del dielettrico.\\
+	Siccome $U$ diminuisce quando il dielettrico viene inserito, c’è una forza elettrica che tende ad attirare il dielettrico nella regione compresa tra le armature.\\\\
+	Se invece inseriamo il dielettrico lasciando il generatore collegato la differenza di potenziale tra le armature non cambia perché sono collegate al generatore
+	$$ \Delta V = \Delta V_0 $$
+	Per mantenere la differenza di potenziale il generatore è costretto a trasferire una certa quantità di carica da un’armatura all’altra.
+	$$ Q = k Q_0 $$
+	$$ C = k \frac{Q_0}{\Delta V_0} = k C_0 $$
+	La capacità è la stessa di quella che abbiamo trovato inserendo il dielettrico dopo aver scollegato il generatore.
+	\subsubsection{Descrizione molecolare dei dielettrici}
+	Quando un dielettrico viene posto tra le armature di un condensatore carico non connesso alla batteria di carica, $E$ diminuisce benché la $Q$ carica presente su di esse rimanga costante.\\
+	Quando il dielettrico viene inserito tra le armature senza scollegare il generatore, il potenziale e quindi il campo resta costante anche se la quantità di carica Q su ciascuna armatura aumenta.\\\\
+	Questa fenomenologia può essere spiegata solo considerando il contributo di altre cariche, le \textbf{cariche di polarizzazione}.
+	\paragraph{Polarizzazione per deformazione}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{60.png}
+			\caption{}
+			\label{fig:im-60}
+		\end{figure}
+	\end{center}
+	In assenza di campi elettrici esterni il baricentro della carica negativa coincide con la posizione del nucleo (baricentro della carica positiva).\\\\
+	Se l’atomo viene posto in un campo elettrico esterno la forza esercitata dal campo sul nucleo ha verso opposto rispetto alla forza esercitata dal campo sugli elettroni.\\\\
+	All’equilibrio la posizione del nucleo e del baricentro della carica negativa non coincidono a causa di due insiemi di forze: (i) le forze che agiscono sul nucleo e sugli elettroni per effetto di $E$ (e che tendono a separare il nucleo dagli elettroni) e (ii) le forze che agiscono tra il nucleo e gli elettroni (tendono a far coincidere il nucleo e il baricentro della carica negativa).\\\\
+	L’atomo presenta un momento di dipolo indotto $\mathbf{p_d}$ e viene detto polarizzato.
+	\paragraph{Polarizzazione per orientamento}
+	Alcune molecole possiedono momenti di dipolo permanenti e vengono perciò chiamate molecole polari. \\
+	Detta in altre parole: Alcune molecole hanno carica concentrata più su un punto, quindi hanno faccia positiva e faccia negativa.\\
+	In una molecola polare, il baricentro della carica positiva non coincide con il baricentro della carica negativa nemmeno in assenza di campo elettrico. Es. molecola dell’acqua.\\\\
+	Se non c’è alcun campo elettrico esterno, questi dipoli molecolari hanno un orientamento casuale.
+	Quando un dipolo di momento p viene posto in un campo $E$, il campo tende ad allineare $p$ nella direzione di $E$. \\
+	Nel caso dei dipoli molecolari l’allineamento non è completo a causa del moto di agitazione termica delle molecole.\\
+	Quindi il momento medio di dipolo nella direzione di $E$ decresce all’aumentare della temperatura.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{61.png}
+			\caption{}
+			\label{fig:im-61}
+		\end{figure}
+	\end{center}
+	Supponiamo che uno strato di dielettrico venga posto nel campo uniforme tra le armature di un condensatore piano. \\
+	Il dielettrico si polarizza perché il campo induce dei dipoli (pol. deformazione) e i dipoli permanenti, se ve ne sono, vengono allineati al campo (pol. orientamento).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{62.png}
+			\caption{}
+			\label{fig:im-62}
+		\end{figure}
+	\end{center}
+	Sulle due facce del dielettrico adiacenti alle armature compare una distribuzione superficiale di carica di densità $\sigma_{p}$.\\
+	Il segno della carica indotta su ciascuna faccia del dielettrico è opposto a quello della carica che si trova sull’armatura adiacente.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{63.png}
+			\caption{}
+			\label{fig:im-63}
+		\end{figure}
+	\end{center}
+	La carica localizzata sulle armature non è stata influenzata dall’inserimento del dielettrico ($\sigma_{\ell} = \sigma$)
+	$$ \vec{\mathrm{E}} = \vec{\mathrm{E}}_{0} + \vec{\mathrm{E}}_{p} $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{64.png}
+			\caption{}
+			\label{fig:im-64}
+		\end{figure}
+	\end{center}
+	Definiamo i versori per rendere le grandezze scalari:
+	$$ E\hat{\mathbf{i}} = E_0\hat{\mathbf{i}} + (-E_p)\hat{\mathbf{i}} = (E_0 - E_p)\hat{\mathbf{i}} $$
+	$$ E = E_0 - E_p $$
+	$$ E_0 = \frac{|\sigma_\ell|}{\varepsilon_0} $$
+	$$ E_p = \frac{|\sigma_p| }{\varepsilon_0 }  $$
+	$$ E = \frac{|\sigma_\ell| - |\sigma_p|}{\varepsilon_0} $$
+	Dalla definizione di $k$:
+	$$ E = \frac{E_0}{k} $$
+	$$ \frac{|\sigma_\ell|}{k\varepsilon_0} = \frac{|\sigma_\ell| - |\sigma_p|}{\varepsilon_0} $$
+	$$ \left| \sigma_ {p} \right| = \frac {k - 1}{k} \left| \sigma_ {\ell} \right| <   \sigma_ {\ell} = \sigma $$
+	Il campo dovuto alla carica libera presente sulle armature induce una carica di polarizzazione di segno opposto sulle facce adiacenti del dielettrico.\\
+	Il contributo al campo dovuto alla carica di polarizzazione (sulle superfici del dielettrico) è opposto al contributo al campo dovuto alla carica libera (sulle armature) e quindi il campo elettrico risulta ridotto a causa della presenza del dielettrico (ovviamente lo stesso vale per la differenza di potenziale).\\\\
+	Quando invece si introduce il dielettrico tra le armature del condensatore lasciandolo collegato al generatore non si osserva alcuna diminuzione né del campo elettrico né del potenziale perché la comparsa delle cariche di polarizzazione è compensata dal simultaneo aumento delle cariche libere sulle armature.
 \end{document}
