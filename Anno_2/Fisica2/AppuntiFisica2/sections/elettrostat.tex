@@ -751,7 +751,322 @@
 	$$ V(r) = - \frac{\lambda}{2\pi\epsilon_0} \int_{r_A}^{r} \frac{dr’}{r’} $$
 	$$ V(r) = \frac{-\lambda}{2\pi\epsilon_0} \ln \frac{r}{r_A} $$
 	\subsubsection{Relazione tra campo e potenziale elettrico}
-	\subsection{Energia Potenziale Elettrica}
-	\subsection{Energia Elettrostatica}
-	\subsection{Condensatori}
+	$$ V(P) = - \int_{A}^{P} \boldsymbol{E} \cdot \boldsymbol{d} \boldsymbol{l} + V(A) $$
+	Se è noto $\mathsf{E}(x,y,z)$, è quindi possibile calcolare $V(x,y,z)$. \\
+	Pensiamo ora all’operazione inversa: se conosciamo $V(x,y,z)$ è possibile calcolare $\mathsf{E}(x,y,z)$?\\\\
+	Supponiamo di calcolare la differenza di potenziale tra due punti P = $(x + \Delta x, y, z)$ e $A = (x, y, z)$. \\
+	I due punti distano $\Delta x$ e sono allineati negli altri assi.\\
+	Se prendiamo $dl = dx^\prime i$
+	$$ V(x + \Delta x, y, z) - V(x, y, z) = - \int_{A}^{P} E \cdot d l = - \int_{x}^{x + \Delta x} E_{x}(x^\prime, y, z) \, dx^\prime $$
+	Considerando uno spostamento $\Delta x$ molto piccolo (quindi $E_{x}$ pressoché costante (Quindi è possibile estrarlo dall'integrale) tra $x$ e $x + \Delta x$):
+	$$ -E_{x} \int_{x}^{x + \Delta x} dx’ = - E_{x} \left[ (x + \Delta x) - (x) \right] = - E_{x} \Delta x $$
+	$$ V(x + \Delta x, y, z) - V(x, y, z) \approx - E_{x} \Delta x $$
+	Se dividiamo per $\Delta x$ e prendiamo il limite per $\Delta x$ che tende a 0 si ha
+	$$ \lim_{\Delta x \to 0} \left( \frac{V(x + \Delta x, y, z) - V(x, y, z)}{\Delta x} \right) = - E_{x} $$
+	quindi:
+	$$ E_{x} = - \frac{\partial V}{\partial x} $$
+	Variazioni infinitesime del potenziale nelle direzioni $y$ e $z$ danno risultati analoghi. \\
+	Quindi:
+	$$ E = - \left(\frac {\partial V}{\partial x} i + \frac {\partial V}{\partial y} j + \frac {\partial V}{\partial z} k\right) $$
+	Se si conosce un’espressione del potenziale $V$ dovuto a una distribuzione di carica, si può determinare $E$.\\
+	Definendo l’operatore gradiente:
+	$$\boxed{\text{grad} = \left(\frac{\partial}{\partial x} i + \frac{\partial}{\partial y} j + \frac{\partial}{\partial z} k\right)}$$
+	Il gradiente non è altro che una derivata in più dimensioni contemporaneamente.\\
+	Quindi possiamo calcolare il campo elettrico se si conosce potenziale in un punto:
+	$$ E = - \text{grad } V $$
+	\textbf{IMPORTANTE}: Il campo elettrostatico è esprimibile come gradiente di uno scalare perché è un campo conservativo.\\\\
+	Risultati analoghi possono essere ottenuti per altri tipi di coordinate oltre a quelle cartesiane. \\
+	Ad esempio, se una distribuzione di carica ha simmetria sferica, $V$ dipende solo dalla coordinata radiale $r$ ed $E$ ha soltanto una componente radiale. \\
+	Si ha:
+	$$ E_r = - \frac {\partial V}{\partial r} $$
+	Quando si calcola la derivata parziale di una funzione rispetto a una delle variabili, le altre variabili vengono considerate costanti durante il procedimento.\\
+	Ad esempio nel caso di una carica puntiforme:
+	$$ E _ {r} = - \frac {d}{d r} \frac {q}{4 \pi \varepsilon_ {0} r} = - \frac {q}{4 \pi \varepsilon_ {0}} \left(- \frac {1}{r ^ {2}}\right) = \frac {q}{4 \pi \varepsilon_ {0} r ^ {2}} $$
+	E’ importante notare che per determinare il campo elettrico in un punto non è sufficiente conoscere il valore del potenziale in quel punto, ma è \textbf{necessario} conoscere il potenziale in un intorno del punto considerato.\\
+	Inoltre per determinare il potenziale in un punto non è sufficiente conoscere il valore del campo elettrico in quel punto, ma \textbf{occorre} conoscere il campo elettrico lungo una linea tra il punto di riferimento e il punto considerato.\\\\
+	Dai risultati precedenti si vede che l’unità di misura SI del campo elettrico può essere scritta anche come volt/metro (V/m) oltre che come newton/coulomb (N/C).
+	\subsubsection{Superfici equipotenziali}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{42.png}
+			\caption{}
+			\label{fig:im-42}
+		\end{figure}
+	\end{center}
+	Una superficie equipotenziale è una superficie sulla quale il potenziale è costante. \\
+	Le forze elettriche non compiono lavoro quando una carica si sposta su una superficie equipotenziale.\\
+	All’esterno di una sfera uniformemente carica
+	$$ \boldsymbol {E} _ {r} = \frac {Q \hat {\boldsymbol {r}}}{4 \pi \varepsilon_ {0} r ^ {2}} \qquad \qquad V (r) = \frac {Q}{4 \pi \varepsilon_ {0} r} \qquad \mathrm {Con} \ V (\infty) = 0 $$
+	Quindi $V$ è costante se $r$ è costante.\\\\
+	Le linee di forza di $\mathbf{E}$ sono perpendicolari alle superfici equipotenziali. \\
+	Infatti, se $\mathbf{E}$ avesse una componente tangente ad una superficie equipotenziale, la forza elettrica compierebbe lavoro quando una particella carica si muove sulla superficie. \\
+	Quindi, $\mathbf{E}$ non può avere una componente tangente a una superficie equipotenziale.
+	\subsubsection{Conduttori in equilibrio elettrostatico}
+	\textbf{Conduttore}: oggetto indeformabile all’interno del quale vi sono degli elettroni liberi di muoversi.\\\\
+	Il campo elettrico all’interno di un conduttore in equilibrio elettrostatico è nullo.\\
+	Altrimenti i portatori di carica si muoverebbero sotto l’effetto del campo elettrico. Le cariche si dispongono quindi in modo da realizzare (in media macroscopica) la condizione:
+	$$ \boxed{  \vec{E} = 0  } \quad \text{All’interno, altrimenti ci sarebbe un moto di cariche}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{43.png}
+			\caption{}
+			\label{fig:im-43}
+		\end{figure}
+	\end{center}
+	Dal momento che $E$ è nullo nei punti interni al conduttore allora è nullo su ogni superficie interna. \\
+	Quindi la legge di Gauss comporta che la carica totale racchiusa sia pari a zero per qualunque superficie chiusa, purché completamente interna al conduttore.\\
+	La conclusione è che non ci possono essere eccessi di carica in nessun punto interno di un conduttore, ossia che per un conduttore la densità di carica di volume $p$ deve essere nulla.\\
+	Detta in modo più semplice: le cariche si respingono fra di loro, e il punto più comodo dove andare è dove non ce ne sono altre, quindi nella superficie\\
+	Quindi l’eccesso di carica del conduttore deve essere localizzato sulla superficie del conduttore (con una densità superficiale $\sigma(x,y,z)$).
+	\subsubsection{Campo elettrico nelle immediate vicinanze di un conduttore}
+	Tale campo deve essere diretto perpendicolarmente alla superficie: se infatti il campo avesse una componente tangenziale $E_{t}$, i portatori di carica si muoverebbero lungo la superficie per effetto della forza tangenziale e non vi sarebbero condizioni di equilibrio elettrostatico. \\
+	Dunque il campo elettrico alla superficie di un conduttore ha soltanto la componente normale $E_{n}$.
+	$$ \int_{S} \sigma(x, y, z) \, ds = Q $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{44.png}
+			\caption{}
+			\label{fig:im-44}
+		\end{figure}
+	\end{center}
+	Il cilindro è sufficientemente piccolo perché in esso qualunque variazione di $E$ o della curvatura della superficie del conduttore sia trascurabile.
+	$$  d \phi(\vec{E_0}) \equiv \vec{E_0} \cdot \vec{ds} = \frac{dQ_{int}}{\varepsilon_0} = \frac{ \sigma ds}{\varepsilon_0} $$
+	$$ \downarrow $$
+	$$ E_0 \, ds = \frac{\sigma \, ds}{\varepsilon_0} $$
+	Dove $d \phi(\vec{E_0})$ è detto \textbf{micro-flusso}.\\
+	Densità superficiale di carica, che stiamo riducendo in due dimensioni.
+	$$ \boxed{\vec{E} = \frac{\sigma}{\varepsilon_0} \hat{n} } $$
+	In prossimità dei punti della superficie se $\sigma > 0$ il campo è diretto dalla superficie verso l’esterno, mentre dove $\sigma < 0$ il campo è diretto verso la superficie stessa.
+	\subsubsection{Conduttori in equilibrio elettrostatico (2)}
+	Poiché $E = 0$ all’interno di un conduttore, il volume occupato da un materiale conduttore deve essere una regione equipotenziale.
+	$$ V_b - V_a = - \int_a^b \vec{E} \cdot d\vec{\ell} $$
+	Ovvero, la differenza di potenziale all’interno nulla.\\\\
+	Nel calcolare l’integrale di linea scegliamo il cammino di integrazione in modo che si trovi interamente all’interno del conduttore. \\
+	Siccome $E = 0$ in ogni punto del cammino, l’integrale è nullo e $V_b = V_a$.
+	Quindi tutti i punti del conduttore sono allo stesso potenziale. \\
+	In particolare, la superficie di un conduttore è una superficie equipotenziale. \\
+	Possiamo assegnare un valore del potenziale ad un intero conduttore.
+	\paragraph{Conduttore cavo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{45.png}
+			\caption{}
+			\label{fig:im-45}
+		\end{figure}
+	\end{center}
+	\textbf{Legge di Gauss}: la carica totale sulla superficie interna è nulla.\\\\
+	Ma ciò non esclude la possibilità che sia $\sigma > 0$ su una parte della superficie della cavità e $\sigma < 0$ su un’altra parte, in modo tale che la carica totale sia zero.\\\\
+	Considerando il percorso in figura, se il cammino lungo il quale viene calcolato l’integrale di linea coincide con la linea di forza si avrebbe:
+	$$\oint \vec{ E _ {0}} \cdot \vec{d \ell} \neq 0 \rightarrow  \text{Non c’è carica sulla superficie interna}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{46.png}
+			\caption{Si crea una carica $-Q$, la carica totale deve essere nulla}
+			\label{fig:im-46}
+		\end{figure}
+	\end{center}
+	Se il conduttore esterno è inizialmente scarico, acquista una carica $–Q$ sulla superficie interna e $+Q$ su quella esterna: induzione completa (o totale).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{47.png}
+			\caption{Schermo elettrostatico}
+			\label{fig:im-47}
+		\end{figure}
+	\end{center}
+	\subsection{Conduttori, Capacità e Dielettrici}
+	\subsubsection{Capacità di un conduttore isolato}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{48.png}
+			\caption{}
+			\label{fig:im-48}
+		\end{figure}
+	\end{center}
+	Se trasferiamo una carica elettrica su di un conduttore isolato questa si distribuisce sulla superficie in modo che il conduttore sia equipotenziale.\\
+	Il valore del potenziale (assumiamo che sia nullo all’infinito) dipende da come si distribuiscono le cariche e questo dipende a sua volta dalla forma del conduttore. \\
+	Si può però affermare che se si raddoppia o si dimezza la carica totale $Q$ anche il potenziale raddoppierà o si dimezzerà.
+	$$ Q = C V $$
+	La costante $C$ dipende solo dalla forma e dalle dimensioni del conduttore ed è detta capacità elettrica del conduttore.\\
+	L’unità SI della capacità è il Farad=Coulomb/volt (C/V).
+	Il farad è un’unità di capacità molto grande; la capacità dei \textbf{condensatori} che si trovano nei circuiti elettrici è tipicamente compresa nell’intervallo tra $10^{-12} F = 1pF$ e $10^{-6} F = 1 \mu F$.
+	\subsubsection{Capacità di una sfera conduttrice isolata}
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.55]{49.png}
+		\caption{}
+		\label{fig:im-49}
+	\end{figure}
+	\end{center}
+	Quando mettiamo una carica su di un conduttore non possiamo dire a priori in che modo si distribuirà sulla sua superficie. \\
+	In questo caso però, dato che il conduttore ha simmetria sferica, tutti punti della superficie sono equivalenti tra loro per cui la carica si disporrà in maniera uniforme ($\sigma$ uniforme sulla superficie) (Densità superficiale).
+	$$ V = V _ {0} (p) = \int_ {p} ^ {\infty} E {0} (r) d r = \frac {Q}{4 \pi \varepsilon_ {0}} \int_ {R} ^ {\infty} \frac {1}{r ^ {2}} d r = \frac {Q}{4 \pi \varepsilon_ {0}} \left[ - \frac {1}{r} \right] _ {R} ^ {\infty} = \frac {Q}{4 \pi \varepsilon_ {0} R} $$
+	$$ C = \frac {Q}{V} \underset{\text{Sostituendo il valore di } V}{=} 4 \pi \varepsilon_ {0} R $$
+	Dove $R$ è il raggio, la capacità dipende solo da caratteristiche geometriche.\\\\
+	Oppure fissata origine al centro della sfera, si semplifica integrale di prima:
+	$$ V = V _ {0} (0) = \frac {1}{4 \pi \varepsilon_ {0}} \int_ {S}  \frac{\sigma \, d S}{R} = \frac {1}{4 \pi \varepsilon_ {0} R} \int_ {S} \sigma \, d S = \frac {Q}{4 \pi \varepsilon_ {0} R} $$
+	Esempio: capacità della terra
+	$$ C _ {T} = 4 \pi \varepsilon_ {0} R _ {T} = 4 (3.142) (8.854 \times 10 ^ {- 12} \mathrm {F / m}) (6370 \times 10 ^ {3} \mathrm {m}) = 7.09 \times 10 ^ {- 4} \mathrm {F} = 709 \mu \mathrm {F} $$
+	Fa strano pensare che la capacità della terra sia $709 \mu F$ quando esistono condensatori da $1F$ piccoli come un dito, quelli usano un dielettrico, ma in questo caso stiamo parlando della capacità di un singolo corpo, non di due lamine con un materiale in mezzo.\\\\
+	La capacità della Terra è così grande che è possibile fornirle o sottrarle notevoli quantità di carica senza che il valore del suo potenziale cambi significativamente.\\
+	Per questo motivo si assume che il potenziale della Terra sia costante e a volte lo si prende come riferimento (gli si attribuisce il valore zero).\\ Collegando un conduttore alla Terra (“si effettua la messa a terra”) il suo potenziale si porta al valore \textbf{zero}.\\\\
+	Il potenziale di un conduttore è influenzato dalla presenza di altri conduttori.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{50.png} 
+			\caption{}
+			\label{fig:im-50}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{51.png}
+			\caption{}
+			\label{fig:im-51}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image6}
+	\end{figure}
+	La presenza del conduttore 2 aumenta la capacità del conduttore 1 (per ottenere lo stesso potenziale di prima devo caricare di più 1).\\\\
+	Un caso importante è quello in cui si hanno due conduttori in condizioni di induzione totale. \\
+	Si parla di induzione totale quando tutte le linee di forza del campo elettrico che partono da un conduttore terminano nell’altro conduttore.\\
+	Ciò accade quando un conduttore è totalmente racchiuso dall’altro oppure quando i due conduttori hanno ampie superfici poste a piccola distanza.\\
+	L’induzione totale fa sì che le cariche presenti sulle superfici tra loro affacciate siano di segno opposto ma abbiano lo stesso modulo.
+	\subsubsection{Condensatore}
+	Un condensatore è costituito da due conduttori tra loro isolati posti l’uno vicino all’altro in modo che vi sia induzione totale.\\
+	Indipendentemente dalla loro forma, questi conduttori sono detti “piatti” o “armature”.\\\\
+	Un condensatore può essere caricato collegando i fili connessi alle armature con i morsetti di una batteria o generatore di tensione. \\
+	Quando una batteria è collegata a un condensatore, fa muovere i portatori di carica da un’armatura all’altra. \\
+	La differenza di potenziale $\Delta V$ tra l’armatura positiva e l’armatura negativa è uguale a quella tra i morsetti della batteria. \\
+	Quando si parla della carica $Q$ di un condensatore, si intende il valore assoluto della carica presente su ciascuna armatura.\\\\
+	Come per un conduttore isolato anche per un condensatore, quando si aumenta $\Delta V$ di un certo fattore, $Q$ aumenta dello stesso fattore e viceversa.\\
+	Il rapporto tra queste quantità è chiamato capacità $C$ del condensatore:
+	$$ C = \frac{Q}{\Delta V} $$
+	Per convenzione tutte le grandezze che compaiono nell’equazione sono positive, quindi $C$ è positiva.\\
+	$C$ si misura in Farad.
+	\subsubsection{Condensatore piano}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{52.png}
+			\caption{Condensatore piano}
+			\label{fig:im-52}
+		\end{figure}
+	\end{center}
+	Se le dimensioni dei piatti di un condensatore piano sono maggiori della disianza tra i piatti, la densità superficiale di carica sulle superfici affacciate è uniforme $\sigma = \frac{Q}{A}$.\\\\
+	Dalla legge di Gauss (Prendendo un cilindretto di base $S$ perpendicolare ad una delle 2 armature) se calcoliamo il flusso:
+	$$ \int_{S} \boldsymbol{E} \cdot \boldsymbol{dA} = E(x) S = \frac{\sigma S}{\varepsilon_{0}} $$
+	$$ \boldsymbol{E} = \frac{\sigma}{\varepsilon_{0}} \hat{n} $$
+	Sempre ricordando la legge di Gauss:
+	$$ \Delta V = V = E d = \frac{Q d}{\varepsilon_{0} A} $$
+	$$ C = \frac{Q}{V} = \frac{Q}{\frac{Q d }{\varepsilon_{0} A}} $$
+	$$ C = \frac{\varepsilon_{0} A}{d} $$
+	La capacità di un condensatore piano \textbf{dipende} dall’area dei piatti e dalla loro distanza.
+	\subsubsection{Sistemi di condensatori in parallelo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{53.png}
+			\caption{}
+			\label{fig:im-53}
+		\end{figure}
+	\end{center}
+	$$ Q _ {1} = C _ {1} \Delta V _ {1} = C _ {1} \Delta V $$
+	$$ Q _ {2} = C _ {2} \Delta V _ {2} = C _ {2} \Delta V $$
+	$$ \Delta V _ {1} = \Delta V _ {2} = | V _ {B} - V _ {A} | = \Delta V $$
+	La capacità equivalente $C$ di un sistema di condensatori è la capacità di un singolo condensatore che, quando viene usato in luogo del sistema, ha lo stesso effetto esterno.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{54.png}
+			\caption{}
+			\label{fig:im-54}
+		\end{figure}
+	\end{center}
+	$$ Q _ {1} + Q _ {2} = \left(C _ {1} + C _ {2}\right) \Delta V $$
+	$$ C _ {1} + C _ {2} = \frac {(Q _ {1} + Q _ {2})}{\Delta V} $$
+	$$ Q = Q _ {1} + Q _ {2} \quad C = C _ {1} + C _ {2} $$
+	\subsubsection{Sistemi di condensatori in serie}
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.55]{55.png}
+		\caption{}
+		\label{fig:im-55}
+	\end{figure}
+	\end{center}
+	$$ V _ {A} - V _ {E} = \frac {Q}{C _ {1}} $$
+	$$ V _ {E} - V _ {B} = \frac {Q}{C _ {2}} $$
+	$$ \Delta V = V _ {A} - V _ {B} = \frac {Q}{C _ {1}} + \frac {Q}{C _ {2}} $$
+	$$ = Q \left(\frac {1}{C _ {1}} + \frac {1}{C _ {2}}\right) = Q \frac {C _ {1} + C _ {2}}{C _ {1} C _ {2}} $$
+	$$ C = \frac {Q}{\Delta V} = \frac {C _ {1} C _ {2}}{C _ {1} + C _ {2}} $$
+	$$ \frac {1}{C} = \frac {1}{C _ {1}} + \frac {1}{C _ {2}} $$
+	\subsubsection{Energia Elettrostatica}
+	L’energia elettrostatica di una distribuzione di cariche è il lavoro fatto dall’esterno per assemblare il sistema di cariche (portare le cariche dall’infinito alla posizione loro assegnata).\\\\
+	Se abbiamo una carica $q$ in un punto $P$ in presenza di un campo elettrico
+	$$ U = q \, V(P) $$
+	È il lavoro fatto dal campo per portare q da $P$ all’infinito $o$, equivalentemente, il lavoro fatto dall’esterno per portare $q$ dall’infinito a $P$.\\\\
+	Se si vuole assemblare un sistema di tre cariche $q_1, q_2$ e $q_3$\\
+	Il lavoro $U_1$ compiuto per portare la prima carica in $P_1$ è nullo dato che, per il momento, non vi sono altre cariche
+	$$ U_1 = 0 $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{56.png}
+			\caption{}
+			\label{fig:im-56}
+		\end{figure}
+	\end{center}
+	Il lavoro fatto dall’esterno per portare la carica $q_2$ in $P_2$ in presenza della carica $q_1$ in $P_1$ è:
+	$$ U_2 = q_2 \, V_1(P_2) = q_2 \, \frac{q_1}{4\pi\varepsilon_0 r_{12}} $$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{57.png}
+			\caption{}
+			\label{fig:im-57}
+		\end{figure}
+	\end{center}
+	Il lavoro fatto dall’esterno per portare la carica $q_3$ in $P_3$ in presenza della carica $q_1$ in $P_1$ e della carica $q_2$ in $P_2$ è:
+	$$ U_3 = q_3 V_{12}(P_3) = q_3 \frac{q_1}{4\pi\varepsilon_0 r_{13}} + q_3 \frac{q_2}{4\pi\varepsilon_0 r_{23}} $$
+	Quindi
+	$$ U = U_1 + U_2 + U_3 = \frac{q_1 q_2}{4\pi\varepsilon_0 r_{12}} + \frac{q_1 q_3}{4\pi\varepsilon_0 r_{13}} + \frac{q_2 q_3}{4\pi\varepsilon_0 r_{23}} $$
+	Generalizzando:
+	$$ \boxed{U = \frac{1}{4\pi\varepsilon_0} \frac{1}{2} \sum_{\substack{i,j=1 \ i \neq j}}^{N} \frac{q_i q_j}{r_{ij}}} $$
+	Potenziale generato da cariche tranne la $i$-esima nel punto della $i$-esima:
+	$$ U = \frac {1}{2} \sum_ {i = 1} ^ {N} q _ {i} \sum_ {j \neq i} ^ {N} \frac {q _ {j}}{4 \pi \epsilon_ {0} r _ {i j}} $$
+	Tendo conto che
+	$$ V _ {i} = \sum_ {j \neq i} ^ {N} \frac {q _ {j}}{4 \pi \epsilon_ {0} r _ {i j}} $$
+	$$ U = \frac {1}{2} \sum_ {i = 1} ^ {N} q _ {i} V _ {i} $$
+	$$ U = \frac {1}{2} \int_ {\tau} \rho V d \tau $$
+	$$ U = \frac {1}{2} \int_ {S} \sigma V d s $$
+	\subsubsection{Energia elettrostatica immagazzinata in un condensatore}
+	Quando una batteria carica un condensatore compie lavoro per trasferire i portatori di carica da un’armatura all’altra:\\
+	questo lavoro costituisce l’energia (elettrostatica) immagazzinata nel condensatore.\\\\
+	In un certo intervallo di tempo durante la carica, la variazione $dU^\prime$ dell’energia potenziale del sistema di cariche dovuta al trasferimento della carica $dQ^\prime$ da parte della batteria è ($V^\prime$ differenza di potenziale):
+	$$ dU^\prime = V^\prime dQ^\prime $$
+	Per determinare l’energia $U$ fornita al condensatore durante la carica da zero a $Q$, si integra $dU^\prime$ (Ottendendo così la somma di tutti i contributi delle energie potenziali):
+	$$ U = \int_{0}^{Q} V^\prime dQ^\prime $$
+	$V’$ non può essere portata fuori dall’integrale perché varia mentre $Q^\prime$ cresce. \\
+	Si trova:
+	$$ U = \int_{0}^{Q} \frac{Q^\prime}{C} dQ^\prime = \frac{1}{C} \int_{0}^{Q} Q^\prime dQ^\prime = \frac{1}{2} \frac{Q^2}{C} $$
+	$$ C = \frac{Q}{V} $$
+	$$ U = \frac{Q^2}{2C} \quad U = \frac{CV^2}{2} \quad U = \frac{QV}{2} $$
+	\subsubsection{Densità di energia elettrostatica di un campo elettrico}
+	Per un condensatore piano (armature di superficie $S$)
+	$$ C = \frac{Q}{\Delta V} = \varepsilon_0 \frac{S}{d} $$
+	Calcoliamo l’energia per unità di volume
+	$$ u = \frac{U}{\tau} = \frac{1}{2} \frac{Q^2}{c \tau} = \frac{1}{2} \frac{Q^2 d}{\varepsilon_0 s^2 d} = \frac{1}{2 \varepsilon_0} \left(\frac{Q}{S}\right)^2 = \frac{\sigma^2}{2 \varepsilon_0} $$
+	Densità di energia elettrostatica (validità generale), si misura in $\frac{J}{m^3}$:
+	$$ u = \frac{1}{2} \varepsilon_0 E_0^2 $$
+	Questa relazione suggerisce la possibilità di considerare l’energia elettrostatica di una distribuzione di carica come associata al campo elettrico prodotto dalla distribuzione di carica stessa.\\\\
+	Questo concetto risulterà utile nello studio delle onde elettromagnetiche. \\
+	La grandezza fisica che si propaga è l’energia associata al campo elettrico e al campo magnetico.
 \end{document}
