@@ -564,6 +564,77 @@
 	\end{equation}
 	dove $\tau = RC$ nel caso ci sia un condensatore e una resistenza, oppure $\tau = \frac{L}{R}$ se è presente un induttore e una resistenza.
 	Altrimenti si può ricavare $\tau$ impostando solamente l’equazione caratteristica, infatti $\tau = - \frac{1}{\lambda}$
+	\paragraph{{\color{red}Come risolvere i problemi di transitorio di primo ordine}}
+	I problemi di transitorio in elettrotecnica possono sembrare spaventosi perché introducono il concetto di "tempo" in circuiti che prima analizzavi solo in condizioni statiche (a regime). \\
+	Spesso i libri di testo partono subito con le equazioni differenziali, ma nella pratica esiste un metodo molto più semplice e meccanico per risolvere i circuiti del primo ordine (quelli con resistenze e un solo condensatore o un solo induttore).
+	
+	\begin{enumerate}
+		\item I concetti fondamentali: Le "Memorie" del circuito
+			Prima di fare i calcoli, bisogna ricordare due regole d'oro (il principio di continuità):
+			\begin{itemize}
+				\item Il condensatore (C) ha un'inerzia sulla tensione. \\
+				La tensione ai suoi capi non può cambiare istantaneamente. \\
+				Se un istante prima valeva 5V, l'istante dopo varrà ancora 5V.
+				\item L'induttore (L) ha un'inerzia sulla corrente. \\
+				La corrente che lo attraversa non può variare istantaneamente.
+			\end{itemize}
+			Il transitorio è semplicemente la fase di passaggio tra una situazione di "calma" (regime) passata e una nuova situazione di "calma" futura, scatenata da un evento (es. l'apertura o chiusura di un interruttore al tempo $t=0$).
+		\item La Formula Universale (L'approccio Asintotico)
+			Per qualsiasi circuito del primo ordine (RC o RL), non c'è bisogno di risolvere l'equazione differenziale da zero ogni volta. \\
+			La variabile che si sta cercando, che chiameremo $x(t)$ (che sarà la tensione $v_C$ per il condensatore o la corrente $i_L$ per l'induttore), segue sempre questa formula:
+			$$\boxed{x(t) = x(\infty) + [x(0^+) - x(\infty)] \cdot e^{-\frac{t}{\tau}}}$$
+			Dove:
+			\begin{itemize}
+				\item $x(0^+)$ è il valore iniziale
+				\item $x(\infty)$ è il valore finale (a regime)
+				\item $\tau$ (tau) è la costante di tempo del circuito
+			\end{itemize}
+		\item I 4 Passaggi per la Soluzione
+			\begin{itemize}
+				\item \textbf{Passo 1}: Analisi per $t < 0$ (Condizione iniziale)
+					Si guarda il circuito prima che l'interruttore scatti. \\
+					Si suppone che sia acceso da molto tempo e quindi sia "a regime".\\
+					Si sostituisce il condensatore con un \textbf{circuito aperto} (filo tagliato).\\
+					Si sostituisce l'induttore con un \textbf{cortocircuito} (filo continuo).\\
+					Si calcolano rispettivamente la tensione $v_C(0^-)$ o la corrente $i_L(0^-)$ con le normali leggi di Ohm e Kirchhoff.
+				\item \textbf{Passo 2:} L'istante $t = 0^+$ (Il principio di continuità)
+					L'interruttore scatta. \\
+					Si applica la regola d'oro:
+					$v_C(0^+) = v_C(0^-)$
+					$i_L(0^+) = i_L(0^-)$
+				\item \textbf{Passo 3}: Analisi per $t \to \infty$ (Condizione finale)
+					Si guarda il nuovo circuito (con l'interruttore nella nuova posizione). \\
+					Si immagina che sia passato tantissimo tempo e il transitorio sia finito.\\
+					Si trattano di nuovo i condensatori come circuiti aperti e gli induttori come cortocircuiti.\\
+					Infine si calcolano i nuovi valori $v_C(\infty)$ o $i_L(\infty)$.\\
+				\item \textbf{Passo 4}: Calcolo della costante di tempo ($\tau$)
+					Si guarda sempre il nuovo circuito (per $t > 0$) e si "spengono" tutti i generatori indipendenti (i generatori di tensione diventano cortocircuiti, quelli di corrente circuiti aperti).\\
+					Si calcola la resistenza equivalente ($R_{eq}$) vista dai "morsetti" del condensatore o dell'induttore.
+					\begin{itemize}
+						\item Per i circuiti RC: $\boxed{\tau = R_{eq} \cdot C}$
+						\item Per i circuiti RL: $\boxed{\tau = \frac{L}{R_{eq}}}$
+					\end{itemize}
+			\end{itemize}
+		\item Un Esempio Pratico (Circuito RC)
+			Immaginiamo un circuito con un generatore di tensione continua $V_s = 10\text{ V}$, in serie a una resistenza $R = 2\text{ k}\Omega$ e un condensatore $C = 5\text{ }\mu\text{F}$.\\\\
+			C'è un interruttore che collega il generatore al circuito e si chiude al tempo $t = 0$. \\\\
+			Il condensatore è inizialmente scarico. \\\\
+			Vogliamo trovare l'equazione della tensione sul condensatore $v_C(t)$ per $t > 0$.\\
+			Risolviamo con i 4 passi:
+			- $t < 0$: Il condensatore è scarico, quindi $v_C(0^-) = 0\text{ V}$.
+			- $t = 0^+$: Per il principio di continuità, $v_C(0^+) = 0\text{ V}$.
+			- $t \to \infty$: L'interruttore è chiuso da un'eternità. Il condensatore si comporta come un circuito aperto. \\
+			Non passa corrente nella resistenza, quindi non c'è caduta di tensione su $R$. \\
+			Tutta la tensione del generatore cade sul condensatore. \\
+			Quindi: $v_C(\infty) = 10\text{ V}$.\\
+			- Calcolo di $\tau$: Spegniamo il generatore di tensione (diventa un corto circuito). La resistenza vista dal condensatore è proprio l'unica resistenza presente.\\
+			$R_{eq} = 2\text{ k}\Omega = 2000\text{ }\Omega$\\
+			$\tau = R \cdot C = 2000 \cdot (5 \cdot 10^{-6}) = 0.01\text{ s}$
+			Uniamo i pezzi nella formula:\\
+			$$v_C(t) = v_C(\infty) + [v_C(0^+) - v_C(\infty)] \cdot e^{-\frac{t}{\tau}}$$
+			$$v_C(t) = 10 + [0 - 10] \cdot e^{-\frac{t}{0.01}}$$
+			$$v_C(t) = 10 \cdot (1 - e^{-100t})\text{ V}$$
+	\end{enumerate}
 	\paragraph{Circuiti di ordine superiore al primo}
 	Se invece il circuito è del 2$^o$ ordine, l’equazione presenterà derivate seconde.\\
 	In quest’ultimo caso, l’equazione caratteristica avrà due soluzioni, $\lambda_1$ e $\lambda_2$, che distingueranno 3 casi
@@ -595,5 +666,86 @@
 		Dove $\lambda_{\mathcal{I}}$ rappresenta la pulsazione naturale dell'oscillazione e $\varphi$ rappresenta la sua fase.\\
 		Le incognite che devono essere ricavate tramite le condizioni iniziali sono $k$ e $\varphi$.\\
 		Inoltre la costante di tempo è pari a $\tau = - \frac{1}{\lambda_{\mathcal{R}}}$.
+	\end{enumerate}
+	\paragraph{{\color{red} Come risolvere i problemi di transitorio di secondo ordine}}
+	\begin{enumerate}
+		\item \textbf{Si determinano dapprima le condizioni iniziali} \\
+			$x(0^+)$ e $dx(0^+)/dt$ e il valore finale $x(\infty)$, come in quelli del primo ordine.
+		
+		\item \textbf{Si determina la risposta transitoria}\\
+			$x_t(t)$ spegnendo i generatori indipendenti e applicando la KCL e la KVL. \\
+			Una volta ottenuta una equazione differenziale del secondo ordine, se ne determinano le radici caratteristiche. \\
+			A seconda che la risposta sia sovrasmorzata, a smorzamento critico o sottosmorzata, si ottiene $x_{SOA}(t)$ con due costanti incognite $A$ e $B$.
+		
+		\item \textbf{Si ottiene la risposta di regime} come:
+			$$x_{IP}(t) = x(\infty)$$ \\
+			dove $x(\infty)$ è il valore finale di $x$, ottenuto al passo 1.
+		
+		\item \textbf{La risposta completa}
+			consiste ora nella somma della risposta transitoria e di quella di regime:
+			$$x(t) = x_{SOA}(t) + x_{IP}(t) $$
+			A seconda delle soluzioni si piò avere una funzione del seguente tipo: 
+			\begin{enumerate}
+				\item Soluzioni reali e distinte (\textbf{Sovrasmorzamento}):\\
+				$$ \boxed{x(t) = A \cdot e^{\alpha_1 \cdot t} + B \cdot e^{\alpha_2 \cdot t}+x(\infty)}$$
+				\item Soluzioni reali e coincidenti (\textbf{Smorzamento critico}):
+				$$\alpha = \alpha_1 = \alpha_2$$
+				$$ \boxed{x(t) = (A + B) \cdot e^{\alpha \cdot t}+x(\infty)}$$
+				\item Soluzioni complesse e coniugate (\textbf{Sottosmorzamento}):
+				$$\alpha_1 = K + jQ$$
+				$$\alpha_2 = K - jQ$$
+				$$x(t) = e^{K \cdot t} \cdot A \cdot \sin (Q \cdot t + B) + x(\infty)$$
+				Che se espandiamo può diventare:
+				$$\boxed{ x(t)=e^{K \cdot t} \cdot (A \cdot cos(Q \cdot t ) + B \cdot sin(Q \cdot t) + x(\infty)}$$
+				Che è molto più comoda per i calcoli.
+			\end{enumerate}
+		
+		\item \textbf{Si determinano infine le costanti associate}
+			\begin{itemize}
+				\item Nel caso delle soluzioni reali e distinte oppure reali e coincidenti:\\
+					alla risposta transitoria, imponendo le condizioni iniziali $x(0)$ e $dx(0)/dt$, determinate nel passo 1:
+					$$\begin{cases} 
+						x(t) = A \cdot e^{\alpha_1 \cdot t} + B \cdot e^{\alpha_2 \cdot t}+x(\infty) \\
+						x(t) = A \cdot e^{\alpha_1 \cdot t} + B \cdot e^{\alpha_2 \cdot t}+x(\infty)
+					\end{cases}$$
+					$$\Downarrow \text{Calcolo la soluzione per } t=0^+ \text{ in tutte e due le equazioni e derivo ambo i membri nella seconda}$$
+					$$\boxed{
+						\begin{cases} 
+							x(0^+)=A+B+x(\infty) \\
+							\frac{d \; x(0^+)}{dt} = \alpha_1 A + \alpha_2 B
+					\end{cases}}$$
+				\item Nel caso delle complesse e coniugate:
+				$$\begin{cases} 
+					x(t)=e^{K \cdot t} \cdot (A \cdot cos(Q \cdot t ) + B \cdot sin(Q \cdot t) + x(\infty) \\
+					x(t)=e^{K \cdot t} \cdot (A \cdot cos(Q \cdot t ) + B \cdot sin(Q \cdot t) + x(\infty)
+				\end{cases}$$
+				$$\Downarrow \text{Calcolo la soluzione per } t=0^+ \text{ nella prima e derivo ambo i membri nella seconda}$$
+				$$\begin{cases} 
+					x(0^+)=A + x(\infty) \\
+					\frac{d \; x(0^+)}{dt} = K \cdot e^{K \cdot t} \cdot \left[ A \cdot cos(Q \cdot t) + B \cdot sin(Q \cdot t)\right] + e^{K \cdot t} \cdot \left[-A \cdot Q \cdot sin(Q \cdot t) + B \cdot Q \cdot cos(Q \cdot t)\right]
+				\end{cases}$$
+				$$\Downarrow \text{Calcolo la soluzione per } t=0^+ \text{ nella seconda}$$
+				$$\begin{cases} 
+					x(0^+)=A + x(\infty) \\
+					\frac{d \; x(0^+)}{dt} = K \cdot 1 \cdot \left[ A \cdot 1 + B \cdot 0 \right] + 1 \cdot \left[-A \cdot Q \cdot 0 + B \cdot Q \cdot 1\right]
+				\end{cases}$$
+				$$\Downarrow$$
+				$$\boxed{
+					\begin{cases} 
+						x(0^+)=A + x(\infty) \\
+						\frac{d \; x(0^+)}{dt} = K \cdot A + Q \cdot B
+				\end{cases}}$$
+				$$\begin{cases} 
+					x(0^+)=A \cdot \sin(B) + x(\infty) \\
+					\frac{d \; x(0^+)}{dt} = \frac{d \; A \cdot \sin(B)}{dt}
+				\end{cases}$$
+			\end{itemize}
+		\item \textbf{$\tau$ viene invece calcolato come}:
+			$$\begin{cases} 
+				\tau_1 = -\frac{1}{\alpha_1} \\
+				\tau_2 = -\frac{1}{\alpha_2}
+			\end{cases}$$
+			Nel caso delle complesse e coniugate:
+			$$ \tau = \frac{1}{Re(\alpha_1)}$$
 	\end{enumerate}
 \end{document}

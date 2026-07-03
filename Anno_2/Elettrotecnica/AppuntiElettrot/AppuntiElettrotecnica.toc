@@ -106,74 +106,76 @@
 \contentsline {subsubsection}{\numberline {2.9.1}Studio dei regimi continui}{30}{subsubsection.2.9.1}%
 \contentsline {subsubsection}{\numberline {2.9.2}Studio dei regimi in transitorio}{30}{subsubsection.2.9.2}%
 \contentsline {paragraph}{\numberline {2.9.2.1}Circuiti di primo ordine}{30}{paragraph.2.9.2.1}%
-\contentsline {paragraph}{\numberline {2.9.2.2}Circuiti di ordine superiore al primo}{30}{paragraph.2.9.2.2}%
-\contentsline {section}{\numberline {3}Regime Sinusoidale}{31}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Bipoli Elettrici}{31}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Generatore Ideale di Tensione Sinusoidale}{31}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Generatore Reale di Tensione Sinusoidale}{31}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Generatore Ideale di Corrente Sinusoidale}{31}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Generatore Reale di Corrente Sinusoidale}{32}{subsubsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.2}Trasformata di Steinitz}{32}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Rappresentazione fasoriale}{33}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Bipolo generico}{33}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Grandezze nel Regime Sinusoidale}{34}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Metodo Risolutivo per Regime Sinusoidale}{34}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Potenze in Regime Sinusoidale}{34}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Confronto con regime continuo}{35}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Potenza media assorbita (Valori efficaci)}{35}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Potenza Complessa}{36}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}Unità di misura}{36}{subsubsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.8}Teorema di Boucherot}{36}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Rifasamento}{37}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Teorema del Massimo Trasferimento di Potenza}{38}{subsection.3.10}%
-\contentsline {subsubsection}{\numberline {3.10.1}Condizione di adattamento debole di impedenza}{40}{subsubsection.3.10.1}%
-\contentsline {subsection}{\numberline {3.11}Sistemi Trifase}{40}{subsection.3.11}%
-\contentsline {subsubsection}{\numberline {3.11.1}Connessioni fra genertori in un circuito trifase}{41}{subsubsection.3.11.1}%
-\contentsline {paragraph}{\numberline {3.11.1.1}Collegamento a Stella}{41}{paragraph.3.11.1.1}%
-\contentsline {paragraph}{\numberline {3.11.1.2}Collegamento a Triangolo}{42}{paragraph.3.11.1.2}%
-\contentsline {subsubsection}{\numberline {3.11.2}Misura di Potenza Trifase}{42}{subsubsection.3.11.2}%
-\contentsline {section}{\numberline {4}Analisi in Frequenza}{43}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Diagramma di Bode in Ampiezza e Fase}{43}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Filtri}{43}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Filtro RC}{43}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Filtro RL}{45}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Filtro RLC Serie}{46}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Filtro RLC Parallelo}{47}{subsubsection.4.2.4}%
-\contentsline {paragraph}{\numberline {4.2.4.1}Picchi di Risonanza o Antirisonanza Parassiti}{48}{paragraph.4.2.4.1}%
-\contentsline {subsection}{\numberline {4.3}Fattore Qualità Q}{48}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Funzioni di Trasferimento e di Guadagno}{48}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Concatenazione di Filtri}{51}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Decibel e Scala Logaritmica}{51}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Come Disegnare una Funzione di Trasferimento}{53}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Poli Reali e Distinti}{53}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}Poli Complessi e Coniugati}{53}{subsubsection.4.7.2}%
-\contentsline {section}{\numberline {5}Doppi Bipoli}{56}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Metodi per Rappresentare un Doppio Bipolo}{56}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Matrice delle Impedenze}{56}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Matrice delle Ammettenze}{57}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Matrice Ibrida}{57}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Matrice di Trasmissione Diretta}{57}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Individuazione della Matrice}{57}{subsubsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.2}Sintesi di Doppi Bipoli}{58}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Collegamenti fra Doppi Bipoli}{59}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Collegamento in Serie}{59}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Collegamento in Parallelo}{59}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}Collegamento in Cascata}{59}{subsubsection.5.3.3}%
-\contentsline {section}{\numberline {6}Trasformatori}{60}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Mutua Induzione}{60}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Nessun Accoppiamento}{62}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Accoppiemanto Perfetto}{62}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Trasformatore Ideale}{62}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Simbolo bidimensionale}{63}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Proprietà}{63}{subsubsection.6.2.2}%
-\contentsline {paragraph}{\numberline {6.2.2.1}Conservazione della Potenza}{63}{paragraph.6.2.2.1}%
-\contentsline {paragraph}{\numberline {6.2.2.2}Trasformazione delle Impedenze}{63}{paragraph.6.2.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Utilizzi di un Trasformatore}{64}{subsubsection.6.2.3}%
-\contentsline {paragraph}{\numberline {6.2.3.1}Trasformazione dell'imedenza}{64}{paragraph.6.2.3.1}%
-\contentsline {paragraph}{\numberline {6.2.3.2}Trasformatore di correnti e tensioni}{64}{paragraph.6.2.3.2}%
-\contentsline {paragraph}{\numberline {6.2.3.3}Adattatore di impedenza}{64}{paragraph.6.2.3.3}%
-\contentsline {paragraph}{\numberline {6.2.3.4}Isolatore}{64}{paragraph.6.2.3.4}%
-\contentsline {paragraph}{\numberline {6.2.3.5}Misura di correnti o tensioni elevate}{65}{paragraph.6.2.3.5}%
-\contentsline {subsection}{\numberline {6.3}Trasformatore Reale}{65}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Determinazione dei parametri}{66}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Autotrasformatore (Variac)}{67}{subsection.6.4}%
+\contentsline {paragraph}{\numberline {2.9.2.2}{\color {red}Come risolvere i problemi di transitorio di primo ordine}}{30}{paragraph.2.9.2.2}%
+\contentsline {paragraph}{\numberline {2.9.2.3}Circuiti di ordine superiore al primo}{32}{paragraph.2.9.2.3}%
+\contentsline {paragraph}{\numberline {2.9.2.4}{\color {red} Come risolvere i problemi di transitorio di secondo ordine}}{32}{paragraph.2.9.2.4}%
+\contentsline {section}{\numberline {3}Regime Sinusoidale}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bipoli Elettrici}{34}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Generatore Ideale di Tensione Sinusoidale}{34}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Generatore Reale di Tensione Sinusoidale}{34}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Generatore Ideale di Corrente Sinusoidale}{34}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Generatore Reale di Corrente Sinusoidale}{34}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}Trasformata di Steinitz}{35}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Rappresentazione fasoriale}{36}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Bipolo generico}{36}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Grandezze nel Regime Sinusoidale}{37}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Metodo Risolutivo per Regime Sinusoidale}{37}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Potenze in Regime Sinusoidale}{37}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Confronto con regime continuo}{38}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Potenza media assorbita (Valori efficaci)}{38}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Potenza Complessa}{38}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Unità di misura}{39}{subsubsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.8}Teorema di Boucherot}{40}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Rifasamento}{40}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Teorema del Massimo Trasferimento di Potenza}{41}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Condizione di adattamento debole di impedenza}{42}{subsubsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.11}Sistemi Trifase}{43}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Connessioni fra genertori in un circuito trifase}{44}{subsubsection.3.11.1}%
+\contentsline {paragraph}{\numberline {3.11.1.1}Collegamento a Stella}{45}{paragraph.3.11.1.1}%
+\contentsline {paragraph}{\numberline {3.11.1.2}Collegamento a Triangolo}{45}{paragraph.3.11.1.2}%
+\contentsline {subsubsection}{\numberline {3.11.2}Misura di Potenza Trifase}{45}{subsubsection.3.11.2}%
+\contentsline {section}{\numberline {4}Analisi in Frequenza}{46}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Diagramma di Bode in Ampiezza e Fase}{46}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Filtri}{46}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Filtro RC}{46}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Filtro RL}{48}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Filtro RLC Serie}{48}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Filtro RLC Parallelo}{49}{subsubsection.4.2.4}%
+\contentsline {paragraph}{\numberline {4.2.4.1}Picchi di Risonanza o Antirisonanza Parassiti}{50}{paragraph.4.2.4.1}%
+\contentsline {subsection}{\numberline {4.3}Fattore Qualità Q}{50}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Funzioni di Trasferimento e di Guadagno}{51}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Concatenazione di Filtri}{53}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Decibel e Scala Logaritmica}{53}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Come Disegnare una Funzione di Trasferimento}{55}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Poli Reali e Distinti}{56}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Poli Complessi e Coniugati}{56}{subsubsection.4.7.2}%
+\contentsline {section}{\numberline {5}Doppi Bipoli}{58}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Metodi per Rappresentare un Doppio Bipolo}{59}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Matrice delle Impedenze}{59}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Matrice delle Ammettenze}{59}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Matrice Ibrida}{59}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Matrice di Trasmissione Diretta}{60}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Individuazione della Matrice}{60}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Sintesi di Doppi Bipoli}{61}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Collegamenti fra Doppi Bipoli}{62}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Collegamento in Serie}{62}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Collegamento in Parallelo}{62}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Collegamento in Cascata}{63}{subsubsection.5.3.3}%
+\contentsline {section}{\numberline {6}Trasformatori}{63}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Mutua Induzione}{63}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Nessun Accoppiamento}{64}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Accoppiemanto Perfetto}{65}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Trasformatore Ideale}{65}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Simbolo bidimensionale}{66}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Proprietà}{66}{subsubsection.6.2.2}%
+\contentsline {paragraph}{\numberline {6.2.2.1}Conservazione della Potenza}{66}{paragraph.6.2.2.1}%
+\contentsline {paragraph}{\numberline {6.2.2.2}Trasformazione delle Impedenze}{66}{paragraph.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Utilizzi di un Trasformatore}{66}{subsubsection.6.2.3}%
+\contentsline {paragraph}{\numberline {6.2.3.1}Trasformazione dell'imedenza}{66}{paragraph.6.2.3.1}%
+\contentsline {paragraph}{\numberline {6.2.3.2}Trasformatore di correnti e tensioni}{67}{paragraph.6.2.3.2}%
+\contentsline {paragraph}{\numberline {6.2.3.3}Adattatore di impedenza}{67}{paragraph.6.2.3.3}%
+\contentsline {paragraph}{\numberline {6.2.3.4}Isolatore}{67}{paragraph.6.2.3.4}%
+\contentsline {paragraph}{\numberline {6.2.3.5}Misura di correnti o tensioni elevate}{68}{paragraph.6.2.3.5}%
+\contentsline {subsection}{\numberline {6.3}Trasformatore Reale}{68}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Determinazione dei parametri}{69}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Autotrasformatore (Variac)}{70}{subsection.6.4}%
