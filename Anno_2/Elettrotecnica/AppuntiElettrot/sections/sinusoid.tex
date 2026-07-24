@@ -6,7 +6,7 @@
 	Dove:
 	\begin{itemize}
 		\item $E_{MAX}$ è l'ampiezza massima dell'onda
-		\item $\omega$ è la pulsazione misurata in rad/s
+		\item $\omega$ è la pulsazione misurata in rad/s [ASSOLUTAMENTE da NON convertire in gradi durante i calcoli delle trasformate di Steinitz (Anche se gli altri dati sono in gradi)!!!]
 		\item $\phi$ è la fase
 	\end{itemize}
 	Queste 3 grandezze che descrivono l’onda rimangono costanti durante tutto il regime sinusoidale.\\
@@ -37,7 +37,7 @@
 	\subsection{Trasformata di Steinitz}
 	Per analizzare meglio i circuiti in regime sinusoidale si fa uso di un metodo di analisi che permette di semplificare il circuito in un modello risolvibile come se fosse in corrente continua, senza fare uso di equazioni trigonometriche.
 	\begin{equation}
-		x(t)=X_{max}\cos(\omega t + \gamma_x)\leftrightarrow \bar X = X_{max} e^{\gamma_x}	
+		\boxed{x(t)=X_{max}\cos(\omega t + \gamma_x)\leftrightarrow \bar X = X_{max} e^{\gamma_x}	}
 	\end{equation}
 	Dove $\bar X$ rappresenta un vettore bidimensionale (numero complesso).\\
 	Per dimostrarlo si pone la seconda legge di Kirchhoff alla maglia composta da una resistenza, una induttanza ed un condensatore:
@@ -117,8 +117,8 @@
 		\end{figure}
 	\end{center}
 	\begin{gather}
-		v(t)=V_{max}\cdot \cos(\omega t) \\
-		i(t)=I_{max}\cdot \cos(\omega t - \varphi)
+		\boxed{v(t)=V_{max}\cdot \cos(\omega t)} \\
+		\boxed{i(t)=I_{max}\cdot \cos(\omega t - \varphi)}
 	\end{gather}
 	Se l'angolo $\varphi > 0$ (corrente in anticipo rispetto alla fase) si dice che il componente è \textbf{ohmico-induttivo}, mentre se $\varphi < 0$ è \textbf{ohmico-capacitivo}.
 	\subsection{Grandezze nel Regime Sinusoidale}
@@ -178,8 +178,8 @@
 	\end{equation}
 	Si ottengono quindi potenza attiva e potenza reattiva, la prima contiene il coseno perché si tratta della parte in fase, la seconda invece è sfasata di 90º rispetto alla corrente:
 	\begin{gather}
-		P_A(t)=\frac{1}{2} \left[ V_{max}I_{max}+V_{max}I_{max}\cos (2\omega t) \right] \cos \varphi \\
-		P_R(t)=\frac{1}{2}V_{max}I_{max} \sin(2\omega t) \sin \varphi
+		\boxed{P_A(t)=\frac{1}{2} \left[ V_{max}I_{max}+V_{max}I_{max}\cos (2\omega t) \right] \cos \varphi} \\
+		\boxed{P_R(t)=\frac{1}{2}V_{max}I_{max} \sin(2\omega t) \sin \varphi}
 	\end{gather}
 	La potenza reattiva transita in continuazione fra generatore ed utilizzatore, ma dato che i cavi hanno una resistenza interna, questa potenza viene in parte dissipata per effetto Joule.\\
 	Per questo motivo i fornitori di energia elettrica impongono un limite nel valore di $\varphi$ che può essere raggiunto.\\\\

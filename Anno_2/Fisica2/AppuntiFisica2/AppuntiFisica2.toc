@@ -52,30 +52,41 @@
 \contentsline {subsubsection}{\numberline {1.15.2}Descrizione molecolare dei dielettrici}{36}{subsubsection.1.15.2}%
 \contentsline {paragraph}{\numberline {1.15.2.1}Polarizzazione per deformazione}{36}{paragraph.1.15.2.1}%
 \contentsline {paragraph}{\numberline {1.15.2.2}Polarizzazione per orientamento}{36}{paragraph.1.15.2.2}%
-\contentsline {section}{\numberline {2}Elettrodinamica}{39}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Corrente Elettrica}{39}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Resistenza}{39}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Forza Elettromotrice}{39}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Energia Elettrica e Potenza}{39}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Leggi di Kirchoff}{39}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Circuiti RC}{39}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Magnetostatica}{39}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{39}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{39}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Moti della Particella}{39}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{39}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{39}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{39}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{39}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{39}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{39}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{39}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{39}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{39}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{39}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{39}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{39}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{39}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{39}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{39}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{39}{subsection.5.3}%
+\contentsline {section}{\numberline {2}Elettrodinamica}{38}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Corrente Elettrica Stazionaria}{38}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Densità di corrente}{40}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Legge dei nodi (1$^a$ legge di Kirchoff)}{41}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Legge di Ohm}{41}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Resistività}{42}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Legge di Ohm in Forma Locale}{43}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Modello di Drude per i Metalli}{44}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Effetto Joule}{45}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Resistori in Serie e in Parallelo}{46}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Resistori in Serie}{46}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.2}Resistori in Parallelo}{47}{subsubsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.10}Amperometri e Voltmetri}{47}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Forza Elettromotrice}{47}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Legge di Ohm generalizzata e $2^{a}$ legge di Kirchhoff}{49}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}Carica di un Condensatore Attraverso un Resistore}{49}{subsection.2.13}%
+\contentsline {section}{\numberline {3}Magnetostatica}{51}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{51}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{51}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Moti della Particella}{51}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{51}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{51}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{51}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{51}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{51}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{51}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{51}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{51}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{51}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{51}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{51}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{51}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{51}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{51}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{51}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{51}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Esercizi}{51}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{51}{subsection.6.1}%

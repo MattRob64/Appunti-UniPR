@@ -1,10 +1,435 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../img/}}}
 \begin{document}
-	\subsection{Corrente Elettrica}
-	\subsection{Resistenza}
+	\subsection{Corrente Elettrica Stazionaria}
+	N.B: L'intensità non dipende dal tempo.\\\\
+	Negli atomi di un metallo gli elettroni periferici non si legano ai singoli atomi, ma sono liberi di muoversi nel reticolo formato dagli ioni positivi e sono detti elettroni di conduzione.\\
+	Nel rame vi è un elettrone libero per atomo e quindi il numero di elettroni di conduzione è di circa $8 \times 10^{22}$ elettroni/cm$^3$.\\\\
+	L’ordine di grandezza è lo stesso per tutti i conduttori metallici.
+	$$e = -1.6 \times 10^{-19} \text{ C}$$
+	$$ m = 9.1 \times 10^{-31} \text{ Kg}$$
+	Il moto degli elettroni liberi in un conduttore in equilibrio elettrostatico è disordinato. \\
+	In qualsiasi volume piccolo su scala macroscopica ma contenente un numero $N$ di elettroni abbastanza elevato (in un $\mu \, m^3$ si hanno circa $10^{11}$ elettroni), la velocità media è nulla (Che non è altro che una media aritmetica):
+	$$\mathbf{v} = \frac{1}{N} \sum_{i=1,N} \mathbf{v}_i = 0$$
+	$$v = \sqrt{\frac{3KT}{m}} \approx 10^5 \text{ m/s}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{65.png}
+			\caption{}
+			\label{fig:im-65}
+		\end{figure}
+	\end{center}
+	Non esiste una direzione di moto preferenziale per gli elettroni.\\
+	Occasionalmente un elettrone “urta” uno ione del cristallo subendo una brusca variazione di direzione del moto.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{66.png}
+			\caption{Dove $\tau$ è il tempo medio trascorso tra una collisione e l’altra}
+			\label{fig:im-66}
+		\end{figure}
+	\end{center}
+	Quando si applica un campo elettrico $E$ gli elettroni sono sottoposti ad una forza $F = -e \cdot E$ e modificano il loro moto casuale migrando \textbf{lentamente} in verso opposto al campo con una velocità di deriva $v_d$ (tipicamente dell’ordine di $10^{-5}$m/s).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{67.png}
+			\caption{Dove $\tau$ è il tempo medio trascorso tra una collisione e l’altra}
+			\label{fig:im-67}
+		\end{figure}
+	\end{center}
+	Il flusso ordinato di cariche elettriche è detto \textbf{corrente elettrica}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{68.png}
+			\caption{Dove $\tau$ è il tempo medio trascorso tra una collisione e l’altra}
+			\label{fig:im-68}
+		\end{figure}
+	\end{center}
+	Quello che va veloce nel circuito è l’informazione di come si propaga il campo elettrico, gli elettroni vanno molto lentamente.\\\\
+	Una quantità di carica $dq$ transita nel tempo $dt$ attraverso un’area $S$, ad es. la sezione trasversale di un filo percorso da corrente. \\
+	Si definisce \textbf{intensità di corrente} $i$ la carica netta che attraversa tale superficie nell’unità di tempo:
+	$$i = \frac{dq}{dt}$$
+	Convenzione: il verso della corrente è quello in cui si muovono le cariche positive, anche quando nella realtà i portatori di carica sono negativi.\\\\
+	Si ha l’intensità di corrente di $1$A quando, attraverso una data superficie, passa una carica di un Coulomb in un secondo.
+	$$[A] = [C/s]$$
+	\subsection{Densità di corrente}
+	La carica netta che attraversa la superficie in un certo tempo si trova integrando la corrente nel tempo:
+	$$q = \int i \, dt$$
+	Una grandezza vettoriale legata alla corrente è la densità di corrente, ossia la corrente per unità di area, il cui modulo è ($S$ perpendicolare al filo e velocità dei portatori uniforme su $S$)
+	$$j = \frac{i}{S}$$
+	La direzione e il verso di $j$ coincidono con quelli del moto delle cariche positive.\\\\
+	La corrente che scorre attraverso una generica superficie, suddivisa in elementi di area individuati da $dS$ (ortogonale all’elemento di area e con verso concorde a $j$), si determina integrando $j$ su tutta la superficie:
+	$$i = \int_S \mathbf{j} \cdot \mathbf{dS}$$
+	L’intensità di corrente attraverso una superficie è il \textbf{flusso della densità di corrente} attraverso quella superficie.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{69.png}
+			\caption{Dove $v_d$ indica la velocità di deriva}
+			\label{fig:im-69}
+		\end{figure}
+	\end{center}
+	Se ho $n$ elettroni per unità di volume, percorrono un tratto $L$ nel tempo $t = \frac{L}{v_d}$.\\
+	Attraverso la sezione $A$ nel tempo $t$ transitano tutti gli elettroni contenuti nel volume $AL$.
+	La carica netta che attraversa la superficie in un tempo $t$ è quindi:
+	$$q = -neAL$$
+	$$j = \left| \frac{q}{At} \right| = \frac{enAL}{AL/v_d} = e \cdot n \cdot v_d$$
+	$$\boxed{j = -e\cdot n \cdot v_d}$$
+	\textbf{Ha lo stesso verso di $E$}.\\\\
+	In generale se si hanno $n$ portatori di carica $q$ per unità di volume.
+	$$\mathbf{j} = n \cdot q \cdot v_d$$
+	\textbf{Ha sempre lo stesso verso di $E$}.\\\\
+	Se si hanno due tipi di portatori:
+	$$\mathbf{j} = n_a q_a v_{da} + n_b q_b v_{db}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{70.png}
+			\caption{}
+			\label{fig:im-70}
+		\end{figure}
+	\end{center}
+	Per la conservazione della carica elettrica, in condizioni stazionarie l’intensità di corrente è la stessa attraverso ogni sezione del conduttore (la carica non si accumula, la densità di carica è costante).\\
+	Se il conduttore è a sezione variabile la densità di corrente, e quindi la velocità di deriva sono maggiori dove la sezione è minore.
+	\subsection{Legge dei nodi (1$^a$ legge di Kirchoff)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{71.png}
+			\caption{$i_1 - i_2 - i_3 + i_4 + i_5 = 0$}
+			\label{fig:im-71}
+		\end{figure}
+	\end{center}
+	$$\sum_i i_i = 0$$
+	Un nodo è un punto nel quale convergono almeno tre conduttori.\\\\
+	La prima legge di Kirchoff afferma che:\\
+	In condizioni stazionarie la somma algebrica delle correnti uscenti da un nodo è nulla (per convenzione si prendono come positive le correnti uscenti).
+	\subsection{Legge di Ohm}
+	Se agli estremi di un tratto di conduttore come un filo metallico viene applicata una differenza di potenziale $\Delta V$, nel conduttore si produrrà una corrente di intensità $i$.\\\\
+	L’intensità di corrente che circola in un conduttore è, per molti materiali, direttamente proporzionale alla differenza di potenziale $\Delta V$:
+	$$\Delta V = Ri$$
+	Di conseguenza è presente un campo elettrico.\\\\
+	$R$ è una proprietà del conduttore ed è chiamata \textbf{resistenza} e si misura in Ohm ($\Omega = V/A$).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{72.png}
+			\caption{}
+			\label{fig:im-72}
+		\end{figure}
+	\end{center}
+	\subsection{Resistività}
+	La resistenza di un conduttore dipende dalle sue dimensioni, dalla sua forma e dal materiale di cui è fatto. \\
+	Considerando un conduttore a sezione costante:
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{73.png}
+			\caption{}
+			\label{fig:im-73}
+		\end{figure}
+	\end{center}
+	Si trova
+	$$R = \frac{\rho h}{S} \qquad \qquad [\Omega] = \frac{V}{A} \quad (Ohm)$$
+	La dipendenza della resistenza di un conduttore dal materiale è rappresentata da un fattore di proporzionalità chiamato resistività $\rho$ (si misura in $\Omega$ m).
+	$$\sigma = \frac{1}{\rho} \quad \text{conducibilità}$$
+	Tabella resistività dei vari metalli:
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Metallo} & \textbf{$\rho$ ($\Omega \cdot \text{m}$)} \\ 
+			\hline
+			Argento      & $1,6 \cdot 10^{-8}$  \\
+			Rame         & $1,7 \cdot 10^{-8}$  \\
+			Alluminio    & $2,8 \cdot 10^{-8}$  \\
+			Ottone       & $\sim 7 \cdot 10^{-8}$ \\
+			Nichel       & $7,8 \cdot 10^{-8}$  \\
+			Ferro        & $10 \cdot 10^{-8}$   \\
+			Acciaio      & $\sim 11 \cdot 10^{-8}$ \\
+			Costantana   & $49 \cdot 10^{-8}$   \\
+			Nichelcromo  & $100 \cdot 10^{-8}$  \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	*Alla temperatura di 20$^\degree$\\\\
+	Tabella resistività dei vari isolanti:
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Isolante} & \textbf{$\rho$ ($\Omega \cdot \text{m}$)} \\ 
+			\hline
+			Polietilene                 & $2 \cdot 10^{11}$   \\
+			Vetro                       & $\sim 10^{12}$      \\
+			Porcellana non vetrificata  & $\sim 10^{12}$      \\
+			Ebanite                     & $\sim 10^{13}$      \\
+			Resina epossidica           & $\sim 10^{15}$      \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	La resistività nella maggior parte dei conduttori metallici puri è una funzione crescente della temperatura. \\
+	In un intervallo limitato (qualche decina di gradi) intorno alla temperatura di ambiente la relazione è praticamente lineare.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{74.png}
+			\caption{$\rho = \rho_0 (1 + \alpha \Delta T)$}
+			\label{fig:im-74}
+		\end{figure}
+	\end{center}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{75.png}
+			\caption{Grafico di un super-conduttore}
+			\label{fig:im-75}
+		\end{figure}
+	\end{center}
+	L’8 Aprile 1911, Kamerlingh Onnes (Leiden) misurando la resistenza elettrica del mercurio trovò che questa diventa nulla entro gli errori a temperature inferiori ai 4.2 K (la temperatura alla quale Onnes era appena riuscito a liquefare l’elio).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{76.png}
+			\caption{Kamerlingh Onnes}
+			\label{fig:im-76}
+		\end{figure}
+	\end{center}
+	\subsection{Legge di Ohm in Forma Locale}
+	La legge di Ohm in forma locale lega due quantità nello stesso punto.\\\\
+	Se un campo elettrico $E$ viene applicato ad un materiale conduttore, nel materiale si produce una corrente di densità $J$.\\
+	La densità di corrente in un punto del materiale dipende dal campo elettrico in quel punto.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{77.png}
+			\caption{}
+			\label{fig:im-77}
+		\end{figure}
+	\end{center}
+	$$V_A - V_B = dV = R dI = R J dS $$
+	Essendo $E$ moltiplicato per $dI$ deduciamo che passa corrente infinitesima.
+	$$= \rho \frac{dl}{dS} J dS = \rho J dl$$
+	$$dV = E dl = \rho J dl$$
+	$$\boxed{\vec{E} = \rho \vec{J}}$$ 
+	$$\boxed{\vec{J} = \sigma \vec{E}}$$
+	\subsection{Modello di Drude per i Metalli}
+	Il modello di Drude deve riprodurre la legge di Ohm a livello microscopico per essere valido.\\\\
+	La principale caratteristica della conduzione nei metalli che un modello microscopico soddisfacente deve riprodurre è la legge di Ohm.
+	$$\mathbf{j} = \sigma \mathbf{E}$$
+	Poiché $\mathbf{j} = nq\mathbf{V}_d$ si ha $\mathbf{V}_d = \frac{\sigma \mathbf{E}}{nq}$.
+	La legge di Ohm implica che vd è proporzionale a campo elettrico.\\\\
+	L’applicazione di un campo fa muovere i portatori con una velocità media costante, ma se $qE$ fosse l’unica forza in gioco i portatori si dovrebbero muovere di moto accelerato.\\
+	Gli elettroni urtano gli ioni del cristallo subendo una brusca variazione di direzione del moto.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{78.png}
+			\caption{}
+			\label{fig:im-78}
+		\end{figure}
+	\end{center}
+	Quando si applica un campo elettrico $E$ gli elettroni sono sottoposti ad una forza $F = -e E$. \\
+	Questa è l’unica forza che agisce tra un urto e l’altro.\\\\
+	Dopo ogni collisione gli elettroni acquistano una direzione di moto casuale.\\\\
+	Dalla seconda legge di Newton (assumendo $E$ diretto lungo $x$)
+	$$a_x = -e \frac{E}{m}$$
+	Che vediamo essere negativo poichè gli elettroni si muovono in verso opposto al campo.
+	$$v_x(t) = v_x(0) - \frac{eEt}{m}$$
+	Mediando sugli elettroni ($< v_x(0) >= 0$) (Perchè acquistano direzione casuale).\\\\
+	Velocità media degli elettroni:
+	$$< v_x > = v_d = - \frac{eE\tau}{m}$$
+	$\tau$ caratterizza l’intervallo di tempo medio tra gli urti.\\\\
+	Coducibilità:
+	$$\sigma = \frac{ne^2\tau}{m}$$
+	$v_d << v_T$ (ovvero: Velocità di deriva molto minore di velocità elettroni) $\tau$ non dipende da $E$.
+	\subsection{Effetto Joule}
+	Consideriamo una carica $dq$ che si muova attraversando una differenza di potenziale $\Delta V = V_A - V_B$. \\
+	Il campo elettrico compie il lavoro:
+	$$dL = \Delta V \, dq = \Delta V \, i \, dt$$
+	Pertanto la potenza elettrica spesa è
+	$$P = \frac{dL}{dt} = \Delta V \, i$$
+	Se vale la legge di Ohm, si ha
+	$$P = \Delta V \, i = R \, i^2 = \frac{\Delta V^2}{R}$$
+	Il passaggio di corrente attraverso un conduttore metallico per un tempo $t$ comporta dunque il lavoro:
+	$$L = \int R \, i^2 \, dt$$
+	Questo lavoro è necessario per vincere la resistenza opposta dal reticolo cristallino al moto ordinato degli elettroni (urti).\\
+	Da un punto di vista termodinamico, esso viene assorbito dal conduttore la cui energia interna aumenta.\\
+	Questo lavoro compensa la perdita di energia dovuta agli urti col reticolo cristallino. \\
+	Da un punto di vista termodinamico esso viene assorbito dal conduttore la cui energia interna aumenta.\\\\
+	L’effetto di riscaldamento di un conduttore percorso da corrente si chiama \textbf{effetto Joule}.
+	\subsection{Resistori in Serie e in Parallelo}
+	Conduttori ohmici caratterizzati da un determinato valore della resistenza (alla temperatura ambiente) sono elementi molto usati nei circuiti elettrici. \\
+	Essi vengono chiamati resistori.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{79.png}
+			\caption{Resistore}
+			\label{fig:im-79}
+		\end{figure}
+	\end{center}
+	Più resistori possono essere collegati tra loro, tipicamente da fili o piattine metallici, la cui resistenza è trascurabile.
+	\subsubsection{Resistori in Serie}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{80.png}
+			\caption{Resistori in serie}
+			\label{fig:im-80}
+		\end{figure}
+	\end{center}
+	Due resistori sono collegati in serie quando hanno un estremo in comune e \textbf{la corrente che li attraversa è la stessa}. \\
+	Applicando la legge di Ohm:
+	$$V_A - V_B = R_1 i$$
+	$$V_B - V_C = R_2 i$$
+	$$V_A - V_C = (R_1 + R_2)i = R_{eq} i$$
+	$$R_{eq} = R_1 + R_2$$
+	\subsubsection{Resistori in Parallelo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{81.png}
+			\caption{Resistori in parallelo}
+			\label{fig:im-81}
+		\end{figure}
+	\end{center}
+	Due resistori si dicono in parallelo quando sono collegati tra loro in entrambi gli estremi e quindi la d.d.p. (Differenza di potenziale) ai loro capi è la stessa.
+	$$i = i_1 + i_2 = \frac{\Delta V}{R_1} + \frac{\Delta V}{R_2} = \Delta V \left( \frac{1}{R_1} + \frac{1}{R_2} \right)$$
+	$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+	Il reciproco della resistenza equivalente è uguale alla somma dei reciproci delle singole resistenze.\\
+	$R_{eq}$ risulta dunque minore di ciascuna delle $R_i$.
+	\subsection{Amperometri e Voltmetri}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{82.png} 
+			\caption{Amperometro (Richiede $r_i$ piccola)}
+			\label{fig:im-82}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[scale=0.55]{83.png}
+			\caption{Voltmetro (Richiede $r_i$ grande)}
+			\label{fig:im-83}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image7}
+	\end{figure}
 	\subsection{Forza Elettromotrice}
-	\subsection{Energia Elettrica e Potenza}
-	\subsection{Leggi di Kirchoff}
-	\subsection{Circuiti RC}
+	In un conduttore gli elettroni si muovono con una velocità $v_d$ dai punti con potenziale minore ai punti con potenziale maggiore sotto l’effetto del campo elettrico presente nel conduttore.\\\\
+	Il lavoro effettuato dal campo elettrico viene assorbito dagli ioni del conduttore la cui energia interna aumenta (effetto Joule).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{84.png}
+			\caption{}
+			\label{fig:im-84}
+		\end{figure}
+	\end{center}
+	Una sorgente esterna di energia è necessaria per far circolare con continuità una corrente in un circuito elettrico. \\
+	Un dispositivo che \textbf{mantenga una differenza di potenziale costante} tra due punti del circuito è detto \textbf{generatore} di forza elettromotrice.\\\\
+	Esaminiamo il caso semplice di un conduttore collegato ai poli $A$ e $B$ di un generatore sui cui poli sono accumulate le cariche $+q$ e $-q$.
+	Il campo elettrostatico $E_{el}$ prodotto da tali cariche è sempre diretto da $A$ verso $B$, sia nel conduttore che all’interno del generatore.\\
+	Quindi all’interno del generatore $E_{el}$ si oppone al moto delle cariche.
+	$$\oint \mathbf{E}_{el} \cdot \mathbf{ds} = 0$$
+	Per ottenere nel circuito una corrente $i$ è necessaria la presenza nel generatore di un campo $E^*$ (\textbf{campo elettromotore}) che muove le cariche contro $E_{el}$ e mantiene la differenza di potenziale tra $A$ e $B$.\\\\
+	La sorgente di f.e.m. (Forza ElettroMotrice) deve quindi avere al suo interno forze di natura non elettrostatica, non conservative, che possono determinare il moto continuo delle cariche.
+	$$\mathbf{E}^* \qquad \qquad \text{campo elettromotore}$$
+	$$\mathbf{E} = \mathbf{E}_{el} \qquad \qquad \text{nei conduttori}$$ 
+	$$\mathbf{E} = \mathbf{E}_{el} + \mathbf{E}^* \qquad \qquad \text{nel generatore}$$ 
+	Il dispositivo che genera il campo elettromotore, e quindi la f.e.m., può sfruttare ad es. \textbf{reazioni chimiche} (pile e accumulatori) o il \textbf{fenomeno dell’induzione elettromagnetica}.\\\\
+	Pertanto la f.e.m. $f$ è il \textbf{lavoro per unità di carica} effettuato dal campo elettromotore:
+	$$f = \int_{B}^{A} \mathbf{E}^* \cdot d\mathbf{s} = \oint \mathbf{E}^* \cdot d\mathbf{s}$$
+	\textbf{Si misura in Volt e non è una forza}.\\\\
+	Un generatore non ideale è caratterizzato anche da un resistenza interna $r$. \\
+	Quindi $f$ è la d.d.p. misurata ai capi del generatore a circuito aperto.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{85.png}
+			\caption{}
+			\label{fig:im-85}
+		\end{figure}
+	\end{center}
+	$$\boxed{V_A - V_B = f - I_r}$$
+	A circuito aperto: $I = 0$
+	$$\Downarrow$$
+	$$V_A - V_B = f$$
+	La f.e.m. è la differenza di potenziale tra i morsetti del generatore a circuito aperto.
+	\subsection{Legge di Ohm generalizzata e $2^{a}$ legge di Kirchhoff}
+	Gli elementi geometrici distintivi di un circuito sono i \textbf{nodi} e i \textbf{rami}. \\
+	Un nodo è un punto nel quale convergono almeno tre conduttori.\\
+	I nodi sono collegati da rami, in cui possono esserci componenti attivi (generatori) e componenti passivi (resistori).\\\\
+	All’interno di una rete è possibile individuate determinati cammini chiusi, detti maglie, costituiti da più rami; un dato ramo può pertanto appartenere a più maglie.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{86.png}
+			\caption{Ramo}
+			\label{fig:im-86}
+		\end{figure}
+	\end{center}
+	$$V_A - I R_1 + f_1 - I R_2 - I R_3 - f_2 - i R_4 = V_B$$
+	$$V_A - V_B + \sum_{ALG} f_i = \sum_{RAMO} I R_i \qquad \qquad \text{(comprensiva delle resistenze interne)}$$
+	Una conseguenza è
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{87.png}
+			\caption{Maglia}
+			\label{fig:im-87}
+		\end{figure}
+	\end{center}
+	Legge delle maglie (2ª di Kirchhoff):
+	$$\sum_{ALG} f_i = \sum_{MAGLIA} R_i I_i$$
+	\subsection{Carica di un Condensatore Attraverso un Resistore}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{88.png}
+			\caption{}
+			\label{fig:im-88}
+		\end{figure}
+	\end{center}
+	Al tempo $t=0$ viene chiuso l’interruttore e il generatore inizia a prelevare cariche positive dai conduttori connessi al polo negativo e a portarle al polo positivo. \\
+	Quindi sulle armature del condensatore compaiono le cariche $+q$ e $-q$. \\
+	Il processo continua fino a quando la carica del condensatore raggiunge il valore massimo $q_m = Cf$, cui corrisponde la d.d.p. tra le armature $V_A - V_B = f$.
+	$$f = Ri(t) + \frac{q(t)}{C}$$
+	$$i(t) = \frac{dq}{dt}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{89.png}
+			\caption{}
+			\label{fig:im-89}
+		\end{figure}
+	\end{center}
+	$$R \frac{dq}{dt} = f - \frac{q}{C}$$
+	$$\frac{dq}{q - Cf} = -\frac{dt}{RC} \qquad \qquad \int_{0}^{q} \frac{dq^\prime}{q^\prime - Cf} = -\int_{0}^{t} \frac{dt^\prime}{RC}$$
+	$$\ln\left(\frac{q - Cf}{-Cf}\right) = -\frac{t}{RC}$$
+	$$q(t) = Cf(1 - e^{-\frac{t}{RC}})$$
+	$$\tau = RC$$
+	$$i(t) = \frac{dq}{dt} = \frac{f}{R} e^{-\frac{t}{RC}}$$
+	$$\tau = RC$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{90.png}
+			\caption{Grafico del potenziale in funzione del tempo}
+			\label{fig:im-90}
+		\end{figure}
+	\end{center}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{91.png}
+			\caption{Grafico della corrente in funzione del tempo}
+			\label{fig:im-91}
+		\end{figure}
+	\end{center}
+	Quando si carica un condensatore connettendolo ad un generatore, la d.d.p. finale ai capi del condensatore e uguale alla f.e.m. $f$ del generatore e la carica finale è $q_m = Cf$.\\\\
+	Questi valori sono raggiunti asintoticamente. \\
+	La corrente nel circuito e massima nell’istante $t=0$ e decresce esponenzialmente nel tempo, con costante di tempo $\tau = RC$.
 \end{document}
