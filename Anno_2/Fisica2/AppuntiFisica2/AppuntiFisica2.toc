@@ -70,23 +70,29 @@
 \contentsline {subsection}{\numberline {2.13}Carica di un Condensatore Attraverso un Resistore}{49}{subsection.2.13}%
 \contentsline {section}{\numberline {3}Magnetostatica}{51}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Campo Magnetico}{51}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Forza di Lorentz}{51}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Moti della Particella}{51}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{51}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{51}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{51}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{51}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{51}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{51}{subsection.3.9}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{51}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{51}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{51}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{51}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{51}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{51}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{51}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{51}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{51}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{51}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Esercizi}{51}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{51}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Il Campo Magnetico $\vec {B}$}{52}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Come definiamo $\vec {B}$? (Forza di Lorentz)}{53}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Esempi}{54}{subsubsection.3.1.3}%
+\contentsline {paragraph}{\numberline {3.1.3.1}Esempio 1}{54}{paragraph.3.1.3.1}%
+\contentsline {paragraph}{\numberline {3.1.3.2}Esempio 2}{54}{paragraph.3.1.3.2}%
+\contentsline {paragraph}{\numberline {3.1.3.3}Esempio 3}{55}{paragraph.3.1.3.3}%
+\contentsline {subsection}{\numberline {3.2}Effetto Hall}{56}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Moti della Particella}{56}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Campo Magnetico e Fili Conduttori}{56}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Momento Magnetico}{56}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Legge di Biot-Savat e le sue Applicazioni}{56}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere}{56}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Legge di Ampere-Maxwell}{56}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{56}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{56}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{56}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{56}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{56}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{56}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{56}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{56}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{56}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{56}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{56}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Esercizi}{56}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{56}{subsection.6.1}%
