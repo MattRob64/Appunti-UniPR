@@ -80,22 +80,25 @@
 \contentsline {subsection}{\numberline {3.3}Forza Magnetica su un Conduttore Percorso da Corrente (Stazionaria)}{56}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Generalizzando per un filo di forma arbitraria}{57}{subsubsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.4}Momento Meccanico su una Spira Piana}{57}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Moti della Particella}{60}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Campo Magnetico e Fili Conduttori}{60}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Momento Magnetico}{60}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Legge di Biot-Savat e le sue Applicazioni}{60}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Legge di Ampere}{60}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Legge di Ampere-Maxwell}{60}{subsection.3.10}%
-\contentsline {subsection}{\numberline {3.11}Flusso Magnetico}{60}{subsection.3.11}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{60}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{60}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{60}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{60}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{60}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{60}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{60}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{60}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{60}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{60}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Esercizi}{60}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{60}{subsection.6.1}%
+\contentsline {subsection}{\numberline {3.5}Legge di Biot-Savart e le sue Applicazioni}{59}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Filo Rettilineo (Indefinito)}{59}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Spira Circolare}{60}{subsubsection.3.5.2}%
+\contentsline {paragraph}{\numberline {3.5.2.1}Nel Centro della Spira}{61}{paragraph.3.5.2.1}%
+\contentsline {paragraph}{\numberline {3.5.2.2}A Grande Distanza}{61}{paragraph.3.5.2.2}%
+\contentsline {paragraph}{\numberline {3.5.2.3}In Generale}{61}{paragraph.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.3}Coppie di Newton (3$^\degree $ Principio della Dinamica)}{61}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Legge di Ampere}{63}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere-Maxwell}{63}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Flusso Magnetico}{63}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{63}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{63}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{63}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{63}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{63}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{63}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{63}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{63}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{63}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{63}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Esercizi}{63}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{63}{subsection.6.1}%

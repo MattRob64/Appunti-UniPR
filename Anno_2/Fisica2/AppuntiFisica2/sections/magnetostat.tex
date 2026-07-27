@@ -357,17 +357,17 @@
 	Il verso di rotazione tende ad allineare $\vec{\mu}$ con il campo $\vec{B}$
 	\begin{figure}[h]
 		
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{117.png} 
 			\caption{}
 			\label{fig:im-117}
 		\end{subfigure}
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{118.png}
 			\caption{}
 			\label{fig:im-118}
 		\end{subfigure}
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{119.png}
 			\caption{}
 			\label{fig:im-119}
@@ -379,17 +379,17 @@
 	Siamo in analogia con il comportamento di un ago magnetico ossia di un piccolo dipolo magnetico:
 	\begin{figure}[h]
 		
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{120.png} 
 			\caption{}
 			\label{fig:im-120}
 		\end{subfigure}
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{121.png}
 			\caption{}
 			\label{fig:im-121}
 		\end{subfigure}
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.33\textwidth}
 			\includegraphics[scale=0.55]{122.png}
 			\caption{}
 			\label{fig:im-122}
@@ -420,10 +420,190 @@
 	Sempre per l’analogia formale:
 	$$U = -\vec{P} \cdot \vec{E} \qquad \qquad \vec{\mathbf{U}} = -\vec{\mu} \cdot \vec{B}$$
 	\textbf{Concetti già sviluppati per i dipoli elettrici potranno essere applicati a situazioni magnetiche}.
-	\subsection{Moti della Particella}
-	\subsection{Campo Magnetico e Fili Conduttori}
-	\subsection{Momento Magnetico}
-	\subsection{Legge di Biot-Savat e le sue Applicazioni}
+	\subsection{Legge di Biot-Savart e le sue Applicazioni}
+	Dopo avere studiato gli effetti di un campo magnetico su una carica in movimento o su conduttori percorsi da corrente ci concentriamo sulle sorgenti di campo magnetico (consideriamo fili percorsi da corrente) e sul campo $\vec{B}$ da esse generato.\\
+	In elettrostatica avevamo la possibilità di calcolare $\vec{E}$ in due modi:
+	\begin{itemize}
+		\item Legge di Coulomb:\\
+		$d\vec{F} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{dq \;  q_0}{r^2} \hat{r} \qquad \qquad \text{e} \quad \qquad d\vec{E} = \frac{d\vec{F}}{q_0}$
+		\item Legge di Gauss:\\
+		$\oint \vec{E} \cdot d\vec{s} = \frac{Q_{int}}{\varepsilon_0}$
+	\end{itemize}
+	e \textbf{poi sommano (integrando) tutti i contributi}.\\\\
+	In magnetostatica seguiremo un percorso analogo attraverso un metodo diretto (\textbf{Legge di Biot-Savart}).\\
+	Ed un altro basato su argomenti di simmetria (\textbf{Legge di Ampere}).\\\\
+	La legge di Biot-Savart nasce dai risultati sperimentali ottenuti studiando il campo magnetico generato da \textbf{conduttori filiformi} percorsi da una corrente $I$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{125.png}
+			\caption{}
+			\label{fig:im-125}
+		\end{figure}
+	\end{center}
+	La legge esprime il campo magnetico elementare $d\vec{B}$ generato da un tratto infinitesimo $\vec{dl}$ e percorso da una corrente $I$.\\\\
+	Esprimiamo la legge di Biot-Savart come:
+	$$\boxed{d\vec{B} = \frac{\mu_0}{4\pi} \cdot  \frac{I \; \vec{dl} \times \hat{r}}{r^2}}$$
+	Dove $\mu_0$ indica la permeabilità magnetica del vuoto che sapiamo essere: 
+	$$\mu_0 = 4\pi \cdot 10^{-4} \frac{T \cdot m}{\text{A}}$$
+	Per calcolare il campo $\vec{B}$ occorre sommare vettorialmente tutti i contributi $d\vec{B}$ generati dai tratti $d\vec{s}$
+	$$\Rightarrow \vec{B} = \frac{\mu_0 \; I}{4\pi} \int \frac{d\vec{l} \times \hat{r}}{r^2}$$
+	Come per $\vec{B}$ dipende da $\frac{1}{r^2}$ ha la direzione segue un prodotto vettoriale.\\\\
+	È possibile applicarla a qualsiasi conduttore filiforme percorso da corrente.
+	\subsubsection{Filo Rettilineo (Indefinito)}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{126.png} 
+			\caption{}
+			\label{fig:im-126}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{127.png}
+			\caption{}
+			\label{fig:im-127}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image15}
+	\end{figure}
+	$$dB = \frac{\mu_0 I}{4\pi} \frac{d \times \sin \vartheta}{r^2}$$
+	Per integrare rispetto all’angolo theta, in modo da poterlo prendere da 0 e $\pi$:
+	$$r = \frac{R}{\sin(\pi-\vartheta)} = \frac{R}{\sin \vartheta}$$
+	$$x = \frac{R}{t \, y(\pi-\vartheta)} = \frac{R}{-t \, y \, \vartheta} \Rightarrow dx = \frac{R}{\sin^2 \vartheta} d\vartheta$$
+	Tornando all'equazione principale:
+	$$\Rightarrow dB = \frac{\mu_0 I}{4\pi} \frac{\cancel{R}}{\cancel{\sin^2 \vartheta}} \frac{\sin^{\cancel{3}} \vartheta}{R^{\cancel{2}}} d\vartheta = \frac{\mu_0 I}{4\pi} \frac{\sin \vartheta}{R} d\vartheta$$
+	$$\Rightarrow B = \int_{\vartheta_1}^{\vartheta_2} \frac{\mu_0 I}{4\pi} \frac{\sin \vartheta}{R} d\vartheta = \frac{\mu_0 I}{4\pi R} (\cos \vartheta_1 - \cos \vartheta_2)$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{128.png}
+			\caption{}
+			\label{fig:im-128}
+		\end{figure}
+	\end{center}
+	Se il filo $\vec{B}$ indefinito $\vartheta_1 = 0$ e $\vartheta_2 = \pi$
+	$$\Rightarrow B = \frac{\mu_0 I}{2 \pi r}$$
+	Dove  $r$ è una distanza di un generico punto nello spazio dal filo.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{129.png}
+			\caption{}
+			\label{fig:im-129}
+		\end{figure}
+	\end{center}
+	\subsubsection{Spira Circolare}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{130.png} 
+			\caption{}
+			\label{fig:im-130}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{131.png}
+			\caption{}
+			\label{fig:im-131}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image16}
+	\end{figure}
+	Vogliamo calcolare il campo $\vec{B}$ un un punto $P$ sull’asse della spira, a distanza $x$ dal centro della spira.
+	$$dB = \frac{\mu_0 I}{4\pi} \frac{|\vec{dl} \times \hat{r}|}{r^2} = \frac{\mu_0 I}{4\pi} \frac{\overbrace{dl}^{\vec{dl} \perp \hat{r}}}{r^2} = \frac{\mu_0 I}{4\pi} \frac{dl}{R^2 + x^2}$$
+	Per la simmetria tutte le componenti $dB_y$ si elideranno a due a due mentre le componenti $dB_x$ si sommeranno:
+	$$\Rightarrow dB_x = \frac{\mu_0 I}{4\pi} \frac{dl}{R^2 + x^2} \cos \vartheta = \frac{\mu_0 I}{4\pi} \frac{dl}{R^2 + x^2} \frac{\overbrace{R}^{R = R \cdot \cos \vartheta}}{\sqrt{R^2 + x^2}} = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{\frac{3}{2}}} dl$$
+	Integrando su tutta la spira:
+	$$B_x = \oint \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{\frac{3}{2}}} dl = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{\frac{3}{2}}} \oint dl = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{\frac{3}{2}}} 2\pi R = \frac{\mu_0 I R^2}{2 (R^2 + x^2)^{\frac{3}{2}}}$$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{132.png} 
+			\caption{}
+			\label{fig:im-132}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{133.png}
+			\caption{Sull’asse il campo $\vec{B}$ è parallelo all’asse stesso}
+			\label{fig:im-133}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image17}
+	\end{figure}
+	\paragraph{Nel Centro della Spira}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{134.png}
+			\caption{Centro della Spira}
+			\label{fig:im-134}
+		\end{figure}
+	\end{center}
+	$$B_x = \frac{\mu_0 I R^2}{2(R^2+x^2)^{\frac{3}{2}}} \quad \text{ dove } x=0 \quad \Rightarrow \boxed{B_x = \frac{\mu_0 I}{2R}}$$
+	\paragraph{A Grande Distanza}
+	$$x \gg R \qquad B_x = \frac{\mu_0 I R^2}{2x^3} = \frac{\mu_0 I 2\overbrace{\pi R^2}^{A}}{2x^3 2\pi} = \frac{\mu_0 2 I A}{4\pi x^3}$$
+	Ricordando che $\vec{\mu} = I A \hat{n}$:
+	$$\vec{B}_x = \frac{\mu_0}{4\pi} \frac{2\vec{\mu}}{x^3}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{135.png}
+			\caption{Grande Distanza}
+			\label{fig:im-135}
+		\end{figure}
+	\end{center}
+	In analogia (formale) al caso del dipolo elettrico:
+	$$\vec{E}_{\text{ASSE}} = \frac{1}{4\pi\varepsilon_0} \frac{2\vec{P}}{x^3}$$
+	\paragraph{In Generale}
+	Le linee di campo magnetico generate da una spira circolare percorsa da una corrente $I$ sono formalmente analoghe a quelle generate da un dipolo magnetico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{136.png}
+			\caption{In Generale}
+			\label{fig:im-136}
+		\end{figure}
+	\end{center}
+	Come il comportamento elettrico di molte molecole è descrivibile in termini di dipolo elettrico, così anche il comportamento magnetico di atomi potrà essere descritto in termini di dipoli magnetici.
+	Corrente $I$ generata dal moto degli elettrici intorno ai nuclei.
+	\subsubsection{Coppie di Newton (3$^\degree$ Principio della Dinamica)}
+	Se un filo percorso da una corrente $I_1$ è sorgente di un campo magnetico $\vec{B}_1 = \frac{\mu_0 I_1}{4\pi} \int \frac{\vec{dl} \times \hat{r}}{r^2}$ allora deve essere in grado di esercitare una forza magnetica $\vec{F}_2 = I_2 \int \vec{dl} \times \vec{B}_1$
+	$$\Rightarrow \vec{F}_2 = I_2 \int \vec{dl} \times \underbrace{\left( \frac{\mu_0 I_1}{4\pi} \int \frac{\vec{dl} \times \hat{r}}{r^2} \right)}_{\vec{B_1}}$$
+	Per sempli ficare consideriamo due fili rettilinei molto lunghi e paralleli.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{137.png}
+			\caption{2 fili lunghi e paralleli}
+			\label{fig:im-137}
+		\end{figure}
+	\end{center}
+	$$\vec{F}_2 = I_2 \vec{L} \times \vec{B}_1 \Rightarrow F_2 = I_2 L \frac{\mu_0 I_1}{2\pi a}$$
+	$$\qquad \qquad \qquad \Downarrow$$
+	$$\qquad \qquad \qquad F_2 = \frac{\mu_0 I_1 I_2}{2\pi a} L$$
+	Analogamente sul filo 1 agirà una forza $\vec{F}_1$ con modulo usuale a $\vec{F}_2$ ma verso opposto (\textbf{Coppie di Newton} - III Principio della dinamica)\\\\
+	$\Rightarrow$ i due fili si attraggono se le correnti sono \textbf{concordi}.\\
+	Se le correnti sono \textbf{discordi} la forza è repulsiva.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{138.png} 
+			\caption{}
+			\label{fig:im-138}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{139.png}
+			\caption{}
+			\label{fig:im-139}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image18}
+	\end{figure}
+	\textbf{Forza per Unità Di Lunghezza}:
+	$$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi a}$$
 	\subsection{Legge di Ampere}
 	\subsection{Legge di Ampere-Maxwell}
 	\subsection{Flusso Magnetico}
