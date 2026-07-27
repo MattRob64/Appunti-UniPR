@@ -216,6 +216,210 @@
 	Si realizza uno \textbf{spettrometro di massa}.\\\\
 	Ioni isoenergetici di uno stesso elemento seguiranno traettorie diverse in base alla massa $m \Rightarrow$ \textbf{Rivelazione degli isotopi}.
 	\subsection{Effetto Hall}
+	La forza di Lorentz può deflettere anche i portatori di carica all’interno di un materiale conduttore. \\
+	Si consideri una lamina di un materiale conduttore (percorsa da corrente) immersa in un campo magnetico uniforme.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{107.png} 
+			\caption{}
+			\label{fig:im-107}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{108.png}
+			\caption{}
+			\label{fig:im-108}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image10}
+	\end{figure}
+	Il campo elettrico che si instaura trasversalmente alla direzione della corrente è detto \textbf{campo di Hall ($E_H$)}.
+	La differenza di potenziale è detta \textbf{tensione di Hall}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{109.png}
+			\caption{}
+			\label{fig:im-109}
+		\end{figure}
+	\end{center}
+	Dalla condizione di equilibrio:
+	$$F_B = F_{E_H} \Rightarrow \cancel{e} v_d B = \cancel{e} E_H \Rightarrow E_H = v_d B$$
+	Dove ovviamente $e$ indica la carica di un elettrone.\\\\
+	Ricordando che $J = n \, e \, v_d$ e che $J = \frac{I}{A} = \frac{I}{d \, t}$\\
+	Dove $d \, t$ indicano distanza e spessore non differenziale.
+	$$\Rightarrow v_d = \frac{J}{n \, e} = \frac{I}{n \, e \, d \, t} \Rightarrow E_H = \frac{I}{n \, e \, d \, t} B \Rightarrow \frac{\Delta V_H}{\cancel{d}} = \frac{I}{n \, e \, \cancel{d} \, t} B$$
+	$$\Rightarrow \Delta V_H = \frac{IB}{n \, e \, t} = R_H \frac{IB}{t} $$
+	Dove $R_H$ indica il \textbf{coefficiente di Hall}.
+	\begin{enumerate}
+		\item Possibilità di misurare sperimentalmente $B$ (\textbf{Sonda di Hall})
+		\item Il segno di $R_H$ fornisce il segno dei portatori di carica $+$ densità $n$
+	\end{enumerate}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{110.png} 
+			\caption{}
+			\label{fig:im-110}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{111.png}
+			\caption{}
+			\label{fig:im-111}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image11}
+	\end{figure}
+	\subsection{Forza Magnetica su un Conduttore Percorso da Corrente (Stazionaria)}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{112.png}
+			\caption{}
+			\label{fig:im-112}
+		\end{figure}
+	\end{center}
+	In un conduttore percorso da corrente gli elettroni si muovono con velocità $V_d$\\
+	$ \Rightarrow \vec{F}_B = -e \vec{v_d} \times \vec{B}$ per ciascun elettrone.\\\\
+	Se $n$ è la densità degli elettroni (numero di portatori per unità di volume)\\
+	$\Rightarrow$ nel tratto considerato abbiamo $n \, A \, L$ elettroni\\
+	$\Rightarrow$ la forza magnetica totale sul tratto di filo è $\vec{F}_B = -e \, \vec{v_d} \times \vec{B} n\, A \, L$\\\\
+	Ma in un filo $\vec{J} = -n\, e \, \vec{v_d} \Rightarrow \vec{F}_B = \vec{J} \times \vec{B} \, A \, L$\\
+	Con l’introduzione della densità di corrente $J$ si vede che $\vec{F}_B$ non dipende dal segno dei portatori, ma solo dal verso della corrente.\\\\
+	Essendo $J = \frac{I}{A}$ per un filo rettilineo possiamo scrivere:
+	$$\vec{F}_B = I \vec{L} \times \vec{B}$$
+	Dove $\vec{L}$ è un vettore con modulo $L$ e direzione e verso di $\vec{J}$.\\\\
+	\subsubsection{Generalizzando per un filo di forma arbitraria}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{113.png}
+			\caption{}
+			\label{fig:im-113}
+		\end{figure}
+	\end{center}
+	\begin{itemize}
+		\item Percorso da una corrente $I$ 
+		\item In un campo magnetico $\vec{B}$
+	\end{itemize}
+	$$d\vec{F}_B = I \vec{dl} \times \vec{B}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{114.png}
+			\caption{}
+			\label{fig:im-114}
+		\end{figure}
+	\end{center}
+	La forza su un tratto infinitetimo è ortogonale al campo magnetico e al filo (è uno strumento di calcolo).\\\\
+	Per ottenere la forza totale
+	$$\vec{F}_B = I \int_a d\vec{l} \times \vec{B}$$
+	Che è sempre un prodotto vettoriale!!!
+	\subsection{Momento Meccanico su una Spira Piana}
+	Consideriamo una spira piana (rettangolare) percorsa da una corrente $I$ e immersa in un campo magnetico uniforme.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{115.png} 
+			\caption{}
+			\label{fig:im-115}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{116.png}
+			\caption{}
+			\label{fig:im-116}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image12}
+	\end{figure}
+	Su ciascun lato agisce una forza magnetica $\vec{F}_B = I \int_{a}^{b} d\vec{s} \times \vec{B}$\\
+	Che per fili rettilinei in campo uniforme diventa $\vec{F}_B = I \, \vec{L} \times \vec{B}$
+	$$F_{AB} = I  \; \overline{AB} \;  B \; \sin(90^\degree + \vartheta) $$
+	$$F_{CD} = I  \; \overline{CD} \;  B \; \sin(90^\degree - \vartheta) $$
+	Dove possiamo notare che le due forze sono uguali in modulo e giacenti sulla stessa retta di azione.
+	$$F_{BC} = I \; \overline{BC} \; B$$
+	$$F_{AD} = I \; \overline{AD} \; B$$
+	Mentre qui notiamo che sono uguali in modulo ma non giacenti sulla stessa retta di azione.
+	$\Rightarrow$ costituistono una coppia di forze.\\\\ 
+	Il \textbf{bracco} di ciascuna forza è: $\frac{\overline{AB}}{2} \sin \vartheta$\\\\
+	$\Rightarrow$ il momento torcente $\tau$ è dato da:
+	$$\tau = \underbrace{F_{BC} \frac{\overline{AB}}{2} \sin \vartheta}_{\#_1} + \underbrace{F_{AD} \frac{\overline{AB}}{2} \sin \vartheta}_{\#_2} = I \; A \; B \; \sin \vartheta$$
+	Dove $A$ indica l'\textbf{area della spira}.\\
+	Se definiamo $\vec{A} = A \hat{n}$ e riscriviamo l'equazione soprastante otteniamo:
+	$$\Rightarrow \vec{\tau} = I \vec{A} \times \vec{B}$$
+	e chiamando $\vec{\mu} = I \vec{A}$ \textbf{Momento Di Dipolo Magnetico} otteniamo infine che:
+	$$\boxed{\vec{\tau} = \vec{\mu} \times \vec{B}}$$
+	La relazione $\vec{\tau} = \vec{\mu} \times \vec{B}$ \textbf{vale per spire di forma qualsiasi}.\\\\
+	Ogni spira percorsa da corrente è caratterizzata da un vettore $\vec{\mu} = I \vec{A}$ momento di dipolo magnetico.\\\\
+	Il verso di rotazione tende ad allineare $\vec{\mu}$ con il campo $\vec{B}$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{117.png} 
+			\caption{}
+			\label{fig:im-117}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{118.png}
+			\caption{}
+			\label{fig:im-118}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{119.png}
+			\caption{}
+			\label{fig:im-119}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image13}
+	\end{figure}
+	Siamo in analogia con il comportamento di un ago magnetico ossia di un piccolo dipolo magnetico:
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{120.png} 
+			\caption{}
+			\label{fig:im-120}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{121.png}
+			\caption{}
+			\label{fig:im-121}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{122.png}
+			\caption{}
+			\label{fig:im-122}
+		\end{subfigure}
+		
+		\caption{Analogia con ago magnetico}
+		\label{fig:image14}
+	\end{figure}
+	Agli effetti magnetici una spira piana di area $A$ e percorsa da una corrente $I$ equivale ad un \textbf{dipolo magnetico} di \textbf{momento magnetico di dipolo} $\vec{\mu} = I \, \vec{A}$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{123.png}
+			\caption{}
+			\label{fig:im-123}
+		\end{figure}
+	\end{center}
+	È immediata l’analogia con il caso elettrico ricordando il momento di dipolo elettrico
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{124.png}
+			\caption{}
+			\label{fig:im-124}
+		\end{figure}
+	\end{center}
+	$$\vec{\tau} = \vec{P} \times \vec{E}$$
+	Sempre per l’analogia formale:
+	$$U = -\vec{P} \cdot \vec{E} \qquad \qquad \vec{\mathbf{U}} = -\vec{\mu} \cdot \vec{B}$$
+	\textbf{Concetti già sviluppati per i dipoli elettrici potranno essere applicati a situazioni magnetiche}.
 	\subsection{Moti della Particella}
 	\subsection{Campo Magnetico e Fili Conduttori}
 	\subsection{Momento Magnetico}
