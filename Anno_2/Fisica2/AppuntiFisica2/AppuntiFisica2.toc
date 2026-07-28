@@ -101,17 +101,19 @@
 \contentsline {subsection}{\numberline {3.8}Flusso Magnetico e Legge Di Gauss per il Campo Magnetico}{67}{subsection.3.8}%
 \contentsline {subsubsection}{\numberline {3.8.1}Caso Superficie Chiusa}{67}{subsubsection.3.8.1}%
 \contentsline {subsubsection}{\numberline {3.8.2}Caso Superficie Gaussiana}{67}{subsubsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.9}Legge di Ampere-Maxwell}{68}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Flusso Magnetico}{68}{subsection.3.10}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{68}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{68}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{68}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{68}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{68}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{68}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{68}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{68}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{68}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{68}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Esercizi}{68}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{68}{subsection.6.1}%
+\contentsline {subsection}{\numberline {3.9}Flusso Magnetico}{68}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Campi Dipendenti dal tempo}{68}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Ampere-Maxwell}{68}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Magnetismo nella Materia}{70}{section.5}%
+\contentsline {section}{\numberline {6}Induzione Elettromagnetica}{70}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{70}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{70}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{70}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{70}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circuiti LC}{70}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{70}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{70}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{70}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{70}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Esercizi}{70}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{70}{subsection.8.1}%

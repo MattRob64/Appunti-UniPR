@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Legge di Ampere-Maxwell}
+	\textbf{"Manca Qualcosa"}\\\\
+	La legge di Ampère $\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{conc}}$ è stata formulata nel caso di campi magnetici generati da correnti continue\\
+	$\Rightarrow$ i campi elettrici sono costanti nel tempo.\\\\
+	Ricordiamo inoltre che nel valutare $I_{\text{conc}}$ la scelta della superficie avente come confine la curva lungo cui si calcola la circuitazione $\oint \vec{B} \cdot \vec{dl}$ del campo magnetico è arbitraria.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{156.png}
+			\caption{}
+			\label{fig:im-156}
+		\end{figure}
+	\end{center}
+	In figura \ref{fig:im-156} osserviamo che sia $S_1$ che $S_2$ sono attraversate dalla corrente $I$.\\
+	Se così non fosse \textbf{violerei} la validità della legge di Ampère.\\
+	Inoltre avrei un accumulo di carica tra $S_1$ e $S_2$.\\\\
+	Una situazione diversa si ha se consideriamo la presenza di un condensatore (figura \ref{fig:im-157})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{157.png}
+			\caption{}
+			\label{fig:im-157}
+		\end{figure}
+	\end{center}
+	Durante ad esempio un processo di carica del condensatore una corrente $I(b)$ può circolare nel circuito.\\
+	Su ciascuna armatura del condensatore si ha una variazione della carica elettrica nel tempo pari in modulo a $\frac{dQ}{dt}$.\\
+	Nel circuito scorre una corrente, ma nessuna corrente di conduzione attraversa lo spazio fra le due armature.
+	Possiamo calcolare la legge di Ampère per il percorso chiuso $\Gamma$ (Figura \ref{fig:im-158})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{158.png}
+			\caption{}
+			\label{fig:im-158}
+		\end{figure}
+	\end{center}
+	$$\oint_{\Gamma} \vec{B} \cdot d\vec{l} = \begin{cases} \mu_0 I & \text{se considero } S_1 \\ 0 & \text{se considero } S_2 \end{cases}$$
+	\textbf{Siamo di fronte ad una contraddizione !!!}\\\\
+	Maxwell (James Clerck 1831-1879) propose una "estensione" del concerto di intensità di corrente
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{159.png}
+			\caption{}
+			\label{fig:im-159}
+		\end{figure}
+	\end{center}
+	Il campo elettrico fra le armature del condensatore (figura \ref{fig:im-159}) è dato da (Doppio Strato Piano):
+	$$E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}$$
+	Doe $A$ indica l'area delle armature.\\
+	Posso calcolare il flusso $\phi_E$ del campo elettrico attraverso la superficie $S$:
+	$$\vec{\phi}_E = \int \vec{E} \cdot \vec{ds} = E \cdot A \Rightarrow \phi_E = \frac{Q}{\varepsilon_0 \cancel{A}} \cancel{A} = \frac{Q}{\varepsilon_0}$$
+	Ma nel processo di carica la corrente i che attraversa $S_1$ è data da:
+	$$I = \frac{dQ}{dt}$$
+	$$\Rightarrow I = \frac{dQ}{dt} = \varepsilon_0 \frac{d\phi_E}{dt}$$
+	$\Rightarrow$ Fra le armature abbiamo individuato una “corrente efficace” \textbf{che attraversa $S_2$} uguale alla corrente $I$ che attraversa $S_1$.\\
+	Questa corrente prende il nome di \textbf{Corrente Di Spostamento}:
+	$$I_d \equiv \varepsilon_0 \frac{d\phi_E}{dt}$$
+	Ai fini del calcolo è trattata come una corrente vera e propria;\\
+	Ci garantisce la continuità della corrente poiché nell’esempio considerato $$I=I_d$$
+	$\Rightarrow$ La legge di Ampère risulta così modificata nella sua forma generalizzata.\\\\
+	{\color{red}Legge Di Ampère - Maxwell}:
+	$$\boxed{\oint \vec{B} \cdot \vec{dl} = \mu_0 (I + I_d) = \mu_0 I + \mu_0 \varepsilon_0 \frac{d\phi_E}{dt}}$$
+	Alla corrente di spostamento $$I_d$$ non corrisponde un reale moto di cariche, ma la legge di Ampère - Maxwell attribuisce gli stessi effetti di una corrente di conduzione alle \textbf{variazioni temporali del campo elettrico}.
+\end{document}
