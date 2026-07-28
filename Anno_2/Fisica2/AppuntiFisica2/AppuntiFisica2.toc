@@ -1,104 +1,117 @@
-\contentsline {section}{\numberline {1}Elettrostatica}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Incipit}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Carica Elettrica}{4}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Struttura Atomica}{4}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Conduttori e Isolanti}{4}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Induzione Elettrostatica}{5}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Quantizzazione della Carica Elettrica}{5}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Conservazione della Carica Elettrica}{5}{subsubsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.3}Legge di Coulomb}{5}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Principio di sovrapposizione}{6}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Confronto tra forza gravitazionale ed elettrostatica}{6}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Campo Elettrico}{7}{subsection.1.6}%
-\contentsline {subsubsection}{\numberline {1.6.1}Campi scalari e campi vettoriali}{7}{subsubsection.1.6.1}%
-\contentsline {subsubsection}{\numberline {1.6.2}Campo elettrico di una carica puntiforme}{7}{subsubsection.1.6.2}%
-\contentsline {subsubsection}{\numberline {1.6.3}Campo elettrico di un gruppo di cariche puntiformi}{8}{subsubsection.1.6.3}%
-\contentsline {subsubsection}{\numberline {1.6.4}Linee di forza di un campo elettrico (Visualizzazione dei campi vettoriali)}{8}{subsubsection.1.6.4}%
-\contentsline {subsection}{\numberline {1.7}Dipolo Elettrico}{9}{subsection.1.7}%
-\contentsline {subsubsection}{\numberline {1.7.1}Calcolo campo elettrico nel campo equatoriale del dipolo}{10}{subsubsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.8}Campo elettrico generato da distribuzioni continue di carica}{10}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Campo elettrico di una distribuzione lineare di carica}{11}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Spira circolare uniformemente carica (campo lungo l’asse)}{12}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Flusso di un campo vettoriale}{13}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Legge di Gauss}{14}{subsection.1.12}%
-\contentsline {subsubsection}{\numberline {1.12.1}Campo in prossimità di una distribuzione lineare di carica molto lunga}{17}{subsubsection.1.12.1}%
-\contentsline {subsubsection}{\numberline {1.12.2}Campo in prossimità di una grande lamina piana uniformemente carica}{17}{subsubsection.1.12.2}%
-\contentsline {subsubsection}{\numberline {1.12.3}Sfera uniformemente carica}{18}{subsubsection.1.12.3}%
-\contentsline {subsubsection}{\numberline {1.12.4}Doppio strato piano}{19}{subsubsection.1.12.4}%
-\contentsline {subsection}{\numberline {1.13}Potenziale Elettrico}{19}{subsection.1.13}%
-\contentsline {subsubsection}{\numberline {1.13.1}Potenziale di una particella di prova nel campo di un numero qualsiasi di cariche puntiformi}{22}{subsubsection.1.13.1}%
-\contentsline {subsubsection}{\numberline {1.13.2}Distribuzione continua di carica}{22}{subsubsection.1.13.2}%
-\contentsline {subsubsection}{\numberline {1.13.3}Dipolo elettrico e potenziale elettrico}{23}{subsubsection.1.13.3}%
-\contentsline {subsubsection}{\numberline {1.13.4}Energia potenziale di un dipolo in un campo elettrico uniforme}{23}{subsubsection.1.13.4}%
-\contentsline {subsubsection}{\numberline {1.13.5}Potenziale del campo generato da una distribuzione lineare di carica}{24}{subsubsection.1.13.5}%
-\contentsline {subsubsection}{\numberline {1.13.6}Relazione tra campo e potenziale elettrico}{25}{subsubsection.1.13.6}%
-\contentsline {subsubsection}{\numberline {1.13.7}Superfici equipotenziali}{26}{subsubsection.1.13.7}%
-\contentsline {subsubsection}{\numberline {1.13.8}Conduttori in equilibrio elettrostatico}{26}{subsubsection.1.13.8}%
-\contentsline {subsubsection}{\numberline {1.13.9}Campo elettrico nelle immediate vicinanze di un conduttore}{27}{subsubsection.1.13.9}%
-\contentsline {subsubsection}{\numberline {1.13.10}Conduttori in equilibrio elettrostatico (2)}{27}{subsubsection.1.13.10}%
-\contentsline {paragraph}{\numberline {1.13.10.1}Conduttore cavo}{28}{paragraph.1.13.10.1}%
-\contentsline {subsection}{\numberline {1.14}Conduttori e Capacità}{28}{subsection.1.14}%
-\contentsline {subsubsection}{\numberline {1.14.1}Capacità di un conduttore isolato}{28}{subsubsection.1.14.1}%
-\contentsline {subsubsection}{\numberline {1.14.2}Capacità di una sfera conduttrice isolata}{29}{subsubsection.1.14.2}%
-\contentsline {subsubsection}{\numberline {1.14.3}Condensatore}{30}{subsubsection.1.14.3}%
-\contentsline {subsubsection}{\numberline {1.14.4}Condensatore piano}{31}{subsubsection.1.14.4}%
-\contentsline {subsubsection}{\numberline {1.14.5}Sistemi di condensatori in parallelo}{31}{subsubsection.1.14.5}%
-\contentsline {subsubsection}{\numberline {1.14.6}Sistemi di condensatori in serie}{32}{subsubsection.1.14.6}%
-\contentsline {subsubsection}{\numberline {1.14.7}Energia Elettrostatica}{32}{subsubsection.1.14.7}%
-\contentsline {subsubsection}{\numberline {1.14.8}Energia elettrostatica immagazzinata in un condensatore}{34}{subsubsection.1.14.8}%
-\contentsline {subsubsection}{\numberline {1.14.9}Densità di energia elettrostatica di un campo elettrico}{34}{subsubsection.1.14.9}%
-\contentsline {subsection}{\numberline {1.15}Dielettrici}{34}{subsection.1.15}%
-\contentsline {subsubsection}{\numberline {1.15.1}Proprietà elettrostatica dei dielettrici}{34}{subsubsection.1.15.1}%
-\contentsline {subsubsection}{\numberline {1.15.2}Descrizione molecolare dei dielettrici}{36}{subsubsection.1.15.2}%
-\contentsline {paragraph}{\numberline {1.15.2.1}Polarizzazione per deformazione}{36}{paragraph.1.15.2.1}%
-\contentsline {paragraph}{\numberline {1.15.2.2}Polarizzazione per orientamento}{36}{paragraph.1.15.2.2}%
-\contentsline {section}{\numberline {2}Elettrodinamica}{38}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Corrente Elettrica Stazionaria}{38}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Densità di corrente}{40}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Legge dei nodi (1$^a$ legge di Kirchoff)}{41}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Legge di Ohm}{41}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Resistività}{42}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Legge di Ohm in Forma Locale}{43}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Modello di Drude per i Metalli}{44}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Effetto Joule}{45}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Resistori in Serie e in Parallelo}{46}{subsection.2.9}%
-\contentsline {subsubsection}{\numberline {2.9.1}Resistori in Serie}{46}{subsubsection.2.9.1}%
-\contentsline {subsubsection}{\numberline {2.9.2}Resistori in Parallelo}{47}{subsubsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.10}Amperometri e Voltmetri}{47}{subsection.2.10}%
-\contentsline {subsection}{\numberline {2.11}Forza Elettromotrice}{47}{subsection.2.11}%
-\contentsline {subsection}{\numberline {2.12}Legge di Ohm generalizzata e $2^{a}$ legge di Kirchhoff}{49}{subsection.2.12}%
-\contentsline {subsection}{\numberline {2.13}Carica di un Condensatore Attraverso un Resistore}{49}{subsection.2.13}%
-\contentsline {section}{\numberline {3}Magnetostatica}{51}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{51}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Il Campo Magnetico $\vec {B}$}{52}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Come definiamo $\vec {B}$? (Forza di Lorentz)}{53}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Esempi}{54}{subsubsection.3.1.3}%
-\contentsline {paragraph}{\numberline {3.1.3.1}Esempio 1}{54}{paragraph.3.1.3.1}%
-\contentsline {paragraph}{\numberline {3.1.3.2}Esempio 2}{54}{paragraph.3.1.3.2}%
-\contentsline {paragraph}{\numberline {3.1.3.3}Esempio 3}{55}{paragraph.3.1.3.3}%
-\contentsline {subsection}{\numberline {3.2}Effetto Hall}{55}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Forza Magnetica su un Conduttore Percorso da Corrente (Stazionaria)}{56}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Generalizzando per un filo di forma arbitraria}{57}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}Momento Meccanico su una Spira Piana}{57}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Legge di Biot-Savart e le sue Applicazioni}{59}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Filo Rettilineo (Indefinito)}{59}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Spira Circolare}{60}{subsubsection.3.5.2}%
-\contentsline {paragraph}{\numberline {3.5.2.1}Nel Centro della Spira}{61}{paragraph.3.5.2.1}%
-\contentsline {paragraph}{\numberline {3.5.2.2}A Grande Distanza}{61}{paragraph.3.5.2.2}%
-\contentsline {paragraph}{\numberline {3.5.2.3}In Generale}{61}{paragraph.3.5.2.3}%
-\contentsline {subsubsection}{\numberline {3.5.3}Coppie di Newton (3$^\degree $ Principio della Dinamica)}{61}{subsubsection.3.5.3}%
+\contentsline {section}{\numberline {1}Elettrostatica}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Incipit}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Carica Elettrica}{5}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Struttura Atomica}{5}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Conduttori e Isolanti}{5}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Induzione Elettrostatica}{6}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Quantizzazione della Carica Elettrica}{6}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Conservazione della Carica Elettrica}{6}{subsubsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.3}Legge di Coulomb}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Principio di sovrapposizione}{7}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Confronto tra forza gravitazionale ed elettrostatica}{7}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Campo Elettrico}{8}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Campi scalari e campi vettoriali}{8}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Campo elettrico di una carica puntiforme}{8}{subsubsection.1.6.2}%
+\contentsline {subsubsection}{\numberline {1.6.3}Campo elettrico di un gruppo di cariche puntiformi}{9}{subsubsection.1.6.3}%
+\contentsline {subsubsection}{\numberline {1.6.4}Linee di forza di un campo elettrico (Visualizzazione dei campi vettoriali)}{9}{subsubsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.7}Dipolo Elettrico}{10}{subsection.1.7}%
+\contentsline {subsubsection}{\numberline {1.7.1}Calcolo campo elettrico nel campo equatoriale del dipolo}{11}{subsubsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.8}Campo elettrico generato da distribuzioni continue di carica}{11}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Campo elettrico di una distribuzione lineare di carica}{12}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Spira circolare uniformemente carica (campo lungo l’asse)}{13}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Flusso di un campo vettoriale}{14}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Legge di Gauss}{15}{subsection.1.12}%
+\contentsline {subsubsection}{\numberline {1.12.1}Campo in prossimità di una distribuzione lineare di carica molto lunga}{18}{subsubsection.1.12.1}%
+\contentsline {subsubsection}{\numberline {1.12.2}Campo in prossimità di una grande lamina piana uniformemente carica}{18}{subsubsection.1.12.2}%
+\contentsline {subsubsection}{\numberline {1.12.3}Sfera uniformemente carica}{19}{subsubsection.1.12.3}%
+\contentsline {subsubsection}{\numberline {1.12.4}Doppio strato piano}{20}{subsubsection.1.12.4}%
+\contentsline {subsection}{\numberline {1.13}Potenziale Elettrico}{20}{subsection.1.13}%
+\contentsline {subsubsection}{\numberline {1.13.1}Potenziale di una particella di prova nel campo di un numero qualsiasi di cariche puntiformi}{23}{subsubsection.1.13.1}%
+\contentsline {subsubsection}{\numberline {1.13.2}Distribuzione continua di carica}{23}{subsubsection.1.13.2}%
+\contentsline {subsubsection}{\numberline {1.13.3}Dipolo elettrico e potenziale elettrico}{24}{subsubsection.1.13.3}%
+\contentsline {subsubsection}{\numberline {1.13.4}Energia potenziale di un dipolo in un campo elettrico uniforme}{24}{subsubsection.1.13.4}%
+\contentsline {subsubsection}{\numberline {1.13.5}Potenziale del campo generato da una distribuzione lineare di carica}{25}{subsubsection.1.13.5}%
+\contentsline {subsubsection}{\numberline {1.13.6}Relazione tra campo e potenziale elettrico}{26}{subsubsection.1.13.6}%
+\contentsline {subsubsection}{\numberline {1.13.7}Superfici equipotenziali}{27}{subsubsection.1.13.7}%
+\contentsline {subsubsection}{\numberline {1.13.8}Conduttori in equilibrio elettrostatico}{27}{subsubsection.1.13.8}%
+\contentsline {subsubsection}{\numberline {1.13.9}Campo elettrico nelle immediate vicinanze di un conduttore}{28}{subsubsection.1.13.9}%
+\contentsline {subsubsection}{\numberline {1.13.10}Conduttori in equilibrio elettrostatico (2)}{28}{subsubsection.1.13.10}%
+\contentsline {paragraph}{\numberline {1.13.10.1}Conduttore cavo}{29}{paragraph.1.13.10.1}%
+\contentsline {subsection}{\numberline {1.14}Conduttori e Capacità}{29}{subsection.1.14}%
+\contentsline {subsubsection}{\numberline {1.14.1}Capacità di un conduttore isolato}{29}{subsubsection.1.14.1}%
+\contentsline {subsubsection}{\numberline {1.14.2}Capacità di una sfera conduttrice isolata}{30}{subsubsection.1.14.2}%
+\contentsline {subsubsection}{\numberline {1.14.3}Condensatore}{31}{subsubsection.1.14.3}%
+\contentsline {subsubsection}{\numberline {1.14.4}Condensatore piano}{32}{subsubsection.1.14.4}%
+\contentsline {subsubsection}{\numberline {1.14.5}Sistemi di condensatori in parallelo}{32}{subsubsection.1.14.5}%
+\contentsline {subsubsection}{\numberline {1.14.6}Sistemi di condensatori in serie}{33}{subsubsection.1.14.6}%
+\contentsline {subsubsection}{\numberline {1.14.7}Energia Elettrostatica}{33}{subsubsection.1.14.7}%
+\contentsline {subsubsection}{\numberline {1.14.8}Energia elettrostatica immagazzinata in un condensatore}{35}{subsubsection.1.14.8}%
+\contentsline {subsubsection}{\numberline {1.14.9}Densità di energia elettrostatica di un campo elettrico}{35}{subsubsection.1.14.9}%
+\contentsline {subsection}{\numberline {1.15}Dielettrici}{35}{subsection.1.15}%
+\contentsline {subsubsection}{\numberline {1.15.1}Proprietà elettrostatica dei dielettrici}{35}{subsubsection.1.15.1}%
+\contentsline {subsubsection}{\numberline {1.15.2}Descrizione molecolare dei dielettrici}{37}{subsubsection.1.15.2}%
+\contentsline {paragraph}{\numberline {1.15.2.1}Polarizzazione per deformazione}{37}{paragraph.1.15.2.1}%
+\contentsline {paragraph}{\numberline {1.15.2.2}Polarizzazione per orientamento}{37}{paragraph.1.15.2.2}%
+\contentsline {section}{\numberline {2}Elettrodinamica}{39}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Corrente Elettrica Stazionaria}{39}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Densità di corrente}{41}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Legge dei nodi (1$^a$ legge di Kirchoff)}{42}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Legge di Ohm}{42}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Resistività}{43}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Legge di Ohm in Forma Locale}{44}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Modello di Drude per i Metalli}{45}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Effetto Joule}{46}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Resistori in Serie e in Parallelo}{47}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Resistori in Serie}{47}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.2}Resistori in Parallelo}{48}{subsubsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.10}Amperometri e Voltmetri}{48}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Forza Elettromotrice}{48}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Legge di Ohm generalizzata e $2^{a}$ legge di Kirchhoff}{50}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}Carica di un Condensatore Attraverso un Resistore}{50}{subsection.2.13}%
+\contentsline {section}{\numberline {3}Magnetostatica}{52}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Campo Magnetico}{52}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Il Campo Magnetico $\vec {B}$}{53}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Come definiamo $\vec {B}$? (Forza di Lorentz)}{54}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Esempi}{55}{subsubsection.3.1.3}%
+\contentsline {paragraph}{\numberline {3.1.3.1}Esempio 1}{55}{paragraph.3.1.3.1}%
+\contentsline {paragraph}{\numberline {3.1.3.2}Esempio 2}{55}{paragraph.3.1.3.2}%
+\contentsline {paragraph}{\numberline {3.1.3.3}Esempio 3}{56}{paragraph.3.1.3.3}%
+\contentsline {subsection}{\numberline {3.2}Effetto Hall}{56}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Forza Magnetica su un Conduttore Percorso da Corrente (Stazionaria)}{57}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Generalizzando per un filo di forma arbitraria}{58}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}Momento Meccanico su una Spira Piana}{58}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Legge di Biot-Savart e le sue Applicazioni}{60}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Filo Rettilineo (Indefinito)}{60}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Spira Circolare}{61}{subsubsection.3.5.2}%
+\contentsline {paragraph}{\numberline {3.5.2.1}Nel Centro della Spira}{62}{paragraph.3.5.2.1}%
+\contentsline {paragraph}{\numberline {3.5.2.2}A Grande Distanza}{62}{paragraph.3.5.2.2}%
+\contentsline {paragraph}{\numberline {3.5.2.3}In Generale}{62}{paragraph.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.3}Coppie di Newton (3$^\degree $ Principio della Dinamica)}{62}{subsubsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.6}Legge di Ampere}{63}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Legge di Ampere-Maxwell}{63}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Flusso Magnetico}{63}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{63}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{63}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{63}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{63}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{63}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Circuiti LC}{63}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{63}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{63}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{63}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{63}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Esercizi}{63}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{63}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.1}Corrente Concatenata}{64}{subsubsection.3.6.1}%
+\contentsline {paragraph}{\numberline {3.6.1.1}Esempio 1}{64}{paragraph.3.6.1.1}%
+\contentsline {paragraph}{\numberline {3.6.1.2}Esempio 2}{64}{paragraph.3.6.1.2}%
+\contentsline {paragraph}{\numberline {3.6.1.3}Esempio 3}{65}{paragraph.3.6.1.3}%
+\contentsline {subsection}{\numberline {3.7}Legge di Ampere per Campo Magnetico Generato Da Una Distribuzioni di Corrente}{65}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Campo Magnetico di un Filo Rettilineo}{65}{subsubsection.3.7.1}%
+\contentsline {paragraph}{\numberline {3.7.1.1}Caso $z \ge R$}{65}{paragraph.3.7.1.1}%
+\contentsline {paragraph}{\numberline {3.7.1.2}Caso $z < R$}{66}{paragraph.3.7.1.2}%
+\contentsline {subsubsection}{\numberline {3.7.2}Campo Magnetico di un Solenoide}{66}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Campo Magnetico di un Toroide (Solenoide Toroidale "A Ciambella")}{66}{subsubsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.8}Flusso Magnetico e Legge Di Gauss per il Campo Magnetico}{67}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Caso Superficie Chiusa}{67}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Caso Superficie Gaussiana}{67}{subsubsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.9}Legge di Ampere-Maxwell}{68}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Flusso Magnetico}{68}{subsection.3.10}%
+\contentsline {section}{\numberline {4}Induzione Elettromagnetica}{68}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Legge di Faraday-Lenz}{68}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Autoinduzione e circuiti LR}{68}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Densità di Energia Magnetica}{68}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Mutua Induzione e Trasformatori}{68}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Circuiti LC}{68}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Onde Elettromagnetiche}{68}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Equazioni di Maxwell}{68}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Onde Armoniche}{68}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Onde Elettromagnetiche}{68}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Esercizi}{68}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Elettrodinamica}{68}{subsection.6.1}%

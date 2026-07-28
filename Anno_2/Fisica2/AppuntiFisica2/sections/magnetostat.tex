@@ -115,7 +115,7 @@
 		\item In presenza di un campo magnetico $\vec{B}$ la forza magnetica agente su una particella è proporzionale alla carica $q$ e alla velocità $\vec{v}$
 		\item È un prodotto vettoriale!!!
 		\item La forza $\vec{f}_B$ si inverte se cambiamo il segno della carica
-		\item • Se $\vec{B} \parallel \vec{v}$ la forza magnetica è nulla $F_B = q v B \sin \theta$
+		\item Se $\vec{B} \parallel \vec{v}$ la forza magnetica è nulla $F_B = q v B \sin \theta$
 	\end{itemize}
 	\begin{center}
 		\begin{tabular}{|l|l|}
@@ -602,9 +602,222 @@
 		\caption{}
 		\label{fig:image18}
 	\end{figure}
-	\textbf{Forza per Unità Di Lunghezza}:
+	\\\textbf{Forza per Unità Di Lunghezza}:
 	$$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi a}$$
 	\subsection{Legge di Ampere}
+	Consideriamo un filo rettilineo percorso da corrente in figura \ref{fig:im-140}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{140.png}
+			\caption{Filo rettilineo percorso da corrente}
+			\label{fig:im-140}
+		\end{figure}
+	\end{center}
+	Possiamo calcolare la circuitazione del campo magnetico lungo un percorso circolare che racchiude il filo.\\
+	In ogni punto $\vec{B} \parallel \vec{dl}$.\\
+	Possiamo quindi scrivere la formula per un filo ipoteticamente infinito come:
+	$$\Rightarrow \oint \vec{B} \cdot \vec{dl} = \oint B \cdot dl = \oint \frac{\mu_0 I}{2\pi r} \cdot dl = \frac{\mu_0 I}{2\pi r} \oint dl = \frac{\mu_0 I}{\cancel{2\pi r}} \cancel{2\pi r}$$
+	$$\Rightarrow \oint \vec{B} \cdot \vec{dl} = \mu_0 I$$
+	Se invece consideriamo una curva che non racchiuda il filo.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{141.png}
+			\caption{Curva che non racchiude il filo}
+			\label{fig:im-141}
+		\end{figure}
+	\end{center}
+	$$\oint \vec{B} \cdot \vec{dl} = \int_{A \to B} \vec{B} \cdot \vec{dl} + \underbrace{\int_{B \to C} \vec{B} \cdot \vec{dl}}_{=0 \text{ Poichè } \vec{B} \perp \vec{dl}} + \int_{C \to D} \vec{B} \cdot \vec{dl} + \underbrace{\int_{D \to A} \vec{B} \cdot \vec{dl}}_{=0  \text{ Poichè } \vec{B} \perp \vec{dl} }  $$
+	$= - \frac{\mu_0 I}{2\pi \cancel{r_A}} \cancel{r_A} \vartheta + \frac{\mu_0 I}{2\pi \cancel{r_0}} \cancel{r_0} \vartheta = 0 \qquad \parallel$
+	Il risultato è generalizzabile a distribuzioni di correnti \textbf{continue} qualsiasi e percorsi chiusi qualsiasi.
+	\begin{theorem}
+		L’integrale di linea $\vec{B} \cdot \vec{dl}$ esteso ad un \textbf{qualsiasi percorso chiuso} è sempre uguale a $\mu_0 I_{\text{conc}}$ dove $I_{\text{conc}}$ rappresenta la \textbf{corrente totale concatenata} con il percorso chiuso
+		$$\oint \vec{B} \cdot \vec{dl} = \mu_0 I_{\text{conc}}$$
+	\end{theorem}
+	\subsubsection{Corrente Concatenata}
+	Una corrente è concaetenata ad un percorso chiuso quando attraversa una qualsiasi superficie che si appoggi al percorso dato (ossia che abbia come frontiera il percorso dato).\\
+	Una volta fissato il verso di percorrenza dell’integrale di linea il segno della corrente è determinato con la regola della mano destra.
+	\paragraph{Esempio 1}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{142.png}
+			\caption{Esempio 1 Corr. Concat.}
+			\label{fig:im-142}
+		\end{figure}
+	\end{center}
+	$$\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{conc}$$
+	Curva $c_1$ $I_{conc} = 0$\\
+	Curva $c_2$ $I_{conc} = I_1 - I_2$\\
+	Curva $c_3$ $I_{conc} = -I_1 + I_2 - I_3$
+	\paragraph{Esempio 2}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{143.png}
+			\caption{Esempio 2 Corr. Concat.}
+			\label{fig:im-143}
+		\end{figure}
+	\end{center}
+	$$I_{conc} = I - I = 0$$
+	\paragraph{Esempio 3}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{144.png} 
+			\caption{}
+			\label{fig:im-144}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{145.png}
+			\caption{}
+			\label{fig:im-145}
+		\end{subfigure}
+		
+		\caption{Esempio 3 Corr. Concat.}
+		\label{fig:image19}
+	\end{figure}
+	Curva $c_1$ $I_{conc} = I_1$\\
+	Curva $c_2$ $I_{conc} = -I_2 - I_3$\\
+	Curva $c_3$ $I_{conc} = 0$\\\\\\
+	Nel calcolo della circuitazione $\oint \vec{B} \cdot d\vec{l}$ \\
+	$\vec{B}$ è il campo magnetico generato da tutte le correnti: \textbf{il risultato dell’integrale dipende solo dalle correnti concatenate al percorso chiuso}.
+	\subsection{Legge di Ampere per Campo Magnetico Generato Da Una Distribuzioni di Corrente}
+	La legge di Ampère può essere utilizzata per determinare il campo magnetico generato da una distribuzione di corrente avente una determinata simmetria.
+	\subsubsection{Campo Magnetico di un Filo Rettilineo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{146.png}
+			\caption{Campo Magnetico di un Filo Rettilineo}
+			\label{fig:im-146}
+		\end{figure}
+	\end{center}
+	Campo magnetico $\vec{B}$ generato da un filo rettilineo di raggio $r$ percorso da una corrente $I_0$ distribuita uniformemente su tutta la sezione.\\\\
+	Abbiamo due casi $z \ge R$ e $z < R$
+	\paragraph{Caso $z \ge R$}
+	Applichiamo la legge di Ampère alla curva 1 (dala figura \ref{fig:im-146}) circonferenza con centro nell’asse del filo per simmetria $B \parallel d\vec{l}$ e $|B|$ costante
+	$$\Rightarrow \oint \vec{B} \cdot d\vec{l} \underbrace{=}_{\text{Che da Ampere sappiamo essere: }= \mu_0 I_{conc} = \mu_0 I_0} \oint B \, dl = B \oint dl = B \, 2 \, \pi  \, r$$
+	$$\Rightarrow \text{Per } z \ge R \qquad B = \frac{\mu_0 I_0}{2 \, \pi \, r}$$
+	Ovvero: il campo prende una quantità di corrente proporzionale all’area circoscritta.
+	\paragraph{Caso $z < R$}
+	$$I_{conc} = \frac{I_0}{\underbrace{\cancel{\pi} R^2}_{{J}}} \cdot \cancel{\pi} r^2 \Rightarrow B = \frac{\mu_0 I_0}{2 \pi R^2} r$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{147.png}
+			\caption{}
+			\label{fig:im-147}
+		\end{figure}
+	\end{center}
+	\subsubsection{Campo Magnetico di un Solenoide}
+	Un solenoide è un lungo filo avvolto a forman di elica cilindrica (con avvolgimenti molto fitti).\\
+	Il campo generato è dato dalla somma vettoriale di tutte le spire che lo componono, come possiamo osservare in gigura \ref{fig:im-148}.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{148.png} 
+			\caption{Campo Magnetico Solenoide}
+			\label{fig:im-148}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{149.png}
+			\caption{Campo Magnetico Solenoide IDEALE}
+			\label{fig:im-149}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image20}
+	\end{figure}
+	Nel caso “ideale” (figura \ref{fig:im-149}) il solenoide è equivalente ad una superficie cilindrica percorsa da corrente.\\
+	Lontano dalle estremità il campo è nullo all’\textbf{esterno} e all’\textbf{interno} è uniforme e coassiale all’asse del cilindro.
+	$$\oint \vec{B} \cdot d\vec{l} \underbrace{=}_{\text{Legge di Ampere: }= \mu_0 I_{conc} = \mu_0 NI} \underbrace{\int_A^B \vec{B} \cdot d\vec{l}}_{=0} + \int_B^C \vec{B} \cdot d\vec{l} + \underbrace{\int_C^D \vec{B} \cdot d\vec{l}}_{=0} + \underbrace{\int_D^A \vec{B} \cdot d\vec{l}}_{=0} = \int_B^C \vec{B} \cdot d\vec{l} = BL$$
+	Dove $N$ indica il numero di spire presenti nel tratto $L$
+	$$\Rightarrow BL = \mu_0 NI$$
+	$$\Rightarrow B = \mu_0 \frac{N}{L} I$$
+	$$\Rightarrow \boxed{B = \mu_0 n I}$$
+	Per un solenoide ideale indefinito il campo magnetico interno è ovunque: \textbf{uniforme}, \textbf{parallelo all’asse} del solenoide, \textbf{orientato rispetto alla corrente} secondo la regola della vite e in modulo proporzionale alla corrente $I$ ed alla densità $n$ delle spire.
+	\subsubsection{Campo Magnetico di un Toroide (Solenoide Toroidale "A Ciambella")}
+	La simmetria ci suggerisce che le linee di campo magnetico all’interno del toroide siano circonferenze con centro sull’asse del toroide (figura \ref{fig:im-150})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{150.png}
+			\caption{}
+			\label{fig:im-150}
+		\end{figure}
+	\end{center}
+	Applicando la legge di ampère ad una di queste circonferenze:
+	$$ \oint \vec{B} \cdot d\vec{l} \underbrace{=}_{= \mu_0 N I} \oint B \cdot dl = B \oint dl = B 2\pi r $$
+	Dove in questo caso $N$ indica il numero totale di spire.
+	$$\Rightarrow B = \frac{\mu_0 N I}{2\pi r}$$
+	\subsection{Flusso Magnetico e Legge Di Gauss per il Campo Magnetico}
+	Come per il campo elettrico $\vec{E}$ anche per il campo magnetico $\vec{B}$ è possibile definire il flusso attraverso una superficie (figura \ref{fig:im-151}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{151.png}
+			\caption{}
+			\label{fig:im-151}
+		\end{figure}
+	\end{center}
+	$$d\phi_B = \vec{B} \cdot d\vec{s} \qquad \text{CON } \quad d\vec{s} = ds\hat{n}$$
+	$$\Rightarrow \int_A \vec{B} \cdot \vec{ds} = \phi_B \qquad \qquad \text{Flusso di $\vec{B}$ attraverso la superficie considerata}$$
+	Risulta essere una “misura” proporzionale al numero di linee di campo magnetico $\vec{B}$ che intersecano la superficie.\\\\
+	L’unità di misura è $T \cdot m^2$ definita come \textbf{Weber} $\qquad$ $1W_b = 1T \cdot m^2$
+	\subsubsection{Caso Superficie Chiusa}
+	La superficie può essere chiusa, come in figura \ref{fig:im-152}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{152.png}
+			\caption{}
+			\label{fig:im-152}
+		\end{figure}
+	\end{center}
+	$$\phi_{B_{\text{chiusa}}} = \oint \vec{B} \cdot \vec{ds}$$
+	$$\Rightarrow$$
+	\begin{itemize}
+		\item Se $\vec{B} \cdot d\vec{s} > 0$ il flusso di $\vec{B}$ in quel punto è \textbf{uscente}
+		\item Se $\vec{B} \cdot d\vec{s} < 0$ il flusso di $\vec{B}$ in quel punto è \textbf{entrante}
+	\end{itemize}
+	$\oint \vec{B} \cdot \vec{ds}$ rappresenta il \textbf{flusso netto} del campo magnetico $\vec{B}$ attraverso la superficie chiusa.
+	\subsubsection{Caso Superficie Gaussiana}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{153.png}
+			\caption{}
+			\label{fig:im-153}
+		\end{figure}
+	\end{center}
+	Nel caso elettrico il flusso di $\vec{E}$ (in figura \ref{fig:im-153}) attraverso una superficie gaussiana:
+	$$\oint \vec{E} \cdot d\vec{s} = \frac{Q_{INT}}{\varepsilon_0}$$
+	Traduce l’esistenza all’interno della superficie di una o più \textbf{sorgenti del campo elettrico}.\\
+	Da cui hanno origine o su lui terminano le linee di forza.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{154.png}
+			\caption{}
+			\label{fig:im-154}
+		\end{figure}
+	\end{center}
+	Per il campo magnetico $\vec{B}$ (in figura \ref{fig:im-154}) le linee di forza sono sempre \textbf{continue e chiuse}\\
+	$\Rightarrow$ Non iniziano o finiscono in un determinato puntob\\
+	$\Rightarrow$ Attraverso una qualsiasi superficie chiusa il numero di linee di forza \textbf{entranti} \textbf{eguaglia} quello delle linee \textbf{uscenti}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{155.png}
+			\caption{}
+			\label{fig:im-155}
+		\end{figure}
+	\end{center}
+	Legge Di Gauss per i Campi Magnetici:
+	$$\boxed{\oint \vec{B} \cdot d\vec{s} = 0}$$
+	Traduce il fatto sperimentale che non sono stati mai osservati \textbf{poli magnetici isolati} (monopoli), ma solo \textbf{dipoli magnetici} come sorgenti elementari di campo magnetico.
 	\subsection{Legge di Ampere-Maxwell}
 	\subsection{Flusso Magnetico}
 \end{document}
