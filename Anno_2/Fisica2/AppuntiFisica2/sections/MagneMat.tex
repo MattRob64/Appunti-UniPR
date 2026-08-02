@@ -1,4 +1,178 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../img/}}}
 \begin{document}
+	\subsection{Fenomenologia}
+	Due aspetti : 
+	\begin{enumerate}
+		\item Effetto del campo su campioni di diversi materiali
+		\item Campo magnetico nella materia
+	\end{enumerate}
+	Immaginiamo di disporre di un campo magnetico intenso e non uniforme come quello generato dal solenoide ()in figura \ref{fig:im-160}). \\
+	Se avviciniamo dei corpi vicino al bordo, dove il gradiente $\frac{dB_z}{dz}$ è grande, osserviamo tre tipi di comportamenti :
+	\begin{itemize}
+		\item Sostanze che vengono respinte : \textbf{diamagnetiche} (forza di poche dîne/gm)
+		\item Sostanze che vengono attratte : \textbf{paramagnetiche} con una forza di poche dîne/gm
+		\item Sostanze che vengono attratte : \textbf{ferromagnetiche} con forze molto più intense (anche $4 \times 10^5$ dîne/gm per Fe)
+	\end{itemize}
+	Come unità di misura utilizziamo il dîne, che equivale a: $1$ dîne = $10^{-5}$ newton\\\\
+	N.B.:
+	\begin{itemize}
+		\item La forza è proporzionale alla massa del campione e abbastanza indipendente dalla forma se il campione è piccolo.
+		\item La forza va come il quadrato della corrente nel solenoide nei casi 1) e 2). \\
+		È circa proporzionale alla corrente nel caso 3).
+		\item La forza dipende dalla temperatura in modo diverso nei tre casi.
+	\end{itemize}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{160.png}
+			\caption{(On The Left) A coil designed to produce a strong magnetic field. The water-cooled winding is shown in cross section. (On The Right) A graph of the field strength $B_{z}$ on the axis of the coil.}
+			\label{fig:im-160}
+		\end{figure}
+	\end{center}
+	Force on 1-gm sample in magnetic field, with $B_{z} = 18,000$ gauss, $dB_{z} / dz = 1700$ gauss/cm
+	\begin{table}[h]
+		\centering
+		\label{tab:forza_magnetica}
+		\begin{tabular}{lll}
+			\hline
+			\textbf{Substance} & \textbf{Formula} & \textbf{Force}\textsuperscript{$\dagger$} \\ \hline
+			\multicolumn{3}{l}{\textit{Diamagnetic}} \\
+			Water & $\text{H}_2\text{O}$ & $-22\text{ dynes}$ \\
+			Copper & $\text{Cu}$ & $-2,6$ \\
+			Lead & $\text{Pb}$ & $-37$ \\
+			Sodium chloride & $\text{NaCl}$ & $-15$ \\
+			Quartz & $\text{SiO}_2$ & $-16$ \\
+			Sulfur & $\text{S}$ & $-16$ \\
+			Diamond & $\text{C}$ & $-16$ \\
+			Graphite & $\text{C}$ & $-110$ \\
+			Liquid nitrogen & $\text{N}_2$ & $-10\text{ (78 K)}$ \\ \hline
+			\multicolumn{3}{l}{\textit{Paramagnetic}} \\
+			Sodium & $\text{Na}$ & $+20\text{ dynes}$ \\
+			Aluminum & $\text{Al}$ & $+17$ \\
+			Copper chloride & $\text{CuCl}_2$ & $+280$ \\
+			Nickel sulfate & $\text{NiSO}_4$ & $+830$ \\
+			Liquid oxygen & $\text{O}_2$ & $+7,500\text{ (90 K)}$ \\ \hline
+			\multicolumn{3}{l}{\textit{Ferromagnetic}} \\
+			Iron & $\text{Fe}$ & $+400,000\text{ dynes}$ \\
+			Magnetite & $\text{Fe}_3\text{O}_4$ & $+120,000$ \\ \hline
+		\end{tabular}
+		\caption{$\dagger$ Direction of force: downward $+$, upward $-$. All measurements made at temperature of 20$\degree$ C except as noted.}
+	\end{table}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{161.png}
+			\caption{}
+			\label{fig:im-161}
+		\end{figure}
+	\end{center}
+	\subsection{La Permeabilità Magnetica}
+	Utilizziamo un solenoide indefinito come supporto ai nostri ragionamenti (figura \ref{fig:im-162})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{162.png}
+			\caption{Inseriamo un materiale omogeneo e isotropo}
+			\label{fig:im-162}
+		\end{figure}
+	\end{center}
+	Prima dell’inserimento del materiale (Applicando la Legge di Ampere per il solenoide):
+	$$|\vec{B}_0| = \mu_0 \vec{I}_n$$
+	dopo:
+	$$|\vec{B}| = \mu I_n$$
+	$$\boxed{\mu = \mu_0 \mu_r} \qquad \qquad \textbf{Permeabilità Magnetica Assoluta}$$
+	con:
+	$$\boxed{\mu_r \gtreqless 1} \qquad \qquad \textbf{Permeabilità Magnetica Relativa}$$
+	$\mu_r > 1$ : sostanze para- e ferromagnetiche (per queste ultime in generale dipende da B ed è $ \gg 1$)
+	$\mu_r = 1$ : nel vuoto
+	$\mu_r < 1$ : sostanze diamagnetiche
+	90
+	\subsection{Interpretazione Microscopica : Polarizzazione Magnetica}
+	\subsubsection{Aspetti atomici del magnetismo}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{163.png}
+			\caption{}
+			\label{fig:im-163}
+		\end{figure}
+	\end{center}
+	Facendo riferimento alla figura \ref{fig:im-163} notiamo che $L$ è il momento angolare secondo la definizione di moto circolare uniforme.\\
+	Possiamo associare ad un’orbita elettronica un momento magnetico:
+	$$I = \frac{e}{T} = e \frac{w_0}{2\pi} = \frac{e v_0}{2\pi r_0} \qquad \text{(Un elettrone in movimento forma una corrente)}$$
+	Momento magnetico:
+	$$|\vec{m}| = I \cdot S = I \pi r_0^2 = \frac{e v_0}{2 \cancel{\pi} \cancel{r_0}} \cancel{\pi} r_0^{\cancel{2}} = \frac{1}{2} e v_0 r_0$$
+	Essendo :
+	$$|\vec{L}| = m_e v_0 r_0$$
+	si ha :
+	$$\boxed{\vec{m} = - \frac{e}{2m_e} \vec{L}}$$
+	\textbf{Rapporto giromagnetico} per il moto orbitale dell’elettrone
+	$$\boxed{g_0 = - \frac{e}{2m_e}}$$
+	Se si tiene conto del moto di spin si ha :
+	$$
+	\boxed{
+		\begin{gathered}
+			\vec{m} = g_0 (\vec{L} + \gamma \vec{S}) \\
+			\gamma = 2.0023
+		\end{gathered}
+	}
+	\qquad \qquad
+	\textbf{Per il moto elettronico in un atomo}
+	$$
+	N.B. In un atomo complesso il momento magnetico è nullo quando la distribuzione spaziale della carica elettronica ha simmetria sferica. \\
+	Vi sono però atomi dotati di un momento magnetico proprio diverso da zero.\\\\
+	N.B. In natura esistono atomi e molecole dotati o meno di momento proprio. \\
+	Anche nel primo caso, in assenza di campo esterno, il momento totale di un pezzo di materiale è in generale nullo data la distribuzione casuale dei singoli momenti.
+	\subsubsection{Precessione di Larmor (diamagnetismo)}
+	Trattiamo il caso semplice di un elettrone in un’orbita circolare perpendicolare al campo magnetico esterno $\vec{B}^*$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{164.png}
+			\caption{}
+			\label{fig:im-164}
+		\end{figure}
+	\end{center}
+	In assenza di campo: 
+	$$\vec{F}_{el} = m_e \vec{a}_c $$
+	Se applichiamo Coulomb a sinistra:
+	$$\begin{gathered}
+		\frac{1}{4\pi\varepsilon_0} \frac{e^2}{r^2} = m_e \frac{v_0^2}{r} \equiv m_e \omega_0^2 r \\
+		\Downarrow \\
+		\omega_0 = \sqrt{\frac{1}{4\pi\varepsilon_0} \frac{e^2}{m_e r^3}}
+	\end{gathered}$$
+	In presenza del campo $\vec{B}^*$:
+	$$\vec{F}_{el} + \underbrace{\vec{F}_L}_{e v B^*} = m_e \vec{a}_c$$
+	$$\frac{1}{4\pi\epsilon_0} \frac{e^2}{r^2} + e v B^* = m_e \frac{v^2}{r} \Rightarrow \frac{1}{4\pi\varepsilon_0} \frac{e^2}{r^2} + e \omega r B^* = m_e \omega^2 r$$
+	$$\underbrace{\frac{e^2}{4\pi\epsilon_0 m_e r^3} }_{\omega_0^2}+ \frac{e B^*}{m_e} \omega = \omega^2 \Rightarrow \omega^2 - \frac{e B^*}{m_e} \omega - \omega_0^2 = 0$$
+	Poniamo: 
+	$$\boxed{\omega_L = \frac{e B^*}{2m_e}} \qquad \qquad \textbf{Velocità Angolare o “Frequenza” di Larmor}$$
+	$\omega^2 - 2\omega_L \omega - \omega_0^2 = 0 \Rightarrow \omega = \omega_L \pm \sqrt{\omega_L^2 + \omega_0^2} \simeq \omega_L \pm \omega_0$
+	Nel caso in figura \ref{fig:im-164}: $\omega = \omega_0 + \omega_L$
+	All’extra velocità angolare $\omega_L$ è \textbf{associata una corrente} (La densità di corrente è uguale alla corrente stessa perchè stiamo considerando un singolo elettrone):
+	$$I_L = e \frac{\omega_L}{2\pi}$$
+	e quindi un \textbf{momento magnetico indotto dal campo} (Momento (larmour); Corrente di Larmour; Superficie delimitata dall’orbita):
+	$$m_L = I_L S = e \frac{\omega_L}{2\pi} S = \frac{e^2 S}{4\pi m_e} B^*$$
+	\textbf{diretto in verso opposto} al campo inducente.
+	In definitiva:
+	$$\boxed{\vec{m}_L = - \frac{e^2 S}{4 \pi m_e} \vec{B}^*}$$
+	\textbf{N.B.} Anzichè $S = \pi r^2$, se teniamo conto delle \textbf{orbite non perpendiculari a $\vec{B}^*$}, compare il valor medio della proiezione della superficie dell’orbita sul piano normale al camp: $\langle S_n \rangle = \pi \langle S^2 \rangle = \frac{2}{3} \pi \langle r^2 \rangle$, dove $\langle r^2 \rangle$ è il raggio quadratico medio delle orbite elettroniche e $\langle S^2 \rangle$ è sua componente nel piano. \\\\
+	\textbf{N.B.} Poichè.anche gli elettroni che circolano in verso contrario danno un momento indotto opposto al campo, c’è un momento risultante non nullo dovuto alla presenza dei vari elettroni in un atomo anche quando i momenti propri dei singoli elettroni si compensano:
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{165.png}
+			\caption{La corrente va nel verso opposto della velocità dell’elettrone, per la convenzione di prendere il verso delle cariche positive}
+			\label{fig:im-165}
+		\end{figure}
+	\end{center}
+	$N.B.$ Ordini di grandezza: 
+	$$v_r \simeq 2 \times 10^6 \text{ m/sec}$$
+	$$r \simeq 0.5 \times 10^{-10} \text{ m}$$ 
+	$$\omega_0 \simeq 4 \times 10^{16} \text{ sec}^{-1} \Rightarrow I_0 \simeq 10^{-3} \text{ A} \Rightarrow m_0 = I_0 \pi r^2 \simeq 0.8 \times 10^{-23} \text{ A} \cdot \text{m}2$$ 
+	$$m_L = \frac{r^2 e^2}{4 m_e} B^* \simeq 0.32 \times 10^{-28} \text{ A} \cdot \text{m}2 \quad (\text{con } B^* = 1.8 \text{ T})$$ 
+	$$\omega_L = 1.6 \times 10^{11} \text{ sec}^{-1} \Rightarrow I_L = 4 \times 10{-9} \text{ A}$$ 
+	$$\frac{\omega_L}{\omega_0} = \frac{I_L}{I_0} = \frac{m_L}{m_0} = 4 \times 10^{-6}$$
+	\subsubsection{Polarizzazione per orientamento (paramagnetismo)}
 \end{document}

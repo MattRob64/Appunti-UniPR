@@ -105,15 +105,21 @@
 \contentsline {section}{\numberline {4}Campi Dipendenti dal tempo}{68}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Legge di Ampere-Maxwell}{68}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Magnetismo nella Materia}{70}{section.5}%
-\contentsline {section}{\numberline {6}Induzione Elettromagnetica}{70}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{70}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{70}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{70}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{70}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Circuiti LC}{70}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{70}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{70}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{70}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{70}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Esercizi}{70}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{70}{subsection.8.1}%
+\contentsline {subsection}{\numberline {5.1}Fenomenologia}{70}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}La Permeabilità Magnetica}{71}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Interpretazione Microscopica : Polarizzazione Magnetica}{72}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Aspetti atomici del magnetismo}{72}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Precessione di Larmor (diamagnetismo)}{73}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Polarizzazione per orientamento (paramagnetismo)}{75}{subsubsection.5.3.3}%
+\contentsline {section}{\numberline {6}Induzione Elettromagnetica}{75}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{75}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{75}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{75}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{75}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circuiti LC}{75}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{75}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{75}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{75}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{75}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Esercizi}{75}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{75}{subsection.8.1}%
