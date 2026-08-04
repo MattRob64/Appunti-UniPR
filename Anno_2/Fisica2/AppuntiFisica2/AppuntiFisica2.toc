@@ -111,15 +111,24 @@
 \contentsline {subsubsection}{\numberline {5.3.1}Aspetti atomici del magnetismo}{72}{subsubsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.2}Precessione di Larmor (diamagnetismo)}{73}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Polarizzazione per orientamento (paramagnetismo)}{75}{subsubsection.5.3.3}%
-\contentsline {section}{\numberline {6}Induzione Elettromagnetica}{75}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{75}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{75}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{75}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{75}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Circuiti LC}{75}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{75}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{75}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{75}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{75}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Esercizi}{75}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{75}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {5.3.4}Vettore intensità di magnetizzazione (o “di polarizzazione magnetica”)}{75}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Relazione tra $\vec {M}$ e la densità di corrente amperiana}{76}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Relazione Tra Quantità Microscopiche E Macroscopiche}{77}{subsubsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.4}Forza Agente Su Un Dipolo Magnetico}{78}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}$\rightarrow $ $\vec {m}$ equiverso a $\vec {B}$}{78}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}$\rightarrow $ $\vec {m}$ orientato in verso opposto a $\vec {B}$}{78}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Sostanze Ferromagnetiche}{79}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Cicli D'Isteresi: $B = B(H)$ o $M = M(H)$}{80}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Domini di Weiss}{80}{subsubsection.5.5.2}%
+\contentsline {section}{\numberline {6}Induzione Elettromagnetica}{81}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{81}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{81}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{81}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{81}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circuiti LC}{81}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{81}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{81}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{81}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{81}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Esercizi}{81}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{81}{subsection.8.1}%

@@ -175,4 +175,318 @@
 	$$\omega_L = 1.6 \times 10^{11} \text{ sec}^{-1} \Rightarrow I_L = 4 \times 10{-9} \text{ A}$$ 
 	$$\frac{\omega_L}{\omega_0} = \frac{I_L}{I_0} = \frac{m_L}{m_0} = 4 \times 10^{-6}$$
 	\subsubsection{Polarizzazione per orientamento (paramagnetismo)}
+	Atomi e molecole dotati di \textbf{momento proprio} si orientano in presenza di un campo magnetico. \\
+	L’agitazione termica tende però a disorientarli, per cui ne risulta un momento medio orientato nella direzione del campo $\vec{B}$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.40\textwidth}
+			\includegraphics[scale=0.55]{166.png} 
+			\caption{In Assenza Di Un Campo Esterno}
+			\label{fig:im-166}
+		\end{subfigure}
+		\begin{subfigure}{0.40\textwidth}
+			\includegraphics[scale=0.55]{167.png}
+			\caption{In Presenza Di Un Campo $\Vec{B}$ I Dipoli Rustano Etendono Ad Agginearsi Con Il Campo $\Vec{B}$}
+			\label{fig:im-167}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image21}
+	\end{figure}
+	In figura \ref{fig:im-166} la sommatoria $\sum_{i}\vec{m_i}$ indica i momenti magnetici delle singole particelle, mentre $\vec{M}=0$ indica il momento magnetico totale.\\
+	Se volessimo calcolare il valore magnetico medio:
+	$$\langle \vec{m} \rangle = \frac{\sum_{i}\vec{m_i}}{\underbrace{N}_{\text{Numero di atomi su cui si calcola la media}}}$$
+	\subsubsection{Vettore intensità di magnetizzazione (o “di polarizzazione magnetica”)}
+	N.B: La polarizzazione magnetica è una \textbf{proprietà intrinseca del materiale}.\\\\
+	Consideriamo un volumetto $d\tau$ contenente un numero di atomi (o di molecole) $dN$ statisticamente significativo, ma piccolo rispetto alla scala di variazione macroscopica delle grandezze magnetiche:
+	$$\vec{M} = \frac{\sum_{i=1}^{dN} \vec{m}_i}{d\tau} = \langle \vec{m} \rangle \frac{dN}{d\tau} = \langle \vec{m} \rangle n$$
+	Dove $n$ indica il numero di atomi o molecole per unità di volume (in generale è funzione dei punti dello spazio).\\\\
+	\textbf{Vettore Intensità Di Magnetizzazione [Ampère/metro]}:
+	$$\boxed{\vec{M} = n \langle \vec{m} \rangle}$$
+	Ha il significato di momento di dipolo \textbf{magnetico per unità di volume}, nel senso che ogni volumetto di materiale $d\tau$ possiede il momento: 
+	$$d\vec{m} = \vec{M} \; d\tau$$
+	Si trova (DOve $\mu$ indica la permeabilità magnetica):
+	$$\boxed{\vec{M} = \vec{X}_m \frac{\vec{B}}{\mu}}$$
+	ovvero:
+	$$\boxed{\vec{H} = X_m \vec{H}}$$
+	con
+	$$X_m: \quad \textbf{Suscettività Magnetica Di Volume [Adimensionata]}$$
+	e
+	$$H = \frac{B}{\mu}$$
+	L’andamento di $X_m$ con la temperatura è del tipo:
+	$$\boxed{X_m = A + \frac{C}{T}} \qquad \qquad \textbf{Legge di Curie}$$
+	con $A$ e $C$ costanti.
+	\subsubsection{Relazione tra $\vec{M}$ e la densità di corrente amperiana}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{168.png} 
+			\caption{}
+			\label{fig:im-168}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{169.png}
+			\caption{}
+			\label{fig:im-169}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image22}
+	\end{figure}
+	Consideriamo un cilindro di materiale uniformemente magnetizzato. \\
+	Assimilando i dipoli atomici a spire microscopiche percorse da corrente, è evidente che tali spire si dispongono in piani perpendicolari a $\vec{n}$ e che le correnti, cosiddette \textbf{amperiane}, si compensano esattamente in tutti i punti interni al materiale.\\
+	Resta una corrente non nulla solo sulla superficie laterale del cilindro (figura \ref{fig:im-169}):
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{170.png}
+			\caption{}
+			\label{fig:im-170}
+		\end{figure}
+	\end{center}
+	$$I_m = \frac{dQ_m}{dt} = J_m t l = J_{ms} l$$
+	$$J_{ms} = J_m t \qquad \qquad \textbf{Densità Di Corrente Di Superficie [Ampère/metro]}$$
+	Osserviamo che una “fetta” di materiale magnetizzato tagliata perpendicolarmente a $\vec{M}$ (figura \ref{fig:im-1}70) e di spessore $dl$ si comporta come una spira percorsa dalla corrente $dI_m = J_{ms} dl$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{171.png}
+			\caption{}
+			\label{fig:im-171}
+		\end{figure}
+	\end{center}
+	$$dm = dI_m S \Rightarrow M dl S = J_{ms} dl S$$
+	Campo magnetico dato dal materiale, concepito come un campo dato dalle correnti amperiane superficiali:
+	$$ \Rightarrow \boxed{ J_{ms} = |\vec{M}|}$$
+	\subsubsection{Relazione Tra Quantità Microscopiche E Macroscopiche}
+	Torniamo al nostro solenoide indefinito (\ref{fig:im-172}):
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{172.png}
+			\caption{}
+			\label{fig:im-172}
+		\end{figure}
+	\end{center}
+	$$|\vec{B}| = \underbrace{|\vec{B}_0|}_{\text{Campo Magnetico dato dal Solenoide}} + \underbrace{|\vec{B}_m|}_{\text{Campo Magnetico dato dal Materiale}} = \mu_0 I n + \mu_0 \underbrace{I^\prime n^\prime}_{\text{Avvolgimento Fittizzio}}$$
+	Ma:
+	$$I^\prime n^\prime = J_{ms}$$
+	per cui :
+	$$|\vec{B}| = \mu_0 In + \mu_0 M$$
+	$$\Downarrow$$
+	$$M = \frac{B}{\mu_0} - In = \frac{\mu}{\mu_0} In - In = (\mu_r - 1) In$$
+	Definiamo per un materiale omogeneo e isotropo il campo $\vec{H}$ come:
+	$$\boxed{\vec{H} = \frac{\vec{B}}{\mu}}$$
+	Si ha in questo caso particolare :
+	$$\boxed{\vec{H} = \vec{H}_0 = In \hat{x}}$$
+	per cui:
+	\begin{equation} \label{eq:1}
+		\vec{M} = (\mu_r - 1) \vec{H}
+	\end{equation}
+	\begin{equation} \label{eq:2}
+		\vec{M} = X_m \vec{H}
+	\end{equation}
+	Confrontando la \ref{eq:1} con la \ref{eq:2} si ha :
+	$$\boxed{\mu_r -1 = X_m}$$
+	Dove $\mu_r - 1$ è una \textbf{quantità macroscopica} e $X_m$ è \textbf{legata alla polarizzabilità microscopica}
+	\subsection{Forza Agente Su Un Dipolo Magnetico}
+	Dall’espressione dell’energia di un dipolo in un campo magnetico:
+	$$\mathscr{E} = - \vec{m} \cdot \vec{B}$$
+	si ha:
+	$$\vec{F} = - \vec{grad} \mathscr{E} = \vec{grad} (\vec{m} \cdot \vec{B})$$
+	Nel caso particolare dell’esperimento iniziale un pezzetto di materiale magnetizzato (a causa del campo stesso o per sua natura) si può assimilare a un dipolo magnetico di momento:
+	$$\vec{m} = m \; \hat{k}$$
+	Si ha allora:
+	$$\vec{F} = \vec{grad} (m \; B_z) = m \frac{\partial B_z}{\partial z} \hat{k}$$
+	essendo 
+	$$\frac{\partial B_z}{\partial x} = \frac{\partial B_z}{\partial y} = 0$$
+	Essendo m proporzionale a $B_z$ attraverso la suscettività $X_m = \mu_r - 1$ nelle sostanze dia- e paramagnetiche si ha:
+	\begin{itemize}
+		\item Sostanze diamagnetiche: $\mu_r - 1 < 0 \Rightarrow m < 0 \Rightarrow F_z > 0$ : repulsione
+		\item Sostanze paramagnetiche: $\mu_r - 1 > 0 \Rightarrow m > 0 \Rightarrow F_z < 0$ : attrazione
+	\end{itemize}
+	(abbiamo tenuto conto che nel nostro caso $\frac{\partial B_z}{\partial z} < 0$).\\\\
+	N.B. Risulta $F_z \; \propto \; B_z \frac{\partial B_z}{\partial z} \; \propto \; I^2$, essendo $I$ la corrente nel magnete.\\\\
+	Per le sostanze ferromagnetiche $\mu_r > 1$ e si ha attrazione, ma essendo la permeabilità dipendente dal campo la dipendenza della forza dal campo è più complicata. \\
+	Se si può pensare che il campione sia già magnetizzato in assenza di campo, la $F_z(I)$ è lineare.
+	\subsubsection{$\rightarrow$ $\vec{m}$ equiverso a $\vec{B}$}
+	$$F_z = m \frac{\partial B_z}{\partial z}$$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.45]{173.png} 
+			\caption{(Nota la maggiore densità delle linee di campo) infatti $\frac{\partial B_z}{\partial z} < 0$}
+			\label{fig:im-173}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.45]{174.png}
+			\caption{$\frac{\partial B_z}{\partial z} > 0$}
+			\label{fig:im-174}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image23}
+	\end{figure}
+	La forza è sempre nel verso del campo crescente (sostanze para- e ferromagnetiche) (figura \ref{fig:image23})
+	\subsubsection{$\rightarrow$ $\vec{m}$ orientato in verso opposto a $\vec{B}$}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.45]{175.png} 
+			\caption{$\frac{\partial B_z}{\partial z} < 0$}
+			\label{fig:im-175}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.45]{176.png}
+			\caption{$\frac{\partial B_z}{\partial z} > 0$}
+			\label{fig:im-176}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image24}
+	\end{figure}
+	La forza è sempre nel verso del campo decrescente (sostanze diamagnetiche) (figura \ref{fig:image24})
+	\subsection{Sostanze Ferromagnetiche}
+	Caratteristiche principali :
+	\begin{itemize}
+		\item $\vec{M}$ è \textbf{molto grande} e \textbf{non proporzionale} ad $\vec{H}$
+		\item $\vec{M}$ può raggiungere un valore di \textbf{saturazione} in cui tutte le molecole sono orientate come il campo
+		\item La relazione tra $\vec{B}$ o $\vec{M}$ e $\vec{H}$ non solo non è lineare, ma non è nemmeno univoca (\textbf{isteresi})
+		\item Le linee di forza di $\vec{B}$ e $\vec{H}$ si addensano all’interno dei materiali ferromagnetici
+	\end{itemize}
+	Quest’ultima proprietà è legata alla legge di rifrazione delle linee di forza (figura \ref{fig:im-177}):
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{177.png}
+			\caption{}
+			\label{fig:im-177}
+		\end{figure}
+	\end{center}
+	Internamente al materiale $\vec{B}$ è praticamente parallelo alla superficie di separazione e molto più intenso che fuori.\\\\
+	Per studiare le relazioni tra i vettori $\vec{B}$, $\vec{H}$ e $\vec{M}$ possiamo prendere un anello (toro) di materiale ferromagnetico con avvolte $N$ spire percorse dalla corrente $I$ (figura \ref{fig:im-178}):
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{178.png}
+			\caption{}
+			\label{fig:im-178}
+		\end{figure}
+	\end{center}
+	$$\int_{\ell} \vec{H} \cdot d\ell = NI \Rightarrow H\ell = NI \Rightarrow H = \frac{N}{\ell}I$$ 
+	Se l’anello è sottile ($\ell \gg d$) $\vec{B}$, $\vec{H}$ e $\vec{M}$ sono uniformi e paralleli (\textbf{materiale isotropo}).\\
+	Al variare di $H$ si può misurare $B(H)$ e quindi $M(H)$ dalla relazione che lega i tre vettori :
+	$$\boxed{\vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M}}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{179.png}
+			\caption{A toroidal winding arrangement used to measure the magnetic properties of a material. \\ The torus is made of the material under study, and the circuit containing the galvanometer measures the magnetic flux.}
+			\label{fig:im-179}
+		\end{figure}
+	\end{center}
+	\subsubsection{Cicli D'Isteresi: $B = B(H)$ o $M = M(H)$}
+	N.B. Essendo $\mu_0 H = B - \mu_0 H$ con $\mu_0 H \ll B$, il ciclo per $B$ e per $\mu_0 M$ è molto simile.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{180.png}
+			\caption{}
+			\label{fig:im-180}
+		\end{figure}
+	\end{center}
+	Facendo riferimento a figura \ref{fig:im-180} possiamo notare che:
+	\begin{itemize}
+		\item $I$ : curva di prima magnetizzazione
+		\item $B_r$: induzione magnetica \textbf{residua} ($M_r$: magnetizzazione residua)
+		\item $H_c$: \textbf{campo coercitivo}
+		\item $H_m$: campo per cui $M = M_s$ (\textbf{saturazione}) e $B$ varia proporzionalmente a $\mu_0 H$:
+		$$B = \mu_0 M_s + \mu_0 H = \text{cost} + \mu_0 H$$
+		(valori tipici : $H_m = 10^5\,\text{A}\cdot\text{s}/\text{m}$, $H_s \mu_0 \approx 1\div2\,\text{T}$)
+	\end{itemize}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{181.png}
+			\caption{}
+			\label{fig:im-181}
+		\end{figure}
+	\end{center}
+	Facendo riferimento a figura \ref{fig:im-181} possiamo notare che:
+	\begin{enumerate}
+		\item \textbf{Materiale dolce} : alta $M_r$, alta $\mu_r$, basso $H_c$, alta $M_s$ (\textbf{Applicazioni Elettroniche})
+		\item \textbf{Materiale duro} : bassa $M_r$, bassa $\mu_r$, alto $H_c$, bassa $M_s$ (\textbf{Magneti Permanenti})
+	\end{enumerate}
+	(vedere tabella \ref{tab:materiali_magnetici} per valori caratteristici dei vari parametri (Mencuccini e Silvestrini))
+	\subsubsection{Domini di Weiss}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{182.png}
+			\caption{Domini di Weiss}
+			\label{fig:im-182}
+		\end{figure}
+	\end{center}
+	Domini di Weiss (figura \ref{fig:im-182}): i materiali ferromagnetici sono costituiti da domini all’interno dei quali esiste una \textbf{magnetizzazione spontanea} prossima al valore di saturazione. \\
+	Normalmente i domini sono orientati in modo casuale.\\\\
+	Il campo esterno fa crescere il volume dei domini orientati parallelamente ad esso a spese degli altri, fino a raggiungere la saturazione.\\
+	Il processo non è reversibile.\\
+	L’origine della magnetizzazione spontanea all’interno dei singoli domini è di natura quantistica.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{183.png} 
+			\caption{}
+			\label{fig:im-183}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{184.png}
+			\caption{}
+			\label{fig:im-184}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image25}
+	\end{figure}
+	\begin{table}[h]
+		\centering
+		\label{tab:proprieta_ferromagnetici}
+		\begin{tabular}{llcccccc}
+			\hline
+			\textbf{Materiale} & \textbf{Composizione (\%)} & $\boldsymbol{\mu_{\text{dl}}}$ & $\boldsymbol{\mu_{\text{dm}}}$ & $\boldsymbol{H_s}$ (A/m) & $\boldsymbol{\mu_0 M_s}$ (T) & $\boldsymbol{w_h}$ (J/m$^3$) & $\boldsymbol{T_c}$ (K) \\ \hline
+			Fe (commerciale) & Fe (99,8\%) & 200 & $5 \cdot 10^3$ & 80 & 2,16 & 250 & 1040 \\
+			Fe (purificato) & Fe (99,95\%) & $10 \cdot 10^3$ & $200 \cdot 10^3$ & 4,0 & 2,16 & 30 & 1040 \\
+			FeSi & 0,5 Si & 280 & $3 \cdot 10^3$ & 72 & 2,14 & 230 & 1035 \\
+			FeSi & 3,25 Si & 290 & $8 \cdot 10^3$ & 56 & 2,02 & 160 & 1010 \\
+			FeSi & 6,5 Si & 1390 & $67 \cdot 10^3$ & 16 & 1,81 & — & 960 \\
+			Mumetal & 77 Ni; 5 Cu; 2 Cr; 16 Fe & $25 \cdot 10^3$ & $150 \cdot 10^3$ & 1,2 & 0,75 & 200 & 670 \\
+			Permalloy 45 & 45 Ni; 55 Fe & $3,5 \cdot 10^3$ & $50 \cdot 10^3$ & 5,6 & 1,60 & 120 & 710 \\
+			Permalloy 65 & 65 Ni; 35 Fe & $30 \cdot 10^3$ & $10^6$ & 0,8 & 1,40 & — & 880 \\
+			Permalloy 78 & 78 Ni; 22 Fe & $8 \cdot 10^3$ & $10^5$ & 4,0 & 1,08 & 20 & 850 \\
+			Supermalloy & 79 Ni; 5 Mo; 16 Fe & $100 \cdot 10^5$ & $10^6$ & 0,3 & 0,79 & 2 & 670 \\ \hline
+		\end{tabular}
+		\caption{Proprietà magnetiche di vari materiali ferromagnetici.}
+	\end{table}
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\setlength{\tabcolsep}{3pt}
+		\label{tab:materiali_magnetici}
+		\begin{tabular}{l c c c c c c c c l}
+			\hline
+			\textbf{Materiale} & $\mu_{r,\text{min}}$ & $\mu_{r,\text{max}}$ & \shortstack{$M_s$\\ (A/m)} & \shortstack{$M_r$\\ (A/m)} & \shortstack{$H_c$\\ (A/m)} & \shortstack{$\oint H \text{d}B$\\ (J/m$^3$)} & \shortstack{$T_c$\\ ($^\circ$C)} & \shortstack{$S_c$\\ ($10^{-6}\Delta m$)} & \textbf{Applicazioni} \\ \hline
+			\multicolumn{10}{l}{\textit{Sostanze dolci}} \\
+			Ferro & 300 & $(5-10) \cdot 10^3$ & $17 \cdot 10^5$ & $10 \cdot 10^5$ & 81 & 500 & 777 & 10 & Armature, relé, etc. \\
+			Nichel & 400 & 1100 & $4,9 \cdot 10^5$ & $2,9 \cdot 10^5$ & 272 & 30 & 358 & 7 & — \\
+			Cobalto & 10 & 175 & $15 \cdot 10^5$ & $4,0 \cdot 10^5$ & 800 & 200 & 1130 & 10 & — \\
+			Ferrosilicio (Stalloy) & $(1,5-7) \cdot 10^3$ & $(7-50) \cdot 10^3$ & $16 \cdot 10^5$ & $9,5 \cdot 10^5$ & 40 & 350 & 730-740 & 55 & — \\
+			Mumetal & 18000 & 90000 & $6,8 \cdot 10^5$ & $4,8 \cdot 10^5$ & 4 & 20 & 430 & — & — \\
+			Supermalloy & $10^5$ & $10^6$ & $6,4 \cdot 10^5$ & — & 0,1 & — & 400 & — & — \\ \hline
+			\multicolumn{10}{l}{\textit{Leghe magnetiche permanenti}} \\
+			Acciaio al carbonio & — & — & $8,0 \cdot 10^5$ & $6,4 \cdot 10^5$ & 4800 & 20000 & — & — & Strumenti, etc. \\
+			Acciaio al cobalto & — & — & $8,0 \cdot 10^5$ & $7,6 \cdot 10^5$ & 13000 & — & — & — & — \\
+			Ticnotal & — & — & $12 \cdot 10^5$ & $10 \cdot 10^5$ & 44000 & — & — & — & — \\ \hline
+		\end{tabular}
+		\caption{Proprietà di materiali magnetici dolci e leghe magnetiche permanenti.}
+	\end{table}
 \end{document}
