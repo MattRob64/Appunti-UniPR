@@ -2,6 +2,254 @@
 \graphicspath{{\subfix{../img/}}}
 \begin{document}
 	\subsection{Legge di Faraday-Lenz}
+	Esperimenti condotti da faraday in inghilterra ed henry negli stati uniti nel 1821 misero in evidenza come magnetismo ed elettricità fossero strettamente connessi: un campo magnetico variabile nel tempo è ingrado di generare un campo elettrico.\\
+	L’osservazione di correnti magneticamente indotte può essere effettuata prendendo una spira e un magnete (ed un amperometro) (figura \ref{fig:image26})
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[scale=0.55]{185.png} 
+			\caption{}
+			\label{fig:im-185}
+		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[scale=0.55]{186.png}
+			\caption{}
+			\label{fig:im-186}
+		\end{subfigure}
+		\begin{subfigure}{0.33\textwidth}
+			\includegraphics[scale=0.55]{187.png}
+			\caption{}
+			\label{fig:im-187}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image26}
+	\end{figure}
+	Si registra una corrente nel circuito ogni volta che il magnete è posto in movimento nelle vicinanze della spira.\\
+	Il verso della corrente cambia a seconda che il magnete venga \textbf{avvicinato od allontanato}.\\
+	Il verso della corrente si inverte anche cambiando la polarità del magnete e gli effetti solla spira non cambiano se invece di muovere il magnete è la spira a muoversi (figura \ref{fig:image27})
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{188.png} 
+			\caption{}
+			\label{fig:im-188}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{189.png}
+			\caption{}
+			\label{fig:im-189}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image27}
+	\end{figure}
+	Ogni volta che si ha un moto relativo tra spira e magnete si osserva la comparsa di una corrente $I$ \textbf{indotta} nel circuito.\\
+	L’intensità della corrente che si osserva è proporzionale alla \textbf{rapidità della variazione}.\\\\
+	Effetti analoghi si osservano qualora il magnete vengà sostituito da una sorgente di campo magnetico quale un conduttore percorso da corrente (\textbf{circuito primario}) (figura \ref{fig:image28})
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{190.png} 
+			\caption{}
+			\label{fig:im-190}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{191.png}
+			\caption{}
+			\label{fig:im-191}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image28}
+	\end{figure}
+	Le correnti misurate si invertono invertendo la polarità della batteria.\\
+	Ancora una volta ciò che “sembra contare” è il moto relativo di una spira rispetto all’altra.\\
+	In nessuno dei casi descritti il \textbf{circuito (secondario)} è connesso ad alcuna batteria!!!
+	$\Rightarrow$ La corrente indotta è \textbf{generata} da una forza elettromotrice $\mathscr{F}$ (f.e.m.) indotta.
+	La f.e.m. $\mathscr{F}$ (volt) come nell’analogo della batteria è l’energia per unità di carica che deve essere fornita ai portatori di carica che costituiscono la corrente.\\\\
+	Se con $R$ indichiamo la resistenza complessiva del circuito
+	$$I = \frac{\mathscr{F}}{R}$$
+	$\Rightarrow$ $I$ dipende da $R$ mentre la f.e.m. $\mathscr{F}$ è l’effetto principale del fenomeno che stiamo discutendo.\\
+	Se ohmico.\\
+	Infatti se interrompiamo il circuito in un punto ($R=\infty$) (figura \ref{fig:im-192})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{192.png}
+			\caption{}
+			\label{fig:im-192}
+		\end{figure}
+	\end{center}
+	$$\boxed{I=0 \text{ ma } \mathscr{F} \neq 0}$$
+	Si misura una f.e.m. $\mathscr{F}$ in tutto simile a quella che si ha ai capi di un generatore di tensione (la polarità dipende dal moto relativo!!)\\\\
+	Per osservare una $\mathscr{F}$ (e quindi una $I$) può non essere necessaria una condizione di moto (figura \ref{fig:im-193})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{193.png}
+			\caption{}
+			\label{fig:im-193}
+		\end{figure}
+	\end{center}
+	Si osserva una corrente indotta alla chiusura del circuito\\
+	$\Rightarrow$ per tutto il tempo in cui la corrente nel primario si porta da $0$ ad un valore di regime.\\
+	Si osserva nuovamente una corrente indotta all’apertura del circuito\\
+	$\Rightarrow$ si osserva una corrente indotta negli intervalli di tempo in cui il \textbf{campo magnetico concatenato} con il circuito \textbf{varia nel tempo}.\\\\
+	Queste osservazioni permisero a Faraday di formulare una legge generale per il fenomeno dell’\textbf{induzione elettromagnetica}.\\
+	Faraday intuì che la f.e.m. indotta è proporzionale alla variazione nel tempo delle linee di forza che attraversano il circuito secondario\\
+	$\Rightarrow$ la f.e.m. indotta è direttamente proporzionale alla derivata temporale del \textbf{flusso} del campo magnetico che attraversa il circuito.
+	$$\boxed{\mathscr{F} = - \frac{d\phi_B}{dt}} \qquad \qquad \text{con } \phi_B = \int \vec{B} \cdot \vec{dS} \qquad \text{(Attraverso la superficie racchiusa nella spira)}$$
+	È nota come la \textbf{legge di Faraday(-Neumann-Lenz) dell’induzione elettromagnetica}\\
+	Nel S.I. $\pm \frac{Wb}{s} = \pm V$
+	La legge di Faraday mostra che si osserva una f.e.m. indotta ogni qualvolta si ha una variazione del flusso di $\vec{B}$ concatenato con la spira.\\
+	$\Rightarrow$
+	\begin{itemize}
+		\item Varia la superficie del circuito (deformazione del circuito nel tempo)
+		\begin{itemize}
+			\item Il campo $\vec{B}$ può essere sia uniforme che non uniforme
+		\end{itemize}
+		\item Il campo $\vec{B}$ (concatenato con la spira) varia nel tempo
+		\begin{itemize}
+			\item circuito fisso e sorgente in moto (ad eccezione del caso di un moto \textbf{traslatorio} in un campo uniforme)
+			\item circuito in moto e sorgente fissa (ad eccezione del caso di un moto \textbf{traslatorio} in un campo uniforme)
+			\item assenza di moto relativo ma con variazioni della corrente nel tempo che genera $\vec{B}$ o per presenza di variazioni locali della \textbf{permeabilità magnetica}
+		\end{itemize}
+		\item varia l’angolo $\boxed{\varphi}$ fra $\vec{B}$ e la normale $\vec{dA}$ alla superficie del circuito ($\Rightarrow$ es. rotazione)
+	\end{itemize}
+	Nella legge di Faradav è contenuto anche un segno negativo:
+	$$\mathscr{F} = {\color{red}-} \frac{d\phi_B}{dt}$$
+	Il suo significato è espresso da una legge nota come \textbf{Legge Di Lenz}, secondo la quale la corrente indotta in una spira ($\Rightarrow$ la polarità della f.e.m. indotta) chiusa conduttrice è sempre tale da opporsi alla variazione di flusso magnetico che la ha generata (esempi in figura \ref{fig:im-194}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{194.png}
+			\caption{}
+			\label{fig:im-194}
+		\end{figure}
+	\end{center}
+	La corrente indotta circolerà in modo da generare un campo $\vec{B}$ il cui contributo al flusso concatenato sarà \textbf{in opposizione} alla variazione che lo ha generato.\\\\
+	La legge di Lenz traduce il \textbf{principio di conservazione dell’energia} : se la corrente indotta concorresse ad aumentare un flusso già di per se crescente si andrebbe nel senso di un aumento illimitato di corrente e quindi un generatore e di tensione in grado di erogare una potenza elettrica crescente non fornita dall’esterno.\\\\
+	Attraverso un esempio (figura \ref{fig:im-195}) esaminiamo una origine fisica della legge di Faraday:
+	Abbiamo il campo $\vec{B}$ uniforme
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{195.png}
+			\caption{La sbarretta slitta a sinistra e destra, conduce sui binari}
+			\label{fig:im-195}
+		\end{figure}
+	\end{center}
+	Circuito rettangolare metallico chiuso a sinistra da una sbarretta mobile con velocità $\vec{v} = \text{Costante}$\\\\
+	Per la legge di Faraday:
+	$$\phi_B = \int \vec{B} \cdot d\vec{s} = B \int ds = BLx \Rightarrow \frac{d\phi_B}{dt} = \frac{d(BLx)}{dt} = BL \frac{dx}{dt} = BLv$$
+	$$\Rightarrow \mathscr{F} = BLv$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{196.png}
+			\caption{}
+			\label{fig:im-196}
+		\end{figure}
+	\end{center}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{197.png} 
+			\caption{}
+			\label{fig:im-197}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{198.png}
+			\caption{Nel Moto}
+			\label{fig:im-198}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image29}
+	\end{figure}
+	Guardando la figura \ref{fig:im-197} notiamo che su ciascun elettrone della sbarretta agirà una forza:
+	$$\vec{F}_B = -e\vec{v} \times \vec{B}$$
+	$\Rightarrow$ in figura \ref{fig:im-198} si avrà un accumulo di cariche alle estremità della sbarretta.\\
+	Il processo proseguirà fino all’equilibrio (figura \ref{fig:im-199})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{199.png}
+			\caption{}
+			\label{fig:im-199}
+		\end{figure}
+	\end{center}
+	$$\Rightarrow F_E = F_B \Rightarrow -eE = -evB \Rightarrow E = vB$$
+	$$\Rightarrow V_B - V_A = -\int_A^B \vec{E} \cdot d\vec{l} = \int_A^B E \, dl = E \int_A^B dl = EL$$
+	$$\Rightarrow V_B - V_A = EL = vBL \equiv \mathscr{F}$$
+	Il fenomeno della induzione elettromagnetica è quindi riconducibile in questo esempio alla forza di Lorenz.\\
+	Il risultato è generalizzabile a tutti icasi in cui un circuito è in moto in un campo magnetico.\\\\
+	Una ulterore considerazione sull’esempio appena trattato:\\
+	Se nella sbarretta circola una corrente: 
+	$$I = \frac{\mathscr{F}}{R} \Rightarrow I = \frac{BLv}{R}$$
+	allora sulla sbarretta agirà una forza:
+	$$\vec{F}_B = I \vec{L} \times \vec{B} \Rightarrow F_B = \frac{BLv}{R} L B = \frac{B^2 L^2 v}{R}$$
+	La variazione del campo magnetico, da un lato genera la corrente $I$, dall’altro origina una \textbf{forza resistente} rispetto al moto della sbarretta (figura \ref{fig:im-200}).\\
+	Si parla di \textbf{Attrito Elettromagnetico}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{200.png}
+			\caption{}
+			\label{fig:im-200}
+		\end{figure}
+	\end{center}
+	$$\Rightarrow$$ per mantenere la sbarretta in moto con una velocità $\vec{v}$ costante occorre applicare una forza esterna: 
+	$$\vec{F} = -\vec{F}_B$$
+	Spendendo una potenza: 
+	$$P = \vec{F} \cdot \vec{v} = \frac{B^2 L^2 v^{\color{red}2}}{R}$$
+	Ma essendo: 
+	$$BLv = RI \Rightarrow P = \frac{\mathscr{F}^2}{R} = RI^2 = \underbrace{\mathscr{F} I}_{\text{potenza erogata da un generatore elettrico}}$$
+	L’energia \textbf{meccanica} che si spende per mantenere in moto la sbarretta è \textbf{integralmente trasferita} al circuito come energia \textbf{elettrica}\\\\
+	Il significato energetico della legge di Lenz è soddisfatto:\\
+	Potenza Meccanica $\rightarrow$ Potenza Elettrica\\
+	\textbf{Abbiamo realizzato un generatore di corrente}.\\\\
+	Il processo inverso:
+	Potenza Elettrica $\rightarrow$ Potenza Meccanica\\
+	\textbf{È alla base del funzionamento dei motori elettrici}.
+	\subsubsection{Spira in Moto in Un Campo Magnetico Uniforme}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{201.png}
+			\caption{}
+			\label{fig:im-201}
+		\end{figure}
+	\end{center}
+	Facendo riferimento alla figura \ref{fig:im-201}:
+	$$\phi_B = \int \vec{B} \cdot d\vec{s} = B \cos \vartheta \int ds = B A \cos \vartheta$$
+	Ma se un agente esterno sta facendo ruotare la spira intorno ad un asse con una velocità angolare $\omega$ costante:
+	$$\Rightarrow \vartheta = \vartheta(t) = \omega t$$
+	$$\Rightarrow \phi_B = B A \cos \omega t$$
+	Il flusso $\phi_B$ varierà nel tempo $\Rightarrow$ anche la f.e.m indotta (figura \ref{fig:im-202}):
+	$$\mathscr{F} = - \frac{d\phi_B}{dt} = B A \omega \sin \omega t$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{202.png}
+			\caption{Tratteggiato è l’andamento di $\phi_B$}
+			\label{fig:im-202}
+		\end{figure}
+	\end{center}
+	Se nella spira circola una corrente $I$ $\Rightarrow$ agirà sulla spira un momento torcente: 
+	$$\vec{\tau} = I \vec{A} \times \vec{B}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{203.png}
+			\caption{}
+			\label{fig:im-203}
+		\end{figure}
+	\end{center}
+	Osservando quindi figura \ref{fig:im-203} notiamo che il momento tenderebbe a produrre una rotazione nel verso opposto alla rotazione della spira\\
+	$\Rightarrow$ occorre compiere un lavoro meccanico per mantenere in moto la spira.\\
+	\textbf{Abbiamo realizzato un Generatore Di Corrente Alternata}
 	\subsection{Autoinduzione e circuiti LR}
 	\subsection{Densità di Energia Magnetica}
 	\subsection{Mutua Induzione e Trasformatori}

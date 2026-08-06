@@ -122,13 +122,14 @@
 \contentsline {subsubsection}{\numberline {5.5.2}Domini di Weiss}{80}{subsubsection.5.5.2}%
 \contentsline {section}{\numberline {6}Induzione Elettromagnetica}{81}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{81}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{81}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{81}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{81}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Circuiti LC}{81}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{81}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{81}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{81}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{81}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Esercizi}{81}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{81}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Spira in Moto in Un Campo Magnetico Uniforme}{85}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{86}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{86}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{86}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circuiti LC}{86}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{86}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{86}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{86}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{86}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Esercizi}{86}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{86}{subsection.8.1}%
