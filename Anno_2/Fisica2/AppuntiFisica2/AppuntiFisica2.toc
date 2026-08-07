@@ -134,8 +134,10 @@
 \contentsline {subsubsection}{\numberline {6.5.2}Circuito RL}{91}{subsubsection.6.5.2}%
 \contentsline {subsubsection}{\numberline {6.5.3}Circuito LC}{91}{subsubsection.6.5.3}%
 \contentsline {section}{\numberline {7}Onde Elettromagnetiche}{94}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{94}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.1}Introduzione alle Onde}{94}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Onde Armoniche}{94}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{94}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Esercizi}{94}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{94}{subsection.8.1}%
+\contentsline {subsection}{\numberline {7.3}Equazioni di Maxwell}{96}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Onde Elettromagnetiche}{96}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Vettore di Poynting}{99}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Esercizi}{100}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{100}{subsection.8.1}%

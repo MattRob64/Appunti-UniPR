@@ -1,7 +1,274 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../img/}}}
 \begin{document}
-	\subsection{Equazioni di Maxwell}
+	\subsection{Introduzione alle Onde}
+	Alcune onde hanno entrambi i caratteri di onda \textbf{longitudinale} e \textbf{trasversale} (figura \ref{fig:im-220}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{220.png}
+			\caption{Onda Nell’acqua}
+			\label{fig:im-220}
+		\end{figure}
+	\end{center}
+	Un’onda impulsiva o sinusoidale che avanza è detta \textbf{Onda Progressiva}\\\\
+	Se consideriamo un onda impulsiva su una corda tesa (figura \ref{fig:im-221})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{221.png}
+			\caption{$y = f(x - vt)$}
+			\label{fig:im-221}
+		\end{figure}
+	\end{center}
+	Se al tempo $t=0$ la forma dell’impulso è descrivibile da una funzione $f(x)$, al tempo $t$ la funzione sarà traslata verso destra di una distanza pari a $\mathbf{vt}$
+	$$\Rightarrow \boxed{f(x - vt)}$$
+	È la nuova funzione che descrive l’impulso traslato di un tratto $vt$ nella direzione delle $x$ positive.\\
+	In analogia una onda impulsiva che si muova verso sinistra con velocità $v$ sarà descritta da una funzione:
+	$$f(x + vt)$$
+	La funzione $f(x - vt)$ (o $f(x + vt)$) mi fornisce lo spostamento $y$ della corda in funzione dello spazio $\mathbf{x}$ e del tempo $\mathbf{t}$.
+	$$\begin{gathered}
+		y(x,t) = f(x - vt) \\
+		y(x,t) = f(x + vt)
+	\end{gathered}
+	\qquad
+	y(x,t)  \textbf{ È detta Funzione D’onda}$$
+	$v$ è la velocità dell’impulso nel suo insieme ma anche quella di un qualsiasi punto dell’impulso.\\\\
+	$\underset{\textbf{Cresta}}{E_{s}}
+	\;\;
+	\begin{gathered}
+		t=0 \to x=x_0 \\
+		t \to x
+	\end{gathered}
+	\;\; \Rightarrow \; x=x_0 + vt
+	\;\; \Rightarrow \text{La velocità della cresta } \frac{dx}{dt} = v \quad \textbf{Velocità Di Fase}
+	$
 	\subsection{Onde Armoniche}
+	Fondamentalmente la descrizione delle onde dal punto di vista matematico si basa sullo studio delle onde armoni che (sinusoidali).\\
+	Prendiamo in considerazione il grafico \ref{fig:im-222}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{222.png}
+			\caption{}
+			\label{fig:im-222}
+		\end{figure}
+	\end{center}
+	La funzione che descrive lo spostamento delle “particelle” della corda è
+	$$y = A \sin (kx) \quad \text{ al tempo } t=0 $$
+	Se indichiamo con $\mathbf{\lambda}$ \textbf{Lunghezza D’onda} la distanza fra due punti \textbf{in fase fra loro} $\Rightarrow y$ ha lo stesso valore per le ascisse $x, \, x+\lambda, \, x+2\lambda, \, \dots, \, \text{Etc...}$\\
+	$$\Rightarrow A \sin (kx) = A \sin (kx+k\lambda) \Rightarrow k\lambda = 2\pi$$
+	$$\Rightarrow \boxed{k = \frac{2\pi}{\lambda} \quad \textbf{ Numero D’onda Angolare}}$$
+	Se l’onda è progressiva con velocità $v$:
+	$$y = A \sin \left[ \frac{2\pi}{\lambda} (x - vt) \right]$$
+	\\L’elmento di corda in $x=0$ si sposta in funzione del tempo (figura \ref{fig:im-223})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{223.png}
+			\caption{}
+			\label{fig:im-223}
+		\end{figure}
+	\end{center}
+	$\Rightarrow$ Se $T$ \textbf{Periodo Dell’onda} 
+	$$A \sin \left( \frac{2\pi}{\lambda} vt \right) = A \sin \left[ \frac{2\pi}{\lambda} v(t+T) \right] \Rightarrow \frac{2\pi}{\lambda} vt = 2\pi$$
+	$$\Rightarrow \boxed{v = \frac{\lambda}{T}}$$
+	Il periodo $T$ è il tempo necessario a compiere una distanza pari alla lunghezza d’onda $\lambda$\\\\
+	$v, \lambda \textbf{ e } T$ \textbf{sono legate fra loro}.
+	$$v = \frac{\lambda}{T} \frac{2\pi}{2\pi} = \frac{\overbrace{\omega}^{Pulsazione}}{k}$$
+	O alternativamente:
+	$$v = \frac{\lambda}{T} = \lambda v$$
+	Nella forma più generale:
+	$$\boxed{y = A \sin (kx - \omega t + \varphi)}$$
+	\subsection{Equazioni di Maxwell}
+	Nel trattare le onde meccaniche si è visto come abbiano origine dalla perturbazione locale di un mezzo materiale e come si propaghino nel mezzo grazie alle sue proprietà meccaniche.\\
+	Vediamo ora come nelle equazioni di Maxwell siano contenuti i fenomeni ondulatori e nel caso più semplice il concetto di onda piana elettromagnetica.\\
+	Nella teoria unificata di maxwell (1865), il punto di partenza sono le quattro equazioni seguenti:
+	$$
+	\begin{gathered}
+		\textbf{Legge Di Gauss: } \quad \oint \vec{E} \cdot \vec{ds} = \frac{Q_{INT}}{\varepsilon_0} \\
+		\textbf{Legge Di Gauss: } \quad \oint \vec{B} \cdot \vec{ds} = 0 \\
+		\textbf{Legge Di Faraday: } \quad \oint \vec{E} \cdot \vec{dl} = - \frac{d\phi_B}{dt} \\
+		\textbf{Legge Di Ampère Maxwell: } \quad \oint \vec{B} \cdot \vec{dl} = \mu_0 I + \mu_0 \varepsilon_0 \frac{d\phi_E}{dt} 
+	\end{gathered}
+	$$
+	Che \textbf{nel vuoto} possiamo scrivere come:
+	$$
+	\boxed{
+		\begin{gathered}
+			\textbf{Legge Di Gauss: } \quad \oint \vec{E} \cdot \vec{ds} = 0 \\
+			\textbf{Legge Di Gauss: } \quad \oint \vec{B} \cdot \vec{ds} = 0 \\
+			\textbf{Legge Di Faraday: } \quad \oint \vec{E} \cdot \vec{dl} = - \frac{d\phi_B}{dt} \\
+			\textbf{Legge Di Ampère Maxwell: } \quad \oint \vec{B} \cdot \vec{dl} = \mu_0 \varepsilon_0 \frac{d\phi_E}{dt}
+		\end{gathered}
+	}
+	$$
+	Maxwell dimostrò come nel vuoto (\textbf{in assenza di cariche e correnti}) le quattro equazioni combinate insieme \textbf{conducano alla equazione delle onde}: con soluzioni $\vec{E}$ o $\vec{B}$ e con velocità di propagazione pari a quella della luce.\\
+	Questo risultato condusse Maxwell ad ipotizzare l’esistenza di \textbf{onde elettromagnetiche}.\\\\
+	La trattazione analitica necessita delle equazioni di maxwell \textbf{in forma differenziale} anziché in forma integrale.\\
+	Anticipando alcune conclusioni cerchiamo di dimostrare come le equazioni di Maxwell possano condurre all’equazione delle onde
 	\subsection{Onde Elettromagnetiche}
+	Possiamo visualizzare l’onda elettromagnetica che si propaga nella direzione dell’asse delle $x$ come l’insieme di \textbf{due campi: elettrico $\vec{E}$ e magnetico $\vec{B}$}.
+	\begin{enumerate}
+		\item Che descrivono un’onda sinusoidale in moto:
+		$$E = E_{max} \cos (kx - \omega t)$$
+		$$B = B_{max} \cos (kx - \omega t)$$
+		se $x$ è la direzione di propagazione.\\
+		In ogni istante sono fra loro in fase (per semplicità $\varphi = 0$).
+		\item Sono ortogonali fra di loro e ortogonali alla direzione di propagazione $x$ (\textbf{onde trasversali})
+		\item In ogni punto dello spazio $\vec{E}$ e $\vec{B}$ non dipendono da $y$ e $\vec{z}$ \\
+		$\Rightarrow$ entrambi i campi sono uniformi sui piani normali all’asse $x$ \\
+		$\Rightarrow$ siamo in presenza di un’onda piana (figura \ref{fig:image31})
+		\begin{figure}[h]
+			
+			\begin{subfigure}{0.55\textwidth}
+				\includegraphics[scale=0.55]{224.png} 
+				\caption{}
+				\label{fig:im-224}
+			\end{subfigure}
+			\begin{subfigure}{0.55\textwidth}
+				\includegraphics[scale=0.55]{225.png}
+				\caption{Cercando di visualizzare una sequenza temporale in un dato punto}
+				\label{fig:im-225}
+			\end{subfigure}
+			
+			\caption{}
+			\label{fig:image31}
+		\end{figure}
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.45]{226.png}
+				\caption{}
+				\label{fig:im-226}
+			\end{figure}
+		\end{center}
+		Consideramo l’onda e.m. piana appena descritta e una linea rettangolare nel piano $xy$ (figura \ref{fig:im-226})\\
+		Ci si propone di calcolare
+		$$\oint \vec{E} \cdot d\vec{l} = - \frac{d \phi_B}{dt} \quad \text{Legge Di Faraday}$$
+		$$\Rightarrow \oint \vec{E} \cdot \vec{dl} = E(x+dx,t) l - E(x,t) l$$
+		I contributi dei lati $\parallel$ a $x$ sono nulli.\\
+		Ma $E(x+dx,t) = E(x,t) + dE$ $\quad $ $\Rightarrow \oint \vec{E} \cdot d\vec{l} = dE \cdot l$
+		$$\phi_B = B \, l \, dx \Rightarrow dE \, l = - \frac{d(B \, l \, dx)}{dt} \Rightarrow \frac{dE}{dx} = - \frac{dB}{dt}$$
+		Più precisamente \textbf{le derivate sono parziali}:
+		$$\frac{\partial E}{\partial x} = - \frac{\partial B}{\partial t}$$
+		\begin{center}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.45]{227.png}
+				\caption{}
+				\label{fig:im-227}
+			\end{figure}
+		\end{center}
+		Ora il rettangolo è nel piano $xz$ (figura \ref{fig:im-227})
+		Ci si propone di calcolare
+		$$\oint \vec{B} \cdot \vec{dl} = \mu_0 \varepsilon_0 \frac{d \phi_B}{dt} \quad \text{Legge Di Ampere-Maxwell}$$ 
+		$$\Rightarrow \oint \vec{B} \cdot \vec{dl} = B(x,t) l - B(x+dx,t) l$$
+		I contributi dei lati $\parallel$ a $x$ sono nulli.\\
+		Ma $B(x+dx,t) = B(x,t) + dB$ $\quad$ $\Rightarrow \oint \vec{B} \cdot \vec{dl} = -dB \cdot l$
+		$$\phi_E = E \, l \, dx \Rightarrow -dB \, l = \frac{d(E \, l \, dx)}{dt} \mu_0 \varepsilon_0 \Rightarrow \frac{dB}{dx} = -\mu_0 \varepsilon_0 \frac{dE}{dt}$$
+		Anche qui \textbf{le derivate sono parziali}:
+		$$\frac{\partial B}{\partial x} = -\mu_0 \varepsilon_0 \frac{\partial E}{\partial t}$$
+		Dalle relazioni trovate
+		$$\frac{\partial E}{\partial x} = - \frac{\partial B}{\partial t} \qquad \qquad \frac{\partial B}{\partial x} = - \mu_0 \varepsilon_0 \frac{\partial E}{\partial t}$$
+		Derivando rispetto a $x$
+		$$\boxed{\frac{\partial^2 E}{\partial x^2}} = - \frac{\partial}{\partial x} \left( \frac{\partial B}{\partial t} \right) = - \frac{\partial}{\partial t} \left( \frac{\partial B}{\partial x} \right) = - \frac{\partial}{\partial t} \left( - \mu_0 \varepsilon_0 \frac{\partial E}{\partial t} \right) = \boxed{\mu_0 \varepsilon_0 \frac{\partial^2 E}{\partial t^2}}$$
+		e
+		$$\boxed{\frac{\partial^2 B}{\partial x^2}} = - \mu_0 \varepsilon_0 \frac{\partial}{\partial x} \left( \frac{\partial E}{\partial t} \right) = - \mu_0 \varepsilon_0 \frac{\partial}{\partial t} \left( \frac{\partial E}{\partial x} \right) = - \mu_0 \varepsilon_0 \frac{\partial}{\partial t} \left( - \frac{\partial B}{\partial t} \right) = \boxed{\mu_0 \varepsilon_0 \frac{\partial^2 B}{\partial t^2}}$$
+		Sia $E$ che $B$ sono dunque soluzioni di equazioni nella forma dell’\textbf{equazione lineare delle onde}:
+		$$\begin{gathered}
+			\frac{\partial^2 E}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E}{\partial t^2} \\
+			\quad \\
+			\frac{\partial^2 B}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 B}{\partial t^2}
+		\end{gathered}
+		\qquad \text{del tipo } \quad \frac{\partial^2 f}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 f}{\partial t^2}$$
+		$$\Rightarrow v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = \frac{1}{\sqrt{4 \pi \cdot 10^{-7} \frac{H}{m} \cdot 8.85 \cdot 10^{-12} \frac{F}{m}}} \approx 2.998 \cdot 10^8 \text{ m/s} = c \quad \textbf{Velocità Della Luce Nel Vuoto}$$
+		Quindi possiamo dedurre che la \textbf{velocità di propagazione dell'onda elettromagnetica} ($c$) sia:
+		$$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
+		Essendo $E = E_{MAX} \cos(Kx - \omega t)$ e $B = B_{MAX} \cos(Kx - \omega t)$ dalle relazioni valide per le onde.\\
+		$$c = \frac{\omega}{K} = \lambda \nu$$
+		Inoltre da:
+		$$\frac{\partial E}{\partial x} = - \frac{\partial B}{\partial t} \Rightarrow \quad - K E_{MAX}\cancel{ \sin(Kx - \omega t)} = - \omega B_{MAX} \cancel{\sin(Kx - \omega t)}$$
+		\item $$\Rightarrow \frac{E_{MAX}}{B_{MAX}} = \frac{\omega}{K} = c \Rightarrow \frac{E_{MAX}}{B_{MAX}} = \frac{E}{B} = c$$
+		I valori dei campi $E$ e $B$ in ogni istante \textbf{non sono fra loro indipendenti}.\\
+		Abbiamo quindi che nel vuoto le soluzioni delle equazioni di Maxwell \textbf{soddisfano l’equazione generale delle onde}.
+		\begin{itemize}
+			\item $E$ e $B$ sono di tipo \textbf{ondulatorio} 
+			\item $E$ e $B$ si propagano nel vuoto con velocità $c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$
+			\item $E$ e $B$ sono legati dalla relazione di proporzionalità $E = c B$
+			\item $E$ e $B$ sono ortogonali fra di loro $E \cdot B = 0$
+			\item $E \times B$ definisce il verso di propagazione dell'onda
+		\end{itemize}
+	\end{enumerate}
+	\subsection{Vettore di Poynting}
+	Nel trattare le onde meccaniche si eè visto come esse trasportino \textbf{energia} tale che $I$ $\alpha$ al quadrato dell’ampiezza massima della funzione d’onda\\
+	Per le onde elettro magnetiche si definisce un vettore $\vec{S}$ detto vettore di poynting (figura \ref{fig:im-228}):
+	$$\vec{S} \equiv \frac{1}{\mu_0} \vec{E} \times \vec{B}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{228.png}
+			\caption{}
+			\label{fig:im-228}
+		\end{figure}
+	\end{center}
+	Con \textbf{direzione} e \textbf{verso} coincidenti con quelli della velocità di propagazione.\\
+	Il \textbf{modulo} rappresenta l’energia elettromagnetica che per unità di tempo ($\Rightarrow$ potenza) attraversa l’unità di superficie ortogonale alla direzione di propagazione $\quad [S] = \frac{W}{m^2}$\\\\
+	Per un’onda e.m. piana:
+	$$\vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B} \Rightarrow S = \frac{1}{\mu_0} EB =
+	\begin{gathered} 
+		\nearrow  \frac{1}{\mu_0} E \; \frac{E}{c} = \frac{E^2}{\mu_0 c} = \frac{E_{MAX}^2 \cos^2(kx - wt)}{\mu_0 c} \\
+		\quad \\
+		\searrow \frac{1}{\mu_0} Bc \; B = \frac{B^2 c}{\mu_0} = \frac{c B_{MAX}^2 \cos^2(kx - wt)}{\mu_0} 
+	\end{gathered}$$
+	$\Rightarrow$ Entrambe le relazioni ci forniscono la \textbf{Potenza Istantanea per Unità Di Superficie}.\\\\
+	Passando al valore medio
+	$$\vec{S} = \frac{1}{2} \frac{E_{MAX}^2}{\mu_0 c} = \frac{1}{2} \frac{c B_{MAX}^2}{\mu_0}$$
+	Ma avendo definito per le onde meccani che l’intensità come
+	$$I = \frac{\vec{P}}{A} \Rightarrow I = \vec{S}$$
+	L’intensità trasportata da un’onda e.m. piana è pari al \textbf{valor medio del vettore di Poynting}.\\
+	Questi risultati sono in accordo con quello che sappiamo della energia associata ad $E$ e $B$.\\\\
+	Osservaimo la figura \ref{fig:im-229}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{229.png}
+			\caption{}
+			\label{fig:im-229}
+		\end{figure}
+	\end{center}
+	Nel volumetro $Adx$ possiamo calcolare l’energia presente in ogni istante:
+	$$dU = dU_E + dU_B = \mu_E \; Adx + \mu_B \; Adx$$
+	$$\Rightarrow dU = \left( \frac{1}{2} \varepsilon_0 E^2 + \frac{1}{2} \frac{B^2}{\mu_0} \right) A \; dx = \left( \frac{1}{2} \varepsilon_0 E^2 + \frac{1}{2} \frac{B^2}{\mu_0} \right) A \; c \, dt$$
+	$$\Rightarrow S = \frac{dU}{dtA} = \left( \frac{1}{2} \varepsilon_0 E^2 + \frac{1}{2} \frac{B^2}{\mu_0} \right) c = \frac{1}{2} \left( \varepsilon_0 E \, c B + \frac{B \frac{E}{c}}{\mu_0} \right) c $$
+	$$= \frac{1}{2} \left( \varepsilon_0 c^2 + \frac{1}{\mu_0} \right) EB = \frac{1}{2} \left( \varepsilon_0 \frac{1}{\mu_0 \varepsilon_0} + \frac{1}{\mu_0} \right) EB = \underbrace{\frac{1}{\mu_0} EB}_{\textbf{Definizion del Vettore di Poynting}}$$
+	Inoltre $\mu_B = \mu_E$ 
+	$\Rightarrow$ Istante per istante  la densità di energia associata al campo magnetico è uguale alla densità di energia associata al campo elettrico.\\\\
+	Un'altra caratteristica delle onde e.m. è che esse, oltre all’energia, \textbf{trasportano quantità di moto}.\\
+	Se un’onda e.m. incide su una superficie completamente assorbente posta perpendicolarmente alla direzione di propagazione (figura \ref{fig:im-230})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{230.png}
+			\caption{}
+			\label{fig:im-230}
+		\end{figure}
+	\end{center}
+	Il campo elettrico trasferirà energia alla lastra compiendo lavoro sulle cariche essendo $\vec{E} = 0 \Rightarrow$ \textbf{non tende a spostare la lastra}.\\
+	Il campo magnetico viceversa non compie lavoro ma la forza di Lorentz $\vec{F}_M = q \, \vec{v} \times \vec{B}$ (dove $\vec{v}$ è la velocità comunicata alle cariche dalla forza elettrica $q \vec{E}$) è quindi $\alpha \vec{E} \times \vec{B} $\\
+	$\Rightarrow$ \textbf{tende a spostare la lastra nella direzione di propagazione}.\\\\
+	Si ha che:
+	$$\textbf{Quantità di moto } = \frac{U}{c} \text{ per l’assorbimento totale}$$
+	$\Rightarrow$ La \textbf{pressione di radiazione} risultante $\mathbf{P_{RAD}}$ è data dalla forza $F$ esercitata perpendicolarmente sull'area $A$:
+	$$P_{RAD} = \frac{F}{A} = \frac{\frac{d(\frac{U}{c})}{dt}}{A} = \frac{1}{A} \frac{dU}{dt} \cdot \frac{1}{c} \underbrace{=}_{\text{Essendo }\frac{1}{A} \frac{dU}{dt} \text{ il modulo del vettore di Poynting}} \frac{S}{c}$$
+	Se la superficie è completamente riflettente la quantità di moto trasferita nell’unità di tempo è \textbf{doppia} rispetto al caso precedente = $\frac{2U}{c}$\\
+	$$\Rightarrow P_{RAD} = \frac{2S}{c} \quad \text{ per una superficie completamente riflettente}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{231.png}
+			\caption{Apparato per la misura di $P_{RAD}$}
+			\label{fig:im-231}
+		\end{figure}
+	\end{center}
 \end{document}
