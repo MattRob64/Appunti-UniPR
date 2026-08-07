@@ -250,8 +250,287 @@
 	Osservando quindi figura \ref{fig:im-203} notiamo che il momento tenderebbe a produrre una rotazione nel verso opposto alla rotazione della spira\\
 	$\Rightarrow$ occorre compiere un lavoro meccanico per mantenere in moto la spira.\\
 	\textbf{Abbiamo realizzato un Generatore Di Corrente Alternata}
-	\subsection{Autoinduzione e circuiti LR}
-	\subsection{Densità di Energia Magnetica}
+	\subsubsection{Analogia con Legge di Ampere-Maxwell}
+	La forza di Lorentz è responsabile della legge di Faraday \textbf{se il conduttore è in moto}\\
+	Se il conduttore e la sorgente \textbf{sono fermi} non possiamo ricorrere alla forza di Lorentz.\\
+	Eppure la presenza di una corrente in una spira al variare del flusso concatenato implica la presenza di una forza agente e quindi di un campo elettrico $\vec{E}$ nel conduttore.
+	Essendo la f.e.m. $\mathscr{F}$ il lavoro per unità di carica compiuto dalla forza elettrica agente sui portatori di carica:
+	$$\mathscr{F} = \frac{W}{q} = \oint \frac{\vec{F} \cdot d\vec{l}}{q} = \oint \vec{E} \cdot d\vec{l}$$
+	$$\mathscr{F} = \oint \vec{E} \cdot d\vec{l}$$
+	La f.e.m. indotta è legata all’insorgere nel conduttore di un campo elettrico $\vec{E}$ indotto\\
+	$\Rightarrow$ è un campo elettrico non conservativo $\Rightarrow$ non è il risultato di una distribuzione statica di cariche per le quali $\oint \vec{E} \cdot d\vec{l} = 0$\\\\
+	Se al posto della spira conduttrice si sostitviste un percorso chiuso:
+	$$\boxed{\oint \vec{E} \cdot d\vec{l} = - \frac{d\phi_B}{dt}}$$
+	$\Rightarrow$ La variazione del flusso di campo magnetico è \textbf{essa stessa} sorgente di un campo elettrico nello spazio.\\\\
+	Divieve evidente l’analogia con la legge di Ampère-Maxwell (in assenza di correnti di conduzione concatenate):
+	$$\oint \vec{E} \cdot d\vec{l} = \mu_0 \varepsilon_0 \frac{d\phi_E}{dt} \qquad \qquad \oint \vec{E} \cdot d\vec{l} = - \frac{d\phi_B}{dt}$$
+	\textbf{Campi elettrici e magnetici variabili nel tempo si generano reciprocamente}.\\
+	La sintesi sarà completata nella nozione di \textbf{campo elettromagnetico}.
+	\subsection{Autoinduzione}
+	La legge di Faraday $\mathscr{F} = -\frac{d\phi_B}{dt}$ è stata fino ad ora utilizzata per valutare la f.e.m. indotta a seguito di variazioni nel tempo del flusso $\phi_B$ concatenato con una spira conduttrice: \textbf{il campo magnetico era generato da una sorgente esterna}
+	$\Rightarrow$ anche la spira stessa percorsa da corrente è essa stessa sorgente di un campo magnetico concatenato con la spira (figura \ref{fig:im-204})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{204.png}
+			\caption{}
+			\label{fig:im-204}
+		\end{figure}
+	\end{center}
+	$\Rightarrow$ Il campo magnetico generato dalla spira stessa produce un flusso anche attraverso la spira 
+	$$\Rightarrow \phi_B = \int \vec{B} \cdot d\vec{s} = \iint \frac{\mu_0 I}{4\pi} \overbrace{\frac{\vec{dl} \times \hat{r}}{r^2}}^{\text{Biot-Savart}} \cdot d\vec{s} = LI$$
+	$$\Rightarrow \phi_B = LI$$
+	L’\textbf{autoflusso} dipende dalla corrente $I$ e dalle caratteristiche geometriche del circuito.\\
+	$L$ è detto \textbf{coefficiente di auto induzione} o \textbf{induttanza}.\\
+	$\Rightarrow$ Per la legge di Faraday 
+	$$\mathscr{F} = -\frac{d\phi_B}{dt} = -L\frac{dI}{dt}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{205.png}
+			\caption{}
+			\label{fig:im-205}
+		\end{figure}
+	\end{center}
+	Facendo riferimento alla figura \ref{fig:im-205}: La f.e.m. indotta sarà in accordo con la legge di Lenz.\\
+	Si parla di \textbf{auto induzione}: la variazione del flusso concatenato è originato dal circuito stesso.\\\\
+	$\mathscr{F}$ È detta \textbf{f.e.m. auto indotta} o \textbf{forza contro elettro motrice}.\\
+	Nel S.I. l’induitanza si misura in \textbf{Henry (H)}
+	$$\pm H = \pm \frac{V \cdot S}{A}$$
+	$$\Rightarrow \mu_0 = 4 \pi \cdot 10^{-7} \frac{T \cdot m}{A} = 4 \pi \cdot 10^{-7} {\color{red} \frac{H}{m}}$$
+	\subsubsection{Induttanza $L$ Di Un Solenoide}
+	All’interno del solenoide il campo magnetico è uniforme e parallelo all’asse del solenoide e pari a $B = \mu_0 n I$ in modulo.\\
+	$\Rightarrow$ Ogni avvolgimento è approssimabile ad una spira piana di area $A$ attraverso la quale è concatentato il flusso $BA = \mu_0 \; n \: I \; A$\\
+	$\Rightarrow$ Se $l$ è la lunghezza del solenoide il numero degli avvolgimenti e $nl$\\\\
+	Il flusso totale concatenato è $\phi_B = nl \; \mu_0 \; n \; I \; A$\\
+	$\Rightarrow \phi_B = \mu_0 \; n^2 \; l \; A \; I$ $\Rightarrow$ l'induttanza $L = \mu_0 n^2 l A = \mu_0 n^2 \underbrace{V}_{\text{Volume Solenoide}}$
+	\subsection{Circuiti LR}
+	Consideriamo un circuito che contenga un elemento induttivo (es un solenoide) [è detto induttore e sarà rappresentato da una induttanza $L$] in serie con una resistenza $R$.\\
+	Per la legge di Faraday ad ogni variazione di corrente circolante nel circuito l’induttore si oppone producendo una f.e.m. autoindotta.\\\\
+	In presenza di una corrente continua un induttore è "solo" un filo (se ideale $R=0$).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{206.png}
+			\caption{}
+			\label{fig:im-206}
+		\end{figure}
+	\end{center}
+	Facendo riferimento alla figura \ref{fig:im-206} per $t=0$ il curcuito viene chiuso:\\
+	La corrente del solenoide da $I=0$ inizierà ad aumentare $\Rightarrow I(t)$\\
+	$\Rightarrow$ Nell'induttanza si genererà una f.e.m. autoindotta che si oppone all'aumento della corrente $I$.\\
+	$\Rightarrow$ La f.e.m. indotta impedisce alla $I$ di aumentare bruscamente.\\
+	$\Rightarrow$ La corrente nel circuito è quindi controllata da due f.e.m.:\\
+	una costante $\mathscr{F}_0$ della batteria, ed una variabile $\mathscr{F}_L = -L \frac{dI}{dt}$, di segno opposto.\\
+	$\Rightarrow$ Finchè $\mathscr{F}_L$ non si annulla, la corrente nel circuito sarà minore di $\frac{\mathscr{F}_0}{R}$.\\\\
+	Applicando la legge delle Maglie: 
+	$$(V_B - V_A) + (V_C - V_B) + (V_A - V_C) = 0$$
+	$$\mathscr{F}_0 - IR - L \frac{dI}{dt} = 0$$
+	Risolvendo:
+	$$L \frac{dI}{dt} + RI = \mathscr{F}_0 \Rightarrow L dI = -R \left( I - \frac{\mathscr{F}_0}{R} \right) dt$$
+	$$\Rightarrow \frac{dI}{I - \frac{\mathscr{F}_0}{R}} = -\frac{R}{L} dt \underbrace{\Rightarrow}_{\text{integrando}} \int_0^I \frac{dI}{I - \frac{\mathscr{F}_0}{R}} = \int_0^t -\frac{R}{L} dt$$
+	$$\Rightarrow \ln \left( I - \frac{\mathscr{F}_0}{R} \right) - \ln \left( -\frac{\mathscr{F}_0}{R} \right) = -\frac{R}{L} t \Rightarrow I = \frac{\mathscr{F}_0}{R} \left( 1 - e^{-\frac{t}{\tau_L}} \right)$$ 
+	Dove: $\tau_L = \frac{L}{R}$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{207.png}
+			\caption{}
+			\label{fig:im-207}
+		\end{figure}
+	\end{center}
+	Osservando il grafico \ref{fig:im-207}:
+	$$I = \frac{\mathscr{F}_0}{R} (1 - e^{-\frac{t}{\tau_L}}) \qquad t=0 \qquad I=0 \quad \Rightarrow \mathscr{F}_L = -\mathscr{F}_0$$
+	$$t \to \infty \quad I \to \frac{\mathscr{F}_0}{R} \quad \text{ Valore di regime}$$
+	$$\tau_L = \frac{L}{R} \quad \text{ È la costante di tempo del circuito}$$
+	La corrente non aumenta istantaneamente ma esponenzialmente fino al valore di regime per la presenza di una corrente indottA $I_L = I(t) - I_{\infty} = \frac{-\mathscr{F}_0 \cdot e^{-\frac{t}{\tau}}}{R} = \frac{-\mathscr{F}_L}{R}$
+	Analogamente se escluoiamo la batteria (figura \ref{fig:im-208})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{208.png}
+			\caption{}
+			\label{fig:im-208}
+		\end{figure}
+	\end{center}
+	La corrente dal valore di regime $I_0$ diminuirà\\
+	$\Rightarrow$ Nell’induttanza si genererà una f.e.m. $\mathscr{F}_L$ autoindotta che si oppone alla diminuzione della corrente $I$\\
+	$\Rightarrow$ Impedisce alla $I$ di diminuire bruscamente.\\
+	$I$ continua a circolare sostenuta dA $\mathscr{F}_L$:
+	$$-IR - L \frac{dI}{dt} = 0$$
+	$$\Rightarrow \frac{dI}{I} = -\frac{R}{L} dt \Rightarrow \int_{I_0}^{I} \frac{dI}{I} = \int_{0}^{t} -\frac{R}{L} dt \Rightarrow \ln \frac{I}{I_0} = -\frac{R}{L} t$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{209.png}
+			\caption{}
+			\label{fig:im-209}
+		\end{figure}
+	\end{center}
+	Osservando il grafico \ref{fig:im-209}:
+	$$t=0 \qquad I=I_0 \quad \Rightarrow \mathscr{F}_L = RI_0 \quad \text{Anche se la batteria è esclusa}$$
+	$$t \to \infty \quad I \to 0$$
+	Se esclusa la batteria circola una corrente $I$\\
+	$\Rightarrow$ Nella resistenza i portatori di carica perderanno energia per effetto Joule dissipando una potenza $P = RI^2$\\\\
+	Da dove proviene questa energia?
+	\subsubsection{Densità di Energia Magnetica}
+	\textbf{L'energia deve essere immagazzinata nell'induttore}.\\
+	Nel circuito LR connesso alla batteria:
+	$$\mathscr{F}_0 = RI + L \frac{dI}{dt}$$
+	E multiplicando per $I$ ambo i membri:
+	$$\underbrace{\mathscr{F}_0 I}_{\text{Potenza erogata dalla batteria}} = \underbrace{RI^2}_{\text{Potenza dissipata dall'effetto Joule della resistenza}} + LI \underbrace{\frac{dI}{dt}}_{\frac{dU_B}{dt}}$$
+	Calcoliamo così il \textbf{lavoro per unità di tempo contro la f.e.m. indotta}.\\
+	Per la conservazione dell’energia $U_B$ deve essere \textbf{l’energia immagazzinata nell’induttore}:
+	$$\frac{dU_B}{dt} = LI \frac{dI}{dt} \Rightarrow \int_0^{U_B} dU_B = \int_0^I LI \, dI \Rightarrow \boxed{U_B = \frac{1}{2}LI^2}$$
+	Una situazione analoga era stata osservata nel corso del processo di carica (e scarica) di un condensatore ($U_E = \frac{1}{2} \frac{Q^2}{C}$)\\\\
+	Se l’induttore è un solenoide di area $A$ e lunghezza $l$:\\
+	$L = \mu_0 n^2 Al$ $\quad$ e $\quad$ $B = \mu_0 n I \Rightarrow I = \frac{B}{\mu_0 n}$
+	$$\Rightarrow U_B = \frac{1}{2}LI^2 = \mu_0 n^2 Al \left(\frac{B}{\mu_0 n}\right)^2 = {\color{red} \frac{1}{2} \frac{B^2}{\mu_0} Al}$$
+	Se introduciamo la \textbf{densità di energia} $\mu_0 = \frac{U_0}{Al} \rightarrow \text{Volume Solenoide}$
+	$$\Rightarrow \boxed{\mu_0 = \frac{1}{2} \frac{B^2}{\mu_0}} \qquad \textbf{L’energia È Immagazzinata Nel Campo Magnetico}$$
+	Ha validità \textbf{generale}. \\
+	È valida per ogni regione dello spazio in cui esiste un campo magnetico.\\
+	Analogamente a quanto osservato per il campo elettrico dove $\mu_E = \frac{1}{2} \varepsilon_0 E^2$
 	\subsection{Mutua Induzione e Trasformatori}
+	Una variazione nell’intensità della corrente circolante in una bobina può far variare il flusso concatenato con un circuito presente nelle vicinanze (e viceversa) $\Rightarrow$ si parla di \textbf{Mutua Induzione}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{210.png}
+			\caption{}
+			\label{fig:im-210}
+		\end{figure}
+	\end{center}
+	Osserviamo figura \ref{fig:im-210}, se indichiamo con $\phi_{21}$ il flusso del campo magnetico prodotto dalla bobina $1$ e concatenato con la bobina $2$\\
+	$\Rightarrow \phi_{21} \propto I_1$\\
+	La costante di proporzionalità è detta \textbf{Coefficiente Di Mutua Induzione}\\
+	$\Rightarrow \phi_{21} = M_{21} I_1$ e analogamente $\phi_{12} = M_{12} I_2$\\\\
+	Per la legge di Faraday:\\
+	$\mathscr{F}_{21} = - \frac{d\phi_{21}}{dt} = - M_{21} \frac{dI_1}{dt}$ e analogamente $\mathscr{F}_{12} = - \frac{d\phi_{12}}{dt} = - M_{12} \frac{dI_2}{dt}$\\
+	Il coefficiente di mutua induzione dipende dalle caratteristiche geometriche delle bobine e dalla loro posizione relativa.\\\\
+	Si può dirostrare che $M_{21} = M_{12} = M$\\
+	$\Rightarrow \mathscr{F}_2 = - M \frac{dI_1}{dt}$ $\quad$ e $\quad$ $\mathscr{F}_1 = - M \frac{dI_2}{dt}$\\
+	$\Rightarrow$ La f.e.m. indotta in un circuito e sempre proporzionale alla velocità di variazione della corrente nell’altro circuito.
 	\subsection{Circuiti LC}
+	\subsubsection{Circuito RC}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{211.png}
+			\caption{}
+			\label{fig:im-211}
+		\end{figure}
+	\end{center}
+	Raffigurato in figura \ref{fig:im-211}:
+	$$I = \underbrace{I_0}_{\frac{\Delta V}{R}} e^{-\frac{t}{\tau_R}} \qquad \tau_R = RC$$
+	L’energia $U_B = \frac{1}{2} \frac{Q^2}{C}$ immagazzinata nel condensatore viene dissipata sottoforma di calore nella resistenza $R$.
+	\subsubsection{Circuito RL}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{212.png}
+			\caption{}
+			\label{fig:im-212}
+		\end{figure}
+	\end{center}
+	Raffigurato in figura \ref{fig:im-212}:
+	$$I = I_0 \, e^{-\frac{t}{\tau_L}} \qquad \tau_L = \frac{L}{R}$$
+	L’energia $U_B = \frac{1}{2} L I_0^2$ immagazzinata nell’induttore viene dissipata sottoforma di calore nella resistenza $R$.
+	\subsubsection{Circuito LC}
+	Consideriamo ora cosa accade in un circuito in cui siamo presenti una capacità $C$ ed una induttanza $L$ e nessuna resistenza. (figura \ref{fig:im-213})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{213.png}
+			\caption{Circuito LC}
+			\label{fig:im-213}
+		\end{figure}
+	\end{center}
+	Alla chiusura del circuito il condensatore inizierà a scaricarsi attraverso l’induttanza.\\
+	Nel circuito circolerà una corrente $I = \frac{dQ}{dt}$ \textbf{variabile nel tempo}.\\
+	$\Rightarrow$ Avremo una corrente circolante nell’induttore \\
+	$\Rightarrow$ Stiamo immagazzinando energia magnetica $U_B = \frac{1}{2} L I^2$ nell’induttore a spese dell’energia del condensatore $U_B = \frac{1}{2} \frac{Q^2}{C}$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{214.png}
+			\caption{Circuito LC Chiuso}
+			\label{fig:im-214}
+		\end{figure}
+	\end{center}
+	Guardando attentamente figura \ref{fig:im-214} osservaimo come:
+	$$(V_A - V_B) + (V_B - V_A) = 0$$
+	$$\frac{Q}{C} - L \frac{dI}{dt} = 0$$
+	Il condensatore si sta scaricandO $\Rightarrow I = -\frac{dQ}{dt}$
+	$$\Rightarrow L \frac{d^2Q}{dt^2} = -\frac{Q}{C} \quad \Rightarrow \frac{d^2Q}{dt^2} = -\frac{1}{Lc} Q$$
+	L’equazione differenziale è la “stessa” per il sistema \textbf{"massa-molla"} (figura \ref{fig:im-215}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{215.png}
+			\caption{Sistema Massa-Molla}
+			\label{fig:im-215}
+		\end{figure}
+	\end{center}
+	$$M \frac{d^2x}{dt^2} = -Kx \Rightarrow \frac{d^2x}{dt^2} = -\frac{K}{M}x$$
+	$$\begin{gathered} 
+		x \leftrightarrow Q \\ 
+		v_x \leftrightarrow I \\ 
+		K \leftrightarrow \frac{1}{C} \\ 
+		M \leftrightarrow L 
+		\end{gathered}$$
+	Avente come soluzione $x = x_H \cos(\omega t + \varphi)$ con $\omega = \sqrt{\frac{K}{M}}$
+	$$\Rightarrow$$ La carica sul condensatore nei circuiti $$LC$$ varierà sinusoidalmente secondo la relazione:
+	$$Q = Q_M \cos(\omega t + \varphi) \quad \text{ con } \quad \omega = \frac{1}{\sqrt{LC}}$$
+	$Q_M$ è la carica massima sul condensatore, $\omega$ la pulsazione della \textbf{oscillazione}, $$\varphi$$ costante di fase.\\
+	Se al tempo $t=0$ $\quad$ $Q=Q_M \Rightarrow \varphi=0$ E $Q=Q_M \cos \omega t$\\
+	Anche la corrente avrà un andamento oscillante:
+	$$I = -\frac{dQ}{dt} = \omega Q_M \sin \omega t = I_M \sin \omega t$$
+	Abbiamo che in un circuito LC ideale sia la corrente che la carica varieranno sinusoidamente nel tempo con pulsazione $\frac{1}{\sqrt{LC}}$
+	$$\Rightarrow y = \frac{1}{2\pi} \frac{1}{\sqrt{LC}}$$
+	$$Q(t) \quad \text{e} \quad I(t)$$ sono sfasate di $90^\degree$ (figura \ref{fig:image30})
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{216.png} 
+			\caption{}
+			\label{fig:im-216}
+		\end{subfigure}
+		\begin{subfigure}{0.55\textwidth}
+			\includegraphics[scale=0.55]{217.png}
+			\caption{}
+			\label{fig:im-217}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image30}
+	\end{figure}
+	Quando il condensatore è scarico, la corrente che circola nel circuito è massima\\
+	$\Rightarrow$ Sarà massima l’energia immagazzinata nell’induttanza L in assenza di resistenze \textbf{non ci sarà dissipazione di energia} sotto forma di calore.\\
+	$\Rightarrow$ L’energia sarà immagazzinata unicamente sottoforma di energia elettrica:
+	$$\text{Nel condensatore carico: } U_E = \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2} \frac{Q_M^2}{C} \cos^2 \omega t$$
+	E di energia magnetica:
+	$$\text{Nell'induttanza percorsa da corrente: } U_B = \frac{1}{2} L I^2 = \frac{1}{2} L I_M^2 \sin^2 \omega t$$
+	L’energia totale è data da $\boxed{U = U_B + U_E}$ \textbf{Costante}\\\\
+	Essendo $I_M = \omega Q_M \Rightarrow I_M = \frac{1}{\sqrt{LC}} Q_M \Rightarrow I_M^2 = \frac{Q_M^2}{LC} \Rightarrow \frac{1}{2} L I_M^2 = \frac{1}{2} \frac{Q_M^2}{C}$\\
+	$\Rightarrow U = U_E + U_B = \underbrace{\frac{1}{2} L I_M^2}_{\equiv \rightarrow} \sin^2 \omega t \cdot \underbrace{\frac{1}{2} \frac{Q_M^2}{C}}_{\leftarrow\equiv} \cos^2 \omega t = \frac{1}{2} \frac{Q_M^2}{C} = \frac{1}{2} L I_M^2$
+	$\Rightarrow$ L’energia elettromagnetica totale nel circuito rimane costante trasformandosi continuamente da energia elettrica nel condensatore ad energia magnetica nell’industanza e viceversa (figura \ref{fig:im-218})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{218.png}
+			\caption{}
+			\label{fig:im-218}
+		\end{figure}
+	\end{center}
+	Segno di (figura \ref{fig:im-219})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{219.png}
+			\caption{}
+			\label{fig:im-219}
+		\end{figure}
+	\end{center}
+	Convenzione in figura \ref{fig:im-219}: $Q$ sulla faccia superiore del condensatore $I > 0$ se in verso antiorario.
 \end{document}

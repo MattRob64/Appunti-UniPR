@@ -123,13 +123,19 @@
 \contentsline {section}{\numberline {6}Induzione Elettromagnetica}{81}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Legge di Faraday-Lenz}{81}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Spira in Moto in Un Campo Magnetico Uniforme}{85}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Autoinduzione e circuiti LR}{86}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Densità di Energia Magnetica}{86}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{86}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Circuiti LC}{86}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{86}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{86}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{86}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{86}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Esercizi}{86}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{86}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Analogia con Legge di Ampere-Maxwell}{85}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Autoinduzione}{86}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Induttanza $L$ Di Un Solenoide}{87}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Circuiti LR}{88}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Densità di Energia Magnetica}{90}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Mutua Induzione e Trasformatori}{90}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circuiti LC}{91}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Circuito RC}{91}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}Circuito RL}{91}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}Circuito LC}{91}{subsubsection.6.5.3}%
+\contentsline {section}{\numberline {7}Onde Elettromagnetiche}{94}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Equazioni di Maxwell}{94}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Onde Armoniche}{94}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Onde Elettromagnetiche}{94}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Esercizi}{94}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Elettrodinamica}{94}{subsection.8.1}%
