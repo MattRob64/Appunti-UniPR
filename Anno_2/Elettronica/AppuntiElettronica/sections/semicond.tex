@@ -1,0 +1,131 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Introduzione}
+	Il corso di Fondamenti di Elettronica si occuperà principalmente dell’utilizzo dei dispositivi elettronici realizzati con i semiconduttori.\\
+	La principale differenza rispetto a quanto visto nei corsi di Elettrotecnica, consiste nel fatto che i dispositivi elettronici non hanno una relazione lineare tra corrente e tensione.\\
+	I circuiti realizzabili con i dispositivi elettronici sono suddivisibili in due gruppi:
+	\begin{itemize}
+		\item Analogici
+		\item Digitali
+	\end{itemize}
+	In questo corso tratteremo solo i circuiti digitali lasciando la trattazione dettagliata dei circuiti analogici a corsi più specifici.\\
+	Uno schema generico del corso in oggetto è riportato in Figura \ref{fig:im-1}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{1.png}
+			\caption{Origini ed oggetto di studio del corso}
+			\label{fig:im-1}
+		\end{figure}
+	\end{center}
+	\subsection{Semiconduttori}
+	\subsubsection{Premessa}
+	Sappiamo che l’intensità di corrente ($J$) è legata al campo elettrico ($E$) dalla relazione:
+	$$\vec{J} = \sigma \vec{E}$$
+	Se la conducibilità ($\sigma$) è elevata, siamo in presenza di un \textbf{conduttore}; se $\sigma$ è ridotta siamo in presenza di un \textbf{isolante}.\\
+	Possiamo dunque dire che i materiali \textbf{semiconduttori} sono materiali che si pongono a metà strada tra i conduttori (materiali ben disposti a condurre corrente sotto l’azione di un campo elettrico) e gli isolanti.\\\\
+	La definizione appena data è però solo quantitativa. \\
+	In realtà sappiamo che all’aumentare della temperatura, nei conduttori la conducibilità tende a diminuire mentre nei semiconduttori abbiamo il comportamento contrario: \textbf{all’aumento della temperatura, la conducibilità di un semiconduttore aumenta}.\\\\
+	Dalla Fisica e dalla Chimica sappiamo inoltre che gli elettroni ruotano attorno al nucleo dell’atomo su un’orbita e con una velocità tali da controbilanciare esattamente la forza attrattiva del nucleo.\\
+	Dall’orbita percorsa dall’elettrone possiamo allora associare ad ogni elettrone una energia (l’energia cinetica) ed una forza (la forza attrattiva del nucleo).\\
+	In particolare, in un \textbf{sistema atomico}, sono permessi solo alcuni valori di energia (alcune orbite non sono cioè percorribili).\\
+	Siccome gli elettroni hanno natura sia corpuscolare sia ondulatoria è anche necessario che al termine di un’orbita un elettrone abbia effettuato un multiplo intero di periodi ondulatori.
+	\subsubsection{Conclusioni}
+	Non tutti i valori energetici visualizzabili su un asse sono accessibili agli elettroni.\\
+	In altre parole l’energia degli elettroni è quantizzata (principio di quantizzazione dell’energia).\\\\
+	Ogni valore energetico consentito può essere assunto da uno ed un solo elettrone (principio di esclusione di \textbf{Pauli} \footnote{In realtà su ogni livello possono essere presenti fino a due elettroni caratterizzati da un momento di spin opposto.}).\\
+	Dal principio di esclusione deduciamo che esistono livelli occupati e livelli liberi.\\
+	In condizioni di quiete gli elettroni si posizionano spontaneamente sui livelli ad energia più bassa.\\
+	È inoltre possibile determinare, tramite analisi statistiche, un livello energetico (detto livello energetico di \textbf{Fermi}, $E_F$) che discrimina tra i livelli completamente occupati ed i livelli liberi in condizione di quiete.
+	\subsubsection{Sistemi Multiatomici}
+	I livelli energetici rilevati nei sistemi monoatomici sono leggermente diversi dai livelli energetici rilevabili sui sistemi biatomici ma tutte le proprietà precedenti sono invariate. \\
+	Avvicinando sempre più due atomi arriveremo alla fine a creare un legame tra i due detto legame covalente. \\
+	Solitamente gli elettroni che formano il legame sono quelli con livelli energetici più elevati.\\\\
+	Aumentando sempre più il numero degli atomi avremo fasce molto dense di livelli energetici distinti. \\
+	Allora avremo una \textbf{struttura energetica a bande}. \\
+	Una struttura energetica a bande è una struttura energetica in cui si alternano bande dense di livelli energetici permessi a bande proibite.\\\\
+	Per muovere un elettrone allora sarà necessaria un’energia tale da spostarlo dal livello energetico in cui si trova ad un altro livello energetico permesso e libero. \\
+	Allo zero assoluto l’elettrone al livello più prossimo al livello di Fermi sarà quello per il quale l’energia utilizzata sarà minima.\\\\
+	Nei conduttori, il livello di Fermi è interno ad una banda permessa e, pertanto, per eccitare gli elettroni è necessaria poca energia.\\ 
+	Negli isolanti, invece, il livello di Fermi è posto in una banda proibita e quindi è necessaria una grande quantità di energia per eccitare gli elettroni.\\\\
+	Il semiconduttore ha dunque una struttura quantitativa uguale a quella di un isolante. \\
+	La differenza è qualitativa: il gap tra due bande permesse è molto più piccolo rispetto allo stesso gap di un isolante.\\\\
+	Sono semiconduttori quei materiali in cui, a temperatura ambiente, gli elettroni possono essere eccitati per il semplice effetto dello scambio termico con l’ambiente. \\
+	Una volta eccitato l’elettrone si troverà in una zona con molti livelli energetici liberi in cui muoversi e condurre corrente.\\
+	La Figura \ref{fig:im-2} mostra la struttura energetica di isolanti, semiconduttori e conduttori.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{2.png}
+			\caption{Origini ed oggetto di studio del corso}
+			\label{fig:im-2}
+		\end{figure}
+	\end{center}
+	Un’altra differenza fondamentale è che a mano a mano che gli elettroni a livelli energetici più elevati si spostano ad energie superiori al livello di Fermi, i livelli da essi precedentemente occupati vengono via via liberati. \\
+	Allora avremo due bande parzialmente occupate in cui sarà necessaria poca energia per eccitare altri elettroni.\\\\
+	La tabella \hyperref[tab:table-1]{1} riassume quanto appena visto.
+	\begin{table}[h]
+		\centering
+		\label{tab:table-1}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			& $E_F$ & Gap & Bande di conduzione \\ \hline
+			\textbf{Conduttore} & Interno & Molto ridotto & Una \\ \hline
+			\textbf{Semiconduttore} & Esterno & Ridotto & Due \\ \hline
+			\textbf{Isolante} & Esterno & Elevato & Due \\ \hline
+		\end{tabular}
+		\caption{Caratteristiche principali dei conduttori, dei semiconduttori e degli isolanti}
+	\end{table}
+	La banda immediatamente superiore al livello di Fermi è detta \textbf{banda di conduzione} mentre la banda inferiore al livello di Fermi è detta è detta \textbf{banda di valenza}.\\\\
+	I materiali semiconduttori sono tutti i materiali posti sulla quarta colonna della tavola periodica degli elementi. \\
+	In particolare useremo il \textbf{Silicio (Si)} ed il \textbf{Germanio (Ge)} ed alcuni materiali composti quali l’arseniuro di gallio (GaAs) ed il fosfuro di indio (InP).
+	\subsection{Il Silicio (Si)}
+	Il silicio (simbolo Si; numero atomico 14) è un elemento della quarta colonna della tavola periodica degli elementi. \\
+	La banda di valenza del silicio presenta quattro elettroni. \\
+	Il silicio genera un reticolo cristallino cubico a facce centrate che è rappresentabile in due dimensioni come in Figura \ref{fig:im-3}.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{3.png} 
+			\caption{Reticolo cristallino del silicio sviluppato su due dimensioni}
+			\label{fig:im-3}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{4.png}
+			\caption{Reticolo cristallino tridimensionale del silicio}
+			\label{fig:im-4}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image1}
+	\end{figure}
+	In condizione di quiete la carica del cristallo di silicio è nulla in qualunque suo punto. \\
+	Per tale motivo la densità locale di carica ($\rho$) è costante in qualsiasi punto del dispositivo.\\\\
+	Quando il cristallo di silicio riceve energia sufficiente a consentire ad uno o più elettroni il salto dell’energy gap, il dispositivo resta globalmente neutro.\\\\
+	Tuttavia a livello locale, in un punto del dispositivo avremo un elettrone in più mentre in un altro punto ne avremo uno in meno.\\\\
+	A questo punto l’assenza di un elettrone in un punto del cristallo provoca una carica locale positiva. \\
+	Questa carica positiva però attira a sé nuovi elettroni. \\
+	Per compiere il salto da un livello occupato al livello liberato dal precedente elettrone serve un quantitativo di energia molto minore rispetto alla quantità necessaria per liberare il primo elettrone.\\\\
+	Allora in un semiconduttore si hanno due meccanismi: una carica negativa si muove seguendo l’elettrone ed una carica positiva si muove seguendo l’assenza di un elettrone di legame. \\
+	Poiché il trasporto di energia è dovuto a due portatori di carica di segno opposto, si parla di trasporto bipolare.\\\\
+	Dal momento che la carica positiva è dovuta all’assenza di un elettrone si dice che essa è dovuta ad una lacuna (in inglese è detta hole, buco).
+	\subsection{Elettroni e Lacune}
+	Le lacune e gli elettroni vengono solitamente misurati in densità poiché è più importante conoscere quante lacune od elettroni vi sono in un volume. \\
+	Indicheremo con $n$ il \textbf{numero di elettroni liberi }nella banda di conduzione per unità di volume (l’unità di misura sarà l’inverso di un volume); indicheremo invece con $p$ il \textbf{numero di lacune} nell’unità di volume.
+	$$n = \frac{\text{elettroni liberi in conduzione}}{\text{volume } (cm^3)}$$
+	$$p = \frac{\text{lacune}}{\text{volume } (cm^3)}$$
+	Per quanto detto fino ad ora è evidente che gli elettroni e le lacune nascono contemporaneamente. \\
+	Dal momento che esiste l’evento di generazione di elettrone e lacuna deve esistere, affinché il sistema rimanga stabile, anche un meccanismo contrario per il quale le coppie scompaiano. \\
+	La scomparsa delle coppie avviene quando diminuendo la propria energia, l’elettrone trova una lacuna e vi si insedia.\\\\
+	L’energia può essere ottenuta o ceduta in vari modi (tra i più comuni vi sono il calore, le radiazioni elettromagnetiche e la luce).\\\\
+	Indichiamo con $G$ il tasso di generazione e con $R$ il tasso di ricombinazione.
+	$$G = \frac{\text{coppie generate}}{\text{volume tempo } (cm^3 s)}$$
+	$$R = \frac{\text{coppie ricombinate}}{\text{volume tempo } (cm^3 s)}$$
+	In condizioni di stazionarietà deve essere $G = R$. Questa uguaglianza non indica che non vi siano coppie: significa semplicemente che per ogni coppia creata in un dato istante, una seconda coppia scompare.
+	Possiamo inoltre vedere $p$ ed $n$ come funzione della temperatura:
+	$$n = p = n_i(T) \implies p \cdot n = n_i^2$$
+	Alla temperatura di riferimento di 300° Kelvin (circa 27° Celsius), abbiamo:
+	$$n_i(300) \approx 10^{10} \text{ cm}^3$$
+	Siccome in un centimetro cubo esistono circa $10^{23}$ atomi, la generazione di coppie interessa un atomo ogni $10^{13}$ atomi. Nonostante sia un valore così ridotto rispetto al numero totale di elettroni, esso è comunque sufficiente a far condurre il materiale.
+\end{document}
