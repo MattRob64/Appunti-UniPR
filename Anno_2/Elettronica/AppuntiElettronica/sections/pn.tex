@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsection{Ricapitolando}
+	Neila scorsa sezione abbiamo introdotto i semiconduttori e ne abbiamo evidenziato le principali differenze rispetto ai conduttori.\\\\
+	Abbiamo inoltre modellizzato i semiconduttori come:
+	$$\overline{J} = \overline{J}_n + \overline{J}_p$$
+	dove $\overline{J}_n$ è la densità di corrente dovuta agli elettroni e $\overline{J}_p$ è la densità di corrente dovuta alle lacune. \\
+	Nel casobidimensionale (che è il caso di nostro interesse), tali componenti si possono esprimere come:
+	$$J_n = -q\mu_n n E + q D_n \frac{dn}{dx}$$
+	$$J_p = q\mu_p p E - q D_p \frac{dp}{dx}$$
+	Infine abbiamo sottolineato come la mobilità elettronica e la mobilità delle lacune possano essere scritte come:
+	$$D_n = \frac{KT}{q} \mu_n$$
+	$$D_p = \frac{KT}{q} \mu_p$$
+	con $D_n$ tipicamente più grande di due o tre volte rispetto a $D_p$.
+	\subsection{Applicazione del modello}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{7.png}
+			\caption{Semiconduttore con drogaggi differenti all’equilibrio ($T = 0^\degree K$)}
+			\label{fig:im-7}
+		\end{figure}
+	\end{center}
+	In un materiale di tipo $n$ dorgato non uniformemente abbiamo:
+	$$J_n = 0 \implies q\mu_n n E + q D_n \frac{dn}{dx} = 0$$
+	ma sappiamo che è:
+	$$E = -\frac{d\varphi}{dx}$$
+	$$D_n = \frac{KT}{q}\mu_n$$
+	e quindi, sostituendo, possiamo scrivere:
+	$$0=-\cancel{q}\cancel{\mu_n} n \frac{d\varphi}{dx} + \cancel{q} \frac{KT}{q}\cancel{\mu_n} \frac{dn}{dx} \implies \frac{d\varphi}{dx} = \frac{KT}{q} \cdot \frac{1}{n} \cdot \frac{dn}{dx}$$
+	$$\rightarrow \int_{\varphi(n_1)=\varphi}^{\varphi(n_1)=\varphi_2} \frac{d \varphi}{\cancel{dx}} = \int_{n(x_1)=n_1}^{n(x_2)=n_1} \frac{KT}{q} \frac{1}{n} \frac{dn}{\cancel{dx}} = \frac{KT}{q} \int_{n_1}^{n_2} \frac{1}{n} dn$$
+	che, integrando, porta a:
+	$$\varphi_2 - \varphi = \frac{KT}{q} \cdot \ln \frac{n_2}{n_1}$$
+	Allora:
+	\begin{itemize}
+		\item Conoscendo la differenza di concentrazione in due punti, possiamo calcolare il potenziale
+		\item Conoscendo la differenza di potenziale in due punti, possiamo calcolare la concentrazione
+	\end{itemize}
+	Da questa considerazione possiamo decidere arbitrariamente che esiste un punto $x_0$ in cui, all’equilibrio, sia:
+	$$\begin{cases} \varphi = 0 \\ n = 0 \\ p = 0 \end{cases}$$
+	Allora abbiamo:
+	$$\varphi(x) = \frac{KT}{q} \cdot \ln \frac{n(x)}{n_0} \iff n(x) = n_0 \cdot e^{\frac{q\varphi(x)}{KT}}$$
+	Lo stesso ragionamento si può applicare imponendo $J_p = 0$. \\
+	In questo caso sarebbe:
+	$$\varphi(x) = -\frac{KT}{q} \cdot \ln \frac{p(x)}{p_0} \iff p(x) = p_0 \cdot e^{-\frac{q\varphi(x)}{KT}}$$
+	\subsection{La Giunzone \textit{pn}}
+\end{document}

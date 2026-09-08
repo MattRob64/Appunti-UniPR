@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  7 SEP 2026 19:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  8 SEP 2026 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiElettronica.out'.
 
-<./img/0.cover.jpg, id=51, 1204.5pt x 602.25pt>
+<./img/0.cover.jpg, id=91, 1204.5pt x 602.25pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1251,7 +1251,7 @@ been already used, duplicate ignored
                    \relax 
 l.96 	\newpage
                [1] (./sections/semicond.tex
-<./img/1.png, id=77, 272.01625pt x 143.53625pt>
+<./img/1.png, id=128, 272.01625pt x 143.53625pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 17.
@@ -1297,7 +1297,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
-<./img/2.png, id=92, 270.00874pt x 99.37125pt>
+<./img/2.png, id=143, 270.00874pt x 99.37125pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 60.
@@ -1313,12 +1313,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--83
  []
 
 [3 <./img/2.png>]
-<./img/3.png, id=102, 259.97125pt x 193.72375pt>
+<./img/3.png, id=153, 259.97125pt x 193.72375pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 90.
 (pdftex.def)             Requested size: 217.66032pt x 170.7198pt.
-<./img/4.png, id=103, 211.79124pt x 181.67876pt>
+<./img/4.png, id=154, 211.79124pt x 181.67876pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 95.
@@ -1353,38 +1353,208 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--113
 
  []
 
-) [4 <./img/3.png> <./img/4.png>] (./AppuntiElettronica.aux)
+[4 <./img/3.png> <./img/4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+
+ []
+
+<./img/5.png, id=162, 277.035pt x 217.81375pt>
+File: ./img/5.png Graphic file (type png)
+<use ./img/5.png>
+Package pdftex.def Info: ./img/5.png  used on input line 141.
+(pdftex.def)             Requested size: 217.66318pt x 170.71495pt.
+<./img/6.png, id=163, 277.035pt x 210.7875pt>
+File: ./img/6.png Graphic file (type png)
+<use ./img/6.png>
+Package pdftex.def Info: ./img/6.png  used on input line 146.
+(pdftex.def)             Requested size: 217.66318pt x 170.72086pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 140--150
+[][] [] 
+ []
+
+
+Overfull \hbox (10.80402pt too wide) in paragraph at lines 134--169
+\OT1/cmr/m/n/10 Fino ad ora ab-bi-amo visto che in un ma-te-ri-ale puro (in-tri
+n-seco), deve nec-es-sari-a-mente es-sere ver-i-fi-cata l'uguaglianza
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--169
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 181--185
+
+ []
+
+[6 <./img/5.png> <./img/6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--222
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--260
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+[9]) (./sections/pn.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+<./img/7.png, id=190, 275.0275pt x 160.6pt>
+File: ./img/7.png Graphic file (type png)
+<use ./img/7.png>
+Package pdftex.def Info: ./img/7.png  used on input line 20.
+(pdftex.def)             Requested size: 151.26558pt x 88.33026pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]) [11 <./img/7.png>] (./AppuntiElettronica.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `AppuntiElettronica.out' has not changed.
-(rerunfilecheck)             Checksum: BAAFECDD7B06D7FDF29C11FB5AE0CC0B;1562.
+(rerunfilecheck)             Checksum: F23035D0F1F1D929976BA1C2932245B3;2915.
  ) 
 Here is how much of TeX's memory you used:
- 27561 strings out of 467525
- 508047 string characters out of 5418983
- 925493 words of memory out of 5000000
- 55977 multiletter control sequences out of 15000+600000
- 641687 words of font info for 90 fonts, out of 8000000 for 9000
+ 27652 strings out of 467525
+ 509417 string characters out of 5418983
+ 927493 words of memory out of 5000000
+ 56040 multiletter control sequences out of 15000+600000
+ 642751 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,117p,445b,821s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,445b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texliv
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
+al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texliv
 e/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettronica.pdf (5 pages, 409185 bytes).
+ive/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/tex
+live/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/
+texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiElettronica.pdf (12 pages, 535211 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

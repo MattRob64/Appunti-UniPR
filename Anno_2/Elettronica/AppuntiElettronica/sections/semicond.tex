@@ -122,10 +122,182 @@
 	Indichiamo con $G$ il tasso di generazione e con $R$ il tasso di ricombinazione.
 	$$G = \frac{\text{coppie generate}}{\text{volume tempo } (cm^3 s)}$$
 	$$R = \frac{\text{coppie ricombinate}}{\text{volume tempo } (cm^3 s)}$$
-	In condizioni di stazionarietà deve essere $G = R$. Questa uguaglianza non indica che non vi siano coppie: significa semplicemente che per ogni coppia creata in un dato istante, una seconda coppia scompare.
+	In condizioni di stazionarietà deve essere $G = R$. \\
+	Questa uguaglianza non indica che non vi siano coppie: significa semplicemente che per ogni coppia creata in un dato istante, una seconda coppia scompare.\\\\
 	Possiamo inoltre vedere $p$ ed $n$ come funzione della temperatura:
 	$$n = p = n_i(T) \implies p \cdot n = n_i^2$$
 	Alla temperatura di riferimento di 300° Kelvin (circa 27° Celsius), abbiamo:
 	$$n_i(300) \approx 10^{10} \text{ cm}^3$$
-	Siccome in un centimetro cubo esistono circa $10^{23}$ atomi, la generazione di coppie interessa un atomo ogni $10^{13}$ atomi. Nonostante sia un valore così ridotto rispetto al numero totale di elettroni, esso è comunque sufficiente a far condurre il materiale.
+	Siccome in un centimetro cubo esistono circa $10^{23}$ atomi, la generazione di coppie interessa un atomo ogni $10^{13}$ atomi. \\
+	Nonostante sia un valore così ridotto rispetto al numero totale di elettroni, esso è comunque sufficiente a far condurre il materiale.
+	\subsection{Drogaggi}
+	Fino ad ora abbiamo visto che in un materiale puro (intrinseco), deve necessariamente essere verificata l’uguaglianza $n = p$.\\
+	È però possibile spezzare il vincolo appena enunciato modificando la struttura del reticolo cristallino inserendovi, senza alterare la struttura del silicio\footnote{Modificando la struttura del cristallo avremmo una lega.}, elementi della terza o della quinta colonna della tavola periodica.\\
+	Questa operazione prende il nome di \textbf{drogaggio}. \\
+	Nel drogaggio si usano soprattutto il Fosforo (simbolo P; numero atomico 15) ed il Boro (simbolo B; numero atomico 5).
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{5.png} 
+			\caption{Reticolo cristallino del silicio drogato con atomi di fosforo}
+			\label{fig:im-5}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth, height=6cm]{6.png}
+			\caption{Reticolo cristallino del silicio drogato con atomi di boro}
+			\label{fig:im-6}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image2}
+	\end{figure}
+	Usando un atomo di fosforo (elemento della quinta colonna) abbiamo un elettrone che non si lega con altri atomi. \\
+	L’elettrone libero è ora bilanciato da una carica positiva fissa (il protone del fosforo non si muove). \\
+	Allora la lacuna fissa non fornisce contributo alle correnti e quindi non è più vero che $p = n$.\\\\
+	Poiché il fosforo dona il suo elettrone di legame inutilizzato, viene detto donatore. \\
+	Indicheremo allora con $N_D$ il numero di atomi donatori. \\
+	Concentrazioni tipiche arrivano fino a $10^{21}$ per centimetro cubo (e siccome la densità del reticolo di silicio è pari a $10^{23}$ significa che un atomo ogni cento porta carica).\\\\
+	Si faccia inoltre attenzione al fatto che i livelli proibiti al silicio non sono proibiti al fosforo. \\
+	Allora abbiamo un nuovo livello energetico, prima proibito, vicino alla banda di conduzione, utilizzabile dagli atomi.\\\\
+	Un materiale drogato viene detto \textbf{estrinseco}.\\\\
+	Usando materiali della \textbf{quinta colonna} abbiamo uno sbilanciamento in favore degli elettroni ($n > p$).\\\\
+	Usando invece materiali della \textbf{terza colonna} provochiamo uno sbilanciamento in favore delle lacune ($n < p$) poiché abbiamo uno spostamento della lacuna dovuta all’assenza di un elettrone nell’atomo usato per il drogaggio. \\
+	In questo caso generiamo una lacuna mobile senza generare un elettrone mobile. \\
+	Gli atomi della terza colonna sono capaci di accettare un elettrone di legame senza mettere a disposizione una lacuna mobile e sono pertanto detti accettori. \\
+	Indicheremo allora con $N_A$ il numero di atomi accettori. \\
+	In questo caso generiamo un nuovo livello energetico vicino alla banda di valenza.
+	\subsection{Problemi}
+	Nasce ora un problema: come dipendono $p$ ed $n$ dalla temperatura? \\
+	Per i materiali estrinseci non è più vera l’uguaglianza:
+	$$p = n = n_i(T)$$
+	dal momento che $p \neq n$.\\
+	 Resta tuttavia vero che:
+	$$p \cdot n = n_i^2(T)$$
+	Inoltre è vero che $R$ e $G$ restano equivalenti. \\
+	Siccome $G$ dipende solo dalla temperatura e $R$ dipende dalla temperatura e dal numero di elettroni e lacune in circolazione.
+	$$G = g(T)$$
+	$$R = p \cdot n \cdot f(T)$$
+	Allora per l’equilibrio abbiamo:
+	$$g(T) = n \cdot p \cdot f(T) \implies p \cdot n = \frac{g(T)}{f(T)} = z(T)$$
+	Dunque, noto il valore di $p \cdot n$ in una situazione, possiamo ricavarne il valore per qualsiasi condizione.\\\\
+	Il dispositivo deve inoltre essere globalmente neutro. \\
+	La densità di carica è data da:
+	$$\rho = \underbrace{(-qn)}_{\text{dovuta agli elettroni}} + \underbrace{(+qp)}_{\text{dovuta ai protoni}} + \underbrace{(+qN_D)}_{\text{atomi donatori}} + \underbrace{(-qN_A)}_{\text{atomi accettori}}$$
+	Raccogliendo ed imponendo la densità pari a zero, abbiamo:
+	$$\rho = q \left( \underbrace{N_D - N_A}_{\text{cariche fisse}} + \underbrace{p - n}_{\text{cariche mobili}} \right) = 0$$
+	Dal momento che sappiamo essere:
+	$$p = \frac{n_i^2}{n}$$
+	abbiamo una equazione in una incognita:
+	$$\rho = q\left(N_D - N_A + \frac{n_i^2}{n} - n\right) = 0 \implies n^2 - (N_D - N_A)n - n_i^2 = 0$$
+	da cui possiamo ottenere facilmente il valore di $n$.
+	$$n = \frac{(N_D - N_A) + \sqrt{(N_D - N_A)^2 + 4n_i^2}}{2}$$
+	possiamo facilmente ricavare la densità di carica in un materiale estrinseco uniformemente drogato.
+	\subsection{Proprietà}
+	\subsubsection{Principio di compensazione}
+	Il calcolo del valore di $n$ (che è una grandezza fisica necessariamente positiva) può essere molto semplificato nel caso in cui sia $N_D \gg N_A$.
+	$$n \approx \frac{N_D + \sqrt{N_D^2}}{2} \approx N_D \implies p = \frac{n_i^2}{N_D}$$
+	Quesrto risultato dimostra che è possibile decidere il numero di elettroni liberi drogando in modo opportuno il materiale. \\
+	Casi tipici sono i seguenti:
+	$$\begin{aligned} N_D &= 10^{15} cm^{-3} \\ n_i &= 10^{10} cm^{-3} \end{aligned} \implies \begin{aligned} n &= 10^{15} cm^{-3} \\ p &= 10^5 cm^{-3} \end{aligned}$$
+	Una regione così drogata è detta regione estrinseca di tipo $n$.\\\\
+	Nel caso in cui sia $N_A \gg N_D$, ripedendo gli stessi calcoli appena effettuati, avremo una regione estrinseca di tipo $p$.\\\\
+	Si noti che il valore di $p$ viene ricavato per differenza. \\
+	Allora drogando con concentrazioni identiche di atomi accettori e donatori è come se il materiale non fosse stato drogato (l’elettrone libero donato dal donatore viene catturato dall’accettore e la coppia elettrone lacuna scompare). \\
+	Questa proprietà è detta \textbf{principio di compensazione}.
+	\subsubsection{Legge di Ohm}
+	Sappiamo che i materiali conduttori rispettano la legge di Ohm per cui vale:
+	$$\vec{J} = \sigma \vec{E}$$
+	Questa relazione vale anche per i semiconduttori?\\\\
+	Per rispondere a questa domanda consideriamo un dispositivo bidimensionale uniformemente drogato con $N_D \gg N_A$ atomi donatori. \\
+	Applichiamo ad esse un campo elettrico $\vec{E}$.\\\\
+	La forza esercitata dal campo su una singola carica $q$ è:
+	$$f = -qE$$
+	e siccome vale sempre $f = ma$, abbiamo:
+	$$ma = -qE \implies \vec{a} = \frac{-q}{m} \vec{E}$$
+	che porta ad un moto uniformemente accelerato.\\\\
+	Questo risultato è però valido solo nel vuoto. \\
+	In realtà l’elettrone si muove all’interno di un reticolo di protoni, neutroni ed elettroni che i quali interagisce. \\
+	A causa di tutte le interazioni dell’elettrone con il reticolo, possiamo dire che esso si muove mediamente nella direzione opposta a quella del campo elettrico. \\
+	Sperimentalmente si vede che l’elettrone si muove con una velocità mediamente costante e proporzionale al campo elettrico detta mobilità elettronica ed indicata con $\mu_n$.
+	$$\vec{v}_n = -\mu_n \vec{E}$$
+	Ragionando in modo analogo possiamo arrivare ad un risultato simile per le lacune:
+	$$\vec{v}_p = +\mu_p \vec{E}$$
+	Contrariamente agli elettroni le lacune si muovono però nel verso del campo elettrico. \\
+	Inoltre si ha che la mobilità delle lacune $\mu_p$ è tipicamente inferiore alla mobilità degli elettroni.\\\\
+	L’intensità della corrente è data da:
+	$$J = \frac{I}{s}$$
+	dove vale:
+	$$I = \frac{dQ}{dt}$$
+	dove $dQ$ è la carica di un cilindro di base $s$ ed altezza $dx$.
+	$$dQ = -q \cdot n \cdot s \cdot dx$$
+	Siccome è:
+	$$dx = -v_n dt$$
+	e poiché è $v_n = -\mu_n E$, raggruppando tutti i risultati ottenuti abbiamo:
+	$$J_n = \frac{(-q)ns(-\mu_n)E \, dt}{s \, dt} = q\mu_n nE = q\mu_n N_D E$$
+	dove abbiamo sfruttato il fatto che $n = N_D$ per il fatto che possiamo controllare il drogaggio del materiale. \\
+	Definendo ora
+	$$\sigma_n = q\mu_n N_D$$
+	otteniamo la \textbf{legge di Ohm in forma locale}:
+	$$J_n = \sigma_n E$$
+	Per le lacune vale invece:
+	$$\sigma_p = q\mu_p p \implies J_p = \sigma_p E$$
+	In forma più generale abbiamo:
+	$$J = J_n + J_p = q(\mu_n n + \mu_p p)E$$
+	Poiché il valore di $\sigma$ dipende dal drogaggio che si è utilizzato, possiamo realizzare, drogando opportunamente le varie porzioni del dispositivo, parti fortemente conduttive e parti fortemente resistive. \\
+	Su un unico semiconduttore possiamo quindi costruire sia i dispositivi sia le connessioni tra i dispositivi.
+	\subsection{Drogaggi Non Uniformi}
+	Fino ad ora abbiamo considerato solo materiali \textbf{uniformemente drogati}. \\
+	Per quanto appena detto è però necessario considerare che il materiale possa non essere uniformemente drogato. \\
+	Nuovamente poniamoci nel caso bidimensionale all’equilibrio in cui la concentrazione varia linearmente con $x$.\\\\
+	All’equilibrio non vi è energia che circola. \\
+	Siccome gli elettroni in movimento dissipano energia deve essere:
+	$$J = J_n = J_p = 0$$
+	Gli elettroni tuttavia scambiano energia tra di loro con bilanci mediamente nulli. \\
+	Questo non vuol dire che l’elettrone sia fermo: significa solamente che la probabilità che ha un elettrone di muoversi con velocità termica $v_{th}(T)$ è pari alla probabilità che esso ha di muoversi con velocità $-v_{th}(T)$.\\\\
+	Allora in questo caso abbiamo due volumetti interessati dal movimento. \\
+	Entrambi i volumetti sono di dimensione $sdx$ dove si ha $dx = v_{th} \, dt$.\\\\
+	Nuovamente abbiamo:
+	$$J = \frac{I}{s}$$
+	$$I = \frac{dQ}{dt}$$
+	Questa volta avremo però:
+	$$dQ = \frac{dQ_1}{2} - \frac{dQ_2}{2}$$
+	dove
+	$$dQ_1 = (-q) n_1 \cdot s dx$$
+	$$dQ_2 = (-q) n_2 \cdot s dx$$
+	in cui $n_1 \neq n_2$ sono i valori medi della densità di carica nelle sezioni limitrofe al valore di riferimento.\\\\
+	Sfruttando i valori di $dQ_1$ e $dQ_2$ e l’espressione di $J$ abbiamo ora:
+	$$J = \frac{-qn_1 sv_{th} dt + qn_2 sv_{th} dt}{2s dt} = \frac{q}{2}(n_2 - n_1)v_{th}$$
+	\textbf{che è in contrasto con l’ipotesi di equilibrio da cui siamo partiti}.\\\\
+	In realtà, siccome le concentrazioni non sono uniformi, gli elettroni tendono a diffondersi dalle regioni a densità maggiore a quelle a densità minore. \\
+	Ciò è detto principio di diffusione ed è simile a quanto avviene lasciando cadere una goccia di inchiostro in un bicchiere d’acqua.\\\\
+	In altre parole, per effetto termico, gli elettroni tendono ad appiattire la curva della concentrazione.\\\\
+	L’elettrone si può dunque muovere per due motivi: o per l’effetto di un campo elettrico o per effetto diffusivo. \\
+	Nel caso di un drogaggio non uniforme, entrambi questi effetti sono rilevanti.\\\\
+	Allora in un semiconduttore abbiamo due meccanismi di spostamento mentre in un conduttore vi è solo l’azione del campo elettrico.\\\\
+	La corrente di diffusione degli elettroni è dunque data da:
+	$$J_n = q D_n \frac{dn}{dx}$$
+	dove $D_n$ è il \textbf{coefficiente di diffusione} e dipende grandemente dalla temperatura. \\
+	In particolare vale la \textbf{Relazione di Einstein}:
+	$$D_n = \frac{KT}{q} \mu_n$$
+	dove $K = 1,38 \cdot 10^{-23}$ è la \textbf{costante di Boltzman}.\\\\
+	Ragionando nello stesso modo per le lacune otteniamo la versione analoga per le lacune:
+	$$J_p = -q D_p \frac{dp}{dx}$$
+	$$D_p = \frac{KT}{q} \mu_p$$
+	È ormai evidente che \textbf{è difficile ottenere un moto puramente diffusivo} poiché nel momento in cui un elettrone si muove, si viene a creare un dipolo che genera un campo elettrico. \\
+	Applicando allora una versione semplificata del principio di sovrapposizione degli effetti possiamo ottenere un modello complessivo.
+	$$J = J_n + J_p = 0$$
+	$$J_n = -q \mu_n n E + q D_n \frac{dn}{dx}$$
+	$$J_p = q \mu_p p E - q D_p \frac{dp}{dx}$$
+	Nel caso multidimensionale sarà:
+	$$J_n = -q \mu_n n E + q D_n \text{grad}(n)$$
+	$$J_p = q \mu_p p E + q D_p \text{grad}(p)$$
+	Questo modello è detto \textbf{modello a trascinamento diffusivo} (drift diffusion in inglese) e \textbf{sostituisce la legge di Ohm per lo studio dei semiconduttori}.
+	\subsection{Relazioni}
+	Per i semiconduttori abbiamo quindi le relazioni seguenti:
+	$$E = -\frac{dQ}{dx}$$
+	$$\rho = q(N_D - N_A + p - n)$$
+	$$\frac{d(\varepsilon E)}{dx} = \underbrace{\rho}_{\text{Densità di carica}}$$
+	$$J = J_n + J_p = 0$$
+	$$J_n = -q\mu_n n E + qD_n \frac{dn}{dx}$$
+	$$J_p = q\mu_p p E - qD_p \frac{dp}{dx}$$
 \end{document}
