@@ -14,6 +14,7 @@
 	$$D_p = \frac{KT}{q} \mu_p$$
 	con $D_n$ tipicamente più grande di due o tre volte rispetto a $D_p$.
 	\subsection{Applicazione del modello}
+	\label{sub:app-mod}
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -45,4 +46,145 @@
 	In questo caso sarebbe:
 	$$\varphi(x) = -\frac{KT}{q} \cdot \ln \frac{p(x)}{p_0} \iff p(x) = p_0 \cdot e^{-\frac{q\varphi(x)}{KT}}$$
 	\subsection{La Giunzone \textit{pn}}
+	Mantenendoci nelle condizioni di equilibrio e di bidimensionalità, vogliamo drograre un blocco di semiconduttore con concentrazioni uniformi di atomi accettori e donatori.\\\\
+	Il punto in cui si passa dalla regione drogata di tipo $p$ (cioè con atomi accettori) e la regione di tipo $n$ (con atomi donatori) è detto giunzione metallurgica o più semplicemente giunzione.\\\\
+	In condizione di equilibrio sappiamo che è:
+	$$J_n = J_p = 0$$
+	Possiamo aspettarci che la maggior parte dei fenomeni di diffusione si concentri nei pressi del punto di giunzione.\\
+	Conseguentemente possiamo anche ipotizzare che esista una coordinata $w_n$ ed una sua duale $-w_p$ oltre le quali non si notano gli effetti perturbativi dovuti alla giunzione. \\
+	Allora il dispositivo è diviso in quattro regioni:
+	\begin{enumerate}
+		\item una regione drogata $p$ che non risente della giunzione
+		\item una regione drogata ( $p$ ) che risente della giunzione
+		\item una regione drogata ($n$) che risente della giunzione
+		\item una regione drogata ($n$) che non risente della giunzione
+	\end{enumerate}
+	I casi 1 e 4 sono già stati studiati in precedenza.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{8.png}
+			\caption{Schema di una giunzione $pn$ e delle quattro zone in cui si può ipotizzare di suddividerla}
+			\label{fig:im-8}
+		\end{figure}
+	\end{center}
+	\subsubsection{Intervallo $(-\infty; -w_p)$}
+	\label{subsub:int-pn1}
+	Questa regione è detta zona neutra di tipo $p$.\\\\
+	In questo intervallo abbiamo:
+	$$p \approx \underbrace{N_A}_{\text{N di accettatori}}$$
+	$$n \approx \frac{\overbrace{n_i^2}^{\text{Ricordando }p\cdot n = n_i^2}}{N_A}$$
+	$$\rho = q(N_D - N_A + p - n) = 0$$
+	Inoltre deve essere valida l’uguaglianza:
+	$$J_p = q\mu_p p E - qD_p \frac{dp}{dx} = 0$$
+	ma siccome il secondo membro è nullo (la derivata di una costante è sempre nulla) deve essere nullo anche il primo membro e dunque sarà: $E = 0$ $(\underbrace{E}_{=0} = \underbrace{- \frac{d \varphi}{dx}}_{=0})$.\\\\
+	Il potenziale dovrà essere costante (se il campo elettrico, che è la derivata del potenziale, è nullo il potenziale dovrà essere necessariamente costante). \\
+	Allora possiamo decidere che il potenziale $\varphi$ sia nullo.
+	\subsubsection{Intervallo $(-w_p; w_n)$}
+	\label{subsub:int-pn2}
+	Sappiamo con ragionevolezza che nell’intervallo $(-w_p; w_n)$ il potenziale sarà:
+	$$0 < \varphi < \psi_b$$
+	Tuttavia sappiamo anche che, per $\varphi$ anche di poco maggiore di zero (risultato necessariamente verificato per $x > -w_p$), sarà:
+	$$\varphi > 0$$
+	$$p(x) = p_0 \cdot e^{-\frac{q\varphi(x)}{KT}}$$
+	$$p(x) \gg p_0 \approx N_A$$
+	Dalla parte opposta, avremo invece, necessariamente:
+	$$\varphi < \psi$$
+	$$n(x) = n_0 \cdot e^{-\frac{q\varphi(x)}{kT}}$$
+	$$n(x) \ll n_0 \approx N_D$$
+	Dunque in tutto l’intervallo $(-w_p; w_n)$ \textbf{la concentrazione di elettroni e lacune è trascurabile}. \\
+	Questa regione è detta \textbf{regione svuotata}. \\
+	Il termine “svuotata” non indica che non vi siano portatori di carica ma solo che essi sono in una concentrazione trascurabile rispetto alle concentrazioni delle regioni neutre.
+	\subsubsection{Intervallo $(-w_p; 0)$}
+	\label{subsub:int-pn3}
+	In questo intervallo non abbiamo portatori mobili. ({\color{red}* DA RIVEDERE})\\\\
+	Allora in questa regione la densità di carica è:
+	$$\rho = q(-N_A + p - n) = -qN_A \qquad \{ p,n \to 0$$
+	poiché $p$ ed $n$ sono trascurabili per piccole variazioni della concentrazione.\\\\
+	Inoltre:
+	$$\frac{dE}{dx} = \frac{\rho}{\varepsilon}$$
+	Conseguentemente:
+	$$\frac{dE}{dx} = \frac{-qN_A}{\varepsilon}$$
+	da cui:
+	$$dE = -\frac{qN_A}{\varepsilon}dx \overbrace{\implies}^{\int_{E(-w_p)}^{E(n)} dE = \int_{-w_p}^{n} - \frac{qE}{\varepsilon} dn} E(x) - \underbrace{E(-w_p)}_{=0} = -\frac{qN_A}{\varepsilon}(x + w_p)$$
+	Per continuità con l’intervallo $(-\infty; -w_p)$, avremo $E(-w_p) = 0$.
+	$$E(0) = -\frac{qN_A}{\varepsilon}(w_p)$$
+	Allora nell’intervallo in questione il campo elettrico è una retta con coefficiente angolare negativo.\\\\
+	Infine il potenziale è:
+	$$E = - \frac{d \varphi}{dx} \rightarrow \frac{d\varphi}{dx} = \frac{qN_A}{\varepsilon}(x + w_p) \implies d\varphi = \frac{qN_A}{\varepsilon}(x + w_p)dx$$
+	che, integrando da $-w_p$ ad $x$, porta a:
+	$$\varphi(x) - \varphi(w_p) = \frac{qN_A}{\varepsilon} \cdot \frac{(x + w_p)^2}{2} = \frac{qN_A}{2\varepsilon}(x - w_p)^2$$
+	Anche in questo caso, per continuità con l’intervallo $(-\infty; -w_p)$, avremo $\varphi(w_p) = 0$.
+	$$\varphi(0) = \frac{qN_A}{2\varepsilon}(w_p)^2$$
+	\subsubsection{Intervallo $(0; w_n)$}
+	\label{subsub:int-pn4}
+	Applicando ragionamenti similari a quelli visti nel,'intervallo \ref{subsub:int-pn3} otteniamo una densità di carica:
+	$$\rho = qN_D$$
+	La positività della costante è dovuta al fatto che, in questa regione, gli ioni fissi portano carica positiva.\\\\
+	Per il campo elettrico avremo invece:
+	$$E\left(x\right)\overbrace{=}^{\frac{dE}{dx}=\frac{qN_{0}}{E}\rightarrow\int_{E(w_n)}^{E(n)} dE=\int_{w_n}^{n}dx}\frac{qN_D}{\varepsilon}\left(x-w_n\right)$$
+	che è una retta con coefficiente angolare positivo ed ordinata di origine negativa.
+	$$E\left(0\right)=\frac{qN_D}{\varepsilon}\left(-w_n\right)$$
+	Infine il potenziale si calcola in modo simile a quanto visto per l’intervallo $(-w_p; 0)$.
+	$$\begin{cases} E=\frac{qN_d}{\varepsilon}\left(x-w_n\right) \\ E=-\frac{d\varphi}{dx}\end{cases}
+	\;
+	\Rightarrow-d\varphi=\frac{qN_d}{\varepsilon}\left(x-w_n\right)dx
+	\rightarrow \int_{\varphi(w_{n})}^{\varphi(0)} -d\varphi \int_{w_{n}}^{0}\frac{q N_D}{\varepsilon}\left(x-w_{n}\right)dx$$
+	Integrando da $\varphi\left(0\right)$ a $\varphi\left(w_n\right)=\psi_b$ otteniamo:
+	$$\varphi\left(x\right)=\psi_b-\frac{qN_D}{2\varepsilon}\left(x-w_p\right)^2$$
+	\subsubsection{Intervallo $(w_n; +\infty)$}
+	\label{subsub:int-pn5}
+	Questa regione è detta \textbf{zona neutra di tipo $n$}.\\\\
+	In questa regione valgono tutti i ragionamenti visti nell'intervallo \ref{subsub:int-pn1} con l’unica differenza che non possiamo imporre arbitrariamente il valore di $\varphi$.\\\\
+	In questo intervallo abbiamo:
+	$$n\approx N_D$$
+	$$p\approx\frac{n_i^2}{N_D}$$
+	$$\rho=q\left(N_D-N_A+p-n\right)=0$$
+	Inoltre deve essere valida l’uguaglianza:
+	$$J_n=q\mu_{np}pE-qD_n\frac{dn}{dx}=0\implies E=0$$
+	In questo caso non possiamo porre nuovamente il potenziale a zero poiché esso deve essere misurato in relazione al valore $\varphi=0$ imposto in precedenza. \\
+	Dalla relazione ricavata nella sezione \ref{sub:app-mod} abbiamo:
+	$$\varphi\left(x>w_n\right)=\frac{KT}{q}\cdot\ln\frac{N_D N_A}{n_i^2}$$
+	e, siccome $\frac{KT}{q}$ \textbf{deve essere un potenziale} solitamente si indica con $V_T$ ed è detta \textbf{tensione termica}.\\
+	A temperatura ambiente abbiamo:
+	$$V_T=25 \ \mathrm{mV}$$
+	Il valore del potenziale nella zona neutra $n$ è indicato con $\psi_b$ ed è detto \textbf{potenziale barriera} poiché deve fungere da barriera contro la diffusione dei portatori di carica.
+	\subsubsection{Grafici}
+	I grafici seguenti (grafici \ref{fig:image3} e grafici \ref{fig:image4}) mostrano le principali caratteristiche di una giunzione $p_n$ nelle quattro regioni.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{9.png} 
+			\caption{Concentrazione di atomi accettori e donatori in un diodo a giunzione $pn$ a temperatura ambiente}
+			\label{fig:im-9}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{10.png}
+			\caption{Grafico della densità di carica in un diodo a giunzione $pn$}
+			\label{fig:im-10}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image3}
+	\end{figure}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{11.png} 
+			\caption{Campo elettrico in un diodo a giunzione $pn$}
+			\label{fig:im-11}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{12.png}
+			\caption{Potenziale in un diodo a giunzione $pn$}
+			\label{fig:im-12}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image4}
+	\end{figure}
+	Si noti che è:
+	$$q N _ { A } w _ { p } = q N _ { D } w _ { n }$$
+	Da questa relazione notiamo che la regione si svuota in maniera inversamente proporzionale alla concentrazione poiché le aree azzurre in figura \ref{fig:im-10} devono essere uguali.\\\\
+	Oltre ad indicare che la giunzione si comporta quasi come un condensatore, questa relazione ci consente di ridurre di una ingognita le nostre equazioni.
 \end{document}

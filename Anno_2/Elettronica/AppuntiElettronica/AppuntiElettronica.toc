@@ -17,5 +17,11 @@
 \contentsline {subsection}{\numberline {2.1}Ricapitolando}{10}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Applicazione del modello}{11}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}La Giunzone \textit {pn}}{11}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare}{11}{section.3}%
-\contentsline {section}{\numberline {4}Transistore MOSFET}{11}{section.4}%
+\contentsline {subsubsection}{\numberline {2.3.1}Intervallo $(-\infty ; -w_p)$}{12}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Intervallo $(-w_p; w_n)$}{12}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Intervallo $(-w_p; 0)$}{13}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Intervallo $(0; w_n)$}{14}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Intervallo $(w_n; +\infty )$}{14}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Grafici}{14}{subsubsection.2.3.6}%
+\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare}{15}{section.3}%
+\contentsline {section}{\numberline {4}Transistore MOSFET}{15}{section.4}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  8 SEP 2026 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  11 SEP 2026 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiElettronica.out'.
 
-<./img/0.cover.jpg, id=91, 1204.5pt x 602.25pt>
+<./img/0.cover.jpg, id=115, 1204.5pt x 602.25pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1251,7 +1251,7 @@ been already used, duplicate ignored
                    \relax 
 l.96 	\newpage
                [1] (./sections/semicond.tex
-<./img/1.png, id=128, 272.01625pt x 143.53625pt>
+<./img/1.png, id=162, 272.01625pt x 143.53625pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 17.
@@ -1297,7 +1297,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
-<./img/2.png, id=143, 270.00874pt x 99.37125pt>
+<./img/2.png, id=176, 270.00874pt x 99.37125pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 60.
@@ -1313,12 +1313,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--83
  []
 
 [3 <./img/2.png>]
-<./img/3.png, id=153, 259.97125pt x 193.72375pt>
+<./img/3.png, id=185, 259.97125pt x 193.72375pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 90.
 (pdftex.def)             Requested size: 217.66032pt x 170.7198pt.
-<./img/4.png, id=154, 211.79124pt x 181.67876pt>
+<./img/4.png, id=186, 211.79124pt x 181.67876pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 95.
@@ -1368,12 +1368,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
-<./img/5.png, id=162, 277.035pt x 217.81375pt>
+<./img/5.png, id=194, 277.035pt x 217.81375pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 141.
 (pdftex.def)             Requested size: 217.66318pt x 170.71495pt.
-<./img/6.png, id=163, 277.035pt x 210.7875pt>
+<./img/6.png, id=195, 277.035pt x 210.7875pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 146.
@@ -1507,54 +1507,228 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<./img/7.png, id=190, 275.0275pt x 160.6pt>
+<./img/7.png, id=221, 275.0275pt x 160.6pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
-Package pdftex.def Info: ./img/7.png  used on input line 20.
+Package pdftex.def Info: ./img/7.png  used on input line 21.
 (pdftex.def)             Requested size: 151.26558pt x 88.33026pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]) [11 <./img/7.png>] (./AppuntiElettronica.aux)
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+[11 <./img/7.png>]
+<./img/8.png, id=235, 269.005pt x 120.45pt>
+File: ./img/8.png Graphic file (type png)
+<use ./img/8.png>
+Package pdftex.def Info: ./img/8.png  used on input line 66.
+(pdftex.def)             Requested size: 147.9532pt x 66.2477pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\infty' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 83.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 83.
+
+[12 <./img/8.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 98.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 119.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
+
+ []
+
+[13]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\infty' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+<./img/9.png, id=255, 274.02374pt x 71.26625pt>
+File: ./img/9.png Graphic file (type png)
+<use ./img/9.png>
+Package pdftex.def Info: ./img/9.png  used on input line 157.
+(pdftex.def)             Requested size: 217.6621pt x 56.60852pt.
+<./img/10.png, id=256, 274.02374pt x 85.31876pt>
+File: ./img/10.png Graphic file (type png)
+<use ./img/10.png>
+Package pdftex.def Info: ./img/10.png  used on input line 162.
+(pdftex.def)             Requested size: 217.6621pt x 67.77078pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 156--166
+[][] [] 
+ []
+
+<./img/11.png, id=257, 274.02374pt x 63.23625pt>
+File: ./img/11.png Graphic file (type png)
+<use ./img/11.png>
+Package pdftex.def Info: ./img/11.png  used on input line 173.
+(pdftex.def)             Requested size: 217.6621pt x 50.2301pt.
+<./img/12.png, id=258, 269.005pt x 71.26625pt>
+File: ./img/12.png Graphic file (type png)
+<use ./img/12.png>
+Package pdftex.def Info: ./img/12.png  used on input line 178.
+(pdftex.def)             Requested size: 217.6621pt x 57.66443pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 172--182
+[][] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 187--103
+
+ []
+
+[14] [15 <./img/9.png> <./img/10.png> <./img/11.png> <./img/12.png>]
+(./AppuntiElettronica.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `AppuntiElettronica.out' has not changed.
-(rerunfilecheck)             Checksum: F23035D0F1F1D929976BA1C2932245B3;2915.
+(rerunfilecheck)             Checksum: A10DFF4AA3EAADAA6EB562D46C5C1A18;3888.
  ) 
 Here is how much of TeX's memory you used:
- 27652 strings out of 467525
- 509417 string characters out of 5418983
- 927493 words of memory out of 5000000
- 56040 multiletter control sequences out of 15000+600000
- 642751 words of font info for 93 fonts, out of 8000000 for 9000
+ 27779 strings out of 467525
+ 511342 string characters out of 5418983
+ 929493 words of memory out of 5000000
+ 56140 multiletter control sequences out of 15000+600000
+ 645568 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,117p,445b,831s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,117p,445b,897s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loc
-al/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
-026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/20
-26/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-6/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texliv
-e/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/tex
-live/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/
-texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettronica.pdf (12 pages, 535211 bytes).
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texliv
+e/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texl
+ive/2026/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiElettronica.pdf (16 pages, 586560 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 
