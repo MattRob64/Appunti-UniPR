@@ -18,10 +18,15 @@
 \contentsline {subsection}{\numberline {2.2}Applicazione del modello}{11}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}La Giunzone \textit {pn}}{11}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Intervallo $(-\infty ; -w_p)$}{12}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Intervallo $(-w_p; w_n)$}{12}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Intervallo $(-w_p; w_n)$}{13}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Intervallo $(-w_p; 0)$}{13}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Intervallo $(0; w_n)$}{14}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}Intervallo $(w_n; +\infty )$}{14}{subsubsection.2.3.5}%
 \contentsline {subsubsection}{\numberline {2.3.6}Grafici}{14}{subsubsection.2.3.6}%
-\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare}{15}{section.3}%
-\contentsline {section}{\numberline {4}Transistore MOSFET}{15}{section.4}%
+\contentsline {subsection}{\numberline {2.4}Validazione}{15}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Considerazioni}{16}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Funzionamento}{16}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Utilità del Diodo}{19}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Modello a Soglia}{22}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare}{22}{section.3}%
+\contentsline {section}{\numberline {4}Transistore MOSFET}{22}{section.4}%

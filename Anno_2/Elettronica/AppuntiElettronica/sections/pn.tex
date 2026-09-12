@@ -46,6 +46,8 @@
 	In questo caso sarebbe:
 	$$\varphi(x) = -\frac{KT}{q} \cdot \ln \frac{p(x)}{p_0} \iff p(x) = p_0 \cdot e^{-\frac{q\varphi(x)}{KT}}$$
 	\subsection{La Giunzone \textit{pn}}
+	\label{sub:pn}
+	Premessa: \textbf{La giunzione $pn$ è il primo dispositivo elettronico che verrà introdotto in questo corso, la sua struttura sarà alla base di gran parte dei dispositivi elettronici più complessi}.\\\\
 	Mantenendoci nelle condizioni di equilibrio e di bidimensionalità, vogliamo drograre un blocco di semiconduttore con concentrazioni uniformi di atomi accettori e donatori.\\\\
 	Il punto in cui si passa dalla regione drogata di tipo $p$ (cioè con atomi accettori) e la regione di tipo $n$ (con atomi donatori) è detto giunzione metallurgica o più semplicemente giunzione.\\\\
 	In condizione di equilibrio sappiamo che è:
@@ -187,4 +189,268 @@
 	$$q N _ { A } w _ { p } = q N _ { D } w _ { n }$$
 	Da questa relazione notiamo che la regione si svuota in maniera inversamente proporzionale alla concentrazione poiché le aree azzurre in figura \ref{fig:im-10} devono essere uguali.\\\\
 	Oltre ad indicare che la giunzione si comporta quasi come un condensatore, questa relazione ci consente di ridurre di una ingognita le nostre equazioni.
+	\subsection{Validazione}
+	I risultati ed i grafici ottenuti nella sezione \ref{sub:pn}, si basano su una ipotesi: che $-w_p$ e $w_n$ siano entrambi compatibili con le dimensioni fisiche del dispositivo. \\
+	Dobbiamo ora valutare se l’ipotesi è corretta o meno.\\\\
+	Sappiamo che il campo elettrico si può calcolare in due modi differenti a seconda che consideriamo la zona svuotata $n$ o nella zona svuotata $p$. \\
+	Siccome le due zone si congiungono in $x = 0$, in quel punto il campo dovrà, per continuità, essere lo stesso sia che venga calcolato da destra sia che venga calcolato da destra. \\
+	Abbiamo ricavato in precedenza che deve essere:
+	$$qN_A w_p = qN_D w_n$$
+	Ragionando in modo analogo per il potenziale otteniamo che deve risultare:
+	$$\varphi(x)=\psi_{b}-\frac{qN_{A}}{2\varepsilon}\left(x-w_{P}\right)^{2} \overbrace{\rightarrow}^{\text{Le zone si congiungono in }x=0} \frac{qN_A}{2\epsilon} w_p^2 = \psi_b - \frac{qN_D}{2\epsilon} w_n^2$$
+	che è un’equazione in due incognite.\\\\
+	Allora possiamo mettere le due equazioni a sistema e risolvere per sostituzione.
+	$$\begin{cases} 
+			qN_A w_p = qN_D w_n \\ 
+			\frac{qN_A}{2\varepsilon} w_p^2 = \psi_b - \frac{qN_D}{2\varepsilon} w_n^2 
+		\end{cases} 
+		\implies 
+		\begin{cases} 
+			w_p = \frac{N_D}{N_A} w_n \\ 
+			\psi_b = \frac{q}{2\varepsilon} \left( N_A w_p^2 + N_A w_n^2 \right) 
+		\end{cases}$$
+	$$\psi_b = \frac{q}{2\varepsilon} \left( N_A \left( \frac{N_D}{N_A} w_n \right)^2 + N_A w_n^2 \right) = \frac{qN_D^2 w_n^2}{2\varepsilon} \left( \frac{1}{N_A} + \frac{1}{N_D} \right)$$
+	Sfruttando ora il fatto che
+	$$\psi_b = \frac{KT}{q} \ln \frac{N_D N_A}{n_i^2}$$
+	e sciogliendo il quadrato facendo la radice di ambo i membri, ricaviamo un valore numerico per $w_n$ e $w_p$:
+	$$w_n = \frac{1}{N_D} \sqrt{\frac{2\varepsilon \psi_b}{q \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}}$$
+	$$w_p = \frac{1}{N_A} \sqrt{\frac{2\varepsilon \psi_b}{q \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}}$$
+	Tali valori, con parametri tipici, si attestano sulla dimensione di qualche micron. \\
+	Allora \textbf{è sufficiente che il blocchetto di semiconduttore abbia dimensioni superiori a qualche micron} perché l’ipotesi sia soddisfatta ed il ragionamento sia valido.
+	\subsection{Considerazioni}
+	Possiamo inoltre calcolare l’ampiezza totale della regione svuotata.
+	$$w \doteq w_p + w_n = \left( \frac{1}{N_A} + \frac{1}{N_D} \right) \sqrt{\frac{2\varepsilon\psi_b}{q \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}} = \sqrt{\frac{2\varepsilon\psi_b}{q} \left( \frac{1}{N_A} + \frac{1}{N_D} \right)}$$
+	Da questo risultato notiamo che la regione svuotata è tanto più piccola quanto più è drogato il materiale. \\
+	Conseguentemente, se una parte del materiale è più drogata dell’altra, avremo una regione svuotata asimmettrica più piccola nella zona maggiormente drogata.\\\\
+	Inoltre, dai grafici, notiamo che il campo elettrico ha verso opposto rispetto all’asse $x$. \\
+	Dunque il campo ha un effetto di trascinamento delle lacune verso la zona $p$ e degli elettroni verso la zona $n$ che contrasta l’effetto diffusivo dovuto alla differenza di concentrazione. \\
+	Abbiamo dunque una differenza di potenziale tra le due zone.\\\\
+	Questa differenza di potenziale non produce tuttavia energia all’esterno (si avrebbe una violazione del principio di conservazione dell’energia): attaccando una lampadina ai capi delle regioni drogate questa non si accende. \\
+	Questo risultato si spiega considerando che la giunzione tra il metallo ed il semiconduttore ha effetti simili alla giunzione $pn$ e deve essere nuovamente studiata in dettaglio. \\
+	Anche fra la zona $p$ ed il metallo dunque si sviluppa una differenza di potenziale (detta \textbf{differenza di potenziale di contatto} ed indicata da $\psi_{cp}$ o $\psi_{cn}$) (Dove $C$ indica la zona conduttiva). \\
+	Allora dovrà essere:
+	$$\underbrace{\psi_b}_{\underset{\text{di Barriera}}{\text{Potenziale}}} + \underbrace{\psi_{cp}}_{\underset{\text{Contatto Zona $p$ e $c$}}{\text{Potenziale di}}} + \underbrace{\psi_{cn}}_{\underset{\text{Contatto Zona $c$ e $n$}}{\text{Potenziale di}}} = 0$$
+	La differenza di potenziale di contatto è dipendente solamente dalla configurazione fisica del sistema e non dalla corrente che lo attraversa. \\
+	Un contatto di questo tipi è detto \textbf{contatto ohmico}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{13.png}
+			\caption{Diodo a giunzione $pn$ collegato ad un filo di rame}
+			\label{fig:im-13}
+		\end{figure}
+	\end{center}
+	\subsection{Funzionamento}
+	\label{sub:funz-pn}
+	Fino ad ora abbiamo studiato il comportamento del nostro oggetto in condizione di equilibrio. \\
+	Vogliamo adesso studiarne il funzionamento fuori equilibrio: agganciamo un generatore di tesione $V$ al sistema (figura \ref{fig:im-14}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{14.png}
+			\caption{Applicazione di un generatore di tensione al diodo}
+			\label{fig:im-14}
+		\end{figure}
+	\end{center}
+	All’equilibrio, cioè con $V = 0$, abbiamo, per la legge di Kirchoff:
+	$$\psi_{cp} + \psi_{b_0} + \psi_{cn} = 0$$
+	dove $\psi_{b_0}$ è il potenziale di barriera all’equilibrio.\\\\
+	Usciamo dalla condizione di equilibrio: al variare di $V$ dovrà variare anche $\psi_b$. \\
+	Tuttavia, lo abbiamo studiato in precedenza, le zone neutre si comportano come resistenze. \\
+	Le cadute di potenziale sulle zone neutre sono indicate con $\psi_{znp}$ e $\psi_{znn}$. \\
+	Allora, nuovamente per la legge di Kirchoff, abbiamo:
+	$$V + \psi_{cp} - \psi_{znp} + \psi_b - \psi_{znn} - \psi_{cn} = 0$$
+	Ipotizziamo che i contatti siano ohmici e supponiamo che i ragionamenti qualitativi fatti nella condizione di equilibrio siano ancora validi\footnote{Supponiamo cioè che di ragionare in condizione di piccolo scostamento dalla condizione di equilibrio.}. \\
+	Sotto queste ipotesi, la corrente sarà qualitativamente piccola e, conseguentemente, le cadute di potenziale sulle zone neutre siano qualitativamente piccole. \\
+	Quantifichiamo il termine \textbf{piccolo} come:
+	$$\psi_{znp}, \psi_{znn} \ll \psi_b$$
+	Allora possiamo semplificare l’equazione di maglia\footnote{Questa semplificazione non sarà più accettabile quando l’ipotesi di piccolo scostamento cadrà.} in:
+	$$0 + \psi_{cp} - 0 + \psi_{b_0} - 0 - \psi_{cn} = 0$$
+	Sottraendo membro a membro le due equazioni ottenute per la condizione fuori equilibrio abbiamo:
+	$$V + \psi_b - \psi_{b_0} = 0$$
+	da cui ricaviamo che il potenziale di barriera, in condizione di piccolo scostamento dall’equilibrio, è pari al potenziale di barriera in condizione di equilibrio diminuito della tensione applicata:
+	$$\psi_b = \psi_{b_0} - V$$
+	Dunque applicando una tensione positiva abbassiamo la barriera di potenziale mentre applicando una tensione negativa alziamo la barriera di potenziale.
+	$$V > 0 \Longrightarrow \psi_b > \psi_{b_0}$$
+	$$V < 0 \Longrightarrow \psi_b < \psi_{b_0}$$
+	Sfruttando il grafico di figura \ref{fig:im-15} notiamo due comportamenti differenti in base alla tensione applicata.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{15.png}
+			\caption{Una differenza di potenziale modifica l’influenza del campo elettrico}
+			\label{fig:im-15}
+		\end{figure}
+	\end{center}
+	\quad\\
+	Ricordiamo che $E= -grad(V)$.\\\\
+	Se $V$ è positivo, abbiamo un abbassamento del campo ed il termine diffusivo è più importante del termine di trascinamento. \\
+	Di conseguenza la corrente sarà positiva.\\\\
+	Se invece $V$ è negativo abbiamo un innalzamento del campo ed il termine di trascinamento è più forte rispetto al termine di diffusione. \\
+	Di conseguenza la corrente sarà negativa.
+	\begin{table}[h]
+		\centering
+		\label{tab:table-2}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Tensione} & \textbf{Effetti} & \textbf{Corrente} \\ \hline
+			$V > 0$ & Trascinamento $<$ Diffusione & $I > 0$ \\ \hline
+			$V = 0$ & Trascinamento = Diffusione & $I = 0$ \\ \hline
+			$V < 0$ & Trascinamento $>$ Diffusione & $I < 0$ \\ \hline
+		\end{tabular}
+		\caption{Effetto vincente rispetto a differenti valori di tensione.}
+	\end{table}
+	La differenza fondamentale è dovuta alla differenza della popolazione su cui agisce l’effetto:
+	\begin{itemize}
+		\item La corrente di diffusione agisce sui portatori maggioritari e quindi basta una ridotta variazione di tensione per avere una grande variazione di corrente
+		\item La corrente di trascinamento agisce sui portatori minoritari e quindi una ridotta variazione di tensione porta ad una variazione di corrente molto ridotta.
+	\end{itemize}
+	Il comportamento è graficato in figura \ref{fig:im-16}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{16.png}
+			\caption{Caratteristica e simbolo grafico di un diodo a giunzione $pn$}
+			\label{fig:im-16}
+		\end{figure}
+	\end{center}
+	Il dispositivo appena studiato è detto \textbf{diodo a giunzione $pn$} e viene rappresentato simbolicamente come una freccia che punta nella direzione in cui la corrente procede con facilità ed una barriera per il verso opposto.\\\\
+	Il diodo a giunzione $pn$ ha due regioni di funzionamento: una detta \textbf{diretta} (ON) (quando $V$ ed $I$ sono positive) ed una detta \textbf{inversa} (OFF) (con $V$ ed $I$ negative).\\\\
+	La caratteristica del diodo a giunzione $pn$ è modellabile come:
+	$$I = I_S \left( e^{\frac{qV}{kT}} - 1 \right)$$
+	In questo modello:
+	\begin{itemize}
+		\item Il valore ($-1$) è necessario per far passare dall’origine la curva esponenziale che altrimenti passerebbe nel punto ($I = 1$) per una tensione nulla
+		\item La costante ($I_{S}$) (la corrente inversa di saturazione) è il valore di corrente cui tende asintoticamente il valore della corrente quando si applicano valori di corrente molto negativi
+	\end{itemize}
+	Sperimentalmente si nota che il modello così ricavato funziona bene solo quando tutte le ipotesi iniziali sono rispettate. \\
+	Tuttavia se la tensione eccede un certo valore negativo, la corrente ricomincia a crescere a grande velocità risultando fortemente negativa.\\\\
+	La tensione per cui avviene questo fenomeno è detta tensione di scarica o \textbf{tensione di break-down} ed è dovuta al fatto che, quando la tensione negativa eccede un certo valore, anche il campo elettrico inizia a generare coppie elettrone lacuna.\\\\
+	L’ipotesi caduta è dunque la trascurabilità dell’azione del campo rispetto all’azione diffusiva.\\\\
+	Aumentando troppo la tensione positiva e tracciando la curva su scala logaritmica, otteniamo il comportamento graficato in figura \ref{fig:im-17}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{17.png}
+			\caption{Corrente in funzione della tensione in scala logaritmica}
+			\label{fig:im-17}
+		\end{figure}
+	\end{center}
+	L’ipotesi caduta in questo caso è la trascurabilità delle cadute sulle zone neutre poiché non è più vero che sia:
+	$$\psi_{znp}, \psi_{znn} \ll \psi_b$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{18.png}
+			\caption{Esempi di diodi in commercio}
+			\label{fig:im-18}
+		\end{figure}
+	\end{center}
+	\subsection{Utilità del Diodo}
+	Premessa: nella scorsa sezione: \ref{sub:funz-pn} abbiamo introdotto il diodo a giunzione $pn$. \\
+	Abbiamo inoltre ricavato un modello matematico per il diodo nell’ipotesi di piccolo scostamento dall’equilibrio.
+	\begin{gather*}
+		I = I_S \underbrace{\left( e^{\frac{V}{V_T}} - 1 \right)}_{\text{Risulta essere un volume adimensionale}} \\
+		\downarrow \\
+		{\color{red}+1}+\frac{I_D}{\color{teal}I_S} = {\color{teal}I_S} - \left( e^{\frac{V_D}{V_T}} {\color{red}-1} \right) \longrightarrow \frac{V_D}{\color{teal}V_T} = {\color{teal}V_T} \ln \left( \frac{ID}{I_S} \right)\\
+		\downarrow \\
+		V_u = V_i - V_D \cdot \ln \left( \frac{I_D}{I_S} +1 \right)
+	\end{gather*}
+	Dove $V$ indica la tensione del diodo $V_D$ e dove $V_T$ è pari a $\frac{KT}{q}$.\\\\
+	Abbiamo ormai completato lo studio del diodo. \\
+	Vogliamo ora campire a cosa può servire il componente elettronico appena ricavato.\\\\
+	Consideriamo allora la semplice rete formata da un diodo in rete ad un generatore di tensione $V_I$ e ad una resistenza $R$. (Figura \ref{fig:im-19})\\
+	Proviamo allora a ricavare la tensione in uscita $v_u$ a partire dalla differenza di potenziale di ingresso $v_i$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{19.png}
+			\caption{Un semplice circuito che usa un diodo}
+			\label{fig:im-19}
+		\end{figure}
+	\end{center}
+	Detta $V_D$ la caduta di potenziale sul diodo, abbiamo:
+	\begin{gather*}
+		V_i - V_D - V_u = 0 \\
+		\downarrow \\
+		V_u = V_i - V_D
+	\end{gather*}
+	per l’equazione di Kirchhoff alla maglia è:
+	\begin{gather*}
+		V_u = RI \\
+		\downarrow \\
+		I_D = \frac{V_u}{R} \\
+		\downarrow \\
+		{\color{red}V_u = V_i -V_T \cdot \ln \left( \frac{V_u}{R\cdot I_s} +1 \right)}
+	\end{gather*}
+	per la legge di Ohm. \\
+	Introducendo la caratteristica del diodo:
+	$$I = I_S \left( e^{\frac{V_D}{V_T}} - 1 \right) = \frac{V_u}{R}$$
+	possiamo ricavare:
+	$$V_u = RI_S \left( e^{\frac{V_i - V_u}{V_T}} - 1 \right)$$
+	Questo risultato è però difficilmente utilizzabile poiché $V_u$ non viene isolato a primo o secondo membro. \\
+	Calcoliamo allora la tensione di ingresso.
+	$$\frac{V_u}{RI_S} + 1 = e^{\frac{V_i - V_u}{V_T}}$$
+	Applichiamo il logaritmo.
+	$$V _ { T } \ln \left( { \frac { V _ { u } } { R I _ { S } } } + 1 \right) = { \frac { V _ { i } - V _ { u } } { V _ { T } } }$$
+	$$V _ { i } = V _ { u } + V _ { T } \ln \left( { \frac { V _ { u } } { R I _ { S } } } + 1 \right)$$
+	Allora siamo riusciti ad esprimere la tensione di ingresso in funzione della tensione di uscita. \\
+	Il grafico è riportato in figura \ref{fig:im-20}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{20.png}
+			\caption{Grafico della tensione di ingresso in funzione della tensione di uscita e grafico della tensione di uscita in funzione di quella di ingresso}
+			\label{fig:im-20}
+		\end{figure}
+	\end{center}
+	Siccome la relazione è biunivoca, ci basta ora \textbf{ribaltare il grafico} rispetto alla diagonale del primo e terzo quadrante per ottenere il grafico di $V_u$ in funzione di $V_i$.\\\\
+	Dal grafico notiamo che per qualunque valore di tensione in ingresso troviamo in uscita un valore molto simile (anche se leggermente al di sotto) mentre per qualunque valore negativo otteniamo all’uscita un valore molto prossimo allo zero.\\\\
+	Supponiamo ora di applicare un segnale variabile nel tempo come una sinusoide. \\
+	Sfruttando, anche solo graficamente, la caratteristica del diodo notiamo che per tutti i valori positivi di $v_i$, otteniamo in uscita un valore molto prossimo a quello di $v_i$ mentre per i valori negativi di $v_i$ il diodo appiattisce l’uscita a valori praticamente nulli.
+	Allora il diodo è in grado di discriminare le fasi a valori positivi dalle fasi a valori negativi di un segnale tempo variante. \\
+	Una prima, evidente, utilità è l’alterazione del valor medio della curva: infatti se in ingresso si ha una sinusoide a valor medio nullo, in uscita avremo un segnale a valor medio positivo. \\
+	Un’applicazione estremamente diffusa del diodo è la conversione della tensione da alternata (sinusoidale) ad una tensione continua. \\
+	Questo tipo di circuito è detto \textbf{circuito raddrizzatore}.\\\\
+	L’efficienza di questa soluzione è alquanto bassa poiché \textbf{annulla metà del segnale}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{21.png}
+			\caption{Uscita (in rosso) di un raddrizzatore a semionda quando si ha in ingresso (in blu) una sinusoide}
+			\label{fig:im-21}
+		\end{figure}
+	\end{center}
+	Scambiamo ora di posizione la resistenza ed il diodo (Figura \ref{fig:im-22}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{22.png}
+			\caption{Circuito limitatore realizzato con un diodo}
+			\label{fig:im-22}
+		\end{figure}
+	\end{center}
+	La tensione di uscita è ora ai capi del diodo. \\
+	Applichiamo nuovamente Kirchoff alla maglia.
+	$$V_i - RI - V_u = 0 \implies V_u = V_i - RI$$
+	$$I = I_S \left( e^{\frac{V_u}{V_T}} - 1 \right)$$
+	$$V_u = V_i - RI_S \left( e^{\frac{V_u}{V_T}} - 1 \right)$$
+	Anche in questo caso l’equazione è di difficile utilizzo.\\
+	 Ripetiamo il procedimento visto nel caso precedente ed otteniamo:
+	$$V_i = V_u + RI_S \left( e^{\frac{V_u}{V_T}} - 1 \right)$$
+	che ribaltato rispetto alla diagonale porta ad avere il grafico riportato in figura \ref{fig:im-23}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{23.png}
+			\caption{Uscita di un limitatore}
+			\label{fig:im-23}
+		\end{figure}
+	\end{center}
+	Un circuito di questo tipo è un \textbf{circuito limitatore} che viene usato per eliminare tutti i valori di ingresso che eccedono un certo valore. \\
+	Questo tipo di circuito è utile quando è necessario proteggere delle componenti da scariche elettrostatiche ad alta tensione.\\\\
+	Già da questi semplici esempi si nota che non è sempre possibile ottenere una soluzione analitica esatta dell’equazione.\\
+	Possiamo però approssimare la soluzione con metodi di tipo numerico approssimando l’equazione non lineare ad equazioni lineari (gli strumenti elettronici sfruttano questo sistema in alcuni casi). \\
+	Una seconda possibilità è quella di risolvere l’equazione l’equazione stessa (e cioè semplificando il modello) in modo da potere ottenere un modello risolvibile analiticamente.
+	\subsection{Modello a Soglia}
 \end{document}
