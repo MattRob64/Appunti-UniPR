@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  12 SEP 2026 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  12 SEP 2026 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiElettronica.out'.
 
-<./img/0.cover.jpg, id=131, 1204.5pt x 602.25pt>
+<./img/0.cover.jpg, id=179, 1204.5pt x 602.25pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1251,7 +1251,7 @@ been already used, duplicate ignored
                    \relax 
 l.96 	\newpage
                [1] (./sections/semicond.tex
-<./img/1.png, id=183, 272.01625pt x 143.53625pt>
+<./img/1.png, id=243, 272.01625pt x 143.53625pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 17.
@@ -1297,7 +1297,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
-<./img/2.png, id=196, 270.00874pt x 99.37125pt>
+<./img/2.png, id=256, 270.00874pt x 99.37125pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 60.
@@ -1313,12 +1313,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--83
  []
 
 [3 <./img/2.png>]
-<./img/3.png, id=205, 259.97125pt x 193.72375pt>
+<./img/3.png, id=265, 259.97125pt x 193.72375pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 90.
 (pdftex.def)             Requested size: 217.66032pt x 170.7198pt.
-<./img/4.png, id=206, 211.79124pt x 181.67876pt>
+<./img/4.png, id=266, 211.79124pt x 181.67876pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 95.
@@ -1368,12 +1368,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
-<./img/5.png, id=214, 277.035pt x 217.81375pt>
+<./img/5.png, id=274, 277.035pt x 217.81375pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 141.
 (pdftex.def)             Requested size: 217.66318pt x 170.71495pt.
-<./img/6.png, id=215, 277.035pt x 210.7875pt>
+<./img/6.png, id=275, 277.035pt x 210.7875pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 146.
@@ -1507,7 +1507,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<./img/7.png, id=241, 275.0275pt x 160.6pt>
+<./img/7.png, id=301, 275.0275pt x 160.6pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
 Package pdftex.def Info: ./img/7.png  used on input line 21.
@@ -1531,7 +1531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--54
  []
 
 [11 <./img/7.png>]
-<./img/8.png, id=255, 269.005pt x 120.45pt>
+<./img/8.png, id=315, 269.005pt x 120.45pt>
 File: ./img/8.png Graphic file (type png)
 <use ./img/8.png>
 Package pdftex.def Info: ./img/8.png  used on input line 68.
@@ -1651,12 +1651,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
-<./img/9.png, id=275, 274.02374pt x 71.26625pt>
+<./img/9.png, id=336, 274.02374pt x 71.26625pt>
 File: ./img/9.png Graphic file (type png)
 <use ./img/9.png>
 Package pdftex.def Info: ./img/9.png  used on input line 159.
 (pdftex.def)             Requested size: 217.6621pt x 56.60852pt.
-<./img/10.png, id=276, 274.02374pt x 85.31876pt>
+<./img/10.png, id=337, 274.02374pt x 85.31876pt>
 File: ./img/10.png Graphic file (type png)
 <use ./img/10.png>
 Package pdftex.def Info: ./img/10.png  used on input line 164.
@@ -1666,12 +1666,12 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 158--168
 [][] [] 
  []
 
-<./img/11.png, id=277, 274.02374pt x 63.23625pt>
+<./img/11.png, id=338, 274.02374pt x 63.23625pt>
 File: ./img/11.png Graphic file (type png)
 <use ./img/11.png>
 Package pdftex.def Info: ./img/11.png  used on input line 175.
 (pdftex.def)             Requested size: 217.6621pt x 50.2301pt.
-<./img/12.png, id=278, 269.005pt x 71.26625pt>
+<./img/12.png, id=339, 269.005pt x 71.26625pt>
 File: ./img/12.png Graphic file (type png)
 <use ./img/12.png>
 Package pdftex.def Info: ./img/12.png  used on input line 180.
@@ -1712,12 +1712,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--232
 
  []
 
-<./img/13.png, id=292, 271.0125pt x 77.28876pt>
+<./img/13.png, id=353, 271.0125pt x 77.28876pt>
 File: ./img/13.png Graphic file (type png)
 <use ./img/13.png>
 Package pdftex.def Info: ./img/13.png  used on input line 238.
 (pdftex.def)             Requested size: 149.05733pt x 42.50894pt.
-<./img/14.png, id=294, 273.02pt x 89.33376pt>
+<./img/14.png, id=355, 273.02pt x 89.33376pt>
 File: ./img/14.png Graphic file (type png)
 <use ./img/14.png>
 Package pdftex.def Info: ./img/14.png  used on input line 250.
@@ -1728,7 +1728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--262
  []
 
 [16 <./img/13.png> <./img/14.png>]
-<./img/15.png, id=305, 271.0125pt x 79.29625pt>
+<./img/15.png, id=365, 271.0125pt x 79.29625pt>
 File: ./img/15.png Graphic file (type png)
 <use ./img/15.png>
 Package pdftex.def Info: ./img/15.png  used on input line 280.
@@ -1744,7 +1744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--305
  []
 
 [17 <./img/15.png>]
-<./img/16.png, id=315, 261.97874pt x 306.14375pt>
+<./img/16.png, id=375, 261.97874pt x 306.14375pt>
 File: ./img/16.png Graphic file (type png)
 <use ./img/16.png>
 Package pdftex.def Info: ./img/16.png  used on input line 312.
@@ -1774,7 +1774,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
-<./img/17.png, id=317, 271.0125pt x 116.435pt>
+<./img/17.png, id=377, 271.0125pt x 116.435pt>
 File: ./img/17.png Graphic file (type png)
 <use ./img/17.png>
 Package pdftex.def Info: ./img/17.png  used on input line 334.
@@ -1782,7 +1782,7 @@ Package pdftex.def Info: ./img/17.png  used on input line 334.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/18.png, id=318, 139.52126pt x 134.5025pt>
+<./img/18.png, id=378, 139.52126pt x 134.5025pt>
 File: ./img/18.png Graphic file (type png)
 <use ./img/18.png>
 Package pdftex.def Info: ./img/18.png  used on input line 344.
@@ -1800,13 +1800,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--364
 
  []
 
-<./img/19.png, id=328, 136.51pt x 62.2325pt>
+<./img/19.png, id=388, 136.51pt x 62.2325pt>
 File: ./img/19.png Graphic file (type png)
 <use ./img/19.png>
 Package pdftex.def Info: ./img/19.png  used on input line 367.
 (pdftex.def)             Requested size: 75.08072pt x 34.22797pt.
 [19 <./img/17.png> <./img/18.png> <./img/19.png>]
-<./img/20.png, id=336, 277.035pt x 112.42pt>
+<./img/20.png, id=396, 277.035pt x 112.42pt>
 File: ./img/20.png Graphic file (type png)
 <use ./img/20.png>
 Package pdftex.def Info: ./img/20.png  used on input line 402.
@@ -1826,7 +1826,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--416
 
  []
 
-<./img/21.png, id=337, 135.50626pt x 74.2775pt>
+<./img/21.png, id=397, 135.50626pt x 74.2775pt>
 File: ./img/21.png Graphic file (type png)
 <use ./img/21.png>
 Package pdftex.def Info: ./img/21.png  used on input line 419.
@@ -1835,12 +1835,12 @@ Package pdftex.def Info: ./img/21.png  used on input line 419.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <./img/20.png>]
-<./img/22.png, id=344, 285.065pt x 173.64874pt>
+<./img/22.png, id=404, 285.065pt x 173.64874pt>
 File: ./img/22.png Graphic file (type png)
 <use ./img/22.png>
 Package pdftex.def Info: ./img/22.png  used on input line 428.
 (pdftex.def)             Requested size: 156.78622pt x 95.5071pt.
-<./img/23.png, id=347, 135.50626pt x 107.40125pt>
+<./img/23.png, id=407, 135.50626pt x 107.40125pt>
 File: ./img/23.png Graphic file (type png)
 <use ./img/23.png>
 Package pdftex.def Info: ./img/23.png  used on input line 445.
@@ -1850,55 +1850,165 @@ Underfull \hbox (badness 10000) in paragraph at lines 450--455
 
  []
 
-) [21 <./img/21.png> <./img/22.png> <./img/23.png>] [22]
-(./AppuntiElettronica.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--460
+
+ []
+
+[21 <./img/21.png> <./img/22.png> <./img/23.png>]
+<./img/24.png, id=416, 788.9475pt x 214.8025pt>
+File: ./img/24.png Graphic file (type png)
+<use ./img/24.png>
+Package pdftex.def Info: ./img/24.png  used on input line 463.
+(pdftex.def)             Requested size: 433.92245pt x 118.14174pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
+
+ []
+
+<./img/25.png, id=417, 297.11pt x 156.585pt>
+File: ./img/25.png Graphic file (type png)
+<use ./img/25.png>
+Package pdftex.def Info: ./img/25.png  used on input line 495.
+(pdftex.def)             Requested size: 163.411pt x 86.12201pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--505
+
+ []
+
+[22 <./img/24.png> <./img/25.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 509--512
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--516
+
+ []
+
+<./img/26.png, id=428, 333.245pt x 202.7575pt>
+File: ./img/26.png Graphic file (type png)
+<use ./img/26.png>
+Package pdftex.def Info: ./img/26.png  used on input line 519.
+(pdftex.def)             Requested size: 183.28531pt x 111.51697pt.
+<./img/27.png, id=430, 788.9475pt x 278.03876pt>
+File: ./img/27.png Graphic file (type png)
+<use ./img/27.png>
+Package pdftex.def Info: ./img/27.png  used on input line 529.
+(pdftex.def)             Requested size: 433.92245pt x 152.92178pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--546
+
+ []
+
+[23 <./img/26.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 547--550
+
+ []
+
+<./img/28.png, id=443, 320.19624pt x 182.6825pt>
+File: ./img/28.png Graphic file (type png)
+<use ./img/28.png>
+Package pdftex.def Info: ./img/28.png  used on input line 553.
+(pdftex.def)             Requested size: 176.10846pt x 100.47568pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--560
+
+ []
+
+<./img/29.png, id=445, 304.13625pt x 208.78pt>
+File: ./img/29.png Graphic file (type png)
+<use ./img/29.png>
+Package pdftex.def Info: ./img/29.png  used on input line 565.
+(pdftex.def)             Requested size: 167.27545pt x 114.82933pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./img/27.png> <./img/28.png>]
+<./img/30.png, id=457, 297.11pt x 178.6675pt>
+File: ./img/30.png Graphic file (type png)
+<use ./img/30.png>
+Package pdftex.def Info: ./img/30.png  used on input line 585.
+(pdftex.def)             Requested size: 163.411pt x 98.26741pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--600
+
+ []
+
+<./img/31.png, id=459, 271.0125pt x 125.46875pt>
+File: ./img/31.png Graphic file (type png)
+<use ./img/31.png>
+Package pdftex.def Info: ./img/31.png  used on input line 608.
+(pdftex.def)             Requested size: 149.05733pt x 69.00801pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25 <./img/29.png> <./img/30.png>]
+<./img/32.png, id=469, 972.63374pt x 320.19624pt>
+File: ./img/32.png Graphic file (type png)
+<use ./img/32.png>
+Package pdftex.def Info: ./img/32.png  used on input line 650.
+(pdftex.def)             Requested size: 534.95021pt x 176.10846pt.
+
+Overfull \hbox (51.25337pt too wide) in paragraph at lines 650--651
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26 <./img/31.png>]) [27 <./img/32.png>] (./AppuntiElettronica.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `AppuntiElettronica.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `AppuntiElettronica.out':
-(rerunfilecheck)             Before: 08FDD760D817453E6B01C7A0FBF24009;4404
-(rerunfilecheck)             After:  87F7042242EDA4E4921E0FCFF07E216D;4548.
+Package rerunfilecheck Info: File `AppuntiElettronica.out' has not changed.
+(rerunfilecheck)             Checksum: 280FDA4A4A7331CA17735F39FEC630A6;6513.
  ) 
 Here is how much of TeX's memory you used:
- 27949 strings out of 467525
- 513926 string characters out of 5418983
+ 28101 strings out of 467525
+ 516284 string characters out of 5418983
  930493 words of memory out of 5000000
- 56273 multiletter control sequences out of 15000+600000
- 645568 words of font info for 103 fonts, out of 8000000 for 9000
+ 56386 multiletter control sequences out of 15000+600000
+ 646187 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,117p,445b,897s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,117p,627b,928s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2026
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/
-texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texliv
-e/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texli
-ve/2026/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texl
-ive/2026/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/te
-xlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettronica.pdf (23 pages, 669218 bytes).
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
+/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2026/t
+exmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2026
+/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/
+2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiElettronica.pdf (28 pages, 886459 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 522 words of extra memory for PDF output out of 10000 (max. 10000000)
 

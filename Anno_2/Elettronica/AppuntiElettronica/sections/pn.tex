@@ -453,4 +453,211 @@
 	Possiamo però approssimare la soluzione con metodi di tipo numerico approssimando l’equazione non lineare ad equazioni lineari (gli strumenti elettronici sfruttano questo sistema in alcuni casi). \\
 	Una seconda possibilità è quella di risolvere l’equazione l’equazione stessa (e cioè semplificando il modello) in modo da potere ottenere un modello risolvibile analiticamente.
 	\subsection{Modello a Soglia}
+	Riprendendo la caratteristica del diodo notiamo che essa è composta da due tratti. \\
+	Nel tratto di polarizzazione diretta abbiamo che $\frac{dI}{dV}$ è molto grande; nel tratto di polarizzazione inversa invece $\frac{dI}{dV}$ è molto piccola.\\\\
+	La curva non è allora approssimabile ad una retta perché perderemmo il carattere di non linearità del diodo. \\
+	Tuttavia possiamo sfruttare due rette: una quasi nulla (a livello $-I_S$) per la corrente per la polarizzazione inversa ed una parallela all’asse della corrente (a $V_\gamma \approx 0,6 \sim 0,8$ V) nella regione di polarizzazione diretta.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{24.png}
+			\caption{Caratteristica $V \rightarrow I$ di un diodo nei modelli esponenziale (in rosso) e a soglia (in blu)}
+			\label{fig:im-24}
+		\end{figure}
+	\end{center}
+	Allora il modello si semplifica enormemente. \\
+	Abbiamo infatti:
+	\begin{gather*}
+		\begin{aligned}
+			\text{Polarizzazione Inversa} \\
+			\text{Polarizzazione Diretta}
+		\end{aligned}
+		\
+		\begin{cases}
+			I = 0 & \text{per } V < V_\gamma \\ 
+			V = V_\gamma & \text{per } I > 0
+		\end{cases}
+		\qquad
+		\begin{aligned}
+			\text{Diodo OFF} \\
+			\text{Diodo ON}
+		\end{aligned}
+	\end{gather*}
+	Questo modello è detto modello a soglia del diodo poiché discrimina il comportamento del diodo in base ad un valore di soglia.\\\\
+	L’approssimazione ci consente di utilizzare due equazioni lineari al posto di una non lineare. \\
+	A livello grafico possiamo notare che il modello a soglia fornisce approssimazioni sempre migliori per valori sempre più lontani dal punto di soglia.
+	\subsection{Applicazione del Modello a Soglia}
+	\subsubsection{Circuito Raddrizzatore}
+	Vediamo ora di applicare il modello a soglia al circuito raddrizzatore di Figura 7.7.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{25.png}
+			\caption{Raddrizzatore a semionda}
+			\label{fig:im-25}
+		\end{figure}
+	\end{center}
+	Dall’equazione di maglia di Kirchhoff e dalla legge di Ohm abbiamo:
+	$$V_i - V - V_u = 0$$
+	$$V_u = RI$$
+	Incontriamo ora il primo problema del nostro modello approssimato: avendo due regioni di funzionamento dobbiamo risolvere due volte il sistema e controllare che i risultati così ottenuti siano compatibili con le ipotesi di funzionamento formulate\footnote{In generale avendo $n$ diodi, si dovranno analizzare e verificare $2^n$ regioni di funzionamento. Il limite di questo approccio è duplice: bisogna identificare in quali ambiti esso è applicabile e, per grandi circuiti, il numero di calcoli cresce in modo esponenziale.}.\\\\
+	Il modello a soglia impone che:
+	$$\begin{cases} I = 0 & \text{per } V < V_\gamma \\ 
+		V = V_\gamma & \text{per } I > 0 \end{cases}$$
+	In questo caso è (Diodo OFF):
+	$$\begin{cases} I = 0 \longrightarrow V_u = \underbrace{0}_{R \cdot 0} \\
+		V < V_\gamma \ V - V_i - V_u = 0 \end{cases} \implies V_i < V_\gamma$$
+	ed il modello risulta corretto.\\\\
+	In questo caso è (Diodo ON):
+	$$\begin{cases} I > 0 \longrightarrow V_u > 0 \\ 
+		V < V_\gamma \longrightarrow \underbrace{V_u = V_i - V_\gamma}_{\textbf{Pendenza 1: Retta traslata}} \end{cases} \implies V_i > V_\gamma$$
+	ed il modello risulta corretto.\\\\
+	Vediamo il grafico in figura \ref{fig:im-26}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{26.png}
+			\caption{Caratteristica $V \rightarrow I$ di un raddrizzatore}
+			\label{fig:im-26}
+		\end{figure}
+	\end{center}
+	\subsubsection{Circuito Limitatore Positivo}
+	Prendiamo ora in considerazione il circuito in figura \ref{fig:im-27}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{27.png}
+			\caption{Circuito limitatore positivo}
+			\label{fig:im-27}
+		\end{figure}
+	\end{center}
+	Ancora una volta abbiamo:
+	$$V_i - RI - V_u = 0$$
+	$$V_u = V_D + E$$
+	In questo caso abbiamo (Diodo OFF):
+	$$\begin{cases} I = 0 \\ 
+		I = \frac{V_i - V_u}{R} \text{(Dall'eq. di Kirc qui sopra)}\end{cases} \implies \underbrace{V_i = V_u}_{\text{Bisettrice della prima parte}}$$
+	$$\begin{cases} V_D < V_\gamma \\ 
+		V_D = V_u - E \end{cases} \implies V_u - E < V_\gamma$$
+	da cui ricaviamo:
+	$$V_i - E < V_\gamma \implies V_i < E + V_\gamma$$
+	Dunque il modello è corretto.\\\\
+	In questo caso abbiamo (Diodo ON):
+	$$\begin{cases} V_D = V_\gamma \longrightarrow V_u = V_\gamma + E \\ 
+		I > 0 \longrightarrow V_i - V_u > 0 \longrightarrow V_i > V_u \end{cases} \implies V_i > E + V_\gamma$$
+	Dunque il modello funziona.\\\\
+	Vediamo il grafico in figura \ref{fig:im-28}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{28.png}
+			\caption{Caratteristica $V \rightarrow I$ di un limitatore positivo}
+			\label{fig:im-28}
+		\end{figure}
+	\end{center}
+	Questo circuito può servire a limitare i picchi di tensione positiva.\\\\
+	Si noti che variando il valore di $E$ è possibile aumentare o diminuire arbitrariamente il valore della limitazione.
+	\subsubsection{Circuito Limitatore Negativo}
+	Prendiamo ora in considerazione il circuito in figura \ref{fig:im-29} (Utilizziamo lo stesso metodo del precedente).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{29.png}
+			\caption{Circuito limitatore negativo}
+			\label{fig:im-29}
+		\end{figure}
+	\end{center}
+	Allora per l’equazione di maglia di Kirchhoff è:
+	$$V_i + RI = V_u$$
+	$$V_u = -E - V_D$$
+	In questo caso abbiamo (Diodo OFF):
+	$$\begin{cases} I = 0 \longrightarrow V_u = V_i \\ 
+		V_D < V_\gamma \\ 
+		V_D = -E - V_i \end{cases} \implies -E - V_u < V_\gamma \implies V_u > -E - V_\gamma$$
+	In questo caso abbiamo (Diodo ON):
+	$$\begin{cases} V_D = V_\gamma \longrightarrow V_u = -(E + V_\gamma) \\ 
+		I > 0 \longrightarrow I = \frac{-V_i + V_u}{R} \longrightarrow V_i < V_u \end{cases} \quad \implies V_i < -(E + V_\gamma)$$
+	Dunque il modello funziona.
+	Vediamo il grafico in figura \ref{fig:im-30}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{30.png}
+			\caption{Caratteristica $V \rightarrow I$ di un limitatore negativo}
+			\label{fig:im-30}
+		\end{figure}
+	\end{center}
+	\subsection{Limitatore Doppio}
+	FIno ad ora abbiamo incominciato l’analisi di circuiti con componenti non linerari. \\
+	Per effettuare questa analisi abbiamo visto due modelli: uno, molto accurato ma spesso difficilmente risolvibile, che utilizza un’equazione esponenziale ed uno, più semplice da risolvere ma meno preciso, che fa uso di due equazioni lineari. \\
+	Il secondo modello è chiamato modello regionale ed è riassumibile come:
+	$$\begin{cases} I = 0 \quad V_D < V_\gamma \\ 
+		I > 0 \quad V_D = V_\gamma \end{cases}$$
+	La semplicità viene però pagata con un aumento esponenziale delle equazioni da risolvere: con $n$ diodi dobbiamo infatti considerare $2^n$ regioni (non tutte necessariamente fisicamente possibili).\\\\
+	Analizziamo ora il circuito in figra \ref{fig:im-31}\\\\
+	Notiamo subito che questo circuito prevede quattro regioni di funzionamento. \\
+	Prima di procedere però, dalla configurazione del circuito, ricaviamo:
+	$$V_i - V_u = RI$$
+	$$I = I_1 - I_2$$
+	$$V_u = V_{D1} + E_2 \Longrightarrow V_{D1} = V_u - E_1$$
+	$$V_u = -V_{D2} - E_2 \Longrightarrow V_{D2} = -V_u - E_2$$
+	Per ipotesi, imponiamo che $E_1$ ed $E_2$ siano positivi.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{31.png}
+			\caption{Circuito per la realizzazione di un limitatore doppio}
+			\label{fig:im-31}
+		\end{figure}
+	\end{center}
+	\subsubsection{D1 OFF e D2 OFF}
+	Formuliamo ora l’ipotesi che sia D1 sia D2 siano spenti:
+	$$\begin{cases} I_1 = 0 \\ 
+		I_2 = 0 \end{cases} \implies I = 0 \implies \boxed{V_u = V_i}$$
+	$$\begin{cases} V_{D1} < V_\gamma \\ 
+		V_{D2} < V_\gamma \end{cases} \implies 
+		\begin{cases} V_u - E_1 < V_\gamma \\ 
+			-V_u - E_2 < V_\gamma \end{cases} \implies 
+			\begin{cases} V_i < E_1 + V_\gamma \\ 
+				V_i > -V_\gamma - E_2 \end{cases}$$
+	\subsubsection{D1 ON e D2 OFF}
+	Consideriamo ora l’ipotesi in cui sia acceso solo D1. \\
+	Abbiamo:
+	$$\begin{cases} I_1 > 0 \\ 
+		I_2 = 0 \end{cases} \implies \underbrace{I > 0}_{I = I_1 - \underbrace{I_2}_{=0} > 0} \implies \frac{V_i - V_u}{R} > 0 \implies V_i > V_u \implies V_i > E_1 + V_\gamma$$
+	che è complementare a quanto ottenuto in precedenza. \\
+	Controllaimo ora che venga rispettata l’ipotesi che D2 sia spento:
+	$$V_{D2} < V_\gamma \implies -(E_2 + V_u) < V_\gamma \implies -(E_2 + E_1 + V_\gamma) < V_\gamma$$
+	che risulta essere sempre verificata. \\
+	Quindi se il diodo D1 è acceso, allora il diodo D2 non può essere acceso. \\
+	Allora possiamo evitare di considerare il caso in cui D1 e D2 siano entrambi accesi.
+	\subsubsection{D1 ON e D2 ON}
+	Supponiamo comunque, per verifica, che entrambi i diodi siano accesi.\\
+	In questo caso è:
+	$$\begin{cases} V_{D1} = V_\gamma \implies V_u - E_1 = V_\gamma \implies V_u = E_1 + V_\gamma > 0 \\ 
+		V_{D2} = V_\gamma \implies -V_u - E_2 = V_\gamma \implies V_u = -(E_2 + V_\gamma) < 0 \end{cases}$$
+	che è \textbf{assurdo} poiché la tensione di uscita non può essere contemporaneamente positiva e negativa.
+	\subsubsection{D1 OFF e D2 ON}
+	Per finire esaminiamo il caso duale a quello visto nel caso D1 ON e D2 OFF se solo il diodo D2 è acceso risulta essere:
+	$$\begin{cases} I_1 = 0 \\ 
+		I_2 > 0 \end{cases} \implies I < 0 \implies \frac{V_i - V_u}{R} < 0 \implies V_i < V_u \implies V_i < -(E_2 + V_\gamma)$$
+	$$V_{D2} = V_\gamma \implies -V_u - E_2 = V_\gamma \implies V_u = -(E_2 + V_\gamma)$$
+	\subsubsection{Grafico e Considerazioni}
+	La caratteristica è riportata in figura \ref{fig:im-32} e risulta essere la caratteristica di un limitatore doppio.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{32.png}
+			\caption{Caratteristica di un limitatore doppio}
+			\label{fig:im-32}
+		\end{figure}
+	\end{center}
+	Si tratta cioè di un circuito nel quale si hanno tre comportamenti:
+	\begin{enumerate}
+		\item La tensione di uscita è pari alla tensione di ingresso se questa è compresa nell’intervallo $-(E_2 + V_\gamma) ; (E_1 + V_\gamma)$
+		\item La tensione di uscita è limitata al valore $(E_1 + V_\gamma)$ se la tensione di ingresso eccede tale valore
+		\item La tensione di uscita è limitata al valore $-(E_2 + V_\gamma)$ se la tensione di ingresso eccede tale valore
+	\end{enumerate}
+	Questo tipo di circuito risulta molto utile quando è necessario proteggere componenti sensibili da scariche elettriche ad alta intensità.
+	\subsection{Rivelatore di Massimo}
 \end{document}
