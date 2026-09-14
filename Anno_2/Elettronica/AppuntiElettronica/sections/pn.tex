@@ -290,7 +290,6 @@
 	Di conseguenza la corrente sarà negativa.
 	\begin{table}[h]
 		\centering
-		\label{tab:table-2}
 		\begin{tabular}{|c|c|c|}
 			\hline
 			\textbf{Tensione} & \textbf{Effetti} & \textbf{Corrente} \\ \hline
@@ -298,7 +297,8 @@
 			$V = 0$ & Trascinamento = Diffusione & $I = 0$ \\ \hline
 			$V < 0$ & Trascinamento $>$ Diffusione & $I < 0$ \\ \hline
 		\end{tabular}
-		\caption{Effetto vincente rispetto a differenti valori di tensione.}
+		\caption{Effetto vincente rispetto a differenti valori di tensione}
+		\label{tab:table-2}
 	\end{table}
 	La differenza fondamentale è dovuta alla differenza della popolazione su cui agisce l’effetto:
 	\begin{itemize}
@@ -660,4 +660,144 @@
 	\end{enumerate}
 	Questo tipo di circuito risulta molto utile quando è necessario proteggere componenti sensibili da scariche elettriche ad alta intensità.
 	\subsection{Rivelatore di Massimo}
+	Esaminiamo ora il circuito di Figura \ref{fig:im-33}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{33.png}
+			\caption{Circuito per la realizzazione di un rivelatore di massimo}
+			\label{fig:im-33}
+		\end{figure}
+	\end{center}
+	Grafico in 3 variabili ({\color{red}*DA RIVEDERE!!})\\\\
+	Ancora una volta avremo quattro regioni di funzionamento. \\
+	Dal circuito possiamo però ricavare preliminarmente:
+	$$V_u = RI$$
+	$$I = I_1 + I_2$$
+	$$V_{D1} = V_1 - V_u$$
+	$$V_{D2} = V_2 - V_u$$
+	\subsubsection{D1 OFF D2 OFF}
+	Abbiamo:
+	$$\begin{cases} I_1 = 0 \\ I_2 = 0 \end{cases} \implies I = 0 \implies V_u = 0$$
+	che risulta essere verificata per:
+	$$\begin{cases} V_{D1} < V_\gamma \\ V_{D2} < V_\gamma \end{cases} \implies \begin{cases} V_1 - V_u < V_\gamma \\ V_2 - V_u < V_\gamma \end{cases} \implies \begin{cases} V_1 < V_\gamma \\ V_2 < V_\gamma \end{cases}$$
+	\subsubsection{D1 ON D2 OFF}
+	\label{subsub:ril-max-on-off}
+	In questo caso risulta essere:
+	$$V_{D1} = V_\gamma \implies V_{D1} - V_u = V_\gamma \implies V_u = V_1 - V_\gamma$$
+	Le condizioni per cui ciò è verificato sono le seguenti:
+	$$\begin{cases} I_1 > 0 \\ I_2 = 0 \end{cases} \implies I > 0 \implies V_u > 0 \implies V_1 > 0$$
+	Ed allora ricaviamo:
+	$$V_1 > V_\gamma$$
+	Ma dobbiamo anche considerare che D2 deve essere spento:
+	$$V_{D2} < V_\gamma \implies V_2 - V_u < V_\gamma \implies V_2 < V_u + V_\gamma \implies V_2 < V_1$$
+	Allora D2 risulta essere spento se $V_2 < V_1$.
+	\subsubsection{D1 ON D2 ON}
+	In questa situazione abbiamo:
+	$$\begin{cases} V_{D1} = V_\gamma \\ V_{D2} = V_\gamma \end{cases} \implies \begin{cases} V_u = V_1 - V_\gamma \\ V_u = V_2 - V_\gamma \end{cases}$$
+	Allora le due espressioni per la tensione di uscita devono portare allo stesso risultato. \\
+	Dunque sarà (SSE):
+	$$V_1 = V_2$$
+	$$\begin{cases} I_1 > 0 \\ I_2 > 0 \end{cases} \implies I > 0 \implies V_u > 0 \implies \begin{cases} V_1 > V_\gamma \\ V_2 > V_\gamma \end{cases}$$
+	$$V_u = MAX \left\{ 0; V_1 - V_\gamma; V_2 - V_\gamma \right\}$$
+	\subsubsection{D1 OFF D2 ON}
+	La situazione è simmettrica rispetto a quanto visto nella sotto-sezione \ref{subsub:ril-max-on-off}. \\
+	In questo caso risulta essere:
+	$$V_u = V_2 - V_\gamma \implies V_2 > V_\gamma$$
+	quando si ha:
+	$$V_1 < V_2$$
+	\subsubsection{Considerazioni}
+	Questo circuito permette di riportare in uscita, a meno di una costante, il segnale di ingresso maggiore tra i due possibili.\\
+	Possiamo quindi scrivere che:
+	$$V_u = \max \left\{ 0; (V_1 - V_\gamma); (V_2 - V_\gamma) \right\}$$
+	Questo circuito è detto \textbf{rivelatore di massimo}.
+	\subsubsection{Utilizzo del rivelatore di massimo}
+	Il rivelatore di massimo è molto utile quando dobbiamo discriminare i valori di un segnale binario digitale. \\
+	Ipotizziamo di assegnare il valore $V_L \approx 0$ al simbolo 0 e $V_H \approx 5$ al simbolo 1.\\\\
+	La Tabella \ref{tab:table-3} ne riassume il comportamento.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			$V_1$ & $V_2$ & $D_1$ & $D_2$ & $V_u$ & $x_1$ & $x_2$ & $y$ \\ \hline
+			\multicolumn{8}{|c|}{$\quad$} \\ [-0.8em] \hline
+			$V_L$ & $V_L$ & OFF & OFF & $V_L$ & 0 & 0 & 0 \\ \hline
+			$V_L$ & $V_H$ & OFF & ON  & $V_H$ & 0 & 1 & 1 \\ \hline
+			$V_H$ & $V_L$ & ON  & OFF & $V_H$ & 1 & 0 & 1 \\ \hline
+			$V_H$ & $V_H$ & ON  & ON  & $V_H$ & 1 & 1 & 1 \\ \hline
+		\end{tabular}
+		\caption{Comportamento digitale di un rivelatore di massimo e sua versione in logica booleana}
+		\label{tab:table-3}
+	\end{table}
+	\\Dalla tabella notiamo che il rivelatore di massimo realizza una \textbf{porta OR a due ingressi}. \\
+	Aumentando arbitrariamente il numero di diodi possiamo aumentare arbitrariamente il numero di ingressi.\\\\
+	Questa tecnologia è estremamente semplice ed economica ma non garantisce prestazioni elevate.
+	\subsection{Rilevatore di Minimo}
+	Analizziamo adesso il circuito di Figura \ref{fig:im-34}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{34.png}
+			\caption{Circuito per la realizzazione di un rivelatore di minimo}
+			\label{fig:im-34}
+		\end{figure}
+	\end{center}
+	Nuovamente dall’analisi circuitale ricaviamo:
+	$$V_u = E - RI$$
+	$$I = I_1 + I_2$$
+	$$V_{D1} = V_u - V_1$$
+	$$V_{D2} = V_u - V_2$$
+	\subsubsection{D1 OFF D2 OFF}
+	Abbiamo:
+	$$\begin{cases} I_1 = 0 \\ I_2 = 0 \end{cases} \implies I = 0 \implies V_u = E$$
+	che risulta essere verificata per:
+	$$\begin{cases}V_{D1}<V_\gamma\\V_{D2}<V_\gamma&\end{cases}\Longrightarrow\begin{cases}V_1-V_u<V_\gamma\\V_2-V_u<V_\gamma&\end{cases}\Longrightarrow\begin{cases}V_1>E-V_\gamma\\V_2>E-V_\gamma&\end{cases}$$
+	\subsubsection{D1 ON D2 OFF}
+	\label{subsub:ril-min-on-off}
+	In questo caso risulta essere:
+	$$V_{D1} = V_{\gamma} \implies V_u - V_1 = V_{\gamma} \implies V_u = V_1 + V_{\gamma}$$
+	Le condizioni per cui ciò è verificato sono le seguenti:
+	$$\begin{cases}I_1>0\\I_2=0&\end{cases}\implies I>0\implies\frac{E-V_u}{R}>0\implies E>V_u\implies V_1<E-V_\gamma$$
+	Ma dobbiamo anche considerare che D2 deve essere spento:
+	$$V_{D2} < V_{\gamma} \implies V_u - V_2 < V_{\gamma} \implies V_2 > V_u - V_{\gamma} \implies V_2 > V_1$$
+	Allora D2 risulta essere spento se $V_2 > V_1$.
+	\subsubsection{D1 ON D2 ON}
+	In questa situazione abbiamo:
+	$$\begin{cases}V_{D1}=V_\gamma\\V_{D2}=V_\gamma\end{cases}\Longrightarrow\begin{cases}V_u=V_1+V_\gamma\\V_u=V_2+V_\gamma&\end{cases}$$
+	Allora le due espressioni per la tensione di uscita devono portare allo stesso risultato. 
+	Dunque sarà:
+	$$V_1 = V_2$$
+	$$\begin{cases}I_1>0\\I_2>0&\end{cases}\implies I>0\implies V_u>0\implies\begin{cases}V_1<E-V_\gamma\\V_2<E-V_\gamma&\end{cases}$$
+	\subsubsection{D1 OFF D2 ON}
+	La situazione è simmettrica rispetto a quanto visto nella sottosezione \ref{subsub:ril-min-on-off}.\\
+	In questo caso risulta essere:
+	$$V_u = V_2 + V_{\gamma} \implies V_2 < E - V_{\gamma}$$
+	quando si ha:
+	$$V_1 > V_2$$
+	\subsubsection{Considerazioni}
+	Questo circuito (detto rivelatore di minimo) ha la funzione di riportare in uscita il valore più piccolo tra quelli fornitigli in ingresso a meno di una costante $V_{\gamma}$.
+	$$V_u = \min \left\{ E; (V_1 + V_{\gamma}); (V_2 + V_{\gamma}) \right\}$$
+	\subsubsection{Utilizzo del rilevatore di minimo}
+	Interpretiamo il rivelatore di minimo in senso digitale. \\
+	Di nuovo ipotizziamo di assegnare il valore $V_L \approx 0$ al simbolo 0 e $V_H \approx 5$ al simbolo 1.\\\\
+	La Tabella \ref{tab:table-4} ne riassume il comportamento.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			$V_1$ & $V_2$ & $D_1$ & $D_2$ & $V_u$ & $x_1$ & $x_2$ & $y$ \\
+			\hline
+			\multicolumn{8}{|c|}{$\quad$}\\[-0.8em] \hline% Small empty gap row
+			$V_L$ & $V_L$ & ON  & ON  & $V_L$ & 0 & 0 & 0 \\ \hline
+			$V_L$ & $V_H$ & ON  & OFF & $V_L$ & 0 & 1 & 0 \\ \hline
+			$V_H$ & $V_L$ & OFF & ON  & $V_L$ & 1 & 0 & 0 \\ \hline
+			$V_H$ & $V_H$ & OFF & OFF & $V_H$ & 1 & 1 & 1 \\ 
+			\hline
+		\end{tabular}
+		\caption{Comportamento digitale di un rivelatore di massimo e sua versione in logica booleana}
+		\label{tab:table-4}
+	\end{table}
+	\\Dalla tabella notiamo che il rivelatore di massimo realizza una \textbf{porta AND a due ingressi}.\\
+	Aumentando arbitrariamente il numero di diodi possiamo aumentare arbitrariamente il numero di ingressi.\\\\
+	Analogamente alla porta OR realizzata con i diodi anche questa porta AND è estremamente semplice ed economica ma non garantisce prestazioni elevate.
 \end{document}
