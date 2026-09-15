@@ -800,4 +800,306 @@
 	\\Dalla tabella notiamo che il rivelatore di massimo realizza una \textbf{porta AND a due ingressi}.\\
 	Aumentando arbitrariamente il numero di diodi possiamo aumentare arbitrariamente il numero di ingressi.\\\\
 	Analogamente alla porta OR realizzata con i diodi anche questa porta AND è estremamente semplice ed economica ma non garantisce prestazioni elevate.
+	\subsection{Raddrizzatore a doppia semionda}
+	Analizziamo il circuito in figura \ref{fig:im-35}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{35.png}
+			\caption{Raddrizzatore a doppia semionda}
+			\label{fig:im-35}
+		\end{figure}
+	\end{center}
+	A prima vista, trattandosi di un circuito con quattro diodi, \textbf{dovremo analizzare sedici regioni di funzionamento differenti}. \\
+	La Tabella 9.1 mostra le sedici possibili regioni. \\
+	Sono indicate con una “X” le regioni fisicamente non ammesse.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c}
+			\cline{3-7}
+			\multicolumn{2}{c|}{} & OFF & OFF & ON & ON & \multicolumn{1}{c|}{\textbf{D3}} \\ \cline{3-7}
+			\multicolumn{2}{c|}{} & OFF & ON & OFF & ON & \multicolumn{1}{c|}{\textbf{D4}} \\ \hline
+			OFF & OFF & \ref{subsub:raddr-sopp-sem-off-off-off-off} & X & X & X & \multicolumn{1}{c}{} \\ \cline{1-6}
+			OFF & ON  & X & X & \ref{subsub:raddr-sopp-sem-off-on-on-off} & X & \multicolumn{1}{c}{} \\ \cline{1-6}
+			ON  & OFF & X & \ref{subsub:raddr-sopp-sem-on-off-off-on} & X & X & \multicolumn{1}{c}{} \\ \cline{1-6}
+			ON  & ON  & X & X & X & X & \multicolumn{1}{c}{} \\ \cline{1-6}
+			\textbf{D1} & \textbf{D2} & \multicolumn{5}{c}{} \\ \cline{1-2}
+		\end{tabular}
+		\caption{Tabella delle regioni di funzionamento del raddrizzatore a doppia semionda. \\ Le “X” indicano le zone fisicamente non possibili}
+		\label{tab:table-5}
+	\end{table}
+	Analizzando preliminarmente il circuito possiamo ricavare che sia (Kirchoff alla maglia e al nodo):
+	$$I = I_1 + I_3 = I_4 + I_2$$
+	$$V_u = RI$$
+	$$V_{D1} + V_{D2} + V_u = 0$$
+	$$V_{D3} + V_{D4} + V_u = 0$$
+	$$V_i - V_{D1} - V_u -V_{D3} = 0$$
+	$$V_i + V_{D2} + V_u +V_{D4} = 0$$
+	\subsubsection{D1 ON}
+	Ipotizzando che il diodo $D1$ è acceso, otteniamo dalle equazioni di maglia che è:
+	$$\begin{cases} I_1 > 0 \\ I_3 > 0 \\ I_4 \geq 0\end{cases} \implies I > 0 \implies V_u > 0$$
+	$$V_{D1} - V_\gamma > 0$$
+	$$V_{D2} = -(V_u + V_{D1})$$
+	e di conseguenza avremo:
+	$$V_{D2} < 0 < V_\gamma$$
+	Ma allora quando il diodo $D1$ è acceso il diodo $D2$ sarà necessariamente spento.\\\\
+	Sempre dalle equazioni di maglia notiamo quando $D1$ è acceso, sarà anche acceso il diodo $D4$. \\
+	Infatti sarà:
+	$$I_4 = I - I_2 \implies V_{D4} - V_\gamma > 0$$
+	$$V_{D3} = -(V_u + V_{D4}) < 0$$
+	Ed allora anche quando il diodo $D4$ risulta acceso il diodo $D3$ non può essere acceso.
+	\subsubsection{D2 ON}
+	Se il diodo $D2$ è acceso avremo:
+	$$\begin{cases} I_2 > 0 \\ I_4 \geq 0 \end{cases} \implies I > 0 \implies V_u > 0$$
+	$$V_{D2} = V_\gamma > 0$$
+	$$V_{D1} = -(V_u + V_{D2}) < 0$$
+	Ma allora se il diodo $D2$ è acceso, il diodo $D1$ deve essere spento e quindi:
+	$$I_1 = 0$$
+	Pertanto, siccome è:
+	$$I = I_3 + I_1$$
+	avremo che la corrente è fornita dal diodo $D3$ che dovrà dunque essere acceso.\\\\
+	Ancora, sempre dalle equazioni di maglia, notiamo che il diodo non sono ragionevoli neppure le condizioni di accensione di un solo diodo.\\\\
+	Ma allora \textbf{le regioni da analizzare si sono ridotte da sedici a tre}.
+	\subsubsection{D1, D2, D3 e D4 OFF}
+	\label{subsub:raddr-sopp-sem-off-off-off-off}
+	In questa ipotesi la corrente è evidentemente nulla.
+	$$I_1 = I_2 = I_3 = I_4 = 0 \implies I = 0$$
+	Allora per la legge di Ohm, la tensione di uscita è nulla.
+	$$V_u = 0$$
+	Questa condizione è accettabile quando si ha:
+	$$\begin{cases} V_{D1} < V_\gamma \\ V_{D2} < V_\gamma \\ V_{D3} < V_\gamma \\ V_{D4} < V_\gamma \end{cases}$$
+	Usando le equazioni di maglia per i diodi $D1$ e $D4$ abbiamo:
+	$$V_i - V_{D1} - V_u - V_{D4} = 0 \implies V_{D1} + V_{D4} = V_i$$
+	da cui segue che deve essere:
+	$$V_i < 2V_\gamma$$
+	Procedendo nello stesso modo per $D2$ e $D3$, avremo:
+	$$V_i + V_{D2} + V_{D3} + V_u = 0 \implies V_{D2} + V_{D3} = -V_i$$
+	e quindi:
+	$$V_i > -2V_\gamma$$
+	Allora l’ambito di validità di questa regione è:
+	$$-2V_\gamma < V_i < 2V_\gamma$$
+	\subsubsection{D1 ON, D2 OFF, D3 OFF e D4 ON}
+	\label{subsub:raddr-sopp-sem-on-off-off-on}
+	Le ipotesi significano che la corrente è:
+	$$I_1 = I_4 = I > 0$$
+	Ma è anche:
+	$$V_{D1} = V_{D4} = V_\gamma$$
+	Sfruttiamo l’equazione di Kirchhoff vista nel sottosezione \ref{subsub:raddr-sopp-sem-off-off-off-off}:
+	$$V_i - V_{D1} - V_u - V_{D4} \implies V_u = V_i - 2V_\gamma$$
+	Questa condizione è verificata quando si ha:
+	$$V_u > 0$$
+	che, in relazione alla tensione di ingresso, è:
+	$$V_i > 2V_\gamma$$
+	\subsubsection{D1 OFF, D2 ON, D3 ON e D4 OFF}
+	\label{subsub:raddr-sopp-sem-off-on-on-off}
+	È la condizione duale a quelle della sottosezione \ref{subsub:raddr-sopp-sem-on-off-off-on} abbiamo:
+	$$I_3 = I_2 = I > 0$$
+	$$\begin{cases} V_{D2} = V_\gamma \\ V_{D3} = V_\gamma \end{cases}$$
+	Sfruttiamo nuovamente l’equazione di maglia di Kirchhoff vista nella sottosezione \ref{subsub:raddr-sopp-sem-off-off-off-off}
+	$$V_i + V_{D2} + V_{D3} + V_u \Longrightarrow V_u = -(V_i + V_{D2} + V_{D3}) \Longrightarrow V_u = -V_i - 2V_\gamma$$
+	Queste ipotesi sono valide quando si ha:
+	$$V_i < -2V_\gamma$$
+	\subsubsection{Grafico e considerazioni}
+	Il grafico della caratteristica è riportato in Figura \ref{fig:image5}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{36.png} 
+			\caption{Caratteristica del raddrizzatore a doppia semionda}
+			\label{fig:im-36}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{37.png}
+			\caption{}
+			\label{fig:im-37}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image5}
+	\end{figure}
+	Questo circuito si comporta come un raddrizzatore a semionda per i valori positivi di $V_i$ che eccedono la soglia $2V_\gamma$. \\
+	I valori di ingresso negativi che eccedono il valore $-2V_\gamma$ vengono riportati in positivo (vengono cioè “raddrizzati”).\\\\
+	Per via di questo comportamento il circuito prende il nome di raddrizzatore a doppia semionda.\\\\
+	Il raddrizzatore a doppia semionda è molto più efficiente di un raddrizzatore a semionda poiché, pur consentendo di ottenere un segnale a valor medio non nullo da un segnale a valor medio nullo, non elimina metà del segnale e, raddrizzandolo, porta ad un valor medio più elevato a parità di ingresso.\\\\
+	La configurazione esaminata è detta ponte raddrizzatore di diodi ed è spesso disegnata come in Figura \ref{fig:im-38}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{38.png}
+			\caption{Rappresentazione grafica classica del raddrizzatore a doppia semionda}
+			\label{fig:im-38}
+		\end{figure}
+	\end{center}
+	\subsection{Convertitore alternata continua}
+	\label{sub:ac-dc}
+	I circuito raddrizzatori visti fino a questo momento, pur raddrizzando il segnale e portando un valor medio non nullo all’uscita, riportano comunque segnali periodici non costanti. \\
+	Molti dispositivi domestici funzionano però a corrente continua. \\
+	Dobbiamo trovare dunque un modo per estrarre la componente continua del segnale.\\\\
+	Questo risultato si può ottenere facilmente aggiungendo un filtro passa basso che blocchi le componenti ad alta frequenza del segnale. \\
+	Il più semplice filtro passa basso possibile è un condensatore che si comporta come un circuito aperto per frequenze nulle e come un corto circuito per frequenze elevate.\\\\
+	Analizziamo ora cosa succede aggiungendo un filtro passa basso al raddrizzatore a singola semionda (per semplicità). \\
+	Lo schema è riportato in Figura \ref{fig:im-39}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{39.png}
+			\caption{L’aggiunta del condensatore di capacità $C$ consente di ridurre la variabilità del segnale di uscita}
+			\label{fig:im-39}
+		\end{figure}
+	\end{center}
+	L’aggiunta del condensatore di capacità $C$ modifica la caratteristica. \\
+	Per le relazioni costitutive di resistenza e condensatore e per la legge di Kirchhoff abbiamo ora:
+	$$I_R = \frac{V_u}{R}$$
+	$$I_C = C \cdot \frac{dV_u}{dt}$$
+	$$I = I_R + I_C \implies I = \frac{V_u}{R} + C \cdot \frac{dV_u}{dt}$$
+	$$V_i - V_D - V_u = 0$$
+	Ipotizziamo di avere in ingresso:
+	$$V_i = V_m \sin(\omega t)$$
+	con $V_m \gg V_\gamma$ (che è tipicamente verificata).
+	\subsubsection{Diodo acceso}
+	In questo caso è:
+	$$V_D = V_\gamma \implies V_u = V_m \sin(\omega t)$$
+	$$I > 0 \implies \frac{V_u}{R} + C \cdot \frac{dV_u}{dt} > 0$$
+	Ma, per come è definito l’ingresso, il diodo sarà certamente attivo nell’intervallo $\left[0; \frac{T}{4}\right]$ dove $T$ è il periodo. \\
+	Nell’intervallo $\left[\frac{T}{2}; \frac{3T}{4}\right]$ il diodo sarà invece necessariamente spento. \\
+	Tuttavia nell’intervallo $\left(\frac{T}{4}; \frac{T}{2}\right)$ in cui si avrà $I = 0$ e cioè un punto, $t_{\text{OFF}}$ nel quale il diodo si spegne.
+	\subsubsection{Spegnimento del diodo}
+	Per calcolare $t_{\text{OFF}}$ imponiamo che sia:
+	$$\frac{V_u}{R} + C \cdot \frac{dV_u}{dt} = 0$$
+	$$-\frac{V_u}{R} = C \cdot \frac{dV_u}{dt}$$
+	$$-\frac{V_m \sin(\omega t)}{R} = C \cdot \frac{d}{dt} [V_m \sin(\omega t)]$$
+	$$-\frac{V_m}{R} \cdot \sin(\omega t) = V_m C \omega \cdot \cos(\omega t)$$
+	$$\frac{\sin(\omega t)}{\cos(\omega t)} = -\omega RC$$
+	$$\tan(\omega t_{\text{OFF}}) = -\omega RC \implies \omega t_{\text{OFF}} = -\arctan(\omega RC) \pm k\pi$$
+	Allora abbiamo ricavato l’istante in cui il diodo si spegne. \\
+	Ricordando che la tangente tende a $\pm\infty$ per $\alpha \rightarrow \pm\frac{\pi}{2}$ ed è periodica su un intervallo di durata $T = \pi$ è chiaro che il punto di spegnimento del diodo si troverà nell’angolo compreso tra $\frac{\pi}{2}$ e $\pi$.\\\\
+	Riportato sul grafico di Figura \ref{fig:im-40} vediamo che il punto di spegnimento è tanto più vicino al tempo $\frac{T}{4}$ quanto più è elevato il valore di $RC$.
+	Da $t_{\text{OFF}}$ in avanti il diodo risulta spento e la corrente sul diodo è nulla.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{40.png}
+			\caption{Quando il diodo si spegne il condensatore inizia la sua fase di scarica}
+			\label{fig:im-40}
+		\end{figure}
+	\end{center}
+	$\omega_{t_{OFF}}$ è detto \textbf{Angolo di } {\color{red}* DA SISTEMARE!!!}
+	\subsubsection{Diodo spento}
+	Quando il diodo è spento abbiamo:
+	$$I = 0$$
+	$$\frac{V_u}{R} + C \cdot \frac{dV_u}{dt} = 0$$
+	Ora però l’ingresso è nullo ed il circuito è semplificato come in Figura \ref{fig:im-41}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{41.png}
+			\caption{Quando il diodo si spegne il circuito si semplifica ad un parallelo tra il condensatore e la resistenza}
+			\label{fig:im-41}
+		\end{figure}
+	\end{center}
+	Risolvendo l’equazione differenziale abbiamo:
+	$$\frac{1}{RC} \int_{t_{\text{OFF}}}^t dt = \int_{V_u(t_{\text{OFF}})}^{V_u(t)} \frac{1}{V_u} dV_u$$
+	$$\frac{t - t_{\text{OFF}}}{RC} = \ln \frac{V_u(t)}{V_u(t_{\text{OFF}})}$$
+	$$V_u(t) = V_u(t_{\text{OFF}}) e^{\frac{t - t_{\text{OFF}}}{RC}}$$
+	Allora l’uscita decresce con una curva esponenziale tanto più velocemente quanto più è piccolo il valore di $RC$.\\\\
+	Questa condizione è verificata per tutti i valori per cui si ha:
+	$$V_u > V_i$$
+	Allora quando incontriamo nuovamente la sinusoide di ingresso torniamo ad utilizzare la relazione usata per il diodo acceso e quindi torniamo ad avere:
+	$$V_u = V_i$$
+	\subsection{Problemi del diodo}
+	Dalle simulazioni notiamo che, dimensionando opportunamente le costanti, possiamo utilizzare il convertitore esaminato nella sezione \ref{sub:ac-dc} per estrarre una funzione di uscita che si appoggi sul massimo del segnale di ingresso. \\
+	Questa applicazione è molto utile quando si tratta di demodulare un segnale modulato in ampiezza.\\\\
+	Fino a questo momento abbiamo applicato segnali tempo varianti all’ingresso di un circuito costituito da uno o più diodi. \\
+	Aumentando la frequenza (senza aumentare le costanti $R$ e $C$) ci accorgiamo però di una anomalia non prevista dal modello.\\\\
+	Il grafico di Figura \ref{fig:im-42} mostra come il diodo modifichi la sua caratteristica $V_i \to V_u$ all’aumentare della frequenza (il diodo fatica sempre più a spegnersi). \\
+	Per una frequenza troppo elevata si arriva al limite per il quale il diodo non si spegne mai e continua a seguire sempre la curva di ingresso.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{42.png}
+			\caption{Per frequenze elevate il diodo a giunzione $pn$ fatica sempre più a spegnersi \\ Per frequenze sufficientemente alte, il diodo resta sempre acceso}
+			\label{fig:im-42}
+		\end{figure}
+	\end{center}
+	Il modello visto fino ad ora ha funzionamento per due motivi:
+	\begin{enumerate}
+		\item Abbiamo usato il modello statico del diodo alla contare la variabile ( $t$ )
+		\item Abbiamo sempre usato frequenze basse
+	\end{enumerate}
+	Tuttavia il diodo ha bisogno di un tempo non nullo per potersi spegnere. \\
+	Allora per un periodo $T \to 0$, il diodo non avrà il tempo fisico di spegnersi.\\\\
+	Nel grafico di Figura \ref{fig:im-43} l’area azzurra rappresenta la concentrazione di lacune che si spostano nel passaggio da polarizzazione diretta a polarizzazione inversa.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{43.png}
+			\caption{Differenti concentrazioni di lacune per tensioni differenti: in rosso la situazione di equilibrio; in verde la condizione di polarizzazione inversa $V < 0$; in blu la condizione di polarizzazione diretta $V > 0$. \\ L’area azzurra è l’area necessaria allo spegnimento del diodo.}
+			\label{fig:im-43}
+		\end{figure}
+	\end{center}
+	Allora la carica non si può spostare in un tempo nullo (sarebbe necessaria un’energia infinita) e quindi abbiamo un tempo di reazione (effetti reattivi associati alla giunzione $p_n$) del diodo che sarà a sua volta non nullo.\\\\
+	Il modello usato fino ad ora (\textbf{modello statico}) è utilizzabile solo per piccoli scostamenti dall’equilibrio e per segnali lentamente variabili nel tempo.
+	\subsection{Modello Dinamico}
+	Iniziamo ora lo studio di un modello migliore del diodo che tenga conto della variazione nel tempo. \\
+	All’inizio dello studio del diodo a giunzione $p_n$ avevamo calcolato che la densità di carica nella regione svuotata fosse:
+	$$Q_n = -Q_p = -\underbrace{qN_A}_{\rho} w_p$$
+	dove:
+	$$w_p = \frac{1}{N_A} \sqrt{\frac{2\varepsilon\psi_{B0}}{q\left(\frac{1}{N_A} + \frac{1}{N_D}\right)}} \implies Q_p = \sqrt{\frac{2\varepsilon q\psi_{B_0}}{\left(\frac{1}{N_A} + \frac{1}{N_D}\right)}}$$
+	In ipotesi di piccolo scostamente avevamo inoltre visto che:
+	$$\psi_B = \psi_{B_0} - V$$
+	Allora possiamo ricavare la carica dinamica del diodo in funzione della tensione:
+	$$Q(V) = \sqrt{\frac{2\varepsilon q(\psi_B - V)}{\left(\frac{1}{N_A} + \frac{1}{N_D}\right)}}$$
+	che, nuovamente, è una funziune non lineare.\\\\
+	Si noti che per $V = 0$ il valore della carica $Q_0 = Q(0)$ non passa per l’origine. \\
+	La capacità del diodo è data dalla derivata della curva $Q(V)$
+	$$DQ(V) = \frac{d}{dV}Q(V)$$
+	e quindi, per comodità, useremo la curva $Q - Q_0$ in modo da ottenere $Q(0) = 0$ che non modifica la derivata.\\\\
+	In questa condizione il diodo si comporta come un condensatore di capacità variabile (\textbf{diodo varicap}) ed era molto utilizzato nei primi televisori analogici a colori.
+	Applicando una tensione $V > \psi_{B_0}$ abbiamo invece una soluzione assurda: la base della radice è negativa. \\
+	In realtà, per $V = \psi_{B_0}$ abbiamo che il campo elettrico e la barriera di potenziale sono entrambi nulli. \\
+	Ma se la barriera è nulla, la regione svuotata non esiste e di conseguenza non ha più senso parlare di piccolo scostamento.\\\\
+	Allora la pendenza della curva della carica del diodo è detta capacità di svuotamento. \\
+	In particolare la pendenza in $V = 0$ è detta capacità di giunzione all’equilibrio.\\\\
+	Siccome la regione svuotata non esiste, dobbiamo considerare, per la carica, un secondo contributo dovuto alla carica dei portatori mobili. \\
+	Si può dimostrare che il secondo contorbuto di carica dipende esponenzialmente dalla tensione applicata (cosa prevedibile in quanto la corrente cresce esponenzialmente in polarizzazione diretta). \\
+	Questo secondo conturbuto è trascurabile per la polarizzazione inversa mentre è importante per la polarizzazione diretta.
+	$$\begin{cases} J \propto \left(e^{\frac{V}{V_T}} - 1\right) \\ J \propto \frac{dn}{dx} \end{cases} \implies \frac{dn}{dx} \propto \left(e^{\frac{V}{V_T}} - 1\right) \implies n \propto \left(e^{\frac{V}{V_T}} - 1\right)$$
+	Possiamo allora ottenere un modello un poco approssimato ma comunque sufficientemente preciso prendendo entrambe le componenti dominanti della carica nel diodo.
+	$$\begin{cases} Q(V) = \sqrt{\psi_{B0} - V} & V < 0 \\ Q(V) = Q_S \left(e^{\frac{V}{V_T}} - 1\right) & V \geq 0 \end{cases}$$
+	Tale modello è raffigurato in figura \ref{fig:im-44}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{44.png}
+			\caption{Grafico del modello dinamico del diodo. In rosso la funzione $Q$ per $V < 0$; in blu la funzione $Q - Q_0$; in verde la funzione $Q$ per $V \geq 0$}
+			\label{fig:im-44}
+		\end{figure}
+	\end{center}
+	Riprendendo il modello statico possiamo sfruttare il fatto che sia:
+	$$\begin{cases} I_0 = I_D \left(e^{\frac{V}{V_T}} - 1\right) \\ Q = Q_S \left(e^{\frac{V}{V_T}} - 1\right) \end{cases} \implies \frac{Q}{I_0} = \frac{Q_S \left(e^{\frac{V}{V_T}} - 1\right)}{I_D \left(e^{\frac{V}{V_T}} - 1\right)} = \frac{Q_S}{I_D} = \tau$$
+	possiamo scrivere la carica in funzione della corrente od il contrario:
+	$$Q = \tau I_D \iff I_D = \frac{Q}{\tau}$$
+	Il valore $\tau$ è un tempo ed è il\textbf{tempo di vita medio dei portatori}. \\
+	È cioè il tempo medio intercorso tra il momento in cui un portatore $p$ diffonde in zona $n$ ed il momento in cui esso si ricombina.\\\\
+	Allora abbiamo ricavato un modello dinamico fortemente non lineare del diodo. \\
+	Nuovamente introduciamo una semplificazione simile a quella vista per la corrente.
+	$$\begin{cases}V<V_\gamma&\begin{cases}I_D=0\\Q\approx0\end{cases} \\ V=V_\gamma&\begin{cases}I_D>0\\Q>0\end{cases}\end{cases}$$
+	Questo modello approssimato per la carica è meno preciso rispetto al modello statico visto per la carica. \\
+	Il diodo dinamico è rappresentato come in Figura \ref{fig:im-45}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{45.png}
+			\caption{Simbolo del modello dinamico del diodo}
+			\label{fig:im-45}
+		\end{figure}
+	\end{center}
+	La corrente al terminale di uscita del diodo è data da:
+	$$I = I_{D} + \frac{dQ}{dt}$$
+	Allora per frequenze basse possiamo riutilizzare le relazioni studiate per il caso statico (per tali frequenze $\frac{dQ}{dt}$ è infatti trascurabile). \\
+	Questo diodo si può modellare sia con il controllo di corrente:
+	$$I = I_{D} \left( e^{\frac{V}{V_{T}}} - 1 \right)$$
+	sia con il modello a controllo di carica:
+	$$I = \frac{Q}{\tau} = \frac{Qs \left( e^{\frac{V}{V_{T}}} - 1 \right)}{\tau}$$
+	\subsection{Analisi DInamica}
 \end{document}
