@@ -1102,4 +1102,115 @@
 	sia con il modello a controllo di carica:
 	$$I = \frac{Q}{\tau} = \frac{Qs \left( e^{\frac{V}{V_{T}}} - 1 \right)}{\tau}$$
 	\subsection{Analisi DInamica}
+	Nella precedente sezione abbiamo introdotto il modello dinamico del diodo a giunzione $p_n$. \\
+	Quanto esplicitato nella scorsa sezione è di estrema importanza poiché consente di determinare i limiti fisici dei circuiti digitali di nostro interesse. \\
+	Il modello ricavato è descritto dalle equazioni:
+	$$\begin{cases}V<V_\gamma&\begin{cases}I_D=0\\Q\approx0\end{cases} \\ V=V_\gamma&\begin{cases}I_D>0\\Q>0\end{cases}\end{cases}$$
+	La carica è invece modellabile come:
+	$$Q(V) = \sqrt{\frac{2\varepsilon q(\psi_B - V)}{\left(\frac{1}{N_A} + \frac{1}{N_D}\right)}} = \underbrace{\sqrt{\frac{2\varepsilon q\psi_B}{\left(\frac{1}{N_A} + \frac{1}{N_D}\right)}}}_{\text{carica all’equilibrio}} \cdot \sqrt{1 - \frac{V}{\psi{B0}}}$$
+	Abbiamo infine completato il modello a soglia aggiungendo un condensatore in parallelo al diodo in modo da poter vedere, grazie a Kirchhoff, la corrente come somma delle due componenti statiche e dinamiche:
+	$$I = I_{Statica} + I_{Dinamica}$$
+	In questa sezione vedremo l’utilizzo del modello dinamico e l’analisi di un semplice circuito.\\\\
+	Consideriamo il circuito di Figura \ref{fig:im-46} e supponiamo che la tensione di ingresso $V_i(t)$ sia maggiore di $V_\gamma$ per $t < 0$ e minore di zero per $t \geq 0$ (figura \ref{fig:im-48}).
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{46.png} 
+			\caption{Circuito per l’analisi del comportamento dinamico del diodo}
+			\label{fig:im-46}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{47.png}
+			\caption{Modello a soglia della concentrazione di carica $Q$ e della corrente $I_D$ del diodo}
+			\label{fig:im-47}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image6}
+	\end{figure}
+	\subsubsection{Situazone per $t<0$}
+	Il circuito in questione è già stato analizzato nel caso statico. \\
+	Dallo schema circuitale, sfruttando le leggi di Ohm e Kirchhoff, abbiamo:
+	$$V_u = RI$$
+	$$V_i = V_D + V_u$$
+	$$I = I_D + I_C \implies \begin{cases} I_D = \frac{Q}{\tau} \\ I_C = \frac{dQ}{dt} \end{cases} \implies I = \frac{Q}{\tau} + \frac{dQ}{dt}$$
+	Per tempi negativi ($t < 0$) siamo in condizioni stazionarie e allora gli effetti reattivi non contano. \\
+	Dunque l’analisi è già stata effettuata e allora l’uscita è costante:
+	$$V_u = V_F - V_\gamma$$
+	e siccome è $V_u = RI$, ricaviamo:
+	$$I = \frac{V_F - V_\gamma}{R} \implies Q = \frac{\tau}{R} (V_F - V_\gamma)$$
+	Allora la novità consiste nel fatto che la carica è diversa da zero (questo non è in contrasto con quanto detto: essere in condizioni statiche significa che i valori sono costanti e non necessariamente nulli).
+	\subsubsection{Situazione per $t = 0^+$: transitorio $A \rightarrow C$}
+	Per $t = 0$ abbiamo un transitorio: la commutazione dell’ingresso non si riflette istantaneamente sull’uscita. \\
+	Aspettando un tempo sufficientemente elevato torneremo comunque ad una condizione statica nella quale avremo:
+	$$\begin{cases} I = I_D = 0 \\ V_u = RI = 0 \end{cases} \implies V_D = V_i = -V_R$$
+	Allora, nel transitorio, la corrente e la carica dovranno spostarsi da un valore positivo ad un valore negativo.\\\\
+	Analizziamo il transitorio. \\
+	Consideriamo l’istante $t = 0^+$. \\
+	Siccome la carica non può variare istantaneamente sarà:
+	$$Q(0^-) = \frac{V_F - V_\gamma}{R} \tau = Q(0^+)$$
+	da cui ricaviamo che la tensione non può variare istantaneamente e quindi:
+	$$V_D = V_\gamma$$
+	Allora risulta:
+	$$V_i = -V_R \implies V_u = V_i - V_D \implies -V_R - V_\gamma = -(V_R + V_\gamma)$$
+	che è un valore negativo. \\
+	Dunque la tensione di ustica presenta un gradino che porta da un valore positivo ad un valore negativo. \\
+	Il fatto che questo punto sia esterno alla caratteristica statica dipende dal fatto che nel ricavarla non si era tenuto conto degli effetti dinamici del diodo.\\\\
+	La corrente è data ora da:
+	$$I = \frac{Q}{\tau} + \frac{dQ}{dt}$$
+	e non è più possibile eliminare la derivata. \\
+	Allora, riprendendo quanto detto prima e ricordando che nel tratto da $A$ a $C$ di Figura \ref{fig:im-47} la tensione è $V_D = V_\gamma$, risulta:
+	$$\frac{Q}{\tau} + \frac{dQ}{dt} = \frac{-(V_R + V_\gamma)}{R} \implies \frac{dQ}{dt} = -\frac{1}{\tau} \left( Q + \frac{\tau}{R} (V_R + V_\gamma) \right)$$
+	da cui si ricava:
+	$$\frac{dQ}{Q + \frac{\tau}{R} (V_R + V_\gamma)} = -\frac{1}{\tau}$$
+	che, integrata, porta a:
+	$$\int_0^t -\frac{1}{\tau} dt = \int_{Q(0)}^{Q(t)} \frac{1}{Q + \frac{\tau}{R} (V_R + V_\gamma)} dQ$$ $$-\frac{t}{\tau} = \ln \left[ \frac{Q(t) + \frac{\tau}{R} (V_R + V_\gamma)}{Q(0) + \frac{\tau}{R} (V_R + V_\gamma)} \right] \implies e^{-\frac{t}{\tau}} = \frac{Q(t) + \frac{\tau}{R} (V_R + V_\gamma)}{Q(0) + \frac{\tau}{R} (V_R + V_\gamma)}$$
+	Semplificando quanto appena ottenuto ricaviamo:
+	$$Q(t) = \frac{\tau}{R} (V_F - V_\gamma) e^{-\frac{t}{\tau}} - \frac{\tau}{R} (V_R + V_\gamma)$$
+	Allora nel transitorio la carica decade con una legge esponenziale ed una costante di tempo $\tau$. \\
+	Analiticamente la carica tende asintoticamente al valore $-\frac{\tau}{R} (V_R + V_\gamma)$. \\
+	Tuttavia, siccome abbiamo usato il modello a soglia, l’ambito di validità è ridotto ai valori tali per cui: $Q \geq 0$.\\\\
+	Allora, la tensione di uscita resta costante e negativa fino al punto $C$ che è il punto tale per cui risulta $Q(C) = 0$. \\
+	Parimenti la corrente sarà negativa e costante fino al punto $C$.\\\\
+	Il tempo impiegato per raggiungere il valore zero dalla curva $Q(t)$ è il tempo di spegnimento del diodo.
+	$$\left\{t_{\text{OFF}} = t \mid Q(t) = 0\right\} \implies \frac{\tau}{R} (V_F - V_\gamma) e^{-\frac{t}{\tau}} - \frac{\tau}{R} (V_R + V_\gamma) = 0$$ $$e^{-\frac{t}{\tau}} = \frac{V_R + V_\gamma}{V_F + V_\gamma} \implies t_{\text{OFF}} = \tau \cdot \ln \frac{V_F + V_F}{V_R + V_\gamma}$$
+	Il tempo di spegnimento sarà sempre certamente maggiore di zero e non dipende dalla resistenza $R$ del circuito. \\
+	Poiché questo tempo dipende solo dalle cariche interne al diodo, è detto \textbf{tempo di storage}.\\\\
+	Il \textbf{tempo di spegnimento} è un valore molto importante poiché in base ad esso possiamo decidere se utilizzare o meno un dato diodo in un circuito.\\
+	Un diodo sarà utilizzabile solo se il tempo di spegnimento è molto inferiore al tempo di commutazione.
+	\subsubsection{Situazione per $t > 0$: transitorio $C \rightarrow B$}
+	In questa situazione abbiamo cambiato la zona di funzionamento e, dal modello a soglia, è:
+	$$\begin{cases} Q = 0 \\ I_D = 0 \end{cases}$$
+	Allora la carica deve passare da zero a zero e non si spostano portatori. \\
+	Dunque il transitorio è istantaneo. \\
+	Inoltre, siccome in questo caso si ha $I = I_D$, la tensione di uscita è a sua volta nulla. \\
+	Ai capi del diodo avremo ora una tensione pari a $-V_R$.
+	\subsubsection{Grafici}
+	La Figura \ref{fig:im-48} mostra i grafici di quanto ottenuto fino ad ora.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{48.png}
+			\caption{Comportamento dinamico delle principali caratteristiche del diodo}
+			\label{fig:im-48}
+		\end{figure}
+	\end{center}
+	Dalle simulazioni e dai risultati sperimentali notiamo che, all’aumentare del valore di $R$ notiamo che il modello risulta sempre meno preciso. \\
+	Questo è dovuto al fatto che abbiamo approssimato una curva esponenziale con una retta orizzontale imponendo:
+	$$Q \approx 0$$
+	Una migliore approssimazione è costituita dall’utilizzo di una retta obliqua (Figura \ref{fig:im-49}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{49.png}
+			\caption{Grafico che mostra una migliore approssimazione del comportamento dinamico del diodo. \\ Questo grafico spiega anche il differente comportamento per valori diversi di $R$.}
+			\label{fig:im-49}
+		\end{figure}
+	\end{center}
+	Sfruttando ora un condensatore normale di capacità $C$ abbiamo:
+	$$I = C \cdot \frac{dV_u}{dt}$$
+	$$V_u = RI \implies I = \frac{V_u}{R}$$
+	$$\frac{V_u}{R} = -C \cdot \frac{d}{dt} (V_R + V_u)$$
+	Ancora, dai grafici e dalle prove sperimentali, notiamo che mentre il diodo ha necessità di un certo lasso di tempo per lo spegnimento, l’accensione richiede un tempo pressoché nullo. \\
+	Allora la non linearità del diodo statico si ritrova sul diodo dinamico.
 \end{document}

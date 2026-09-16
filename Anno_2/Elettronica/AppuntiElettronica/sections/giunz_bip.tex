@@ -1,0 +1,106 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+\begin{document}
+	\subsubsection{Introduzione}
+	Premessa: Si ricordi che il \textbf{diodo è un componente non lineare}.\\\\
+	Nella scorsa sezione abbiamo analizzato il modello dinamico del diodo ed abbiamo notato che il suo comportamento varia fortemente dalla fase di spegnimento (che necessità di un tempo $t_{\text{OFF}}$ detto tempo di storage non nullo) alla fase di accensione (che richiede invece un tempo nullo).\\\\
+	Abbiamo inoltre notato che, nonostante il tempo di storage sia indipendente dalla resistenza di carico, il recupero della condizione asintotica dipende proprio dalla resistenza di carico.\\\\
+	Infine abbiamo mostrato che se il tempo di storage è paragonabile al periodo del segnale di ingresso, il diodo non riesce a spegnersi e quindi è come se il diodo stesso non fosse presente (il condensatore in parallelo al diodo lo cortocircuita). \\
+	Allora esistono un periodo minimo ed una frequenza massima oltre i quali il modello non è più utilizzabile.
+	\subsection{Diodo $npn$}
+	Fino ad ora abbiamo ragionato utilizzando il diodo a giunzione $pn$ in cui la corrente circola prevalentemente in una sola direzione. Con il diodo abbiamo costruito sia gli AND sia gli OR. Resta però da realizzare il NOT che è piuttosto complesso da realizzare con i diodi.
+	Ricordiamo che tutti i ragionamenti fatti sino ad ora per il diodo sono validi con alcune limitazioni:
+	\begin{itemize}
+		\item Lo scostamento alla regione di equilibrio deve essere ridotto
+		\item Il diodo deve essere sufficientemente grande da poter essere partizionato in due regioni neutre ai margini ed in due regioni svuotate limitrofe alla giunzione
+	\end{itemize}
+	Costruiamo ora una struttura più complessa: la giunzione $npn$ che aggangia una regione $n$ ad ogni lato della regione $p$ (Figura 12.1).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{50.png}
+			\caption{Dispositivo composto da due diodi}
+			\label{fig:im-50}
+		\end{figure}
+	\end{center}
+	I terminali sono indicati come emettitore ($E$), base ($B$) e collettore ($C$).\\\\
+	Possiamo pensare di analizzare il sistema appena costruito con quanto già sappiamo del diodo a giunzione $p_n$ poiché si tratta, in effetti, di un circuito composto da due diodi.\\\\
+	Detta $w$ la \textbf{distanza tra le due regioni} $n$, abbiamo però due comportamenti differenti per la situazione in cui il diodo $D2$ è spento:
+	\begin{enumerate}
+		\item Per $w$ superiore a qualche micron, la corrente di collettore $I_C^*$ è trascurabile (allora il circuito si riduce al solo diodo $D1$ che abbiamo già studiato in precedenza):
+		$$\begin{cases} V_{BE} > 0 \\ V_{BC} < 0 \end{cases} \implies \begin{cases} I_1 > 0 \\ I_2 = 0 \end{cases} \implies \begin{cases} I_B = I_E = I_1 \\ I_C^* = 0 \end{cases}$$
+		Ricordando per i calcoli:
+		$$V_{BE} - V_{BC} - V_{CE} = 0$$
+		$$I_B + I_C = I_E \quad \text{Kirchoff}$$
+		$\begin{cases}
+			BE = \text{ON} \\
+			BC = \text{OFF}
+		\end{cases}$
+		\item Per $w$ inferiore a qualche micron, la corrente di collettore $I_C^*$ è paragonabile alla corrente di emettitore $-I_E$ e la corrente di base $I_B$ è molto inferiore alle altre due correnti:
+		$$\begin{cases} V_{BE} > 0 \\ V_{BC} < 0 \end{cases} \implies \begin{cases} I_1 > 0 \\ I_2 = 0 \end{cases} \implies \begin{cases} I_C^* = -I_E \\ I_B \ll I_C^* \end{cases}$$
+	\end{enumerate}
+	Le Figure \ref{fig:im-51} mostrano i diversi comportamenti del dispositivo in funzione della dimensione di $w$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.55]{51.png}
+			\caption{Diversi comportamenti nella regione svuotata. \\ Una base di dimensioni sufficientemente elevate (a sinistra) consente di studiare il dispositivo come fatto in precedenza.}
+			\label{fig:im-51}
+		\end{figure}
+	\end{center}
+	Il modello precedente nel secondo caso non funziona poiché, se $w$ è troppo piccolo, la regione $p$ non è più partizionale in regioni svuotate e regioni neutre. \\
+	Quando $w$ è di dimensioni inferiori a pochi micron, le due regioni $n$ hanno un effetto complementare sulla regione svuotata: gli elettroni hanno probabilità sempre maggiori di sopravvivere al passaggio nella base.\\\\
+	In questo caso, la giunzione polarizzata in inversa trasporta molta carica grazie al supporto della giunzione polarizzata in diretta che pone nella base portatori minoritari recuperati poi dal collettore.\\\\
+	Questo effetto è detto effetto transistor ed è alla base dei componenti detti transistori. \\
+	In particolare il componente appena realizzato è detto transistore bipolare a giunzione (o BJT, bipolar junction transistor) ed è indicato con il simbolo di Figura \ref{fig:im-52}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{52.png}
+			\caption{Simboli grafici per la rappresentazione di un transistore npn (a sinistra) o pnp (a destra) in un circuito elettrico}
+			\label{fig:im-52}
+		\end{figure}
+	\end{center}
+	\subsection{Modello di Ebers \& Moll}
+	L’emettitore è così detto perché immette portatori nella base ove si trovano le lacune. \\
+	Una parte sperabilmente piccola degli elettroni immessi nella base, ricombinerà con le lacune lì presenti. \\
+	Tuttavia il collettore, recupererà una gran parte degli elettroni immessi nella base dall’emettitore.
+	I flussi di lacune ed elettroni sono mostrati in Figura \ref{fig:im-53}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{53.png}
+			\caption{Flussi di elettroni e lacune all’interno del modello di Ebers \& Moll}
+			\label{fig:im-53}
+		\end{figure}
+	\end{center}
+	Detta $I_t$ la corrente dovuta all’effetto transistor, possiamo utilizzare il modello studiato per il diodo e completarlo con l’aggiunta del termine $I_t$, definito, dalle legge di Kirchhoff, come (Che dall'equazione qui sotto notiamo avere 2 componenti):
+	$$I_t = \underbrace{I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right)}_{\text{Componente 1}} - \underbrace{I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right)}_{\text{Componente 2}}$$
+	Parimenti, possiamo definire le correnti sui due diodi, come:
+	$$I_1 = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \qquad \left(I_{BES} = I_{SE} - I_S\right)$$
+	$$I_2 = I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \qquad \left(I_{BCS} = I_{SC} + I_B\right)$$
+	Notiamo che, siccome la corrente di collettore è elevata quando si è in regione di polarizzazione diretta, assumeremo che sia $I_C = -I_C^*$.\\\\
+	I grafici dei due possibili BJT ($npn$ e $pnp$), sono riportati in Figura \ref{fig:im-52}. \\
+	Utilizzeremo prevalentemente il modello $npn$.\\\\
+	Il modello riportato in Figura \ref{fig:im-54} è chiamato Modello di Ebers \& Moll e funziona sufficientemente bene per le nostre applicazioni.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{54.png}
+			\caption{Grafico del modello di Ebers \& Moll}
+			\label{fig:im-54}
+		\end{figure}
+	\end{center}
+	Il modello è descritto da:
+	$$\begin{cases} 
+		I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) + I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ 
+		I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - (I_{BCS} + I_S) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ 
+		I_E = (I_{BES} + I_S) \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) 
+	\end{cases}$$
+	Si dice che il modello di \textbf{Ebers \& Moll} è in regione normale (o attiva diretta) quando si ha:
+	$$\begin{cases} V_{BE} > 0 \\ V_{BC} < 0 \end{cases} \implies \begin{cases} V_B > V_E \\ V_B < V_C \end{cases} \implies V_E < V_B < V_C$$
+	Allora possiamo controllare la corrente tra collettore ed emettitore agendo sulla tensione della base. \\
+	Se $V_B$ è bassa, la corrente tra collettore ed emettitore è bassa; se $V_B$ è alta, la corrente tra collettore ed emettitore è alta.
+	\subsection{Semplificazioni}
+	
+\end{document}
