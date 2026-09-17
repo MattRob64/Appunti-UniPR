@@ -570,4 +570,99 @@
 		\end{figure}
 	\end{center}
 	\subsection{Modello a Soglia}
+	Cerchiamo ora di ricavare un modello a soglia valido per il BJT e limitato alle tre regioni usate fino ad ora.\\\\
+	In precedenza abbiamo ricavato le due caratteristiche per l’ingresso e per l’uscita.
+	\subsubsection{Ingresso}
+	Per l’ingresso approssimiamo tutte le curve esponenziali con una retta verticale.\\\\
+	In regione di funzionamento normale ed in regione di saturazione il modello a soglia risulta essere:
+	$$\begin{cases} V_{BE} = V_\gamma \\ I_B > 0 \end{cases}$$
+	mentre in interdizione è:
+	$$\begin{cases} V_{BE} = 0 \\ I_B < V_\gamma \end{cases}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{75.png}
+			\caption{Modello a soglia dell’ingresso di un BJT}
+			\label{fig:im-75}
+		\end{figure}
+	\end{center}
+	\subsubsection{Uscita}
+	Anche in questo caso approssimiamo gli esponenziali a rette verticali. \\
+	Per la regione di funzionamento normale è:
+	$$\begin{cases} V_{CE} > V_{CESat} \\ I_C = \beta_F I_B \end{cases}$$
+	mentre in saturazione abbiamo:
+	$$\begin{cases} V_{CE} = V_{CESat} \\ I_C < \beta_F I_B \end{cases}$$
+	Solitamente assumiamo che sia: $V_{CESat} = 0,2\ \text{V}$. \\
+	La $V_{CESat}$ è la differenza tra la tensione di soglia dell’emettitore e la tensione di soglia del collettore.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{76.png}
+			\caption{Modello a soglia dell’uscita di un BJT}
+			\label{fig:im-76}
+		\end{figure}
+	\end{center}
+	\subsubsection{Riassunto}
+	Unendo tutti i risultati del modello a soglia ricaviamo un modello complessivo:
+	$$\text{Regione di interdizione} = \begin{cases} V_{BE} < V_{\gamma} \\ V_{CE} > V_{CESat} & \quad V_{BC} < V^\prime_{\gamma} \\ I_B = 0 \\ I_C = 0 \end{cases}$$
+	$$\text{Regione normale} = \begin{cases} V_{BE} = V\gamma \\ V_{CE} > V_{CESat} \\ I_B > 0 \\ I_C = \beta_F I_B \end{cases}$$
+	$$\text{Regione di saturazione} = \begin{cases} V_{BE} = V_{\gamma} \\ V_{CE} = V_{CESat} \\ I_B = 0 \\ I_C < \beta_F I_B \end{cases}$$
+	\subsection{Invertitore RTL}
+	Consideriamo ora il circuito di Figura \ref{fig:im-77} e cerchiamo la caratteristica ingresso-uscita sfruttando il modello a soglia.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{77.png}
+			\caption{Un invertitore RTL.}
+			\label{fig:im-77}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	Indipendentemente dalla regione di funzionamento possiamo dire:
+	$$\begin{cases} I_B = \frac{V_i - V_{BE}}{R_B} \\ I_C = \frac{V_{CC} - V_u}{R_C} \\ V_{CE} = V_u \end{cases}$$
+	\subsubsection{Regione di Interdizione}
+	Dal modello a soglia sappiamo che è:
+	$$\begin{cases} I_B = 0 \\ I_C = 0 \end{cases} \implies \begin{cases} V_i = V_{BE} \\ V_u = V_{CC} \end{cases}$$
+	ma siccome è $V_i = V_{BE}$ e $V_u = V_{CE}$ risulta anche:
+	$$\begin{cases} V_i < V_\gamma \\ V_{CC} = V_{CE} > V_{CESat} \end{cases}$$
+	\subsubsection{Regione Normale}
+	In regione normale è:
+	$$\begin{cases} I_C = \beta_F I_B \\ I_B = \frac{V_i - V_\gamma}{R_B} \\ V_u = V_{CC} - R_C I_C \end{cases} \implies \begin{cases} V_u = V_{CC} - \frac{\beta_F R_C}{R_B} (V_i - V_\gamma) \\ V_i > V_\gamma \\ V_{CE} = V_u > V_{CESat} \end{cases}$$
+	Notiamo che l’uscita è proporzionale all’ingresso secondo la funzione:
+	$$V_u = V_{CC} - \frac{\beta_F R_C}{R_B} (V_i - V_\gamma)$$
+	la cui derivata è:
+	$$A_V = -\frac{\beta_F R_C}{R_B}$$
+	che porta ad un guadagno lineare dato dal rapporto tra la resistenza di base e la resistenza di collettore.\\\\
+	Per ricavare il valore di $V_i^*$, ossia del punto in cui la retta interseca la retta costante di $V_{CESat}$, imponiamo:
+	$$V_i^* = V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	\subsubsection{regione di Saturazione}
+	In questa regione ovviamente l’uscita è:
+	$$V_u = V_{CESat}$$
+	e vale nella regione in cui è:
+	$$V_i > V_i^*$$
+	La verifica è immediata dal modello a soglia. \\
+	Infatti deve essere:
+	$$I_B = \frac{V_i - V_\gamma}{R_B} \implies V_i > V_\gamma$$
+	$$I_C = \frac{V_{CC} - V_{CESat}}{R_C} < \beta_F \cdot \frac{V_i - V_\gamma}{R_B} \implies V_i > V_\gamma + \frac{V_{CC} - V_{CESat}}{\frac{\beta_F R_C}{R_B}}$$
+	Siccome è:
+	$$V_i^* = V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	allora risulta che è:
+	$$V_i > V_i^*$$
+	\subsubsection{Considerazioni finali}
+	Il grafico dei risultati ottenuti fino ad ora è riportato in Figura \ref{fig:im-78}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{78.png}
+			\caption{Caratteristica ingresso-uscita dell’invertitore RTL}
+			\label{fig:im-78}
+		\end{figure}
+	\end{center}
+	Il ramo di caratteristica nella regione di interdizione è ovviamente identico a quanto visto senza la resistenza $R_B$. \\
+	Tale resistenza è infatti inserita per limitare la corrente ma a transistore spento la corrente è nulla e dunque la resistenza $R_B$ non interviene.\\\\
+	Nella regione normale l’uscita è rappresentata da una retta. \\
+	Se l’approssimazione del modello fosse buona, otterremmo un grande vantaggio da questa caratteristica poiché consentirebbe di gestire facilmente l’amplificazione dal momento che una amplificazione lineare non distorce il segnale ricevuto.\\\\
+	Dalle simulazione svolte al calcolatore sul dispositivo reale possiamo notare che l’andamento ottenuto dal modello a soglia è qualitativamente identico all’andamento della caratteristica ingresso-uscita del dispositivo reale.\\\\
+	Il circuito in Figura \ref{fig:im-77} è detto Invertitore RTL (\textbf{Resistor Transistor Logic}, logica a transistore e resistore) ed è un circuito fuzionante.
+	\subsection{Invertitore ad accoppiamento diretto}
 \end{document}
