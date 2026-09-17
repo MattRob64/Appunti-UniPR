@@ -102,5 +102,472 @@
 	Allora possiamo controllare la corrente tra collettore ed emettitore agendo sulla tensione della base. \\
 	Se $V_B$ è bassa, la corrente tra collettore ed emettitore è bassa; se $V_B$ è alta, la corrente tra collettore ed emettitore è alta.
 	\subsection{Semplificazioni}
-	
+	Il modello di Ebers \& Moll è \textbf{notevolmente più complesso} rispetto al modello usato per il diodo a giunzione $pn$. \\
+	Possiamo tuttavia semplificarci un poco la vita sfruttando le leggi di Kirchhoff:
+	$$I_C + I_B = I_E$$
+	$$V_{BE} = V_{BC} + V_{CE} \iff V_B - V_E = V_B - V_C + V_C - V_E$$
+		Possiamo inoltre ottenere ulteriori semplificazioni a seconda della regione di funzionamento.\\\\
+	Poniamoci in regione attiva diretta (funzionamento normale del transistore). \\
+	Per ipotesi, abbiamo:
+	$$\begin{cases} V_{BE} > 0 \\ V_{BC} < 0 \end{cases} \implies V_{BE} > V_{BC} \implies \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \gg \left( e^{\frac{V_{BC}}{V_T}} - 1 \right)$$
+	ed allora possiamo semplificare l’espressione delle correnti trascurando l’esponenziale di $V_{BC}$:
+	$$\begin{cases}I_{B}\approx I_{BES}\left(e^{\frac{V_{BE}}{V_{T}}}-1\right)\\I_{C}\approx I_{S}\left(e^{\frac{V_{BE}}{V_{T}}}-1\right)\\I_{E}\approx(I_{S}+I_{BES})\left(e^{\frac{V_{BE}}{V_{T}}}-1\right)\end{cases}$$
+	Allora tutte le correnti dipendono solamente dalla tensione applicata alla base. \\
+	Inoltre possiamo semplicemente calcolare la corrente di collettore nota la corrente di base come (\textbf{Pedice F: Forward; Pedice R: Opposto(Reverse)}):
+	$$I_C = \beta_F I_B$$
+	dove $\beta_F$ è una costante definita dal rapporto:
+	$$\beta_F = \frac{I_C}{I_B}$$
+	Analogamente abbiamo:
+	$$\alpha_F = \frac{I_C}{I_E}$$
+	ed $\alpha_F < 1$ prende il nome di efficienza di emettitore poiché vale:
+	$$I_C = \alpha_F I_E$$
+	È inoltre evidente che $\alpha_F$ e $\beta_F$ sono legati dalla relazione:
+	$$\alpha_F = \frac{\beta_F}{\beta_F + 1} \implies \lim_{\beta_F \to \infty} \frac{\beta_F}{\beta_F + 1} = 1$$
+	\begin{center}
+		oppure
+	\end{center}
+	$$\beta_F = \frac{\alpha_F}{1 - \alpha_F}$$
+	Allora il modello si semplifica ulteriormente:
+	$$\begin{cases}I_{B}\approx I_{BES}\left(e^{\frac{V_{BE}}{V_{T}}}-1\right)\\I_{C}\approx\beta_{F}I_{B}\\I_{E}\approx I_{C}+I_{B}\end{cases}$$
+	e lo schema elettrico è riportato in Figura \ref{fig:im-55}.\\\\
+	Parimenti, semplificando con $\alpha_F$ è:
+	$$\begin{cases}I_B\approx I_C+I_E<<I_c\\I_C\approx\alpha_FI_E \sim I_E\\I_E\approx(I_S+I_{BES})\left(e^{\frac{V_{BE}}{V_T}}-1\right)&\end{cases}$$
+	che si può rappresentare come in Figura \ref{fig:im-56}.\\\\
+	Dunque, in polarizzazione diretta, il transistore ha una complessità di poco superiore a quella del diodo. \\
+	Allora, siccome l’equazione esponenziale è quella del diodo, possiamo utilizzare nuovamente la semplificazione vista per il diodo ed il relativo modello a soglia.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{55.png} 
+			\caption{Semplificazione del modello di Ebers \& Moll con l’uso del parametro $\beta_F$}
+			\label{fig:im-55}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{56.png}
+			\caption{Semplificazione del modello di Ebers \& Moll con l’uso del parametro $\alpha_F$}
+			\label{fig:im-56}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image7}
+	\end{figure}
+	\subsection{Regione $V_{BE} < 0$ e $V_{BC} < 0$}
+	In questa regione, dal momento che entrambi gli esponenziali sono molto minori di 1, il modello si semplifica in:
+	$$\begin{cases}I_B\approx-I_{BES}-I_{BCS}\\I_C\approx-I_{BCS}\\I_E\approx-I_{BES}\end{cases}$$
+	L’effetto transistore in questa regione di funzionamento non si manifesta. \\
+	Il modello circuitale semplificato è riportato in Figura \ref{fig:im-57}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{57.png}
+			\caption{Semplificazione del modello di Ebers \& Moll con per la regione di interdizione}
+			\label{fig:im-57}
+		\end{figure}
+	\end{center}
+	Questa regione è detta regione di interdizione. \\
+	Per semplicità spesso si dice che il transistore è spento.
+	\subsection{Regione $V_{BE} < 0$ e $V_{BC} > 0$}
+	Ragionando analogamente a quanto fatto in precedenza per la regione attiva diretta, notiamo che l’esponenziale associato a $V_{BE}$ è trascurabile rispetto all’esponenziale associato a $V_{BC}$.
+	\subsubsection{Analisi Qualitativa}
+	Ci troviamo in questo caso nella regione duale rispetto alla regione normale. \\
+	Il modello si semplifica in:
+	$$\begin{cases} I_B = I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ I_C = -(I_S - I_{BCS}) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ I_E = -I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \end{cases}$$
+	Questa regione è detta regione attiva inversa. \\
+	Possiamo dire che il collettore e l’emettitore si scambiano i ruoli rispetto alla regione attiva diretta. \\
+	Analogamente alla regione attiva diretta, possiamo ricavare le costanti:
+	$$\frac{I_E}{I_B} = -\beta_R$$
+	$$\frac{I_E}{I_C} = \alpha_R$$
+	da cui ricavare le relazioni:
+	$$I_E = -\beta_R I_B$$
+	$$I_E = \alpha_R I_C$$
+	$$\alpha_R = \frac{\beta_R}{\beta_R - 1}$$
+	$$\beta_R = \frac{\alpha_R}{1 - \alpha_R}$$
+	L’equivalente circuitale semplificato è riportato nelle Figure \ref{fig:im-58} e \ref{fig:im-59}.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{58.png} 
+			\caption{Semplificazione del modello di Ebers \& Moll con per la regione attiva inversa. \\ La corrente del transistore è data da $I_t = \beta_R I_R$.}
+			\label{fig:im-58}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{59.png}
+			\caption{Semplificazione del modello di Ebers \& Moll con per la regione attiva diretta. \\ La corrente di transistore è $I_t = \alpha_R I_R$.}
+			\label{fig:im-59}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image8}
+	\end{figure}
+	\subsubsection{Analisi Quantitativa}
+	Dal punto di vista quantitativo, la simmettria non esiste. \\
+	Utilizzando il transistore in regione attiva indiretta, i parametri $\beta_R$ e $\alpha_R$ sono solitamente più piccoli rispetto a $\beta_F$ e $\alpha_F$. \\
+	Per tale motivo tenderemo a non usare la regione attiva indiretta.\\\\
+	Questo differente comportamento è dovuto al fatto che in regione attiva diretta vogliamo che la corrente dovuta all’effetto transistor sia dominante rispetto alla corrente dovuta al diodo. \\
+	Questo provoca due flussi: uno di elettroni che vengono iniettati in base; l’altro di lacune che vengono iniettate nell’emettitore. \\
+	Dal collettore vengono accettati gli elettroni provenienti dall’emettitore e vengono ineiettate in base ben poche lacune.\\\\
+	Allora perché $\beta_F$ sia grande è necessario che la corrente dovuta all’effetto transistore sia grande rispetto alla corrente di base e dunque deve essere $I_S \gg I_{BES}$. \\
+	Questo risultato però può essere raggiunto solamente sbilanciando fortemente le polpolazioni dei portatori di carica: la concentrazione di atomi donatori in base deve quindi essere necessariamente molto maggiore rispetto alla concentrazione degli atomi accettati in base.
+	$$N_{D,E} \gg N_{A,B}$$
+	Inoltre è anche necessario che $w$ sia quanto più piccolo possibile.\\\\
+	Per avere un valore elevato di $\beta_R$ ragioniamo in modo uguale ed opposto. \\
+	Tuttavia non è possibile che il drogaggio della regione di base sia contemporaneamente molto minore sia di quello dell’emettitore sia di quello del collettore dal momento che, mentre l’emettitore è polarizzato in diretta ed ha una regione svuotata più piccola rispetto alla condizione di quiete, il collettore è polarizzato in inversa ed ha una regione svuotata più grande rispetto alla condizione di equilibrio.\\\\
+	La regione svuotata della giunzione tra base e collettore è:
+	$$w_{BC} = \frac{1}{N_{A,C}} \sqrt{\frac{2\varepsilon(\psi_{BC} - V_{BC})}{q\left(\frac{1}{N_{A,C}} - \frac{1}{N_{D,C}}\right)}}$$
+	è varia significativamente a seconda della variazione della $V_{BC}$. \\
+	La condizione in cui la regione neutra della base non esiste più (detta di condizione di punch through) è fastidiosa non possiamo più controllare il transistore con la tensione di base.\\\\
+	Allora per fare in modo che la condizione di punch through non si presenti, dobbiamo ridurre la concentrazione di drogante presente nel collettore in modo che la regione svuotata si estenda solo dalla parte del collettore e non nella base.
+	$$N_{A,B} \gg N_{D,C}$$
+	Ma allora, riprendendo quanto detto per l’emettitore, è:
+	$$N_{D,B} \gg N_{A,B} \gg N_{D,C} \implies N_{D,B} \gg N_{D,C}$$
+	Questa differenza tecnologica necessaria al funzionamento del transistore impedisce al dispositivo di funzionare bene in regione attiva inversa. \\
+	Tuttavia, questa stessa differenza, ci consente di realizzare facilmente le strutture npn necessarie alla realizzazione dei transistori (Figura \ref{fig:im-60}) poiché la precisione nei drogaggi non è critica. \\
+	Grazie a ciò è molto facile controllare l’ampiezza della regione di base (tecnologicamente possiamo facilmente realizzare regioni di base di dimensioni pari frazioni del decimo di micron).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{60.png}
+			\caption{Differenti drogaggi consentono di realizzare facilmente un transistore bipolare (evidenziato in giallo)}
+			\label{fig:im-60}
+		\end{figure}
+	\end{center}
+	\subsection{Regione $V_{BE} > 0$ e $V_{BC} > 0$}
+	Vediamo ora l’ultima regione di funzionamento del diodo: in questa regione (detta regione di saturazione) entrambe le giunzioni sono polarizzate in diretta.\\
+	Entrambi gli esponenziali del modello di Ebers \& Moll sono significativi e non si può semplificare.
+	$$\begin{cases}
+		I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) + I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\
+		I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - (I_{BCS} + I_S) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\
+		I_E = (I_{BES} + I_S) \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right)
+	\end{cases}$$
+	Il fatto che il modello non possa essere semplificato trova conferma nel fatto che le correnti sono una combinazione lineare degli esponenziali. \\
+	Allora, dal momento che la regione di saturazione prevede entrambi i diodi accesi, sommando le espressioni ottenute per le regioni di funzionamento attiva diretta ed attiva indiretta, torniamo ad ottenere il modello completo.\\\\
+	Una rappresentazione alternativa del modello è riportata in Figura \ref{fig:im-61}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{61.png}
+			\caption{Seconda rappresentazione grafica del modello di Ebers \& Moll che mostra come in saturazione esso possa essere dedotto come somma tra le semplificazioni per le regioni di funzionamento attiva diretta ed attiva indiretta}
+			\label{fig:im-61}
+		\end{figure}
+	\end{center}
+	\subsection{Regioni di Funzionamento}
+	Il grafico di Figura \ref{fig:im-62} mostra le quattro ragioni di funzionamento di un BJT.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{62.png}
+			\caption{Regioni di funzionamento di un BJT}
+			\label{fig:im-62}
+		\end{figure}
+	\end{center}
+	\subsection{Applicazione}
+	Il transistore è il primo componente che studiamo a presentare tre morsetti.\\
+	Si potrebbe dunque pensare che un tripolo qualsiasi sia descritto da sei grandezze indipendenti. \\
+	Per le leggi di Kirchhoff però risulta immediato dedurre che le grandezze indipendenti siano solo quattro.
+	$$\begin{cases} I_1 + I_2 + I_3 = 0 \\ V_{1,2} + V_{2,3} + V_{3,1} = 0 \end{cases} $$
+	Allora possiamo descrivere il comportamento del generico tripolo di Figura \ref{fig:im-63} con due sole equazioni per le correnti e due equazioni per le tensioni.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{63.png}
+			\caption{Un tripolo generico}
+			\label{fig:im-63}
+		\end{figure}
+	\end{center}
+	Per determinare il comportamento della rete abbiamo però bisogno di altre due condizioni: una per il morsetto di ingresso ed una per il morsetto di uscita che leghino le correnti con le tensioni.\\\\
+	Allora mentre il diodo è descritto da una equazione in due incgnite, il transistore è descritto da due equazioni in quattro incognite.
+	\subsection{Configurazioni Possibili}
+	Consideriamo il circuito di Figura \ref{fig:im-64} dove la scatoletta centrale è un tripolo.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{64.png}
+			\caption{Connessione in emettitore comune}
+			\label{fig:im-64}
+		\end{figure}
+	\end{center}
+	Dal momento che abbiamo quattro incognite il componente tripolare dovrà essere descritto da due equazioni in quattro incognite. \\
+	Le altre due equazioni sono fornite dai componenti agganciati alle porte.
+	In particolare, con la configurazione di Figura \ref{fig:im-64}, abbiamo che la $I_i$ è pari alla $I_B$ e la $I_u$ è pari alla $I_C$. \\
+	Le tensioni sono analogamente $V_i = V_{BE}$ e $V_u = V_{CE}$. \\
+	Siccome l’emettitore è il riferimento comune per le tensioni questa configurazione è detta connessione in emettitore comune ed è descritta dalle correnti:
+	$$\begin{cases} I_B(V_{BE}, V_{CE}) \\ I_C(V_{BE}, V_{CE}) \end{cases}$$
+	Altre configurazioni possibili sono la \textbf{connessione in base comune} (Figura \ref{fig:im-65}) e la \textbf{connessione in collettore comune} (Figura \ref{fig:im-66}).
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{65.png} 
+			\caption{Connessione in base comune}
+			\label{fig:im-65}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{66.png}
+			\caption{Connessione in collettore comune}
+			\label{fig:im-66}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image9}
+	\end{figure}
+	Le tre differenti configurazioni hanno usi e caratteristiche piuttosto differenti e si adattano meglio ad alcune situazioni piuttosto che ad altre.
+	\subsection{Connessione in emettitore comune}
+	Riprendiamo il circuito di Figura \ref{fig:im-67}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{67.png}
+			\caption{Connessione in emettitore comune}
+			\label{fig:im-67}
+		\end{figure}
+	\end{center}
+	Dal modello di Ebers \& Moll definito in precedenza
+	$$\begin{cases}
+		I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) + I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\
+		I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - (I_{BCS} + I_S) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\
+		I_E = (I_{BES} + I_S) \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right)
+	\end{cases}$$
+	cerchiamo di esplicitare le correnti del tripolo in esame.
+	$$\begin{cases} I_B(V_{BE}, V_{CE}) \\ I_C(V_{BE}, V_{CE}) \end{cases}$$
+	La $V_{BC}$ non è definita nel modello.\\
+	 Fortunatamente, siccome la $V_{BC}$ non è indipendente dalle altre tensioni, possiamo scriverla come:
+	$$V _ {B C} = V _ {B E} - V _ {C E} \Longrightarrow V _ {C E} = V _ {B E} - V _ {B C}$$
+	\subsubsection{Ingresso}
+	Allora possiamo vedere la corrente di ingresso come:
+	$$I_B(V_{BE}, V_{CE}) = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) + I_{BCS} \left( e^{\frac{V_{BE} - V_{CE}}{V_T}} - 1 \right)$$
+	Questa configurazione è però molto complessa poiché implica che la corrente $I_B$ dipende da una coppia di grandezze e quindi dovrebbe essere in un grafico tridimensionale. \\
+	Dobbiamo allora ricavare un sistema più pratico.\\\\
+	Una soluzione molto più pratica consiste nel tracciare una serie di curve bidimensionali parametriche fissando la $V_{CE}$ o la $V_{BE}$ in modo da ottenere una serie di funzioni di una sola variabile.
+	$$I_B(V_{BE}, V_{CE}) \longrightarrow I_B(V_{BE}) \text{ con } V_{CE} = \text{costante}$$
+	In condizione di funzionamento normale, ricaviamo che è:
+	$$e^{\frac{V_{BE}}{V_T}} \gg e^{\frac{V_{BC}}{V_T}}$$
+	$$I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right)$$
+	ed allora l’intera famiglia di curve collassa sulla sola curva di Figura \ref{fig:im-68}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{68.png}
+			\caption{Caratteristica dell’ingresso di un BJT}
+			\label{fig:im-68}
+		\end{figure}
+	\end{center}
+	Se invece ci poniamo nella regione di saturazione abbiamo:
+	$$I_B(V_{BE}, V_{CE}) = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} \right) + I_{BCS} \left( \frac{e^{\frac{V_{BE}}{V_T}}}{e^{\frac{V_{CE}}{V_T}}} \right)$$
+	$$I_B = e^{\frac{V_{BE}}{V_T}} \left( I_{BES} + \frac{I_{BCS}}{e^{\frac{V_{CE}}{V_T}}} \right)$$
+	e quindi la famiglia di curve presenta andamenti esponenziali moltiplicati per una costante tanto più grande quanto più $V_{CE}$ è piccolo.
+	\subsubsection{Uscita}
+	\label{subsub:conn-em-com-out}
+	Vediamo ora cosa succede per la corrente di uscita.\\\\
+	Analogamente a quanto visto prima è:
+	$$I_C(V_{BE}, V_{CE}) \longrightarrow I_C(V_{CE}) \text{ con } V_{BE} = \text{costante}$$
+	$$I _ { C } = I _ { S } \left( e ^ { \frac { V _ { B E } } { V _ { T } } } - 1 \right) - \left( I _ { B C S } + I _ { S } \right) \left( e ^ { \frac { V _ { B E } - V _ { C E } } { V _ { T } } } - 1 \right)$$
+	In regione di funzionamento normale, il termine dovuto alla $V_{CE}$ è trascurabile e la curva di uscita risulta essere costante per valori costanti di $V_{BE}$:
+	$$I _ { C } = I _ { S } \left( e ^ { \frac { V _ { B E } } { V _ { T } } } - 1 \right) = \beta _ { F } I _ { B }$$
+	Questa condizione ha senso solo quando si ha:
+	$$V _ { B E } > V _ { C E } \Longrightarrow I _ { S } \left( e ^ { \frac { V _ { C E } } { V _ { T } } } - 1 \right) > I _ { C }$$
+	In saturazione abbiamo invece la condizione opposta a quella per il funzionamento in regione normale. \\
+	La corrente di uscita è allora:
+	$$I _ { C } = I _ { S } \left( e ^ { \frac { V _ { B E } } { V _ { T } } } \right) - \left( I _ { B C S } + I _ { S } \right) \left( \frac { e ^ { \frac { V _ { B E } } { V _ { T } } } } { e ^ { \frac { V _ { C E } } { V _ { T } } } } \right) < \beta _ { F } I _ { B }$$
+	dove abbiamo trascurato le unità.\\\\
+	La Figura \ref{fig:im-69} mostra l’uscita del BJT.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{69.png}
+			\caption{Caratteristica dell’uscita di un BJT}
+			\label{fig:im-69}
+		\end{figure}
+	\end{center}
+	Dall’immagine si nota subito che tutte le curve della regione di saturazione passano per uno stesso punto che non è l’origine. \\
+	In particolare l’uscita si annulla quando risulta essere:
+	$$I _ { S } \left( e ^ { \frac { V _ { B E } } { V _ { T } } } \right) - \left( I _ { B C S } + I _ { S } \right) \left( \frac { e ^ { \frac { V _ { B E } } { V _ { T } } } } { e ^ { \frac { V _ { C E } } { V _ { T } } } } \right) = 0 \Longrightarrow e ^ { \frac { V _ { B E } } { V _ { T } } } = \frac { I _ { S } + I _ { B C S } } { I _ { S } } = \frac { 1 } { \alpha _ { R } }$$
+	che è una costante. \\
+	Passando ora ai logaritmi risulta:
+	$$V _ { C E } = V _ { T } \cdot \ln \left( \frac { 1 } { \alpha _ { R } } \right)$$
+	Il punto di attraversamento dell’asse delle ascisse dunque non dipende dalla tensione $V_{BE}$.\\\\
+	Fisicamente la spiegazione di questo comportamento sta nel fatto che, all’aumentare della $V_{CE}$ il flusso che dal collettore porta elettroni in base diventa sempre più importante e, per valori sufficientemente elevati di $V_{CE}$ può anche dominare sul flusso che dall’emettitore porta gli elettroni al collettore.\\\\
+	La Tabella \ref{tab:table-6} riassume quanto visto fino ad ora:
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Porta} & \textbf{Regione} & \textbf{Caratteristica} \\
+			\hline
+			\textbf{Ingresso} & Diretta & Famiglia collassata su una sola curva. \\
+			\hline
+			& Saturazione & Curve esponenziali crescenti al decrescere di $V_{CE}$. \\
+			\hline
+			& Interdizione & Corrente nulla. \\
+			\hline
+			\textbf{Uscita} & Diretta & Valori costanti per valori costanti di $V_{BE}$. \\
+			\hline
+			& Saturazione & Curve esponenziali decrescenti al decrescere di $V_{CE}$. \\
+			\hline
+			& Interdizione & Corrente nulla. \\
+			\hline
+		\end{tabular}
+		\caption{Caratteristiche delle varie regioni di funzionamento del BJT}
+		\label{tab:table-6}
+	\end{table}
+	\subsection{Relazione tra ingresso e uscita}
+	Consideriamo nuovamente un transistore ad emettitore comune come in Figura \ref{fig:im-70}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{70.png}
+			\caption{Un semplice circuito elettrico per lo studio della relazione ingresso-uscita del BJT}
+			\label{fig:im-70}
+		\end{figure}
+	\end{center}
+	Innanzitutto notiamo che il circuito in questione non può mai funzionare in regione normale. \\
+	In regione normale infatti è:
+	$$\begin{cases} V_{BE} > 0 \\ V_{BC} < 0 \end{cases} \implies I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) > 0$$ 
+	$$\begin{cases} I_C = \beta_F I_B > 0 \\ V_u = -RI_C < 0 \end{cases} \implies V_u < 0$$ 
+	$$\begin{cases} V_{BE} < V_{CE} \\ V_{BE} > 0 \end{cases} \implies V_{CE} > 0$$
+	Ma la $V_{CE}$ è esattamente la $V_u$. \\
+	Allora la $V_u$ deve essere contemporaneamente maggiore e minore di zero. \\
+	Dunque la conclusione è assurda e quindi la tesi è \textbf{assurda}.\\\\
+	Una possibile soluzione per far funzionare il dispositivo in regione normale consiste nell’inserimento di una tensione di polarizzazione $V_{CC}$ in serie alla resistenza $R$ che sia più grande della caduta sulla resistenza stessa (Figura \ref{fig:im-71}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.35]{71.png}
+			\caption{L’aggiunta del generatore $V_{CC}$ consente di far funzionare il BJT in regione normale}
+			\label{fig:im-71}
+		\end{figure}
+	\end{center}
+	Con questo sistema abbiamo infatti:
+	$$V_u = V_{CC} - RI_C$$
+	ed essendo $V_{CC} > RI_C$ la tensione di uscita è positiva. \\
+	Si nota che, per far lavorare il dispositivo in regione normale dobbiamo consumare energia. \\
+	Allora abbiamo un costo energetico.\\\\
+	Per quanto riguarda la polarizzazione inversa risulta essere:
+	$$\begin{cases} V_{BE} < 0 \\ V_{BC} > 0 \end{cases} \implies I_B = I_{BES} \left( e^{\frac{V_{BC}}{VT}} - 1 \right) > 0$$
+	$$\begin{cases} I_E = -\beta_R I_B < 0 \\ I_E = \alpha_R I_C < 0 \end{cases} \implies I_C < 0 \implies V_u = V_{CC} + R |I_C| > 0$$
+	$$\begin{cases} V_{CE} < 0 \\ V_u = V_{CE} \end{cases} \implies V_u < 0$$
+	che porta nuovamente ad una conclusione \textbf{assurda}.\\\\
+	Allora, imponendo che il dispositivo funzioni in regione normale, gli si impedisce di funzionare in regione attiva inversa. \\
+	Dunque il modello ricavato fino ad ora fornisce comunque tutti gli strumenti necessari all’analisi.\\\\
+	Riprendiamo di nuovo il circuito in figura \ref{fig:im-71}.\\\\
+	Come dimostrato in precedenza, questo circuito può funzionare in tre sole regioni:
+	\begin{enumerate}
+		\item Regione normale
+		\item Regione di interdizione
+		\item Regione di saturazione
+	\end{enumerate}
+	Indipendentemente dalla regione di funzionamento, dalla configurazione del circuito possiamo osservare che è:
+	$$V_i = V_{BE}$$
+	$$V_u = V_{CE} = V_{CC} - RI_C$$
+	\subsubsection{Regione di Interdizione}
+	Iniziamo a ragionare ponendo il transistore nella regione di interdizione. \\
+	Dal modello di Ebers \& Moll è:
+	$$\begin{cases} V_{BE} < 0 \\ V_{CE} < 0 \end{cases} \implies V_{BC} < 0 \implies V_{CE} > V_{BE}$$
+	da cui segue che la tensione di ingresso dovrà essere negativa.\\\\
+	Sempre dal modello di Ebers \& Moll, usando le note semplificazioni, troviamo:
+	$$I_C \approx I_{BCS} \approx 0$$
+	da cui ricaviamo che la tensione di uscita è:
+	$$V_u = V_{CC} - RI_C \implies V_u = V_{CC} > 0$$
+	La condizione per cui si presenta questa situazione è $V_u > V_i$. \\
+	Siccome però $V_u = V_{CC} > 0$ e $V_i < 0$, la condizione è sempre verificata.
+	\subsubsection{Regione Normale}
+	In regione normale è:
+	$$\begin{cases} V_{BE} > 0 \\ V_{CE} < 0 \end{cases} \implies \begin{cases} V_i > 0 \\ V_u > V_i \end{cases}$$
+	Applichiamo le note semplificazioni del modello di Ebers \& Moll ed otteniamo:
+	$$\begin{cases} I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \\ I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \end{cases}$$
+	Allora troviamo che la tensione di uscita è:
+	$$V_u = V_{CC} - RI_S I_S \left( e^{\frac{V_i}{V_T}} - 1 \right)$$
+	dove abbiamo usato l’uguaglianza $V_i = V_{BE}$.
+	\subsubsection{Regione di Saturazione}
+	In questo caso abbiamo:
+	$$\begin{cases} V_{BE} > 0 \\ V_{CE} > 0 \end{cases} \implies \begin{cases} V_i > 0 \\ V_u < V_i \end{cases}$$ 
+	$$I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - (I_{BCS} + I_S) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right)$$ 
+	$$I_C = I_S \left( e^{\frac{V_i}{V_T}} - 1 \right) - (I_S + I_{BCS}) \left( e^{\frac{V_i - V_u}{V_T}} - 1 \right)$$
+	Allora la tensione di uscita è:
+	$$V_u = V_{CC} - R \left[ I_S \left( e^{\frac{V_i}{V_T}} - 1 \right) - (I_S + I_{BCS}) \left( e^{\frac{V_i - V_u}{V_T}} - 1 \right) \right]$$
+	che è abbastanza complessa.\\\\
+	Fortunatamente possiamo risolvere l’uguaglianza sfruttando il grafico della caratteristica di uscita del BJT vista nel Paragrafo \ref{subsub:conn-em-com-out}.\\\\
+	Dal momento che è:
+	$$\begin{cases} V_{CE} = V_u \\ V_u = V_{CC} - RI_C \end{cases} \implies I_C = \frac{V_{CC} - V_u}{R}$$
+	abbiamo l’espressione di una retta. \\
+	Tale retta (solitamente detta retta di carico della rete) rappresenta il luogo dei punti $(V_u, I_C)$ che soddisfa la legge di Kirchhoff alla maglia. \\
+	Ogni curva rappresenta invece il luogo dei punti che soddisfano le equazioni del modello di Ebers \& Moll per una data tensione di ingresso.\\\\
+	Dal grafico di Figura \ref{fig:im-72} notiamo che l’uscita cala sempre più lentamente al crescere dell’ingresso per raggiungere asintoticamente il valore:
+	$$V_T \cdot \ln \left( \frac{1}{\alpha_R} \right)$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{72.png}
+			\caption{Caratteristica di uscita di un BJT. \\ In blu è evidenziata la retta di carico.}
+			\label{fig:im-72}
+		\end{figure}
+	\end{center}
+	\subsubsection{Riassunto}
+	Il grafico di Figura \ref{fig:im-73} mostra quanto ottenuto dallo studio appena effettuato.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{73.png}
+			\caption{Caratteristica di ingresso-uscita di un BJT ad emettitore comune. \\ In verde la caratteristica in interdizione, in rosso la caratteristica in regione normale ed in azzurro la caratteristica in saturazione.}
+			\label{fig:im-73}
+		\end{figure}
+	\end{center}
+	Questo circuito dispone di tre regioni con comportamenti qualitativamente molto differenti: due tratti a valori approssimativamente costanti (regione di interdizione e regione di saturazione) ed un tratto di raccordo (regione normale) che può avere una pendenza anche molto elevata.\\\\
+	La pendenza è data dalla derivata dell’uscita. \\
+	Siccome la parte con pendenza non nulla è dovuta alla regione normale, riprendiamo l’uscita in tale regione:
+	$$V_u = V_{CC} - RI_S I_S \left( e^{\frac{V_i}{V_T}} - 1 \right)$$
+	e ne calcoliamo la derivata nel punto $V_i = V_{i_0}$. \\
+	Risulta:
+	$$DV_u = -\frac{RI_S \cdot e^{\frac{V_{i_0}}{V_T}}}{V_T} = -\frac{RI_{C_0}}{V_T}$$
+	Poiché siamo in regione normale, la $V_{i_0}$ è positiva ed allora possiamo trascurare il termine unitario. \\
+	Allora la corrente di collettore è:
+	$$I_C = I_S \cdot e^{\frac{V_{i_0}}{V_T}}$$
+	Notiamo allora che la derivata ha un valore a denominatore molto basso ed un valore a numeratore molto più elevato. \\
+	Allora la pendenza è molto elevata.\\\\
+	Un circuito di questo tipo si presta bene alla realizzazione di una \textbf{porta NOT}. \\
+	Consideriamo ad esempio i segnali:
+	$$\begin{cases} V_L = 0 \\ V_H \approx V_{CC} \end{cases}$$
+	La Tabella \ref{tab:table-7} mostra quanto appena detto:
+	\begin{table}
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			$V_i$ & $V_u$ \\
+			\hline 
+			\hline
+			$V_L$ & $V_H$ \\
+			\hline
+			$V_H$ & $V_L$ \\
+			\hline
+		\end{tabular}
+		\caption{Funzionamento dell’invertitore logico realizzato con un BJT}
+		\label{tab:table-7}
+	\end{table}
+	Si faccia attenzione al fatto che, pur non usando la regione normale di funzionamento del BJT, il componente si comporta come un invertitore proprio per la presenza della regione normale ad elevata pendenza.\\\\
+	Per lavorare in regione normale è necessario progettare opportunamente il segnale di ingresso. \\
+	Infatti se a $V_i = V_{i_0}$ corrisponde $V_u = V_{u_0}$ dovrà anche essere:
+	$$V_i = V_{i_0} + \Delta V_i \longleftrightarrow V_u = V_{u_0} + \Delta V_u$$
+	Per $\Delta V_i \rightarrow 0$ avremo allora:
+	$$\frac{\Delta V_u}{\Delta V_i} = \frac{dV_u}{dV_i} = A_V \implies dV_u = A_V dV_i$$
+	dove $A_V$ detto \textbf{guadagno di tensione}. \\
+	Il guadagno di tensione può assumere valori anche molto elevati. \\
+	Allora, quando si presenta un segnale variabile in un intervallo ristretto di $V_i$, il segnale di uscita varia in modo analogo all’ingresso amplificato di una costante $-A_V$. \\
+	Allora il dispositivo studiato si comporta come un amplificatore analogico invertente.\\\\
+	Il rispetto delle condizioni di piccolo spostamento e di alta pendenza è estremamente importante. \\
+	Usare segnali con uno spostamento elevato provoca una distorsione del segnale di uscita rispetto al segnale di ingresso. \\
+	La scelta della pendenza inficia invece il guadagno: più elevata è la pendenza, maggiore è l’amplificazione in ampiezza.\\\\
+	Un’altra caratteristica del dispositivo studiato è che, mentre il segnale di ingresso è un segnale debole in potenza ed in corrente, il segnale di uscita è un segnale più forte sia in ampiezza sia in potenza. \\
+	Questo fatto è dovuto al generatore di tensione $V_{CC}$.\\\\
+	Ancora, pur avendo una $I_B$ libera di crescere indefinitamente, notiamo che la $I_C$ non può avere lo stesso comportamento. \\
+	Quando si entra in regione di saturazione, la $I_C$ ha raggiunto il suo valore massimo (si dice quindi che è satura). \\
+	Il problema è però dato dalla corrente $I_B$. \\
+	La sua crescita esponenziale porta invece ad avere correnti di ingresso totalmente irragionevoli. \\
+	Una possibile soluzione consiste nell’introdurre una resistenza sulla base (Figura \ref{fig:im-74}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{74.png}
+			\caption{L’inserimento della resistenza in base consente di limitare la corrente di ingresso a valori ragionevoli}
+			\label{fig:im-74}
+		\end{figure}
+	\end{center}
+	\subsection{Modello a Soglia}
 \end{document}

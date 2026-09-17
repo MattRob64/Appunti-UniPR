@@ -70,9 +70,26 @@
 \contentsline {subsubsection}{\numberline {2.17.2}Situazione per $t = 0^+$: transitorio $A \rightarrow C$}{41}{subsubsection.2.17.2}%
 \contentsline {subsubsection}{\numberline {2.17.3}Situazione per $t > 0$: transitorio $C \rightarrow B$}{42}{subsubsection.2.17.3}%
 \contentsline {subsubsection}{\numberline {2.17.4}Grafici}{43}{subsubsection.2.17.4}%
-\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare}{44}{section.3}%
+\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare \textit {BJT}}{44}{section.3}%
 \contentsline {subsubsection}{\numberline {3.0.1}Introduzione}{44}{subsubsection.3.0.1}%
 \contentsline {subsection}{\numberline {3.1}Diodo $npn$}{44}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Modello di Ebers \& Moll}{45}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Semplificazioni}{47}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Transistore MOSFET}{47}{section.4}%
+\contentsline {subsection}{\numberline {3.4}Regione $V_{BE} < 0$ e $V_{BC} < 0$}{48}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Regione $V_{BE} < 0$ e $V_{BC} > 0$}{49}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Analisi Qualitativa}{49}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Analisi Quantitativa}{49}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Regione $V_{BE} > 0$ e $V_{BC} > 0$}{50}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Regioni di Funzionamento}{51}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Applicazione}{51}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Configurazioni Possibili}{52}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Connessione in emettitore comune}{52}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Ingresso}{53}{subsubsection.3.10.1}%
+\contentsline {subsubsection}{\numberline {3.10.2}Uscita}{53}{subsubsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.11}Relazione tra ingresso e uscita}{54}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Regione di Interdizione}{56}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {3.11.2}Regione Normale}{56}{subsubsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.3}Regione di Saturazione}{57}{subsubsection.3.11.3}%
+\contentsline {subsubsection}{\numberline {3.11.4}Riassunto}{57}{subsubsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.12}Modello a Soglia}{59}{subsection.3.12}%
+\contentsline {section}{\numberline {4}Transistore MOSFET}{59}{section.4}%
