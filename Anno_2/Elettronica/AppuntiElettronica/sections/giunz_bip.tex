@@ -386,7 +386,7 @@
 	Il punto di attraversamento dell’asse delle ascisse dunque non dipende dalla tensione $V_{BE}$.\\\\
 	Fisicamente la spiegazione di questo comportamento sta nel fatto che, all’aumentare della $V_{CE}$ il flusso che dal collettore porta elettroni in base diventa sempre più importante e, per valori sufficientemente elevati di $V_{CE}$ può anche dominare sul flusso che dall’emettitore porta gli elettroni al collettore.\\\\
 	La Tabella \ref{tab:table-6} riassume quanto visto fino ad ora:
-	\begin{table}
+	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|c|c|c|}
 			\hline
@@ -526,7 +526,7 @@
 	Consideriamo ad esempio i segnali:
 	$$\begin{cases} V_L = 0 \\ V_H \approx V_{CC} \end{cases}$$
 	La Tabella \ref{tab:table-7} mostra quanto appena detto:
-	\begin{table}
+	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|c|c|}
 			\hline
@@ -608,6 +608,7 @@
 	$$\text{Regione normale} = \begin{cases} V_{BE} = V\gamma \\ V_{CE} > V_{CESat} \\ I_B > 0 \\ I_C = \beta_F I_B \end{cases}$$
 	$$\text{Regione di saturazione} = \begin{cases} V_{BE} = V_{\gamma} \\ V_{CE} = V_{CESat} \\ I_B = 0 \\ I_C < \beta_F I_B \end{cases}$$
 	\subsection{Invertitore RTL}
+	\label{sub:inv-rtl}
 	Consideriamo ora il circuito di Figura \ref{fig:im-77} e cerchiamo la caratteristica ingresso-uscita sfruttando il modello a soglia.
 	\begin{center}
 		\begin{figure}[h]
@@ -665,4 +666,446 @@
 	Dalle simulazione svolte al calcolatore sul dispositivo reale possiamo notare che l’andamento ottenuto dal modello a soglia è qualitativamente identico all’andamento della caratteristica ingresso-uscita del dispositivo reale.\\\\
 	Il circuito in Figura \ref{fig:im-77} è detto Invertitore RTL (\textbf{Resistor Transistor Logic}, logica a transistore e resistore) ed è un circuito fuzionante.
 	\subsection{Invertitore ad accoppiamento diretto}
+	Fino a questo momento il modello a soglia ha sempre funzionato perfettamente.\\\\
+	Consideriamo ora il circuito di Figura \ref{fig:im-79} e cerchiamone la caratteristica ingresso-uscita sfruttando il modello a soglia.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{79.png}
+			\caption{Un invertitore ad accoppiamento diretto}
+			\label{fig:im-79}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	Indipendentemente dalla regione di funzionamento possiamo dire:
+	$$\begin{cases} I_C = \frac{V_u - V_{CC}}{R_C} \\ V_i = V_{BE} \\ V_u = V_{CE} \end{cases}$$
+	\subsubsection{Regione di interdizione}
+	Dal modello a soglia, in interdizione, abbiamo:
+	$$\begin{cases} I_B = 0 \\ I_C = 0 \end{cases} \implies \begin{cases} V_i = V_{BE} \\ V_u = V_{CC} \end{cases}$$
+	ma siccome è $V_i = V_{BE}$ e $V_u = V_{CE}$ risulta anche:
+	$$\begin{cases} V_i < V_\gamma \\ V_{CC} = V_{CE} > V_{CESat} \end{cases}$$
+	\subsubsection{Regione normale}
+	In regione normale è:
+	$$V_{BE} = V_i = V_\gamma$$
+	Ma perché sia vero deve anche essere:
+	$$I_C = \beta_F I_B > 0 \implies \frac{V_u - V_{CC}}{R_C} > 0 \implies V_u > V_{CC}$$
+	e, contemporaneamente, deve valere:
+	$$V_{CE} = V_u > V_{CESat}$$
+	da cui è:
+	$$V_{CESat} < V_u < V_{CC}$$
+	che rappresenta una retta veritcale.
+	\subsubsection{Regione di saturazione}
+	La regione di saturazione è individuata dalle condizioni:
+	$$\begin{cases} V_u = V_{CE} = V_{CESat} \\ V_i = V_{BE} = V_\gamma \end{cases}$$
+	che sono soddisfatte in un unico punto.
+	\subsubsection{Considerazioni finali}
+	Il grafico dei risultati ottenuti fino ad ora è riportato in Figura \ref{fig:im-80}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{80.png}
+			\caption{Caratteristica ingresso-uscita dell’invertitore ad accoppiamento diretto}
+			\label{fig:im-80}
+		\end{figure}
+	\end{center}
+	Il ramo di caratteristica nella regione di interdizione è ovviamente identico a quanto visto con la resistenza $R_B$. \\
+	Tale resistenza è infatti inserita per limitare la corrente ma a transistore spento la corrente è nulla e dunque la resistenza $R_B$ non interviene.\\\\
+	La retta verticale della regione normale presenta un guadagno infinito. \\
+	Il guadagno infinito obbliga però a trattare un segnale di ingresso di ampiezza infinitesima provocando così la perdita dell’informazione.\\\\
+	Il peggio tuttavia è rappresentato dal fatto che l’intera regione di saturazione implode in un unico punto. \\
+	In questo caso allora il modello a soglia non fornisce una previsione sufficientemente accurata. \\
+	La caratteristica ingresso-uscita nella regione di saturazione infatti è completamente sconosciuta.
+	\subsection{Usabilità del modello a soglia}
+	La differenza tra i circuiti di Figura \ref{fig:im-77} e \ref{fig:im-79} è molto limitata: la resistenza $R_B$ sulla maglia di ingresso presente nel primo e non nel secondo. \\
+	Siccome la maglia di uscita è identica nei due circuiti dovremo concentrare la nostra analisi sulla maglia di ingresso. \\
+	Inoltre, dal momento che il modello a soglia ha fallito, usiamo il modello di Ebers \& Moll.\\\\
+	Consideriamo il circuito di Figura \ref{fig:im-77}.
+	La corrente di base è:
+	$$I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \implies V_{BE} = V_T \cdot \ln \left( \frac{I_B}{I_{BES}} + 1 \right)$$
+	ma può anche essere espressa come:
+	$$I_B = \frac{V_i - V_{BE}}{R_B} \implies V_i = V_{BE} + \underbrace{R_B I_B}_{V_R}$$
+	Dunque la tensione di ingresso è una somma di due termini, entrambi dipendenti dalla corrente $I_B$. \\
+	Allora possiamo pensare di variare la corrente $V_i$ da un valore $V_{i0}$ ad un valore $V_{i0} + \Delta V_i$. \\
+	Conseguentemente avremo una variazione di $I_B$ da $I_{B0}$ ad $I_{B0} + \Delta I_B$.
+	$$V_i : V_{i0} \rightarrow V_{i0} + \Delta V_i$$
+	$$I_B : I_{B0} \rightarrow I_{B0} + \Delta I_B$$
+	Allora una variazione della tensione di ingresso può essere vista come:
+	$$\Delta V_i = \Delta V_R + \Delta V_{BE}$$
+	Siccome il termine dato da $\Delta V_{BE}$ è molto minore rispetto al termine $\Delta V_R$, può essere trascurato:
+	$$\Delta V_i \approx \Delta V_R$$
+	Trascurare la caduta di tensione sulla giunzione è trascurabile solo poiché la caduta di tensione sulla resistenza è presente. \\
+	Se la resistenza $R_B$ non fosse presente, la caduta dovuta alla giunzione non sarebbe più trascurabile. \\
+	Questa situazione è riportata in Figura \ref{fig:im-81}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{81.png}
+			\caption{La componente esponenziale dovuta alla giunzione (in verde) è trascurabile solo in presenza di una resistenza (in azzurro). \\In giallo la variazione $\Delta V_{BE}$; in grigio la variazione $\Delta V_R$.}
+			\label{fig:im-81}
+		\end{figure}
+	\end{center}
+	Allora possiamo utilizzare il modello a soglia quando abbiamo circuiti che presentano, in serie alla giunzione, una o più resistenze. \\
+	Le resistenze infatti presentano cadute di tipo ohmico che rendono trascurabili le cadute dovute alle giunzioni.
+	\subsection{Qualità dell'invertitore RTL}
+	Nella sezione \ref{sub:inv-rtl} abbiamo dimostrato che il circuito di Figura \ref{fig:im-77} rappresenta un invertitore. \\
+	Vogliamo ora studiarne la qualità.
+	\subsubsection{Invertitore}
+	Prima di tutto è necessario accertarci che il circuito sia effettivamente un invertitore logico. \\
+	Infatti, scelti due valori:
+	$$\begin{cases} V_L = V_{CESat} \\ V_H = V_{CC} \end{cases}$$
+	mentre per il valore $V_{CESat}$ siamo certi che esso sia minore di $V_\gamma$, per il valore alto $V_{CC}$ non sappiamo se valga:
+	$$V_{CC} > V_i^*$$
+	Questa condizione è vera solo quando abbiamo:
+	$$|A_V| > \frac{V_{CC} - V_{CESat}}{V_{CC} - V_\gamma}$$
+	che, fortunatamente, non è un vincolo critico. \\
+	Questo risultato, però, mostra che, anche per avere un invertitore, dobbiamo avere un guadagno elevato.
+	\subsubsection{Resistenza ai disturbi (Effeto del rumore)}
+	\label{subsub:res-dist}
+	Una volta assicuratici di disporre di un invertitore logico, dobbiamo controllarne la resistenza ai disturbi in modo da poterlo effettivamente utilizzare in una rete logica o come amplificatore.\\\\
+	Possiamo interpretare il rumore come una piccola variazione rispetto al segnale che si desidera rappresentare. \\
+	L’effetto di questa variazione è estremamente diverso in base alla regione in cui si lavora.
+	\paragraph{Segnale analogico}
+	Il segnale analogico sfrutta il tratto ad elevata pendenza della caratteristica.
+	$$|A_V| = \frac{dV_u}{dV_i} = \lim_{\Delta V_i \rightarrow 0} \frac{\Delta V_u}{\Delta V_i} > 1$$
+	Inoltre, per quanto riguarda i segnali analogici, una delle ipotesi fondamentali formulate all’inizio dell’analisi del BJT, era quella di piccolo scostamento.\\\\
+	In presenza di rumore allora l’amplificatore amplifica sia il segnale analogico ricevuto sia il rumore rendendo di fatto indistinguibile la variazione dell’uscita voluta (cioè quella associata al segnale) da quella non voluta (cioè quella associata al rumore).
+	\paragraph{Segnale digitale}
+	Il segnale digitale sfrutta i tratti a pendenza quasi nulla.
+	$$|A_V| = \frac{dV_u}{dV_i} = \lim_{\Delta V_i \to 0} \frac{\Delta V_u}{\Delta V_i} = 0$$
+	In questo caso, un rumore che scosti di poco il segnale di ingresso dal suo valore nominale non provoca variazioni significative sul valore di uscita.\\\\
+	La rete digitale è allora più immune ai disturbi rispetto all’amplificatore poiché è in grado di distinguere il segnale dal rumore. \\
+	Il circuito di Figura \ref{fig:im-77} allora funziona meglio come circuito digitale rispetto a quanto può fare come amplificatore.
+	\subsubsection{Immunità ai disturbi}
+	\paragraph{Valori fondamentali}
+	Abbiamo scoperto che l’invertitore RTL è in grado, quando usato come porta logica binaria, di discriminare tra il segnale ed il rumore. \\
+	Questa discriminazione è fattibile solo quando il rumore (indicato con $N$ per noise) non supera una certa ampiezza. \\
+	Cioè vogliamo individuare il massimo valore di $N$ tale per cui sia
+	$$V_i^{**} = V_L + N \longrightarrow V_u = V_H$$
+	Dalla caratteristica possiamo facilmente individuare il valore massimo del rumore come:
+	$$N_{Max} = V_i^{**} - V_L$$
+	Ancora dalla caratteristica possiamo identificare facilmente tale valore limite come $V_\gamma$. In generale indicheremo tale punto con:
+	$$V_{iL \ Max}$$
+	e quindi possiamo ricavare:
+	$$N_{Max} = V_{iL \ Max} - V_L$$
+	che nel nostro caso specifico, con valori tipici di, è:
+	$$N_{Max} = V_\gamma - V_{CESat} = 0,75 - 0,2 = 0,55\ \text{V}$$
+	Analogamente possiamo individuare un valore di rumore tale da non modificare l’uscita quando in ingresso abbiamo $V_H$.
+	$$V_i^{***} = V_H + N \longrightarrow V_u = V_L$$
+	Di nuovo, dalla caratteristica, ricaviamo che il massimo rumore sovrapponibile a $V_H$ è:
+	$$N_{Max} = V_{iH \ Min} = V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	$$N_{Max} = V_H - V_i^* = V_{CC} - V_\gamma - \frac{V_{CC} - V_{CESat}}{|A_V|} = 3,77\ \text{V}$$
+	Si nota che questo margine dipende dal guadagno. \\
+	Maggiore è il guadagno, maggiore è l’immunità ai disturbi per il valore alto.\\\\
+	Possiamo inoltre identificare l’escursione (\textbf{Logic Swing}) come:
+	$$\Delta V_u = V_H - V_L$$
+	ed il massimo errore tollerabile rispetto al valore basso come:
+	$$N_{ML} = V_{iL \ Max} - V_L$$
+	mentre per il valore alto è:
+	$$N_{MH} = V_H - V_{iH \ Min}$$
+	Con i valori tipici notiamo che $N_{ML}$ è significativamente più piccolo rispetto a $N_{MH}$. \\
+	In fase di progetto dovremo allora considerare $N_{ML}$ come parametro di resistenza. In generale sarà:
+	$$N_M = \min \left\{N_{ML}, N_{MH}\right\}$$
+	Imponendo che entrambi i margini siano positivi e facendo la somma delle due relazioni otteniamo:
+	$$N_{MH} + N_{ML} = V_H - V_{iH \ Min} + V_{iL \ Max} - V_L > 0$$
+	da cui possiamo ricavare:
+	$$\underbrace{V_H - V_L}_{\Delta V_u} > \underbrace{V_{iH \ Min} - V_{iL \ Max}}_{\Delta V_i}$$
+	Ma $V_H - V_L$ è l’escursione mentre $V_{iH \ Min} - V_{iL \ Max}$ è l’escursione dell’ingresso. \\
+	Allora:
+	$$\frac{\Delta V_u}{\Delta V_i} > 1 \implies |A_V| > 1$$
+	e quindi, per avere un buon invertitore, dobbiamo necessariamente realizzare un buon amplificatore. \\
+	La Figura \ref{fig:im-82} mostra graficamente i margini appena individuati.\\\\
+	Siccome la somma tra $N_{ML}$ e $N_{MH}$ è limitata, se aumentiamo uno, l’atro deve diminuire. \\
+	La condizione ottima di progetto (Figura \ref{fig:im-83}) è:
+	$$N_{ML} = N_{MH}$$
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{82.png} 
+			\caption{Rappresentazione grafica dei margini di immunità ai disturbi}
+			\label{fig:im-82}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{83.png}
+			\caption{La condizione ottima di progetto consiste nell’individuazione del miglior equilibrio possibile tra $N_{ML}$ e $N_{MH}$}
+			\label{fig:im-83}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image10}
+	\end{figure}
+	\paragraph{Esempio Pratico}
+	Consideriamo il circuito di Figura \ref{fig:im-84} e cerchiamo di individuarne l’immunità ai disturbi.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{84.png}
+			\caption{L’aggiunta del diodo aumenta l’immunità ai disturbi della rete}
+			\label{fig:im-84}
+		\end{figure}
+	\end{center}
+	Dal momento che in serie alle giunzioni abbiamo un caricoresistivo possiamo utilizzare i modelli a soglia. \\
+	Per ridurre le regioni di studio, osserviamo preliminarmente che:
+	$$I_D = I_B$$
+	Allora se il diodo è acceso deve valere:
+	$$I_D > 0 \Longrightarrow I_B > 0$$
+	e quindi il transistore deve essere acceso. Parimenti, se il transistore è acceso, il diodo non può essere spento. \\
+	Allora dobbiamo valutare solo tre casi contro i sei indicati dal modello a soglia.
+	\subparagraph{Regione di interdizione}
+	In questa regione è:
+	$$\begin{cases} I_C = 0 \\ V_u = V_{CC} - R_C I_C \end{cases} \quad \Longrightarrow V_u = V_{CC} $$
+	$$ \begin{cases} V_{BE} < V_\gamma \\ V_D < V_\gamma \end{cases}$$
+	$$\begin{cases} V_i - R_B I_B - V_D - V_{BE} = 0 \\ I_B = 0 \end{cases} \implies V_i < 2V_\gamma$$
+	\subparagraph{Regione normale} 
+	In regione normale abbiamo:
+	$$\begin{cases} V_{BE} > V_\gamma \\ V_D > V_\gamma \end{cases}$$
+	$$\begin{cases} I_B = \frac{V_i - 2V_\gamma}{R_B} \\ I_C = \beta_F I_B \\ V_u = V_{CC} - R_C I_C \end{cases} \implies V_u = V_{CC} - \frac{\beta_F R_C}{R_B} (V_i - 2V_\gamma)$$
+	La $V_u$ è una retta della stessa pendenza della retta del circuito di Figura \ref{fig:im-77}. \\
+	Tale tratto si estende in:
+	$$2V_\gamma < V_i < 2V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	\subparagraph{Regione di saturazione} 
+	In questo caso, ovviamente è:
+	$$\begin{cases} V_u = V_{CESat} \\ V_i > V_i^* \end{cases}$$
+	dove:
+	$$V_i^* = 2V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	\subparagraph{Considerazioni finali} 
+	La caratteristica è perfettamente identica alla caratteristica del circuito di Figura \ref{fig:im-77} ma è stata traslata in avanti di $V_\gamma$. \\
+	Allora i margini si sono spostati. \\
+	Risultano infatti:
+	$$N_{ML} = 2V_\gamma - V_{CESat} = 1,3 \text{ V}$$
+	$$N_{MH} = V_{CC} - 2V_\gamma - \frac{V_{CC} - V_{CESat}}{|A_V|} = 2,02 \text{ V}$$
+	$$N_M = 1,3 \text{ V}$$
+	L’aggiunta del diodo ha quindi più che raddoppiato il margine di resistenza al rumore. \\
+	In linea di principio possiamo pensare di aggiungere diodi per spostare la caratteristica. \\
+	Queste soluzioni sono praticate ma senza portarle a conseguenze estreme: l’aggiunta di troppi diodi infatti provoca un peggioramento delle prestazioni dinamiche.
+	\subsection{Generalizzazioni}
+	Quanto visto nella sezione \ref{subsub:res-dist} è estremamente limitato alla sola porta logica NOT. \\
+	Dobbiamo ora trovare un modo per generalizzare quanto detto a più porte logiche (come le porte AND e OR).\\\\
+	Dobbiamo inoltre generalizzare i margini di rumore a caratteristiche che non si basino sulla caratteristica specifica dell’invertitore RTL.
+	\subsection{Generalizzazioni a funzioni a più ingressi}
+	Consideriamo il circuito di Figura \ref{fig:im-85}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{85.png}
+			\caption{Circuito per la realizzazione di una porta logica NOR}
+			\label{fig:im-85}
+		\end{figure}
+	\end{center}
+	Per semplificare l’analisi supponiamo che sia:
+	$$V_1, V_2, V_u \in \left\{V_L, V_H \right\}$$
+	Allora possiamo riferirci alla tabella di verità riportata in Tabella \ref{tab:table-8}.
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_1$ & $V_2$ & $V_u$ \\
+			\hline
+			$V_L$ & $V_L$ & $V_H$ \\
+			\hline
+			$V_L$ & $V_H$ & $V_L$ \\
+			\hline
+			$V_H$ & $V_L$ & $V_L$ \\
+			\hline
+			$V_H$ & $V_H$ & $V_L$ \\
+			\hline
+		\end{tabular}
+		\caption{Tabella di funzionamento del circuito di Figura \ref{fig:im-85}}
+		\label{tab:table-8}
+	\end{table}
+	\subsubsection{$V_1 = V_L$ ; $V_2 = V_L$}
+	In questo caso il BJT $T1$ è spento. \\
+	Infatti, se fosse accesso, sarebbe:
+	$$\begin{cases} V_{BE1} = V_\gamma \\ I_{B1} > 0 \\ I_{B1} = \frac{V_1 - V_{BE1}}{R_B} \end{cases} \implies V_1 > V_\gamma$$
+	che è una conclusione assurda. \\
+	Allora il transistore $T1$ deve essere spento. \\
+	Analogamente, anche $T2$ dovrà essere spento.
+	Ma allora deve essere:
+	$$\begin{cases} I_{C1} = 0 \\ I_{C2} = 0 \\ I_{RC} = I_{C1} + I_{C2} = 0 \\ V_u = V_{CC} - R_C I_{RC} \end{cases} \implies V_u = V_{CC}$$
+	Quindi, quando entrambi i transistori sono spenti, il circuito si comporta come un invertitore.
+	\subsubsection{$V_1 = V_L$  ;  $V_2 = V_H$}
+	\label{subsub:gen-funz+ing-c1}
+	Per quanto appena detto, il transistore $T1$ deve essere spento. \\
+	Ma se $T1$ è spento ($I_{C1} = 0$), abbiamo un solo invertitore RTL ($T2$) che ha in ingresso un valore alto. \\
+	Allora il transistore $T2$ è saturo. \\
+	Per verificarlo, accertiamoci che sia:
+	$$I_{C2} < \beta_F I_{B2}$$
+	Per la Legge di Ohm è:
+	$$I_{RC} = \frac{V_{CC} - V_{CESat}}{R_C}$$
+	$$I_{RC} = I_{C1} + I_{C2} = I_{C2}$$
+	$$I_{B2} = \frac{V_{CC} - V_\gamma}{R_B}$$
+	Dunque, deve essere:
+	$$\frac{V_{CC} - V_{CESat}}{R_C} < \beta_F \cdot \frac{V_{CC} - V_\gamma}{R_B}$$
+	Questa condizione è verificata per:
+	$$V_{CC} > V_\gamma + \frac{V_{CC} - V_{CESat}}{|A_V|}$$
+	che è la condizione per avere un buon invertitore.\\\\
+	Allora $V_u = V_L$.
+	\subsubsection{$V_1 = V_H$  ;  $V_2 = V_L$}
+	In questo caso abbiamo la condizione inversa a quella precedente. \\
+	Allora avremo:
+	$$V_u = V_L$$
+	\subsubsection{$V_1 = V_H$  ;  $V_2 = V_H$}
+	Siamo nella condizione in cui entrambi gli invertitori sono accesi. \\
+	Verifichiamo che siano in regione di saturazione. \\
+	In saturazione deve essere:
+	$$\begin{cases} I_{C1} < \beta_F I_{B1} \\ I_{C2} < \beta_F I_{B2} \end{cases}$$
+	$$I_{C1} + I_{C2} = \beta_F (I_{B1} + I_{B2})$$
+	Per la Legge di Kirchhoff allora:
+	$$\begin{cases} I_{RC} < \beta_F (I_{B1} + I_{B2}) \\ I_{RC} = \frac{V_{CC} - V_{CESat}}{R_C} \\ I_{B1} = \frac{V_{CC} - V_\gamma}{R_B} \\ I_{B2} = \frac{V_{CC} - V_\gamma}{R_B} \end{cases}$$
+	$$\frac{V_{CC} - V_{CESat}}{R_C} < \frac{2\beta_F}{R_B} (V_{CC} - V_\gamma)$$
+	che è certamente verificata per quanto detto nella sottosezione \ref{subsub:gen-funz+ing-c1}.\\\\
+	Allora l’uscita deve essere:
+	$$V_u = V_{CE1} = V_{CE2} = V_{CESat} = V_L$$
+	\subsubsection{Considerazioni finali}
+	Riportando la Tabella \ref{tab:table-9} in formato digitale notiamo che abbiamo realizzato una porta logica NOR a due ingressi.\\\\
+	Possiamo allora generalizzare quanto appena ottenuto: volendo una porta NOR a tre ingressi con la semplice aggiunta di un terzo ramo in parallelo ai primi due. \\
+	Inoltre la progettazione non è critica poiché se funziona il BJT, funziona anche la porta NOR.\\\\
+	Ancora, avendo la funzione NOR, per la Legge di De Morgan, possiamo realizzare qualsiasi funzione logica di cui possiamo avere necessità.
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_1$ & $V_2$ & $V_u$ \\
+			\hline
+			0 & 0 & 1 \\
+			\hline
+			0 & 1 & 0 \\
+			\hline
+			1 & 0 & 0 \\
+			\hline
+			1 & 1 & 0 \\
+			\hline
+		\end{tabular}
+		\caption{Tabella di funzionamento del circuito di Figura \ref{fig:im-85} in formato digitale}
+		\label{tab:table-9}
+	\end{table}
+	\subsection{Generalizzazione a qualsiasi invertitore}
+	Assumiamo di avere un invertitore che presenti la caratteristica rossa di Figura \ref{fig:im-86} cioè una caratteristica in cui si abbiano due zone in cui il guadagno è inferiore ad uno ed una zona con guadagno maggiore di uno.\\\\
+	Prima di tutto vogliamo imporre che il valore alto dell’ingresso sia pari al valore alto dell’uscita e che il valore basso in ingresso sia pari al valore alto dell’uscita.\\\\
+	Consideriamo ora la serie di invertitori di Figura \ref{fig:im-87}.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{86.png} 
+			\caption{Caratteristica di una invertitori in serie}
+			\label{fig:im-86}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{87.png}
+			\caption{Invertitori in serie}
+			\label{fig:im-87}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image11}
+	\end{figure}
+	In una rete di questo tipo, gli ingressi degli invertitori pari coincidono con le uscite degli invertitori dispari e gli ingressi degli invertitori dispari coincidono con le uscite degli invertitori pari.\\\\
+	Allora la caratteristica di entrambi è data dai punti di intersezione di quella di Figura \ref{fig:im-86}.\\\\
+	Dall’intersezione della caratteristiche degli invertitori pari con la caratteristica degli invertitori dispari, ricaviamo i valori nominali e notiamo che abbiamo tre sole condizioni di funzionamento (indicate dai punti $A$, $B$ e $C$). \\
+	I punti $A$ e $B$ sono inoltre simmetrici rispetto alla diagonale del primo e terzo quadrante e sono individuati da:
+	$$\begin{cases} A = (V_L, V_H) \\ B = (V_H, V_L) \end{cases}$$
+	Il punto $C$, che necessariamente è posto sulla diagonale, indica una terza condizione. \\
+	Questo punto di lavoro individuato da:
+	$$C = (V_{TL}, V_{TL})$$
+	è la condizione in cui ciò che entra nell’invertitore è pari a ciò che esce dall’invertitore stesso.\\\\
+	Supponiamo di porre in ingresso alla rete logica il valore $V_{TL}$. \\
+	In assenza di rumore avremmo in uscita il valore $V_{TL}$. \\
+	Tuttavia è impossibile mantenere costante il valore $V_{TL}$.\\\\
+	Sfruttando il grafico della caratteristica notiamo facilmente che, anche a causa di un piccolo spostamento da $V_{TL}$, il valore dell’uscita si è avvicinato sempre più al valore nominale ($V_H$ per valori appena maggiori di $V_{TL}$ o $V_L$ per valori appena inferiori a $V_{TL}$). \\
+	In altre parole, la qualità del segnale migliora dopo ogni inversione. \\
+	Si parla in questo caso di \textbf{capacità di rigenerazione del segnale}.\\\\
+	In particolare $V_{TL}$ è detto \textbf{valore di soglia logica} (Logic Threshold) poiché è il valore di soglia per cui il circuito è in grado di riportare un segnale rumoroso al suo valore nominale. \\
+	Si noti che tale valore non è necessariamente posto a metà dell’escursione.\\\\
+	Inoltre, poiché $V_{TL}$ è pressoché impossibile da mantenere, non dovremo preoccuparci della condizione di lavoro in $V_{TL}$.\\\\
+	Si noti che la capacità di rigenerare il segnale dipende dalla pendenza elevata del tratto di curva in cui si posiziona $V_{TL}$. \\
+	Infatti, per una pendenza inferiore ad uno, troviamo che in risposta ad una perturbazione di $V_{TL}$ il circuito riporta il segnale a $V_{TL}$. \\
+	Ciò risulta evidente dal grafico di Figura \ref{fig:im-88} avendo un solo punto di intersezione esso deve, necessariamente, essere stabile.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{88.png}
+			\caption{Se si ha una curva con guadagno $A_V < 1$ nella zona di massima pendenza si ottiene un circuito che tende a riportare l’uscita a $V_{TL}$}
+			\label{fig:im-88}
+		\end{figure}
+	\end{center}
+	\subsection{Generalizzazione di $N_M$}
+	Generalizziamo ora il concetto di margine di immunità ai disturbi. Riprendiamo la caratteristica di Figura \ref{fig:im-89}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{89.png}
+			\caption{Caratteristica di un invertitore. \\ Sono evidenziati i margini di tolleranza al rumore.}
+			\label{fig:im-89}
+		\end{figure}
+	\end{center}
+	In questo caso la determinazione di $N_M$ è più complessa rispetto a quanto visto in precedenza poiché non abbiamo tratti a pendenza nulla. \\
+	Possiamo tuttavia riconoscere due tratti a pendenza:
+	$$|A_V| < 1$$
+	in cui il rumore viene attenuato ed un tratto a pendenza:
+	$$|A_V| > 1$$
+	in cui il rumore viene amplificato.\\\\
+	Possiamo etichettare i due punto in cui il guadagno è $A_V = -1$ come:
+	$$(V_{iL \ Max}, V_{OH \ Min})$$
+	per l’ingresso di un segnale basso. \\
+	Si noti che $V_{OH \ Min}$ è più vicino a $V_H$ di quanto non lo sia $V_{iL \ Min}$ a $V_L$:
+	$$V_H - V_{OH \ Min} > V_L - V_{iL \ Max}$$
+	Per quanto riguarda l’ingresso alto abbiamo invece:
+	$$(V_{iH \ Min}, V_{OL \ Max})$$
+	$$V_H - V_{iH \ Min} < V_L - V_{OL \ Max}$$
+	Risulta inoltre:
+	$$\begin{cases} V_i < V_{iL \, Max} \Longrightarrow V_u > V_{OH \, Min} \\ V_i > V_{iH \, Min} \Longrightarrow V_u < V_{OL \, Max} \end{cases}$$
+	Dal grafico di Figura \ref{fig:im-90} notiamo che il margine di immunità ai disturbi associato al valore alto è:
+	$$N_{MH} = V_{OH \, Min} - V_{iH \, Min}$$
+	e, analogamente, per il margine basso è:
+	$$N_{ML} = V_{iL \, Max} - V_{OL \, Max}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{90.png}
+			\caption{Distribuzione dei margini di immunità ai disturbi}
+			\label{fig:im-90}
+		\end{figure}
+	\end{center}
+	Allora il margine di immunità ai disturbi complessivo è:
+	$$N_M = \min \left\{N_{ML}, N_{MH}\right\}$$
+	Ancora, vogliamo che entrambi i margini siano positivi. \\
+	Dunque è:
+	$$V_{OH\ Min} - V_{iH\ Min} + V_{iL\ Max} - V_{OL\ Max} > 0$$
+	da cui segue che:
+	$$\underbrace{V_{OH\ Min} - V_{OL\ Max}}_{\Delta V_u} > \underbrace{V_{iH\ Min} - V_{iL\ Max}}_{\Delta V_i}$$
+	In questo caso non possiamo approssimare il rapporto incrementale alla derivata. \\
+	Tuttavia, risulta comunque evidente che deve essere:
+	$$\frac{\Delta V_u}{\Delta V_i} > 1$$
+	che conferma quanto detto all’inizio dell’analisi.\\\\
+	Anche in questo caso generico è evidente che la somma $N_{ML} + N_{MH}$ è un valore finito. \\
+	Inoltre è possibile individuare graficamente $N_{MH}$ e $N_{ML}$ utilizzando un compasso.
+	\subsection{Incongruenza}
+	Tutti i ragionamenti fatti fino a questo punto si basano sull’ipotesi che la rete sia costituita dalla serie di invertitori di Figura \ref{fig:im-87}.
+	Per l’analisi abbiamo però utilizzato le caratteristiche degli invertitori calcolate a vuoto. \\
+	Quando costruiamo il circuito di Figura \ref{fig:im-87}, tuttavia, connettiamo in serie più invertitori. \\
+	Dunque, per il primo invertitore è:
+	$$V_u = V_{CC} - R_C \left(I_C - I’_B\right)$$
+	dove $I’_B$ è la corrente di base dovuta al secondo invertitore.\\\\
+	Analizzeremo la caratteristica, considerando correttamente la condizione di carico, nelle prossime sezioni.
+	\subsection{Rete di invertitori}
+	Consideriamo anzitutto una rete composta da due invertitori RTL identici come in Figura \ref{fig:im-91}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{91.png}
+			\caption{Due invertitori RTL in serie}
+			\label{fig:im-91}
+		\end{figure}
+	\end{center}
+	In particolare la corrente sul nodo evidenziato (il nodo di connessione tra le due porte) è detta \textbf{corrente di fan out} poiché il quel nodo la corrente si apre a ventaglio.\\\\
+	Nel caso di fan out pari a zero la caratteristica è quella riportata in Figura \ref{fig:im-92}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{92.png}
+			\caption{Caratteristica di un invertitore RTL a vuoto}
+			\label{fig:im-92}
+		\end{figure}
+	\end{center}
+	Dal momento che abbiamo la connessione di due transistori dovremmo valutare nove condizioni. \\
+	Tuttavia poiché il secondo BJT dipende dal primo possiamo ridurre il numero di casi di studio.
 \end{document}
