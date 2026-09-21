@@ -128,7 +128,45 @@
 \contentsline {subsubsection}{\numberline {3.18.4}$V_1 = V_H$ ; $V_2 = V_H$}{71}{subsubsection.3.18.4}%
 \contentsline {subsubsection}{\numberline {3.18.5}Considerazioni finali}{71}{subsubsection.3.18.5}%
 \contentsline {subsection}{\numberline {3.19}Generalizzazione a qualsiasi invertitore}{71}{subsection.3.19}%
-\contentsline {subsection}{\numberline {3.20}Generalizzazione di $N_M$}{72}{subsection.3.20}%
+\contentsline {subsection}{\numberline {3.20}Generalizzazione di $N_M$}{73}{subsection.3.20}%
 \contentsline {subsection}{\numberline {3.21}Incongruenza}{74}{subsection.3.21}%
 \contentsline {subsection}{\numberline {3.22}Rete di invertitori}{74}{subsection.3.22}%
-\contentsline {section}{\numberline {4}Transistore MOSFET}{74}{section.4}%
+\contentsline {subsubsection}{\numberline {3.22.1}Considerazioni preliminari}{75}{subsubsection.3.22.1}%
+\contentsline {subsubsection}{\numberline {3.22.2}$T$ in interdizione}{75}{subsubsection.3.22.2}%
+\contentsline {subsubsection}{\numberline {3.22.3}$T$ in regione normale}{75}{subsubsection.3.22.3}%
+\contentsline {paragraph}{\numberline {3.22.3.1}$T'$ in interdizione}{76}{paragraph.3.22.3.1}%
+\contentsline {paragraph}{\numberline {3.22.3.2}Considerazioni finali}{76}{paragraph.3.22.3.2}%
+\contentsline {subsection}{\numberline {3.23}Aumento del fan out}{76}{subsection.3.23}%
+\contentsline {subsubsection}{\numberline {3.23.1}Considerazioni iniziali}{76}{subsubsection.3.23.1}%
+\contentsline {subsubsection}{\numberline {3.23.2}$T$ in interdizione}{77}{subsubsection.3.23.2}%
+\contentsline {subsubsection}{\numberline {3.23.3}$T$ in regione normale}{77}{subsubsection.3.23.3}%
+\contentsline {subsubsection}{\numberline {3.23.4}$T'$ in interdizione}{77}{subsubsection.3.23.4}%
+\contentsline {subsubsection}{\numberline {3.23.5}Considerazioni finali}{77}{subsubsection.3.23.5}%
+\contentsline {subsection}{\numberline {3.24}Modello dinamico del BJT}{78}{subsection.3.24}%
+\contentsline {subsubsection}{\numberline {3.24.1}Polarizzazione diretta}{78}{subsubsection.3.24.1}%
+\contentsline {subsubsection}{\numberline {3.24.2}Polarizzazione inversa}{79}{subsubsection.3.24.2}%
+\contentsline {subsubsection}{\numberline {3.24.3}Regione di saturazione}{79}{subsubsection.3.24.3}%
+\contentsline {subsubsection}{\numberline {3.24.4}Modello dinamico}{79}{subsubsection.3.24.4}%
+\contentsline {subsection}{\numberline {3.25}Risposta dinamica}{80}{subsection.3.25}%
+\contentsline {subsubsection}{\numberline {3.25.1}Situazione per $t < 0$ (punto A)}{80}{subsubsection.3.25.1}%
+\contentsline {subsubsection}{\numberline {3.25.2}Situazione per $t \rightarrow +\infty $ (punto B)}{81}{subsubsection.3.25.2}%
+\contentsline {subsubsection}{\numberline {3.25.3}Situazione per $t > 0$ (punti C e D)}{81}{subsubsection.3.25.3}%
+\contentsline {paragraph}{\numberline {3.25.3.1}Tratto 1}{82}{paragraph.3.25.3.1}%
+\contentsline {paragraph}{\numberline {3.25.3.2}Tratto 2}{82}{paragraph.3.25.3.2}%
+\contentsline {paragraph}{\numberline {3.25.3.3}Tratto 3}{83}{paragraph.3.25.3.3}%
+\contentsline {subsubsection}{\numberline {3.25.4}Transitorio di spegnimento}{83}{subsubsection.3.25.4}%
+\contentsline {paragraph}{\numberline {3.25.4.1}Tratto 1}{83}{paragraph.3.25.4.1}%
+\contentsline {paragraph}{\numberline {3.25.4.2}Tratto 2}{83}{paragraph.3.25.4.2}%
+\contentsline {paragraph}{\numberline {3.25.4.3}Tratto 3}{83}{paragraph.3.25.4.3}%
+\contentsline {subsubsection}{\numberline {3.25.5}Grafici e considerazioni finali}{84}{subsubsection.3.25.5}%
+\contentsline {subsection}{\numberline {3.26}Logica TTL (Transistor Transistor Logic) statica}{84}{subsection.3.26}%
+\contentsline {subsubsection}{\numberline {3.26.1}Considerazioni iniziali}{85}{subsubsection.3.26.1}%
+\contentsline {subsubsection}{\numberline {3.26.2}$T2$ in interdizione}{85}{subsubsection.3.26.2}%
+\contentsline {subsubsection}{\numberline {3.26.3}$T2$ in saturazione}{85}{subsubsection.3.26.3}%
+\contentsline {paragraph}{\numberline {3.26.3.1}$T2$ in regione normale}{86}{paragraph.3.26.3.1}%
+\contentsline {paragraph}{\numberline {3.26.3.2}Grafico e considerazioni finali}{86}{paragraph.3.26.3.2}%
+\contentsline {subsection}{\numberline {3.27}Transitorio $V_H \DOTSB \relbar \joinrel \rightarrow V_L$}{87}{subsection.3.27}%
+\contentsline {subsection}{\numberline {3.28}Immunità di disturbi}{87}{subsection.3.28}%
+\contentsline {subsection}{\numberline {3.29}Aumento della complessità}{88}{subsection.3.29}%
+\contentsline {subsection}{\numberline {3.30}Logica ECL (Emittent Coupled Logic)}{88}{subsection.3.30}%
+\contentsline {section}{\numberline {4}Transistore MOSFET}{88}{section.4}%

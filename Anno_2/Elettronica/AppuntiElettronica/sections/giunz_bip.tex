@@ -979,25 +979,25 @@
 		\label{tab:table-9}
 	\end{table}
 	\subsection{Generalizzazione a qualsiasi invertitore}
-	Assumiamo di avere un invertitore che presenti la caratteristica rossa di Figura \ref{fig:im-86} cioè una caratteristica in cui si abbiano due zone in cui il guadagno è inferiore ad uno ed una zona con guadagno maggiore di uno.\\\\
+	Assumiamo di avere un invertitore che presenti la caratteristica rossa di Figura \ref{fig:im-86} cioè una caratteristica in cui si abbiano due zone in cui il guadagno è inferiore ad uno ed una zona con guadagno maggiore di uno.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{86.png}
+			\caption{Caratteristica di invertitori in serie}
+			\label{fig:im-86}
+		\end{figure}
+	\end{center}
 	Prima di tutto vogliamo imporre che il valore alto dell’ingresso sia pari al valore alto dell’uscita e che il valore basso in ingresso sia pari al valore alto dell’uscita.\\\\
 	Consideriamo ora la serie di invertitori di Figura \ref{fig:im-87}.
-	\begin{figure}[h]
-		
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=0.9\linewidth]{86.png} 
-			\caption{Caratteristica di una invertitori in serie}
-			\label{fig:im-86}
-		\end{subfigure}
-		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width=0.9\linewidth]{87.png}
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{87.png}
 			\caption{Invertitori in serie}
 			\label{fig:im-87}
-		\end{subfigure}
-		
-		\caption{}
-		\label{fig:image11}
-	\end{figure}
+		\end{figure}
+	\end{center}
 	In una rete di questo tipo, gli ingressi degli invertitori pari coincidono con le uscite degli invertitori dispari e gli ingressi degli invertitori dispari coincidono con le uscite degli invertitori pari.\\\\
 	Allora la caratteristica di entrambi è data dai punti di intersezione di quella di Figura \ref{fig:im-86}.\\\\
 	Dall’intersezione della caratteristiche degli invertitori pari con la caratteristica degli invertitori dispari, ricaviamo i valori nominali e notiamo che abbiamo tre sole condizioni di funzionamento (indicate dai punti $A$, $B$ e $C$). \\
@@ -1087,6 +1087,7 @@
 	dove $I’_B$ è la corrente di base dovuta al secondo invertitore.\\\\
 	Analizzeremo la caratteristica, considerando correttamente la condizione di carico, nelle prossime sezioni.
 	\subsection{Rete di invertitori}
+	\label{sub:ret-inv}
 	Consideriamo anzitutto una rete composta da due invertitori RTL identici come in Figura \ref{fig:im-91}.
 	\begin{center}
 		\begin{figure}[h]
@@ -1108,4 +1109,489 @@
 	\end{center}
 	Dal momento che abbiamo la connessione di due transistori dovremmo valutare nove condizioni. \\
 	Tuttavia poiché il secondo BJT dipende dal primo possiamo ridurre il numero di casi di studio.
+	\subsubsection{Considerazioni preliminari}
+	Osserviamo, dalla conformazione del circuito che è:
+	\[ \begin{cases} I_B = \frac{V_i - V_{BE}}{R_B} \\ I'_B = \frac{V_u - V'_{BE}}{R_B} \\ I_{RC} = I_C + I'_B \end{cases} \]
+	\subsubsection{$T$ in interdizione}
+	Quando il transistore $T$ è in regione di interdizione risulta essere:
+	\[ \begin{cases} I_B = 0 \\ V_{BE} < V_\gamma \end{cases} \implies V_i = V_{BE} \implies V_i < V_\gamma \]
+	\[ I_C = 0 \implies I_{RC} = I'_B \implies V_u = V_{CC} - R_C I'_B \]
+	Ipotizzando che anche $T'$ sia in interdizione ricaviamo:
+	\[ \begin{cases} I'_B = 0 \\ V_u = V'_{BE} = V_{CC} \end{cases} \]
+	ma poiché è anche $V'_{BE} < V_\gamma$ il risultato è assurdo.\\
+	Allora, se $T$ è in interdizione, $T'$ deve necessariamente essere acceso.\\\\
+	Ma se $T'$ è acceso deve essere:
+	\[ V'_{BE} = V_\gamma \implies I'_B = \frac{V_u - V_\gamma}{R_B} \]
+	da cui possiamo ricavare che l'uscita è:
+	\[ V_u = V_{CC} - R_C \frac{V_u - V_\gamma}{R_B} \]
+	\[ V_u = \frac{V_{CC} + \frac{R_C}{R_B} \cdot V_\gamma}{1 + \frac{R_C}{R_B}} = \frac{R_B}{R_B + R_C} V_{CC} + \frac{R_C}{R_B + R_C} V_\gamma \]
+	che è più piccola di $V_{CC}$ e maggiore di $V_\gamma$.\\
+	In particolare abbiamo:
+	\[ \lim_{\frac{R_C}{R_B} \rightarrow 0} V_u = V_{CC} \]
+	oppure:
+	\[ \lim_{\frac{R_C}{R_B} \rightarrow +\infty} V_u = V_\gamma \]
+	\subsubsection{$T$ in regione normale}
+	Ipotizziamo che $T'$ resti acceso.\\
+	Allora deve essere:
+	\[ V_{BE} = V_\gamma \implies I_B = \frac{V_i - V_\gamma}{R_B} \]
+	\[ I_C = \beta_F I_B \]
+	\[ I'_B = \frac{V_u - V_\gamma}{R_B} \]
+	\[ V_u = V_{CC} - R_C \left(I_C + I'_B\right) \]
+	Allora la tensione di uscita è:
+	\[ V_u = V_{CC} - R_C \left[ \beta_F \frac{(V_i - V_\gamma)}{R_B} + \frac{V_u - V_\gamma}{R_B} \right] \]
+	che, raccogliendo e riscrivendo in modo opportuno, risulta:
+	\[ V_u = \frac{V_{CC} - \frac{\beta_F R_C}{R_B} (V_i - V_\gamma) + \frac{R_C}{R_B} V_\gamma}{1 + \frac{R_C}{R_B}} \]
+	che è l'equazione di una retta a pendenza negativa.\\\\
+	Dunque, in questo caso il guadagno di tensione è:
+	\[ A_V = \frac{-\beta_F \frac{R_C}{R_B}}{1 + \frac{R_C}{R_B}} \]
+	Allora il guadagno di tensione è inferiore rispetto al guadagno di tensione a vuoto.\\\\
+	Tutto questo è vero fino a quando si ha:
+	\[ \begin{cases} V_{CE} = V_u > V_{CESat} \\ I'_B > 0 \\ V_u > V_\gamma \end{cases} \implies V_u > V_\gamma \]
+	dove si sono assunti i valori tipici $V_{CESat} = 0,2$ e $V_\gamma = 0,75$.
+	\paragraph{$T'$ in interdizione}
+	Quando il transistore $T'$ si spegne (ossia quando la tensione di uscita $V_u$ raggiunge la tensione $V_\gamma$), ritorniamo ad essere nella condizione già studiata in precedenza, ossia risulta essere la caratteristica del transistore a vuoto.
+	\paragraph{Considerazioni finali}
+	Il grafico di Figura \ref{fig:im-93} mostra la situazione ricavata con un fan out pari ad uno.\\
+	Si nota che il margine basso di immunità ai disturbi è invariato.\\
+	Tuttavia l'ammaccatura nella parte alta della caratteristica abbassa il margine alto di immunità ai disturbi.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{93.png}
+			\caption{Cartteristica di un invertitore RTL a vuoto (in rosso) a confronto con la caratteristica di un invertitore con fan out maggiore o pari ad uno (in blu)}
+			\label{fig:im-93}
+		\end{figure}
+	\end{center}
+	\subsection{Aumento del fan out}
+	Aumentando il fan out aggangiando $n$ invertitori RTL, abbiamo una corrente di fan out di $n$ volte più elevata rispetto a quanto visto nella sezione \ref{sub:ret-inv}.
+	\subsubsection{Considerazioni iniziali}
+	Utilizzando $n$ invertitori $T'$ identici connessi al nodo di uscita del transistore $T$, possiamo sfruttare tutti i ragionamenti già effettuati per $n = 1$ nella sezione \ref{sub:ret-inv}.
+	\subsubsection{$T$ in interdizione}
+	Per quando detto in precedenza tutti i transistori $T'$ sono accesi.\\
+	Allora sarà:
+	\[ \begin{cases} I_{RC} = I_C + nI_B' \\ I_B' = \frac{V_u - V_\gamma}{R_B} \\ I_C = 0 \end{cases} \]
+	\[V_u = V_{CC} - R_C I_{RC} \]
+	\[V_u = \frac{V_{CC} + n \frac{R_C}{R_B} V_\gamma}{1 + n \frac{R_C}{R_B}}\]
+	\subsubsection{$T$ in regione normale}
+	Supponiamo che gli $n$ transistori $T'$ siano accesi.\\
+	Allora risulta:
+	\[ V_u = \frac{V_{CC} - \frac{\beta_F R_C}{R_B} (V_i - V_\gamma) + n \frac{R_C}{R_B} V_\gamma}{1 + n \frac{R_C}{R_B}} \]
+	e, di conseguenza, il guadagno è:
+	\[ A_V = \frac{-\beta_F \frac{R_C}{R_B}}{1 + n \frac{R_C}{R_B}} \]
+	\subsubsection{$T'$ in interdizione}
+	Anche in questo caso, la caratteristica risulta essere esattamente quella del singolo invertitore RTL.
+	\subsubsection{Considerazioni finali}
+	Dai conti effettuati in precedenza si nota che l'effetto del fan out è tanto più elevato quanto maggiore è il numero di porte connesse al nodo di uscita.\\\\
+	La Figura \ref{fig:im-94} mostra la variazione della caratteristica del transistore $T$ al variare del fan out.\\
+	Si noti che tutte le rette passano per il punto di ordinata $V_\gamma$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{94.png}
+			\caption{L'aumento del fan out abbatte sempre più il margine alto di immunità ai disturbi}
+			\label{fig:im-94}
+		\end{figure}
+	\end{center}
+	Modificando il fan out allora il margine alto di immunità ai disturbi varia.\\
+	Possiamo ricavare che il margine basso di immunità ai disturbi è:
+	\[ \begin{cases} V_{iL\,Max} = V_\gamma = 0,75\ \text{V} \\ V_{OL\,Max} = V_{CESat} = 0,2\ \text{V} \end{cases} \implies N_{ML} = V_\gamma - V_{CESat} = 0,515\ \text{V} \]
+	ed è indipendente dal fan out.\\
+	Il margine alto invece è dato da:
+	\[ \begin{cases} V_{iH\,Min} = V_\gamma + \frac{V_{CC} - V_{CESat}}{\beta_F \frac{R_C}{R_B}} = 1,23\ \text{V} \\ V_{OH\,Min} = \frac{V_{CC} + n \frac{R_C}{R_B} V_\gamma}{1 + n \frac{R_C}{R_B}} \end{cases} \]
+	che dipende da $n$ poiché da $n$ dipende il valore di $V_{OH\,Min}$.\\\\
+	Conseguentemente il margine alto di immunità ai disturbi è:
+	\[ N_{MH} = V_{OL\,Min}(n) - 1,23 \]
+	e diminuisce all'aumentare di $n$.\\
+	Arriveremo quindi ad ottenere un valore di $n$ per cui il margine di immunità ai disturbi più basso sarà il margine alto e non più quello basso.\\
+	L'equivalenza si ottiene per $n \approx 31$ (dalle simulazioni si nota inoltre che per $n \approx 80$, il margine $N_{MH}$ diventa nullo).\\\\
+	L'andamento qualitativo del margine assoluto $N_M$ è riportato in Figura \ref{fig:im-95}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{95.png}
+			\caption{Andamento del margine di immunità ai disturbi all'aumentare del fan out}
+			\label{fig:im-95}
+		\end{figure}
+	\end{center}
+	Il punto indicato con \textit{fan out max} è il punto in cui il fan out inizia a degradare il margine di immunità ai disturbi (nel caso specifico è pari 31).\\
+	Possiamo definire il fan out massimo come il massimo numero di porte che possono essere connesse senza degradare il margine di immunità ai disturbi.\\
+	Solitamente il fan out è associato ad una condizione di progetto (ad esempio tipicamente si impone che il fan out non abbassi il valore del margine oltre una certa soglia).
+	\subsection{Modello dinamico del BJT}
+	Abbiamo ormai concluso lo studio della caratteristica statica dell'invertitore RTL.\\
+	Vogliamo ora valutare la risposta dinamica dell'invertitore.\\
+	Per il diodo avevamo sviluppato un modello a soglia, detto \textit{modello a controllo di carica}, descritto da:
+	\[ \begin{cases} V < V_\gamma & \begin{cases} I_D = 0 \\ Q \approx 0 \end{cases} \\ V = V_\gamma & \begin{cases} I_D > 0 \\ Q > 0 \end{cases} \end{cases} \]
+	\[ I_D = \frac{Q}{\tau} = \frac{Q_S \left( e^{\frac{V}{V_T}} - 1 \right)}{\tau} \]
+	Siccome il transistore bipolare è costituito da due diodi, possiamo sfruttare nuovamente quanto visto per il diodo.\\
+	Dal modello dei due diodi abbiamo definito il modello di Ebers \& Moll.
+	\[ \begin{cases} I_B = I_{BES} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) + I_{BCS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ I_C = I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - (I_{BCS} + I_S) \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \\ I_E = (I_{BES} + I_S) \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) - I_S \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \end{cases} \]
+	Dal modello abbiamo poi ricavato versioni semplificate per le tre zone di polarizzazione possibili.
+	\subsubsection{Polarizzazione diretta}\label{par:19.4.1}
+	Dallo studio delle singole zone di funzionamento si nota che in regione normale sia la corrente $I_C$ sia la carica $Q_F$ dipendono in maniera esponenziale dalla $V_{BE}$.
+	\[ \begin{cases} I_C = I_F \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \\ Q_F = Q_B \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \end{cases} \quad \Rightarrow \frac{Q_F}{I_C} = \frac{Q_B}{I_B} = \tau_F \]
+	\[ Q_F = \tau_F I_C \]
+	Allora possiamo generalizzare il modello esattamente come abbiamo fatto per il diodo.
+	\[ \begin{cases} I_C = \frac{Q_F}{\tau_F} \\ I_E = \frac{I_C}{\alpha_F} = \frac{Q_F}{\alpha_F \tau_F} \\ I_B = I_E - I_C = \frac{Q_F}{\alpha_F \tau_F} - \frac{Q_F}{\tau_F} = \frac{Q_F}{\beta_F \tau_F} \end{cases} \]
+	Il grafico del modello dinamico a controllo di carica del BJT per la regione normale è riportato in Figura \ref{fig:im-96}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{96.png}
+			\caption{Modello dinamico della polarizzazione diretta del BJT.}
+			\label{fig:im-96}
+		\end{figure}
+	\end{center}
+	\subsubsection{Polarizzazione inversa}
+	Ragionando in modo analogo a quanto fatto nel Paragrafo \ref{par:19.4.1}, e ricordando che in inversa si scambiano di ruolo collettore ed emettitore, ricaviamo:
+	\[ Q_R = Q_{RS} \left( e^{\frac{V_{BC}}{V_T}} - 1 \right) \]
+	\[ Q_F = \tau_F I_C \]
+	Allora possiamo generalizzare il modello esattamente come abbiamo fatto per il diodo.
+	\[ \begin{cases} I_E = \frac{Q_R}{\tau_R} \\ I_C = \frac{Q_R}{\alpha_R \tau_R} \\ I_B = \frac{Q_B}{\beta_R \tau_R} \end{cases} \]
+	Il grafico è riportato in Figura \ref{fig:im-97}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{97.png}
+			\caption{Modello dinamico della polarizzazione inversa del BJT.}
+			\label{fig:im-97}
+		\end{figure}
+	\end{center}
+	\subsubsection{Regione di saturazione}
+	Si tratta del modello più generale possibile.\\
+	Come già il modello statico è ricavabile facilmente dalla somma dei modelli per la polarizzazione diretta ed inversa.\\\\
+	Il grafico è riportato in Figura \ref{fig:im-98}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{98.png}
+			\caption{Modello dinamico della regione di saturazione del BJT. \\ I termini indicati con $I_x'$ sono relativi alla polarizzazione inversa mentre i termini $I_x$ sono relativi alla polarizzazione diretta.}
+			\label{fig:im-98}
+		\end{figure}
+	\end{center}
+	\subsubsection{Modello dinamico}\label{par:20.2}
+	Il modello dinamico è riportato in Figura \ref{fig:im-98}.
+	Le equazioni che descrivono tale modello sono:
+	\[ \begin{cases} Q_F = Q_{FS} \left( e^{\frac{V_{RE}}{V_T}} - 1 \right) \\ Q_R = Q_{RS} \left( e^{\frac{V_{RC}}{V_T}} - 1 \right) \end{cases} \]
+	\[ \begin{cases} I_C = \frac{Q_F}{\tau_F} \\ I'_C = \frac{Q_R}{\tau_R} \end{cases}\]
+	\[\begin{cases} I_E = \frac{Q_F}{\alpha_F \tau_F} \\ I'_E = \frac{Q_R}{\alpha_R \tau_R} \end{cases}\]
+	\[I_B = \frac{Q_F}{\beta_F \tau_F} \cdot \frac{Q_R}{\beta_R \tau_R}\]
+	Possiamo inoltre vedere ogni corrente come somma o differenza delle altre correnti:
+	\[ \left\{ \begin{array}{l} I_C = \frac{Q_F}{\tau_F} - \frac{Q_R}{\alpha_R \tau_R} - \frac{dQ_R}{dt} \\ I_E = \frac{Q_F}{\alpha_F \tau_F} - \frac{Q_R}{\tau_R} + \frac{dQ_F}{dt} \\ I_B = \frac{Q_F}{\beta_F \tau_F} + \frac{Q_R}{\beta_R \tau_R} + \frac{dQ_F}{dt} + \frac{dQ_R}{dt} \end{array} \right. \]
+	\subsection{Risposta dinamica}
+	Sfruttiamo ora il modello riportato nel Paragrafo \ref{par:20.2} e calcoliamo la risposta dinamica di un invertitore RTL con fan out pari a zero (Figura \ref{fig:im-99}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{99.png}
+			\caption{Invertitore RTL con fan out pari a zero.}
+			\label{fig:im-99}
+		\end{figure}
+	\end{center}
+	Supponiamo di mandare in ingresso un segnale variabile nel tempo simile a quello riportato in Figura \ref{fig:im-100}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{100.png}
+			\caption{Segnale a gradino in ingresso per lo studio della risposta dinamica dell'invertitore RTL.}
+			\label{fig:im-100}
+		\end{figure}
+	\end{center}
+	Siccome sia $Q_F$ sia $Q_R$ sono descritte da funzioni esponenziali di difficile gestione, sfruttiamo le opportune approssimazioni (riportate in Figura \ref{fig:im-101}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{101.png}
+			\caption{Modelli a soglia di $Q_F$ e $Q_R$. Sono evidenziati i punti notevoli studiati nel seguito.}
+			\label{fig:im-101}
+		\end{figure}
+	\end{center}
+	\subsubsection{Situazione per $t < 0$ (punto A)}
+	In questa situazione siamo in una condizione statica.\\
+	Allora possiamo riprendere l'analisi statica già svolta.\\
+	Siccome è $V_i = 0$, il transistore è spento (in interdizione).\\
+	Allora è:
+	\[ V_u = V_{CC} \]
+	\[ I_B = 0 \implies \frac{V_i - V_{BE}}{R_B} = 0 \implies V_i = V_{BE} = 0 \]
+	Allora, grazie alle approssimazioni di Figura \ref{fig:im-101}, possiamo dire che $Q_F$ è nulla.\\
+	Inoltre:
+	\[ V_{CC} - V_u = 0 \implies V_u = V_{CC} \implies V_{BC} = V_{BE} - V_{CE} = -V_{CC} \]
+	dimostra che anche $Q_R$ è nulla.
+	\subsubsection{Situazione per $t \rightarrow +\infty$ (punto B)}
+	Per $t > 0$ l'ingresso si porta a $V_{CC}$.\\
+	Per un tempo sufficientemente lungo, torniamo poi nella situazione già studiata nel caso statico.\\
+	Allora è:
+	\[ V_u = V_{CESat} \]
+	da cui segue che deve essere:
+	\[ \begin{cases} V_{BE} = V_\gamma \\ V_{BC} = V_\gamma' \end{cases} \implies \begin{cases} Q_F \geq 0 \\ Q_R \geq 0 \end{cases} \]
+	Dalle equazioni del modello possiamo inoltre ricavare:
+	\[ \begin{cases} I_C = \frac{Q_F}{\tau_F} + \frac{Q_R}{\alpha_R \tau_R} = \frac{V_{CC} - V_{CESat}}{R_C} \\ I_B = \frac{Q_F}{\tau_{BF}} + \frac{Q_R}{\tau_{BR}} = \frac{V_{CC} - V_\gamma}{R_B} \end{cases} \]
+	dove abbiamo assunto $\tau_{BF} \doteq \beta_F \tau_F$ e $\tau_{BR} \doteq \beta_R \tau_R$.\\
+	Sostituendo possiamo ottenere:
+	\[ I_B = \frac{1}{\tau_F} \cdot \left( I_C + \frac{Q_R}{\alpha_R \tau_R} \right)  \frac{Q_R}{\beta_R \tau_R} \] 
+	da cui isoliamo: 
+	\[ Q_R = \tau_R \cdot \frac{\beta_F I_B - I_C}{\frac{1}{\alpha_R} + \frac{\beta_F}{\beta_R}} = K \cdot (\beta_F I_B - I_C) > 0 \]
+	Analogamente, possiamo ricavare che anche $Q_F$ è maggiore di zero.
+	\subsubsection{Situazione per $t > 0$ (punti C e D)}\label{par:20.3.3}
+	Dalle due condizioni asintotiche notiamo che la situazione è simile a quella già vista per il diodo: la carica si dovrà spostare dal tratto orizontale al tratto verticale.\\
+	Per mantenere la generalità della trattazione dovremo considerare che $Q_F$ e $Q_R$ passiamo per i punti C e D in momenti differenti.\\\\
+	L'ingresso commuta istantaneamente e si porta a:
+	\[ V_i = V_{CC} \]
+	Nel tratto da A a C, abbiamo:
+	\[ \begin{cases} Q_F = 0 \\ V_{BE} = V_\gamma \end{cases} \]
+	che, siccome non si ha spostamento di carica, è un transitorio istantaneo.\\
+	Allora, istantaneamente, si passa a:
+	\[ I_B = \frac{V_{CC} - V_\gamma}{R_B} \]
+	La corrente di collettore è invece:
+	\[ I_C = \frac{Q_F}{\tau_F} - \underbrace{\frac{Q_R}{\alpha_R \tau_R}}_{=0} - \underbrace{\frac{dQ_R}{d\tau}}_{=0} \]
+	ed allora la tensione di uscita è:
+	\[ V_u = V_{CC} - R_C I_C = V_{CC} - R_C \cdot \frac{Q_F}{\tau_F} \]
+	Allora per avere $V_u = V_{CESat}$ è necessario che $Q_F$ sia maggiore di zero.\\
+	Dunque prima si accende la giunzione base-emettitore e poi si accende anche la giunzione collettore-emettitore.\\\\
+	Riassumendo possiamo suddividere il transitorio in tre parti:
+	\begin{enumerate}
+		\item da $\mathbf{A}$ a $\mathbf{C}$ (le cariche sono entrambé nulle)
+		\item da \(\mathbf{C}\) a \(\mathbf{D}\) \((Q_{F} > 0\text{ e }Q_{R} = 0)\)
+		\item da $\mathbf{D}$ a $\mathbf{B}$ (entrambe le cariche sono positive)
+	\end{enumerate}
+	\paragraph{Tratto 1}
+	In questo transitorio abbiamo:
+	\[ \begin{cases} V_{BE} < V_\gamma \\ V_{BC} < V_\gamma' \end{cases} \]
+	Dal momento che questo transitorio è istantaneo non è riportato nei grafici.
+	\paragraph{Tratto 2}\label{par:20.3.3.2}
+	In questo transitorio abbiamo:
+	\[ \begin{cases} V_{BE} = V_\gamma \\ V_{BC} < V_\gamma' \end{cases} \]
+	La corrente di base è esprimibile come:
+	\[ I_B = \frac{V_{CC} - V_\gamma}{R_B} = \frac{Q_F}{\tau_{BF}} + \frac{dQ_F}{dt} \]
+	\[ \frac{dQ_F}{dt} = I_B - \frac{Q_F}{\tau_{BF}} \implies \frac{dQ_F}{Q_F - \tau_{BF} I_B} = -\frac{dt}{\tau_{BF}} \]
+	che, integrata, porta a:
+	\[ -\frac{t}{\tau_{BF}} = \ln \frac{Q_F(t) - \tau_{BF} I_B}{-\tau_{BF} I_B} \implies e^{-\frac{t}{\tau_{BF}}} = \frac{Q_F(t) - \tau_{BF} I_B}{-\tau_{BF} I_B} \]
+	da cui ricaviamo:
+	\[ Q_F(t) = \tau_{BF} I_B \left( 1 - e^{-\frac{t}{\tau_{BF}}} \right) \]
+	che è l'andamento di un esponenziale crescente nel tempo.\\\\
+	La carica $Q_R$ in questo tratto è ancora nulla.\\\\
+	L'uscita è:
+	\[ V_u(t) = V_{CC} - \frac{R_C}{\tau_F} \cdot \frac{\beta_F \tau_F}{R_B} \cdot (V_{CC} - V_\gamma) \cdot \left( 1 - e^{-\frac{t}{\tau_{BF}}} \right) \]
+	è un esponenziale decrescente.\\
+	L'uscita mantiene questo andamento fino a quando non raggiunge il valore $V_{CESat}$.\\
+	Il tempo $t_F$ tale che sia:
+	\[ V_u(t_F) = V_{CESat} \]
+	è detto \textit{tempo di discesa} (\textit{fall}).
+	\paragraph{Tratto 3}
+	In questo ultimo tratto del transitorio abbiamo:
+	\[ \begin{cases} V_{BE} = V_\gamma \\ V_{BC} = V_\gamma' \end{cases} \]
+	\[ V_{CE} = V_u = V_{CESat} \]
+	Dal punto di vista del valore dell'uscita allora il transitorio è finito.\\
+	Resta però da valutare il transitorio dello spostamento delle cariche $Q_F$ e $Q_R$.\\
+	Questa volta però il modello non può essere semplificato.\\
+	Siccome siamo in saturazione il modello è descritto come:
+	\[ \begin{cases} I_C = \frac{V_{CC} - V_\gamma}{R_B} = \frac{Q_F}{\tau_F} - \frac{Q_R}{\alpha_R \tau_R} - \frac{dQ_R}{dt} \\ I_B = \frac{V_{CC} - V_{CESat}}{R_C} = \frac{Q_F}{\beta_F \tau_F} + \frac{Q_R}{\beta_R \tau_R} + \frac{dQ_F}{dt} + \frac{dQ_R}{dt} \end{cases} \]
+	che, risolto, porta nuovamente a degli esponenziali.
+	\subsubsection{Transitorio di spegnimento}
+	Consideriamo ora di tornare indietro: l'ingresso commuta dal valore alto al valore basso.\\
+	Il transitorio può essere ora suddiviso in altri tre tratti, opposti a quelli esaminati nel Paragrafo \ref{par:20.3.3}:
+	\begin{enumerate}
+		\item da \textbf{B} a \textbf{D} (sia $Q_F$ sia $Q_R$ sono positive)
+		\item da \textbf{D} a \textbf{C} ($Q_R = 0$ e $Q_F > 0$)
+		\item da \textbf{C} a \textbf{A} (sia $Q_F$ sia $Q_R$ sono nulle)
+	\end{enumerate}
+	\paragraph{Tratto 1}
+	In questo caso abbiamo:
+	\[ \begin{cases} V_i = 0 \\ V_{BE} = V_\gamma \\ I_B = \frac{V_i - V_{BE}}{R_B} \end{cases} \implies I_B = -\frac{V_\gamma}{R_B} \]
+	da cui segue che l'uscita è:
+	\[ \begin{cases} V_{BE} = V_\gamma \\ V_{BC} = V_\gamma' \end{cases} \implies V_{CE} = V_{CESat} = V_u \]
+	\paragraph{Tratto 2}
+	In questo caso è:
+	\[ V_{BE} = V_\gamma \implies I_B = -\frac{V_\gamma}{R_B} \]
+	Siccome possiamo ora semplificare nuovamente l'espressione di $I_B$ possiamo trovare la stessa espressione del Paragrafo \ref{par:20.3.3.2} con l'unica differenza che il termine noto passa da un valore positivo ad un valore negativo.\\\\
+	Allora mentre la carica $Q_F$ cala fino al valore nullo, la tensione di uscita tende a salire verso il valore $V_{CC}$.\\\\
+	Si noti che la corrente di scarica $I_B$ è significativamente più piccola rispetto alla corrente di carica.\\
+	Allora, tipicamente, il tempo di salita $t_R$ (\textit{rise}) è significativamente più elevato rispetto al tempo di caduta.
+	\paragraph{Tratto 3}
+	Nuovamente si tratta di un transitorio istantaneo poiché non vi è alcuno spostamento di carica.
+	\subsubsection{Grafici e considerazioni finali}
+	La Figura \ref{fig:im-102} riporta tutti i valori fondamentali.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{102.png}
+			\caption{Grafici di $V_u$, $I_B$, $Q_F$ e $Q_R$ della risposta dinamica.}
+			\label{fig:im-102}
+		\end{figure}
+	\end{center}
+	La Figura \ref{fig:im-103} mostra l'andamento dell'ingresso e dell'uscita.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{103.png}
+			\caption{Transitorio dello spegnimento dell'invertitore RTL. \\ Si nota che la variazione della tensione di uscita è lenta anche a causa del tempo di storage.}
+			\label{fig:im-103}
+		\end{figure}
+	\end{center}
+	Ancora una volta abbiamo una risposta fortemente asimmetrica: l'accensione è molto più rapida dello spegnimento (ove incidono sia il tempo di storage sia la corrente più bassa).\\
+	Il tempo di storage è a sua volta determinato dalla carica $Q_R$.
+	\[ \begin{cases} Q_R = K \cdot (\beta_F I_B - I_C) \\ I_B = \frac{V_{CC} - V_\gamma}{R_B} \\ I_C = \frac{V_{CC} - V_{CESat}}{R_C} \end{cases} \]
+	La carica $Q_R$ allora è tanto più elevata quanto più elevato è il guadagno a vuoto del dispositivo.
+	\[ \frac{\beta_F R_C}{R_B} \cdot \frac{V_{CC} - V_\gamma}{V_{CC} - V_{CESat}} > 1 \implies |A_V| \cdot \frac{V_{CC} - V_\gamma}{V_{CC} - V_{CESat}} > 1 \]
+	Dunque, in fase di progetto, si dovrà tenere conto di questo fatto e cercare di ottenere un buon compromesso.\\
+	Abbasando il guadagno, riduciamo il tempo di salita ma abbassiamo sia il margine di immunità ai disturbi sia il fan out massimo sopportabile.
+	\subsection{Logica TTL (Transistor Transistor Logic) statica}
+	La logica TTL è riportata in Figura \ref{fig:im-104}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{104.png}
+			\caption{Logica TTL.}
+			\label{fig:im-104}
+		\end{figure}
+	\end{center}
+	Poiché lo stadio di uscita è un normale BJT possiamo aspettarci una caratteristica ingresso-uscita statica simile a quella riportata in Figura \ref{fig:im-105} (cioè la caratteristica statica di un invertitore RTL).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{105.png}
+			\caption{Caratteristica ingresso-uscita dell'invertitore RTL.}
+			\label{fig:im-105}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	Iniziamo notando che è:
+	\[ I_{B2} = -I_{C1} \]
+	Notiamo anche che se $T2$ è in interdizione, $T1$ non potrà che essere acceso.
+	\subsubsection{$T2$ in interdizione}
+	Quando $T2$ è in interdizione abbiamo:
+	\[ I_{B2} = 0 \implies I_{C1} = 0 \]
+	Ipotizziamo allora che anche $T1$ sia in interdizione.\\
+	Se $T1$ è in interdizione abbiamo:
+	\[ \begin{cases} V_{BE1} < V_\gamma \\ V_i = V_L = V_{CESat} \\ I_{B1} = 0 \\ V_{CC} - I_{B1}R_B - V_{BE1} = V_i \end{cases} \implies V_{BE1} = V_{CC} - V_i = V_{CC} - V_{CESat} \]
+	che, con valori tipici, risulta certamente maggiore di $V_\gamma$.\\
+	Ma allora l'ipotesi è contraddetta e quindi quando il transistore $T2$ è in interdizione, il transistore $T1$ dovrà essere acceso.\\
+	In particolare, poiché è $I_{C1} = 0$, il transistore $T1$ è saturo.
+	\[ V_{CE1} = V_{CESat} \]
+	\[ V_i - V_{CE1} = V_{BE2} \implies V_{BE2} = 2V_{CESat} \]
+	Allora nel punto \textbf{A} di Figura \ref{fig:im-105} avremo $T1$ in saturazione e $T2$ in interdizione.\\
+	Questa situazione è verificata per:
+	\[ \begin{cases} V_{BE2} < V_\gamma \\ V_{CE1} = V_{CESat} \\ V_i + V_{CE1} = V_{BEs} \end{cases} \implies V_i < V_\gamma - V_{CESat} \]
+	che con valori tipici porta a $V_i < 0,5$ V.\\
+	L'uscita è:
+	\[ V_u = V_{CC} \]
+	\subsubsection{$T2$ in saturazione}
+	In questa condizione abbiamo:
+	\[ I_{B2} > 0 \implies I_{C1} < 0 \]
+	che risulta compatibile soltanto con l'ipotesi che $T1$ sia in saturazione.\\
+	Verifichiamo che $T1$ sia effettivamente in staurazione:
+	\[ \begin{cases} V_{BE1} = V_\gamma \\ I_{B1} > 0 \\ V_i = V_{CC} \end{cases} \]
+	\[ V_{CC} - R_B I_{B1} - V_{BE1} = V_i \implies -R_B I_{B1} - V_{BE1} = 0 \]
+	Ma siccome $-R_B I_{B1} - V_{BE1}$ è negativo, siamo in presenza di un assurdo.\\
+	Allora il transistore $T1$ dovrà essere in regione di funzionamento inversa.\\
+	Verifichiamo che sia effettivamente così:
+	\[ \begin{cases} V_{BE1} < V_\gamma \\ V_{BC} = V_\gamma' \\ V_{BE2} = V_\gamma \end{cases} \]
+	\[ V_{CC} - R_B I_{B1} - V_{BC1} - V_{BE2} = 0 \implies I_{B1} = \frac{V_{CC} - V_\gamma' - V_\gamma}{R_B} > 0 \]
+	\[ I_{E1} = -\beta_R I_{B1} \]
+	\[ I_{E1} = -\frac{\beta_R}{R_B} \cdot \left( V_{CC} - V_\gamma' - V_\gamma \right) \]
+	Si noti che la corrente $I_{B1}$ è indipendente dalla tensione di ingresso (quindi non dipende dalle proprietà di eventuali componenti connessi a monte).\\
+	Questo porta ad evidenti vantaggi nella costruzione di reti logiche.\\\\
+	Allora nel punto \textbf{B} di Figura \ref{fig:im-105} abbiamo $T1$ in inversa e $T2$ in saturazione.\\
+	L'uscita è:
+	\[ V_u = V_{CESat} \]
+	\paragraph{$T2$ in regione normale}
+	Vediamo ora il raccordo tra i punti \textbf{A} e \textbf{B} di Figura \ref{fig:im-105}.\\\\
+	Dal momento che $T2$ passa dall'interdizione alla saturazione, dovrà necessariamente passare per la regione normale.\\
+	$T1$ potrà invece lavorare in saturazione oppure in inversa (che sono le uniche condizioni di funzionamento compatibili con $I_{C1} < 0$).\\\\
+	Ipotizziamo che $T1$ sia in saturazione.\\
+	Abbiamo:
+	\[ \begin{cases} V_{BE2} = V_\gamma \\ V_{CE2} = V_\gamma' \\ V_{CE1} = V_{CESat} \end{cases} \]
+	\[ V_i + V_{CE1} - V_{BE2} = 0 \implies V_i = V_\gamma - V_{CESat} \]
+	che, con valori tipici, risulta nella condizione:
+	\[ V_i = 0,5 \text{ V} \]
+	Allora abbiamo un tratto verticale nella caratteristica.\\
+	Questa situazione irragionevole è dovuta al modello a soglia che, come noto, non è applicabile se non si hanno resistenze sulle maglie.\\
+	Per avere la caratteristica reale dovremmo applicare il modello completo di Ebers \& Moll.
+	\paragraph{Grafico e considerazioni finali}
+	Il grafico della caratteristica ingresso-uscita è riportato in Figura \ref{fig:im-106}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{106.png}
+			\caption{Caratteristica ingresso-uscita della logica TTL.}
+			\label{fig:im-106}
+		\end{figure}
+	\end{center}
+	\subsection{Transitorio $V_H \longrightarrow V_L$}
+	Analizziamo ora il comportamento dinamico della logica TTL riportata in Figura \ref{fig:im-104}.\\\\
+	Supponiamo che l'ingresso passi dal valore alto al valore basso.\\
+	Nella logica RTL questa era la situazione critica: il transitorio di spegnimento risultava infatti molto lento rispetto al transitorio di accensione.
+	In questa situazione abbiamo $T2$ in saturazione.\\
+	Allora è:
+	\[ V_{BE2} = V_\gamma \]
+	Ipotizziamo che $T1$ sia in saturazione.\\
+	Avremmo:
+	\[ V_{CE1} = V_{CESat} \]
+	che porta a:
+	\[ V_i + V_{CE1} - V_{BE2} = 0 \implies V_i = 0,5\ \text{V} \]
+	che non è un valore basso.\\
+	Allora l'ipotesi non è ragionevole.\\\\
+	Dovendo togliere carica al dispositivo avremo:
+	\[ I_{B2} < 0 \implies I_{C1} > 0 \]
+	e, dal momento che $T1$ non può essere né saturo, né in inversa, né in interdizione, dovrà essere in regione normale.\\
+	Allora sarà:
+	\[ \begin{cases} V_{BE1} = V_\gamma \\ V_i = V_L = 0,2\ \text{V} \end{cases} \]
+	\[ V_{CC} - R_B I_{B1} - V_{BE1} = V_i \implies I_{B1} = \frac{V_{CC} - V_\gamma - V_L}{R_B} \]
+	Inoltre abbiamo:
+	\[ I_{C1} = \beta_F I_{B1} \]
+	da cui possiamo ricavare il valore di $I_{B2}$:
+	\[ I_{B2} = -\frac{\beta_F}{R_B} \cdot (V_{CC} - V_\gamma - V_L) \]
+	che può essere anche vari ordini di grandezza rispetto alla $I_B$ della logica RTL.
+	\subsection{Immunità di disturbi}
+	Dalla caratteristica, pur ricavata con il modello a soglia, notiamo che l'immunità ai disturbi è differente rispetto a quella della logica RTL.\\
+	In particolare il margine basso di immunità ai disturbi è dato da:
+	\[ N_{ML} = V_{iL\,Max} - V_{OL\,Max} \]
+	che con i valori tipici:
+	\[ \left\{ \begin{array}{l} V_{iL\,Max} = 0,5\,\mathrm{V} \\ V_{OL\,Max} = V_{CESat} = 0,2\,\mathrm{V} \end{array} \right. \]
+	porta ad un margine di 0,3 V (più basso rispetto a quello della logica RTL).\\\\
+	Introducendo allora una terza giunzione (costituita da un transistore) tra T1 e T2 possiamo traslare verso destra la caratteristica.
+	\subsection{Aumento della complessità}
+	Il dispositivo studiato nel presente Capitolo è un semplice invertitore.\\
+	Possiamo però realizzare logiche più complesse utilizzando il circuito di Figura \ref{fig:im-107} che presenta all'ingresso due transistori.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{107.png}
+			\caption{Logica TTL a due ingressi.}
+			\label{fig:im-107}
+		\end{figure}
+	\end{center}
+	In questo caso abbiamo:
+	\[ \left\{ \begin{array}{l} I_{RB} = I_{B1} - I'_{B1} \\ I_{B2} = -\left(I_{C1} + I'_{C1}\right) \\ I_B = I_{BES} \left(e^{-\frac{V_{BE}}{V_T}} - 1\right) + I_{BCS} \left(e^{-\frac{V_{BC}}{V_T}} - 1\right) \end{array} \right. \]
+	\[ \left\{ \begin{array}{l} V_{BE1} = V_u - V_{i1} \\ V'_{BE1} = V_u - V_{i2} \end{array} \right. \]
+	\[ V_{i1} > V_{i2} \Longrightarrow V_{BE} < V'_{BE1} \]
+	\[ V_{i1} < V_{i2} \Longrightarrow V_{BE} > V'_{BE1} \]
+	Abbiamo allora realizzato una porta logica NAND.\\
+	La Tabella \ref{tab:table-10} mostra quanto appena ricavato.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{i1}$ & $V_{i2}$ & $V_{u}$ \\
+			\hline
+			$V_{L}$ & $V_{L}$ & $V_{H}$ \\
+			$V_{L}$ & $V_{H}$ & $V_{H}$ \\
+			$V_{H}$ & $V_{L}$ & $V_{H}$ \\
+			$V_{H}$ & $V_{H}$ & $V_{L}$ \\
+			\hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{i1}$ & $V_{i2}$ & $V_{u}$ \\
+			\hline
+			0 & 0 & 1 \\
+			0 & 1 & 1 \\
+			1 & 0 & 1 \\
+			1 & 1 & 0 \\
+			\hline
+		\end{tabular}
+		\caption{Tabella di verità della logica TTL e rispettiva tabella di verità in logica binaria.}
+		\label{tab:table-10}
+	\end{table}
+	\subsection{Logica ECL (Emittent Coupled Logic)}
 \end{document}
