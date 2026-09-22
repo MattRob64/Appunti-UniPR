@@ -1594,4 +1594,183 @@
 		\label{tab:table-10}
 	\end{table}
 	\subsection{Logica ECL (Emittent Coupled Logic)}
+	La Logica ECL è riportata in Figura \ref{fig:im-108}.\\\\
+	Ipotizziamo anzitutto che sia $I_0$ sia $V_{REF}$ siano costanti.\\
+	Per le ipotesi fatte e per la connessione dei due transistori essi non potranno mai lavorare in regione normale inversa.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{108.png}
+			\caption{Logica ECL.}
+			\label{fig:im-108}
+		\end{figure}
+	\end{center}
+	\subsubsection{$T_1$ e $T_2$ non saturano}
+	Ipotizzando inoltre che né $T_1$ né $T_2$ siano in saturazione, per le leggi di Kirchhoff risulta:
+	\[ I_{E1} + I_{E2} = I_0 \]
+	e siccome $I_0$ è costante e positiva almeno uno dei due transistori dovrà essere acceso e, per esclusione, in regione normale diretta.\\
+	Inoltre sarà:
+	\[ V_i - V_{BE1} + V_{BE2} - V_{REF} = 0 \implies V_i = V_{BE1} - V_{BE2} + V_{REF} \]
+	e quindi il modello a soglia non è accettabile (trascurando $V_{BE1}$ e $V_{BE2}$ otterremmo una $V_i$ costante che è assurdo).\\
+	Dobbiamo allora utilizzare il modello di Ebers \& Moll.\\\\
+	Possiamo comunque sfruttare le approssimazioni della regione normale.
+	\[ I_E \approx I_S \left( e^{\frac{V_{BE}}{V_T}} - 1 \right) \]
+	Per determinare la tensione di uscita sfruttiamo la relazione:
+	\[ V_u = V_{CC} - R_C I_{C1} = V_{CC} - R_C \cdot I_S \left( e^{\frac{V_{BE1}}{V_T}} - 1 \right) \]
+	Siccome è:
+	\[ I_0 = I_{E1} + I_{E2} \]
+	e siamo in regione normale possiamo scrivere che:
+	\[ I_C = \alpha_F I_E \implies I_C \approx I_E \]
+	ed allora abbiamo:
+	\[ \begin{cases} I_{E1} \approx I_{C1} = I_S \left( e^{\frac{V_{BE1}}{V_T}} - 1 \right) \\ I_{E2} \approx I_{C2} = I_S \left( e^{\frac{V_{BE2}}{V_T}} - 1 \right) \end{cases} \]
+	\[I_0 = I_S \cdot \left( e^{\frac{V_{BE1}}{V_T}} - 1 + e^{\frac{V_{BE2}}{V_T}} - 1 \right)\]
+	Vogliamo ora riportare l'espressione di $I_0$ ad una forma dipendente solo da parametri circuitali.\\
+	Siccome almeno un transistore è acceso, possiamo trascurare il termine $-1$ poiché sicuramente almeno uno tra $e^{\frac{V_{BE1}}{V_T}}$ ed $e^{\frac{V_{BE2}}{V_T}}$ è molto maggiore di 1.\\
+	L'espressione si semplifica quindi in:
+	\[ I_0 = I_S \cdot \left( e^{\frac{V_{BE1}}{V_T}} + e^{\frac{V_{BE2}}{V_T}} \right) \]
+	\[I_S = \frac{I_0}{e^{\frac{V_{BE1}}{V_T}} + e^{\frac{V_{BE2}}{V_T}}}\]
+	Riprendendo l'espressione di $V_u$ abbiamo:
+	\[ V_u = V_{CC} - R_C \cdot \frac{I_0}{e^{\frac{V_{BE1}}{V_T}} + e^{\frac{V_{BE2}}{V_T}}} \cdot \left( e^{\frac{V_{BE1}}{V_T}} - 1 \right) \]
+	che si può vedere nella forma:
+	\[ V_u = V_{CC} - R_C I_0 \left[ \frac{e^{\frac{V_{BE1}}{V_T}}}{e^{\frac{V_{BE1}}{V_T}} + e^{\frac{V_{BE2}}{V_T}}} - \frac{1}{e^{\frac{V_{BE1}}{V_T}} + e^{\frac{V_{BE2}}{V_T}}} \right] \]
+	Sempre per le considerazioni circa l'accensione dei transistori possiamo ulteriormente semplificare l'espressione della tensione di uscita in:
+	\[ V_u = V_{CC} - R_C I_0 \left[ \frac{1}{1 + e^{\frac{V_{BE2} - V_{BE1}}{V_T}}} \right] \]
+	e, dal momento che si ha:
+	\[ V_{BE1} - V_{BE2} = V_i - V_{REF} \]
+	giungiamo all'espressione cercata nei soli parametri circuitali.
+	\[V_u = V_{CC} - R_C I_0 \cdot \left( \frac{1}{1 + e^{\frac{V_{REF} - V_i}{V_T}}} \right) \]
+	\[I_{C1} = I_0 \cdot \left( \frac{1}{1 + e^{\frac{V_{REF} - V_i}{V_T}}} \right)\]
+	Il grafico di Figura \ref{fig:image11} riporta $I_{C1}$ e di $I_{C2}$ in funzione di $V_i$ e $V_u$ in funzione di $V_i$.
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{109.png} 
+			\caption{}
+			\label{fig:im-109}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{110.png}
+			\caption{}
+			\label{fig:im-110}
+		\end{subfigure}
+		
+		\caption{Grafici di $I_{C1}$ (in rosso) e di $I_{C2}$ (in azzurro) in funzione di $V_i$ (a sinistra) e $V_u$ in funzione di $V_i$ (a destra).}
+		\label{fig:image11}
+	\end{figure}
+	La Tabella \ref{tab:table-11} mostra le grandezze fondamentali che hanno permesso di ricavare le caratteristiche di Figura \ref{fig:image11}.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{cccc}
+			\hline
+			$V_i$ & $I_{C1}$ & $I_{C2}$ & $V_u$ \\
+			\hline
+			$\ll V_{REF}$ & 0 & $I_0$ & $V_{CC}$ \\
+			$= V_{REF}$ & $\frac{I_0}{2}$ & $\frac{I_0}{2}$ & $V_{CC} - R_C \frac{I_0}{2}$ \\
+			$\gg V_{REF}$ & $I_0$ & 0 & $V_{CC} - R_C I_0$ \\
+			\hline
+		\end{tabular}
+		\caption{Grandezze fondamentali nel tracciamento dei grafici di Figura \ref{fig:image11}.}
+		\label{tab:table-11}
+	\end{table}
+	Dai grafici notiamo che la caratteristica ottenuta sembra quella di un invertitore (ad ingressi bassi corrispondono uscite alte e viceversa).\\\\
+	Affiché la logica ECL si effettivamente un invertitore dobbiamo fare in modo che il punto di ascissa $V_{REF}$ si trovi sulla bisettriche del primo e terzo quadrante decidendo opportunamente i parametri di progetto ($V_{REF}$, $I_0$ ed $R_C$).\\
+	In altre parole, perché sia un invertitore, la logica ECL deve avere una caratteristica inscritta in un quadrato di lato $R_C I_0$ la cui diagonale sia la bisettrice del primo e terzo quadrante (Figura \ref{fig:image11}).
+	\subsubsection{Condizione per cui $T1$ e $T2$ non saturano}
+	Perché $T1$ non saturi è necessario che sia:
+	\[ \left\{ \begin{array}{l} V_{CE1} > V_{CESat} \\ V_{BE1} = V_\gamma \\ V_u - V_{CE1} + V_{BE1} - V_i > 0 \end{array} \right. \]
+	Per avere una stima approssimativa della condizione di non saturazione sfruttiamo il modello a soglia con $V_\gamma = 0,7$ V e $V_{CESat} = 0,2 V$.\\
+	Risulta:
+	\[ V_u > V_i - V_\gamma - V_{CESat} = V_i - 0,5 \implies V_u = V_i - 0,5 \]
+	che è una retta parallela alla bisettrice passante per $V_i = 0,5$.\\\\
+	Allora, perché il transistore non saturi, la caratteristica ingresso uscita dovrà trovarsi al di sopra di tale retta.\\
+	Dunque il quadrato in cui andrà inscritta la caratteristica dovrà avere lato pari a 0,5.\\
+	Quindi dovrà essere:
+	\[ R_C I_0 = 0,5 \]
+	\subsection{Considerazioni sulla logica ECL}
+	Questa logica è un logica molto veloce (si tratta di una delle logiche più rapide in assoluto) poiché, dal momento che i dispositivi non saturano, non abbiamo i transitori dovuti alla loro dissaturazione.\\
+	Di contro, si tratta di una logica con una escursione massima pari a 0,5 V e quindi molto sensibile al rumore.
+	\subsubsection{Aumento dell'escursione}
+	Per aumentare l'escursione logica consideriamo il circuito di Figura \ref{fig:im-111}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{111.png}
+			\caption{Logica ECL con una maggiore escursione logica.}
+			\label{fig:im-111}
+		\end{figure}
+	\end{center}
+	Abbiamo:
+	\[ \left\{ \begin{array}{l} V _ {u} ^ {\prime} = V _ {u} - V _ {\gamma} \\ V _ {C E 1} = V _ {u} - (V _ {i} - V _ {\gamma}) \end{array} \right. \]
+	da cui troviamo:
+	\[ V _ {u} ^ {\prime} = V _ {i} - 2 V _ {\gamma} + V _ {C E S a t} = V _ {i} - 1, 2 \]
+	Abbiamo cioè traslato la retta verso destra e quindi aumentato l'escursione logica.\\\\
+	Il circuito funziona bene a vuoto ma provoca problemi di fan out: la tensione di uscita $V_u'$ si abbassa ad ogni porta connessa all'uscita.\\\\
+	Una soluzione al problema del fan out è costituita dall'utilizzo di un BJT (Figura \ref{fig:im-112}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{112.png}
+			\caption{Logica ECL con una maggiore escursione logica ed immunità al problema del fan out.}
+			\label{fig:im-112}
+		\end{figure}
+	\end{center}
+	\subsubsection{Generazione di $V_{REF}$}
+	Dobbiamo ora risolvere il problema della generazione della tensione di riferimento $V_{REF}$.\\
+	Siccome la lgocia ECL è una logica che funziona nei circuiti integrati, è impensabile l'utilizzo di un generatore di tensione costante a $V_{REF}$.\\
+	Tale tensione dovrà essere generata dall'unica tensione di alimentazione $V_{CC}$ e mantenuta costante al fine di bloccare la caratteristica nel piano.\\\\
+	Possiamo pensare di generare $V_{REF}$ con un partitore di tensione.\\
+	Questa soluzione è tuttavia inapplicabile poiché la formula del partitore di tensione vale solo a vuoto.\\\\
+	Una soluzione migliore consiste nell'uso di un ulteriore transistore in modo che la dipendenza della $V_{REF}$ dalla variazione della tensione sul partitore di tensione.\\\\
+	Anche per $I_0$ valgono le stesse considerazioni fatte per $V_{REF}$.\\
+	Una soluzione consiste nell'utilizzo di una resistenza in parallelo.\\\\
+	Quanto appena ricavato è riportato in Figura \ref{fig:im-113}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{113.png}
+			\caption{Logica ECL con una maggiore escursione logica, immunità al fan out e $V_{REF}$ ed $I_0$ costanti.}
+			\label{fig:im-113}
+		\end{figure}
+	\end{center}
+	\subsubsection{Realizzazione di una porta NOR}
+	Consideriamo infine di avere due porte di ingresso come in Figura \ref{fig:im-114}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{114.png}
+			\caption{Logica ECL con una maggiore escursione logica, immunità al fan out, $V_{REF}$ e $I_0$ costanti e due ingressi.}
+			\label{fig:im-114}
+		\end{figure}
+	\end{center}
+	In questo caso, è sufficiente che uno dei due ingressi assuma il valore alto $V_H$ perché l'uscita assuma il valore basso $V_L$.\\
+	Abbiamo dunque una porta logica NOR.\\
+	La Tabella \ref{tab:table-12} mostra quanto appena ricavato.\\\\
+	Si noti da ultimo che abbiamo a disposizione un piedino di uscita anche sul transistore $T2$.\\
+	Questo fatto rivesta una grande importanza in quanto ci permette di ricavare due uscite sincrone eliminando il fenomeno delle alee statiche.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{i1}$ & $V_{i2}$ & $V_u$ \\
+			\hline
+			$V_L$ & $V_L$ & $V_L$ \\
+			$V_L$ & $V_H$ & $V_H$ \\
+			$V_H$ & $V_L$ & $V_H$ \\
+			$V_H$ & $V_H$ & $V_H$ \\
+			\hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|c|c|c|}
+			\hline
+			$V_{i1}$ & $V_{i2}$ & $V_u$ \\
+			\hline
+			0 & 0 & 0 \\
+			0 & 1 & 1 \\
+			1 & 0 & 1 \\
+			1 & 1 & 1 \\
+			\hline
+		\end{tabular}
+		\caption{Tabella di verità della logica ECL e rispettiva tabella di verità in logica binaria.}
+		\label{tab:table-12}
+	\end{table}
 \end{document}

@@ -1,172 +1,178 @@
-\contentsline {section}{\numberline {1}Materiali Semiconduttori}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introduzione}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Semiconduttori}{4}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Premessa}{4}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Conclusioni}{4}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Sistemi Multiatomici}{5}{subsubsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.3}Il Silicio (Si)}{6}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Elettroni e Lacune}{6}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Drogaggi}{7}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Problemi}{8}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Proprietà}{9}{subsection.1.7}%
-\contentsline {subsubsection}{\numberline {1.7.1}Principio di compensazione}{9}{subsubsection.1.7.1}%
-\contentsline {subsubsection}{\numberline {1.7.2}Legge di Ohm}{9}{subsubsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.8}Drogaggi Non Uniformi}{10}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Relazioni}{12}{subsection.1.9}%
-\contentsline {section}{\numberline {2}Giunzione \textit {pn}}{12}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Ricapitolando}{12}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Applicazione del modello}{13}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}La Giunzone \textit {pn}}{13}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Intervallo $(-\infty ; -w_p)$}{14}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Intervallo $(-w_p; w_n)$}{15}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Intervallo $(-w_p; 0)$}{15}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Intervallo $(0; w_n)$}{16}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Intervallo $(w_n; +\infty )$}{16}{subsubsection.2.3.5}%
-\contentsline {subsubsection}{\numberline {2.3.6}Grafici}{16}{subsubsection.2.3.6}%
-\contentsline {subsection}{\numberline {2.4}Validazione}{17}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Considerazioni}{18}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Funzionamento}{18}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Utilità del Diodo}{21}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Modello a Soglia}{24}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Applicazione del Modello a Soglia}{24}{subsection.2.9}%
-\contentsline {subsubsection}{\numberline {2.9.1}Circuito Raddrizzatore}{24}{subsubsection.2.9.1}%
-\contentsline {subsubsection}{\numberline {2.9.2}Circuito Limitatore Positivo}{25}{subsubsection.2.9.2}%
-\contentsline {subsubsection}{\numberline {2.9.3}Circuito Limitatore Negativo}{26}{subsubsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.10}Limitatore Doppio}{27}{subsection.2.10}%
-\contentsline {subsubsection}{\numberline {2.10.1}D1 OFF e D2 OFF}{28}{subsubsection.2.10.1}%
-\contentsline {subsubsection}{\numberline {2.10.2}D1 ON e D2 OFF}{28}{subsubsection.2.10.2}%
-\contentsline {subsubsection}{\numberline {2.10.3}D1 ON e D2 ON}{28}{subsubsection.2.10.3}%
-\contentsline {subsubsection}{\numberline {2.10.4}D1 OFF e D2 ON}{28}{subsubsection.2.10.4}%
-\contentsline {subsubsection}{\numberline {2.10.5}Grafico e Considerazioni}{28}{subsubsection.2.10.5}%
-\contentsline {subsection}{\numberline {2.11}Rivelatore di Massimo}{29}{subsection.2.11}%
-\contentsline {subsubsection}{\numberline {2.11.1}D1 OFF D2 OFF}{30}{subsubsection.2.11.1}%
-\contentsline {subsubsection}{\numberline {2.11.2}D1 ON D2 OFF}{30}{subsubsection.2.11.2}%
-\contentsline {subsubsection}{\numberline {2.11.3}D1 ON D2 ON}{30}{subsubsection.2.11.3}%
-\contentsline {subsubsection}{\numberline {2.11.4}D1 OFF D2 ON}{30}{subsubsection.2.11.4}%
-\contentsline {subsubsection}{\numberline {2.11.5}Considerazioni}{30}{subsubsection.2.11.5}%
-\contentsline {subsubsection}{\numberline {2.11.6}Utilizzo del rivelatore di massimo}{31}{subsubsection.2.11.6}%
-\contentsline {subsection}{\numberline {2.12}Rilevatore di Minimo}{31}{subsection.2.12}%
-\contentsline {subsubsection}{\numberline {2.12.1}D1 OFF D2 OFF}{31}{subsubsection.2.12.1}%
-\contentsline {subsubsection}{\numberline {2.12.2}D1 ON D2 OFF}{32}{subsubsection.2.12.2}%
-\contentsline {subsubsection}{\numberline {2.12.3}D1 ON D2 ON}{32}{subsubsection.2.12.3}%
-\contentsline {subsubsection}{\numberline {2.12.4}D1 OFF D2 ON}{32}{subsubsection.2.12.4}%
-\contentsline {subsubsection}{\numberline {2.12.5}Considerazioni}{32}{subsubsection.2.12.5}%
-\contentsline {subsubsection}{\numberline {2.12.6}Utilizzo del rilevatore di minimo}{32}{subsubsection.2.12.6}%
-\contentsline {subsection}{\numberline {2.13}Raddrizzatore a doppia semionda}{33}{subsection.2.13}%
-\contentsline {subsubsection}{\numberline {2.13.1}D1 ON}{33}{subsubsection.2.13.1}%
-\contentsline {subsubsection}{\numberline {2.13.2}D2 ON}{34}{subsubsection.2.13.2}%
-\contentsline {subsubsection}{\numberline {2.13.3}D1, D2, D3 e D4 OFF}{34}{subsubsection.2.13.3}%
-\contentsline {subsubsection}{\numberline {2.13.4}D1 ON, D2 OFF, D3 OFF e D4 ON}{35}{subsubsection.2.13.4}%
-\contentsline {subsubsection}{\numberline {2.13.5}D1 OFF, D2 ON, D3 ON e D4 OFF}{35}{subsubsection.2.13.5}%
-\contentsline {subsubsection}{\numberline {2.13.6}Grafico e considerazioni}{35}{subsubsection.2.13.6}%
-\contentsline {subsection}{\numberline {2.14}Convertitore alternata continua}{36}{subsection.2.14}%
-\contentsline {subsubsection}{\numberline {2.14.1}Diodo acceso}{37}{subsubsection.2.14.1}%
-\contentsline {subsubsection}{\numberline {2.14.2}Spegnimento del diodo}{37}{subsubsection.2.14.2}%
-\contentsline {subsubsection}{\numberline {2.14.3}Diodo spento}{38}{subsubsection.2.14.3}%
-\contentsline {subsection}{\numberline {2.15}Problemi del diodo}{38}{subsection.2.15}%
-\contentsline {subsection}{\numberline {2.16}Modello Dinamico}{39}{subsection.2.16}%
-\contentsline {subsection}{\numberline {2.17}Analisi DInamica}{41}{subsection.2.17}%
-\contentsline {subsubsection}{\numberline {2.17.1}Situazone per $t<0$}{42}{subsubsection.2.17.1}%
-\contentsline {subsubsection}{\numberline {2.17.2}Situazione per $t = 0^+$: transitorio $A \rightarrow C$}{42}{subsubsection.2.17.2}%
-\contentsline {subsubsection}{\numberline {2.17.3}Situazione per $t > 0$: transitorio $C \rightarrow B$}{43}{subsubsection.2.17.3}%
-\contentsline {subsubsection}{\numberline {2.17.4}Grafici}{44}{subsubsection.2.17.4}%
-\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare \textit {BJT}}{45}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}Introduzione}{45}{subsubsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.1}Diodo $npn$}{45}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Modello di Ebers \& Moll}{46}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Semplificazioni}{48}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Regione $V_{BE} < 0$ e $V_{BC} < 0$}{49}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Regione $V_{BE} < 0$ e $V_{BC} > 0$}{50}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Analisi Qualitativa}{50}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Analisi Quantitativa}{50}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Regione $V_{BE} > 0$ e $V_{BC} > 0$}{51}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Regioni di Funzionamento}{52}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Applicazione}{52}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Configurazioni Possibili}{53}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Connessione in emettitore comune}{53}{subsection.3.10}%
-\contentsline {subsubsection}{\numberline {3.10.1}Ingresso}{54}{subsubsection.3.10.1}%
-\contentsline {subsubsection}{\numberline {3.10.2}Uscita}{54}{subsubsection.3.10.2}%
-\contentsline {subsection}{\numberline {3.11}Relazione tra ingresso e uscita}{55}{subsection.3.11}%
-\contentsline {subsubsection}{\numberline {3.11.1}Regione di Interdizione}{57}{subsubsection.3.11.1}%
-\contentsline {subsubsection}{\numberline {3.11.2}Regione Normale}{57}{subsubsection.3.11.2}%
-\contentsline {subsubsection}{\numberline {3.11.3}Regione di Saturazione}{58}{subsubsection.3.11.3}%
-\contentsline {subsubsection}{\numberline {3.11.4}Riassunto}{58}{subsubsection.3.11.4}%
-\contentsline {subsection}{\numberline {3.12}Modello a Soglia}{60}{subsection.3.12}%
-\contentsline {subsubsection}{\numberline {3.12.1}Ingresso}{60}{subsubsection.3.12.1}%
-\contentsline {subsubsection}{\numberline {3.12.2}Uscita}{61}{subsubsection.3.12.2}%
-\contentsline {subsubsection}{\numberline {3.12.3}Riassunto}{61}{subsubsection.3.12.3}%
-\contentsline {subsection}{\numberline {3.13}Invertitore RTL}{61}{subsection.3.13}%
-\contentsline {subsubsection}{\numberline {3.13.1}Considerazioni iniziali}{61}{subsubsection.3.13.1}%
-\contentsline {subsubsection}{\numberline {3.13.2}Regione di Interdizione}{62}{subsubsection.3.13.2}%
-\contentsline {subsubsection}{\numberline {3.13.3}Regione Normale}{62}{subsubsection.3.13.3}%
-\contentsline {subsubsection}{\numberline {3.13.4}regione di Saturazione}{62}{subsubsection.3.13.4}%
-\contentsline {subsubsection}{\numberline {3.13.5}Considerazioni finali}{63}{subsubsection.3.13.5}%
-\contentsline {subsection}{\numberline {3.14}Invertitore ad accoppiamento diretto}{63}{subsection.3.14}%
-\contentsline {subsubsection}{\numberline {3.14.1}Considerazioni iniziali}{63}{subsubsection.3.14.1}%
-\contentsline {subsubsection}{\numberline {3.14.2}Regione di interdizione}{64}{subsubsection.3.14.2}%
-\contentsline {subsubsection}{\numberline {3.14.3}Regione normale}{64}{subsubsection.3.14.3}%
-\contentsline {subsubsection}{\numberline {3.14.4}Regione di saturazione}{64}{subsubsection.3.14.4}%
-\contentsline {subsubsection}{\numberline {3.14.5}Considerazioni finali}{64}{subsubsection.3.14.5}%
-\contentsline {subsection}{\numberline {3.15}Usabilità del modello a soglia}{65}{subsection.3.15}%
-\contentsline {subsection}{\numberline {3.16}Qualità dell'invertitore RTL}{66}{subsection.3.16}%
-\contentsline {subsubsection}{\numberline {3.16.1}Invertitore}{66}{subsubsection.3.16.1}%
-\contentsline {subsubsection}{\numberline {3.16.2}Resistenza ai disturbi (Effeto del rumore)}{66}{subsubsection.3.16.2}%
-\contentsline {paragraph}{\numberline {3.16.2.1}Segnale analogico}{66}{paragraph.3.16.2.1}%
-\contentsline {paragraph}{\numberline {3.16.2.2}Segnale digitale}{66}{paragraph.3.16.2.2}%
-\contentsline {subsubsection}{\numberline {3.16.3}Immunità ai disturbi}{67}{subsubsection.3.16.3}%
-\contentsline {paragraph}{\numberline {3.16.3.1}Valori fondamentali}{67}{paragraph.3.16.3.1}%
-\contentsline {paragraph}{\numberline {3.16.3.2}Esempio Pratico}{68}{paragraph.3.16.3.2}%
-\contentsline {subparagraph}{Regione di interdizione}{68}{subparagraph*.83}%
-\contentsline {subparagraph}{Regione normale}{69}{subparagraph*.84}%
-\contentsline {subparagraph}{Regione di saturazione}{69}{subparagraph*.85}%
-\contentsline {subparagraph}{Considerazioni finali}{69}{subparagraph*.86}%
-\contentsline {subsection}{\numberline {3.17}Generalizzazioni}{69}{subsection.3.17}%
-\contentsline {subsection}{\numberline {3.18}Generalizzazioni a funzioni a più ingressi}{69}{subsection.3.18}%
-\contentsline {subsubsection}{\numberline {3.18.1}$V_1 = V_L$ ; $V_2 = V_L$}{70}{subsubsection.3.18.1}%
-\contentsline {subsubsection}{\numberline {3.18.2}$V_1 = V_L$ ; $V_2 = V_H$}{70}{subsubsection.3.18.2}%
-\contentsline {subsubsection}{\numberline {3.18.3}$V_1 = V_H$ ; $V_2 = V_L$}{70}{subsubsection.3.18.3}%
-\contentsline {subsubsection}{\numberline {3.18.4}$V_1 = V_H$ ; $V_2 = V_H$}{71}{subsubsection.3.18.4}%
-\contentsline {subsubsection}{\numberline {3.18.5}Considerazioni finali}{71}{subsubsection.3.18.5}%
-\contentsline {subsection}{\numberline {3.19}Generalizzazione a qualsiasi invertitore}{71}{subsection.3.19}%
-\contentsline {subsection}{\numberline {3.20}Generalizzazione di $N_M$}{73}{subsection.3.20}%
-\contentsline {subsection}{\numberline {3.21}Incongruenza}{74}{subsection.3.21}%
-\contentsline {subsection}{\numberline {3.22}Rete di invertitori}{74}{subsection.3.22}%
-\contentsline {subsubsection}{\numberline {3.22.1}Considerazioni preliminari}{75}{subsubsection.3.22.1}%
-\contentsline {subsubsection}{\numberline {3.22.2}$T$ in interdizione}{75}{subsubsection.3.22.2}%
-\contentsline {subsubsection}{\numberline {3.22.3}$T$ in regione normale}{75}{subsubsection.3.22.3}%
-\contentsline {paragraph}{\numberline {3.22.3.1}$T'$ in interdizione}{76}{paragraph.3.22.3.1}%
-\contentsline {paragraph}{\numberline {3.22.3.2}Considerazioni finali}{76}{paragraph.3.22.3.2}%
-\contentsline {subsection}{\numberline {3.23}Aumento del fan out}{76}{subsection.3.23}%
-\contentsline {subsubsection}{\numberline {3.23.1}Considerazioni iniziali}{76}{subsubsection.3.23.1}%
-\contentsline {subsubsection}{\numberline {3.23.2}$T$ in interdizione}{77}{subsubsection.3.23.2}%
-\contentsline {subsubsection}{\numberline {3.23.3}$T$ in regione normale}{77}{subsubsection.3.23.3}%
-\contentsline {subsubsection}{\numberline {3.23.4}$T'$ in interdizione}{77}{subsubsection.3.23.4}%
-\contentsline {subsubsection}{\numberline {3.23.5}Considerazioni finali}{77}{subsubsection.3.23.5}%
-\contentsline {subsection}{\numberline {3.24}Modello dinamico del BJT}{78}{subsection.3.24}%
-\contentsline {subsubsection}{\numberline {3.24.1}Polarizzazione diretta}{78}{subsubsection.3.24.1}%
-\contentsline {subsubsection}{\numberline {3.24.2}Polarizzazione inversa}{79}{subsubsection.3.24.2}%
-\contentsline {subsubsection}{\numberline {3.24.3}Regione di saturazione}{79}{subsubsection.3.24.3}%
-\contentsline {subsubsection}{\numberline {3.24.4}Modello dinamico}{79}{subsubsection.3.24.4}%
-\contentsline {subsection}{\numberline {3.25}Risposta dinamica}{80}{subsection.3.25}%
-\contentsline {subsubsection}{\numberline {3.25.1}Situazione per $t < 0$ (punto A)}{80}{subsubsection.3.25.1}%
-\contentsline {subsubsection}{\numberline {3.25.2}Situazione per $t \rightarrow +\infty $ (punto B)}{81}{subsubsection.3.25.2}%
-\contentsline {subsubsection}{\numberline {3.25.3}Situazione per $t > 0$ (punti C e D)}{81}{subsubsection.3.25.3}%
-\contentsline {paragraph}{\numberline {3.25.3.1}Tratto 1}{82}{paragraph.3.25.3.1}%
-\contentsline {paragraph}{\numberline {3.25.3.2}Tratto 2}{82}{paragraph.3.25.3.2}%
-\contentsline {paragraph}{\numberline {3.25.3.3}Tratto 3}{83}{paragraph.3.25.3.3}%
-\contentsline {subsubsection}{\numberline {3.25.4}Transitorio di spegnimento}{83}{subsubsection.3.25.4}%
-\contentsline {paragraph}{\numberline {3.25.4.1}Tratto 1}{83}{paragraph.3.25.4.1}%
-\contentsline {paragraph}{\numberline {3.25.4.2}Tratto 2}{83}{paragraph.3.25.4.2}%
-\contentsline {paragraph}{\numberline {3.25.4.3}Tratto 3}{83}{paragraph.3.25.4.3}%
-\contentsline {subsubsection}{\numberline {3.25.5}Grafici e considerazioni finali}{84}{subsubsection.3.25.5}%
-\contentsline {subsection}{\numberline {3.26}Logica TTL (Transistor Transistor Logic) statica}{84}{subsection.3.26}%
-\contentsline {subsubsection}{\numberline {3.26.1}Considerazioni iniziali}{85}{subsubsection.3.26.1}%
-\contentsline {subsubsection}{\numberline {3.26.2}$T2$ in interdizione}{85}{subsubsection.3.26.2}%
-\contentsline {subsubsection}{\numberline {3.26.3}$T2$ in saturazione}{85}{subsubsection.3.26.3}%
-\contentsline {paragraph}{\numberline {3.26.3.1}$T2$ in regione normale}{86}{paragraph.3.26.3.1}%
-\contentsline {paragraph}{\numberline {3.26.3.2}Grafico e considerazioni finali}{86}{paragraph.3.26.3.2}%
-\contentsline {subsection}{\numberline {3.27}Transitorio $V_H \DOTSB \relbar \joinrel \rightarrow V_L$}{87}{subsection.3.27}%
-\contentsline {subsection}{\numberline {3.28}Immunità di disturbi}{87}{subsection.3.28}%
-\contentsline {subsection}{\numberline {3.29}Aumento della complessità}{88}{subsection.3.29}%
-\contentsline {subsection}{\numberline {3.30}Logica ECL (Emittent Coupled Logic)}{88}{subsection.3.30}%
-\contentsline {section}{\numberline {4}Transistore MOSFET}{88}{section.4}%
+\contentsline {section}{\numberline {1}Materiali Semiconduttori}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduzione}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Semiconduttori}{5}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Premessa}{5}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Conclusioni}{5}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Sistemi Multiatomici}{6}{subsubsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.3}Il Silicio (Si)}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Elettroni e Lacune}{7}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Drogaggi}{8}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Problemi}{9}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Proprietà}{10}{subsection.1.7}%
+\contentsline {subsubsection}{\numberline {1.7.1}Principio di compensazione}{10}{subsubsection.1.7.1}%
+\contentsline {subsubsection}{\numberline {1.7.2}Legge di Ohm}{10}{subsubsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.8}Drogaggi Non Uniformi}{11}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Relazioni}{13}{subsection.1.9}%
+\contentsline {section}{\numberline {2}Giunzione \textit {pn}}{13}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ricapitolando}{13}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Applicazione del modello}{14}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}La Giunzone \textit {pn}}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Intervallo $(-\infty ; -w_p)$}{15}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Intervallo $(-w_p; w_n)$}{16}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Intervallo $(-w_p; 0)$}{16}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Intervallo $(0; w_n)$}{17}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Intervallo $(w_n; +\infty )$}{17}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Grafici}{17}{subsubsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.4}Validazione}{18}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Considerazioni}{19}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Funzionamento}{19}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Utilità del Diodo}{22}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Modello a Soglia}{25}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Applicazione del Modello a Soglia}{25}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Circuito Raddrizzatore}{25}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.2}Circuito Limitatore Positivo}{26}{subsubsection.2.9.2}%
+\contentsline {subsubsection}{\numberline {2.9.3}Circuito Limitatore Negativo}{27}{subsubsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.10}Limitatore Doppio}{28}{subsection.2.10}%
+\contentsline {subsubsection}{\numberline {2.10.1}D1 OFF e D2 OFF}{29}{subsubsection.2.10.1}%
+\contentsline {subsubsection}{\numberline {2.10.2}D1 ON e D2 OFF}{29}{subsubsection.2.10.2}%
+\contentsline {subsubsection}{\numberline {2.10.3}D1 ON e D2 ON}{29}{subsubsection.2.10.3}%
+\contentsline {subsubsection}{\numberline {2.10.4}D1 OFF e D2 ON}{29}{subsubsection.2.10.4}%
+\contentsline {subsubsection}{\numberline {2.10.5}Grafico e Considerazioni}{29}{subsubsection.2.10.5}%
+\contentsline {subsection}{\numberline {2.11}Rivelatore di Massimo}{30}{subsection.2.11}%
+\contentsline {subsubsection}{\numberline {2.11.1}D1 OFF D2 OFF}{31}{subsubsection.2.11.1}%
+\contentsline {subsubsection}{\numberline {2.11.2}D1 ON D2 OFF}{31}{subsubsection.2.11.2}%
+\contentsline {subsubsection}{\numberline {2.11.3}D1 ON D2 ON}{31}{subsubsection.2.11.3}%
+\contentsline {subsubsection}{\numberline {2.11.4}D1 OFF D2 ON}{31}{subsubsection.2.11.4}%
+\contentsline {subsubsection}{\numberline {2.11.5}Considerazioni}{31}{subsubsection.2.11.5}%
+\contentsline {subsubsection}{\numberline {2.11.6}Utilizzo del rivelatore di massimo}{32}{subsubsection.2.11.6}%
+\contentsline {subsection}{\numberline {2.12}Rilevatore di Minimo}{32}{subsection.2.12}%
+\contentsline {subsubsection}{\numberline {2.12.1}D1 OFF D2 OFF}{32}{subsubsection.2.12.1}%
+\contentsline {subsubsection}{\numberline {2.12.2}D1 ON D2 OFF}{33}{subsubsection.2.12.2}%
+\contentsline {subsubsection}{\numberline {2.12.3}D1 ON D2 ON}{33}{subsubsection.2.12.3}%
+\contentsline {subsubsection}{\numberline {2.12.4}D1 OFF D2 ON}{33}{subsubsection.2.12.4}%
+\contentsline {subsubsection}{\numberline {2.12.5}Considerazioni}{33}{subsubsection.2.12.5}%
+\contentsline {subsubsection}{\numberline {2.12.6}Utilizzo del rilevatore di minimo}{33}{subsubsection.2.12.6}%
+\contentsline {subsection}{\numberline {2.13}Raddrizzatore a doppia semionda}{34}{subsection.2.13}%
+\contentsline {subsubsection}{\numberline {2.13.1}D1 ON}{34}{subsubsection.2.13.1}%
+\contentsline {subsubsection}{\numberline {2.13.2}D2 ON}{35}{subsubsection.2.13.2}%
+\contentsline {subsubsection}{\numberline {2.13.3}D1, D2, D3 e D4 OFF}{35}{subsubsection.2.13.3}%
+\contentsline {subsubsection}{\numberline {2.13.4}D1 ON, D2 OFF, D3 OFF e D4 ON}{36}{subsubsection.2.13.4}%
+\contentsline {subsubsection}{\numberline {2.13.5}D1 OFF, D2 ON, D3 ON e D4 OFF}{36}{subsubsection.2.13.5}%
+\contentsline {subsubsection}{\numberline {2.13.6}Grafico e considerazioni}{36}{subsubsection.2.13.6}%
+\contentsline {subsection}{\numberline {2.14}Convertitore alternata continua}{37}{subsection.2.14}%
+\contentsline {subsubsection}{\numberline {2.14.1}Diodo acceso}{38}{subsubsection.2.14.1}%
+\contentsline {subsubsection}{\numberline {2.14.2}Spegnimento del diodo}{38}{subsubsection.2.14.2}%
+\contentsline {subsubsection}{\numberline {2.14.3}Diodo spento}{39}{subsubsection.2.14.3}%
+\contentsline {subsection}{\numberline {2.15}Problemi del diodo}{39}{subsection.2.15}%
+\contentsline {subsection}{\numberline {2.16}Modello Dinamico}{40}{subsection.2.16}%
+\contentsline {subsection}{\numberline {2.17}Analisi DInamica}{42}{subsection.2.17}%
+\contentsline {subsubsection}{\numberline {2.17.1}Situazone per $t<0$}{43}{subsubsection.2.17.1}%
+\contentsline {subsubsection}{\numberline {2.17.2}Situazione per $t = 0^+$: transitorio $A \rightarrow C$}{43}{subsubsection.2.17.2}%
+\contentsline {subsubsection}{\numberline {2.17.3}Situazione per $t > 0$: transitorio $C \rightarrow B$}{44}{subsubsection.2.17.3}%
+\contentsline {subsubsection}{\numberline {2.17.4}Grafici}{45}{subsubsection.2.17.4}%
+\contentsline {section}{\numberline {3}Transistore a Giunzione Bipolare \textit {BJT}}{46}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Introduzione}{46}{subsubsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.1}Diodo $npn$}{46}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modello di Ebers \& Moll}{47}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Semplificazioni}{49}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Regione $V_{BE} < 0$ e $V_{BC} < 0$}{50}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Regione $V_{BE} < 0$ e $V_{BC} > 0$}{51}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Analisi Qualitativa}{51}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Analisi Quantitativa}{51}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Regione $V_{BE} > 0$ e $V_{BC} > 0$}{52}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Regioni di Funzionamento}{53}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Applicazione}{53}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Configurazioni Possibili}{54}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Connessione in emettitore comune}{54}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Ingresso}{55}{subsubsection.3.10.1}%
+\contentsline {subsubsection}{\numberline {3.10.2}Uscita}{55}{subsubsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.11}Relazione tra ingresso e uscita}{56}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Regione di Interdizione}{58}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {3.11.2}Regione Normale}{58}{subsubsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.3}Regione di Saturazione}{59}{subsubsection.3.11.3}%
+\contentsline {subsubsection}{\numberline {3.11.4}Riassunto}{59}{subsubsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.12}Modello a Soglia}{61}{subsection.3.12}%
+\contentsline {subsubsection}{\numberline {3.12.1}Ingresso}{61}{subsubsection.3.12.1}%
+\contentsline {subsubsection}{\numberline {3.12.2}Uscita}{62}{subsubsection.3.12.2}%
+\contentsline {subsubsection}{\numberline {3.12.3}Riassunto}{62}{subsubsection.3.12.3}%
+\contentsline {subsection}{\numberline {3.13}Invertitore RTL}{62}{subsection.3.13}%
+\contentsline {subsubsection}{\numberline {3.13.1}Considerazioni iniziali}{62}{subsubsection.3.13.1}%
+\contentsline {subsubsection}{\numberline {3.13.2}Regione di Interdizione}{63}{subsubsection.3.13.2}%
+\contentsline {subsubsection}{\numberline {3.13.3}Regione Normale}{63}{subsubsection.3.13.3}%
+\contentsline {subsubsection}{\numberline {3.13.4}regione di Saturazione}{63}{subsubsection.3.13.4}%
+\contentsline {subsubsection}{\numberline {3.13.5}Considerazioni finali}{64}{subsubsection.3.13.5}%
+\contentsline {subsection}{\numberline {3.14}Invertitore ad accoppiamento diretto}{64}{subsection.3.14}%
+\contentsline {subsubsection}{\numberline {3.14.1}Considerazioni iniziali}{64}{subsubsection.3.14.1}%
+\contentsline {subsubsection}{\numberline {3.14.2}Regione di interdizione}{65}{subsubsection.3.14.2}%
+\contentsline {subsubsection}{\numberline {3.14.3}Regione normale}{65}{subsubsection.3.14.3}%
+\contentsline {subsubsection}{\numberline {3.14.4}Regione di saturazione}{65}{subsubsection.3.14.4}%
+\contentsline {subsubsection}{\numberline {3.14.5}Considerazioni finali}{65}{subsubsection.3.14.5}%
+\contentsline {subsection}{\numberline {3.15}Usabilità del modello a soglia}{66}{subsection.3.15}%
+\contentsline {subsection}{\numberline {3.16}Qualità dell'invertitore RTL}{67}{subsection.3.16}%
+\contentsline {subsubsection}{\numberline {3.16.1}Invertitore}{67}{subsubsection.3.16.1}%
+\contentsline {subsubsection}{\numberline {3.16.2}Resistenza ai disturbi (Effeto del rumore)}{67}{subsubsection.3.16.2}%
+\contentsline {paragraph}{\numberline {3.16.2.1}Segnale analogico}{67}{paragraph.3.16.2.1}%
+\contentsline {paragraph}{\numberline {3.16.2.2}Segnale digitale}{67}{paragraph.3.16.2.2}%
+\contentsline {subsubsection}{\numberline {3.16.3}Immunità ai disturbi}{68}{subsubsection.3.16.3}%
+\contentsline {paragraph}{\numberline {3.16.3.1}Valori fondamentali}{68}{paragraph.3.16.3.1}%
+\contentsline {paragraph}{\numberline {3.16.3.2}Esempio Pratico}{69}{paragraph.3.16.3.2}%
+\contentsline {subparagraph}{Regione di interdizione}{69}{subparagraph*.83}%
+\contentsline {subparagraph}{Regione normale}{70}{subparagraph*.84}%
+\contentsline {subparagraph}{Regione di saturazione}{70}{subparagraph*.85}%
+\contentsline {subparagraph}{Considerazioni finali}{70}{subparagraph*.86}%
+\contentsline {subsection}{\numberline {3.17}Generalizzazioni}{70}{subsection.3.17}%
+\contentsline {subsection}{\numberline {3.18}Generalizzazioni a funzioni a più ingressi}{70}{subsection.3.18}%
+\contentsline {subsubsection}{\numberline {3.18.1}$V_1 = V_L$ ; $V_2 = V_L$}{71}{subsubsection.3.18.1}%
+\contentsline {subsubsection}{\numberline {3.18.2}$V_1 = V_L$ ; $V_2 = V_H$}{71}{subsubsection.3.18.2}%
+\contentsline {subsubsection}{\numberline {3.18.3}$V_1 = V_H$ ; $V_2 = V_L$}{71}{subsubsection.3.18.3}%
+\contentsline {subsubsection}{\numberline {3.18.4}$V_1 = V_H$ ; $V_2 = V_H$}{72}{subsubsection.3.18.4}%
+\contentsline {subsubsection}{\numberline {3.18.5}Considerazioni finali}{72}{subsubsection.3.18.5}%
+\contentsline {subsection}{\numberline {3.19}Generalizzazione a qualsiasi invertitore}{72}{subsection.3.19}%
+\contentsline {subsection}{\numberline {3.20}Generalizzazione di $N_M$}{74}{subsection.3.20}%
+\contentsline {subsection}{\numberline {3.21}Incongruenza}{75}{subsection.3.21}%
+\contentsline {subsection}{\numberline {3.22}Rete di invertitori}{75}{subsection.3.22}%
+\contentsline {subsubsection}{\numberline {3.22.1}Considerazioni preliminari}{76}{subsubsection.3.22.1}%
+\contentsline {subsubsection}{\numberline {3.22.2}$T$ in interdizione}{76}{subsubsection.3.22.2}%
+\contentsline {subsubsection}{\numberline {3.22.3}$T$ in regione normale}{76}{subsubsection.3.22.3}%
+\contentsline {paragraph}{\numberline {3.22.3.1}$T'$ in interdizione}{77}{paragraph.3.22.3.1}%
+\contentsline {paragraph}{\numberline {3.22.3.2}Considerazioni finali}{77}{paragraph.3.22.3.2}%
+\contentsline {subsection}{\numberline {3.23}Aumento del fan out}{77}{subsection.3.23}%
+\contentsline {subsubsection}{\numberline {3.23.1}Considerazioni iniziali}{77}{subsubsection.3.23.1}%
+\contentsline {subsubsection}{\numberline {3.23.2}$T$ in interdizione}{78}{subsubsection.3.23.2}%
+\contentsline {subsubsection}{\numberline {3.23.3}$T$ in regione normale}{78}{subsubsection.3.23.3}%
+\contentsline {subsubsection}{\numberline {3.23.4}$T'$ in interdizione}{78}{subsubsection.3.23.4}%
+\contentsline {subsubsection}{\numberline {3.23.5}Considerazioni finali}{78}{subsubsection.3.23.5}%
+\contentsline {subsection}{\numberline {3.24}Modello dinamico del BJT}{79}{subsection.3.24}%
+\contentsline {subsubsection}{\numberline {3.24.1}Polarizzazione diretta}{79}{subsubsection.3.24.1}%
+\contentsline {subsubsection}{\numberline {3.24.2}Polarizzazione inversa}{80}{subsubsection.3.24.2}%
+\contentsline {subsubsection}{\numberline {3.24.3}Regione di saturazione}{80}{subsubsection.3.24.3}%
+\contentsline {subsubsection}{\numberline {3.24.4}Modello dinamico}{80}{subsubsection.3.24.4}%
+\contentsline {subsection}{\numberline {3.25}Risposta dinamica}{81}{subsection.3.25}%
+\contentsline {subsubsection}{\numberline {3.25.1}Situazione per $t < 0$ (punto A)}{81}{subsubsection.3.25.1}%
+\contentsline {subsubsection}{\numberline {3.25.2}Situazione per $t \rightarrow +\infty $ (punto B)}{82}{subsubsection.3.25.2}%
+\contentsline {subsubsection}{\numberline {3.25.3}Situazione per $t > 0$ (punti C e D)}{82}{subsubsection.3.25.3}%
+\contentsline {paragraph}{\numberline {3.25.3.1}Tratto 1}{83}{paragraph.3.25.3.1}%
+\contentsline {paragraph}{\numberline {3.25.3.2}Tratto 2}{83}{paragraph.3.25.3.2}%
+\contentsline {paragraph}{\numberline {3.25.3.3}Tratto 3}{84}{paragraph.3.25.3.3}%
+\contentsline {subsubsection}{\numberline {3.25.4}Transitorio di spegnimento}{84}{subsubsection.3.25.4}%
+\contentsline {paragraph}{\numberline {3.25.4.1}Tratto 1}{84}{paragraph.3.25.4.1}%
+\contentsline {paragraph}{\numberline {3.25.4.2}Tratto 2}{84}{paragraph.3.25.4.2}%
+\contentsline {paragraph}{\numberline {3.25.4.3}Tratto 3}{84}{paragraph.3.25.4.3}%
+\contentsline {subsubsection}{\numberline {3.25.5}Grafici e considerazioni finali}{85}{subsubsection.3.25.5}%
+\contentsline {subsection}{\numberline {3.26}Logica TTL (Transistor Transistor Logic) statica}{85}{subsection.3.26}%
+\contentsline {subsubsection}{\numberline {3.26.1}Considerazioni iniziali}{86}{subsubsection.3.26.1}%
+\contentsline {subsubsection}{\numberline {3.26.2}$T2$ in interdizione}{86}{subsubsection.3.26.2}%
+\contentsline {subsubsection}{\numberline {3.26.3}$T2$ in saturazione}{86}{subsubsection.3.26.3}%
+\contentsline {paragraph}{\numberline {3.26.3.1}$T2$ in regione normale}{87}{paragraph.3.26.3.1}%
+\contentsline {paragraph}{\numberline {3.26.3.2}Grafico e considerazioni finali}{87}{paragraph.3.26.3.2}%
+\contentsline {subsection}{\numberline {3.27}Transitorio $V_H \DOTSB \relbar \joinrel \rightarrow V_L$}{88}{subsection.3.27}%
+\contentsline {subsection}{\numberline {3.28}Immunità di disturbi}{88}{subsection.3.28}%
+\contentsline {subsection}{\numberline {3.29}Aumento della complessità}{89}{subsection.3.29}%
+\contentsline {subsection}{\numberline {3.30}Logica ECL (Emittent Coupled Logic)}{89}{subsection.3.30}%
+\contentsline {subsubsection}{\numberline {3.30.1}$T_1$ e $T_2$ non saturano}{90}{subsubsection.3.30.1}%
+\contentsline {subsubsection}{\numberline {3.30.2}Condizione per cui $T1$ e $T2$ non saturano}{91}{subsubsection.3.30.2}%
+\contentsline {subsection}{\numberline {3.31}Considerazioni sulla logica ECL}{92}{subsection.3.31}%
+\contentsline {subsubsection}{\numberline {3.31.1}Aumento dell'escursione}{92}{subsubsection.3.31.1}%
+\contentsline {subsubsection}{\numberline {3.31.2}Generazione di $V_{REF}$}{92}{subsubsection.3.31.2}%
+\contentsline {subsubsection}{\numberline {3.31.3}Realizzazione di una porta NOR}{93}{subsubsection.3.31.3}%
+\contentsline {section}{\numberline {4}Transistore MOSFET}{93}{section.4}%
