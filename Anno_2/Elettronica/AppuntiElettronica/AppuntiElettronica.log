@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  22 SEP 2026 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.1)  25 SEP 2026 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,7 +1215,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `AppuntiElettronica.out'.
 
-<./img/0.cover.jpg, id=706, 1204.5pt x 602.25pt>
+<./img/0.cover.jpg, id=915, 1204.5pt x 602.25pt>
 File: ./img/0.cover.jpg Graphic file (type jpg)
 <use ./img/0.cover.jpg>
 Package pdftex.def Info: ./img/0.cover.jpg  used on input line 82.
@@ -1251,18 +1251,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.49 ...1}D1 OFF D2 OFF}{32}{subsubsection.2.12.1}
+l.49 ...1}D1 OFF D2 OFF}{34}{subsubsection.2.12.1}
                                                   % [1] [2] [3])
 \tf@toc=\write5
 \openout5 = `AppuntiElettronica.toc'.
 
  [4]
 (./sections/semicond.tex
-<./img/1.png, id=916, 272.01625pt x 143.53625pt>
+<./img/1.png, id=1177, 608.2725pt x 330.23375pt>
 File: ./img/1.png Graphic file (type png)
 <use ./img/1.png>
 Package pdftex.def Info: ./img/1.png  used on input line 17.
-(pdftex.def)             Requested size: 149.60939pt x 78.94518pt.
+(pdftex.def)             Requested size: 334.55092pt x 181.6291pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--34
 
@@ -1279,7 +1279,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--41
  []
 
 [5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-} <./img/1.png>]
+} <./img/1.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
@@ -1304,11 +1304,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
-<./img/2.png, id=928, 270.00874pt x 99.37125pt>
+<./img/2.png, id=1187, 594.22pt x 223.83624pt>
 File: ./img/2.png Graphic file (type png)
 <use ./img/2.png>
 Package pdftex.def Info: ./img/2.png  used on input line 60.
-(pdftex.def)             Requested size: 148.50525pt x 54.65434pt.
+(pdftex.def)             Requested size: 326.822pt x 123.1103pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--83
 
@@ -1319,17 +1319,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--83
 
  []
 
-[6 <./img/2.png>]
-<./img/3.png, id=938, 259.97125pt x 193.72375pt>
+[6 <./img/2.png (PNG copy)>]
+<./img/3.png, id=1199, 321.2pt x 227.85126pt>
 File: ./img/3.png Graphic file (type png)
 <use ./img/3.png>
 Package pdftex.def Info: ./img/3.png  used on input line 90.
-(pdftex.def)             Requested size: 217.66032pt x 170.7198pt.
-<./img/4.png, id=939, 211.79124pt x 181.67876pt>
+(pdftex.def)             Requested size: 217.66814pt x 170.72113pt.
+<./img/4.png, id=1200, 493.845pt x 359.3425pt>
 File: ./img/4.png Graphic file (type png)
 <use ./img/4.png>
 Package pdftex.def Info: ./img/4.png  used on input line 95.
-(pdftex.def)             Requested size: 217.66913pt x 170.71982pt.
+(pdftex.def)             Requested size: 217.6617pt x 170.72235pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 89--99
 [][] [] 
@@ -1360,7 +1360,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--113
 
  []
 
-[7 <./img/3.png> <./img/4.png>]
+[7 <./img/3.png (PNG copy)> <./img/4.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 117--123
 
  []
@@ -1375,16 +1375,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
-<./img/5.png, id=947, 277.035pt x 217.81375pt>
+<./img/5.png, id=1209, 401.5pt x 313.17pt>
 File: ./img/5.png Graphic file (type png)
 <use ./img/5.png>
 Package pdftex.def Info: ./img/5.png  used on input line 141.
-(pdftex.def)             Requested size: 217.66318pt x 170.71495pt.
-<./img/6.png, id=948, 277.035pt x 210.7875pt>
+(pdftex.def)             Requested size: 217.66446pt x 170.71965pt.
+<./img/6.png, id=1210, 401.5pt x 304.13625pt>
 File: ./img/6.png Graphic file (type png)
 <use ./img/6.png>
 Package pdftex.def Info: ./img/6.png  used on input line 146.
-(pdftex.def)             Requested size: 217.66318pt x 170.72086pt.
+(pdftex.def)             Requested size: 217.66446pt x 170.71887pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 140--150
 [][] [] 
@@ -1424,12 +1424,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--169
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8]
+[8] [9 <./img/5.png (PNG copy)> <./img/6.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 181--185
 
  []
 
-[9 <./img/5.png> <./img/6.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 201--207
 
  []
@@ -1446,15 +1446,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--214
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 209--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--222
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 216--222
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 224--228
 
  []
@@ -1464,17 +1464,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--254
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--260
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--260
-
- []
-
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 254--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--260
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 266--269
 
  []
@@ -1514,15 +1514,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<./img/7.png, id=973, 275.0275pt x 160.6pt>
+[13]
+<./img/7.png, id=1239, 448.67625pt x 299.1175pt>
 File: ./img/7.png Graphic file (type png)
 <use ./img/7.png>
 Package pdftex.def Info: ./img/7.png  used on input line 21.
-(pdftex.def)             Requested size: 151.26558pt x 88.33026pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13]
+(pdftex.def)             Requested size: 246.77269pt x 164.51512pt.
+ [14 <./img/7.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
@@ -1537,13 +1535,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
 
-[14 <./img/7.png>]
-<./img/8.png, id=988, 269.005pt x 120.45pt>
+<./img/8.png, id=1247, 448.67625pt x 201.75375pt>
 File: ./img/8.png Graphic file (type png)
 <use ./img/8.png>
 Package pdftex.def Info: ./img/8.png  used on input line 68.
-(pdftex.def)             Requested size: 147.9532pt x 66.2477pt.
-
+(pdftex.def)             Requested size: 246.77269pt x 110.96489pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 73.
@@ -1565,7 +1561,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
-
+[15 <./img/8.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
@@ -1586,7 +1582,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 85.
 
-[15 <./img/8.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 100.
@@ -1614,6 +1609,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--116
 
  []
 
+[16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 121.
@@ -1631,7 +1627,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
  []
 
-[16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 137.
@@ -1658,41 +1653,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
-<./img/9.png, id=1007, 274.02374pt x 71.26625pt>
+[17]
+<./img/9.png, id=1272, 514.92375pt x 138.5175pt>
 File: ./img/9.png Graphic file (type png)
 <use ./img/9.png>
 Package pdftex.def Info: ./img/9.png  used on input line 159.
-(pdftex.def)             Requested size: 217.6621pt x 56.60852pt.
-<./img/10.png, id=1008, 274.02374pt x 85.31876pt>
+(pdftex.def)             Requested size: 217.6621pt x 58.55106pt.
+<./img/10.png, id=1273, 512.91624pt x 164.615pt>
 File: ./img/10.png Graphic file (type png)
 <use ./img/10.png>
 Package pdftex.def Info: ./img/10.png  used on input line 164.
-(pdftex.def)             Requested size: 217.6621pt x 67.77078pt.
+(pdftex.def)             Requested size: 217.6621pt x 69.8562pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 158--168
 [][] [] 
  []
 
-<./img/11.png, id=1009, 274.02374pt x 63.23625pt>
+<./img/11.png, id=1274, 513.92pt x 127.47626pt>
 File: ./img/11.png Graphic file (type png)
 <use ./img/11.png>
 Package pdftex.def Info: ./img/11.png  used on input line 175.
-(pdftex.def)             Requested size: 217.6621pt x 50.2301pt.
-<./img/12.png, id=1010, 269.005pt x 71.26625pt>
+(pdftex.def)             Requested size: 217.6621pt x 53.99092pt.
+<./img/12.png, id=1275, 519.9425pt x 147.55125pt>
 File: ./img/12.png Graphic file (type png)
 <use ./img/12.png>
 Package pdftex.def Info: ./img/12.png  used on input line 180.
-(pdftex.def)             Requested size: 217.6621pt x 57.66443pt.
+(pdftex.def)             Requested size: 217.6621pt x 61.76846pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 174--184
 [][] [] 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 189--192
@@ -1704,12 +1694,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--198
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 200--203
 
  []
 
-[18 <./img/9.png> <./img/10.png> <./img/11.png> <./img/12.png>]
+[18 <./img/9.png (PNG copy)> <./img/10.png (PNG copy)> <./img/11.png (PNG copy)
+> <./img/12.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 222--232
 
  []
@@ -1719,27 +1710,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--232
 
  []
 
-<./img/13.png, id=1025, 271.0125pt x 77.28876pt>
+<./img/13.png, id=1286, 548.0475pt x 157.58875pt>
 File: ./img/13.png Graphic file (type png)
 <use ./img/13.png>
 Package pdftex.def Info: ./img/13.png  used on input line 238.
-(pdftex.def)             Requested size: 149.05733pt x 42.50894pt.
-<./img/14.png, id=1027, 273.02pt x 89.33376pt>
+(pdftex.def)             Requested size: 301.42705pt x 86.67407pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/14.png, id=1288, 544.0325pt x 180.675pt>
 File: ./img/14.png Graphic file (type png)
 <use ./img/14.png>
 Package pdftex.def Info: ./img/14.png  used on input line 250.
-(pdftex.def)             Requested size: 150.16145pt x 49.1337pt.
+(pdftex.def)             Requested size: 299.2188pt x 99.37154pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 256--262
 
  []
 
-[19 <./img/13.png> <./img/14.png>]
-<./img/15.png, id=1037, 271.0125pt x 79.29625pt>
+[20 <./img/13.png (PNG copy)> <./img/14.png (PNG copy)>]
+<./img/15.png, id=1305, 518.93875pt x 166.6225pt>
 File: ./img/15.png Graphic file (type png)
 <use ./img/15.png>
 Package pdftex.def Info: ./img/15.png  used on input line 280.
-(pdftex.def)             Requested size: 149.05733pt x 43.61305pt.
+(pdftex.def)             Requested size: 285.41719pt x 91.64265pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 285--305
 
@@ -1750,16 +1747,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--305
 
  []
 
-[20 <./img/15.png>]
-<./img/16.png, id=1047, 261.97874pt x 306.14375pt>
+<./img/16.png, id=1307, 353.32pt x 401.5pt>
 File: ./img/16.png Graphic file (type png)
 <use ./img/16.png>
 Package pdftex.def Info: ./img/16.png  used on input line 312.
-(pdftex.def)             Requested size: 144.08875pt x 168.37958pt.
+(pdftex.def)             Requested size: 194.3266pt x 220.82567pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 317--320
@@ -1767,7 +1761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--320
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--331
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
 
  []
 
@@ -1781,23 +1775,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
-<./img/17.png, id=1049, 271.0125pt x 116.435pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
+
+ []
+
+[21 <./img/15.png (PNG copy)>]
+<./img/17.png, id=1316, 489.83pt x 212.795pt>
 File: ./img/17.png Graphic file (type png)
 <use ./img/17.png>
 Package pdftex.def Info: ./img/17.png  used on input line 334.
-(pdftex.def)             Requested size: 149.05733pt x 64.03944pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./img/18.png, id=1050, 139.52126pt x 134.5025pt>
+(pdftex.def)             Requested size: 269.40732pt x 117.0376pt.
+<./img/18.png, id=1317, 301.125pt x 301.125pt>
 File: ./img/18.png Graphic file (type png)
 <use ./img/18.png>
 Package pdftex.def Info: ./img/18.png  used on input line 344.
-(pdftex.def)             Requested size: 76.73692pt x 73.9766pt.
+(pdftex.def)             Requested size: 165.61925pt x 165.61925pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./img/16.png>]
+[22 <./img/16.png (PNG copy)> <./img/17.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 358--364
 
  []
@@ -1807,51 +1805,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--364
 
  []
 
-<./img/19.png, id=1059, 136.51pt x 62.2325pt>
+<./img/19.png, id=1325, 321.2pt x 153.57375pt>
 File: ./img/19.png Graphic file (type png)
 <use ./img/19.png>
 Package pdftex.def Info: ./img/19.png  used on input line 367.
-(pdftex.def)             Requested size: 75.08072pt x 34.22797pt.
-[22 <./img/17.png> <./img/18.png> <./img/19.png>]
-<./img/20.png, id=1067, 277.035pt x 112.42pt>
+(pdftex.def)             Requested size: 176.66054pt x 84.4658pt.
+[23 <./img/18.png (PNG copy)> <./img/19.png (PNG copy)>]
+<./img/20.png, id=1333, 1927.2pt x 602.25pt>
 File: ./img/20.png Graphic file (type png)
 <use ./img/20.png>
 Package pdftex.def Info: ./img/20.png  used on input line 402.
-(pdftex.def)             Requested size: 152.3697pt x 61.83118pt.
+(pdftex.def)             Requested size: 1059.9633pt x 331.23851pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--416
-
+Overfull \hbox (576.26646pt too wide) in paragraph at lines 402--403
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 407--416
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 407--416
-
- []
-
-<./img/21.png, id=1068, 135.50626pt x 74.2775pt>
-File: ./img/21.png Graphic file (type png)
-<use ./img/21.png>
-Package pdftex.def Info: ./img/21.png  used on input line 419.
-(pdftex.def)             Requested size: 74.52866pt x 40.85274pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./img/20.png>]
-<./img/22.png, id=1075, 285.065pt x 173.64874pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--416
+
+ []
+
+<./img/21.png, id=1335, 470.75874pt x 254.9525pt>
+File: ./img/21.png Graphic file (type png)
+<use ./img/21.png>
+Package pdftex.def Info: ./img/21.png  used on input line 419.
+(pdftex.def)             Requested size: 258.9181pt x 140.22429pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/22.png, id=1337, 294.09875pt x 169.63374pt>
 File: ./img/22.png Graphic file (type png)
 <use ./img/22.png>
 Package pdftex.def Info: ./img/22.png  used on input line 428.
-(pdftex.def)             Requested size: 156.78622pt x 95.5071pt.
-<./img/23.png, id=1078, 135.50626pt x 107.40125pt>
+(pdftex.def)             Requested size: 161.7548pt x 93.29883pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24]
+<./img/23.png, id=1346, 317.185pt x 254.9525pt>
 File: ./img/23.png Graphic file (type png)
 <use ./img/23.png>
 Package pdftex.def Info: ./img/23.png  used on input line 445.
-(pdftex.def)             Requested size: 74.52866pt x 59.07085pt.
+(pdftex.def)             Requested size: 174.45227pt x 140.22429pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 450--455
 
@@ -1862,28 +1875,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--460
 
  []
 
-[24 <./img/21.png> <./img/22.png> <./img/23.png>]
-<./img/24.png, id=1088, 788.9475pt x 214.8025pt>
+[25 <./img/20.png>]
+<./img/24.png, id=1353, 788.9475pt x 214.8025pt>
 File: ./img/24.png Graphic file (type png)
 <use ./img/24.png>
 Package pdftex.def Info: ./img/24.png  used on input line 463.
 (pdftex.def)             Requested size: 433.92245pt x 118.14174pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 485--489
 
  []
 
-<./img/25.png, id=1089, 297.11pt x 156.585pt>
+<./img/25.png, id=1354, 321.2pt x 153.57375pt>
 File: ./img/25.png Graphic file (type png)
 <use ./img/25.png>
 Package pdftex.def Info: ./img/25.png  used on input line 495.
-(pdftex.def)             Requested size: 163.411pt x 86.12201pt.
+(pdftex.def)             Requested size: 176.66054pt x 84.4658pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 502--505
 
  []
 
-[25 <./img/24.png> <./img/25.png>]
+[26 <./img/21.png (PNG copy)> <./img/22.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
@@ -1893,17 +1913,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 513--516
 
  []
 
-<./img/26.png, id=1100, 333.245pt x 202.7575pt>
+<./img/26.png, id=1365, 333.245pt x 202.7575pt>
 File: ./img/26.png Graphic file (type png)
 <use ./img/26.png>
 Package pdftex.def Info: ./img/26.png  used on input line 519.
 (pdftex.def)             Requested size: 183.28531pt x 111.51697pt.
-<./img/27.png, id=1102, 776.9025pt x 215.80624pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/27.png, id=1367, 776.9025pt x 215.80624pt>
 File: ./img/27.png Graphic file (type png)
 <use ./img/27.png>
 Package pdftex.def Info: ./img/27.png  used on input line 529.
 (pdftex.def)             Requested size: 427.29768pt x 118.69379pt.
-[26 <./img/26.png> <./img/27.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./img/23.png (PNG copy)> <./img/24.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 543--546
 
  []
@@ -1913,47 +1939,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 547--550
 
  []
 
-<./img/28.png, id=1116, 320.19624pt x 182.6825pt>
+<./img/28.png, id=1378, 320.19624pt x 182.6825pt>
 File: ./img/28.png Graphic file (type png)
 <use ./img/28.png>
 Package pdftex.def Info: ./img/28.png  used on input line 553.
 (pdftex.def)             Requested size: 176.10846pt x 100.47568pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 558--560
 
  []
 
-<./img/29.png, id=1118, 304.13625pt x 208.78pt>
+<./img/29.png, id=1380, 335.2525pt x 240.9pt>
 File: ./img/29.png Graphic file (type png)
 <use ./img/29.png>
 Package pdftex.def Info: ./img/29.png  used on input line 565.
-(pdftex.def)             Requested size: 167.27545pt x 114.82933pt.
-[27 <./img/28.png> <./img/29.png>]
-<./img/30.png, id=1129, 297.11pt x 178.6675pt>
-File: ./img/30.png Graphic file (type png)
-<use ./img/30.png>
-Package pdftex.def Info: ./img/30.png  used on input line 585.
-(pdftex.def)             Requested size: 163.411pt x 98.26741pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--600
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--600
-
- []
-
-<./img/31.png, id=1131, 271.0125pt x 125.46875pt>
-File: ./img/31.png Graphic file (type png)
-<use ./img/31.png>
-Package pdftex.def Info: ./img/31.png  used on input line 608.
-(pdftex.def)             Requested size: 149.05733pt x 69.00801pt.
+(pdftex.def)             Requested size: 184.38943pt x 132.49539pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28 <./img/30.png>]
-<./img/32.png, id=1140, 972.63374pt x 320.19624pt>
+[28 <./img/25.png (PNG copy)> <./img/26.png>]
+<./img/30.png, id=1390, 353.32pt x 208.78pt>
+File: ./img/30.png Graphic file (type png)
+<use ./img/30.png>
+Package pdftex.def Info: ./img/30.png  used on input line 585.
+(pdftex.def)             Requested size: 194.3266pt x 114.82933pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--600
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--600
+
+ []
+
+[29 <./img/27.png> <./img/28.png>]
+<./img/31.png, id=1400, 448.67625pt x 205.76875pt>
+File: ./img/31.png Graphic file (type png)
+<use ./img/31.png>
+Package pdftex.def Info: ./img/31.png  used on input line 608.
+(pdftex.def)             Requested size: 246.77269pt x 113.17316pt.
+ [30 <./img/29.png (PNG copy)> <./img/30.png (PNG copy)> <./img/31.png (PNG cop
+y)>]
+<./img/32.png, id=1407, 972.63374pt x 320.19624pt>
 File: ./img/32.png Graphic file (type png)
 <use ./img/32.png>
 Package pdftex.def Info: ./img/32.png  used on input line 650.
@@ -1963,21 +1998,18 @@ Overfull \hbox (51.25337pt too wide) in paragraph at lines 650--651
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29 <./img/31.png>]
-<./img/33.png, id=1147, 322.20375pt x 234.8775pt>
+[31 <./img/32.png>]
+<./img/33.png, id=1416, 348.30125pt x 290.08376pt>
 File: ./img/33.png Graphic file (type png)
 <use ./img/33.png>
 Package pdftex.def Info: ./img/33.png  used on input line 667.
-(pdftex.def)             Requested size: 177.2126pt x 129.18301pt.
+(pdftex.def)             Requested size: 191.56627pt x 159.54655pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 672--675
 
  []
 
-[30 <./img/32.png> <./img/33.png>]
+[32 <./img/33.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 715--735
 
  []
@@ -1987,13 +2019,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 715--735
 
  []
 
-[31]
-<./img/34.png, id=1166, 309.155pt x 243.91125pt>
+<./img/34.png, id=1427, 345.29pt x 289.08pt>
 File: ./img/34.png Graphic file (type png)
 <use ./img/34.png>
 Package pdftex.def Info: ./img/34.png  used on input line 740.
-(pdftex.def)             Requested size: 170.03577pt x 134.1516pt.
- [32 <./img/34.png>]
+(pdftex.def)             Requested size: 189.91008pt x 158.99448pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33] [34 <./img/34.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 781--803
 
  []
@@ -2003,18 +2037,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 781--803
 
  []
 
-[33]
-<./img/35.png, id=1182, 456.70625pt x 302.12875pt>
+<./img/35.png, id=1442, 442.65375pt x 290.08376pt>
 File: ./img/35.png Graphic file (type png)
 <use ./img/35.png>
 Package pdftex.def Info: ./img/35.png  used on input line 808.
-(pdftex.def)             Requested size: 251.18921pt x 166.17131pt.
+(pdftex.def)             Requested size: 243.4603pt x 159.54655pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 844--848
 
  []
 
-[34 <./img/35.png>]
+[36 <./img/35.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 859--863
 
  []
@@ -2024,13 +2060,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 859--863
 
  []
 
-[35]
-<./img/36.png, id=1201, 275.0275pt x 96.36pt>
+[37]
+<./img/36.png, id=1466, 658.46pt x 227.85126pt>
 File: ./img/36.png Graphic file (type png)
 <use ./img/36.png>
 Package pdftex.def Info: ./img/36.png  used on input line 907.
-(pdftex.def)             Requested size: 217.6621pt x 76.26323pt.
-<./img/37.png, id=1202, 457.71pt x 452.69125pt>
+(pdftex.def)             Requested size: 217.6621pt x 75.3163pt.
+<./img/37.png, id=1467, 457.71pt x 452.69125pt>
 File: ./img/37.png Graphic file (type png)
 <use ./img/37.png>
 Package pdftex.def Info: ./img/37.png  used on input line 912.
@@ -2055,51 +2091,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 903--925
 
  []
 
-[36 <./img/36.png> <./img/37.png>]
-<./img/38.png, id=1211, 132.495pt x 75.28125pt>
+<./img/38.png, id=1469, 254.9525pt x 146.5475pt>
 File: ./img/38.png Graphic file (type png)
 <use ./img/38.png>
 Package pdftex.def Info: ./img/38.png  used on input line 928.
-(pdftex.def)             Requested size: 72.87245pt x 41.4048pt.
+(pdftex.def)             Requested size: 140.22429pt x 80.60135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--942
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 935--942
 
  []
 
-<./img/39.png, id=1213, 427.5975pt x 203.76125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 935--942
+
+ []
+
+[38 <./img/36.png (PNG copy)> <./img/37.png>]
+<./img/39.png, id=1478, 522.95375pt x 225.84375pt>
 File: ./img/39.png Graphic file (type png)
 <use ./img/39.png>
 Package pdftex.def Info: ./img/39.png  used on input line 945.
-(pdftex.def)             Requested size: 235.17935pt x 112.06902pt.
-[37 <./img/38.png> <./img/39.png>]
+(pdftex.def)             Requested size: 287.62544pt x 124.21443pt.
+ [39 <./img/38.png (PNG copy)> <./img/39.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 973--978
 
  []
 
-<./img/40.png, id=1222, 596.2275pt x 344.28625pt>
+<./img/40.png, id=1485, 596.2275pt x 344.28625pt>
 File: ./img/40.png Graphic file (type png)
 <use ./img/40.png>
 Package pdftex.def Info: ./img/40.png  used on input line 981.
 (pdftex.def)             Requested size: 327.92613pt x 189.35802pt.
-<./img/41.png, id=1224, 301.125pt x 270.00874pt>
+<./img/41.png, id=1487, 206.7725pt x 195.73125pt>
 File: ./img/41.png Graphic file (type png)
 <use ./img/41.png>
 Package pdftex.def Info: ./img/41.png  used on input line 995.
-(pdftex.def)             Requested size: 165.61925pt x 148.50525pt.
+(pdftex.def)             Requested size: 113.72522pt x 107.65251pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38 <./img/40.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1003--1006
 
  []
 
-
+[40 <./img/40.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1010--1016
 
  []
@@ -2109,24 +2148,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1010--1016
 
  []
 
-<./img/42.png, id=1234, 266.9975pt x 161.60374pt>
+<./img/42.png, id=1497, 461.725pt x 280.04625pt>
 File: ./img/42.png Graphic file (type png)
 <use ./img/42.png>
 Package pdftex.def Info: ./img/42.png  used on input line 1019.
-(pdftex.def)             Requested size: 146.84906pt x 88.88232pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39 <./img/41.png>]
+(pdftex.def)             Requested size: 253.94954pt x 154.0259pt.
+[41 <./img/41.png (PNG copy)> <./img/42.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1029--1032
 
  []
 
-<./img/43.png, id=1243, 264.99pt x 108.405pt>
+<./img/43.png, id=1504, 461.725pt x 190.7125pt>
 File: ./img/43.png Graphic file (type png)
 <use ./img/43.png>
 Package pdftex.def Info: ./img/43.png  used on input line 1035.
-(pdftex.def)             Requested size: 145.74495pt x 59.62292pt.
+(pdftex.def)             Requested size: 253.94954pt x 104.89218pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1040--1042
 
@@ -2137,11 +2173,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1051--1055
 
  []
 
-[40 <./img/42.png> <./img/43.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1066
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 1055--1066
 
@@ -2152,32 +2183,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1055--1066
 
  []
 
-<./img/44.png, id=1252, 264.99pt x 125.46875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1066
+
+ []
+
+[42 <./img/43.png (PNG copy)>]
+<./img/44.png, id=1514, 463.7325pt x 221.82875pt>
 File: ./img/44.png Graphic file (type png)
 <use ./img/44.png>
 Package pdftex.def Info: ./img/44.png  used on input line 1073.
-(pdftex.def)             Requested size: 145.74495pt x 69.00801pt.
+(pdftex.def)             Requested size: 255.05365pt x 122.00616pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1081--1086
 
  []
 
-[41 <./img/44.png>]
-<./img/45.png, id=1259, 133.49875pt x 73.27374pt>
+[43 <./img/44.png (PNG copy)>]
+<./img/45.png, id=1521, 337.26pt x 185.69376pt>
 File: ./img/45.png Graphic file (type png)
 <use ./img/45.png>
 Package pdftex.def Info: ./img/45.png  used on input line 1092.
-(pdftex.def)             Requested size: 73.42451pt x 40.30066pt.
-<./img/46.png, id=1262, 430.60875pt x 239.89626pt>
+(pdftex.def)             Requested size: 185.49356pt x 102.13187pt.
+<./img/46.png, id=1524, 534.99875pt x 303.1325pt>
 File: ./img/46.png Graphic file (type png)
 <use ./img/46.png>
 Package pdftex.def Info: ./img/46.png  used on input line 1118.
-(pdftex.def)             Requested size: 217.6621pt x 121.26195pt.
-<./img/47.png, id=1263, 608.2725pt x 137.51375pt>
+(pdftex.def)             Requested size: 217.6621pt x 123.32767pt.
+<./img/47.png, id=1525, 1105.12875pt x 205.76875pt>
 File: ./img/47.png Graphic file (type png)
 <use ./img/47.png>
 Package pdftex.def Info: ./img/47.png  used on input line 1123.
-(pdftex.def)             Requested size: 217.6621pt x 49.20695pt.
+(pdftex.def)             Requested size: 217.6621pt x 40.52505pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1117--1127
 [][] [] 
@@ -2188,9 +2225,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1112--1131
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[44 <./img/45.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1131.
@@ -2199,7 +2234,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1131.
 
-[42 <./img/45.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1143.
@@ -2234,7 +2268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1155--1160
 
  []
 
-[43 <./img/46.png> <./img/47.png>]
+[45 <./img/46.png (PNG copy)> <./img/47.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1169--1176
 
  []
@@ -2269,21 +2303,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1181.
 
-<./img/48.png, id=1280, 692.5875pt x 296.10625pt>
+<./img/48.png, id=1540, 1105.12875pt x 448.67625pt>
 File: ./img/48.png Graphic file (type png)
 <use ./img/48.png>
 Package pdftex.def Info: ./img/48.png  used on input line 1193.
-(pdftex.def)             Requested size: 380.9243pt x 162.85893pt.
+(pdftex.def)             Requested size: 607.82271pt x 246.77269pt.
+
+Overfull \hbox (124.12587pt too wide) in paragraph at lines 1193--1194
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[44]
-<./img/49.png, id=1286, 718.685pt x 300.12125pt>
+[46]
+<./img/49.png, id=1546, 538.01pt x 225.84375pt>
 File: ./img/49.png Graphic file (type png)
 <use ./img/49.png>
 Package pdftex.def Info: ./img/49.png  used on input line 1205.
-(pdftex.def)             Requested size: 395.27797pt x 165.06718pt.
-) (./sections/giunz_bip.tex
+(pdftex.def)             Requested size: 295.9064pt x 124.21443pt.
+) [47 <./img/48.png (PNG copy)> <./img/49.png (PNG copy)>]
+(./sections/giunz_bip.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
@@ -2303,7 +2343,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
  []
 
-[45 <./img/48.png> <./img/49.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 10.
@@ -2312,7 +2351,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 10.
 
-<./img/50.png, id=1294, 1006.76125pt x 485.815pt>
+<./img/50.png, id=1552, 1006.76125pt x 485.815pt>
 File: ./img/50.png Graphic file (type png)
 <use ./img/50.png>
 Package pdftex.def Info: ./img/50.png  used on input line 21.
@@ -2327,8 +2366,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
  []
 
-[46 <./img/50.png>]
-<./img/51.png, id=1303, 812.03375pt x 204.765pt>
+[48 <./img/50.png>]
+<./img/51.png, id=1562, 812.03375pt x 204.765pt>
 File: ./img/51.png Graphic file (type png)
 <use ./img/51.png>
 Package pdftex.def Info: ./img/51.png  used on input line 46.
@@ -2343,7 +2382,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--56
 
  []
 
-<./img/52.png, id=1305, 958.58125pt x 506.89375pt>
+<./img/52.png, id=1564, 958.58125pt x 506.89375pt>
 File: ./img/52.png Graphic file (type png)
 <use ./img/52.png>
 Package pdftex.def Info: ./img/52.png  used on input line 59.
@@ -2351,15 +2390,15 @@ Package pdftex.def Info: ./img/52.png  used on input line 59.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/53.png, id=1307, 275.0275pt x 185.69376pt>
+<./img/53.png, id=1566, 645.41125pt x 433.62pt>
 File: ./img/53.png Graphic file (type png)
 <use ./img/53.png>
 Package pdftex.def Info: ./img/53.png  used on input line 72.
-(pdftex.def)             Requested size: 96.26106pt x 64.99377pt.
+(pdftex.def)             Requested size: 225.89732pt x 151.76927pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47 <./img/51.png>]
+[49 <./img/51.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
@@ -2369,7 +2408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
-<./img/54.png, id=1320, 932.48375pt x 294.09875pt>
+<./img/54.png, id=1579, 932.48375pt x 294.09875pt>
 File: ./img/54.png Graphic file (type png)
 <use ./img/54.png>
 Package pdftex.def Info: ./img/54.png  used on input line 89.
@@ -2377,26 +2416,26 @@ Package pdftex.def Info: ./img/54.png  used on input line 89.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48 <./img/52.png> <./img/53.png>]
+[50 <./img/52.png> <./img/53.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
 
-[49 <./img/54.png>]
+[51 <./img/54.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
-<./img/55.png, id=1335, 269.005pt x 108.405pt>
+<./img/55.png, id=1593, 504.88625pt x 205.76875pt>
 File: ./img/55.png Graphic file (type png)
 <use ./img/55.png>
 Package pdftex.def Info: ./img/55.png  used on input line 141.
-(pdftex.def)             Requested size: 217.6621pt x 87.71492pt.
-<./img/56.png, id=1336, 268.00125pt x 75.28125pt>
+(pdftex.def)             Requested size: 217.6621pt x 88.70802pt.
+<./img/56.png, id=1594, 504.88625pt x 143.53625pt>
 File: ./img/56.png Graphic file (type png)
 <use ./img/56.png>
 Package pdftex.def Info: ./img/56.png  used on input line 146.
-(pdftex.def)             Requested size: 217.6621pt x 61.14058pt.
+(pdftex.def)             Requested size: 217.6621pt x 61.87926pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 140--150
 [][] [] 
@@ -2431,11 +2470,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 154.
 
-<./img/57.png, id=1338, 268.00125pt x 78.2925pt>
+<./img/57.png, id=1596, 504.88625pt x 145.54375pt>
 File: ./img/57.png Graphic file (type png)
 <use ./img/57.png>
 Package pdftex.def Info: ./img/57.png  used on input line 162.
-(pdftex.def)             Requested size: 93.80183pt x 27.40277pt.
+(pdftex.def)             Requested size: 176.71283pt x 50.94107pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[52 <./img/55.png (PNG copy)> <./img/56.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 169.
@@ -2460,17 +2503,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 169.
 
-[50 <./img/55.png> <./img/56.png> <./img/57.png>]
-<./img/58.png, id=1349, 266.9975pt x 107.40125pt>
+<./img/58.png, id=1607, 504.88625pt x 205.76875pt>
 File: ./img/58.png Graphic file (type png)
 <use ./img/58.png>
 Package pdftex.def Info: ./img/58.png  used on input line 189.
-(pdftex.def)             Requested size: 217.6621pt x 87.55827pt.
-<./img/59.png, id=1350, 265.99374pt x 75.28125pt>
+(pdftex.def)             Requested size: 217.6621pt x 88.70802pt.
+<./img/59.png, id=1608, 504.88625pt x 140.525pt>
 File: ./img/59.png Graphic file (type png)
 <use ./img/59.png>
 Package pdftex.def Info: ./img/59.png  used on input line 194.
-(pdftex.def)             Requested size: 217.6621pt x 61.6035pt.
+(pdftex.def)             Requested size: 217.6621pt x 60.58109pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 188--198
 [][] [] 
@@ -2486,7 +2528,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--211
 
  []
 
-[51 <./img/58.png> <./img/59.png>]
+[53 <./img/57.png (PNG copy)> <./img/58.png (PNG copy)> <./img/59.png (PNG copy
+)>]
 Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
@@ -2501,22 +2544,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--220
 
  []
 
-<./img/60.png, id=1359, 354.32375pt x 153.57375pt>
+<./img/60.png, id=1616, 504.88625pt x 205.76875pt>
 File: ./img/60.png Graphic file (type png)
 <use ./img/60.png>
 Package pdftex.def Info: ./img/60.png  used on input line 229.
-(pdftex.def)             Requested size: 124.01517pt x 53.7516pt.
+(pdftex.def)             Requested size: 176.71283pt x 72.02013pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 234.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 234.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 234.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2531,110 +2565,134 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 234.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 234.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 234.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 234.
+
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 241--245
 
  []
 
-[52 <./img/60.png>]
-<./img/61.png, id=1367, 269.005pt x 105.39375pt>
+<./img/61.png, id=1624, 504.88625pt x 205.76875pt>
 File: ./img/61.png Graphic file (type png)
 <use ./img/61.png>
 Package pdftex.def Info: ./img/61.png  used on input line 248.
-(pdftex.def)             Requested size: 94.15315pt x 36.88835pt.
-<./img/62.png, id=1369, 276.03125pt x 190.7125pt>
+(pdftex.def)             Requested size: 176.71283pt x 72.02013pt.
+<./img/62.png, id=1626, 434.62375pt x 300.12125pt>
 File: ./img/62.png Graphic file (type png)
 <use ./img/62.png>
 Package pdftex.def Info: ./img/62.png  used on input line 258.
-(pdftex.def)             Requested size: 96.61238pt x 66.75037pt.
-<./img/63.png, id=1371, 426.59375pt x 298.11375pt>
+(pdftex.def)             Requested size: 152.12059pt x 105.044pt.
+[55 <./img/60.png (PNG copy)> <./img/61.png (PNG copy)> <./img/62.png (PNG copy
+)>]
+<./img/63.png, id=1634, 507.8975pt x 418.56375pt>
 File: ./img/63.png Graphic file (type png)
 <use ./img/63.png>
 Package pdftex.def Info: ./img/63.png  used on input line 272.
-(pdftex.def)             Requested size: 149.31004pt x 104.34137pt.
+(pdftex.def)             Requested size: 177.76678pt x 146.4995pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-[53 <./img/61.png> <./img/62.png> <./img/63.png>]
-<./img/64.png, id=1381, 688.5725pt x 279.0425pt>
+<./img/64.png, id=1636, 498.86375pt x 182.6825pt>
 File: ./img/64.png Graphic file (type png)
 <use ./img/64.png>
 Package pdftex.def Info: ./img/64.png  used on input line 284.
-(pdftex.def)             Requested size: 241.00398pt x 97.66634pt.
-<./img/65.png, id=1385, 274.02374pt x 97.36375pt>
+(pdftex.def)             Requested size: 174.60492pt x 63.93982pt.
+<./img/65.png, id=1640, 498.86375pt x 182.6825pt>
 File: ./img/65.png Graphic file (type png)
 <use ./img/65.png>
 Package pdftex.def Info: ./img/65.png  used on input line 299.
-(pdftex.def)             Requested size: 217.6621pt x 77.33842pt.
-<./img/66.png, id=1386, 274.02374pt x 97.36375pt>
+(pdftex.def)             Requested size: 217.6621pt x 79.70596pt.
+<./img/66.png, id=1641, 498.86375pt x 182.6825pt>
 File: ./img/66.png Graphic file (type png)
 <use ./img/66.png>
 Package pdftex.def Info: ./img/66.png  used on input line 304.
-(pdftex.def)             Requested size: 217.6621pt x 77.33842pt.
+(pdftex.def)             Requested size: 217.6621pt x 79.70596pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 298--308
 [][] [] 
  []
 
-<./img/67.png, id=1388, 274.02374pt x 98.3675pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/67.png, id=1643, 498.86375pt x 182.6825pt>
 File: ./img/67.png Graphic file (type png)
 <use ./img/67.png>
 Package pdftex.def Info: ./img/67.png  used on input line 318.
-(pdftex.def)             Requested size: 95.90974pt x 34.42912pt.
-[54 <./img/64.png> <./img/65.png> <./img/66.png> <./img/67.png>]
+(pdftex.def)             Requested size: 174.60492pt x 63.93982pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[56 <./img/63.png (PNG copy)> <./img/64.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 336--340
 
  []
 
-<./img/68.png, id=1399, 266.9975pt x 171.64125pt>
+<./img/68.png, id=1652, 406.51875pt x 264.99pt>
 File: ./img/68.png Graphic file (type png)
 <use ./img/68.png>
 Package pdftex.def Info: ./img/68.png  used on input line 348.
-(pdftex.def)             Requested size: 93.45052pt x 60.07532pt.
+(pdftex.def)             Requested size: 142.28369pt x 92.74788pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[57 <./img/65.png (PNG copy)> <./img/66.png (PNG copy)> <./img/67.png (PNG copy
+)>]
 Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
-[55 <./img/68.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 369--372
 
  []
 
-<./img/69.png, id=1406, 265.99374pt x 177.66376pt>
+<./img/69.png, id=1661, 411.5375pt x 284.06125pt>
 File: ./img/69.png Graphic file (type png)
 <use ./img/69.png>
 Package pdftex.def Info: ./img/69.png  used on input line 375.
-(pdftex.def)             Requested size: 93.0992pt x 62.18324pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--411
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--411
-
- []
-
-<./img/70.png, id=1409, 796.9775pt x 199.74625pt>
-File: ./img/70.png Graphic file (type png)
-<use ./img/70.png>
-Package pdftex.def Info: ./img/70.png  used on input line 416.
-(pdftex.def)             Requested size: 278.94629pt x 69.91223pt.
+(pdftex.def)             Requested size: 144.04028pt x 99.42291pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56 <./img/69.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--411
+
+ []
+
+[58 <./img/68.png (PNG copy)>]
+<./img/70.png, id=1669, 654.445pt x 183.68625pt>
+File: ./img/70.png Graphic file (type png)
+<use ./img/70.png>
+Package pdftex.def Info: ./img/70.png  used on input line 416.
+(pdftex.def)             Requested size: 229.05917pt x 64.29114pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 425--430
 
  []
 
-<./img/71.png, id=1418, 688.5725pt x 211.79124pt>
+[59 <./img/69.png (PNG copy)> <./img/70.png (PNG copy)>]
+<./img/71.png, id=1677, 682.55pt x 183.68625pt>
 File: ./img/71.png Graphic file (type png)
 <use ./img/71.png>
 Package pdftex.def Info: ./img/71.png  used on input line 433.
-(pdftex.def)             Requested size: 241.00398pt x 74.12804pt.
+(pdftex.def)             Requested size: 238.89607pt x 64.29114pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 439--444
 
@@ -2655,12 +2713,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 446--453
 
  []
 
-[57 <./img/70.png> <./img/71.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 463--466
 
  []
 
-[58]
+[60 <./img/71.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 485--489
 
  []
@@ -2675,25 +2733,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 489--494
 
  []
 
-<./img/72.png, id=1436, 262.9825pt x 174.6525pt>
+[61]
+<./img/72.png, id=1694, 413.545pt x 285.065pt>
 File: ./img/72.png Graphic file (type png)
 <use ./img/72.png>
 Package pdftex.def Info: ./img/72.png  used on input line 498.
-(pdftex.def)             Requested size: 118.34102pt x 78.5929pt.
-<./img/73.png, id=1438, 755.82375pt x 277.035pt>
+(pdftex.def)             Requested size: 186.09352pt x 128.27806pt.
+<./img/73.png, id=1696, 755.82375pt x 277.035pt>
 File: ./img/73.png Graphic file (type png)
 <use ./img/73.png>
 Package pdftex.def Info: ./img/73.png  used on input line 508.
 (pdftex.def)             Requested size: 340.11754pt x 124.6646pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 513--516
 
  []
 
-[59 <./img/72.png>]
+[62 <./img/72.png (PNG copy)> <./img/73.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 522--527
 
  []
@@ -2718,12 +2774,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--564
 
  []
 
-[60 <./img/73.png>]
-<./img/74.png, id=1454, 714.67pt x 212.795pt>
+<./img/74.png, id=1706, 682.55pt x 183.68625pt>
 File: ./img/74.png Graphic file (type png)
 <use ./img/74.png>
 Package pdftex.def Info: ./img/74.png  used on input line 567.
-(pdftex.def)             Requested size: 321.59853pt x 95.75685pt.
+(pdftex.def)             Requested size: 307.14467pt x 82.65804pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 573--575
 
@@ -2734,41 +2792,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 576--578
 
  []
 
-<./img/75.png, id=1455, 269.005pt x 171.64125pt>
+[63]
+<./img/75.png, id=1713, 404.51125pt x 260.975pt>
 File: ./img/75.png Graphic file (type png)
 <use ./img/75.png>
 Package pdftex.def Info: ./img/75.png  used on input line 584.
-(pdftex.def)             Requested size: 121.05112pt x 77.23784pt.
-[61 <./img/74.png> <./img/75.png>]
-<./img/76.png, id=1463, 270.00874pt x 180.675pt>
+(pdftex.def)             Requested size: 182.02837pt x 117.43767pt.
+<./img/76.png, id=1714, 406.51875pt x 276.03125pt>
 File: ./img/76.png Graphic file (type png)
 <use ./img/76.png>
 Package pdftex.def Info: ./img/76.png  used on input line 600.
-(pdftex.def)             Requested size: 121.5028pt x 81.303pt.
-<./img/77.png, id=1465, 563.10374pt x 524.96124pt>
-File: ./img/77.png Graphic file (type png)
-<use ./img/77.png>
-Package pdftex.def Info: ./img/77.png  used on input line 616.
-(pdftex.def)             Requested size: 253.39435pt x 236.23038pt.
+(pdftex.def)             Requested size: 182.93173pt x 124.2129pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[62 <./img/76.png>]
+[64 <./img/74.png (PNG copy)> <./img/75.png (PNG copy)>]
+<./img/77.png, id=1721, 348.30125pt x 335.2525pt>
+File: ./img/77.png Graphic file (type png)
+<use ./img/77.png>
+Package pdftex.def Info: ./img/77.png  used on input line 616.
+(pdftex.def)             Requested size: 156.73412pt x 150.86223pt.
+ [65 <./img/76.png (PNG copy)> <./img/77.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 635--638
 
  []
 
-[63 <./img/77.png>]
-<./img/78.png, id=1479, 265.99374pt x 139.52126pt>
+<./img/78.png, id=1729, 480.79625pt x 264.99pt>
 File: ./img/78.png Graphic file (type png)
 <use ./img/78.png>
 Package pdftex.def Info: ./img/78.png  used on input line 657.
-(pdftex.def)             Requested size: 119.69608pt x 62.78397pt.
+(pdftex.def)             Requested size: 216.35631pt x 119.24438pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--668
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 662--668
@@ -2781,24 +2837,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 662--668
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 662--668
+
+ []
+
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 669--671
 
  []
 
-<./img/79.png, id=1482, 203.76125pt x 194.7275pt>
+<./img/79.png, id=1738, 348.30125pt x 335.2525pt>
 File: ./img/79.png Graphic file (type png)
 <use ./img/79.png>
 Package pdftex.def Info: ./img/79.png  used on input line 674.
-(pdftex.def)             Requested size: 91.69171pt x 87.62656pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[64 <./img/78.png>]
-<./img/80.png, id=1490, 262.9825pt x 136.51pt>
+(pdftex.def)             Requested size: 156.73412pt x 150.86223pt.
+[67 <./img/78.png (PNG copy)> <./img/79.png (PNG copy)>]
+<./img/80.png, id=1745, 480.79625pt x 264.99pt>
 File: ./img/80.png Graphic file (type png)
 <use ./img/80.png>
 Package pdftex.def Info: ./img/80.png  used on input line 706.
-(pdftex.def)             Requested size: 118.34102pt x 61.42892pt.
+(pdftex.def)             Requested size: 216.35631pt x 119.24438pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 711--718
 
@@ -2809,17 +2867,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 711--718
 
  []
 
-[65 <./img/79.png> <./img/80.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 719--724
 
  []
 
-<./img/81.png, id=1500, 271.0125pt x 174.6525pt>
+[68 <./img/80.png (PNG copy)>]
+<./img/81.png, id=1755, 466.74374pt x 309.155pt>
 File: ./img/81.png Graphic file (type png)
 <use ./img/81.png>
 Package pdftex.def Info: ./img/81.png  used on input line 742.
-(pdftex.def)             Requested size: 121.95448pt x 78.5929pt.
-[66 <./img/81.png>]
+(pdftex.def)             Requested size: 210.03275pt x 139.11845pt.
+ [69 <./img/81.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 764--767
 
  []
@@ -2834,7 +2893,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 774--778
 
  []
 
-[67]
+[70]
 Underfull \hbox (badness 10000) in paragraph at lines 796--800
 
  []
@@ -2844,17 +2903,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--819
 
  []
 
-[68]
-<./img/82.png, id=1520, 266.9975pt x 138.5175pt>
+<./img/82.png, id=1771, 551.05875pt x 291.0875pt>
 File: ./img/82.png Graphic file (type png)
 <use ./img/82.png>
 Package pdftex.def Info: ./img/82.png  used on input line 823.
-(pdftex.def)             Requested size: 217.6621pt x 112.92563pt.
-<./img/83.png, id=1521, 269.005pt x 122.4575pt>
+(pdftex.def)             Requested size: 217.6621pt x 114.97607pt.
+<./img/83.png, id=1772, 483.8075pt x 223.83624pt>
 File: ./img/83.png Graphic file (type png)
 <use ./img/83.png>
 Package pdftex.def Info: ./img/83.png  used on input line 828.
-(pdftex.def)             Requested size: 217.6621pt x 99.08537pt.
+(pdftex.def)             Requested size: 217.6621pt x 100.70146pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 829--829
 []\OT1/cmr/m/n/9 (b) |La con-dizione ot-tima di pro-getto con-siste
@@ -2870,36 +2928,30 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 822--832
 [][] [] 
  []
 
-<./img/84.png, id=1523, 273.02pt x 185.69376pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/84.png, id=1774, 482.80376pt x 330.23375pt>
 File: ./img/84.png Graphic file (type png)
 <use ./img/84.png>
 Package pdftex.def Info: ./img/84.png  used on input line 841.
-(pdftex.def)             Requested size: 122.85786pt x 83.56142pt.
-[69 <./img/82.png> <./img/83.png> <./img/84.png>]
+(pdftex.def)             Requested size: 217.25967pt x 148.6038pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[71] [72 <./img/82.png (PNG copy)> <./img/83.png (PNG copy)> <./img/84.png (PNG
+ copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 881--884
 
  []
 
-<./img/85.png, id=1535, 268.00125pt x 163.61125pt>
+<./img/85.png, id=1792, 649.42625pt x 392.46625pt>
 File: ./img/85.png Graphic file (type png)
 <use ./img/85.png>
 Package pdftex.def Info: ./img/85.png  used on input line 889.
-(pdftex.def)             Requested size: 120.59944pt x 73.62437pt.
+(pdftex.def)             Requested size: 292.2391pt x 176.60817pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 915.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 915.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 915.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 915.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2917,7 +2969,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 915.
 
-[70 <./img/85.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 915.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 915.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 915.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 915.
+
+[73]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 925.
@@ -2987,6 +3055,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 942.
 
+[74 <./img/85.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 946.
@@ -3019,7 +3088,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 946.
 
-[71]
+
 Underfull \hbox (badness 10000) in paragraph at lines 954--957
 
  []
@@ -3034,21 +3103,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 959--981
 
  []
 
-<./img/86.png, id=1557, 204.765pt x 133.49875pt>
+<./img/86.png, id=1813, 511.9125pt x 337.26pt>
 File: ./img/86.png Graphic file (type png)
 <use ./img/86.png>
 Package pdftex.def Info: ./img/86.png  used on input line 986.
-(pdftex.def)             Requested size: 92.14339pt x 60.07387pt.
+(pdftex.def)             Requested size: 230.35849pt x 151.7656pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 991--993
 
  []
 
-<./img/87.png, id=1559, 432.61626pt x 72.27pt>
+<./img/87.png, id=1815, 715.67375pt x 64.24pt>
 File: ./img/87.png Graphic file (type png)
 <use ./img/87.png>
 Package pdftex.def Info: ./img/87.png  used on input line 996.
-(pdftex.def)             Requested size: 194.6755pt x 32.52118pt.
+(pdftex.def)             Requested size: 322.0502pt x 28.90773pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -3062,7 +3134,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1001--1005
 
  []
 
-[72 <./img/86.png>]
+[75]
 Underfull \hbox (badness 10000) in paragraph at lines 1008--1022
 
  []
@@ -3087,11 +3159,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1008--1022
 
  []
 
-<./img/88.png, id=1570, 198.7425pt x 162.6075pt>
+[76 <./img/86.png (PNG copy)> <./img/87.png (PNG copy)>]
+<./img/88.png, id=1829, 416.55624pt x 337.26pt>
 File: ./img/88.png Graphic file (type png)
 <use ./img/88.png>
 Package pdftex.def Info: ./img/88.png  used on input line 1025.
-(pdftex.def)             Requested size: 89.43329pt x 73.1727pt.
+(pdftex.def)             Requested size: 187.44858pt x 151.7656pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1030.
@@ -3104,31 +3178,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1030.
 
-[73 <./img/87.png> <./img/88.png>]
-<./img/89.png, id=1579, 203.76125pt x 166.6225pt>
+<./img/89.png, id=1831, 413.545pt x 339.2675pt>
 File: ./img/89.png Graphic file (type png)
 <use ./img/89.png>
 Package pdftex.def Info: ./img/89.png  used on input line 1035.
-(pdftex.def)             Requested size: 91.69171pt x 74.97942pt.
+(pdftex.def)             Requested size: 186.09352pt x 152.66896pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1044--1047
 
  []
 
-<./img/90.png, id=1581, 122.4575pt x 179.67125pt>
+[77 <./img/88.png (PNG copy)> <./img/89.png (PNG copy)>]
+<./img/90.png, id=1839, 252.945pt x 360.34625pt>
 File: ./img/90.png Graphic file (type png)
 <use ./img/90.png>
 Package pdftex.def Info: ./img/90.png  used on input line 1063.
-(pdftex.def)             Requested size: 55.10535pt x 80.8513pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+(pdftex.def)             Requested size: 113.82419pt x 162.15431pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1081
 
  []
 
-[74 <./img/89.png>]
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 1086.
 
@@ -3142,25 +3212,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 1086--1089
 
  []
 
-<./img/91.png, id=1591, 273.02pt x 116.435pt>
+[78 <./img/90.png (PNG copy)>]
+<./img/91.png, id=1849, 833.1125pt x 347.2975pt>
 File: ./img/91.png Graphic file (type png)
 <use ./img/91.png>
 Package pdftex.def Info: ./img/91.png  used on input line 1095.
-(pdftex.def)             Requested size: 122.85786pt x 52.39525pt.
+(pdftex.def)             Requested size: 374.89716pt x 156.28242pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1100--1102
 
  []
 
-<./img/92.png, id=1593, 198.7425pt x 107.40125pt>
+<./img/92.png, id=1851, 480.79625pt x 264.99pt>
 File: ./img/92.png Graphic file (type png)
 <use ./img/92.png>
 Package pdftex.def Info: ./img/92.png  used on input line 1105.
-(pdftex.def)             Requested size: 89.43329pt x 48.33011pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[75 <./img/90.png> <./img/91.png>]
+(pdftex.def)             Requested size: 216.35631pt x 119.24438pt.
+[79 <./img/91.png (PNG copy)> <./img/92.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1115.
@@ -3182,12 +3250,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1133.
 
-[76 <./img/92.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1143--1146
 
  []
 
-
+[80]
 Underfull \hbox (badness 10000) in paragraph at lines 1146--1149
 
  []
@@ -3200,11 +3268,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1151.
 
-<./img/93.png, id=1605, 199.74625pt x 127.47626pt>
+<./img/93.png, id=1863, 532.99126pt x 339.2675pt>
 File: ./img/93.png Graphic file (type png)
 <use ./img/93.png>
 Package pdftex.def Info: ./img/93.png  used on input line 1160.
-(pdftex.def)             Requested size: 89.88498pt x 57.36377pt.
+(pdftex.def)             Requested size: 239.84384pt x 152.66896pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1169.
@@ -3213,7 +3281,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1169.
 
-[77 <./img/93.png>]
+[81 <./img/93.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1175.
@@ -3235,11 +3303,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1184--1187
 
  []
 
-<./img/94.png, id=1614, 200.75pt x 125.46875pt>
+<./img/94.png, id=1873, 532.99126pt x 339.2675pt>
 File: ./img/94.png Graphic file (type png)
 <use ./img/94.png>
 Package pdftex.def Info: ./img/94.png  used on input line 1190.
-(pdftex.def)             Requested size: 90.33665pt x 56.4604pt.
+(pdftex.def)             Requested size: 239.84384pt x 152.66896pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1200--1203
 
@@ -3250,56 +3318,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 1203--1208
 
  []
 
-[78 <./img/94.png>]
-<./img/95.png, id=1622, 194.7275pt x 118.4425pt>
+[82 <./img/94.png (PNG copy)>]
+<./img/95.png, id=1880, 532.99126pt x 339.2675pt>
 File: ./img/95.png Graphic file (type png)
 <use ./img/95.png>
 Package pdftex.def Info: ./img/95.png  used on input line 1211.
-(pdftex.def)             Requested size: 87.62656pt x 53.29861pt.
- [79 <./img/95.png>]
-<./img/96.png, id=1629, 271.0125pt x 113.42375pt>
+(pdftex.def)             Requested size: 239.84384pt x 152.66896pt.
+ [83 <./img/95.png (PNG copy)>]
+<./img/96.png, id=1887, 780.9175pt x 335.2525pt>
 File: ./img/96.png Graphic file (type png)
 <use ./img/96.png>
 Package pdftex.def Info: ./img/96.png  used on input line 1239.
-(pdftex.def)             Requested size: 121.95448pt x 51.0402pt.
-<./img/97.png, id=1632, 273.02pt x 113.42375pt>
+(pdftex.def)             Requested size: 351.40962pt x 150.86223pt.
+<./img/97.png, id=1890, 770.88pt x 326.21875pt>
 File: ./img/97.png Graphic file (type png)
 <use ./img/97.png>
 Package pdftex.def Info: ./img/97.png  used on input line 1254.
-(pdftex.def)             Requested size: 122.85786pt x 51.0402pt.
+(pdftex.def)             Requested size: 346.89279pt x 146.79707pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 1260--1263
 
  []
 
-<./img/98.png, id=1634, 272.01625pt x 129.48375pt>
+<./img/98.png, id=1892, 770.88pt x 371.3875pt>
 File: ./img/98.png Graphic file (type png)
 <use ./img/98.png>
 Package pdftex.def Info: ./img/98.png  used on input line 1266.
-(pdftex.def)             Requested size: 122.40617pt x 58.26714pt.
+(pdftex.def)             Requested size: 346.89279pt x 167.12282pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[80 <./img/96.png> <./img/97.png>]
-<./img/99.png, id=1645, 204.765pt x 158.5925pt>
+[84 <./img/96.png (PNG copy)>]
+<./img/99.png, id=1904, 447.6725pt x 352.31625pt>
 File: ./img/99.png Graphic file (type png)
 <use ./img/99.png>
 Package pdftex.def Info: ./img/99.png  used on input line 1285.
-(pdftex.def)             Requested size: 92.14339pt x 71.36595pt.
-<./img/100.png, id=1647, 275.0275pt x 87.32625pt>
-File: ./img/100.png Graphic file (type png)
-<use ./img/100.png>
-Package pdftex.def Info: ./img/100.png  used on input line 1294.
-(pdftex.def)             Requested size: 123.76123pt x 39.29645pt.
-<./img/101.png, id=1649, 273.02pt x 86.3225pt>
-File: ./img/101.png Graphic file (type png)
-<use ./img/101.png>
-Package pdftex.def Info: ./img/101.png  used on input line 1303.
-(pdftex.def)             Requested size: 122.85786pt x 38.84474pt.
+(pdftex.def)             Requested size: 201.45076pt x 158.54083pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[85 <./img/97.png (PNG copy)> <./img/98.png (PNG copy)>]
+<./img/100.png, id=1911, 733.74126pt x 237.88875pt>
+File: ./img/100.png Graphic file (type png)
+<use ./img/100.png>
+Package pdftex.def Info: ./img/100.png  used on input line 1294.
+(pdftex.def)             Requested size: 330.18051pt x 107.04893pt.
+<./img/101.png, id=1913, 742.775pt x 230.8625pt>
+File: ./img/101.png Graphic file (type png)
+<use ./img/101.png>
+Package pdftex.def Info: ./img/101.png  used on input line 1303.
+(pdftex.def)             Requested size: 334.24565pt x 103.88715pt.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1308.
@@ -3308,7 +3382,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1308.
 
-[81 <./img/98.png> <./img/99.png> <./img/100.png>]
+[86 <./img/99.png (PNG copy)> <./img/100.png (PNG copy)> <./img/101.png (PNG co
+py)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1319.
@@ -3338,12 +3413,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1335--1338
 
  []
 
-[82 <./img/101.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1347--1352
 
  []
 
-
+[87]
 Underfull \hbox (badness 10000) in paragraph at lines 1369--1373
 
  []
@@ -3353,7 +3428,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1369--1373
 
  []
 
-[83]
+[88]
 Underfull \hbox (badness 10000) in paragraph at lines 1404--1409
 
  []
@@ -3363,41 +3438,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 1404--1409
 
  []
 
-<./img/102.png, id=1672, 275.0275pt x 331.2375pt>
+<./img/102.png, id=1935, 742.775pt x 877.2775pt>
 File: ./img/102.png Graphic file (type png)
 <use ./img/102.png>
 Package pdftex.def Info: ./img/102.png  used on input line 1416.
-(pdftex.def)             Requested size: 123.76123pt x 149.05548pt.
+(pdftex.def)             Requested size: 334.24565pt x 394.77122pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/103.png, id=1674, 271.0125pt x 199.74625pt>
+<./img/103.png, id=1937, 553.06625pt x 398.48875pt>
 File: ./img/103.png Graphic file (type png)
 <use ./img/103.png>
 Package pdftex.def Info: ./img/103.png  used on input line 1425.
-(pdftex.def)             Requested size: 121.95448pt x 89.88498pt.
+(pdftex.def)             Requested size: 248.8775pt x 179.31828pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[84]
-<./img/104.png, id=1685, 271.0125pt x 160.6pt>
+<./img/104.png, id=1939, 563.10374pt x 333.245pt>
 File: ./img/104.png Graphic file (type png)
 <use ./img/104.png>
 Package pdftex.def Info: ./img/104.png  used on input line 1442.
-(pdftex.def)             Requested size: 121.95448pt x 72.26932pt.
-
+(pdftex.def)             Requested size: 253.39435pt x 149.95885pt.
+[89]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./img/105.png, id=1687, 264.99pt x 141.52875pt>
+<./img/105.png, id=1950, 480.79625pt x 264.99pt>
 File: ./img/105.png Graphic file (type png)
 <use ./img/105.png>
 Package pdftex.def Info: ./img/105.png  used on input line 1451.
-(pdftex.def)             Requested size: 119.24438pt x 63.68733pt.
+(pdftex.def)             Requested size: 216.35631pt x 119.24438pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85 <./img/102.png> <./img/103.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1460.
@@ -3406,6 +3479,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1460.
 
+[90 <./img/102.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1477.
@@ -3414,7 +3488,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1477.
 
-[86 <./img/104.png> <./img/105.png>]
+[91 <./img/103.png (PNG copy)> <./img/104.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1490--1495
 
  []
@@ -3437,13 +3511,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1497--1502
 
  []
 
-<./img/106.png, id=1704, 265.99374pt x 179.67125pt>
+[92 <./img/105.png (PNG copy)>]
+<./img/106.png, id=1971, 373.395pt x 255.95625pt>
 File: ./img/106.png Graphic file (type png)
 <use ./img/106.png>
 Package pdftex.def Info: ./img/106.png  used on input line 1514.
-(pdftex.def)             Requested size: 119.69608pt x 80.8513pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(pdftex.def)             Requested size: 168.0262pt x 115.17923pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -3482,43 +3555,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 1520--1525
 
  []
 
-[87]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1530--1534
 
  []
 
-
+[93 <./img/106.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 1549--1552
 
  []
 
-[88 <./img/106.png>]
-<./img/107.png, id=1716, 273.02pt x 164.615pt>
+<./img/107.png, id=1979, 563.10374pt x 334.24875pt>
 File: ./img/107.png Graphic file (type png)
 <use ./img/107.png>
 Package pdftex.def Info: ./img/107.png  used on input line 1558.
-(pdftex.def)             Requested size: 122.85786pt x 74.07605pt.
+(pdftex.def)             Requested size: 253.39435pt x 150.41054pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 1597--1600
 
  []
 
-<./img/108.png, id=1719, 271.0125pt x 186.6975pt>
+[94 <./img/107.png (PNG copy)>]
+<./img/108.png, id=1988, 648.4225pt x 433.62pt>
 File: ./img/108.png Graphic file (type png)
 <use ./img/108.png>
 Package pdftex.def Info: ./img/108.png  used on input line 1603.
-(pdftex.def)             Requested size: 121.95448pt x 84.01309pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1608.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1608.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1608.
+(pdftex.def)             Requested size: 291.78743pt x 195.1272pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -3532,22 +3597,34 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1608.
 
-[89 <./img/107.png> <./img/108.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1608.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1608.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1608.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1613--1617
 
  []
 
-[90]
-<./img/109.png, id=1733, 130.4875pt x 65.24374pt>
+[95 <./img/108.png (PNG copy)>]
+<./img/109.png, id=1995, 383.4325pt x 182.6825pt>
 File: ./img/109.png Graphic file (type png)
 <use ./img/109.png>
 Package pdftex.def Info: ./img/109.png  used on input line 1647.
-(pdftex.def)             Requested size: 217.6621pt x 108.83319pt.
-<./img/110.png, id=1734, 116.435pt x 65.24374pt>
+(pdftex.def)             Requested size: 217.6621pt x 103.7036pt.
+<./img/110.png, id=1996, 337.26pt x 182.6825pt>
 File: ./img/110.png Graphic file (type png)
 <use ./img/110.png>
 Package pdftex.def Info: ./img/110.png  used on input line 1652.
-(pdftex.def)             Requested size: 217.6621pt x 121.97829pt.
+(pdftex.def)             Requested size: 217.6621pt x 117.90317pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 1646--1656
 [][] [] 
@@ -3559,8 +3636,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1642--1678
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1678.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -3575,31 +3651,40 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1678.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1678.
+
+[96]
 Underfull \hbox (badness 10000) in paragraph at lines 1683--1688
 
  []
 
-[91 <./img/109.png> <./img/110.png>]
-<./img/111.png, id=1747, 275.0275pt x 189.70876pt>
+<./img/111.png, id=2010, 648.4225pt x 433.62pt>
 File: ./img/111.png Graphic file (type png)
 <use ./img/111.png>
 Package pdftex.def Info: ./img/111.png  used on input line 1697.
-(pdftex.def)             Requested size: 123.76123pt x 85.36813pt.
+(pdftex.def)             Requested size: 291.78743pt x 195.1272pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1705--1709
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1705--1709
 
  []
 
-<./img/112.png, id=1749, 275.0275pt x 188.705pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1709
+
+ []
+
+<./img/112.png, id=2012, 648.4225pt x 433.62pt>
 File: ./img/112.png Graphic file (type png)
 <use ./img/112.png>
 Package pdftex.def Info: ./img/112.png  used on input line 1712.
-(pdftex.def)             Requested size: 123.76123pt x 84.91646pt.
+(pdftex.def)             Requested size: 291.78743pt x 195.1272pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1717.
@@ -3632,36 +3717,783 @@ Underfull \hbox (badness 10000) in paragraph at lines 1718--1727
 
  []
 
-[92 <./img/111.png> <./img/112.png>]
-<./img/113.png, id=1757, 265.99374pt x 184.69pt>
+[97 <./img/109.png> <./img/110.png>]
+<./img/113.png, id=2020, 648.4225pt x 433.62pt>
 File: ./img/113.png Graphic file (type png)
 <use ./img/113.png>
 Package pdftex.def Info: ./img/113.png  used on input line 1730.
-(pdftex.def)             Requested size: 119.69608pt x 83.10971pt.
-<./img/114.png, id=1759, 265.99374pt x 184.69pt>
+(pdftex.def)             Requested size: 291.78743pt x 195.1272pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[98 <./img/111.png (PNG copy)> <./img/112.png (PNG copy)>]
+<./img/114.png, id=2027, 648.4225pt x 433.62pt>
 File: ./img/114.png Graphic file (type png)
 <use ./img/114.png>
 Package pdftex.def Info: ./img/114.png  used on input line 1740.
-(pdftex.def)             Requested size: 119.69608pt x 83.10971pt.
+(pdftex.def)             Requested size: 291.78743pt x 195.1272pt.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 1745--107
 
  []
 
-(./sections/mosfet.tex) [93 <./img/113.png> <./img/114.png>]
-(./AppuntiElettronica.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./sections/mosfet.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+[99 <./img/113.png (PNG copy)> <./img/114.png (PNG copy)>]
+<./img/115.png, id=2036, 320.19624pt x 178.6675pt>
+File: ./img/115.png Graphic file (type png)
+<use ./img/115.png>
+Package pdftex.def Info: ./img/115.png  used on input line 20.
+(pdftex.def)             Requested size: 144.08698pt x 80.39963pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
+<./img/116.png, id=2038, 415.5525pt x 213.79875pt>
+File: ./img/116.png Graphic file (type png)
+<use ./img/116.png>
+Package pdftex.def Info: ./img/116.png  used on input line 32.
+(pdftex.def)             Requested size: 186.99689pt x 96.20854pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/117.png, id=2040, 623.32875pt x 381.425pt>
+File: ./img/117.png Graphic file (type png)
+<use ./img/117.png>
+Package pdftex.def Info: ./img/117.png  used on input line 47.
+(pdftex.def)             Requested size: 280.49535pt x 171.63965pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--61
+
+ []
+
+[100 <./img/115.png (PNG copy)>]
+<./img/118.png, id=2049, 530.98375pt x 338.26375pt>
+File: ./img/118.png Graphic file (type png)
+<use ./img/118.png>
+Package pdftex.def Info: ./img/118.png  used on input line 71.
+(pdftex.def)             Requested size: 238.94048pt x 152.21727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--87
+
+ []
+
+[101 <./img/116.png (PNG copy)> <./img/117.png (PNG copy)>]
+<./img/119.png, id=2056, 620.3175pt x 355.3275pt>
+File: ./img/119.png Graphic file (type png)
+<use ./img/119.png>
+Package pdftex.def Info: ./img/119.png  used on input line 90.
+(pdftex.def)             Requested size: 279.14029pt x 159.89589pt.
+<./img/120.png, id=2058, 481.8pt x 273.02pt>
+File: ./img/120.png Graphic file (type png)
+<use ./img/120.png>
+Package pdftex.def Info: ./img/120.png  used on input line 100.
+(pdftex.def)             Requested size: 216.80798pt x 122.85786pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[102 <./img/118.png (PNG copy)> <./img/119.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
+
+ []
+
+<./img/121.png, id=2067, 652.4375pt x 103.38625pt>
+File: ./img/121.png Graphic file (type png)
+<use ./img/121.png>
+Package pdftex.def Info: ./img/121.png  used on input line 114.
+(pdftex.def)             Requested size: 293.59416pt x 46.52338pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 119.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 119.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 127.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 133.
+
+[103 <./img/120.png (PNG copy)> <./img/121.png (PNG copy)>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 147.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 147.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 147.
+
+<./img/122.png, id=2074, 735.74875pt x 599.23875pt>
+File: ./img/122.png Graphic file (type png)
+<use ./img/122.png>
+Package pdftex.def Info: ./img/122.png  used on input line 161.
+(pdftex.def)             Requested size: 331.08388pt x 269.65494pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+
+ []
+
+[104]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 185.
+
+<./img/123.png, id=2083, 714.67pt x 179.67125pt>
+File: ./img/123.png Graphic file (type png)
+<use ./img/123.png>
+Package pdftex.def Info: ./img/123.png  used on input line 191.
+(pdftex.def)             Requested size: 321.59853pt x 80.8513pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[105 <./img/122.png (PNG copy)>]
+<./img/124.png, id=2090, 557.08125pt x 323.2075pt>
+File: ./img/124.png Graphic file (type png)
+<use ./img/124.png>
+Package pdftex.def Info: ./img/124.png  used on input line 207.
+(pdftex.def)             Requested size: 250.68425pt x 145.44203pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 213.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 213.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 213.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 220.
+
+[106 <./img/123.png (PNG copy)> <./img/124.png (PNG copy)>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 224.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 224.
+
+<./img/125.png, id=2097, 512.91624pt x 220.825pt>
+File: ./img/125.png Graphic file (type png)
+<use ./img/125.png>
+Package pdftex.def Info: ./img/125.png  used on input line 232.
+(pdftex.def)             Requested size: 230.81018pt x 99.37032pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--245
+
+ []
+
+[107 <./img/125.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+ []
+
+<./img/126.png, id=2105, 575.14874pt x 348.30125pt>
+File: ./img/126.png Graphic file (type png)
+<use ./img/126.png>
+Package pdftex.def Info: ./img/126.png  used on input line 286.
+(pdftex.def)             Requested size: 258.81454pt x 156.73412pt.
+[108 <./img/126.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--301
+
+ []
+
+<./img/127.png, id=2114, 1155.31625pt x 351.3125pt>
+File: ./img/127.png Graphic file (type png)
+<use ./img/127.png>
+Package pdftex.def Info: ./img/127.png  used on input line 304.
+(pdftex.def)             Requested size: 519.88751pt x 158.08916pt.
+
+Overfull \hbox (36.19067pt too wide) in paragraph at lines 304--305
+ [][] 
+ []
+
+[109 <./img/127.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
+
+ []
+
+<./img/128.png, id=2121, 669.50125pt x 336.25626pt>
+File: ./img/128.png Graphic file (type png)
+<use ./img/128.png>
+Package pdftex.def Info: ./img/128.png  used on input line 337.
+(pdftex.def)             Requested size: 301.27278pt x 151.3139pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--355
+
+ []
+
+[110 <./img/128.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
+
+ []
+
+
+Overfull \hbox (1.68419pt too wide) in paragraph at lines 383--387
+\OT1/cmr/m/n/10 Vogliamo ora trac-ciare l'andamendo della cor-rente di drain in
+ fun-zione della ten-sione $\OML/cmm/m/it/10 V[]$ \OT1/cmr/m/n/10 us-ando come 
+parametro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
+
+ []
+
+[111]
+Underfull \hbox (badness 10000) in paragraph at lines 391--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--398
+
+ []
+
+<./img/129.png, id=2133, 643.40375pt x 371.3875pt>
+File: ./img/129.png Graphic file (type png)
+<use ./img/129.png>
+Package pdftex.def Info: ./img/129.png  used on input line 401.
+(pdftex.def)             Requested size: 289.529pt x 167.12282pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--414
+
+ []
+
+[112 <./img/129.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 414--417
+
+ []
+
+<./img/130.png, id=2139, 410.53375pt x 533.995pt>
+File: ./img/130.png Graphic file (type png)
+<use ./img/130.png>
+Package pdftex.def Info: ./img/130.png  used on input line 420.
+(pdftex.def)             Requested size: 184.73848pt x 240.29553pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--433
+
+ []
+
+[113 <./img/130.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 448--453
+
+ []
+
+<./img/131.png, id=2149, 401.5pt x 258.9675pt>
+File: ./img/131.png Graphic file (type png)
+<use ./img/131.png>
+Package pdftex.def Info: ./img/131.png  used on input line 456.
+(pdftex.def)             Requested size: 180.67332pt x 116.53429pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
+
+ []
+
+[114 <./img/131.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
+
+ []
+
+<./img/132.png, id=2160, 467.7475pt x 217.81375pt>
+File: ./img/132.png Graphic file (type png)
+<use ./img/132.png>
+Package pdftex.def Info: ./img/132.png  used on input line 480.
+(pdftex.def)             Requested size: 210.48442pt x 98.01527pt.
+<./img/133.png, id=2162, 805.0075pt x 334.24875pt>
+File: ./img/133.png Graphic file (type png)
+<use ./img/133.png>
+Package pdftex.def Info: ./img/133.png  used on input line 491.
+(pdftex.def)             Requested size: 362.25003pt x 150.41054pt.
+<./img/134.png, id=2164, 361.35pt x 334.24875pt>
+File: ./img/134.png Graphic file (type png)
+<use ./img/134.png>
+Package pdftex.def Info: ./img/134.png  used on input line 503.
+(pdftex.def)             Requested size: 162.60599pt x 150.41054pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[115 <./img/132.png (PNG copy)> <./img/133.png (PNG copy)>] [116 <./img/134.png
+ (PNG copy)>]
+<./img/135.png, id=2177, 565.11125pt x 329.23pt>
+File: ./img/135.png Graphic file (type png)
+<use ./img/135.png>
+Package pdftex.def Info: ./img/135.png  used on input line 541.
+(pdftex.def)             Requested size: 254.2977pt x 148.15211pt.
+<./img/136.png, id=2179, 569.12625pt x 273.02pt>
+File: ./img/136.png Graphic file (type png)
+<use ./img/136.png>
+Package pdftex.def Info: ./img/136.png  used on input line 551.
+(pdftex.def)             Requested size: 256.10445pt x 122.85786pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--562
+
+ []
+
+[117 <./img/135.png (PNG copy)> <./img/136.png (PNG copy)>]
+<./img/137.png, id=2188, 467.7475pt x 217.81375pt>
+File: ./img/137.png Graphic file (type png)
+<use ./img/137.png>
+Package pdftex.def Info: ./img/137.png  used on input line 567.
+(pdftex.def)             Requested size: 210.48442pt x 98.01527pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--583
+
+ []
+
+<./img/138.png, id=2190, 281.05pt x 147.55125pt>
+File: ./img/138.png Graphic file (type png)
+<use ./img/138.png>
+Package pdftex.def Info: ./img/138.png  used on input line 590.
+(pdftex.def)             Requested size: 126.47131pt x 66.39743pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
+
+ []
+
+[118 <./img/137.png (PNG copy)> <./img/138.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 601--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--611
+
+ []
+
+<./img/139.png, id=2198, 761.84625pt x 337.26pt>
+File: ./img/139.png Graphic file (type png)
+<use ./img/139.png>
+Package pdftex.def Info: ./img/139.png  used on input line 615.
+(pdftex.def)             Requested size: 342.82764pt x 151.7656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--627
+
+ []
+
+[119 <./img/139.png (PNG copy)>]
+<./img/140.png, id=2205, 467.7475pt x 217.81375pt>
+File: ./img/140.png Graphic file (type png)
+<use ./img/140.png>
+Package pdftex.def Info: ./img/140.png  used on input line 632.
+(pdftex.def)             Requested size: 210.48442pt x 98.01527pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
+
+ []
+
+<./img/141.png, id=2207, 467.7475pt x 217.81375pt>
+File: ./img/141.png Graphic file (type png)
+<use ./img/141.png>
+Package pdftex.def Info: ./img/141.png  used on input line 642.
+(pdftex.def)             Requested size: 210.48442pt x 98.01527pt.
+<./img/142.png, id=2209, 359.3425pt x 396.48125pt>
+File: ./img/142.png Graphic file (type png)
+<use ./img/142.png>
+Package pdftex.def Info: ./img/142.png  used on input line 653.
+(pdftex.def)             Requested size: 161.70262pt x 178.4149pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--665
+
+ []
+
+[120 <./img/140.png (PNG copy)> <./img/141.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 667--671
+
+ []
+
+<./img/143.png, id=2219, 885.3075pt x 206.7725pt>
+File: ./img/143.png Graphic file (type png)
+<use ./img/143.png>
+Package pdftex.def Info: ./img/143.png  used on input line 674.
+(pdftex.def)             Requested size: 398.38469pt x 93.04675pt.
+<./img/144.png, id=2221, 407.5225pt x 244.915pt>
+File: ./img/144.png Graphic file (type png)
+<use ./img/144.png>
+Package pdftex.def Info: ./img/144.png  used on input line 684.
+(pdftex.def)             Requested size: 183.38342pt x 110.21072pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--696
+
+ []
+
+[121 <./img/142.png (PNG copy)> <./img/143.png (PNG copy)>]
+<./img/145.png, id=2229, 241.90375pt x 332.24126pt>
+File: ./img/145.png Graphic file (type png)
+<use ./img/145.png>
+Package pdftex.def Info: ./img/145.png  used on input line 699.
+(pdftex.def)             Requested size: 108.85567pt x 149.50717pt.
+ [122 <./img/144.png (PNG copy)> <./img/145.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 746--752
+
+ []
+
+[123]
+<./img/146.png, id=2242, 318.18875pt x 420.57124pt>
+File: ./img/146.png Graphic file (type png)
+<use ./img/146.png>
+Package pdftex.def Info: ./img/146.png  used on input line 759.
+(pdftex.def)             Requested size: 143.18361pt x 189.25531pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 774--777
+
+ []
+
+<./img/147.png, id=2244, 231.86626pt x 262.9825pt>
+File: ./img/147.png Graphic file (type png)
+<use ./img/147.png>
+Package pdftex.def Info: ./img/147.png  used on input line 780.
+(pdftex.def)             Requested size: 104.33884pt x 118.34102pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 789.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 789.
+
+[124 <./img/146.png (PNG copy)>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 802.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 802.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--819
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--819
+
+ []
+
+[125 <./img/147.png (PNG copy)>]
+<./img/148.png, id=2256, 528.97626pt x 280.04625pt>
+File: ./img/148.png Graphic file (type png)
+<use ./img/148.png>
+Package pdftex.def Info: ./img/148.png  used on input line 822.
+(pdftex.def)             Requested size: 238.03711pt x 126.01964pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--832
+
+ []
+
+<./img/149.png, id=2257, 817.0525pt x 265.99374pt>
+File: ./img/149.png Graphic file (type png)
+<use ./img/149.png>
+Package pdftex.def Info: ./img/149.png  used on input line 835.
+(pdftex.def)             Requested size: 367.67023pt x 119.69608pt.
+[126 <./img/148.png (PNG copy)> <./img/149.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 845--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--877
+
+ []
+
+<./img/150.png, id=2267, 382.42876pt x 137.51375pt>
+File: ./img/150.png Graphic file (type png)
+<use ./img/150.png>
+Package pdftex.def Info: ./img/150.png  used on input line 891.
+(pdftex.def)             Requested size: 217.6621pt x 78.26614pt.
+<./img/151.png, id=2268, 522.95375pt x 423.5825pt>
+File: ./img/151.png Graphic file (type png)
+<use ./img/151.png>
+Package pdftex.def Info: ./img/151.png  used on input line 896.
+(pdftex.def)             Requested size: 217.6621pt x 176.30699pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 890--900
+[][] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 905--908
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--910
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--910
+
+ []
+
+[127] [128 <./img/150.png (PNG copy)> <./img/151.png>]
+<./img/152.png, id=2282, 530.98375pt x 277.035pt>
+File: ./img/152.png Graphic file (type png)
+<use ./img/152.png>
+Package pdftex.def Info: ./img/152.png  used on input line 945.
+(pdftex.def)             Requested size: 238.94048pt x 124.6646pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--957
+
+ []
+
+<./img/153.png, id=2284, 482.80376pt x 194.7275pt>
+File: ./img/153.png Graphic file (type png)
+<use ./img/153.png>
+Package pdftex.def Info: ./img/153.png  used on input line 961.
+(pdftex.def)             Requested size: 217.25967pt x 87.62656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--972
+
+ []
+
+[129 <./img/152.png (PNG copy)> <./img/153.png (PNG copy)>]
+<./img/154.png, id=2292, 278.03876pt x 263.98625pt>
+File: ./img/154.png Graphic file (type png)
+<use ./img/154.png>
+Package pdftex.def Info: ./img/154.png  used on input line 978.
+(pdftex.def)             Requested size: 125.11627pt x 118.79271pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1003
+
+ []
+
+[130 <./img/154.png (PNG copy)>]
+<./img/155.png, id=2299, 593.21625pt x 261.97874pt>
+File: ./img/155.png Graphic file (type png)
+<use ./img/155.png>
+Package pdftex.def Info: ./img/155.png  used on input line 1019.
+(pdftex.def)             Requested size: 266.94484pt x 117.88934pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1031
+
+ []
+
+) [131 <./img/155.png (PNG copy)>] (./AppuntiElettronica.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `AppuntiElettronica.out' has not changed.
-(rerunfilecheck)             Checksum: D3F7F43916C0B31517468BB24BD6DE48;29659.
+
+
+Package rerunfilecheck Warning: File `AppuntiElettronica.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `AppuntiElettronica.out':
+(rerunfilecheck)             Before: 093C9922BE36DEC053B3B8965543E952;38956
+(rerunfilecheck)             After:  7946D30447A14903479962708C28F4E4;39237.
  ) 
 Here is how much of TeX's memory you used:
- 29648 strings out of 467525
- 541245 string characters out of 5418983
+ 30344 strings out of 467525
+ 552565 string characters out of 5418983
  939493 words of memory out of 5000000
- 57541 multiletter control sequences out of 15000+600000
+ 58054 multiletter control sequences out of 15000+600000
  649267 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,117p,627b,1445s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3690,13 +4522,14 @@ f-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2026/te
 xmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb></usr/local/texlive/2026/
 texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texlive/2026
 /texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/202
-6/texmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></usr/local/texlive/20
-26/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/
-2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AppuntiElettronica.pdf (94 pages, 2432746 bytes).
+6/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AppuntiElettronica.pdf (132 pages, 6941543 bytes).
 PDF statistics:
- 1977 PDF objects out of 2073 (max. 8388607)
- 1657 compressed objects within 17 object streams
- 413 named destinations out of 1000 (max. 500000)
- 1980 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2551 PDF objects out of 2984 (max. 8388607)
+ 2164 compressed objects within 22 object streams
+ 555 named destinations out of 1000 (max. 500000)
+ 2601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,1032 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{../img/}}}
 \begin{document}
+	\subsection{Introduzione}
+	Nel la scorsa sezione abbiamo visto la logica ECL e come, con essa, sia possibile realizzare porte logiche NOR.\\\\
+	Abbiamo anche visto come tutte le logiche fino ad ora esaminate condividono un difetto tipico: le prestazioni del dispositivo a vuoto sono differenti dalle prestazioni del dispositivo caricato.\\\\
+	La soluzione ideale sarebbe trovare un meccanismo per il quale la corrente di ingresso alla porta $i + 1$ fosse indipendente dalla corrente di uscita della porta $i$-esima.\\\\
+	Nel presente Capitolo introdurremo i dispositivi ad effetto di campo.
+	\subsection{Transistori ad effetto di campo}
+	Consideriamo un blocco di materiale uniformemente drogato di tipo $n$ con una concentrazione $N = N_D$ (Figura \ref{fig:im-115}).\\
+	La conducibilità di questo dispositivo è:
+	$$\sigma = q\mu_n N = q\mu_n N_D$$
+	All'applicazione di un campo elettrico $\bar{E}$ avremo una corrente:
+	$$\bar{J} = \sigma \bar{E}$$
+	ed allora il blocchetto si caratterizza come una resistenza data da:
+	$$R = \frac{1}{\sigma} \cdot \frac{L}{wh}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{115.png}
+			\caption{Un blocchetto di semiconduttore.}
+			\label{fig:im-115}
+		\end{figure}
+	\end{center}
+	Consideriamo ora la giunzione $p_n$ ed applichiamo una differenza di potenziale $V$ (Figura \ref{fig:im-116}).\\\\
+	Nelle regioni neutre la conducibilità sarà ancora:
+	$$\begin{cases} \sigma_n = q\mu_n N_D \\ \sigma_p = q\mu_p N_A \end{cases}$$
+	mentre per entrambe le regioni svuotate la conducibilità sarà nulla.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{116.png}
+			\caption{Giunzione $p_n$ a cavallo della quale si applica una differenza di potenziale $V$.}
+			\label{fig:im-116}
+		\end{figure}
+	\end{center}
+	Costruiamo un nuovo dispositivo con le due considerazioni sopra riportate.\\
+	Il dispositivo (Figura \ref{fig:im-117}) consiste in una giunzione $p_n$ a cavallo della quale è posto un generatore di tensione $V_2$.\\
+	Sulla porzione drogata $n$ si applica un generatore di tensione $V_1$.\\
+	La portata massima della corrente circolante sul dispositivo è pari al volume massimo della regione drogata $n$.\\
+	In genere avremo:
+	$$R = \frac{1}{q\mu_n N_D} \cdot \frac{L}{w(h - w(V))}$$
+	dove $w(V)$ è la dimensione della regione svuotata al variare della tensione data da $V_2$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{117.png}
+			\caption{Un JFET.}
+			\label{fig:im-117}
+		\end{figure}
+	\end{center}
+	Questo dispositivo è detto transistore ad effetto di campo (JFET, \textbf{Junction Field Effect Transistor}) e sfrutta il campo elettrico per modulare la dimensione della regione di canale (che è la regione di conduzione).\\
+	Purtroppo un dispositivo di questo tipo è estremamente complesso da realizzare e miniaturizzare.\\\\
+	La regione di canale deve poter essere completamente chiusa ma quando abbiamo introdotto la giunzione $p_n$ abbiamo dimostrato che la regione svuotata ha un'ampiezza di pochi micron.\\
+	Il chip di silicio ha però uno spessore di centinaia di micron.\\
+	Lo svuotamento dell'intero canale allora dovrebbe richiedere tensioni di migliaia di Volt che non sono ragionevoli.\\\\
+	Inoltre noi vogliamo poter realizzare circuiti su un solo pezzo di semiconduttore.\\
+	Ma due transistori JFET sullo stesso pezzo di semiconduttore possono coesistere solo se circondati da giunzioni $p_n$.\\\\
+	I JFET sono allora di difficile utilizzo nei circuiti integrati.\\
+	Trovano tuttavia applicazione in campo medico (elettrocardiogramma, elettroencefalogramma, eccetera).
+	\subsection{Transistori MOS}
+	Nonostante la complessità del JFET l'idea è interessante.\\
+	Tale complessità è dovuta alla scelta di modulare le dimensioni fisiche del dispositivo.\\
+	Possiamo però modulare anche le caratteristiche di conducibilità.
+	Costruiamo un nuovo dispositivo costituito da un semiconduttore (tipicamente il silicio, $Si$), un isolante (l'ossido di silicio, $SiO_2$) ed un conduttore (un metallo).\\
+	Un dispositivo di questo tipo è detto transistore MOS (\textbf{Metal Oxide Semiconductor}) ed è una specie di condensatore.\\
+	I transistori MOS (Figura \ref{fig:im-118}) sono attualmente alla base della realizzazione della maggior parte dei circuiti integrati.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{118.png}
+			\caption{Un transistore MOS.}
+			\label{fig:im-118}
+		\end{figure}
+	\end{center}
+	\subsubsection{Analisi qualitativa}
+	Applichiamo una differenza di potenziale $V$ ai capi del dispositivo.\\
+	Quando si applica la tensione $V$ gli elettroni del semiconduttore sono trascinati verso l'alto e vengono bloccati contro l'isolante.\\
+	Possiamo allora ipotizzare che esista una regione perturbata nei pressi della giunzione tra il semiconduttore e l'isolante dove gli elettroni vengono concentrati.\\
+	Quindi abbiamo aumentato la conducibilità dello strato superficiale del semiconduttore.\\
+	Parimenti abbiamo aumentato la carica positiva sulla giunzione tra l'isolante ed il metallo.\\
+	Ancora, nel semiconduttore, poiché i portatori di carica si sono spostati, abbiamo creato una seconda regione di conduzione dovuta allo svuotamento.\\\\
+	Dunque siamo riusciti a modificare la conducibilità del dispositivo in funzione della tensione applicata senza toccare le dimensioni fisiche del MOS.\\
+	Il canale di conduzione è inoltre completamente isolato dal dispositivo grazie alla zona svuotata.\\
+	Allora non abbiamo bisogno del complesso sistema di isolamento richiesto dal JFET.\\\\
+	Lo schema del MOS completo è riportato in Figura \ref{fig:im-119} ed è detto MOSFET (\textbf{Metal Oxide Semiconductor Field Effect Transistor}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{119.png}
+			\caption{Un transistore MOSFET. Si noti che la corrente di gate $I_G$ è certamente nulla grazie alla presenza dell'isolante.}
+			\label{fig:im-119}
+		\end{figure}
+	\end{center}
+	Anche questo sistema è però piuttosto complesso da realizzare in dimensioni ridotte.\\
+	Sfruttiamo allora la versione di Figura \ref{fig:im-120} che è più facile da gestire.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{120.png}
+			\caption{Un transistore MOSFET realizzato su un pezzo di semiconduttore. \\ La regione svuotata circonda completamente il dispositivo.}
+			\label{fig:im-120}
+		\end{figure}
+	\end{center}
+	Tale dispositivo presenta due enormi vantaggi: l'intera struttura di conduzione, facilmente realizzabile, “galleggia” in una zona completamente neutra (non abbiamo quindi bisogno di complesse strutture di isolamento) e la corrente di gate è intrinsecamente nulla.\\
+	Un altro indubbio vantaggio del MOSFET è che, contrariamente al BJT, si tratta di un dispositivo completamente simmetrico e quindi possiamo scambiare il drain ed il source senza problemi.
+	\subsubsection{Analisi quantitativa}
+	Abbiamo ormai compreso che il MOSFET è un dispositivo estremamente utile ed interessante.\\
+	Passiamo all'analisi quantitativa considerando lo schema di Figura \ref{fig:im-121}.\\\\
+	Ipotizziamo che l'ossido abbia una dimensione pari a $T_{OX}$ e che esista una coordinata $x_D$ oltre la quale l'interfaccia tra ossido e semiconduttore non abbia più effetto.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{121.png}
+			\caption{Schema semplificato di un transistore MOSFET.}
+			\label{fig:im-121}
+		\end{figure}
+	\end{center}
+	\paragraph{Condizione per $x > x_D$}
+	Incominciamo l'analisi partendo dalla regione svuotata.\\
+	Per ipotesi in questa regione è:
+	$$\begin{cases} p = p_0 = N_A \\ n = n_0 = \frac{n^2}{N_A} \end{cases}$$
+	da cui ricaviamo che il campo elettrico è:
+	$$E = -qD_p \frac{dp}{dx} = 0$$
+	Inoltre, siccome il potenziale $\varphi$ è definito a meno di una costante possiamo imporre che sia $\varphi = 0$.\\\\
+	Da ultimo anche la densità di carica $\rho$ è nulla.
+	\paragraph{Condizione per $x < -T_{OX}$}
+	Il potenziale $\varphi$ è nuovamente costante.\\
+	Grazie a Kirchhoff ricaviamo:
+	$$\varphi = V_G - \varphi_{MS} = V_G'$$
+	dove $\varphi_{MS}$ è il potenziale di contatto tra metallo e semiconduttore.\\\\
+	Siccome $\varphi$ è costante, il campo elettrico, che ne è la derivata, è nullo.
+	\paragraph{Condizione per $-T_{OX} < x < 0$}
+	Siamo nell'ossido.\\
+	Supponiamo che l'ossido sia puro e quindi risulti:
+	$$\rho = 0$$
+	$$\begin{cases} \frac{d(\varepsilon E)}{dx} = \rho \\ \varepsilon = \varepsilon_{OX} \end{cases} \implies \frac{dE}{dx} = \frac{\rho}{\varepsilon} = 0$$
+	ed allora sarà:
+	$$E = E_{OX}$$
+	Per quanto riguarda il potenziale, sfruttanddot quanto ricavato ed integrando, abbiamo:
+	$$\varphi(x) = V_G' - E_{OX} \cdot (x + T_{OX})$$
+	che è l'equazione di una retta a pendenza negativa.\\
+	Il limite estremo è:
+	$$\varphi_S = \varphi(0) = V_G' - E_{OX}T_{OX}$$
+	Il campo elettrico alla superficie è allora:
+	$$E_{OX} = \frac{V_G' - \varphi_S}{T_{OX}}$$
+	\paragraph{Condizione per $0 < x < x_D$}
+	Siamo nella regione perturbata.\\
+	Ragionevolmente il potenziale $\varphi$ sarà compreso tra $\varphi_S$ (che è positivo) e $0$.
+	$$\varphi_S > \varphi > \varphi(x_D)$$
+	Inoltre nell'intervallo possiamo scrivere $\rho$ nella forma:
+	$$\rho = (N_D - N_A + p - n)$$
+	ma siccome $N_D$ non è fisicamente presente nel dispositivo, $p$ è trascurabile e $n \ll n_S \approx N_A$ è anch'esso trascurabile, abbiamo:
+	$$\rho = -qN_A$$
+	Allora sia il campo sia la densità di carica hanno un andamento rispettivamente di tipo lineare e di tipo parabolico come già visto per il diodo.
+	\paragraph{Grafici riassuntivi}
+	I grafici di Figura \ref{fig:im-122} mostrano le grandezze fondamentali di un transistore MOSFET.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{122.png}
+			\caption{Grandezze fondamentali di un transistore MOSFET. \\ In azzurro le porzioni di caratteristica che abbiamo solo ipotizzato.}
+			\label{fig:im-122}
+		\end{figure}
+	\end{center}
+	I risultati già ottenuti sono riportati in Figura \ref{fig:im-122}.\\\\
+	In particolare ricordiamo che:
+	$$x > x_D \Longrightarrow \begin{cases} E = 0 \\ \varphi = 0 \\ \rho = 0 \end{cases}$$
+	$$x < -T_{OX} \Longrightarrow \begin{cases} E = 0 \\ \varphi = V'_G \end{cases}$$
+	$$-T_{OX} < x < 0 \Longrightarrow \begin{cases} E = E_{OX} \\ \varphi = V'_G - E_{OX} \cdot (x + T_{OX}) \\ \rho = 0 \end{cases}$$
+	Osserviamo che nel passaggio dalla regione di ossido alla regione di semiconduttore il campo elettrico non è continuo.\\
+	Infatti è:
+	$$\frac{dE}{dx} = \frac{\rho}{\varepsilon} = \frac{-qN_A}{\varepsilon_p}$$
+	$$\int_{o^{-}}^{0^{+}} d(\varepsilon E) = \int_{o^{-}}^{0^{+}} \rho dx \Longrightarrow \varepsilon_{s} E_{s} - \varepsilon_{OX} E_{OX} = 0 \Longrightarrow \varepsilon_{s} E_{s} = \varepsilon_{OX} E_{OX}$$
+	Allora il campo elettrico nel semiconduttore è:
+	$$E_{s} = \frac{\varepsilon_{OX}}{\varepsilon_{s}} E_{OX}$$
+	$$\frac{dE}{dx} = \frac{-qN_{A}}{\varepsilon_{s}} \Longrightarrow E(x) = \frac{qN_{A}}{\varepsilon_{s}} (x_{D} - x)$$
+	Possiamo ora ricavare $\varphi$:
+	$$\varphi(x) = \frac{qN_{A}}{2\varepsilon_{s}} (x - x_{D})^{2}$$
+	$$0 < x < x_{D} \Longrightarrow \begin{cases} E(x) = \frac{qN_{A}}{\varepsilon_{s}} (x_{D} - x) \\ \varphi(x) = \frac{qN_{A}}{2\varepsilon_{s}} (x - x_{D})^{2} \\ \rho = -qN_{A} \end{cases}$$
+	A questo punto è possibile ricavare il valore di $x_{D}$.
+	$$\begin{cases} E(x) = \frac{qN_{A}}{\varepsilon_{s}} (x_{D} - x) \\ \varphi(x) = \frac{qN_{A}}{2\varepsilon_{s}} (x - x_{D})^{2} \end{cases} \quad \stackrel{x=0}{\Longrightarrow} x_{D} = \sqrt{\frac{2\varepsilon_{s}\varphi_{s}}{qN_{A}}}$$
+	Con valori significativi risulta che l'ampiezza della zona perturbata (anche nel caso peggiore $\varphi_{s} = V'_{G}$) si misura in micron.\\
+	Dunque l'ipotesi iniziale è verificata e possiamo fare altri ragionamenti.
+	\subsection{Analisi della tensione $V'_{G}$}
+	Nel semiconduttore avremo una carica di elettroni fortemente superficiale dovuta ai portatori mobili.\\
+	Il grafico di Figura \ref{fig:im-123} mostra le due cariche della regione di semiconduttore.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{123.png}
+			\caption{La regione di semiconduttore presenta sia una carica superficiale ($Q_{i}$) sia una carica "profonda" ($Q_{B}$).}
+			\label{fig:im-123}
+		\end{figure}
+	\end{center}
+	La carica $Q_{B}$ è una carica fissa e si trova distribuita sotto la superficie del semiconduttore fino a punto $x_{D}$.\\
+	La carica $Q_{I}$ è invece dovuta alle cariche mobili raggruppate all'interfaccia ossido semiconduttore.\\
+	Dobbiamo ora trovare un modo per legare le due cariche (che vanno tenute distinte) alla variabile $V_{G}$ e non alla variabile $\varphi_{s}$.
+	$$\rho = q(N_{D} - N_{A} + p - n)$$
+	$$\begin{cases} N_{D} = 0 \\ p = p_{0} e^{-\frac{q\varphi_{s}}{KT}} \\ p_{0} = N_{A} \\ n = n_{0} e^{\frac{q\varphi_{s}}{KT}} \\ n_{0} = \frac{n_{1}^{2}}{N_{A}} \end{cases} \quad \Longrightarrow \rho = q\left(-N_{A} + N_{A} e^{-\frac{q\varphi_{s}}{KT}} - \frac{n_{1}^{2}}{N_{A}} e^{\frac{q\varphi_{s}}{KT}}\right)$$
+	Sfruttando ora l’equazione di Poisson e mettendola a sistema con l’espressione di $\rho$:
+	$$\frac{dE}{dx} = -\frac{d^2\varphi}{dx^2} = \frac{\rho}{\varepsilon_p}$$
+	ricaviamo l’andamento riportato in Figura 24.3.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{124.png}
+			\caption{Andamento di $\varphi_s$ al variare di $V_G$.}
+			\label{fig:im-124}
+		\end{figure}
+	\end{center}
+	Allora possiamo suddividere la curva in tre tratti: due a pendenza quasi nulla (per $V'_G < 0$ e per $V'_G > V^*_G$) ed uno ad elevata pendenza.
+	\subsubsection{$V'_G$ = 0}
+	Dal grafico ricaviamo che quando è:
+	$$V'_G = 0 \implies \begin{cases} \varphi_s = 0 \\ n_s = n_0 \\ p_s = p_0 \end{cases}$$
+	il potenziale è nullo nell’intera struttura.\\
+	Inoltre le lacune e gli elettroni presentano la stessa concentrazione sia nel substrato sia nello strato di interfaccia.\\
+	Questa situazione, detta di *banda piatta* (*flat band*), si ha solo quando risulta:
+	$$V'_G = V_G - \psi_{MS} = 0 \implies V_G = \psi_{MS} = V_{FB}$$
+	\subsubsection{$V'_G < 0$}
+	In questa situazione abbiamo che il campo elettrico viene ribaltato: nel semiconduttore le lacune sono spinte verso la superficie mentre gli elettroni vengono spinti in profondità.
+	$$V'_G < 0 \implies \begin{cases} \varphi_s < 0 \\ n_s < n_0 \\ p_s > p_0 \end{cases}$$
+	Questa condizione, detta *condizione di accumulazione* poiché accumula i portatori maggioritari all’interfaccia,
+	\subsubsection{$V'_G > 0$}
+	In questa situazione abbiamo:
+	$$V'_G > 0 \implies \begin{cases} \varphi_s > 0 \\ n_s > n_0 \\ p_s < p_0 \end{cases}$$
+	e cioè un aumento della concentrazione di elettroni ed una diminuzione della concentrazione delle lacune.\\
+	Dal grafico di Figura \ref{fig:im-124} notiamo che per $\varphi_s > \varphi_s^*$ gli elettroni e le lacune, alla superficie, si scambiano di ruolo: i portatori maggioritari divengono minoritari mentre i portatori minoritari divengono maggioritari.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{125.png}
+			\caption{Andamento della concentrazione superficiale di elettroni e di lacune.}
+			\label{fig:im-125}
+		\end{figure}
+	\end{center}
+	Questa condizione è detta di \textbf{inversione}.\\
+	Il punto di inversione si ricava facilmente valutando l'uguaglianza:
+	$$n_s(\varphi_s^*) = p_s(\varphi_s^*)$$
+	Sfruttando le formule note ricordate all'inizio dell'analisi ricaviamo che è:
+	$$\varphi_s^* = \frac{KT}{q} \cdot \ln\left[\frac{N_A}{n_i}\right]$$
+	Il potenziale appena ricavato (note le concentrazioni di drogante è un numero) è detto \textbf{potenziale di Fermi} e viene indicato con $\varphi_F$.\\\\
+	Possiamo allora distinguere due sottoregioni:
+	\begin{itemize}
+		\item una regione di \textbf{svuotamento }in cui è:
+		$$\begin{cases} 0 < \varphi_s < \varphi_F \\ n_s < n_0 < p_s < p_0 \end{cases}$$
+		\item una regione di \textbf{debole inversione} in cui è:
+		$$\begin{cases} \varphi_s > \varphi_F \\ n_0 < p_s < n_s < p_0 \end{cases}$$
+	\end{itemize}
+	Inoltre per un certo valore di $\varphi_s$ la concentrazione degli elettroni alla superficie non supererà anche il valore assoluto delle lacune nel substrato.\\
+	Per individuare tale valore di $\varphi_s$ sarà sufficiente imporre l'uguaglianza:
+	$$n_s(\varphi_s^*) = p_0$$
+	Anche in questo caso, sostituendo e semplificando ricaviamo che è:
+	$$\varphi_s^* = 2 \cdot \frac{KT}{q} \cdot \ln\left[\frac{N_A}{n_i}\right] = 2\varphi_F$$
+	Per distinguere la regione di inversione precedentemente ricavata da quella appena individuata diremo che per:
+	$$\varphi_F < \varphi_s < 2\varphi_F$$
+	ci troviamo in \textbf{debole inversione (weak inversion)} mentre per:
+	$$\varphi_s > 2\varphi_F$$
+	ci troviamo in \textbf{forte inversione (strong inversion)}.
+	\subsubsection{Tabella riassuntiva e considerazioni}
+	La Tabelle \ref{tab:table-13} riassume le regioni appena analizzate in relazione al potenziale superficiale $\varphi_s$.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{ll}
+			\hline
+			$\varphi_s$ & Regione \\
+			\hline
+			$\varphi_s < 0$ & di accumulazione \\
+			$0 < \varphi_s < \varphi_F$ & di svuotamento \\
+			$\varphi_F < \varphi_s < 2\varphi_F$ & di debole inversione \\
+			$\varphi_s > 2\varphi_F$ & di forte inversione \\
+			\hline
+		\end{tabular}
+		\caption{Tabella riassuntiva delle regioni di $\varphi_s$.}
+		\label{tab:table-13}
+	\end{table}
+	Possiamo inoltre associare il valore di $V_G'$ alle cariche $Q_B$ e $Q_I$.
+	$$Q_B = -\sqrt{2qN_A\varepsilon_s\varphi_s}$$
+	$$Q_I = C_{OX} \left( V_G' - V_G'^* \right)$$
+	$$C_{OX} = \frac{\varepsilon_{OX}}{T_{OX}}$$
+	L'andamento delle cariche in relazione a $V_G'$ è graficato in Figura \ref{fig:im-126}.\\\\
+	Si noti che, oltre il punto $V_G^*$ (cioè in zona di forte inversione), l'aumento della carica dipende solamente dal valore di $Q_I$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{126.png}
+			\caption{Andamento della carica $Q$. \\ Si noti che essa è composta dalla somma della carica $Q_I$ e della carica $Q_B$.}
+			\label{fig:im-126}
+		\end{figure}
+	\end{center}
+	\subsection{Capacità del MOS}
+	Abbiamo appena analizzato la distribuzione di carica all'interno di un condensatore MOS.\\
+	I ragionamenti effettuati ci hanno portato a riconoscere quattro regioni: di accumulazione (che useremo molto di rado), di svuotamento, di debole inversione e di forte inversione.\\
+	Abbiamo inoltre definito $Q_B$ come la \textbf{carica di bulk} e $Q_I$ come la \textbf{carica di interfaccia} e di inversione ed identificato
+	$$x_D = \sqrt{\frac{2\varepsilon\psi_b}{qN_A}}$$
+	Abbiamo infine notato che in regione di forte inversione il MOS risulta essere un normale condensatore.\\\\
+	Partendo dal grafico della carica rispetto alla tensione del condensatore MOS possiamo ricavare la capacità equivalente del condensatore.
+	$$C(V) = \frac{dQ}{dV}$$
+	Possiamo definire la capacità massima del condensatore MOS come $C_{OX}$ in modo da, eventualmente, sovrastimare un ritardo.\\\\
+	Ancora una volta siamo in presenza di un condensatore anomalo con capacità variabile (Figura \ref{fig:im-127}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{127.png}
+			\caption{Andamento qualitativo della carica $Q$ e della capacità ad essa associata.}
+			\label{fig:im-127}
+		\end{figure}
+	\end{center}
+	\subsection{Tensione di soglia}
+	Notiamo che $V_G'^*$ discrimina due regioni: una in cui il canale esiste ed una in cui il canale ancora non esiste.\\
+	Per questo motivo indichiamo questo valore con il nome di tensione di soglia ($V_T'$).
+	$$V_T' = \left\{ V_G' : \varphi_s = 2\varphi_F \right\}$$
+	Per calcolare il valore della tensione di soglia ricordiamo:
+	$$E_{OX} = \frac{V'_G - \varphi_s}{T_{OX}}$$
+	$$E_S = \frac{q N_A x_D}{\varepsilon_S}$$
+	$$\varepsilon_{OX} E_{OX} = \varepsilon_S E_S$$
+	da cui possiamo ricavare:
+	$$\frac{\varepsilon_{OX}}{T_{OX}} \left( V'_T - 2\varphi_F \right) = \varepsilon_S \cdot \frac{q N_A}{\varepsilon_S} \cdot \sqrt{\frac{2\varepsilon_S}{q N_A}} \cdot \sqrt{2\varphi_F}$$
+	$$V'_T = 2\varphi_F + \frac{\sqrt{2\varepsilon_S q N_A}}{C_{OX}} \cdot \sqrt{2\varphi_F}$$
+	Siccome però noi controlliamo la tensione di soglia $V_T$ è più comodo esprimere:
+	$$V'_T = V_T - \psi_{MS} \implies V_T = V'_T + \psi_{MS}$$
+	Definendo ora:
+	$$\frac{\sqrt{2\varepsilon_S q N_A}}{C_{OX}} = \gamma$$
+	otteniamo l'espressione:
+	$$V_T = \psi_{MS} + \gamma \cdot \sqrt{2\varphi_F} + 2\varphi_F$$
+	che è nettamente più maneggevole.\\
+	Inoltre $\psi_{MS}$ indica che deve essere pareggiato il potenziale di contatto tra metallo e semiconduttore, $\gamma \cdot \sqrt{2\varphi_F}$ indica che deve essere svuotato il bulk e $2\varphi_F$ indica il potenziale da raggiungere per entrare in forte inversione.\\\\
+	Per abbassare od alzare la tensione di soglia è possibile drogare in modo opportuno lo strato superficiale (aggiungendo elettroni per abbassare $V_T$ od aggiungendo lacune per alzarne il valore).\\
+	Solitamente queste modifiche si effettuano in fase di costruzione del dispositivo.\\\\
+	Possiamo inoltre esprimere la carica di interfaccia come:
+	$$Q_I = C_{OX} \cdot \left( V'_G - V'_T \right) \implies Q_I = C_{OX} \cdot (V_G - V_T)$$
+	\subsection{Transistore MOS}
+	Vediamo ora come applicare le relazioni trovate ad un transistore MOS (Figura \ref{fig:im-128})
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{128.png}
+			\caption{Transistore MOS e suo simbolo circuitale. \\ Il canale di conduzione (evidenziato in rosso ha lunghezza $L$ e larghezza $W$).}
+			\label{fig:im-128}
+		\end{figure}
+	\end{center}
+	Una volta creato il canale di conduzione vogliamo trasferire corrente lungo l'asse $y$ dal source al drain.\\
+	Sappiamo che sia la corrente di gate e la corrente di bulk sono nulle.\\
+	Allora sarà:
+	$$\begin{cases} I_G = 0 \\ I_B = 0 \\ I_D = -I_S \end{cases}$$
+	Ipotizziamo di mettere a massa sia il bulk sia il source e di applicare una differenza di potenziale positiva $V_{DS}$ tra drain e source ed una differenza di potenziale positiva $V_{GS}$ tra gate e source.\\\\
+	Vogliamo quindi individuare la corrente
+	$$I_D(V_{GS}, V_{DS})$$
+	Muovendoci lungo l'asse $y$ di Figura \ref{fig:im-128} notiamo che la tensione cresce dal valore 0 assunto in prossimità del source al valore $V_{DS}$ assunto in prossimità del drain.\\
+	Allora la carica accumulata da ogni condensatore di dimensione $dy$ è funzione di $y$.
+	$$Q_I(y) = C_{OX}(V_{GS} - \varphi(y) - V_T)$$
+	Siccome siamo in una situazione bidimensionale il campo elettrico ha sempre due componenti.\\
+	Semplifichiamo i calcoli supponendo di essere in una condizione di *profilo graduale* e cioè che il campo longitudinale abbia effetti trascurabili sul campo verticale e che il campo verticale non risenta delle variazioni del campo longitudinale.\\\\
+	Per la convenzione scelta, la corrente $I_D$ scorre dal terminale di drain al terminale di source.
+	$$I_D = -\int_s J ds$$
+	dove $s$ indica una sezione infinitesima del dispositivo.\\
+	Assumiamo che il canale sia di lunghezza $L$ e di larghezza $W$.\\
+	Possiamo riscrivere:
+	$$I_D = -W \int_0^{+\infty} J dx$$
+	Siccome il canale è già completamente formato risulta essere:
+	$$J = J_n = q\mu_n n E + qD_n \frac{dn}{dy}$$
+	Dal momento che il canale è formato la componente diffusiva non conta (essendo derivata della concentrazione, che è costante, risulta essere nulla) ed allora semplifichiamo ulteriormente:
+	$$J = q\mu_n n E$$
+	$$I_D = -W \cdot \int_o^{+\infty} [q\mu_n n E_y] dx$$
+	Osserviamo ora che $\mu_n$ è costante.\\
+	Inoltre, essendo in ipotesi di profilo graduale, la componendo di campo $E_y$ è costante rispetto ad $x$.\\
+	Allora è:
+	$$I_D = -W \mu_n E_y \cdot \int_o^{+\infty} [qn] dx$$
+	Il termine $n$ indica la concentrazione degli elettroni che varia lungo $x$ e non può essere estratto dall'integrale.\\
+	Inoltre $qn$ è una densità di carica mobile che, integrata, porta alla carica di interfaccia.
+	$$\int_0^{+\infty} [qn] \, dx = Q_I$$
+	$$I_D = -\mu_n W C_{OX} (V_{GS} - V_T - \varphi(y)) E_y$$
+	Ricordando ora che è sempre possibile scrivere:
+	$$E_y = -\frac{d\varphi}{dy}$$
+	otteniamo:
+	$$I_D = \mu_n W C_{OX} (V_{GS} - V_T - \varphi(y)) \frac{d\varphi}{dy}$$
+	Separiamo le variabili:
+	$$I_D dy = \mu_n W C_{OX} (V_{GS} - V_T - \varphi(y)) \, d\varphi$$
+	possiamo integrare ambo i membri:
+	$$\int_0^L I_D dy = \int_{\varphi(0)}^{\varphi(L)} \mu_n W C_{OX} (V_{GS} - V_T - \varphi(y)) \, d\varphi$$
+	$$I_D L = \mu_n W C_{OX} \left[ \left( V_{GS} - V_T\right) \varphi - \frac{\varphi^2}{2} \right]^{\varphi(L)}_{\varphi(0)}$$
+	Ricordando ora che $\varphi(L) = V_{DS}$ e $\varphi(0) = 0$ otteniamo:
+	$$I_D = \mu_n C_{OX} \cdot \frac{W}{L} \cdot \left[ (V_{GS} - V_T) V_{DS} - \frac{V_{DS}^2}{2} \right]$$
+	che è valida fino a quando le ipotesi formulate sono valide.\\\\
+	Vogliamo ora tracciare l'andamendo della corrente di drain in funzione della tensione $V_{DS}$ usando come parametro la tensione $V_{DS}$.\\\\
+	Notiamo anzitutto che
+	$$\mu_n C_{OX} \cdot \frac{W}{L} = \beta$$
+	è costante.\\
+	In particolare possiamo definire $\frac{W}{L}$ come il fattore di forma del canale.\\
+	Dal momento che vogliamo tracciare curve a $V_{GS}$ costante dobbiamo analizzare la dipendenza di
+	$$\left[ (V_{GS} - V_T) V_{DS} - \frac{V_{DS}^2}{2} \right]$$
+	da $V_{GS}$.\\
+	Possiamo suddividere il termine variabile in due componenti: una ($A = (V_{GS} - V_T) V_{DS}$) è una retta passante per l'origine e dipendente da $V_{GS}$; l'altra ($B = -\frac{V_{DS}^2}{2}$) è una parabola a concavità rivolta verso il basso ed indipendente da $V_{GS}$.\\\\
+	Il profilo riportato in Figura \ref{fig:im-129} è il profilo che abbiamo nel caso siano verificate tutte le ipotesi ($V_{DS} > V_T$, di profilo graduale e di trasporto ohmico).\\\\
+	Dai dati sperimentali notiamo che il modello così ottenuto è rispettato solamente fino al raggiungimento del massimo delle curve.\\
+	Dal raggiungimento del massimo la corrente si mantiene costante (si noti l'analogia con la famiglia delle caratteristiche del BJT che consente di costruire gli stessi dispositivi in modo molto più semplice).\\\\
+	Il massimo della curva ($V_{DS}^*$) è un punto importante poiché segna la differenza tra la parte ben descritta dal nostro modello approssimato e la parte dove il modello non funziona più.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{129.png}
+			\caption{Andamento qualitativo della corrente $I_D$ al variare di $V_{DS}$. \\ In rosso la componente identificata con $A$; in blu la componente $B$; in verde la somma $A + B$; in giallo il comportamento reale.}
+			\label{fig:im-129}
+		\end{figure}
+	\end{center}
+	$$\frac{dI_D}{dV_{DS}} = \beta \cdot [V_{GS} - V_T - V_{DS}^*] = 0 \implies V_{DS}^* = V_{GS} - V_T$$
+	$$I_D(V_{DS}^*) = \frac{\beta}{2} \cdot (V_{GS} - V_T)^2$$
+	Si nota che il punto $V_{DS}^*$ è il punto in cui la differenza tra la tensione di gate e la tensione di drain eguaglia la tensione di soglia.
+	$$\begin{cases} V_{DS} < V_{DS}^* & V_G - V_D > V_T \\ V_{DS} = V_{DS}^* & V_G - V_D = V_T \\ V_{DS} > V_{DS}^* & V_G - V_D < V_T \end{cases}$$
+	Allora dal punto $V_{DS}^*$ in poi la carica superficiale si annulla.\\
+	Conseguentemente il canale non è più formato e l'ipotesi di trasporto esclusivamente ohmico cade.\\\\
+	Per la conservazione della carica però il restringimento dal canale obbliga gli elettroni a muoversi più velocemente.\\
+	Siccome inoltre è:
+	$$v_n = \mu_n E_y$$
+	il campo elettrico $E_y$ risulta estremamente elevato (teoricamente tendente ad infinito) e conseguentemente cade anche l'ipotesi di profilo graduale.\\\\
+	Il punto $V_{DS} = V_{DS}^*$ in cui il canale si strozza origina la \textbf{condizione di pinch-off}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{130.png}
+			\caption{Andamento qualitativo della velocità degli elettroni e del campo all'approssimarsi del punto di pinch-off.}
+			\label{fig:im-130}
+		\end{figure}
+	\end{center}
+	\subsection{Annullamento delle ipotesi} 
+	Abbiamo appena iniziato l'analisi del funzionamento del transistore MOSFET notando che il modello approssimato costruito con una serie di ipotesi restrittive:
+	$$I_D = \beta_n \left[ (V_{GS} - V_T) V_{DS} - \frac{V_{DS}^2}{2} \right]$$
+	dove:
+	$$\beta_n = \mu_n \cdot C_{OX} \cdot \frac{W}{L}$$
+	e $V_T$ è la tensione di soglia (solitamente controllabile in fase di costruzione), funziona correttamente fino al raggiungimento di una tensione $V_{DS}^*$ (corrispondente al punto di pinch-off) per poi decadere completamente.\\\\
+	La previsione errata era basata su alcune ipotesi:\\\\
+	\begin{enumerate}
+		\item il canale è completamente formato;
+		\item il trasporto è solamente ohmico;
+		\item vale la condizione di profilo graduale.
+	\end{enumerate}
+	Ma al punto di pinch-off il canale risulta sostanzialmente nullo e quindi non più formato.\\
+	Allora decade l'ipotesi di completa formazione e di conseguenza anche l'ipotesi di trasporto esclusivamente ohmico.\\
+	Inoltre, poiché dal pinch-off in poi risulta:
+	$$Q_I \rightarrow 0 \implies E_y \rightarrow +\infty$$
+	che annulla la condizione di profilo graduale.
+	\subsection{Analisi del pinch-off}
+	Il potenziale $\varphi$, integrale del campo, risulta essere finito.\\
+	Ma allora:
+	$$E_y = \frac{d\varphi}{dy}$$
+	sottende un'area finita.\\
+	Dal momento che è l'ampiezza del campo lungo $y$:
+	$$E_y \rightarrow +\infty$$
+	la sua larghezza, per sottendere un'area finita, dovrà essere necessariamente nulla.\\\\
+	Allora possiamo individuare il punto di pinch-off come un tratto infinitesimo di lunghezza nulla.\\
+	Dal grafico di Figura \ref{fig:im-131} possiamo notare che dal punto di pinch-off in poi la resistenza $R_2$ assorbe tutta la variazione di tensione nel dispositivo mentre la resistenza $R_1$ continua a vedere lo stesso valore di tensione e quindi di corrente.\\
+	Questo fatto spiega il mantenersi costante della corrente $I_D$ in funzione di $V_{DS}$ che risulta dipendente solo dalla tensione $V_{GS}$.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{131.png}
+			\caption{Andamento del campo elettrico in relazione ad y.}
+			\label{fig:im-131}
+		\end{figure}
+	\end{center}
+	\subsection{Completamento del modello}
+	Possiamo ora ipotizzare tre regioni di funzionamento per un transistore MOSFET:
+	\begin{enumerate}
+		\item regione di interdizione;
+		\item regione di funzionamento lineare;
+		\item regione di saturazione.
+	\end{enumerate}
+	La regione di interdizione coincide con lo spegnimento del dispositivo ed è descritta da:
+	$$\left\{ \begin{array}{l} V_{GS} < V_T \\ I_D = 0 \end{array} \right.$$
+	Quando il dispositivo si accende abbiamo la formazione del canale e dobbiamo distinguere due casi: la regione di funzionamento lineare (o zona triodo) e la regione di saturazione.\\\\
+	La regione in cui il canale è formato (regione di funzionamento lineare) descritta da:
+	$$\left\{ \begin{array}{l} V_{GS} > V_T \\ V_{DS} < V_{GS} - V_T \\ I_D = \beta_n \cdot \left[ (V_{GS} - V_T) V_{DS} + \frac{V_{DS}^2}{2} \right] \end{array} \right.$$
+	Infine la regione di saturazione (cioè quella seguente al pinch-off) è descritta da:
+	$$\left\{ \begin{array}{l} V_{GS} > V_T \\ V_{DS} \ge V_{GS} - V_T \\ I_D = \frac{\beta_n}{2} \cdot (V_{GS} - V_T)^2 \end{array} \right.$$
+	Il grafico di Figura \ref{fig:im-132} mostra le varie regioni di funzionamento in base alla $V_{DS}$ ed alla $V_{GS}$.\\\\
+	Si noti che il MOSFET è estremamente simile, come caratteristiche, al BJT ma è più compatto e completamente simmetrico.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{132.png}
+			\caption{Zone di funzionamento del MOSFET.}
+			\label{fig:im-132}
+		\end{figure}
+	\end{center}
+	\subsection{Invertitore nMOS a carico passivo}
+	Data la similitudine con il BJT, proviamo a costruire una invertitore RTL con i MOSFET.\\
+	Proviamo a sostituire un MOSFET al BJT di Figura \ref{fig:im-133}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{133.png}
+			\caption{Realizzazione di un invertitore con un MOSFET.}
+			\label{fig:im-133}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	Notiamo anzitutto che, essendo $I_G$ identicamente nulla, possiamo eliminare la resistenza di ingresso $R_B$.\\
+	Possiamo inoltre studiare il dispositivo a vuoto poiché ulteriori MOSFET connessi in uscita non degraderanno la corrente.\\
+	Il circuito allora si semplifica con quello di Figura \ref{fig:im-134}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{134.png}
+			\caption{Realizzazione di un invertitore con un MOSFET.}
+			\label{fig:im-134}
+		\end{figure}
+	\end{center}
+	Dal circuito abbiamo inoltre:
+	$$V_i = V_{GS}$$
+	$$V_u = V_{DS}$$
+	$$V_u = V_{DD} - RI_D$$
+	Per effettuare calcoli un poco più precisi, consideriamo i seguenti valori:
+	$$\begin{cases} V_{DS} = 3,5 & \text{V} \\ R = 10 & \Omega \\ V_T = 0,4 & \text{V} \\ \beta_n 1 & \text{mA/V}^2 \end{cases}$$
+	\subsubsection{Regione di interdizione}
+	Quando il transistore è spento risulta:
+	$$\begin{cases} V_{GS} < V_T \\ V_{GS} = V_i \end{cases} \implies V_i < V_T$$
+	$$I_D = 0 \implies V_u = V_{DD}$$
+	\subsubsection{Regione di saturazione}
+	In saturazione è:
+	$$\begin{cases} V_{GS} < V_{DS} + V_T \\ V_i = V_{GS} \\ V_u = V_{DS} \end{cases} \implies V_u > V_i - V_T$$
+	La corrente, dal modello, è:
+	$$I_D = \frac{\beta_n}{2} \cdot (V_{GS} - V_T)^2$$
+	e sostituita nell'espressione di $V_u$ porta ad una curva decrescente.
+	$$V_u = V_{DD} - \frac{\beta_n R}{2} \cdot (V_{GS} - V_T)^2$$
+	\subsubsection{Regione lineare}
+	In regione lineare dovrà essere:
+	$$V_u < V_i - V_T$$
+	e la corrente è descritta da:
+	$$I_D = \beta_n \cdot \left[ (V_{GS} - V_T) V_{DS} - \frac{V_{DS}^2}{2} \right]$$
+	e, sostituendo, abbiamo:
+	$$V_u = V_{DD} - \beta_n R \cdot \left[ (V_i - V_T) V_u - \frac{V_u^2}{2} \right]$$
+	Dal momento che isolare il termine in $V_u$ non è facile, isoliamo $V_i$:
+	$$\frac{V_u - V_{DD}}{\beta_n R} = V_u \cdot \left[ V_i - V_u - \frac{V_u}{2} \right]$$
+	Dividendo ambo i membri per $V_u$ ed isolando $V_i$ abbiamo:
+	$$V_i = \frac{V_u}{2} + V_T - \frac{1}{\beta_n R} + \frac{V_{DD}}{V_u \beta_n R}$$
+	che è l'inversa della curva voluta.\\
+	Il grafico di tale curva è riportato in Figura \ref{fig:im-135}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{135.png}
+			\caption{Grafico della tensione di uscita ($V_u$) in relazione alla tensione di ingresso ($V_i$). \\ In blu la componente $\frac{V_u}{2}$; in verde la costante $\frac{1}{\beta_n R}$; in giallo la parabola $\frac{V_{DD}}{V_u \beta_n R}$; in rosso la $V_u$.}
+			\label{fig:im-135}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni finali}
+	Dal grafico di Figura \ref{fig:im-136} notiamo che abbiamo nuovamente la caratteristica di un invertitore.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{136.png}
+			\caption{Caratteristica ingresso-uscita di un invertitore con un MOSFET.}
+			\label{fig:im-136}
+		\end{figure}
+	\end{center}
+	Alternativamente potevamo ragionare ricordando che è:
+	$$V_u = V_{DD} - RI_D$$
+	potevamo scrivere la retta di carico:
+	$$I_D = \frac{V_{DD} - V_u}{R}$$
+	ed ottenere il grafico di Figura \ref{fig:im-137}.\\\\
+	Riassumendo abbiamo qualitativamente un invertitore ma abbiamo risparmiato una resistenza in ingresso ed abbiamo una struttura più compatta.
+	\subsubsection{Problemi}
+	Quantitativamente la regione a guadagno positivo presenta un guadagno pari a:
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{137.png}
+			\caption{Retta di carico di un invertitore a MOSFET.}
+			\label{fig:im-137}
+		\end{figure}
+	\end{center}
+	$$A _ { V } = { \frac { d V _ { u } } { d V _ { i } } } = - \beta _ { n } R \left( V _ { i } ^ { * } - V _ { T } \right)$$
+	Dal momento che vogliamo un guadagno elevato in modulo e che questo dipende da $\beta _ { n } R$, il nostro obbiettivo, in fase di progettazione, sarà di avere un elevato valore per $\beta _ { n } R$.\\\\
+	Per aumentare $\beta _ { n }$ notiamo dalla sua espressione:
+	$$\beta _ { n } = C _ { O X } \mu _ { n } { \frac { W } { L } } = { \frac { \varepsilon _ { O X } } { T _ { O X } } } \mu _ { n } { \frac { W } { L } }$$
+	che possiamo intervenire solo su alcuni parametri.\\
+	In particolare $\mu _ { n }$ ed $\varepsilon _ { O X }$ sono incontrollabili e $T _ { O X }$ è alquanto difficile da controllare con precisione (in fase di fabbricazione si tende ad avere $T _ { O X }$ dell'ordine di pochi strati atomici).\\
+	Restano quindi controllabili solamente i valori di $W$ ed $L$ (tipicamente si tende a costruire transistori con canali quanto più corti e larghi possibile).\\
+	Anche $W$ ed $L$ sono tuttavia limitati dalla tecnologia: costruire transistori con canali corti a piacimento è tecnologicamente impossibile (i processori della serie Intel i7 hanno canali di quarantacinque nanometri) e costruire canali larghi limita l'integrazione su uno stesso chip.\\\\
+	Per quanto riguarda $R$, il resistore deve essere integrato sullo stesso chip (Figura \ref{fig:im-138}).\\
+	Questo comporta una maggiore densità del dispositivo ma richiede che anche il resistore sia realizzato con la stessa tecnologia usata per il transistore.\\
+	Al solito la resistenza è proporzionale alla resistività ($\rho$) ed alla lunghezza del resistore ($L$) ed inversamente proporzionale alla larghezza del resistore ($W$) e dal suo spessore ($t$):
+	$$R = \rho { \frac { L } { t W } }$$
+	Ancora una volta abbiamo un termine $\left( { \frac { \rho } { t } } \right)$ dipendente dal materiale (in particolare $\rho$ dipende dal drogaggio) ed un termine $\left( { \frac { L } { W } } \right)$ controllabile.\\
+	In questo caso ci troviamo nella situazione opposta a quella voluta per $\beta _ { n }$: vogliamo un resistore lungo e stretto.\\
+	Nuovamente però la larghezza minima è soggetta a vincoli tecnologici attualmente insormontabili.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{138.png}
+			\caption{Realizzazione di un resistore integrato su un chip di semiconduttore.}
+			\label{fig:im-138}
+		\end{figure}
+	\end{center}
+	Possiamo allora riscrivere il guadagno come:
+	$$A _ { V } = C _ { O X } \mu _ { n } \left( { \frac { W } { L } } \right) _ { \mathrm { M O S } } \cdot { \frac { \rho } { t } } \left( { \frac { L } { W } } \right) _ { \mathrm { R } } = C _ { O X } \mu _ { n } { \frac { \rho } { t } } \cdot { \frac { \left( { \frac { W } { L } } \right) _ { \mathrm { M O S } } } { \left( { \frac { W } { L } } \right) _ { \mathrm { R } } } }$$
+	che mostra come un guadagno elevato richieda dispositivi ingombranti.\\
+	In particolare, il resistore integrato è l'elemento critico del circuito.\\\\
+	Un ulteriore problema è il \textbf{piazzamento} che è il problema di trovare spazio per tutti i pezzi del circuito integrato.
+	\subsection{Pull-up e pull-down}
+	Abbiamo appena visto come realizzare un invertitore \textbf{nMOS} a carico passivo e ne abbiamo analizzato il comportamento.\\
+	Abbiamo poi evidenziato alcuni problemi di progettazione e di produzione di questi dispositivi (che restano tuttavia i migliori dispositivi di cui disponiamo per la realizzazione di circuiti integrati).\\
+	Infine abbiamo sottolineato come l’aspetto più critico sia la realizzazione del resistore integrato.\\\\
+	Ora vedremo una soluzione alternativa.\\\\
+	Il comportamento del transistore *nMOS* è abbastanza semplice: quando il transistore è spento (ingresso basso), l’uscita è alta; quando il transistore è acceso (ingresso alto), l’uscita è bassa.\\\\
+	In altre parole, quando l’ingresso è basso la resistenza alza al massimo l’uscita.\\
+	Per questo motivo definiamo la resistenza come *resistenza di pull-up*.\\\\
+	All’accensione del transistore la resistenza abbassa quanto più può la tensione di uscita.\\
+	Allora la rete diviene una *rete di pull-down*.\\\\
+	Possiamo allora vedere il circuito come in Figura \ref{fig:im-139} ossia come un partitore costituito di due resistenze ($R_{PU}$ di pull-up e $R_{PD}$ di pull-down) dove la tensione di uscita è:
+	$$V_u = \frac{R_{PD}}{R_{PD} + R_{PU}} \cdot V_{DD}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{139.png}
+			\caption{Schematizzazione delle reti di pull-up e di pull-down agenti in un transistore *nMOS* a carico passivo.}
+			\label{fig:im-139}
+		\end{figure}
+	\end{center}
+	Quando il transistore è spento è:
+	$$\begin{cases} R_{PD} \approx 0 \\ R_{PU} \rightarrow +\infty \end{cases}$$
+	mentre quando il transistore si accende, volendo un’uscita bassa, dovremo avere:
+	$$R_{PU} \rightarrow 0$$
+	che ci riporta al problema precedente: vogliamo un resistore lungo e stretto ed un transistore corto e largo.\\\\
+	Si noti che il problema non si pone in zona di interdizione in quanto la corrente sulla resistenza è nulla e quindi la resistenza di pull-up è pressoché infinita.\\\\
+	In precedenza abbiamo tracciato la caratteristica del transistore nMOS sfruttando una costruzione grafica usando la retta di carico ed abbiamo devinito il guadagno come:
+	$$A_V = \frac{dV_u}{dV_i}$$
+	che mostra come il guadagno sia tanto maggiore quanto più è grande la resistenza (Figura \ref{fig:im-140}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{140.png}
+			\caption{Famiglia delle caratteristiche del nMOS a carico passivo.}
+			\label{fig:im-140}
+		\end{figure}
+	\end{center}
+	Nella regione ad elevato guadagno (cioè in saturazione) allora vogliamo una resistenza elevata mentre nelle regioni a basso guadagno vorremmo un guadagno nullo e quindi una resistenza bassa (che implica una maggiore immunità ai disturbi).\\\\
+	Allora vogliamo un bipolo di carico che vari il suo comportamento in base alla regione di funzionamento somigliando ad una resistenza elevata in saturazione e ad una resistenza bassa in zona lineare (Figura \ref{fig:im-141}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{141.png}
+			\caption{Famiglia delle caratteristiche del nMOS a carico passivo. \\ In azzurro la retta di carico reale; in verde la retta di carico voluta.}
+			\label{fig:im-141}
+		\end{figure}
+	\end{center}
+	\subsection{Realizzazione del bipolo di carico}
+	Una prima soluzione può essere l'utilizzo di due transistori nMOS (Figura \ref{fig:im-142}) con:
+	$$\begin{cases} \beta_1 \neq \beta_2 \\ V_{T1} = V_{T2} = V_T \end{cases}$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{142.png}
+			\caption{Realizzazione nMOS in cui il carico è un secondo nMOS.}
+			\label{fig:im-142}
+		\end{figure}
+	\end{center}
+	Siccome nella rete di pull-ip gate e drain sono corto circuitati è:
+	$$V_{GS} = V_{DS}$$
+	e quindi la condizione di funzionamento lineare:
+	$$V_{GS} > V_{DS} + V_T$$
+	non potrà mai essere verificata.\\
+	Allora i casi della rete di pull-up sono solo due: il transistore è spento oppure è in saturazione.\\\\
+	Quando il transistore di pull-up è spento risulta:
+	$$V_{GS} = V_{PU} < V_T \Longrightarrow I_D = 0$$
+	Quanto invece è in saturazione è:
+	$$V_{PU} > V_T \Longrightarrow \frac{\beta_2}{2} (V_{PU} - V_T)^2$$
+	che è una parabola con concavità rivolta verso l'alto.\\\\
+	La caratteristica della rete di pull-up è riportata in Figura \ref{fig:im-143} e mostra esattamente le caratteristiche ricercate.\\
+	Riportando la retta di carico sul piano delle caratteristiche del transistore, infatti, notiamo che la resistenza è grande quando il transistore di pull-down è in saturazione ed è piccola quando il transistore è in regione lineare.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{143.png}
+			\caption{Caratteristica della rete di pull-up realizzata con un nMOS (a sinistra) e retta di carico (a destra).}
+			\label{fig:im-143}
+		\end{figure}
+	\end{center}
+	Questo oggetto è detto transistore nMOS a carico saturato.\\
+	La caratteristica del transistore nMOS a carico saturato è riportata in Figura \ref{fig:im-144}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{144.png}
+			\caption{Caratteristica ingresso-uscita di un nMOS a carico saturato.}
+			\label{fig:im-144}
+		\end{figure}
+	\end{center}
+	\subsubsection{M1 in interdizione}
+	Quando il transistore M1 è spento è:
+	$$\left\{ \begin{array}{l} V_{GS1} = V_i < V_T \\ I_{D1} = 0 \\ I_{D2} = I_{D1} = 0 \end{array} \right.$$
+	Allora possiamo ipotizzare che $I_{D2}$ sia spento e quindi è:
+	$$V_u > V_{DD} - V_T$$
+	che è soddisfatta per infiniti valori di $V_u$.\\\\
+	In questa condizione possiamo identificare una capacità parassita $C$ caricata dal transistore di pull-up caricata da una corrente di carica $I_C = I_{D1} + I_{D2}$ (Figura \ref{fig:im-145}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{145.png}
+			\caption{Quando il transistore M1 è in interdizione la rete si riduce al solo transistore M2 in serie con una capacità parassita.}
+			\label{fig:im-145}
+		\end{figure}
+	\end{center}
+	La corrente di carica della capacità parassita è:
+	$$I_{D2} = I_C = C \cdot \frac{dV_u}{dt} \implies \frac{dV_u}{dt} = \frac{I_{D2}}{C} > 0$$
+	che resta positiva fino a quando risulta:
+	$$V_{GS} - V_u = V_T \implies V_u < V_{DD} - V_T$$
+	Allora il nodo di uscita non può avere una tensione di superiore a $V_{DD} - V_T$.\\
+	Questo è un difetto della rete poiché l'uscita alta risulta inveriore di una soglia $V_T$ al valore massimo $V_{DD}$.
+	\subsubsection{M1 in saturazione}
+	Quando il transistore $M1$ è in saturazione deve essere:
+	$$\begin{cases} V_{GS1} < V_{DS1} + V_T \\ V_{GS1} = V_i \\ V_{DS1} = V_u \end{cases} \quad \implies V_u > V_i - V_T$$
+	La corrente $I_{D1}$ è allora:
+	$$\begin{cases} I_{D1} = \frac{\beta_1}{2} (V_i - V_T)^2 > 0 \\ I_{D1} = I_{D2} \end{cases} \quad \implies I_{D2} > 0$$
+	Ma se la corrente $I_{D2}$ è maggiore di zero, $M2$ deve essere acceso e, dal momento che non può funzionare in regione lineare, dovrà essere in saturazione:
+	$$I_{D2} = \frac{\beta_2}{2} (V_{DD} - V_u - V_T)^2$$
+	Dall'uguaglianza delle due correnti abbiamo:
+	$$\frac{\beta_1}{2} (V_i - V_T)^2 = \frac{\beta_2}{2} (V_{DD} - V_u - V_T)^2$$
+	Semplificando e scartando le radici negative otteniamo:
+	$$V_u = V_{DD} - V_T - \sqrt{\frac{\beta_1}{\beta_2} (V_i - V_T)}$$
+	che è l'equazione di una retta a pendenza negativa con un guadagno:
+	$$A_V = \sqrt{\frac{\beta_1}{\beta_2}}$$
+	La caratteristica lineare è molto interessante in quanto consente la realizzazione di un amplificatore non distorcente.\\
+	Inoltre il guadagno dipende da:
+	$$A_V = \sqrt{\frac{\left(\frac{\varepsilon_{OX}}{T_{OX}} \mu_n \frac{W}{L}\right)_{M1}}{\left(\frac{\varepsilon_{OX}}{T_{OX}} \mu_n \frac{W}{L}\right)_{M2}}} = \sqrt{\frac{\left(\frac{W}{L}\right)_{M1}}{\left(\frac{W}{L}\right)_{M2}}}$$
+	Ancora una volta la rete di pull-up deve essere lunga e stretta mentre il pull-down dovrà essere corto e largo.
+	\subsubsection{M1 in regione lineare}
+	Quanto $M1$ è in questa regione risulta:
+	$$\begin{cases} I_{D1} = \beta_1 \left[ (V_{GS1} - V_T) V_{DS1} - \frac{V_{DS1}^2}{2} \right] > 0 \\ I_{D2} = \frac{\beta_2}{2} (V_{GS2} - V_T^2) > 0 \\ I_{D1} = I_{D2} \end{cases}$$
+	dalla cui uguaglianza otteniamo:
+	$$V_u^2 \cdot (\beta_1 + \beta_2) - 2\beta_2 \cdot (V_{DD} - V_T) \cdot V_u - 2\beta_1 \cdot (V_i - V_T) \cdot V_i + \beta_2 \cdot (V_{DD} - V_T^2) = 0$$
+	che è un'arco di curva.
+	\subsubsection{Considerazioni finali}
+	Il transistore nMOS a carico saturato presenta due notevoli vantaggi:
+	\begin{enumerate}
+		\item è compatto e facile da realizzare;
+		\item ha un fatto di caratteristica lineare.
+	\end{enumerate}
+	Di contro è ancora un dispositivo in cui il guadagno dipende dai fattori di forma.\\
+	Inoltre la tensione di usita alta è passata da $V_{DD}$ a $V_{DD} - V_T$ che riduce l'escursione e di conseguenza i margini di immunità ai disturbi.
+	\subsection{Tensioni di soglia}
+	L'abbassamento della tensione di uscita massima è dovuto al fatto che il transistore si spegno quando la tensione di ingresso supera il valore $V_T$ (ipotizzato maggiore di zero).
+	$$V_{GS} = V_{DS} \Longrightarrow V_{GS} < V_{DD} - V_T$$
+	$$I_D = \frac{\beta}{2} (V_{GS} - V_T)^2 = 0 \Longrightarrow V_{GS} = V_T \Longrightarrow V_u = V_{DD} - V_T$$
+	L'unica ipotesi di questo ragionamento è che sia:
+	$$V_T > 0$$
+	Tecnologicamente possiamo però drogare i materiali in modo da avere un canale prefabbricato (built-in).\\
+	Se abbiamo un canale prefabbricato abbiamo allora necessità un campo negativo per chiudere il canale.\\
+	Allora la tensione di soglia non è necessariamente positiva.\\\\
+	Possiamo produrre due dispositivi:
+	\begin{itemize}
+		\item Dispositivi di tipo enhancement (ad arrichimento, con creazione del canale) a soglia \(V_{T} > 0\)
+		\item dispositivi di tipo depletion (a svuotamento, con canale prefabbricato) a soglia \(V_{T} > 0\)
+	\end{itemize}
+	I simboli circuitali sono riportati in Figura \ref{fig:im-146}.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{146.png}
+			\caption{Simboli circuitali usati per gli nMOS enhancement (a sinistra) depletion (a destra).}
+			\label{fig:im-146}
+		\end{figure}
+	\end{center}
+	\subsection{Analisi del pull-up a svuotamento (depletion)}
+	Con una rete di pull-up di tipo depletion il transistore non può lavorare in saturazione e quindi, se è acceso, deve essere in regione lineare.
+	$$I_D = \beta \left[ (V_{GS} - V_T) V_{DS} - \frac{V_{DS}^2}{2} \right]$$
+	La capacità parassità si annulla in questo caso quando la corrente $I_D$ è nulla.
+	$$\beta V_{DS} \left[ V_{GS} - V_T - \frac{V_{DS}}{2} \right] = 0$$
+	Ma $V_{GS} - V_T - \frac{V_{DS}}{2}$ non potrà mai essere nullo poiché, per ipotesi è:
+	$$V_{GS} > V_{DS} + V_T$$
+	e, siccome è $V_{DS} > 0$, risulta:
+	$$V_{GS} > \frac{V_{DS}}{2} + V_T$$
+	Allora l'unico risultato possibile è che sia:
+	$$V_{DS} = 0$$
+	che ci consente di ottenere nuovamente l'escursione massima.\\\\
+	Cerchiamo ora di ottenere una caratteristica simile a quella di un invertitore utilizzando una rete di pull-up realizzata con un transistore a svuotamento per cui sia $V_{T2} < 0$ (Figura \ref{fig:im-147}).
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{147.png}
+			\caption{Rete di pull-down realizzata con un nMOS a svuotamento.}
+			\label{fig:im-147}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	Per come sono connessi i dispositivi è:
+	$$V_{GS2} = V_{DS2} \Longrightarrow V_{GS2} > V_{DS2} + V_{T2}$$
+	ed allora il transistore $M2$ non è un è satura.
+	\subsubsection{$M1$ in interdizione}
+	Quando $M1$ è in interdizione risulta:
+	$$V_{GS1} = V_i < V_{T1}$$
+	da cui segue che la corrente è:
+	$$I_{D1} = 0 \Longrightarrow I_{D2} = 0$$
+	e, siccome $M2$ non può saturare deve essere:
+	$$\beta_2 V_{DS1} \left[ V_{GS2} - V_{T2} - \frac{V_{DS2}}{2} \right] = 0$$
+	che essendo:
+	$$V_{GS2} > V_{T2} + V_{DS2} > V_{T2} + \frac{V_{DS2}}{2}$$
+	risulta verificata solo per:
+	$$V_{DS2} = 0$$
+	Allora quando il transistore $M1$ è spento deve essere:
+	$$V_u = V_{DD}$$
+	\subsubsection{$M1$ in saturazione}
+	In questo caso risulta:
+	$$V_i < V_u + V_{T1} \implies V_u > V_i - V_{T1}$$
+	Sfruttando le equazioni delle correnti e la loro uguaglianza, ricaviamo:
+	$$\frac{\beta_1}{\beta_2} (V_i - V_{T1})^2 = (V_{DD} - V_u)^2 - 2V_{T2} \cdot (V_{DD} - V_u)$$
+	da cui segue:
+	$$(V_{DD} - V_u)^2 - 2V_{T2} (V_{DD} - V_u) - \frac{\beta_1}{\beta_2} (V_i - V_{T1})^2 = 0$$
+	$$(V_{DD} - V_u) = V_{T2} \pm \sqrt{V_{T2}^2 + \frac{\beta_1}{\beta_2} \cdot (V_i - V_{T1})^2}$$
+	$$V_u = V_{DD} - V_{T2} \pm \sqrt{V_{T2}^2 + \frac{\beta_1}{\beta_2} \cdot (V_i - V_{T1})^2}$$
+	Dal momento che il risultato deve essere fisicamente accettabile scartiamo la soluzione con il segno “-”.
+	$$V_u = V_{DD} - V_{T2} - \sqrt{V_{T2}^2 + \frac{\beta_1}{\beta_2} \cdot (V_i - V_{T1})^2}$$
+	\subsubsection{Considerazioni finali}
+	Il grafico di Figura \ref{fig:im-148} riporta la caratteristica ingresso-uscita del circuito esaminato.\\\\
+	Notiamo che, ancora una volta, la pendenza della curva dipende dal rapporto tra i fattori di forma.\\\\
+	Questo approccio (cioè l'utilizzo di un transistore con carico a svuotamento) presenta il vantaggio della piena escursione logica ma richiede transistori con soglie differenti.\\
+	Un altro svantaggio è che il drogaggio per la prefabbricazione del canale richiede un processo tecnologico in più.\\
+	Una soluzione più naturale consiste nell'utilizzo di un transistore $pMOS$ che ha, intrinsecamente, una soglia negativa.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{148.png}
+			\caption{Caratteristica ingresso-uscita di un transistore con carico a svuotamento.}
+			\label{fig:im-148}
+		\end{figure}
+	\end{center}
+	\subsection{Transistore pMOS}
+	Abbiamo fino ad ora descritto l'nMOS come un dispositivo costituito da un substrato p con  \( N_{A} \)  atomi accettori che crea un canale di tipo n applicando un campo diretto verso il basso.\\
+	Utilizzando un substrato di tipo n con  \( N_{D} \)  atomi donatori possiamo creare un canale di tipo p usando un campo diretto verso l'alto.\\\\
+	La Figura 28.3 mostra affiancati un transistore nMOS ed il suo analogo pMOS con i segni delle grandezze fondamentali.\\
+	Si nota facilmente che il transistore pMOS è analogo al transistore nMOS a patto di cambiare il segno delle cariche.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{149.png}
+			\caption{Confronto tra un nMOS (con  \( V_{Tn} > 0 \)  per l'enhancement e  \( V_{Tn} < 0 \)  per il depletion) ed un pMOS (con  \( V_{Tp} < 0 \)  per l'enhancement e  \( V_{Tp} > 0 \)  per il depletion).}
+			\label{fig:im-149}
+		\end{figure}
+	\end{center}
+	Per il transistore nMOS abbiamo inoltre definito:
+	\[ \left\{ \begin{array}{l l} V _ {G S} <   V _ {T} & \text {interdizione} \\ V _ {T} <   V _ {G S} <   V _ {D S} - V _ {T} & \text {saturazione} \\ V _ {G S} > V _ {D S} - V _ {T} & \text {lineare} \end{array} \right. \]
+	\[ \beta_ {n} = C _ {O X} \mu_ {n} \frac {W}{L} \]
+	Per il transistore pMOS possiamo allora definire:
+	\[ \left\{ \begin{array}{l l} V _ {G S} > V _ {T p} & \text {interdizione} \\ V _ {D S} - V _ {T p} <   V _ {G S} <   V _ {T p} & \text {saturazione} \\ V _ {G S} <   V _ {D S} - V _ {T p} & \text {lineare} \end{array} \right. \]
+	\[ \beta_ {p} = C _ {O X} \mu_ {p} \frac {W}{L} \]
+	Notiamo una piccola differenza: il transistore a canale p richiede più spazio per funzionare bene quanto il transistore a canale n.\\
+	Il vataggio risiede nell'utilizzo combinato di transistori a canale p e a canale n.\\\\
+	La Tabella \ref{tab:table-14} riporta quanto appena detto.
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{lll}
+			\hline
+			\textbf{nMOS} & & \\
+			\hline
+			\textbf{Zona} & \textbf{Tensione di ingresso} & \textbf{Corrente} \\
+			\hline
+			Interdizione & $V_{GS} < V_{Tn}$ & $I_D = 0$ \\
+			Saturazione & $V_{Tn} < V_{GS} < V_{DS} - V_{Tn}$ & $I_D = \frac{\beta_n}{2} (V_{GS} - V_{Tn})^2$ \\
+			Lineare & $V_{GS} > V_{DS} - V_{Tn}$ & $I_D = \beta_n \left[ (V_{GS} - V_{Tn}) V_{DS} - \frac{V_{DS}^2}{2} \right]$ \\
+			\hline
+			\textbf{pMOS} & & \\
+			\hline
+			\textbf{Zona} & \textbf{Tensione di ingresso} & \textbf{Corrente} \\
+			\hline
+			Interdizione & $V_{GS} > V_{Tp}$ & $I_D = 0$ \\
+			Saturazione & $V_{DS} + V_{Tp} < V_{GS} < V_{Tp}$ & $I_D = \frac{\beta_p}{2} (V_{GS} - V_{Tp})^2$ \\
+			Lineare & $V_{GS} < V_{DS} + V_{Tp}$ & $I_D = \beta_p \left[ (V_{GS} - V_{Tp}) V_{DS} - \frac{V_{DS}^2}{2} \right]$ \\
+			\hline
+		\end{tabular}
+		\caption{Valori della tensione $V_{GS}$, zone di funzionamento e corrente per i transistori nMOS e pMOS.}
+		\label{tab:table-14}
+	\end{table}
+	\\Il modello generale così definito presenta la scomodità dei segni delle disequazioni.\\
+	Possiamo però utilizzare un modello alternativo.\\\\
+	Consideriamo ad esempio un transistore pMOS ad arricchimento.\\
+	Un transistore di questo tipo richiede che sia:
+	$$V_{Tp} < 0 \implies V_{Tp} = -|V_{Tp}|$$
+	Allora quando questo è spento risulta:
+	$$V_{GS} > V_{Tp} \implies -V_{GS} < -V_{Tp} \implies V_{SG} < |V_{Tp}|$$
+	$$I_D = 0$$
+	In saturazione la condizione, ragionando in modo analogo, è invece:
+	$$V_{SD} + |V_{Tp}| > V_{SG}$$
+	$$I_D = \frac{\beta_p}{2} (-V_{GS} + V_{Tp})^2 \implies I_D = \frac{\beta_p}{2} (V_{SG} - |V_{Tp}|)^2$$
+	Infine in regione lineare è:
+	$$V_{GS} < V_{DS} + V_{Tp} \implies V_{SG} > V_{SD} - |V_{Tp}|$$
+	$$I_D = \beta_p \left[ (V_{GS} - V_{Tp}) V_{DS} - \frac{V_{DS}^2}{2} \right] \implies I_D = \beta_p \left[ (V_{SG} - |V_{Tp}|) V_{SD} - \frac{V_{SD}^2}{2} \right]$$
+	Il simbolo circuitale del pMOS è riportato in Figura \ref{fig:im-150}
+	\begin{figure}[h]
+		
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{150.png} 
+			\caption{Simboli circuitali del pMOS}
+			\label{fig:im-150}
+		\end{subfigure}
+		\begin{subfigure}{0.5\textwidth}
+			\includegraphics[width=0.9\linewidth]{151.png}
+			\caption{Realizzazione della rete di pull-up con un pMOS}
+			\label{fig:im-151}
+		\end{subfigure}
+		
+		\caption{}
+		\label{fig:image12}
+	\end{figure}
+	\subsection{Pull-up a pMOS ad arricchimento}
+	Consideriamo il circuito di Figura \ref{fig:im-151} e cerchiamone la caratteristica ingresso-uscita.\\\\
+	Vogliamo che la rete di pull-up sia sempre accesa.\\
+	Dunque deve essere:
+	$$V_{SG} > |V_{Tp}|$$
+	Allora è sufficiente agganciare il gate del pMOS al potenziale di terra.\\\\
+	\subsubsection{Considerazioni iniziali}
+	L'nMOS è in interdizione quando risulta:
+	$$V_{GS} = V_i < V_{Tn}$$
+	mentre satura quando è:
+	$$V_{GS} < V_{DS} + V_{Tp} \Longrightarrow V_u > V_i - V_{Tn}$$
+	Per quanto riguarda il pMOS invece non potremo mai essere in interdizione in quanto:
+	$$V_{SG} - V_{DD} > |V_{Tp}|$$
+	non può mai essere verificata (il gate è connesso al potenziale di terra).\\
+	Siamo invece in saturazione quando è:
+	$$V_{SG} < V_{SD} + |V_{Tp}| \Longrightarrow V_u < |V_{Tp}|$$
+	\subsubsection{nMOS in interdizione}
+	Quando il transistore nMOS è interdetto risulta:
+	$$I_{Dn} = 0 \Longrightarrow I_{Dp} = 0$$
+	Supponiamo che il pMOS sia in regione lineare.\\
+	Allora:
+	$$\beta_p \left[ (V_{SG} - V_{Tp}) V_{SD} - \frac{V_{SD}^2}{2} \right] = 0 \Longrightarrow \beta_p V_{SD} \left[ V_{SG} - V_{Tp} - \frac{V_{SD}}{2} \right] = 0$$
+	da cui segue che è:
+	$$\begin{cases} V_{SD} = 0 \\ V_{SD} = V_u - V_{DD} \end{cases} \quad \Longrightarrow V_u = V_{DD}$$
+	che verifica la condizione di funzionamento lineare del pMOS.
+	\subsubsection{nMOS in saturazione}
+	Per continuità continuiamo a supporre che sia il pMOS sia in regione lineare.\\
+	Uguagliando le correnti abbiamo:
+	$$\frac{\beta_n}{2} (V_u - V_{Tn})^2 = \beta_p \left[ (V_{DD} - |V_{Tp}|) (V_{DD} - V_u) - \frac{(V_{DD} - V_u)^2}{2} \right]$$
+	che è un'equazione di secondo grado:
+	$$V_{DD} - V_u = (V_{DD} - |V_{Tp}|) \pm \sqrt{(V_{DD} - |V_{Tp}|) - \frac{\beta_n}{\beta_p} (V_i - V_{Tp})^2}$$
+	Ancora una volta dobbiamo scegliere solo la soluzione positiva della radice.\\
+	Allora l'uscita è
+	$$V_u = |V_{Tp}| + \sqrt{(V_{DD} - |V_{Tp}|)^2 - \frac{\beta_n}{\beta_p} (V_i - V_{Tp})^2}$$
+	e, nuovamente, dipende dal rapporto tra i fattori di forma.
+	\subsubsection{Considerazioni finali}
+	La caratteristica dello pseudo nMOS è riportata in Figura \ref{fig:im-152}.\\
+	Dal grafico si comprende il motivo del nome: il pMOS si comporta come faceva il transistore nMOS.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{152.png}
+			\caption{Andamento qualitativo della caratteristica ingresso-uscita dello pseudo nMOS.}
+			\label{fig:im-152}
+		\end{figure}
+	\end{center}
+	\subsection{Realizzabilità delle logiche CMOS}
+	Abbiamo appena introdotto ed analizzato le logiche *pMOS* mostrando che, per funzionare in modo equivalente alle logiche *nMOS* richiedono una maggiore occupazione d'area.\\
+	Abbiamo anche accennato al fatto che il vantaggio delle logiche *pMOS* consiste nel loro utilizzo congiunto con le logiche *nMOS*.\\\\
+	Nel presente Capitolo inizieremo lo studio delle logiche *cMOS* (\textbf{complementary MOS}).\\\\
+	Un primo problema delle logiche *CMOS* consiste nella realizzazione del circuito integrato: il *pMOS* ed l'*nMOS* richiedono infatti substrati differenti.\\\\
+	La soluzione consiste nuovamente nell'utilizzo del principio di compensazione.\\
+	Possiamo, cioè, realizzare un substrato di tipo *n* all'interno di un substrato di tipo *p* (Figura \ref{fig:im-153}) avendo cure di imporre:
+	$$N_D \gg N_A$$
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{153.png}
+			\caption{Realizzazione di un *CMOS* tramite il principio di compensazione. \\ La tasca di tipo *n* è autoisolta dal substrato per via della polarizzazione.}
+			\label{fig:im-153}
+		\end{figure}
+	\end{center}
+	\subsection{Analisi del *CMOS*}
+	In precedenza abbiamo notato che il transistore di pull-up può solo funzionare in regione lineare o di saturazione.\\
+	Per completezza riportiamo quanto già ottenuto.\\\\
+	Consideriamo il circuito di Figura \ref{fig:im-154} e cerchiamo la caratteristica ingresso-uscita.\\\\
+	Vogliamo che la rete di pull-up sia sempre accesa.\\
+	Dunque deve essere:
+	$$V_{SG} > |V_{Tp}|$$
+	Allora è sufficiente agganciare il gate del *pMOS* al potenziale di terra.\\
+	Il circuito è chiamato *pseudo nMOS*.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{154.png}
+			\caption{Realizzazione della rete di pull-up con un pMOS.}
+			\label{fig:im-154}
+		\end{figure}
+	\end{center}
+	\subsubsection{Considerazioni iniziali}
+	L'nMOS è in interdizione quando risulta:
+	$$V_{GS} = V_i < V_{Tn}$$
+	mentre satura quando è:
+	$$V_{GS} < V_{DS} + V_{Tp} \Longrightarrow V_u > V_i - V_{Tn}$$
+	Per quanto riguarda il pMOS invece non potremo mai essere in interdizione in quanto:
+	$$V_{SG} - V_{DD} > |V_{Tp}|$$
+	non può mai essere verificata (il gate è connesso al potenziale di terra).\\
+	Siamo invece in saturazione quando è:
+	$$V_{SG} < V_{SD} + |V_{Tp}| \Longrightarrow V_u < |V_{Tp}|$$
+	\subsubsection{nMOS in interdizione}
+	Quando il transistore nMOS è interdetto risulta:
+	$$I_{Dn} = 0 \Longrightarrow I_{Dp} = 0$$
+	Supponiamo che il pMOS sia in regione lineare.\\
+	Allora:
+	$$\beta_p \left[ (V_{SG} - V_{Tp}) V_{SD} - \frac{V_{SD}^2}{2} \right] = 0 \Longrightarrow \beta_p V_{SD} \left[ V_{SG} - V_{Tp} - \frac{V_{SD}}{2} \right] = 0$$
+	da cui segue che è:
+	$$\begin{cases} V_{SD} = 0 \\ V_{SD} = V_u - V_{DD} \end{cases} \quad \Longrightarrow V_u = V_{DD}$$
+	che verifica la condizione di funzionamento lineare del pMOS.\\\\
+	Inoltre, dalle equazioni che descrivono la corrente $I_{Dp}$ e dalla sovrapposizione del loro grafico con il grafico della famiglia di curve descriventi la corrente $I_{Dn}$ notiamo che abbiamo nuovamente un invertitore.
+	\subsubsection{nMOS in saturazione}
+	Per continuità continuiamo a supporre che sia il pMOS sia in regione lineare.\\
+	Uguagliando le correnti abbiamo:
+	$$\frac{\beta_n}{2} (V_u - V_{Tn})^2 = \beta_p \left[ (V_{DD} - |V_{Tp}|) (V_{DD} - V_u) - \frac{(V_{DD} - V_u)^2}{2} \right]$$
+	che è un’equazione di secondo grado:
+	$$V_{DD} - V_u = (V_{DD} - |V_{Tp}|) \pm \sqrt{(V_{DD} - |V_{Tp}|) - \frac{\beta_n}{\beta_p}(V_i - V_{Tp})^2}$$
+	Ancora una volta dobbiamo scegliere solo la soluzione positiva della radice.\\
+	Allora l’uscita è
+	$$V_u = |V_{Tp}| + \sqrt{(V_{DD} - |V_{Tp}|)^2 - \frac{\beta_n}{\beta_p}(V_i - V_{Tp})^2}$$
+	e, nuovamente, dipende dal rapporto tra i fattori di forma.
+	\subsubsection{Considerazioni finali}
+	La caratteristica dello pseudo *nMOS* è riportata in Figura \ref{fig:im-155}.\\
+	Dal grafico si comprende il motivo del nome: il *pMOS* si comporta come faceva il transistore *nMOS*.
+	\begin{center}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.45]{155.png}
+			\caption{Andamento qualitativo della caratteristica ingresso-uscita dello pseudo *nMOS*.}
+			\label{fig:im-155}
+		\end{figure}
+	\end{center}
+	\subsection{Invertitori MOS}
+	In generale, tutti gli invertitori MOS visti fino ad ora hanno un comportamento riassumibile come segue.\\\\
+	Quando l’entrata assume il valore basso, la rete di pull-down si spegne e lascia campo libero alla rete di pull-up: la corrente $I_D$ è nulla, l’uscita è $V_u = V_{DD}$ e la potenza dissipata $P$ è nulla.\\\\
+	Quando l’entrata assume il valore alto, la rete di pull-down si accende: la corrente $I_D$ è maggiore di zero, l’uscita tende ad un valore bassa dipendente dai fattori di forma e la potenza dissipata è diversa da zero.\\\\
+	Tutte le reti viste fino ad ora presentano una forte dipendenza dai fattori di forma dai quali dipende il guadagno.\\
+	Ma dal guadagno dipende proporzionalmente l’escursione logica da cui dipende, a sua volta in modo proporzionale, il margine di immunità ai disturbi.\\\\
+	Possiamo allora distinguere due situazioni: quando il pull-down si spegne siamo in una situazione ideale; quando il pull-down si accende sprechiamo energia per mantere la più alta escursione logica possibile.
+	\subsection{Invertitori pMOS}
 \end{document}
