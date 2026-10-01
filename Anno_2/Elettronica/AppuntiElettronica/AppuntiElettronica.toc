@@ -65,7 +65,7 @@
 \contentsline {subsubsection}{\numberline {2.14.3}Diodo spento}{42}{subsubsection.2.14.3}%
 \contentsline {subsection}{\numberline {2.15}Problemi del diodo}{43}{subsection.2.15}%
 \contentsline {subsection}{\numberline {2.16}Modello Dinamico}{44}{subsection.2.16}%
-\contentsline {subsection}{\numberline {2.17}Analisi DInamica}{46}{subsection.2.17}%
+\contentsline {subsection}{\numberline {2.17}Analisi Dinamica}{46}{subsection.2.17}%
 \contentsline {subsubsection}{\numberline {2.17.1}Situazone per $t<0$}{47}{subsubsection.2.17.1}%
 \contentsline {subsubsection}{\numberline {2.17.2}Situazione per $t = 0^+$: transitorio $A \rightarrow C$}{47}{subsubsection.2.17.2}%
 \contentsline {subsubsection}{\numberline {2.17.3}Situazione per $t > 0$: transitorio $C \rightarrow B$}{48}{subsubsection.2.17.3}%
@@ -178,7 +178,7 @@
 \contentsline {section}{\numberline {4}Transistore MOSFET}{101}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Introduzione}{101}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Transistori ad effetto di campo}{102}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Transistori MOS}{103}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}"Condensatore" MOS (Transistori MOS)}{103}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Analisi qualitativa}{104}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Analisi quantitativa}{105}{subsubsection.4.3.2}%
 \contentsline {paragraph}{\numberline {4.3.2.1}Condizione per $x > x_D$}{105}{paragraph.4.3.2.1}%
@@ -206,7 +206,7 @@
 \contentsline {subsubsection}{\numberline {4.11.6}Problemi}{120}{subsubsection.4.11.6}%
 \contentsline {subsection}{\numberline {4.12}Pull-up e pull-down}{121}{subsection.4.12}%
 \contentsline {subsection}{\numberline {4.13}Realizzazione del bipolo di carico}{122}{subsection.4.13}%
-\contentsline {subsubsection}{\numberline {4.13.1}M1 in interdizione}{123}{subsubsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1}M1 in interdizione}{124}{subsubsection.4.13.1}%
 \contentsline {subsubsection}{\numberline {4.13.2}M1 in saturazione}{124}{subsubsection.4.13.2}%
 \contentsline {subsubsection}{\numberline {4.13.3}M1 in regione lineare}{125}{subsubsection.4.13.3}%
 \contentsline {subsubsection}{\numberline {4.13.4}Considerazioni finali}{125}{subsubsection.4.13.4}%
@@ -223,16 +223,16 @@
 \contentsline {subsubsection}{\numberline {4.17.3}nMOS in saturazione}{130}{subsubsection.4.17.3}%
 \contentsline {subsubsection}{\numberline {4.17.4}Considerazioni finali}{131}{subsubsection.4.17.4}%
 \contentsline {subsection}{\numberline {4.18}Realizzabilità delle logiche CMOS}{131}{subsection.4.18}%
-\contentsline {subsection}{\numberline {4.19}Analisi del *CMOS*}{132}{subsection.4.19}%
+\contentsline {subsection}{\numberline {4.19}Analisi del CMOS}{132}{subsection.4.19}%
 \contentsline {subsubsection}{\numberline {4.19.1}Considerazioni iniziali}{132}{subsubsection.4.19.1}%
 \contentsline {subsubsection}{\numberline {4.19.2}nMOS in interdizione}{132}{subsubsection.4.19.2}%
 \contentsline {subsubsection}{\numberline {4.19.3}nMOS in saturazione}{133}{subsubsection.4.19.3}%
 \contentsline {subsubsection}{\numberline {4.19.4}Considerazioni finali}{133}{subsubsection.4.19.4}%
 \contentsline {subsection}{\numberline {4.20}Invertitori MOS}{133}{subsection.4.20}%
 \contentsline {subsection}{\numberline {4.21}Invertitori pMOS}{133}{subsection.4.21}%
-\contentsline {subsubsection}{\numberline {4.21.1}Transistore *pMOS* in interdizione}{134}{subsubsection.4.21.1}%
-\contentsline {subsubsection}{\numberline {4.21.2}Transistore *pMOS* in saturazione}{134}{subsubsection.4.21.2}%
-\contentsline {subsubsection}{\numberline {4.21.3}Transistore *pMOS* in regione lineare}{134}{subsubsection.4.21.3}%
+\contentsline {subsubsection}{\numberline {4.21.1}Transistore pMOS in interdizione}{134}{subsubsection.4.21.1}%
+\contentsline {subsubsection}{\numberline {4.21.2}Transistore pMOS in saturazione}{134}{subsubsection.4.21.2}%
+\contentsline {subsubsection}{\numberline {4.21.3}Transistore pMOS in regione lineare}{134}{subsubsection.4.21.3}%
 \contentsline {subsubsection}{\numberline {4.21.4}Considerazioni finali}{135}{subsubsection.4.21.4}%
 \contentsline {subsection}{\numberline {4.22}Realizzazione di un CMOS}{135}{subsection.4.22}%
 \contentsline {subsubsection}{\numberline {4.22.1}Considerazioni iniziali}{135}{subsubsection.4.22.1}%

@@ -58,7 +58,7 @@
 	Ma due transistori JFET sullo stesso pezzo di semiconduttore possono coesistere solo se circondati da giunzioni $p_n$.\\\\
 	I JFET sono allora di difficile utilizzo nei circuiti integrati.\\
 	Trovano tuttavia applicazione in campo medico (elettrocardiogramma, elettroencefalogramma, eccetera).
-	\subsection{Transistori MOS}
+	\subsection{"Condensatore" MOS (Transistori MOS)}
 	Nonostante la complessità del JFET l'idea è interessante.\\
 	Tale complessità è dovuta alla scelta di modulare le dimensioni fisiche del dispositivo.\\
 	Possiamo però modulare anche le caratteristiche di conducibilità.
@@ -215,12 +215,12 @@
 	$$V'_G = 0 \implies \begin{cases} \varphi_s = 0 \\ n_s = n_0 \\ p_s = p_0 \end{cases}$$
 	il potenziale è nullo nell’intera struttura.\\
 	Inoltre le lacune e gli elettroni presentano la stessa concentrazione sia nel substrato sia nello strato di interfaccia.\\
-	Questa situazione, detta di *banda piatta* (*flat band*), si ha solo quando risulta:
+	Questa situazione, detta di \textbf{banda piatta} (\textbf{flat band}), si ha solo quando risulta:
 	$$V'_G = V_G - \psi_{MS} = 0 \implies V_G = \psi_{MS} = V_{FB}$$
 	\subsubsection{$V'_G < 0$}
 	In questa situazione abbiamo che il campo elettrico viene ribaltato: nel semiconduttore le lacune sono spinte verso la superficie mentre gli elettroni vengono spinti in profondità.
 	$$V'_G < 0 \implies \begin{cases} \varphi_s < 0 \\ n_s < n_0 \\ p_s > p_0 \end{cases}$$
-	Questa condizione, detta *condizione di accumulazione* poiché accumula i portatori maggioritari all’interfaccia,
+	Questa condizione, detta \textbf{condizione di accumulazione} poiché accumula i portatori maggioritari all’interfaccia,
 	\subsubsection{$V'_G > 0$}
 	In questa situazione abbiamo:
 	$$V'_G > 0 \implies \begin{cases} \varphi_s > 0 \\ n_s > n_0 \\ p_s < p_0 \end{cases}$$
@@ -350,7 +350,7 @@
 	Allora la carica accumulata da ogni condensatore di dimensione $dy$ è funzione di $y$.
 	$$Q_I(y) = C_{OX}(V_{GS} - \varphi(y) - V_T)$$
 	Siccome siamo in una situazione bidimensionale il campo elettrico ha sempre due componenti.\\
-	Semplifichiamo i calcoli supponendo di essere in una condizione di *profilo graduale* e cioè che il campo longitudinale abbia effetti trascurabili sul campo verticale e che il campo verticale non risenta delle variazioni del campo longitudinale.\\\\
+	Semplifichiamo i calcoli supponendo di essere in una condizione di \textbf{profilo graduale} e cioè che il campo longitudinale abbia effetti trascurabili sul campo verticale e che il campo verticale non risenta delle variazioni del campo longitudinale.\\\\
 	Per la convenzione scelta, la corrente $I_D$ scorre dal terminale di drain al terminale di source.
 	$$I_D = -\int_s J ds$$
 	dove $s$ indica una sezione infinitesima del dispositivo.\\
@@ -602,18 +602,18 @@
 	Abbiamo poi evidenziato alcuni problemi di progettazione e di produzione di questi dispositivi (che restano tuttavia i migliori dispositivi di cui disponiamo per la realizzazione di circuiti integrati).\\
 	Infine abbiamo sottolineato come l’aspetto più critico sia la realizzazione del resistore integrato.\\\\
 	Ora vedremo una soluzione alternativa.\\\\
-	Il comportamento del transistore *nMOS* è abbastanza semplice: quando il transistore è spento (ingresso basso), l’uscita è alta; quando il transistore è acceso (ingresso alto), l’uscita è bassa.\\\\
+	Il comportamento del transistore nMOS è abbastanza semplice: quando il transistore è spento (ingresso basso), l’uscita è alta; quando il transistore è acceso (ingresso alto), l’uscita è bassa.\\\\
 	In altre parole, quando l’ingresso è basso la resistenza alza al massimo l’uscita.\\
-	Per questo motivo definiamo la resistenza come *resistenza di pull-up*.\\\\
+	Per questo motivo definiamo la resistenza come \textbf{resistenza di pull-up}.\\\\
 	All’accensione del transistore la resistenza abbassa quanto più può la tensione di uscita.\\
-	Allora la rete diviene una *rete di pull-down*.\\\\
+	Allora la rete diviene una \textbf{rete di pull-down}.\\\\
 	Possiamo allora vedere il circuito come in Figura \ref{fig:im-139} ossia come un partitore costituito di due resistenze ($R_{PU}$ di pull-up e $R_{PD}$ di pull-down) dove la tensione di uscita è:
 	$$V_u = \frac{R_{PD}}{R_{PD} + R_{PU}} \cdot V_{DD}$$
 	\begin{center}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.45]{139.png}
-			\caption{Schematizzazione delle reti di pull-up e di pull-down agenti in un transistore *nMOS* a carico passivo.}
+			\caption{Schematizzazione delle reti di pull-up e di pull-down agenti in un transistore nMOS a carico passivo.}
 			\label{fig:im-139}
 		\end{figure}
 	\end{center}
@@ -948,30 +948,30 @@
 		\end{figure}
 	\end{center}
 	\subsection{Realizzabilità delle logiche CMOS}
-	Abbiamo appena introdotto ed analizzato le logiche *pMOS* mostrando che, per funzionare in modo equivalente alle logiche *nMOS* richiedono una maggiore occupazione d'area.\\
-	Abbiamo anche accennato al fatto che il vantaggio delle logiche *pMOS* consiste nel loro utilizzo congiunto con le logiche *nMOS*.\\\\
-	Nel presente Capitolo inizieremo lo studio delle logiche *cMOS* (\textbf{complementary MOS}).\\\\
-	Un primo problema delle logiche *CMOS* consiste nella realizzazione del circuito integrato: il *pMOS* ed l'*nMOS* richiedono infatti substrati differenti.\\\\
+	Abbiamo appena introdotto ed analizzato le logiche pMOS mostrando che, per funzionare in modo equivalente alle logiche nMOS richiedono una maggiore occupazione d'area.\\
+	Abbiamo anche accennato al fatto che il vantaggio delle logiche pMOS consiste nel loro utilizzo congiunto con le logiche nMOS.\\\\
+	Nel presente Capitolo inizieremo lo studio delle logiche cMOS (\textbf{complementary MOS}).\\\\
+	Un primo problema delle logiche CMOS consiste nella realizzazione del circuito integrato: il pMOS ed l'nMOS richiedono infatti substrati differenti.\\\\
 	La soluzione consiste nuovamente nell'utilizzo del principio di compensazione.\\
-	Possiamo, cioè, realizzare un substrato di tipo *n* all'interno di un substrato di tipo *p* (Figura \ref{fig:im-153}) avendo cure di imporre:
+	Possiamo, cioè, realizzare un substrato di tipo $n$ all'interno di un substrato di tipo $p$ (Figura \ref{fig:im-153}) avendo cure di imporre:
 	$$N_D \gg N_A$$
 	\begin{center}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.45]{153.png}
-			\caption{Realizzazione di un *CMOS* tramite il principio di compensazione. \\ La tasca di tipo *n* è autoisolta dal substrato per via della polarizzazione.}
+			\caption{Realizzazione di un CMOS tramite il principio di compensazione. \\ La tasca di tipo $n$ è autoisolta dal substrato per via della polarizzazione.}
 			\label{fig:im-153}
 		\end{figure}
 	\end{center}
-	\subsection{Analisi del *CMOS*}
+	\subsection{Analisi del CMOS}
 	In precedenza abbiamo notato che il transistore di pull-up può solo funzionare in regione lineare o di saturazione.\\
 	Per completezza riportiamo quanto già ottenuto.\\\\
 	Consideriamo il circuito di Figura \ref{fig:im-154} e cerchiamo la caratteristica ingresso-uscita.\\\\
 	Vogliamo che la rete di pull-up sia sempre accesa.\\
 	Dunque deve essere:
 	$$V_{SG} > |V_{Tp}|$$
-	Allora è sufficiente agganciare il gate del *pMOS* al potenziale di terra.\\
-	Il circuito è chiamato *pseudo nMOS*.
+	Allora è sufficiente agganciare il gate del pMOS al potenziale di terra.\\
+	Il circuito è chiamato \textbf{pseudo nMOS}.
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -1011,13 +1011,13 @@
 	$$V_u = |V_{Tp}| + \sqrt{(V_{DD} - |V_{Tp}|)^2 - \frac{\beta_n}{\beta_p}(V_i - V_{Tp})^2}$$
 	e, nuovamente, dipende dal rapporto tra i fattori di forma.
 	\subsubsection{Considerazioni finali}
-	La caratteristica dello pseudo *nMOS* è riportata in Figura \ref{fig:im-155}.\\
-	Dal grafico si comprende il motivo del nome: il *pMOS* si comporta come faceva il transistore *nMOS*.
+	La caratteristica dello pseudo nMOS è riportata in Figura \ref{fig:im-155}.\\
+	Dal grafico si comprende il motivo del nome: il pMOS si comporta come faceva il transistore nMOS.
 	\begin{center}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.45]{155.png}
-			\caption{Andamento qualitativo della caratteristica ingresso-uscita dello pseudo *nMOS*.}
+			\caption{Andamento qualitativo della caratteristica ingresso-uscita dello pseudo nMOS.}
 			\label{fig:im-155}
 		\end{figure}
 	\end{center}
@@ -1029,22 +1029,22 @@
 	Ma dal guadagno dipende proporzionalmente l’escursione logica da cui dipende, a sua volta in modo proporzionale, il margine di immunità ai disturbi.\\\\
 	Possiamo allora distinguere due situazioni: quando il pull-down si spegne siamo in una situazione ideale; quando il pull-down si accende sprechiamo energia per mantere la più alta escursione logica possibile.
 	\subsection{Invertitori pMOS}
-	Possiamo allora pensare all’utilizzo di un invertitore duale realizzato con un *pMOS* (Figura \ref{fig:im-156}).
+	Possiamo allora pensare all’utilizzo di un invertitore duale realizzato con un pMOS (Figura \ref{fig:im-156}).
 	\begin{center}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.45]{156.png}
-			\caption{Analisi di un invertitore *pMOS* a carico passivo.}
+			\caption{Analisi di un invertitore pMOS a carico passivo.}
 			\label{fig:im-156}
 		\end{figure}
 	\end{center}
-	\subsubsection{Transistore *pMOS* in interdizione}
+	\subsubsection{Transistore pMOS in interdizione}
 	Il transistore è spento quando è:
 	$$V_{SG} < |V_{Tp}| \implies V_i > V_{DD} - |V_{Tp}|$$
 	In questa condizione la corrente di drain $I_D$ è nulla.\\
 	Conseguentemente, per la Legge di Ohm, è:
 	$$V_u = RI_D = 0$$
-	\subsubsection{Transistore *pMOS* in saturazione}
+	\subsubsection{Transistore pMOS in saturazione}
 	La condizione si saturazione si ottiene quando abbiamo:
 	$$V_u < V_i + |V_{Tp}|$$
 	In saturazione la corrente è:
@@ -1052,7 +1052,7 @@
 	e quindi porta ad avere in uscita:
 	$$V_u = RI_D = \frac{\beta_p R}{2} (V_{DD} - V_i - |V_{Tp}|)^2$$
 	che è un'arco di parabola.
-	\subsubsection{Transistore *pMOS* in regione lineare}
+	\subsubsection{Transistore pMOS in regione lineare}
 	Ci troviamo in regione lineare quando è:
 	$$V_u > V_i + |V_{Tp}|$$
 	La corrente è esprimibile come:
@@ -1069,18 +1069,18 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.45]{157.png}
-			\caption{Caratteristica ingresso-uscita di un *pMOS* a carico passivo.}
+			\caption{Caratteristica ingresso-uscita di un pMOS a carico passivo.}
 			\label{fig:im-157}
 		\end{figure}
 	\end{center}
-	Confrontando la caratteristica del *pMOS* a carico resistivo con quella del suo analogo a canale *n*, notiamo che è esattamente duale.\\\\
+	Confrontando la caratteristica del pMOS a carico resistivo con quella del suo analogo a canale $n$, notiamo che è esattamente duale.\\\\
 	In questa rete, il pull-down è realizzato spegnendo il transistore ed otteniamo una uscita esattamente nulla.\\
-	Di contro, l'uscita alta è ottenuta facendo scorrere corrente sulla resistenza *R*.\\\\
+	Di contro, l'uscita alta è ottenuta facendo scorrere corrente sulla resistenza $R$.\\\\
 	Quando l'entrata assume il valore alto, la rete di pull-up si spegne e lascia campo libero alla rete di pull-up: la corrente $I_D$ è nulla, l'uscita è $V_u = V_{DD}$ e la potenza dissipata $P$ è nulla.\\\\
 	Quando l'entrata assume il valore basso, la rete di pull-up si accende: la corrente $I_D$ è maggiore di zero, l'uscita tende ad un valore bassa dipendente dai fattori di forma e la potenza dissipata è diversa da zero.\\\\
-	Nel *pMOS* la rete di pull-up è una rete attiva in grado di spegnersi mentre la rete di pull-down è passiva.
+	Nel pMOS la rete di pull-up è una rete attiva in grado di spegnersi mentre la rete di pull-down è passiva.
 	\subsection{Realizzazione di un CMOS}
-	Visti i vantaggi delle due reti *nMOS* e *pMOS*, realizziamo una rete pienamente complementare: l'invertitore FCMOS (\textbf{Fully Complementary MOS}) riportato in Figura \ref{fig:im-158}.
+	Visti i vantaggi delle due reti nMOS e pMOS, realizziamo una rete pienamente complementare: l'invertitore FCMOS (\textbf{Fully Complementary MOS}) riportato in Figura \ref{fig:im-158}.
 	\subsubsection{Considerazioni iniziali}
 	Per come è fatto il circuito, possiamo dire che è certamente:
 	\begin{center}
@@ -1155,7 +1155,7 @@
 	Il fattore di forma quindi non influenza il comportamento dell'uscita.\\
 	Questo dispositivo può dunque essere costruito con i più piccoli com'ponenti possibili.\\
 	Inoltre, quando il dispositivo non commuta, non viene consumata potenza.\\\\
-	Dal momento che l'invertitore così realizzato non dipende dai fattori di forma è detto *invertitore ratioless*.\\
+	Dal momento che l'invertitore così realizzato non dipende dai fattori di forma è detto \textbf{invertitore ratioless}.\\
 	Gli invertitori ratioless sono molto piccoli e non consumano potenza quando non commutano.
 	\subsection{Margine di immunità ai disturbi}
 	Abbiamo appena introdotto gli invertitori ratioless (realizzati con logiche CMOS) in cui l'escursione non dipende dai fattori di forma ed il consumo di energia in condizioni statiche (cioè quando il dispositivo non commuta) è nullo.\\\\
@@ -1337,7 +1337,7 @@
 	Abbiamo in precedenza definito il tempo di commutazione come l'istante in cui il valore di uscita è pari alla metà dell'escursione.\\\\
 	Il transistorio di commutazione è certamente presente poiché la commutazione richiede lo spostamento di carica.\\
 	Questo fatto è evidente perché ogni connessione tra metallo e semiconduttore ed ogni filo metallico hanno una capacità parassita propria; inoltre il transistore MOS nasce come un condensatore anomalo che presenta la serie tra la capacità dell'ossido ($C_{OX}$) e del bulk ($C_B$).\\
-	Ancora, le regioni di drain e di source introducono nuove capacità di giunzione ($C_{jS}$ e $C_{jD}$) e la sovrapposizione tra le tasche di drain e source ed il gate introduce due capacità di *overlap* o di sovrapposizione ($C_{jGS}$ e $C_{jGD}$).
+	Ancora, le regioni di drain e di source introducono nuove capacità di giunzione ($C_{jS}$ e $C_{jD}$) e la sovrapposizione tra le tasche di drain e source ed il gate introduce due capacità di \textbf{overlap} o di sovrapposizione ($C_{jGS}$ e $C_{jGD}$).
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -1366,7 +1366,7 @@
 		\label{fig:image13}
 	\end{figure}
 	È tuttavia possibile dimostrare che tutto può essere ricondotto ad un'unica capacità di carico che considera tutte le componenti evidenziate in precedenza composte opportunamente (Figura \ref{fig:im-170}).\\\\
-	La capacità complessiva di carico (*load*) $C_L$ è considerabile come:
+	La capacità complessiva di carico (\textbf{load}) $C_L$ è considerabile come:
 	$$C_L = C_{MOS} + C_{wire} = \alpha C_{OX} \frac{W}{L} + C_{wire}$$
 	ed il suo valore varia moltissimo a seconda delle situazioni: se il cavo connette due CMOS in un unico circuito possiamo trascurarne la capacità mentre se porta i dati a zone lontane la capacità del cavo può arrivare ad essere dominante sulla capacità del MOS.\\
 	Il coefficiente $\alpha$ indica quanti transistori si trovano nella rete.
@@ -1503,7 +1503,7 @@
 	Abbiamo in precedenza sottolineato come l'aumento di $\beta$ non portasse ad alcun vantaggio: l'aumento di velocità del transistore $i$ aumentava di pari passo il tempo di propagazione del transistore $i - 1$.\\
 	Sul transistore di uscita però questo fatto non ha la stessa incidenza.
 	\subsubsection{Buffer singolo}
-	Realizzaizmo allora una serie in cui l'ultimo elemento, detto *stadio di buffer*, abbia dimensioni differenti rispetto agli altri transistori (Figura \ref{fig:im-173}).
+	Realizzaizmo allora una serie in cui l'ultimo elemento, detto \textbf{stadio di buffer}, abbia dimensioni differenti rispetto agli altri transistori (Figura \ref{fig:im-173}).
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -1669,7 +1669,7 @@
 	$$I_{DpSat} = \frac{\beta_p}{2} (V_{DD} - V_T - V_i)^2$$
 	Allora abbiamo una situazione di transistorio dinamica in cui la potenza dissipata non è nulla.
 	$$P_{Dinamica} \neq 0$$
-	Questa potenza dinamica non nulla è chiamata *potenza di corto circuito* ($P_{CC}$).
+	Questa potenza dinamica non nulla è chiamata \textbf{potenza di corto circuito} ($P_{CC}$).
 	\subsubsection{Considerazioni preliminari}
 	Prima di procedere con il calcolo analitico notiamo che la variazione della potenza del transitorio di ingresso, la corrente mantiene un andamento parabolico mentre il picco si sposta lungo l'asse del tempo.\\
 	In particolare il picco della corrente dipende da $V_u^*$ che a sua volta dipende dal dimensionamento dell'invertitore CMOS.\\
@@ -1732,7 +1732,7 @@
 		\end{figure}
 	\end{center}
 	In questo caso, per metà periodo carichiamo il condensatore sul pMOS e per l'altra metà del periodo lo scarichiamo sul transistore nMOS.\\\\
-	Per il calcolo della potenza dissipata (detta *potenza associata al carico*, $P_{AL}$) ragioniamo sui singoli componenti.
+	Per il calcolo della potenza dissipata (detta \textbf{potenza associata al carico}, $P_{AL}$) ragioniamo sui singoli componenti.
 	$$\langle P_{AL} \rangle = \langle P_{nMOS} \rangle + \langle P_{pMOS} \rangle + \langle P_C \rangle$$
 	\paragraph{Potenza media dissipata sul carico}
 	Il carico capacitivo dissipa una potenza media pari a:
@@ -1758,14 +1758,14 @@
 	Attualmente si tende a diminuire la tensione di alimentazione e ad aumentare la frequenza di lavoro $f = 1/T$.\\
 	Siccome la frequenza incide poco sulla potenza dissipata dinamicamente dal singolo invertitore, il maggior contributo deriva dalla potenza associata ai carichi.
 	\subsection{Considerazioni sulla potenza}
-	Abbiamo analizzato la potenza dissipata da un invertitore CMOS in fase di commutazione distinguendo la potenza dinamica in *potenza di corto circuito* ($P_{CC}$) e la *potenza associata al carico* ($P_{AL}$).\\\\
+	Abbiamo analizzato la potenza dissipata da un invertitore CMOS in fase di commutazione distinguendo la potenza dinamica in potenza di corto circuito ($P_{CC}$) e la potenza associata al carico ($P_{AL}$).\\\\
 	Effettueremo ora alcune considerazioni sulla potenza ed analizzeremo il costo dei dispositivi.\\\\
 	Date le espressioni delle due potenze
 	$$\langle P_{CC} \rangle = \frac{\beta_n}{2} \cdot \frac{t_r}{T} \cdot V_{DD}^3 \cdot \left(1 - \frac{2V_T}{V_{DD}}\right)$$
 	$$\langle P_{AL} \rangle = C \cdot V_{DD}^2 \cdot f$$
 	quella che incide maggiormente sulla dissipazione dipende fortemente da vari parametri.\\
 	In particolare le dipendenza dalla frequenza si ha in entrambe le potenze dissipate: l'aumento della frequenza aumenta anche la potenza dissipata.\\\\
-	Ma l'aumento della frequenza (e quindi la diminuzione del periodo) obbliga i tempi di salita ($t_R$, tempo di *raise*) e di discesa ($t_F$, tempo di *fall*) a diminuire.\\
+	Ma l'aumento della frequenza (e quindi la diminuzione del periodo) obbliga i tempi di salita ($t_R$, tempo di \textbf{raise}) e di discesa ($t_F$, tempo di \textbf{fall}) a diminuire.\\
 	Allora la potenza di corto circuito si mantiene più o meno costante mentre la potenza associata al carico aumenta.\\\\
 	Allora la potenza associata al carico tende ad essere dominante sulla potenza di corto circuito e, per semplicità, considereremo solo la potenza associata al carico.\\\\
 	Riprendendo ora le ultime considerazioni circa il tempo di propagazione possiamo notare che l'aumento della tensione di alimentazione provoca una diminuzione lineare del ritardo ma, di contro, provoca un aumento quadratico del consumo.\\\\
@@ -1779,7 +1779,7 @@
 	Abbiamo anche evidenziato come siano logiche di tipo ratioless.\\
 	Resta ora da valutare il costo.\\
 	Dal momento che molte misure di costo
-	sono relative (il costo di produzione ammortizzato su migliaia di dispositivi ha un'incidenza inferiore al costo ammortizzato su poche decine di dispositivi), individueremo come *costo* l'ingombro del dispositivo.\\\\
+	sono relative (il costo di produzione ammortizzato su migliaia di dispositivi ha un'incidenza inferiore al costo ammortizzato su poche decine di dispositivi), individueremo come \textbf{costo} l'ingombro del dispositivo.\\\\
 	Un limite delle logiche CMOS in questo senso è il numero di transistori utilizzati: mentre un logica di tipo nMOS o pMOS a n ingressi richiede $n+1$ transistori le logiche CMOS richiedono $2n$ ingressi.\\\\
 	Vogliamo progettare un multiplexer a due ingressi (Figura \ref{fig:im-183}).
 	\begin{center}
@@ -1806,7 +1806,7 @@
 	Questo soluzione richiede dieci transistori se sono disponibili i segnali complementari.\\
 	Allora se sono disponibili i segnali complementari questa soluzione è più economica mentre in caso contrario è più dispendiosa.\\\\
 	Possiamo però realizzare il multiplexer con due soli transistori utilizzandoli come interruttori (Figura \ref{fig:im-184}).\\
-	Questo approccio, che sfrutta i transistori nella loro versione “a rubinetto” è detto *approccio a pass-transistor*.
+	Questo approccio, che sfrutta i transistori nella loro versione “a rubinetto” è detto \textbf{approccio a pass-transistor}.
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -1816,7 +1816,7 @@
 		\end{figure}
 	\end{center}
 	\subsection{Pass transistor}
-	Iniziamo lo studio della configurazione a pass-transistor partendo dall'analisi del funzionamento del transistore *nMOS* (Figura \ref{fig:im-185}).
+	Iniziamo lo studio della configurazione a pass-transistor partendo dall'analisi del funzionamento del transistore nMOS (Figura \ref{fig:im-185}).
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -1825,7 +1825,7 @@
 			\label{fig:im-186}
 		\end{figure}
 	\end{center}
-	Data la simmettria del transistore *MOS*, supponendo di avere $X, Y \in [0, V_{DD}]$ abbiamo cinque possibili condizioni:
+	Data la simmettria del transistore MOS, supponendo di avere $X, Y \in [0, V_{DD}]$ abbiamo cinque possibili condizioni:
 	\begin{enumerate}
 		\item $P = 0$
 		\item $P = V_{DD}$
@@ -1871,7 +1871,7 @@
 	Il pass-transistor realizzato con $nMOS$ è quindi in grado di trasferire uno zero forte (funziona bene come pull-down) ed un uno debole (funziona male come pull-up).\\
 	Dualmente il pass-transistor realizzato con $pMOS$ è in grado di trasferire uno zero debole (il valore passa da $V_{DD}$ a $|V_{Tp}|$) ed un uno forte (il valore passa da 0 a $V_{DD}$).
 	\subsection{Transmittion gate}
-	Dal momento che gli interruttori presentano problemi complementari (in accordo con quanto già detto durante l'analisi delle logiche CMOS), possiamo realizzare una struttura più complessa (Figura \ref{fig:im-189}) detta *transmittion gate*.
+	Dal momento che gli interruttori presentano problemi complementari (in accordo con quanto già detto durante l'analisi delle logiche CMOS), possiamo realizzare una struttura più complessa (Figura \ref{fig:im-189}) detta \textbf{transmittion gate}.
 	\begin{center}
 		\begin{figure}[h]
 			\centering
@@ -2065,7 +2065,7 @@
 	Quando il segnale di clock è basso abbiamo:
 	$$Ck = 0 \implies \begin{cases} M3 & On \\ M1 & Off \end{cases} \implies \begin{cases} PU & On \\ PD & Off \end{cases} \implies V_u = V_{DD}$$
 	e quindi l'uscita è certamente alta indipendentemente dal valore assunto da $X$.\\
-	Chiamiamo questa situazione *fase di precarica*.\\
+	Chiamiamo questa situazione \textbf{fase di precarica}.\\
 	Nel caso in cui il segnale di clock sia alto abbiamo invece la dipendenza da $X$.\\
 	Se l'ingresso è $X = 0$ abbiamo
 	$$\begin{cases} Ck = 0 \\ X = 1 \end{cases} \implies \begin{cases} M3 & Off \\ M1 & On \\ M2 & On \end{cases} \implies \begin{cases} PU & Off \\ PD & On \end{cases} \implies V_u = 0$$
@@ -2073,8 +2073,8 @@
 	Quando infine è $X = 1$, abbiamo:
 	$$\begin{cases} Ck = 0 \\ X = 0 \end{cases} \implies \begin{cases} M3 & Off \\ M1 & On \\ M2 & Off \end{cases} \implies \begin{cases} PU & Off \\ PD & Off \end{cases}$$
 	che è una situazione nuova in cui entrambe le reti sono spente.\\
-	Questa condizione è detta *condizione di alta impedenza* e l'uscita, a patto di avere un sistema perfettamente isolato, si mantiene costante al valore precedentemente memorizzato (si parla di *fase di valutazione*).\\\\
-	Questo tipo di logica, alternando fasi di precarica (*preload*) e di valutazione (*evaluation*), è detta logica PE.
+	Questa condizione è detta \textbf{condizione di alta impedenza} e l'uscita, a patto di avere un sistema perfettamente isolato, si mantiene costante al valore precedentemente memorizzato (si parla di \textbf{fase di valutazione}).\\\\
+	Questo tipo di logica, alternando fasi di precarica (\textbf{preload}) e di valutazione (\textbf{evaluation}), è detta logica PE.
 	\subsubsection{Pregi}
 	Dal momento che il l'accensione e lo spegnimento delle reti è comandato dal segnale di clock la logica è ancora ratioless e quindi i transistori possono essere delle stesse dimensioni dei transistori CMOS.\\
 	Inoltre per un logica ad $n$ ingressi dobbiamo usare, in questo caso, $n + 2$ transistori.\\
@@ -2105,7 +2105,7 @@
 	A parità di ingresso infatti la logica dinamica commuta due volte contro la singola commutazione della logica statica.\\\\
 	Un altro problema ancora è che in alcune situazioni critiche la logica dinamica non funziona a dovere.
 	\subsection{Problemi delle logiche dinamiche PE}
-	Abbiano visto come realizzare dispositivi a prestazioni elevatissime grazie alle logiche CMOS dinamiche introducendo anche la logica a precarica e valutazione (*preload and evaluation*).\\\\
+	Abbiano visto come realizzare dispositivi a prestazioni elevatissime grazie alle logiche CMOS dinamiche introducendo anche la logica a precarica e valutazione (\textbf{preload and evaluation}).\\\\
 	Supponiamo che il segnale di ingresso vari come riportato in Figura \ref{fig:im-200}.
 	\begin{center}
 		\begin{figure}[h]
@@ -2440,7 +2440,7 @@
 	\end{center}
 	Il margine di sicurezza così introdotto impedisce che lo skew provochi un malfunzionamento.\\
 	La robustezza del circuito viene però pagata da una maggior lentezza di elaborazione.\\
-	Questa soluzione (*approccio a doppia fase di clock*) è tipica nelle reti moderne e si arriva ad avere fino a quattro fasi di clock.
+	Questa soluzione (\textbf{approccio a doppia fase di clock}) è tipica nelle reti moderne e si arriva ad avere fino a quattro fasi di clock.
 	\subsubsection{Clock a singola fase}
 	Il singolo $\mathcal{D}$ latch è realizzato dalla rete di Figura \ref{fig:im-220}.\\\\
 	Questo circuito può essere realizzato come un $\text{C}^2\text{MOS}$ (Figura \ref{fig:im-221}).
@@ -2469,8 +2469,8 @@
 	Dal momento che il dato di ingresso, per raggiungere l'uscita, deve subire due inversioni successive, per passare dall'ingresso all'uscita sono necessarie sia una rete di pull-up sia una rete di pull-down.\\
 	Ma nelle situazioni anomale ($Ck = \overline{Ck}$) entrambe le reti di pull-up o di pull-down sono spente.\\
 	Allora il dato di ingresso può, al più, superare un solo latch per essere poi bloccato dal secondo latch.\\
-	La soluzione così ottenuta è allora robusta a prescindere dalla fase del clock e si parla di *rete a singola fase di clock*.\\\\
-	Un flip-flop così realizzato utilizza la logica SPCL (*Single Phase Clock Logic*).\\
+	La soluzione così ottenuta è allora robusta a prescindere dalla fase del clock e si parla di \textbf{rete a singola fase di clock}.\\\\
+	Un flip-flop così realizzato utilizza la logica SPCL (\textbf{Single Phase Clock Logic}).\\
 	Il flip-flop SPCL è un flip-flop dinamico che richiede solo otto transistori ed è immune allo skew.\\\\
 	Disporre di dispositivi di flip-flop immuni al clock skew, semplici, poco ingombranti e veloci è di estrema importanza dal momento che consente di realizzare logiche ad elevate prestazioni.
 	\subsection{Velocità del clock e pipeline}
@@ -2543,7 +2543,7 @@
 	\end{center}
 	Questa soluzione, che offre un frazionamento molto elevato, non è tuttavia immune al problema dello skew dal momento che vi sono condizioni (la più semplice possibile è che tra i due latch si trovi un invertitore ma la situazione si può produrre per qualsiasi rete invertente) nelle quali il segnale può sfruttare le due reti di pull-down per propagarsi.\\
 	Per risolvere il problema è sufficiente inserire tra i due latch una rete non invertente.\\
-	Una pipeline così realizzerà è detta *pipeline* NORA (*No Race*).\\\\
+	Una pipeline così realizzerà è detta \textbf{pipeline} NORA (\textbf{No Race}).\\\\
 	Esiste però un'eccezione: se la logica è una logica dinamica PE la rete può essere anche una logica invertente (Figura \ref{fig:im-227}).
 	\begin{center}
 		\begin{figure}[h]
@@ -2566,7 +2566,7 @@
 	Allora entriamo in condizione di alta impedenza e l'uscita $Q$ mantiene il suo valore precedente.
 	$$\begin{cases} M1 & \text{off} \\ M2 & \text{on} \\ M3 & \text{off} \\ M4 & \text{on} \end{cases} \implies \begin{cases} PU & \text{off} \\ PD & \text{off} \end{cases} \implies Q_t = Q_{t-1}$$
 	\subsection{Logiche TSPCL}
-	Si tratta di logiche *veramente* a singola fase di clock (True SPCL) e sono l'evoluzione delle logiche SPCL (la Figura \ref{fig:im-228} mostra un Platch non invertente).
+	Si tratta di logiche \textbf{veramente} a singola fase di clock (True SPCL) e sono l'evoluzione delle logiche SPCL (la Figura \ref{fig:im-228} mostra un Platch non invertente).
 	\begin{center}
 		\begin{figure}[h]
 			\centering
