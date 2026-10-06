@@ -1,1 +1,6 @@
 Anno_1/Metodi Probabilistici per L'ingegneria/Appunti Metodi/main.pdf
+
+# Rimozione file ds store
+.DS_Store
+# RImozione file ds store nelle sotto-cartelle
+**/.DS_Store
